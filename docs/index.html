@@ -42,6 +42,16 @@ body::before {
     repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255,255,255,.012) 40px);
   pointer-events: none; z-index: 0;
 }
+.card-leg { 
+  padding: 10px 18px; 
+  font-family: var(--fm); 
+  font-size: 9px; 
+  color: var(--muted); 
+  border-top: 1px solid rgba(30,45,61,.5); 
+  letter-spacing: .5px; 
+  text-transform: uppercase; 
+  text-align: center;
+}
 
 /* HEADER */
 header {
@@ -83,8 +93,9 @@ main { position: relative; z-index: 1; padding: 28px 40px; }
 .tab-panel.active { display: block; }
 
 /* SECTION TITLE */
-.section-title { font-family: var(--fh); font-size: 20px; letter-spacing: 2px; color: var(--text); margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+.section-title { font-family: var(--fh); font-size: 20px; letter-spacing: 2px; color: var(--text); margin-bottom: 8px; display: flex; align-items: center; gap: 10px; }
 .section-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+.section-sub { font-family: var(--fm); font-size: 10px; color: var(--muted); margin-bottom: 16px; letter-spacing: .5px; }
 .accent { width: 3px; height: 20px; border-radius: 2px; background: var(--green); flex-shrink: 0; }
 
 /* CARDS GRID */
@@ -93,6 +104,7 @@ main { position: relative; z-index: 1; padding: 28px 40px; }
 .card { background: var(--s1); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
 .card-header { padding: 12px 18px; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
 .card-title { font-family: var(--fh); font-size: 15px; letter-spacing: 1.5px; }
+.card-expl { padding: 7px 18px; font-family: var(--fm); font-size: 9px; color: var(--muted); border-bottom: 1px solid rgba(30,45,61,.5); letter-spacing: .3px; font-style: italic; }
 .badge { font-family: var(--fm); font-size: 9px; padding: 3px 8px; border-radius: 4px; letter-spacing: 1px; }
 .bg { background: rgba(0,230,118,.1);  color: var(--green); border: 1px solid rgba(0,230,118,.2); }
 .br { background: rgba(255,61,90,.1);  color: var(--red);   border: 1px solid rgba(255,61,90,.2); }
@@ -112,10 +124,33 @@ main { position: relative; z-index: 1; padding: 28px 40px; }
 .vpill.up   { color: var(--green); }
 .vpill.down { color: var(--red); }
 .vpill.cb   { color: var(--blue); }
+.vpill.sc   { color: var(--yellow); }
 .ptag { font-family: var(--fm); font-size: 10px; color: var(--muted); flex-shrink: 0; }
-.conf-tag { font-family: var(--fm); font-size: 9px; padding: 2px 6px; border-radius: 3px; flex-shrink: 0; letter-spacing: .5px; }
+.conf-tag { font-family: var(--fm); font-size: 10px; padding: 2px 6px; border-radius: 3px; flex-shrink: 0; }
 .conf-home { background: rgba(0,230,118,.12); color: var(--green); }
 .conf-away { background: rgba(64,196,255,.1);  color: var(--blue); }
+
+/* Oportunidade mini bar (inline no card-list) */
+.opc-wrap { display: flex; align-items: center; gap: 4px; flex-shrink: 0; }
+.opc-bar { width: 36px; height: 3px; background: var(--s3); border-radius: 2px; overflow: hidden; }
+.opc-fill { height: 100%; border-radius: 2px; }
+.opc-fill.hi  { background: var(--green); }
+.opc-fill.mid { background: var(--yellow); }
+.opc-fill.lo  { background: var(--red); }
+.opc-val { font-family: var(--fm); font-size: 9px; color: var(--muted); }
+
+/* Sequência texto */
+.seq-text { font-family: var(--fm); font-size: 9px; color: var(--muted); }
+.seq-text.hot { color: var(--orange); }
+.seq-text.cold { color: var(--blue); }
+
+/* ARMADILHA LABEL BADGE — 5 níveis */
+.al-badge { font-family: var(--fm); font-size: 9px; padding: 2px 6px; border-radius: 3px; letter-spacing: .5px; display: inline-block; white-space: nowrap; }
+.al-oculto { background: rgba(0,230,118,.15); color: var(--green);  border: 1px solid rgba(0,230,118,.3); }
+.al-bom    { background: rgba(0,200,83,.1);   color: #69f0ae;       border: 1px solid rgba(0,200,83,.2); }
+.al-neutro { background: transparent;          color: var(--muted);  border: 1px solid var(--border); }
+.al-leve   { background: rgba(255,145,0,.1);  color: var(--orange); border: 1px solid rgba(255,145,0,.2); }
+.al-forte  { background: rgba(255,61,90,.12); color: var(--red);    border: 1px solid rgba(255,61,90,.25); }
 
 /* FILTERS */
 .filters { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 14px; align-items: center; }
@@ -141,13 +176,15 @@ th.sorted.asc::after { content: ' ↑'; }
 tbody tr { border-bottom: 1px solid rgba(30,45,61,.35); transition: background .1s; }
 tbody tr:last-child { border-bottom: none; }
 tbody tr:hover { background: var(--s2); }
-tbody tr.armadilha-row { border-left: 2px solid var(--orange); }
+tbody tr.armadilha-row { border-left: 2px solid var(--red); }
+tbody tr.valor-row     { border-left: 2px solid var(--green); }
 td { padding: 8px 14px; font-size: 13px; white-space: nowrap; }
 td.nm  { font-weight: 500; }
 td.mo  { font-family: var(--fm); font-size: 11px; }
 td.tg  { color: var(--green); font-family: var(--fm); font-size: 11px; }
 td.tr  { color: var(--red);   font-family: var(--fm); font-size: 11px; }
 td.tm  { color: var(--muted); font-family: var(--fm); font-size: 11px; }
+td.ty  { color: var(--yellow);font-family: var(--fm); font-size: 11px; }
 .sbadge { display: inline-block; font-size: 9px; font-family: var(--fm); padding: 2px 6px; border-radius: 3px; letter-spacing: .5px; }
 .s7 { background: rgba(0,230,118,.1);  color: var(--green);  border: 1px solid rgba(0,230,118,.2); }
 .s2 { background: rgba(255,214,0,.1);  color: var(--yellow); border: 1px solid rgba(255,214,0,.2); }
@@ -158,8 +195,43 @@ td.tm  { color: var(--muted); font-family: var(--fm); font-size: 11px; }
 .tend-alta   { background: rgba(0,230,118,.1); color: var(--green); }
 .tend-baixa  { background: rgba(255,61,90,.1); color: var(--red); }
 .tend-estavel{ background: rgba(90,116,145,.1);color: var(--muted); }
-.arm-icon { color: var(--orange); font-size: 12px; }
 .table-footer { padding: 9px 14px; border-top: 1px solid var(--border); font-family: var(--fm); font-size: 10px; color: var(--muted); display: flex; justify-content: space-between; align-items: center; }
+
+/* CONF CELL com mini bar */
+.conf-cell { display: flex; flex-direction: column; gap: 3px; }
+.conf-cell .opc-wrap { margin-top: 1px; }
+
+/* TOOLTIP */
+[data-tip] { position: relative; }
+[data-tip]::after { content: attr(data-tip); position: absolute; bottom: calc(100% + 6px); left: 50%; transform: translateX(-50%); background: var(--s3); border: 1px solid var(--border); color: var(--text); font-family: var(--fb); font-size: 11px; font-weight: 400; letter-spacing: 0; text-transform: none; padding: 6px 10px; border-radius: 6px; white-space: nowrap; pointer-events: none; opacity: 0; transition: opacity .15s; z-index: 100; }
+[data-tip]:hover::after { opacity: 1; }
+
+/* LOADING / ERROR */
+.loading { display: flex; align-items: center; justify-content: center; padding: 50px; color: var(--muted); font-family: var(--fm); font-size: 11px; gap: 10px; }
+.spinner { width: 16px; height: 16px; border: 2px solid var(--border); border-top-color: var(--green); border-radius: 50%; animation: spin .7s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.err { padding: 24px; color: var(--red); font-family: var(--fm); font-size: 11px; text-align: center; }
+
+/* FOOTER */
+footer { position: relative; z-index: 1; padding: 16px 40px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; background: rgba(6,9,13,.7); }
+footer span { font-family: var(--fm); font-size: 9px; color: var(--muted); letter-spacing: 1px; }
+footer a { color: var(--green); text-decoration: none; }
+
+/* TIMER FAIXA */
+.timer-bar {
+  position: relative; z-index: 9;
+  display: flex; align-items: center; justify-content: center;
+  gap: 20px; padding: 18px 40px;
+  background: var(--s1); border-bottom: 1px solid var(--border);
+  text-align: center;
+}
+.timer-bar.urgent { background: rgba(255,61,90,.06); border-bottom-color: rgba(255,61,90,.3); }
+.timer-bar.closed { background: rgba(90,116,145,.05); border-bottom-color: var(--border); }
+.timer-label { font-family: var(--fm); font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+.timer-digits { font-family: var(--fh); font-size: 52px; letter-spacing: 6px; color: var(--yellow); line-height: 1; transition: color .3s; }
+.timer-bar.urgent .timer-digits { color: var(--red); }
+.timer-bar.closed .timer-digits { color: var(--muted); font-size: 32px; letter-spacing: 4px; }
+.timer-sub { font-family: var(--fm); font-size: 9px; color: var(--muted); letter-spacing: 2px; margin-top: 5px; }
 
 /* CONFRONTOS GRID */
 .confrontos-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 14px; }
@@ -196,189 +268,126 @@ td.tm  { color: var(--muted); font-family: var(--fm); font-size: 11px; }
 .jogo-tag { font-family: var(--fm); font-size: 9px; padding: 2px 7px; border-radius: 3px; letter-spacing: 1px; }
 .jogo-atletas { font-family: var(--fm); font-size: 10px; color: var(--muted); border-top: 1px solid var(--border); padding-top: 8px; }
 .jogo-atletas span { color: var(--green); }
-.card-leg { padding: 7px 18px; font-family: var(--fm); font-size: 9px; color: var(--muted); border-top: 1px solid var(--border); letter-spacing: .5px; }
 
-/* TOOLTIP */
-[data-tip] { position: relative; }
-[data-tip]::after { content: attr(data-tip); position: absolute; bottom: calc(100% + 6px); left: 50%; transform: translateX(-50%); background: var(--s3); border: 1px solid var(--border); color: var(--text); font-family: var(--fb); font-size: 11px; font-weight: 400; letter-spacing: 0; text-transform: none; padding: 6px 10px; border-radius: 6px; white-space: nowrap; pointer-events: none; opacity: 0; transition: opacity .15s; z-index: 100; }
-[data-tip]:hover::after { opacity: 1; }
-
-/* LOADING / ERROR */
-.loading { display: flex; align-items: center; justify-content: center; padding: 50px; color: var(--muted); font-family: var(--fm); font-size: 11px; gap: 10px; }
-.spinner { width: 16px; height: 16px; border: 2px solid var(--border); border-top-color: var(--green); border-radius: 50%; animation: spin .7s linear infinite; }
-@keyframes spin { to { transform: rotate(360deg); } }
-.err { padding: 24px; color: var(--red); font-family: var(--fm); font-size: 11px; text-align: center; }
-
-/* FOOTER */
-footer { position: relative; z-index: 1; padding: 16px 40px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; background: rgba(6,9,13,.7); }
-footer span { font-family: var(--fm); font-size: 9px; color: var(--muted); letter-spacing: 1px; }
-footer a { color: var(--green); text-decoration: none; }
-
-/* TIMER FAIXA */
-.timer-bar {
-  position: relative; z-index: 9;
-  display: flex; align-items: center; justify-content: center;
-  gap: 20px; padding: 18px 40px;
-  background: var(--s1);
-  border-bottom: 1px solid var(--border);
-  text-align: center;
+/* MOMENTUM BLOCK nos confrontos */
+.jogo-momentum {
+  display: grid; grid-template-columns: 1fr 1px 1fr; gap: 10px;
+  border-top: 1px solid var(--border); padding-top: 10px;
 }
-.timer-bar.urgent { background: rgba(255,61,90,.06); border-bottom-color: rgba(255,61,90,.3); }
-.timer-bar.closed { background: rgba(90,116,145,.05); border-bottom-color: var(--border); }
-.timer-label { font-family: var(--fm); font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
-.timer-digits { font-family: var(--fh); font-size: 52px; letter-spacing: 6px; color: var(--yellow); line-height: 1; transition: color .3s; }
-.timer-bar.urgent .timer-digits { color: var(--red); }
-.timer-bar.closed .timer-digits { color: var(--muted); font-size: 32px; letter-spacing: 4px; }
-.timer-sub { font-family: var(--fm); font-size: 9px; color: var(--muted); letter-spacing: 2px; margin-top: 5px; }
+.mom-divider { background: var(--border); }
+.mom-side { display: flex; flex-direction: column; gap: 5px; }
+.mom-side.vis { align-items: flex-end; text-align: right; }
+.mom-abr { font-family: var(--fh); font-size: 14px; letter-spacing: 1px; color: var(--text); }
+.mom-row { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+.mom-side.vis .mom-row { justify-content: flex-end; }
+.mom-chip { font-family: var(--fm); font-size: 9px; padding: 2px 5px; border-radius: 3px; letter-spacing: .3px; }
+.mom-chip.of-up   { background: rgba(0,230,118,.12); color: var(--green); }
+.mom-chip.of-down { background: rgba(255,61,90,.1);  color: var(--red);   }
+.mom-chip.of-neu  { background: rgba(90,116,145,.1); color: var(--muted); }
+.mom-chip.def-up  { background: rgba(64,196,255,.1); color: var(--blue);  }
+.mom-chip.def-down{ background: rgba(255,214,0,.1);  color: var(--yellow);}
+.mom-seq { font-family: var(--fm); font-size: 9px; color: var(--muted); }
+.mom-seq.hot  { color: var(--orange); }
+.mom-seq.cold { color: var(--blue); }
+.mom-forma-dots { display: flex; gap: 3px; align-items: center; }
+.mom-side.vis .mom-forma-dots { justify-content: flex-end; }
+.mom-dot { width: 10px; height: 10px; border-radius: 50%; font-size: 0; }
+.mom-dot.W { background: rgba(0,230,118,.5); }
+.mom-dot.L { background: rgba(255,61,90,.5); }
+.mom-dot.D { background: rgba(255,214,0,.4); }
 
 /* ── BRASILEIRÃO ───────────────────────────────────────────── */
-
-/* Zona badges (G1, G4, G6, rebaixamento) */
-.zona-badge {
-  display: inline-flex; align-items: center; justify-content: center;
-  width: 22px; height: 22px; border-radius: 50%;
-  font-family: var(--fm); font-size: 10px; font-weight: 600;
-  flex-shrink: 0;
-}
+.zona-badge { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; font-family: var(--fm); font-size: 10px; font-weight: 600; flex-shrink: 0; }
 .zona-g1  { background: rgba(0,230,118,.18);  color: var(--green);  border: 1px solid rgba(0,230,118,.4); }
 .zona-g4  { background: rgba(64,196,255,.15); color: var(--blue);   border: 1px solid rgba(64,196,255,.35); }
 .zona-g6  { background: rgba(255,214,0,.15);  color: var(--yellow); border: 1px solid rgba(255,214,0,.35); }
 .zona-rel { background: rgba(255,61,90,.15);  color: var(--red);    border: 1px solid rgba(255,61,90,.3); }
 .zona-neu { background: transparent; color: var(--muted); border: 1px solid var(--border); }
-
-/* Linha de separação de zonas */
 .zona-separator td { border-top: 1px dashed rgba(255,255,255,.07) !important; }
 
-/* Forma – bolinha por resultado */
+/* Forma bolinhas */
 .form-dots { display: flex; gap: 4px; align-items: center; }
-.form-dot {
-  display: inline-flex; align-items: center; justify-content: center;
-  width: 20px; height: 20px; border-radius: 50%;
-  font-size: 11px; font-weight: 700; line-height: 1; flex-shrink: 0;
-  transition: transform .1s;
-}
+.form-dot { display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; border-radius: 50%; font-size: 11px; font-weight: 700; line-height: 1; flex-shrink: 0; transition: transform .1s; }
 .form-dot:hover { transform: scale(1.25); }
 .form-dot.W { background: rgba(0,230,118,.18); color: var(--green);  border: 1px solid rgba(0,230,118,.4); }
 .form-dot.L { background: rgba(255,61,90,.18);  color: var(--red);   border: 1px solid rgba(255,61,90,.4); }
 .form-dot.D { background: rgba(255,214,0,.15);  color: var(--yellow);border: 1px solid rgba(255,214,0,.35); }
-
-/* Símbolo dentro da bolinha */
 .form-dot.W::before { content: '✓'; }
 .form-dot.L::before { content: '✗'; }
 .form-dot.D::before { content: '─'; }
 
 /* Barra de aproveitamento */
 .aprov-wrap { display: flex; align-items: center; gap: 8px; }
-.aprov-bar-outer {
-  width: 52px; height: 5px; border-radius: 3px;
-  background: var(--s3); overflow: hidden; flex-shrink: 0;
-}
-.aprov-bar-inner {
-  height: 100%; border-radius: 3px;
-  background: linear-gradient(90deg, var(--green2), var(--green));
-  transition: width .4s ease;
-}
+.aprov-bar-outer { width: 52px; height: 5px; border-radius: 3px; background: var(--s3); overflow: hidden; flex-shrink: 0; }
+.aprov-bar-inner { height: 100%; border-radius: 3px; background: linear-gradient(90deg, var(--green2), var(--green)); transition: width .4s ease; }
 .aprov-bar-inner.mid { background: linear-gradient(90deg, #f9a825, var(--yellow)); }
 .aprov-bar-inner.low { background: linear-gradient(90deg, #c62828, var(--red)); }
 .aprov-val { font-family: var(--fm); font-size: 10px; color: var(--muted); flex-shrink: 0; }
 
-/* Mini stats casa/fora */
+/* Momentum na tabela do Brasileirão */
+.mom-cell { display: flex; flex-direction: column; gap: 2px; align-items: center; }
+.mom-arrow { font-family: var(--fm); font-size: 14px; line-height: 1; }
+.mom-arrow.up   { color: var(--green); }
+.mom-arrow.down { color: var(--red); }
+.mom-arrow.neu  { color: var(--muted); }
+.mom-ratio { font-family: var(--fm); font-size: 9px; color: var(--muted); }
+
+/* Sequência na tabela */
+.seq-cell { font-family: var(--fm); font-size: 10px; }
+.seq-cell.pos { color: var(--orange); }
+.seq-cell.neg { color: var(--blue); }
+.seq-cell.neu { color: var(--muted); }
+
+/* Forma ponderada barra */
+.fs-wrap { display: flex; align-items: center; gap: 5px; }
+.fs-bar { width: 32px; height: 4px; background: var(--s3); border-radius: 2px; overflow: hidden; }
+.fs-fill { height: 100%; border-radius: 2px; }
+.fs-val { font-family: var(--fm); font-size: 9px; color: var(--muted); }
+
 .mini-stat { font-family: var(--fm); font-size: 10px; color: var(--muted); }
 .mini-stat .val { font-weight: 600; }
 .mini-stat .val.g { color: var(--green); }
 .mini-stat .val.y { color: var(--yellow); }
 .mini-stat .val.r { color: var(--red); }
 
-/* Tabela do Brasileirão — desktop */
-#bra-table { min-width: 1020px; }
+#bra-table { min-width: 1260px; }
 #bra-table th { text-align: center; }
 #bra-table th:nth-child(2) { text-align: left; }
 #bra-table td { text-align: center; }
 #bra-table td:nth-child(2) { text-align: left; }
-#bra-table td.pts-cell {
-  font-family: var(--fh); font-size: 18px; letter-spacing: 1px;
-  color: var(--text);
-}
+#bra-table td.pts-cell { font-family: var(--fh); font-size: 18px; letter-spacing: 1px; color: var(--text); }
+#bra-table th:nth-child(1), #bra-table td:nth-child(1) { position: sticky; left: 0; z-index: 2; background: var(--s2); }
+#bra-table th:nth-child(2), #bra-table td:nth-child(2) { position: sticky; left: 38px; z-index: 2; background: var(--s1); border-right: 1px solid var(--border); min-width: 130px; }
+#bra-table tbody tr:hover td:nth-child(1), #bra-table tbody tr:hover td:nth-child(2) { background: var(--s2); }
 
-/* Colunas # e TIME fixas no scroll horizontal */
-#bra-table th:nth-child(1),
-#bra-table td:nth-child(1) {
-  position: sticky; left: 0; z-index: 2;
-  background: var(--s2);
-}
-#bra-table th:nth-child(2),
-#bra-table td:nth-child(2) {
-  position: sticky; left: 38px; z-index: 2;
-  background: var(--s1);
-  border-right: 1px solid var(--border);
-  min-width: 130px;
-}
-#bra-table tbody tr:hover td:nth-child(1),
-#bra-table tbody tr:hover td:nth-child(2) { background: var(--s2); }
-
-/* ── CARDS MOBILE (Brasileirão) ─────────────────────────────── */
+/* CARDS MOBILE Brasileirão */
 .bra-cards { display: none; flex-direction: column; gap: 10px; }
-
-.bra-card {
-  background: var(--s1); border: 1px solid var(--border);
-  border-radius: 10px; overflow: hidden;
-}
-.bra-card-header {
-  display: flex; align-items: center; gap: 10px;
-  padding: 12px 14px; border-bottom: 1px solid var(--border);
-}
+.bra-card { background: var(--s1); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+.bra-card-header { display: flex; align-items: center; gap: 10px; padding: 12px 14px; border-bottom: 1px solid var(--border); }
 .bra-card-nome { font-weight: 600; font-size: 14px; flex: 1; }
-.bra-card-pts  {
-  font-family: var(--fh); font-size: 26px; letter-spacing: 1px;
-  color: var(--text); line-height: 1;
-}
-.bra-card-pts-label {
-  font-family: var(--fm); font-size: 9px; color: var(--muted);
-  letter-spacing: 1px; text-align: right;
-}
-.bra-card-grid {
-  display: grid; grid-template-columns: repeat(4, 1fr);
-  gap: 0;
-}
-.bra-card-stat {
-  padding: 10px 12px; border-right: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  display: flex; flex-direction: column; gap: 3px;
-}
+.bra-card-pts  { font-family: var(--fh); font-size: 26px; letter-spacing: 1px; color: var(--text); line-height: 1; }
+.bra-card-pts-label { font-family: var(--fm); font-size: 9px; color: var(--muted); letter-spacing: 1px; text-align: right; }
+.bra-card-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
+.bra-card-stat { padding: 10px 12px; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); display: flex; flex-direction: column; gap: 3px; }
 .bra-card-stat:nth-child(4n) { border-right: none; }
 .bra-card-stat:nth-last-child(-n+4) { border-bottom: none; }
-.bra-card-stat-label {
-  font-family: var(--fm); font-size: 8px; color: var(--muted);
-  text-transform: uppercase; letter-spacing: 1px;
-}
-.bra-card-stat-val {
-  font-family: var(--fm); font-size: 13px; font-weight: 600;
-  color: var(--text);
-}
+.bra-card-stat-label { font-family: var(--fm); font-size: 8px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+.bra-card-stat-val { font-family: var(--fm); font-size: 13px; font-weight: 600; color: var(--text); }
 .bra-card-stat-val.g { color: var(--green); }
 .bra-card-stat-val.y { color: var(--yellow); }
 .bra-card-stat-val.r { color: var(--red); }
-.bra-card-forma {
-  padding: 10px 14px;
-  display: flex; align-items: center; justify-content: space-between;
-  border-top: 1px solid var(--border);
-}
-.bra-card-forma-label {
-  font-family: var(--fm); font-size: 9px; color: var(--muted);
-  letter-spacing: 1px; text-transform: uppercase;
-}
+.bra-card-stat-val.o { color: var(--orange); }
+.bra-card-forma { padding: 10px 14px; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--border); }
+.bra-card-forma-label { font-family: var(--fm); font-size: 9px; color: var(--muted); letter-spacing: 1px; text-transform: uppercase; }
 
-/* Esconde tabela e mostra cards em mobile */
 @media (max-width: 768px) {
   .bra-table-wrap  { display: none !important; }
   .bra-cards       { display: flex; }
   .bra-artilheiros { display: none; }
-
-  /* Em mobile os artilheiros ficam abaixo dos cards */
   #tab-brasileirao > div:last-child { grid-template-columns: 1fr !important; }
 }
 
-/* Artilheiros mini-lista */
+/* Artilheiros */
 .scorer-row { display: flex; align-items: center; gap: 12px; padding: 8px 16px; border-bottom: 1px solid rgba(30,45,61,.4); transition: background .1s; }
 .scorer-row:last-child { border-bottom: none; }
 .scorer-row:hover { background: var(--s2); }
@@ -388,9 +397,19 @@ footer a { color: var(--green); text-decoration: none; }
 .scorer-goals { font-family: var(--fh); font-size: 22px; letter-spacing: 1px; color: var(--green); line-height: 1; }
 .scorer-assists { font-family: var(--fm); font-size: 10px; color: var(--blue); }
 
-/* Legenda zona */
 .zona-legenda { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 14px; }
 .zona-leg-item { display: flex; align-items: center; gap: 6px; font-family: var(--fm); font-size: 10px; color: var(--muted); }
+
+/* TOP CONFRONTO CARD — lista mais rica */
+.conf-list-item {
+  padding: 10px 18px;
+  display: flex; flex-direction: column; gap: 4px;
+  border-bottom: 1px solid rgba(30,45,61,.5); transition: background .12s;
+}
+.conf-list-item:last-child { border-bottom: none; }
+.conf-list-item:hover { background: var(--s2); }
+.conf-list-top { display: flex; align-items: center; gap: 8px; }
+.conf-list-bottom { display: flex; align-items: center; gap: 8px; padding-left: 26px; }
 
 @media (max-width: 600px) {
   header, main, footer { padding-left: 16px; padding-right: 16px; }
@@ -402,11 +421,10 @@ footer a { color: var(--green); text-decoration: none; }
 </head>
 <body>
 
-<!-- HEADER -->
 <header>
   <div>
     <div class="logo-title">Namorato's Dashboard</div>
-    <div class="logo-sub">Dashboard de Mercado - Brasileirão 2026</div>
+    <div class="logo-sub">Dashboard de Mercado · Brasileirão 2026</div>
   </div>
   <div class="header-right">
     <div class="rodada-pill" id="rodada-pill">Rodada —</div>
@@ -416,7 +434,6 @@ footer a { color: var(--green); text-decoration: none; }
   </div>
 </header>
 
-<!-- TIMER FAIXA -->
 <div class="timer-bar" id="timer-bar">
   <div>
     <div class="timer-label" id="timer-label">fechamento do mercado em</div>
@@ -425,19 +442,18 @@ footer a { color: var(--green); text-decoration: none; }
   </div>
 </div>
 
-<!-- STATS BAR -->
 <div class="stats-bar">
   <div class="stat-item"><div class="stat-label">Atletas</div><div class="stat-value" id="s-total">—</div></div>
   <div class="stat-item"><div class="stat-label">Prováveis</div><div class="stat-value g" id="s-prov">—</div></div>
   <div class="stat-item"><div class="stat-label">Em dúvida</div><div class="stat-value y" id="s-duv">—</div></div>
   <div class="stat-item"><div class="stat-label">Fora</div><div class="stat-value r" id="s-fora">—</div></div>
   <div class="stat-item"><div class="stat-label">Mandantes</div><div class="stat-value g" id="s-mand">—</div></div>
-  <div class="stat-item"><div class="stat-label">Armadilhas</div><div class="stat-value" style="color:var(--orange)" id="s-arm">—</div></div>
+  <div class="stat-item"><div class="stat-label">Armadilhas Fortes</div><div class="stat-value" style="color:var(--red)" id="s-arm">—</div></div>
+  <div class="stat-item"><div class="stat-label">Valores Ocultos</div><div class="stat-value g" id="s-ocultos">—</div></div>
   <div class="stat-item"><div class="stat-label">Maior alta</div><div class="stat-value g" id="s-alta">—</div></div>
   <div class="stat-item"><div class="stat-label">Maior baixa</div><div class="stat-value r" id="s-baixa">—</div></div>
 </div>
 
-<!-- TABS -->
 <div class="nav-tabs">
   <button class="nav-tab active" data-tab="destaques">Destaques</button>
   <button class="nav-tab" data-tab="atletas">Atletas</button>
@@ -447,37 +463,58 @@ footer a { color: var(--green); text-decoration: none; }
 
 <main>
 
-  <!-- TAB: DESTAQUES -->
   <div class="tab-panel active" id="tab-destaques">
     <div class="cards-grid">
+
       <div class="card">
-        <div class="card-header"><div class="card-title" data-tip="Atletas com maior alta de preço na última rodada">MAIORES ALTAS</div><div class="badge bg">VAR +</div></div>
+        <div class="card-header">
+          <div class="card-title" data-tip="Atletas com maior alta de preço na última rodada">MAIORES ALTAS</div>
+          <div class="badge bg">VAR +</div>
+        </div>
+        <div class="card-expl">Quem mais valorizou após a última rodada — bom sinal de forma recente, mas verifique o preço atual antes de escalar.</div>
         <ul class="card-list" id="l-altas"><li><div class="loading"><div class="spinner"></div>carregando...</div></li></ul>
         <div class="card-leg" id="leg-altas"></div>
       </div>
+
       <div class="card">
-        <div class="card-header"><div class="card-title" data-tip="Atletas com maior queda de preço na última rodada">MAIORES BAIXAS</div><div class="badge br">VAR −</div></div>
+        <div class="card-header">
+          <div class="card-title" data-tip="Atletas com maior queda de preço na última rodada">MAIORES BAIXAS</div>
+          <div class="badge br">VAR −</div>
+        </div>
+        <div class="card-expl">Quem mais desvalorizou — pode ser oportunidade de compra se a queda foi pontual, ou sinal de perda de forma.</div>
         <ul class="card-list" id="l-baixas"><li><div class="loading"><div class="spinner"></div>carregando...</div></li></ul>
         <div class="card-leg" id="leg-baixas"></div>
       </div>
+
       <div class="card">
-        <div class="card-header"><div class="card-title" data-tip="Melhor relação média ÷ preço entre atletas com 3+ jogos">MELHOR CUSTO-BENEFÍCIO</div><div class="badge bb">MÉDIA/PREÇO</div></div>
-        <ul class="card-list" id="l-cb"><li><div class="loading"><div class="spinner"></div>carregando...</div></li></ul>
-        <div class="card-leg" id="leg-cb"></div>
+        <div class="card-header">
+          <div class="card-title" data-tip="Atletas com residuo_z > 1.5: entregam muito acima do esperado pelo preço, detectado por regressão linear dentro da posição">💎 VALORES OCULTOS</div>
+          <div class="badge bg">RENDIMENTO ACIMA DO PREÇO</div>
+        </div>
+        <div class="card-expl">Atletas cujo rendimento real supera significativamente o que o preço deles prevê — detectados por regressão linear dentro de cada posição. São as melhores oportunidades de mercado.</div>
+        <ul class="card-list" id="l-ocultos"><li><div class="loading"><div class="spinner"></div>carregando...</div></li></ul>
+        <div class="card-leg" id="leg-ocultos"></div>
       </div>
+
       <div class="card">
-        <div class="card-header"><div class="card-title" data-tip="Preço acima da mediana da posição, mas média abaixo - cuidado antes de escalar">⚠️ ARMADILHAS</div><div class="badge bo">PREÇO ALTO / MÉDIA BAIXA</div></div>
+        <div class="card-header">
+          <div class="card-title" data-tip="Atletas com residuo_z < -1.5: entregam muito abaixo do esperado pelo preço — risco real de perda de cartoletas">🚨 ARMADILHAS FORTES</div>
+          <div class="badge br">PREÇO ALTO · PERFORMANCE BAIXA</div>
+        </div>
+        <div class="card-expl">Atletas que rendem muito abaixo do que o preço sugere, medido por regressão contra a posição inteira. Escalar um desses é queimar cartoletas — cuidado mesmo se parecerem óbvios.</div>
         <ul class="card-list" id="l-arm"><li><div class="loading"><div class="spinner"></div>carregando...</div></li></ul>
         <div class="card-leg" id="leg-arm"></div>
       </div>
+
     </div>
-    <div class="section-title"><div class="accent"></div>TOP MANDANTES POR POSIÇÃO</div>
-    <div class="cards-grid" id="top-mandantes-grid">
+
+    <div class="section-title"><div class="accent"></div>TOP CONFRONTO POR POSIÇÃO</div>
+    <div class="section-sub">Ordenado pelo score de confronto: combina oportunidade posicional (defesa/ataque do adversário no mando específico), vantagem de aproveitamento, momentum ofensivo e forma recente do time.</div>
+    <div class="cards-grid" id="top-confronto-grid">
       <div class="loading"><div class="spinner"></div>carregando...</div>
     </div>
   </div>
 
-  <!-- TAB: ATLETAS -->
   <div class="tab-panel" id="tab-atletas">
     <div class="filters">
       <div id="filter-pos" style="display:flex;gap:6px;flex-wrap:wrap;">
@@ -490,7 +527,8 @@ footer a { color: var(--green); text-decoration: none; }
         <button class="filter-btn" data-pos="Técnico">TEC</button>
       </div>
       <button class="filter-btn danger" id="btn-mandante" data-active="false">🏠 Mandante</button>
-      <button class="filter-btn danger" id="btn-armadilha" data-active="false">⚠️ Armadilha</button>
+      <button class="filter-btn danger" id="btn-armadilha" data-active="false">🚨 Armadilha</button>
+      <button class="filter-btn danger" id="btn-valor" data-active="false">💎 Valor Oculto</button>
       <button class="filter-btn" id="btn-legenda" title="Legenda dos campos">❓</button>
       <div class="search-wrap">
         <span class="search-icon">🔎</span>
@@ -502,143 +540,163 @@ footer a { color: var(--green); text-decoration: none; }
         <table>
           <thead>
             <tr>
-              <th data-col="nome" data-tip="Nome do atleta">ATLETA</th>
-              <th data-col="clube" data-tip="Clube do atleta">CLUBE</th>
-              <th data-col="posicao" data-tip="Posição no Cartola">POS</th>
-              <th data-col="preco" data-tip="Preço atual em cartoletas (C$)">PREÇO ↕</th>
-              <th data-col="variacao" data-tip="Variação de preço após a última rodada">VAR ↕</th>
-              <th data-col="media" data-tip="Média de pontos por rodada disputada">MÉDIA ↕</th>
-              <th data-col="custo_beneficio" data-tip="Custo-benefício: média ÷ preço. Quanto ponto rende por C$ gasto">C/B ↕</th>
+              <th data-col="nome">ATLETA</th>
+              <th data-col="clube">CLUBE</th>
+              <th data-col="posicao">POS</th>
+              <th data-col="preco" data-tip="Preço atual em cartoletas (C$)">PREÇO</th>
+              <th data-col="min_valorizar" data-tip="Estimativa do mínimo de pontos para não desvalorizar">MÍNIMO</th>
+              <th data-col="variacao" data-tip="Variação de preço após a última rodada">VAR</th>
+              <th data-col="media" data-tip="Média bruta de pontos por rodada">MÉDIA</th>
+              <th data-col="pb_media" data-tip="Pontos Base Médios (Média retirando Gols, Assistências e SG). Indica a segurança do atleta.">PB MÉDIO</th>
+              <th data-col="media_bayesiana" data-tip="Média com encolhimento bayesiano">BAYES</th>
+              <th data-col="custo_beneficio" data-tip="média bayesiana ÷ preço × confiabilidade">C/B</th>
               <th data-col="cb_rank" data-tip="Ranking de custo-benefício dentro da posição">RANK</th>
-              <th data-col="mandante" data-tip="Confronto: 🏠 joga em casa,✈️ joga fora">CONF</th>
-              <th data-col="tendencia" data-tip="Tendência de preço: alta (+0.5), baixa (-0.5) ou estável">TEND</th>
-              <th data-col="status_id" data-tip="Status: Provável, Dúvida, Contundido, Suspenso">STATUS</th>
-              <th data-col="armadilha" data-tip="Armadilha: preço acima da mediana mas média abaixo da posição">⚠️</th>
+              <th data-col="mandante" data-tip="Confronto, oportunidade posicional (barra) e vantagem de aproveitamento (pp)">CONF / OPC</th>
+              <th data-col="tendencia" data-tip="Tendência de preço baseada na variação">TEND</th>
+              <th data-col="status_id" data-tip="Status no Cartola">STATUS</th>
+              <th data-col="armadilha_label" data-tip="Avaliação regressão linear: valor_oculto, valor_bom, neutro, armadilha_leve, armadilha_forte">LABEL</th>
+              <th data-col="score_confronto_100" data-tip="Mede a dificuldade do jogo. 50 = Confronto normal/mediano. Acima de 60 = Oportunidade excelente. Abaixo de 40 = Fogueira/Risco alto.">SCORE ↕</th>
             </tr>
           </thead>
           <tbody id="table-body">
-            <tr><td colspan="12"><div class="loading"><div class="spinner"></div>carregando...</div></td></tr>
+            <tr><td colspan="16"><div class="loading"><div class="spinner"></div>carregando...</div></td></tr>
           </tbody>
         </table>
       </div>
       <div class="table-footer">
         <span id="table-count">—</span>
+<<<<<<< HEAD
         <span>atletas.csv · current/ · api.cartola.globo.com</span>
+=======
+        <span>atletas_enriquecido.csv · padrão: ordenado por score de confronto</span>
+>>>>>>> d95e0e9d03afd7be816bd4d7cf5db21dc193e6e6
       </div>
     </div>
   </div>
 
-  <!-- TAB: CONFRONTOS -->
   <div class="tab-panel" id="tab-confrontos">
     <div class="section-title"><div class="accent"></div>JOGOS DA RODADA</div>
+    <div class="section-sub">Cards incluem odds, probabilidades e — quando disponível — análise de momentum dos dois times (gols recentes vs temporada, forma ponderada e sequência de resultados).</div>
     <div class="confrontos-grid" id="confrontos-grid">
       <div class="loading"><div class="spinner"></div>carregando...</div>
     </div>
   </div>
 
-  <!-- TAB: BRASILEIRÃO ───────────────────────────────────── -->
   <div class="tab-panel" id="tab-brasileirao">
 
-    <!-- Legenda de zonas -->
     <div class="zona-legenda">
       <div class="zona-leg-item"><span class="zona-badge zona-g1">1</span> Libertadores (G1)</div>
       <div class="zona-leg-item"><span class="zona-badge zona-g4">4</span> Pré-Libertadores</div>
       <div class="zona-leg-item"><span class="zona-badge zona-g6">6</span> Sul-Americana</div>
       <div class="zona-leg-item"><span class="zona-badge zona-rel">Z</span> Rebaixamento</div>
+      <div class="zona-leg-item" style="margin-left:auto;font-size:9px;">
+        <span style="color:var(--green)">MOF↑</span> = marcando mais que a média da temporada &nbsp;·&nbsp;
+        <span style="color:var(--blue)">MDF↓</span> = sofrendo menos &nbsp;·&nbsp;
+        SEQ = streak invicto (+) ou sem ganhar (−)
+      </div>
     </div>
 
     <div style="display:grid; grid-template-columns: 1fr 280px; gap: 20px; align-items: start;">
-
-      <!-- TABELA PRINCIPAL (desktop) / CARDS (mobile) -->
-      <div>
-        <!-- tabela desktop -->
-        <div class="bra-table-wrap">
+      <div style="min-width: 0;">
+        <div class="bra-table-wrap">  
           <div class="table-wrap">
             <div class="table-scroll">
               <table id="bra-table">
                 <thead>
                   <tr>
-                    <th data-tip="Posição na tabela">#</th>
-                    <th data-tip="Nome do clube">TIME</th>
+                    <th data-tip="Posição">#</th>
+                    <th data-tip="Clube">TIME</th>
                     <th data-tip="Pontos">PTS</th>
-                    <th data-tip="Jogos disputados">J</th>
-                    <th data-tip="Vitórias" style="color:var(--green)">V</th>
-                    <th data-tip="Empates" style="color:var(--yellow)">E</th>
-                    <th data-tip="Derrotas" style="color:var(--red)">D</th>
-                    <th data-tip="Gols marcados pelo time">GP</th>
-                    <th data-tip="Gols sofridos pelo time">GC</th>
+                    <th data-tip="Jogos">J</th>
+                    <th style="color:var(--green)" data-tip="Vitórias">V</th>
+                    <th style="color:var(--yellow)" data-tip="Empates">E</th>
+                    <th style="color:var(--red)" data-tip="Derrotas">D</th>
+                    <th data-tip="Gols marcados">GP</th>
+                    <th data-tip="Gols sofridos">GC</th>
                     <th data-tip="Saldo de gols">SG</th>
-                    <th data-tip="Aproveitamento em %">APROV</th>
-                    <th data-tip="Aproveitamento jogando em casa">CASA</th>
-                    <th data-tip="Aproveitamento jogando fora">FORA</th>
-                    <th data-tip="Últimos 5 jogos (mais recente à direita)">FORMA</th>
+                    <th data-tip="Aproveitamento geral">APROV</th>
+                    <th data-tip="Aproveitamento em casa">CASA</th>
+                    <th data-tip="Aproveitamento fora">FORA</th>
+                    <th data-tip="Últimos 5 jogos">FORMA</th>
+                    <th data-tip="Momentum ofensivo: ratio gols marcados recentes / média da temporada. >1 = marcando mais que o normal">MOF</th>
+                    <th data-tip="Momentum defensivo: ratio gols sofridos recentes / média. <1 = defesa mais sólida que o normal">MDF</th>
+                    <th data-tip="Sequência atual: positivo = jogos invicto, negativo = jogos sem ganhar">SEQ</th>
                   </tr>
                 </thead>
                 <tbody id="bra-tbody">
-                  <tr><td colspan="14"><div class="loading"><div class="spinner"></div>carregando...</div></td></tr>
+                  <tr><td colspan="17"><div class="loading"><div class="spinner"></div>carregando...</div></td></tr>
                 </tbody>
               </table>
             </div>
             <div class="table-footer">
               <span id="bra-count">—</span>
+<<<<<<< HEAD
               <span>football-data.org · raw/brasileirao.json</span>
+=======
+              <span>football-data.org + brasileirao_tabela.csv</span>
+>>>>>>> d95e0e9d03afd7be816bd4d7cf5db21dc193e6e6
             </div>
           </div>
         </div>
 
-        <!-- cards mobile -->
         <div class="bra-cards" id="bra-cards">
           <div class="loading"><div class="spinner"></div>carregando...</div>
         </div>
       </div>
 
-      <!-- ARTILHEIROS -->
       <div class="bra-artilheiros" style="display:flex; flex-direction:column; gap:16px;">
         <div class="card">
           <div class="card-header">
             <div class="card-title">ARTILHEIROS</div>
             <div class="badge bg">GOLS</div>
           </div>
-          <div id="bra-scorers">
-            <div class="loading"><div class="spinner"></div></div>
-          </div>
+          <div id="bra-scorers"><div class="loading"><div class="spinner"></div></div></div>
         </div>
       </div>
 
     </div>
   </div>
-  <!-- ───────────────────────────────────────────────────── -->
 
 </main>
 
-<!-- MODAL LEGENDA -->
 <div id="modal-legenda" style="display:none; position:fixed; inset:0; z-index:200; background:rgba(6,9,13,.85); backdrop-filter:blur(6px); align-items:center; justify-content:center;">
-  <div style="background:var(--s1); border:1px solid var(--border); border-radius:12px; padding:24px 28px; max-width:480px; width:90%; position:relative;">
+  <div style="background:var(--s1); border:1px solid var(--border); border-radius:12px; padding:24px 28px; max-width:520px; width:90%; position:relative; max-height:90vh; overflow-y:auto;">
     <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:18px;">
       <div style="font-family:var(--fh); font-size:18px; letter-spacing:2px;">LEGENDA DOS CAMPOS</div>
       <button id="modal-close" style="background:none; border:none; color:var(--muted); font-size:18px; cursor:pointer; line-height:1;">✕</button>
     </div>
     <div style="display:flex; flex-direction:column; gap:10px; font-family:var(--fm); font-size:11px;">
-      <div style="display:flex; gap:10px;"><span style="color:var(--green); min-width:70px;">PREÇO</span><span style="color:var(--muted)">Valor atual em cartoletas (C$)</span></div>
-      <div style="display:flex; gap:10px;"><span style="color:var(--green); min-width:70px;">VAR</span><span style="color:var(--muted)">Variação de preço após a última rodada</span></div>
-      <div style="display:flex; gap:10px;"><span style="color:var(--green); min-width:70px;">MÉDIA</span><span style="color:var(--muted)">Média de pontos por rodada disputada</span></div>
-      <div style="display:flex; gap:10px;"><span style="color:var(--green); min-width:70px;">C/B</span><span style="color:var(--muted)">Custo-benefício: média ÷ preço. Quanto ponto rende por C$ gasto</span></div>
-      <div style="display:flex; gap:10px;"><span style="color:var(--green); min-width:70px;">RANK</span><span style="color:var(--muted)">Ranking de custo-benefício dentro da posição</span></div>
-      <div style="display:flex; gap:10px;"><span style="color:var(--green); min-width:70px;">CONF</span><span style="color:var(--muted)">Confronto da rodada: 🏠 joga em casa, ✈️ joga fora</span></div>
-      <div style="display:flex; gap:10px;"><span style="color:var(--green); min-width:70px;">TEND</span><span style="color:var(--muted)">Tendência de preço: alta (+0.5), baixa (-0.5) ou estável</span></div>
-      <div style="display:flex; gap:10px;"><span style="color:var(--green); min-width:70px;">STATUS</span><span style="color:var(--muted)">Provável, Dúvida, Contundido ou Suspenso</span></div>
-      <div style="display:flex; gap:10px;"><span style="color:var(--orange); min-width:70px;">⚠️</span><span style="color:var(--muted)">Armadilha: preço acima da mediana da posição, mas média abaixo - risco alto</span></div>
+      <div style="color:var(--muted); font-size:9px; letter-spacing:2px; text-transform:uppercase; margin-top:4px;">— Preço e Rendimento —</div>
+      <div style="display:flex; gap:10px;"><span style="color:var(--green); min-width:80px;">PREÇO</span><span style="color:var(--muted)">Valor atual em cartoletas (C$)</span></div>
+      <div style="display:flex; gap:10px;"><span style="color:var(--orange); min-width:80px;">MÍNIMO</span><span style="color:var(--muted)">Heurística do mercado indicando quanto o atleta precisa pontuar para não desvalorizar.</span></div>
+      <div style="display:flex; gap:10px;"><span style="color:var(--green); min-width:80px;">VAR</span><span style="color:var(--muted)">Variação de preço após a última rodada</span></div>
+      <div style="display:flex; gap:10px;"><span style="color:var(--green); min-width:80px;">MÉDIA</span><span style="color:var(--muted)">Média bruta de pontos por rodada disputada</span></div>
+      <div style="display:flex; gap:10px;"><span style="color:var(--green); min-width:80px;">PB MÉDIO</span><span style="color:var(--muted)">Pontos Base. É a média excluindo eventos dependentes (Gols, Assistência, SG). Valores em verde indicam atletas altamente seguros e regulares.</span></div>
+      <div style="display:flex; gap:10px;"><span style="color:var(--green); min-width:80px;">BAYES</span><span style="color:var(--muted)">Média com encolhimento: atletas com poucos jogos têm a média puxada para a média da posição — evita superestimar amostras pequenas</span></div>
+      <div style="display:flex; gap:10px;"><span style="color:var(--green); min-width:80px;">C/B</span><span style="color:var(--muted)">Custo-benefício: média bayesiana ÷ preço × confiabilidade</span></div>
+      <div style="display:flex; gap:10px;"><span style="color:var(--green); min-width:80px;">RANK</span><span style="color:var(--muted)">Ranking de C/B dentro da posição</span></div>
+      <div style="color:var(--muted); font-size:9px; letter-spacing:2px; text-transform:uppercase; margin-top:4px;">— Confronto —</div>
+      <div style="display:flex; gap:10px;"><span style="color:var(--green); min-width:80px;">CONF/OPC</span><span style="color:var(--muted)">Confronto (🏠 casa / ✈️ fora) + barra de oportunidade posicional (0–1) + vantagem de aproveitamento em pp</span></div>
+      <div style="display:flex; gap:10px;"><span style="color:var(--green); min-width:80px;">OPC (barra)</span><span style="color:var(--muted)">Atacantes/Meias: quão fraca é a defesa do adversário no mando. Defensores/GOL: quão fraco é o ataque adversário. Percentil 0–1.</span></div>
+      <div style="color:var(--muted); font-size:9px; letter-spacing:2px; text-transform:uppercase; margin-top:4px;">— Avaliação —</div>
+      <div style="display:flex; gap:10px;"><span style="color:var(--green); min-width:80px;">LABEL</span><span style="color:var(--muted)">Avaliação por regressão linear (preço → média) dentro da posição: 💎 valor_oculto · ✓ valor_bom · — neutro · ⚠ armadilha_leve · 🚨 armadilha_forte</span></div>
+      <div style="display:flex; gap:10px;"><span style="color:var(--yellow); min-width:80px;">SCORE</span><span style="color:var(--muted)">Escore-Z do confronto. Mede a distância para a média da posição. <strong>50.0</strong> = Confronto mediano/neutro. <strong>60.0 ou mais</strong> = Confronto excelente. <strong>40.0 ou menos</strong> = Fogueira (evite escalar). Mistura mando de campo, fragilidade do adversário e momentum.</span></div>
+      <div style="color:var(--muted); font-size:9px; letter-spacing:2px; text-transform:uppercase; margin-top:4px;">— Brasileirão —</div>
+      <div style="display:flex; gap:10px;"><span style="color:var(--green); min-width:80px;">MOF</span><span style="color:var(--muted)">Momentum ofensivo: ratio gols marcados recentes ÷ média da temporada. &gt;1 = time marcando mais que o normal</span></div>
+      <div style="display:flex; gap:10px;"><span style="color:var(--green); min-width:80px;">MDF</span><span style="color:var(--muted)">Momentum defensivo: ratio gols sofridos recentes ÷ média. &lt;1 = defesa mais sólida que o normal</span></div>
+      <div style="display:flex; gap:10px;"><span style="color:var(--green); min-width:80px;">SEQ</span><span style="color:var(--muted)">Sequência atual: +N = invicto há N jogos, −N = N jogos sem ganhar</span></div>
     </div>
   </div>
 </div>
 
 <footer>
-  <span>Namorato's Dashboard - coleta automática via GitHub Actions</span>
-  <span>fonte: <a href="https://api.cartola.globo.com" target="_blank">api.cartola.globo.com</a></span>
+  <span>Namorato's Dashboard · coleta automática via GitHub Actions</span>
+  <span>fonte: <a href="https://api.cartola.globo.com" target="_blank">api.cartola.globo.com</a> · football-data.org</span>
 </footer>
 
 <script>
 // ── CONFIG ────────────────────────────────────────────────────
+<<<<<<< HEAD
 const CSV_ENR    = './data/current/atletas.csv';
 const CSV_PART   = './data/current/partidas.csv';
 const CSV_ROD    = './data/current/rodadas.csv';
@@ -646,6 +704,16 @@ const CSV_LOG    = './data/current/log.csv';
 const CSV_STATUS = './data/current/status.csv';
 const CSV_ODDS   = './data/current/odds.csv';
 const JSON_BRA   = './data/raw/brasileirao.json';
+=======
+const CSV_ENR    = './data/atletas_enriquecido.csv';
+const CSV_PART   = './data/partidas.csv';
+const CSV_ROD    = './data/rodadas.csv';
+const CSV_LOG    = './data/log.csv';
+const CSV_STATUS = './data/mercado_status.csv';
+const CSV_ODDS   = './data/odds.csv';
+const CSV_TABELA = './data/brasileirao_tabela.csv';
+const JSON_BRA   = './data/brasileirao_data.json';
+>>>>>>> d95e0e9d03afd7be816bd4d7cf5db21dc193e6e6
 
 const STATUS_MAP = {
   '7': { l: 'Provável',   c: 's7' },
@@ -655,41 +723,64 @@ const STATUS_MAP = {
   '6': { l: 'Nulo',       c: 's6' },
 };
 
+// Mapa abreviação Cartola → nomes do football-data.org
+// Usado para cruzar confrontos com dados de momentum
+const ABR_TO_NOME = {
+  'FLA': ['Flamengo'],
+  'PAL': ['Palmeiras'],
+  'CAM': ['Atletico Mineiro','Atlético Mineiro'],
+  'FLU': ['Fluminense'],
+  'COR': ['Corinthians'],
+  'SAO': ['Sao Paulo','São Paulo'],
+  'INT': ['Internacional'],
+  'GRE': ['Gremio','Grêmio'],
+  'BOT': ['Botafogo'],
+  'VAS': ['Vasco da Gama'],
+  'BAH': ['Bahia'],
+  'CRU': ['Cruzeiro'],
+  'CAP': ['Atletico Paranaense','Atlético Paranaense'],
+  'SAN': ['Santos'],
+  'VIT': ['Vitoria','Vitória'],
+  'RBB': ['Red Bull Bragantino','Bragantino-SP'],
+  'MIR': ['Mirassol'],
+  'FOR': ['Fortaleza'],
+  'JUV': ['Juventude'],
+  'AME': ['América Mineiro'],
+  'GOI': ['Goiás'],
+  'CUI': ['Cuiabá'],
+  'CEA': ['Ceará'],
+  'SPT': ['Sport Recife'],
+};
+
 // ── STATE ─────────────────────────────────────────────────────
-let ALL = [], PARTIDAS = [], ODDS = [];
-let fPos = 'all', fText = '', fMand = false, fArm = false;
-let sortCol = 'media', sortAsc = false;
+let ALL = [], PARTIDAS = [], ODDS = [], TABELA_BRA = [], TABELA_IDX = {};
+let fPos = 'all', fText = '', fMand = false, fArm = false, fValor = false;
+let sortCol = 'score_confronto_100', sortAsc = false;
 let timerInterval = null;
 
 // ── TIMER ─────────────────────────────────────────────────────
 function iniciarTimer(timestamp) {
-  const bar    = document.getElementById('timer-bar');
+  const bar = document.getElementById('timer-bar');
   const digits = document.getElementById('timer-digits');
   const label  = document.getElementById('timer-label');
   const sub    = document.getElementById('timer-sub');
   if (timerInterval) clearInterval(timerInterval);
   function tick() {
-    const agora = Math.floor(Date.now() / 1000);
-    const diff  = timestamp - agora;
+    const diff = timestamp - Math.floor(Date.now() / 1000);
     if (diff <= 0) {
       bar.className = 'timer-bar closed'; label.textContent = 'mercado';
       digits.textContent = 'FECHADO'; sub.textContent = '';
       clearInterval(timerInterval); return;
     }
-    const dias  = Math.floor(diff / 86400);
-    const horas = Math.floor((diff % 86400) / 3600);
-    const min   = Math.floor((diff % 3600) / 60);
-    const seg   = diff % 60;
-    const pad   = n => String(n).padStart(2, '0');
-    if (dias > 0) {
-      digits.textContent = `${dias}d ${pad(horas)}:${pad(min)}`;
-      sub.textContent = 'dias · horas · minutos';
-    } else {
-      digits.textContent = `${pad(horas)}:${pad(min)}:${pad(seg)}`;
-      sub.textContent = 'horas · minutos · segundos';
-    }
-    if (diff < 3600) { bar.className = 'timer-bar urgent'; label.textContent = 'atenção — fechamento em'; }
-    else             { bar.className = 'timer-bar';         label.textContent = 'fechamento do mercado em'; }
+    const dias = Math.floor(diff / 86400);
+    const h = Math.floor((diff % 86400) / 3600);
+    const m = Math.floor((diff % 3600) / 60);
+    const s = diff % 60;
+    const p = n => String(n).padStart(2, '0');
+    digits.textContent = dias > 0 ? `${dias}d ${p(h)}:${p(m)}` : `${p(h)}:${p(m)}:${p(s)}`;
+    sub.textContent = dias > 0 ? 'dias · horas · minutos' : 'horas · minutos · segundos';
+    bar.className = diff < 3600 ? 'timer-bar urgent' : 'timer-bar';
+    label.textContent = diff < 3600 ? 'atenção — fechamento em' : 'fechamento do mercado em';
   }
   tick(); timerInterval = setInterval(tick, 1000);
 }
@@ -697,7 +788,7 @@ function iniciarTimer(timestamp) {
 // ── CSV PARSER ────────────────────────────────────────────────
 function parseCSV(txt) {
   const lines = txt.trim().split('\n');
-  const heads = lines[0].split(',').map(h => h.trim().replace(/^"|"$/g,''));
+  const heads = lines[0].split(',').map(h => h.trim().replace(/^"|"$/g, ''));
   return lines.slice(1).map(line => {
     const vals = []; let cur = '', inQ = false;
     for (let i = 0; i < line.length; i++) {
@@ -707,7 +798,7 @@ function parseCSV(txt) {
       cur += ch;
     }
     vals.push(cur);
-    const obj = {}; heads.forEach((h,i) => obj[h] = (vals[i]||'').trim()); return obj;
+    const obj = {}; heads.forEach((h, i) => obj[h] = (vals[i] || '').trim()); return obj;
   });
 }
 async function fetchCSV(url) {
@@ -716,90 +807,208 @@ async function fetchCSV(url) {
   return parseCSV(await r.text());
 }
 
+// ── TABELA INDEX ──────────────────────────────────────────────
+function buildTabelaIdx() {
+  TABELA_IDX = {};
+  TABELA_BRA.forEach(row => { if (row.time) TABELA_IDX[row.time] = row; });
+}
+
+function getTabelaByAbr(abr) {
+  const nomes = ABR_TO_NOME[abr] || [];
+  for (const nome of nomes) { if (TABELA_IDX[nome]) return TABELA_IDX[nome]; }
+  return null;
+}
+
 // ── ODDS LOOKUP ───────────────────────────────────────────────
 function getOdds(abr_casa, abr_vis) {
   if (!ODDS.length) return null;
-  const abr_c = (abr_casa||'').toUpperCase().trim();
-  const abr_v = (abr_vis||'').toUpperCase().trim();
+  const c = (abr_casa || '').toUpperCase().trim();
+  const v = (abr_vis  || '').toUpperCase().trim();
   return ODDS.find(o =>
-    (o.abr_casa||'').toUpperCase().trim() === abr_c &&
-    (o.abr_vis||'').toUpperCase().trim()  === abr_v
+    (o.abr_casa||'').toUpperCase().trim() === c &&
+    (o.abr_vis ||'').toUpperCase().trim() === v
   ) || null;
 }
 
-// ── PROB BAR HTML ─────────────────────────────────────────────
+// ── HELPERS ───────────────────────────────────────────────────
+function armadilhaHtml(label) {
+  const map = {
+    'valor_oculto':   { cls: 'al-oculto', text: '💎 VALOR'    },
+    'valor_bom':      { cls: 'al-bom',    text: '✓ BOM'       },
+    'neutro':         { cls: 'al-neutro', text: '—'           },
+    'armadilha_leve': { cls: 'al-leve',   text: '⚠ LEVE'     },
+    'armadilha_forte':{ cls: 'al-forte',  text: '🚨 FORTE'    },
+  };
+  const m = map[label] || map['neutro'];
+  return `<span class="al-badge ${m.cls}">${m.text}</span>`;
+}
+
+function score100Html(nota) {
+  const val = parseFloat(nota);
+  if (isNaN(val)) return '<span class="tm">—</span>';
+  
+  let cls = 'tm'; // Neutro (entre 40 e 60)
+  if (val >= 60) cls = 'tg'; // Verde (Confronto favorável)
+  if (val <= 40) cls = 'tr'; // Vermelho (Fogueira)
+  
+  return `<span class="${cls}" style="font-weight:600;">${val.toFixed(1)}</span>`;
+}
+
+function opcHtml(opc, vm) {
+  const o = parseFloat(opc);
+  if (isNaN(o)) return '';
+  const pct = Math.round(o * 100);
+  const cls = o >= 0.65 ? 'hi' : o >= 0.4 ? 'mid' : 'lo';
+  const vmVal = parseFloat(vm);
+  const vmStr = !isNaN(vmVal) ? `<span class="${vmVal > 0 ? 'tg' : vmVal < 0 ? 'tr' : 'tm'}" style="font-size:9px;font-family:var(--fm)">${vmVal > 0 ? '+' : ''}${vmVal.toFixed(0)}pp</span>` : '';
+  return `<div class="opc-wrap"><div class="opc-bar"><div class="opc-fill ${cls}" style="width:${pct}%"></div></div><span class="opc-val">${pct}%</span>${vmStr}</div>`;
+}
+
+function confCellHtml(a) {
+  const isMand = a.mandante === 'True';
+  const adv = a.adversario && a.adversario !== '—' && a.adversario !== '' ? a.adversario : null;
+  if (!adv) return '<span class="tm">—</span>';
+  return `<div class="conf-cell">
+    <span class="conf-tag ${isMand ? 'conf-home' : 'conf-away'}">${isMand ? '🏠' : '✈️'} ${adv}</span>
+    ${opcHtml(a.oportunidade_confronto, a.vantagem_mando)}
+  </div>`;
+}
+
+function sequenciaTexto(seq) {
+  const n = parseInt(seq);
+  if (isNaN(n) || n === 0) return '';
+  if (n > 0) return `<span class="seq-text hot">🔥 Invicto há ${n}</span>`;
+  return `<span class="seq-text cold">📉 ${Math.abs(n)} sem ganhar</span>`;
+}
+
+function momentumArrow(val, inverso) {
+  const v = parseFloat(val);
+  if (isNaN(v)) return '<span class="mom-arrow neu">—</span>';
+  // inverso=true: para defesa, ratio < 1 é bom (menos gols sofridos)
+  const isGood = inverso ? v < 1 : v > 1;
+  const isBad  = inverso ? v > 1 : v < 1;
+  const cls = isGood ? 'up' : isBad ? 'down' : 'neu';
+  const arrow = v > 1.05 ? '↑' : v < 0.95 ? '↓' : '→';
+  return `<div class="mom-cell"><span class="mom-arrow ${cls}">${arrow}</span><span class="mom-ratio">${v.toFixed(2)}</span></div>`;
+}
+
+function seqCellHtml(seq) {
+  const n = parseInt(seq);
+  if (isNaN(n) || n === 0) return '<span class="seq-cell neu">—</span>';
+  if (n > 0) return `<span class="seq-cell pos">+${n}</span>`;
+  return `<span class="seq-cell neg">${n}</span>`;
+}
+
+function formaDotsMini(formaStr) {
+  // formaStr: "W,L,D,W,W" ou "W,D,L" vindo do CSV
+  if (!formaStr) return '';
+  const dots = formaStr.split(',').slice(-5);
+  return `<div class="mom-forma-dots">${dots.map(r => `<div class="mom-dot ${r.trim()}" title="${r.trim()}"></div>`).join('')}</div>`;
+}
+
+function fsBarHtml(fs) {
+  const v = parseFloat(fs);
+  if (isNaN(v)) return '<span class="tm">—</span>';
+  const pct = Math.round(v * 100);
+  const color = pct >= 60 ? 'var(--green)' : pct >= 40 ? 'var(--yellow)' : 'var(--red)';
+  return `<div class="fs-wrap"><div class="fs-bar"><div class="fs-fill" style="width:${pct}%;background:${color}"></div></div><span class="fs-val">${pct}%</span></div>`;
+}
+
+// ── PROB BAR ──────────────────────────────────────────────────
 function buildProbBar(odd) {
   const pCasa = parseFloat(odd.prob_casa || 0);
   const pVis  = parseFloat(odd.prob_vis  || 0);
   const pDraw = Math.max(0, 1 - pCasa - pVis);
-  const pCasaPct = (pCasa * 100).toFixed(0);
-  const pVisPct  = (pVis  * 100).toFixed(0);
-  const pDrawPct = (pDraw * 100).toFixed(0);
-  const wCasa = (pCasa * 100).toFixed(1);
-  const wDraw = (pDraw * 100).toFixed(1);
-  const wVis  = (pVis  * 100).toFixed(1);
-  const oCasa   = parseFloat(odd.odd_casa   || 0).toFixed(2);
-  const oVis    = parseFloat(odd.odd_vis    || 0).toFixed(2);
-  const oEmpate = parseFloat(odd.odd_empate || 0).toFixed(2);
+  const oCasa = parseFloat(odd.odd_casa   || 0).toFixed(2);
+  const oVis  = parseFloat(odd.odd_vis    || 0).toFixed(2);
+  const oEmp  = parseFloat(odd.odd_empate || 0).toFixed(2);
   const fCasa = odd.forca_casa || '';
   const fVis  = odd.forca_vis  || '';
   return `
     <div class="odd-row">
-      <div style="text-align:left">
-        <div class="odd-val casa">${oCasa}</div><div class="odd-label">CASA</div>
-      </div>
-      <div class="odd-empate">
-        <div class="odd-val">${oEmpate}</div><div class="odd-label">EMPATE</div>
-      </div>
-      <div style="text-align:right">
-        <div class="odd-val vis">${oVis}</div><div class="odd-label">VISIT</div>
-      </div>
+      <div style="text-align:left"><div class="odd-val casa">${oCasa}</div><div class="odd-label">CASA</div></div>
+      <div class="odd-empate"><div class="odd-val">${oEmp}</div><div class="odd-label">EMPATE</div></div>
+      <div style="text-align:right"><div class="odd-val vis">${oVis}</div><div class="odd-label">VISIT</div></div>
     </div>
     <div class="prob-bar-wrap">
       <div class="prob-bar">
-        <div class="prob-bar-casa" style="width:${wCasa}%"></div>
-        <div class="prob-bar-draw" style="width:${wDraw}%"></div>
-        <div class="prob-bar-vis"  style="width:${wVis}%"></div>
+        <div class="prob-bar-casa" style="width:${(pCasa*100).toFixed(1)}%"></div>
+        <div class="prob-bar-draw" style="width:${(pDraw*100).toFixed(1)}%"></div>
+        <div class="prob-bar-vis"  style="width:${(pVis*100).toFixed(1)}%"></div>
       </div>
       <div class="prob-labels">
-        <span class="prob-pct casa">${pCasaPct}%</span>
-        <span class="prob-pct draw">X ${pDrawPct}%</span>
-        <span class="prob-pct vis">${pVisPct}%</span>
+        <span class="prob-pct casa">${Math.round(pCasa*100)}%</span>
+        <span class="prob-pct draw">X ${Math.round(pDraw*100)}%</span>
+        <span class="prob-pct vis">${Math.round(pVis*100)}%</span>
       </div>
     </div>
-    <div style="display:flex; justify-content:space-between;">
+    <div style="display:flex;justify-content:space-between;">
       <span class="time-forca forca-${fCasa}">${fCasa.replace('_',' ')}</span>
       <span class="time-forca forca-${fVis}">${fVis.replace('_',' ')}</span>
-    </div>
-  `;
+    </div>`;
 }
 
-// ── STATS ─────────────────────────────────────────────────────
+// ── MOMENTUM BLOCK (confrontos) ───────────────────────────────
+function buildMomentumBlock(abrCasa, abrVis) {
+  const tc = getTabelaByAbr(abrCasa);
+  const tv = getTabelaByAbr(abrVis);
+  if (!tc && !tv) return '';
+
+  function side(t, abr, isVis) {
+    if (!t) return `<div class="mom-side ${isVis ? 'vis' : ''}"><span class="mom-abr" style="color:var(--muted)">${abr}</span><span style="font-family:var(--fm);font-size:9px;color:var(--muted)">sem dados</span></div>`;
+    const mof = parseFloat(t.momentum_of);
+    const mdf = parseFloat(t.momentum_def);
+    const seq = parseInt(t.sequencia);
+    const fs  = parseFloat(t.forma_score);
+
+    const mofCls = !isNaN(mof) ? (mof > 1.05 ? 'of-up' : mof < 0.95 ? 'of-down' : 'of-neu') : 'of-neu';
+    const mdfCls = !isNaN(mdf) ? (mdf < 0.95 ? 'def-up' : mdf > 1.05 ? 'def-down' : 'of-neu') : 'of-neu';
+    const mofStr = !isNaN(mof) ? `<span class="mom-chip ${mofCls}">⚔️ MOF ${mof > 1 ? '↑' : mof < 1 ? '↓' : '→'}${mof.toFixed(2)}</span>` : '';
+    const mdfStr = !isNaN(mdf) ? `<span class="mom-chip ${mdfCls}">🛡 MDF ${mdf < 1 ? '↓' : mdf > 1 ? '↑' : '→'}${mdf.toFixed(2)}</span>` : '';
+    const seqStr = (!isNaN(seq) && seq !== 0) ? (seq > 0 ? `<span class="mom-seq hot">🔥 Invicto há ${seq}</span>` : `<span class="mom-seq cold">📉 ${Math.abs(seq)} sem ganhar</span>`) : '';
+    const fsStr  = !isNaN(fs) ? `<span style="font-family:var(--fm);font-size:9px;color:var(--muted)">Forma ${Math.round(fs*100)}%</span>` : '';
+    const forma  = formaDotsMini(t.forma || '');
+
+    return `<div class="mom-side ${isVis ? 'vis' : ''}">
+      <span class="mom-abr">${abr}</span>
+      <div class="mom-row">${mofStr}${mdfStr}</div>
+      ${seqStr || fsStr ? `<div class="mom-row">${seqStr}${fsStr}</div>` : ''}
+      ${forma}
+    </div>`;
+  }
+
+  return `<div class="jogo-momentum">
+    ${side(tc, abrCasa, false)}
+    <div class="mom-divider"></div>
+    ${side(tv, abrVis, true)}
+  </div>`;
+}
+
+// ── STATS BAR ─────────────────────────────────────────────────
 function renderStats() {
-  const total = ALL.length;
   const prov  = ALL.filter(a => a.status_id === '7').length;
   const duv   = ALL.filter(a => a.status_id === '2').length;
   const fora  = ALL.filter(a => ['3','5'].includes(a.status_id)).length;
   const mand  = ALL.filter(a => a.mandante === 'True').length;
-  const arm   = ALL.filter(a => a.armadilha === 'True').length;
-  const sorted = [...ALL].filter(a => +a.variacao !== 0).sort((a,b) => +b.variacao - +a.variacao);
-  const alta  = sorted[0];
-  const baixa = sorted[sorted.length-1];
-  document.getElementById('s-total').textContent = total;
-  document.getElementById('s-prov').textContent  = prov;
-  document.getElementById('s-duv').textContent   = duv;
-  document.getElementById('s-fora').textContent  = fora;
-  document.getElementById('s-mand').textContent  = mand;
-  document.getElementById('s-arm').textContent   = arm;
-  document.getElementById('s-alta').textContent  = alta  ? '+'+parseFloat(alta.variacao).toFixed(1)  : '—';
-  document.getElementById('s-baixa').textContent = baixa ? parseFloat(baixa.variacao).toFixed(1) : '—';
+  const arm   = ALL.filter(a => a.armadilha_label === 'armadilha_forte').length;
+  const ocult = ALL.filter(a => a.armadilha_label === 'valor_oculto').length;
+  const sorted = [...ALL].filter(a => +a.variacao !== 0).sort((a, b) => +b.variacao - +a.variacao);
+  document.getElementById('s-total').textContent  = ALL.length;
+  document.getElementById('s-prov').textContent   = prov;
+  document.getElementById('s-duv').textContent    = duv;
+  document.getElementById('s-fora').textContent   = fora;
+  document.getElementById('s-mand').textContent   = mand;
+  document.getElementById('s-arm').textContent    = arm;
+  document.getElementById('s-ocultos').textContent= ocult;
+  document.getElementById('s-alta').textContent   = sorted[0]  ? '+'+parseFloat(sorted[0].variacao).toFixed(1)   : '—';
+  document.getElementById('s-baixa').textContent  = sorted.at(-1) ? parseFloat(sorted.at(-1).variacao).toFixed(1) : '—';
 }
 
 // ── CARD LIST ─────────────────────────────────────────────────
 function renderCardList(id, items, valueFn, cls) {
   const el = document.getElementById(id);
   if (!items.length) { el.innerHTML = '<li><div class="err">Sem dados</div></li>'; return; }
-  el.innerHTML = items.map((a,i) => {
+  el.innerHTML = items.map((a, i) => {
     const isMand = a.mandante === 'True';
     const confTag = a.adversario && a.adversario !== '—'
       ? `<span class="conf-tag ${isMand?'conf-home':'conf-away'}">${isMand?'🏠':'✈️'} ${a.adversario}</span>` : '';
@@ -816,49 +1025,89 @@ function renderCardList(id, items, valueFn, cls) {
 }
 
 function renderDestaques() {
-  const top8 = arr => arr.slice(0,8);
+  const top8 = arr => arr.slice(0, 8);
+
   renderCardList('l-altas',
-    top8([...ALL].filter(a=>+a.variacao>0).sort((a,b)=>+b.variacao-+a.variacao)),
-    a => '+'+parseFloat(a.variacao).toFixed(2), 'up');
-  document.getElementById('leg-altas').textContent = 'variação de preço na última rodada';
+    top8([...ALL].filter(a => +a.variacao > 0).sort((a, b) => +b.variacao - +a.variacao)),
+    a => '+' + parseFloat(a.variacao).toFixed(2), 'up');
+  document.getElementById('leg-altas').textContent = 'variação de preço após a última rodada';
+
   renderCardList('l-baixas',
-    top8([...ALL].filter(a=>+a.variacao<0).sort((a,b)=>+a.variacao-+b.variacao)),
+    top8([...ALL].filter(a => +a.variacao < 0).sort((a, b) => +a.variacao - +b.variacao)),
     a => parseFloat(a.variacao).toFixed(2), 'down');
-  document.getElementById('leg-baixas').textContent = 'variação de preço na última rodada';
-  renderCardList('l-cb',
-    top8([...ALL].filter(a=>+a.preco>0&&+a.media>0&&+a.jogos>=3)
-      .sort((a,b)=>+b.custo_beneficio-+a.custo_beneficio)),
-    a => parseFloat(a.custo_beneficio||0).toFixed(2), 'cb');
-  document.getElementById('leg-cb').textContent = 'custo-benefício = média de pontos ÷ preço';
+  document.getElementById('leg-baixas').textContent = 'variação de preço após a última rodada';
+
+  // Valores ocultos: residuo_z > 1.5, ordenado por residuo_z desc
+  renderCardList('l-ocultos',
+    top8([...ALL].filter(a => a.armadilha_label === 'valor_oculto').sort((a, b) => +b.residuo_z - +a.residuo_z)),
+    a => 'z+' + parseFloat(a.residuo_z||0).toFixed(2), 'up');
+  document.getElementById('leg-ocultos').textContent = 'residuo_z > 1.5 — rendimento muito acima do previsto pelo preço';
+
+  // Armadilhas fortes: residuo_z < -1.5, ordenado por preco desc (mais caros = mais perigosos)
   renderCardList('l-arm',
-    top8([...ALL].filter(a=>a.armadilha==='True').sort((a,b)=>+b.preco-+a.preco)),
-    a => 'C$'+parseFloat(a.preco||0).toFixed(1), 'down');
-  document.getElementById('leg-arm').textContent = 'preço acima da mediana, mas média abaixo - risco alto';
+    top8([...ALL].filter(a => a.armadilha_label === 'armadilha_forte').sort((a, b) => +b.preco - +a.preco)),
+    a => 'C$' + parseFloat(a.preco||0).toFixed(1), 'down');
+  document.getElementById('leg-arm').textContent = 'residuo_z < −1.5 — rendimento muito abaixo do esperado pelo preço';
 }
 
-function renderTopMandantes() {
-  const grid = document.getElementById('top-mandantes-grid');
+// ── TOP CONFRONTO POR POSIÇÃO ─────────────────────────────────
+function renderTopConfrontos() {
+  const grid = document.getElementById('top-confronto-grid');
   const posicoes = ['Goleiro','Zagueiro','Lateral','Meia','Atacante'];
-  const mandantes = ALL.filter(a => a.mandante === 'True' && a.status_id === '7');
-  if (!mandantes.length) {
-    grid.innerHTML = '<div class="err">Sem dados de confronto disponíveis ainda.</div>'; return;
+  
+  // AQUI ESTÁ O FILTRO SALVADOR: a.adversario !== '—'
+  const elegiveis = ALL.filter(a => a.status_id === '7' && +a.preco > 0 && a.adversario && a.adversario !== '—');
+
+  if (!elegiveis.length) {
+    grid.innerHTML = '<div class="err">Sem confrontos válidos calculados para a rodada.</div>'; return;
   }
+
   grid.innerHTML = posicoes.map(pos => {
-    const lista = mandantes.filter(a=>a.posicao===pos).sort((a,b)=>+b.media-+a.media).slice(0,5);
+    const lista = elegiveis
+      .filter(a => a.posicao === pos)
+      .sort((a, b) => parseFloat(b.score_confronto_100 || 0) - parseFloat(a.score_confronto_100 || 0))
+      .slice(0, 5);
+
     if (!lista.length) return '';
+
+    const itens = lista.map((a, i) => {
+      const isMand = a.mandante === 'True';
+      const adv = a.adversario;
+      
+      const score = parseFloat(a.score_confronto_100 || 0);
+      const scoreCls = score >= 60 ? 'tg' : score <= 40 ? 'tr' : 'tm';
+      
+      const opc = parseFloat(a.oportunidade_confronto);
+      const opcPct = !isNaN(opc) ? Math.round(opc * 100) : null;
+      const opcCls = !isNaN(opc) ? (opc >= 0.65 ? 'hi' : opc >= 0.4 ? 'mid' : 'lo') : 'mid';
+
+      const preco = parseFloat(a.preco||0).toFixed(1);
+      const minVal = parseFloat(a.min_valorizar) > 0 ? parseFloat(a.min_valorizar).toFixed(1) : '?';
+      const pb = parseFloat(a.pb_media) > 0 ? parseFloat(a.pb_media).toFixed(2) : '—'
+
+
+      return `<div class="conf-list-item">
+        <div class="conf-list-top">
+          <span class="rank">${i+1}</span>
+          <span class="pname">${a.nome}</span>
+          <span class="pclub">${a.clube}</span>
+          <span class="conf-tag ${isMand?'conf-home':'conf-away'}">${isMand?'🏠':'✈️'} ${adv}</span>
+          <span class="${scoreCls}" style="font-family:var(--fm);font-size:12px;font-weight:600;margin-left:auto">${score.toFixed(1)}</span>
+        </div>
+        <div class="conf-list-bottom">
+          ${opcPct !== null ? `<div class="opc-wrap"><div class="opc-bar"><div class="opc-fill ${opcCls}" style="width:${opcPct}%"></div></div><span class="opc-val">OPC ${opcPct}%</span></div>` : ''}
+          ${sequenciaTexto(a.sequencia_time)}
+          <span style="font-family:var(--fm);font-size:9px;color:var(--muted)">C$${preco} (Mín: ${minVal}) · PB: ${pb} · ${armadilhaHtml(a.armadilha_label)}</span>
+        </div>
+      </div>`;
+    }).join('');
+
     return `<div class="card">
       <div class="card-header">
         <div class="card-title">${pos.toUpperCase()}</div>
-        <div class="badge bg conf-home">🏠 MANDANTE</div>
+        <div class="badge bb">SCORE CONFRONTO</div>
       </div>
-      <ul class="card-list">${lista.map((a,i)=>`<li>
-        <span class="rank">${i+1}</span>
-        <span class="pname">${a.nome}</span>
-        <span class="pclub">${a.clube}</span>
-        <span class="conf-tag conf-home">vs ${a.adversario}</span>
-        <span class="ptag" style="color:var(--muted)">média</span>
-        <span class="vpill cb">${parseFloat(a.media||0).toFixed(1)}</span>
-      </li>`).join('')}</ul>
+      ${itens}
     </div>`;
   }).join('');
 }
@@ -867,8 +1116,9 @@ function renderTopMandantes() {
 function getFiltered() {
   return ALL.filter(a => {
     if (fPos !== 'all' && a.posicao !== fPos) return false;
-    if (fMand && a.mandante !== 'True') return false;
-    if (fArm  && a.armadilha !== 'True') return false;
+    if (fMand  && a.mandante !== 'True') return false;
+    if (fArm   && a.armadilha_label !== 'armadilha_forte') return false;
+    if (fValor && a.armadilha_label !== 'valor_oculto') return false;
     if (fText) {
       const t = fText;
       if (!(a.nome||'').toLowerCase().includes(t) && !(a.clube||'').toLowerCase().includes(t)) return false;
@@ -877,89 +1127,94 @@ function getFiltered() {
   });
 }
 function getSorted(data) {
-  return [...data].sort((a,b) => {
-    let va = a[sortCol]||'', vb = b[sortCol]||'';
+  return [...data].sort((a, b) => {
+    let va = a[sortCol] || '', vb = b[sortCol] || '';
     const fa = parseFloat(va), fb = parseFloat(vb);
-    if (!isNaN(fa)&&!isNaN(fb)) { va=fa; vb=fb; }
-    if (va<vb) return sortAsc?-1:1;
-    if (va>vb) return sortAsc?1:-1;
+    if (!isNaN(fa) && !isNaN(fb)) { va = fa; vb = fb; }
+    if (va < vb) return sortAsc ? -1 : 1;
+    if (va > vb) return sortAsc ? 1 : -1;
     return 0;
   });
 }
+
 function renderTable() {
   const data = getSorted(getFiltered());
   const tbody = document.getElementById('table-body');
   if (!data.length) {
-    tbody.innerHTML = '<tr><td colspan="12"><div class="err">Nenhum atleta encontrado</div></td></tr>';
+    tbody.innerHTML = '<tr><td colspan="16"><div class="err">Nenhum atleta encontrado</div></td></tr>';
     document.getElementById('table-count').textContent = '0 atletas'; return;
   }
   tbody.innerHTML = data.map(a => {
-    const st   = STATUS_MAP[a.status_id] || { l: a.status_id||'—', c: 's6' };
-    const vf   = parseFloat(a.variacao||0);
-    const vcls = vf>0?'tg':vf<0?'tr':'tm';
-    const isMand = a.mandante === 'True';
-    const isArm  = a.armadilha === 'True';
-    const tend   = a.tendencia||'estavel';
-    const confHtml = a.adversario && a.adversario!=='—'
-      ? `<span class="conf-tag ${isMand?'conf-home':'conf-away'}">${isMand?'🏠':'✈️'} ${a.adversario}</span>`
-      : '<span class="tm">—</span>';
-    return `<tr class="${isArm?'armadilha-row':''}">
+    const st   = STATUS_MAP[a.status_id] || { l: a.status_id || '—', c: 's6' };
+    const vf   = parseFloat(a.variacao || 0);
+    const vcls = vf > 0 ? 'tg' : vf < 0 ? 'tr' : 'tm';
+    const tend = a.tendencia || 'estavel';
+    const label = a.armadilha_label || 'neutro';
+    const rowCls = label === 'armadilha_forte' ? 'armadilha-row' : label === 'valor_oculto' ? 'valor-row' : '';
+
+    return `<tr class="${rowCls}">
       <td class="nm">${a.nome||'—'}</td>
       <td class="tm">${a.clube||'—'}</td>
       <td class="tm">${(a.posicao||'').substring(0,3).toUpperCase()}</td>
       <td class="mo">C$ ${parseFloat(a.preco||0).toFixed(2)}</td>
-      <td class="${vcls}">${vf>0?'+':''}${vf.toFixed(2)}</td>
+      <td class="mo" style="color:var(--orange)">${parseFloat(a.min_valorizar) > 0 ? parseFloat(a.min_valorizar).toFixed(2) : '—'}</td>
+      <td class="${vcls}">${vf > 0 ? '+' : ''}${vf.toFixed(2)}</td>
       <td class="mo">${parseFloat(a.media||0).toFixed(2)}</td>
+      <td class="mo" style="color: ${parseFloat(a.resiliencia_pct) >= 0.6 ? 'var(--green)' : 'var(--text)'}">${parseFloat(a.pb_media) > 0 ? parseFloat(a.pb_media).toFixed(2) : '—'}</td>
+      <td class="mo" style="color:var(--blue)">${parseFloat(a.media_bayesiana||0).toFixed(2)}</td>
       <td class="mo">${parseFloat(a.custo_beneficio||0).toFixed(2)}</td>
       <td class="tm">#${a.cb_rank||'—'}</td>
-      <td>${confHtml}</td>
+      <td>${confCellHtml(a)}</td>
       <td><span class="tend-badge tend-${tend}">${tend}</span></td>
       <td><span class="sbadge ${st.c}">${st.l}</span></td>
-      <td>${isArm?'<span class="arm-icon" title="Armadilha: preço alto, média baixa">⚠️</span>':''}</td>
+      <td>${armadilhaHtml(label)}</td>
+      <td>${score100Html(a.score_confronto_100)}</td>
     </tr>`;
   }).join('');
   document.getElementById('table-count').textContent = `${data.length} de ${ALL.length} atletas`;
 }
 
+// ── CONFRONTOS ────────────────────────────────────────────────
 function buildMapaClubes() {
   const mapa = {};
   ALL.forEach(a => { if (a.clube_id && a.clube) mapa[String(a.clube_id)] = a.clube; });
   return mapa;
 }
 
-// ── CONFRONTOS ────────────────────────────────────────────────
 function renderConfrontos() {
   const grid = document.getElementById('confrontos-grid');
-  if (!PARTIDAS.length) { grid.innerHTML = '<div class="err">Sem dados de partidas disponíveis.</div>'; return; }
+  if (!PARTIDAS.length) { grid.innerHTML = '<div class="err">Sem dados de partidas.</div>'; return; }
   const mapa = buildMapaClubes();
+
   grid.innerHTML = PARTIDAS.map(p => {
     const idCasa = String(p.clube_casa_id || '');
     const idVis  = String(p.clube_visitante_id || '');
-    const casa = p.nome_casa      || mapa[idCasa] || idCasa || '?';
-    const vis  = p.nome_visitante || mapa[idVis]  || idVis  || '?';
-    const dtRaw  = (p.partida_data || '').substring(0,10);
+    const casa   = p.nome_casa      || mapa[idCasa] || idCasa || '?';
+    const vis    = p.nome_visitante || mapa[idVis]  || idVis  || '?';
+    const dtRaw  = (p.partida_data || '').substring(0, 10);
     const dt     = dtRaw ? dtRaw.split('-').reverse().join('/') : '—';
     const local  = p.local || '—';
-    const qtdCasa = ALL.filter(a => a.clube === casa && a.status_id === '7').length;
-    const qtdVis  = ALL.filter(a => a.clube === vis  && a.status_id === '7').length;
-    const valida    = String(p.valida).toLowerCase() === 'true';
+    const qtdC   = ALL.filter(a => a.clube === casa && a.status_id === '7').length;
+    const qtdV   = ALL.filter(a => a.clube === vis  && a.status_id === '7').length;
+    const valida = String(p.valida).toLowerCase() === 'true';
     const validaTag = valida
       ? `<span class="jogo-tag bg">✓ válida</span>`
-      : `<span class="jogo-tag" style="background:rgba(255,61,90,.1);color:var(--red);border:1px solid rgba(255,61,90,.2)">✗ não válida para o cartola</span>`;
+      : `<span class="jogo-tag" style="background:rgba(255,61,90,.1);color:var(--red);border:1px solid rgba(255,61,90,.2)">✗ não válida</span>`;
+
     const placCasa = p.placar_oficial_mandante;
     const placVis  = p.placar_oficial_visitante;
-    const temPlacar = placCasa !== '' && placCasa !== null && placCasa !== undefined
-                   && placVis  !== '' && placVis  !== null && placVis  !== undefined;
+    const temPlacar = placCasa !== '' && placCasa != null && placVis !== '' && placVis != null;
+
     let bottomHTML = '';
     if (temPlacar) {
-      const pc = parseInt(placCasa); const pv = parseInt(placVis);
-      const corCasa = pc > pv ? 'var(--green)' : pc < pv ? 'var(--muted)' : 'var(--yellow)';
-      const corVis  = pv > pc ? 'var(--blue)'  : pv < pc ? 'var(--muted)' : 'var(--yellow)';
+      const pc = parseInt(placCasa), pv = parseInt(placVis);
+      const cC = pc > pv ? 'var(--green)' : pc < pv ? 'var(--muted)' : 'var(--yellow)';
+      const cV = pv > pc ? 'var(--blue)'  : pv < pc ? 'var(--muted)' : 'var(--yellow)';
       bottomHTML = `<div style="border-top:1px solid var(--border);padding-top:10px">
         <div style="display:flex;align-items:center;justify-content:center;gap:16px">
-          <span style="font-family:var(--fh);font-size:42px;letter-spacing:2px;color:${corCasa};line-height:1">${pc}</span>
+          <span style="font-family:var(--fh);font-size:42px;letter-spacing:2px;color:${cC};line-height:1">${pc}</span>
           <span style="font-family:var(--fm);font-size:11px;color:var(--muted)">×</span>
-          <span style="font-family:var(--fh);font-size:42px;letter-spacing:2px;color:${corVis};line-height:1">${pv}</span>
+          <span style="font-family:var(--fh);font-size:42px;letter-spacing:2px;color:${cV};line-height:1">${pv}</span>
         </div>
         <div style="text-align:center;font-family:var(--fm);font-size:9px;color:var(--muted);letter-spacing:2px;margin-top:4px">ENCERRADO</div>
       </div>`;
@@ -967,6 +1222,10 @@ function renderConfrontos() {
       const odd = getOdds(casa, vis);
       if (odd) bottomHTML = `<div style="border-top:1px solid var(--border);padding-top:10px">${buildProbBar(odd)}</div>`;
     }
+
+    // Momentum dos dois times (do brasileirao_tabela.csv)
+    const momBlock = buildMomentumBlock(casa, vis);
+
     return `<div class="jogo-card">
       <div class="jogo-times">
         <div class="time-bloco"><div class="time-nome">${casa}</div></div>
@@ -979,178 +1238,77 @@ function renderConfrontos() {
         ${local !== '—' ? `<span class="jogo-tag" style="background:rgba(90,116,145,.1);color:var(--muted)">${local}</span>` : ''}
         ${validaTag}
       </div>
+      ${momBlock}
       ${bottomHTML}
-      <div class="jogo-atletas">Prováveis: <span>${qtdCasa} de ${casa}</span> · <span>${qtdVis} de ${vis}</span></div>
+      <div class="jogo-atletas">Prováveis: <span>${qtdC} de ${casa}</span> · <span>${qtdV} de ${vis}</span></div>
     </div>`;
   }).join('');
 }
 
 // ── BRASILEIRÃO ───────────────────────────────────────────────
-
 function aprov(w, d, l) {
   const t = w + d + l;
   return t === 0 ? 0 : Math.round((w * 3 + d) / (t * 3) * 100);
 }
-
 function aprovBar(pct) {
   const cls = pct >= 60 ? '' : pct >= 40 ? 'mid' : 'low';
-  return `<div class="aprov-wrap">
-    <div class="aprov-bar-outer">
-      <div class="aprov-bar-inner ${cls}" style="width:${pct}%"></div>
-    </div>
-    <span class="aprov-val">${pct}%</span>
-  </div>`;
+  return `<div class="aprov-wrap"><div class="aprov-bar-outer"><div class="aprov-bar-inner ${cls}" style="width:${pct}%"></div></div><span class="aprov-val">${pct}%</span></div>`;
 }
-
 function formaDots(hist) {
-  // hist é array de "W","L","D" - pegar os últimos 5
-  const ultimos = (hist || []).slice(-5);
-  if (!ultimos.length) return '<span style="color:var(--muted);font-family:var(--fm);font-size:10px">—</span>';
-  return `<div class="form-dots">${ultimos.map(r => `<span class="form-dot ${r}" data-tip="${r==='W'?'Vitória':r==='L'?'Derrota':'Empate'}"></span>`).join('')}</div>`;
+  const ul = (hist || []).slice(-5);
+  if (!ul.length) return '<span style="color:var(--muted);font-family:var(--fm);font-size:10px">—</span>';
+  return `<div class="form-dots">${ul.map(r => `<span class="form-dot ${r}" data-tip="${r==='W'?'Vitória':r==='L'?'Derrota':'Empate'}"></span>`).join('')}</div>`;
 }
-
 function zonaClass(pos) {
-  if (pos === 1)           return 'zona-g1';
-  if (pos <= 4)            return 'zona-g4';
-  if (pos <= 6)            return 'zona-g6';
-  if (pos >= 17)           return 'zona-rel';
+  if (pos === 1) return 'zona-g1';
+  if (pos <= 4)  return 'zona-g4';
+  if (pos <= 6)  return 'zona-g6';
+  if (pos >= 17) return 'zona-rel';
   return 'zona-neu';
 }
-
-// Separadores visuais entre zonas
 const ZONA_BREAKS = [1, 4, 6, 16];
 
-function renderBrasileiraoCards(tabela, hist, teamStats) {
-  const el = document.getElementById('bra-cards');
-  if (!tabela.length) { el.innerHTML = ''; return; }
-
-  el.innerHTML = tabela.map(e => {
-    const pos  = e.position;
-    const nome = e.team?.name || '—';
-    const pts  = e.points;
-    const j    = e.playedGames;
-    const w    = e.won;
-    const d    = e.draw;
-    const l    = e.lost;
-    const gf   = e.goalsFor;
-    const ga   = e.goalsAgainst;
-    const sg   = e.goalDifference;
-    const pct  = aprov(w, d, l);
-
-    const ts       = teamStats[nome] || {};
-    const h        = ts.home || {};
-    const a        = ts.away || {};
-    const casaPct  = aprov(h.w||0, h.d||0, h.l||0);
-    const foraPct  = aprov(a.w||0, a.d||0, a.l||0);
-    const historico = hist[nome] || [];
-
-    const sgCls  = sg > 0 ? 'g' : sg < 0 ? 'r' : '';
-    const sgFmt  = sg > 0 ? `+${sg}` : `${sg}`;
-    const aprovCls = pct >= 60 ? 'g' : pct >= 40 ? 'y' : 'r';
-
-    return `<div class="bra-card">
-      <div class="bra-card-header">
-        <span class="zona-badge ${zonaClass(pos)}">${pos}</span>
-        <span class="bra-card-nome">${nome}</span>
-        <div style="text-align:right">
-          <div class="bra-card-pts">${pts}</div>
-          <div class="bra-card-pts-label">PTS</div>
-        </div>
-      </div>
-      <div class="bra-card-grid">
-        <div class="bra-card-stat">
-          <div class="bra-card-stat-label">Jogos</div>
-          <div class="bra-card-stat-val">${j}</div>
-        </div>
-        <div class="bra-card-stat">
-          <div class="bra-card-stat-label">Vitórias</div>
-          <div class="bra-card-stat-val g">${w}</div>
-        </div>
-        <div class="bra-card-stat">
-          <div class="bra-card-stat-label">Empates</div>
-          <div class="bra-card-stat-val y">${d}</div>
-        </div>
-        <div class="bra-card-stat">
-          <div class="bra-card-stat-label">Derrotas</div>
-          <div class="bra-card-stat-val r">${l}</div>
-        </div>
-        <div class="bra-card-stat">
-          <div class="bra-card-stat-label">Gols marcados</div>
-          <div class="bra-card-stat-val">${gf}</div>
-        </div>
-        <div class="bra-card-stat">
-          <div class="bra-card-stat-label">Gols sofridos</div>
-          <div class="bra-card-stat-val">${ga}</div>
-        </div>
-        <div class="bra-card-stat">
-          <div class="bra-card-stat-label">Saldo</div>
-          <div class="bra-card-stat-val ${sgCls}">${sgFmt}</div>
-        </div>
-        <div class="bra-card-stat">
-          <div class="bra-card-stat-label">Aprov.</div>
-          <div class="bra-card-stat-val ${aprovCls}">${pct}%</div>
-        </div>
-        <div class="bra-card-stat">
-          <div class="bra-card-stat-label">Casa</div>
-          <div class="bra-card-stat-val ${casaPct >= 60 ? 'g' : casaPct >= 40 ? 'y' : 'r'}">${casaPct}%</div>
-        </div>
-        <div class="bra-card-stat">
-          <div class="bra-card-stat-label">Fora</div>
-          <div class="bra-card-stat-val ${foraPct >= 60 ? 'g' : foraPct >= 40 ? 'y' : 'r'}">${foraPct}%</div>
-        </div>
-        <div class="bra-card-stat" style="grid-column: span 2">
-          <div class="bra-card-stat-label">GP · GC · SG</div>
-          <div class="bra-card-stat-val" style="font-size:11px">${gf} · ${ga} · <span class="${sgCls}">${sgFmt}</span></div>
-        </div>
-      </div>
-      <div class="bra-card-forma">
-        <span class="bra-card-forma-label">Forma</span>
-        ${formaDots(historico)}
-      </div>
-    </div>`;
-  }).join('');
-}
-
 function renderBrasileiro(data) {
-  const tbody   = document.getElementById('bra-tbody');
-  const tabela  = data.tabela || [];
-  const hist    = data.historico_times || {};
-  const teamStats = data.team_stats || {};
+  const tbody  = document.getElementById('bra-tbody');
+  const tabela = data.tabela || [];
+  const hist   = data.historico_times || {};
+  const ts_map = data.team_stats || {};
+
+  // Indexar TABELA_BRA por nome para cruzar com a tabela principal
+  const tabelaIdx = {};
+  TABELA_BRA.forEach(r => { if (r.time) tabelaIdx[r.time] = r; });
 
   if (!tabela.length) {
-    tbody.innerHTML = `<tr><td colspan="14"><div class="err">Dados não encontrados em brasileirao_data.json</div></td></tr>`;
-    return;
+    tbody.innerHTML = `<tr><td colspan="17"><div class="err">brasileirao_data.json não encontrado</div></td></tr>`; return;
   }
 
-  tbody.innerHTML = tabela.map((e, i) => {
+  tbody.innerHTML = tabela.map(e => {
     const pos  = e.position;
     const nome = e.team?.name || '—';
     const pts  = e.points;
     const j    = e.playedGames;
-    const w    = e.won;
-    const d    = e.draw;
-    const l    = e.lost;
-    const gf   = e.goalsFor;
-    const ga   = e.goalsAgainst;
-    const sg   = e.goalDifference;
-
+    const w    = e.won; const d = e.draw; const l = e.lost;
+    const gf   = e.goalsFor; const ga = e.goalsAgainst; const sg = e.goalDifference;
     const pct  = aprov(w, d, l);
 
-    // aproveitamento casa/fora vindo do JSON (gerado pelo Python)
-    const ts   = teamStats[nome] || {};
-    const h    = ts.home || {};
-    const a    = ts.away || {};
-    const casaPct = aprov(h.w||0, h.d||0, h.l||0);
-    const foraPct = aprov(a.w||0, a.d||0, a.l||0);
+    const ts   = ts_map[nome] || {};
+    const h    = ts.home || {}; const a = ts.away || {};
+    const cPct = aprov(h.w||0, h.d||0, h.l||0);
+    const fPct = aprov(a.w||0, a.d||0, a.l||0);
+    const hist_team = hist[nome] || [];
 
-    const historico = hist[nome] || [];
-    const separatorClass = ZONA_BREAKS.includes(pos) ? 'zona-separator' : '';
+    // Dados de momentum do CSV
+    const csv = tabelaIdx[nome] || {};
+    const mof  = csv.momentum_of;
+    const mdf  = csv.momentum_def;
+    const seq  = csv.sequencia;
+    const fs   = csv.forma_score;
 
     const sgFmt = sg > 0 ? `<span style="color:var(--green)">+${sg}</span>`
                 : sg < 0 ? `<span style="color:var(--red)">${sg}</span>`
                 : `<span style="color:var(--muted)">0</span>`;
 
-    return `<tr class="${separatorClass}">
+    return `<tr class="${ZONA_BREAKS.includes(pos) ? 'zona-separator' : ''}">
       <td><span class="zona-badge ${zonaClass(pos)}">${pos}</span></td>
       <td class="nm">${nome}</td>
       <td class="pts-cell">${pts}</td>
@@ -1162,21 +1320,74 @@ function renderBrasileiro(data) {
       <td class="mo">${ga}</td>
       <td class="mo">${sgFmt}</td>
       <td>${aprovBar(pct)}</td>
-      <td>${casaPct > 0 ? aprovBar(casaPct) : '<span class="tm">—</span>'}</td>
-      <td>${foraPct > 0 ? aprovBar(foraPct) : '<span class="tm">—</span>'}</td>
-      <td>${formaDots(historico)}</td>
+      <td>${cPct > 0 ? aprovBar(cPct) : '<span class="tm">—</span>'}</td>
+      <td>${fPct > 0 ? aprovBar(fPct) : '<span class="tm">—</span>'}</td>
+      <td>${formaDots(hist_team)}</td>
+      <td>${momentumArrow(mof, false)}</td>
+      <td>${momentumArrow(mdf, true)}</td>
+      <td>${seqCellHtml(seq)}</td>
     </tr>`;
   }).join('');
 
   document.getElementById('bra-count').textContent = `${tabela.length} clubes`;
-  renderBrasileiraoCards(tabela, hist, teamStats);
+  renderBrasileiraoCards(tabela, hist, ts_map);
+}
+
+function renderBrasileiraoCards(tabela, hist, teamStats) {
+  const el = document.getElementById('bra-cards');
+  if (!tabela.length) { el.innerHTML = ''; return; }
+
+  const tabelaIdx = {};
+  TABELA_BRA.forEach(r => { if (r.time) tabelaIdx[r.time] = r; });
+
+  el.innerHTML = tabela.map(e => {
+    const pos  = e.position; const nome = e.team?.name || '—';
+    const pts  = e.points;   const j = e.playedGames;
+    const w    = e.won; const d = e.draw; const l = e.lost;
+    const gf   = e.goalsFor; const ga = e.goalsAgainst; const sg = e.goalDifference;
+    const pct  = aprov(w, d, l);
+    const ts   = teamStats[nome] || {};
+    const h    = ts.home || {}; const a = ts.away || {};
+    const cPct = aprov(h.w||0, h.d||0, h.l||0);
+    const fPct = aprov(a.w||0, a.d||0, a.l||0);
+    const hist_team = hist[nome] || [];
+    const csv  = tabelaIdx[nome] || {};
+    const seq  = parseInt(csv.sequencia);
+    const fs   = parseFloat(csv.forma_score);
+    const sgCls = sg > 0 ? 'g' : sg < 0 ? 'r' : '';
+    const aClss = pct >= 60 ? 'g' : pct >= 40 ? 'y' : 'r';
+    const seqVal = !isNaN(seq) && seq !== 0 ? (seq > 0 ? `+${seq} 🔥` : `${seq} 📉`) : '—';
+    const seqCls = !isNaN(seq) ? (seq > 0 ? 'o' : seq < 0 ? '' : '') : '';
+
+    return `<div class="bra-card">
+      <div class="bra-card-header">
+        <span class="zona-badge ${zonaClass(pos)}">${pos}</span>
+        <span class="bra-card-nome">${nome}</span>
+        <div style="text-align:right"><div class="bra-card-pts">${pts}</div><div class="bra-card-pts-label">PTS</div></div>
+      </div>
+      <div class="bra-card-grid">
+        <div class="bra-card-stat"><div class="bra-card-stat-label">Jogos</div><div class="bra-card-stat-val">${j}</div></div>
+        <div class="bra-card-stat"><div class="bra-card-stat-label">Vitórias</div><div class="bra-card-stat-val g">${w}</div></div>
+        <div class="bra-card-stat"><div class="bra-card-stat-label">Empates</div><div class="bra-card-stat-val y">${d}</div></div>
+        <div class="bra-card-stat"><div class="bra-card-stat-label">Derrotas</div><div class="bra-card-stat-val r">${l}</div></div>
+        <div class="bra-card-stat"><div class="bra-card-stat-label">GP · GC · SG</div><div class="bra-card-stat-val ${sgCls}" style="font-size:11px">${gf} · ${ga} · ${sg > 0 ? '+' : ''}${sg}</div></div>
+        <div class="bra-card-stat"><div class="bra-card-stat-label">Aprov.</div><div class="bra-card-stat-val ${aClss}">${pct}%</div></div>
+        <div class="bra-card-stat"><div class="bra-card-stat-label">Casa</div><div class="bra-card-stat-val ${cPct>=60?'g':cPct>=40?'y':'r'}">${cPct}%</div></div>
+        <div class="bra-card-stat"><div class="bra-card-stat-label">Fora</div><div class="bra-card-stat-val ${fPct>=60?'g':fPct>=40?'y':'r'}">${fPct}%</div></div>
+        <div class="bra-card-stat"><div class="bra-card-stat-label">Sequência</div><div class="bra-card-stat-val ${seqCls}">${seqVal}</div></div>
+        <div class="bra-card-stat"><div class="bra-card-stat-label">Forma</div><div class="bra-card-stat-val">${!isNaN(fs) ? Math.round(fs*100)+'%' : '—'}</div></div>
+      </div>
+      <div class="bra-card-forma">
+        <span class="bra-card-forma-label">Forma</span>
+        ${formaDots(hist_team)}
+      </div>
+    </div>`;
+  }).join('');
 }
 
 function renderScorers(scorers) {
   const el = document.getElementById('bra-scorers');
-  if (!scorers || !scorers.length) {
-    el.innerHTML = '<div class="err">Sem dados</div>'; return;
-  }
+  if (!scorers || !scorers.length) { el.innerHTML = '<div class="err">Sem dados</div>'; return; }
   el.innerHTML = scorers.slice(0, 12).map((s, i) => `
     <div class="scorer-row">
       <span class="scorer-num">${i+1}</span>
@@ -1186,10 +1397,9 @@ function renderScorers(scorers) {
       </div>
       <div style="text-align:right">
         <div class="scorer-goals">${s.goals || 0}</div>
-        ${s.assists ? `<div class="scorer-assists">${s.assists} ${s.assists === 1 ? 'assistência' : 'assistências'}</div>` : ''}
+        ${s.assists ? `<div class="scorer-assists">${s.assists} assist.</div>` : ''}
       </div>
-    </div>
-  `).join('');
+    </div>`).join('');
 }
 
 async function loadBrasileiro() {
@@ -1201,13 +1411,11 @@ async function loadBrasileiro() {
     renderScorers(data.artilheiros);
   } catch(e) {
     document.getElementById('bra-tbody').innerHTML =
-      `<tr><td colspan="14"><div class="err">Erro ao carregar brasileirao_data.json: ${e.message}</div></td></tr>`;
-    document.getElementById('bra-scorers').innerHTML =
-      `<div class="err">—</div>`;
+      `<tr><td colspan="17"><div class="err">Erro: ${e.message}</div></td></tr>`;
   }
 }
 
-// ── LAST UPDATE + TIMER ───────────────────────────────────────
+// ── META (rodada + timer) ─────────────────────────────────────
 async function fetchMeta() {
   try {
     const rows = await fetchCSV(CSV_LOG);
@@ -1221,23 +1429,14 @@ async function fetchMeta() {
       const rodada = (s['rodada_atual'] || s[' rodada_atual'] || '').toString().trim();
       if (rodada) document.getElementById('rodada-pill').textContent = 'Rodada ' + rodada;
       let ts = null;
-      if (s['fechamento.timestamp']) { ts = parseInt(s['fechamento.timestamp']); }
-      else if (s['fechamento']) {
-        try { ts = JSON.parse(s['fechamento'].replace(/'/g, '"')).timestamp; } catch(e) {}
-      }
+      if (s['fechamento.timestamp']) ts = parseInt(s['fechamento.timestamp']);
+      else if (s['fechamento']) { try { ts = JSON.parse(s['fechamento'].replace(/'/g, '"')).timestamp; } catch(e) {} }
       if (ts && !isNaN(ts)) iniciarTimer(ts);
-      if (rodada) return;
-    }
-  } catch(e) {}
-  try {
-    if (PARTIDAS.length) {
-      const rodada = PARTIDAS[0].rodada || PARTIDAS[0].rodada_id || '';
-      if (rodada) document.getElementById('rodada-pill').textContent = 'Rodada ' + rodada;
     }
   } catch(e) {}
 }
 
-// ── MODAL LEGENDA ─────────────────────────────────────────────
+// ── MODAL ─────────────────────────────────────────────────────
 const modalLeg = document.getElementById('modal-legenda');
 document.getElementById('btn-legenda').addEventListener('click', () => { modalLeg.style.display = 'flex'; });
 document.getElementById('modal-close').addEventListener('click', () => { modalLeg.style.display = 'none'; });
@@ -1266,7 +1465,16 @@ document.getElementById('btn-mandante').addEventListener('click', function() {
   fMand = !fMand; this.classList.toggle('active', fMand); renderTable();
 });
 document.getElementById('btn-armadilha').addEventListener('click', function() {
-  fArm = !fArm; this.classList.toggle('active', fArm); renderTable();
+  fArm = !fArm; fValor = false;
+  this.classList.toggle('active', fArm);
+  document.getElementById('btn-valor').classList.remove('active');
+  renderTable();
+});
+document.getElementById('btn-valor').addEventListener('click', function() {
+  fValor = !fValor; fArm = false;
+  this.classList.toggle('active', fValor);
+  document.getElementById('btn-armadilha').classList.remove('active');
+  renderTable();
 });
 document.getElementById('search-input').addEventListener('input', e => {
   fText = e.target.value.toLowerCase().trim(); renderTable();
@@ -1276,11 +1484,17 @@ document.querySelector('thead').addEventListener('click', e => {
   if (!th) return;
   const col = th.dataset.col;
   if (sortCol === col) sortAsc = !sortAsc; else { sortCol = col; sortAsc = false; }
-  document.querySelectorAll('th').forEach(t => { t.classList.remove('sorted','asc'); });
+  document.querySelectorAll('th').forEach(t => t.classList.remove('sorted', 'asc'));
   th.classList.add('sorted');
   if (sortAsc) th.classList.add('asc');
   renderTable();
 });
+
+// Marca coluna padrão como sorted ao carregar
+function markDefaultSort() {
+  const th = document.querySelector(`th[data-col="${sortCol}"]`);
+  if (th) th.classList.add('sorted');
+}
 
 // ── INIT ──────────────────────────────────────────────────────
 async function init() {
@@ -1291,15 +1505,23 @@ async function init() {
       ALL = (await fetchCSV('./data/current/atletas.csv')).filter(a => a.nome);
     } catch(e2) {
       document.getElementById('table-body').innerHTML =
-        `<tr><td colspan="12"><div class="err">Erro: ${e2.message}</div></td></tr>`;
+        `<tr><td colspan="16"><div class="err">Erro: ${e2.message}</div></td></tr>`;
     }
   }
-  try { PARTIDAS = await fetchCSV(CSV_PART); } catch(e) {}
-  try { ODDS = await fetchCSV(CSV_ODDS); } catch(e) { console.warn('odds.csv não encontrado'); }
 
+  try { PARTIDAS = await fetchCSV(CSV_PART); } catch(e) {}
+  try { ODDS = await fetchCSV(CSV_ODDS); }    catch(e) { console.warn('odds.csv não disponível'); }
+
+  // Carrega tabela do Brasileirão (usado em confrontos e Brasileirão)
+  try {
+    TABELA_BRA = await fetchCSV(CSV_TABELA);
+    buildTabelaIdx();
+  } catch(e) { console.warn('brasileirao_tabela.csv não disponível'); }
+
+  markDefaultSort();
   renderStats();
   renderDestaques();
-  renderTopMandantes();
+  renderTopConfrontos();
   renderTable();
   renderConfrontos();
   fetchMeta();
