@@ -1196,19 +1196,18 @@ def gerar_times_rodada(df_atletas: pd.DataFrame, df_partidas: pd.DataFrame,
     df_times   = df_conf.merge(df_plantel, on="time", how="left")
 
     # ── Momentum do time ──────────────────────────────────────
-    # Usa get_momentum_time que já faz o mapeamento abr → nome completo corretamente
     mom_of_list  = []
     mom_def_list = []
     seq_list     = []
     for abr in df_times["time"]:
         m = get_momentum_time(abr, momentum or {})
-        mom_of_list.append(m.get("momentum_of",  1.0) if m else 1.0)
-        mom_def_list.append(m.get("momentum_def", 1.0) if m else 1.0)
-        seq_list.append(m.get("sequencia", 0) if m else 0)
+        mom_of_list.append(float(m.get("momentum_of",  1.0)) if m else 1.0)
+        mom_def_list.append(float(m.get("momentum_def", 1.0)) if m else 1.0)
+        seq_list.append(int(m.get("sequencia", 0)) if m else 0)
 
-    df_times["momentum_of"]  = pd.to_numeric(mom_of_list,  errors="coerce").fillna(1.0)
-    df_times["momentum_def"] = pd.to_numeric(mom_def_list, errors="coerce").fillna(1.0)
-    df_times["sequencia"]    = pd.to_numeric(seq_list,     errors="coerce").fillna(0)
+    df_times["momentum_of"]  = pd.Series(mom_of_list,  index=df_times.index, dtype=float).fillna(1.0)
+    df_times["momentum_def"] = pd.Series(mom_def_list, index=df_times.index, dtype=float).fillna(1.0)
+    df_times["sequencia"]    = pd.Series(seq_list,     index=df_times.index, dtype=float).fillna(0)
 
     # ── Score composto normalizado ────────────────────────────
     df_times["prob_vitoria"]       = pd.to_numeric(df_times["prob_vitoria"],       errors="coerce").fillna(0)
