@@ -523,7 +523,7 @@ footer a { color: var(--green); text-decoration: none; }
       </div>
       <div class="table-footer">
         <span id="table-count">—</span>
-        <span>atletas_enriquecido.csv - api.cartola.globo.com</span>
+        <span>atletas.csv · current/ · api.cartola.globo.com</span>
       </div>
     </div>
   </div>
@@ -581,7 +581,7 @@ footer a { color: var(--green); text-decoration: none; }
             </div>
             <div class="table-footer">
               <span id="bra-count">—</span>
-              <span>football-data.org · brasileirao_data.json</span>
+              <span>football-data.org · raw/brasileirao.json</span>
             </div>
           </div>
         </div>
@@ -639,13 +639,13 @@ footer a { color: var(--green); text-decoration: none; }
 
 <script>
 // ── CONFIG ────────────────────────────────────────────────────
-const CSV_ENR    = './data/atletas_enriquecido.csv';
-const CSV_PART   = './data/partidas.csv';
-const CSV_ROD    = './data/rodadas.csv';
-const CSV_LOG    = './data/log.csv';
-const CSV_STATUS = './data/mercado_status.csv';
-const CSV_ODDS   = './data/odds.csv';
-const JSON_BRA   = './data/brasileirao_data.json';
+const CSV_ENR    = './data/current/atletas.csv';
+const CSV_PART   = './data/current/partidas.csv';
+const CSV_ROD    = './data/current/rodadas.csv';
+const CSV_LOG    = './data/current/log.csv';
+const CSV_STATUS = './data/current/status.csv';
+const CSV_ODDS   = './data/current/odds.csv';
+const JSON_BRA   = './data/raw/brasileirao.json';
 
 const STATUS_MAP = {
   '7': { l: 'Provável',   c: 's7' },
@@ -1288,7 +1288,7 @@ async function init() {
     ALL = (await fetchCSV(CSV_ENR)).filter(a => a.nome);
   } catch(e) {
     try {
-      ALL = (await fetchCSV('./data/atletas_mercado.csv')).filter(a => a.nome);
+      ALL = (await fetchCSV('./data/current/atletas.csv')).filter(a => a.nome);
     } catch(e2) {
       document.getElementById('table-body').innerHTML =
         `<tr><td colspan="12"><div class="err">Erro: ${e2.message}</div></td></tr>`;
