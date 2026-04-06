@@ -2,7 +2,6 @@ name: Coleta Cartola FC
 
 on:
   schedule:
-    # 8h horário de Brasília = 11h UTC
     - cron: "0 9 * * *"     # 06h BRT
     - cron: "0 13 * * *"    # 10h BRT
     - cron: "40 15 * * *"   # 12h40 BRT
@@ -18,7 +17,7 @@ on:
 jobs:
   coletar:
     runs-on: ubuntu-latest
-    
+
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
@@ -34,7 +33,7 @@ jobs:
           python-version: "3.11"
 
       - name: Instalar dependencias
-        run: pip install requests pandas google-auth google-auth-httplib2 google-api-python-client
+        run: pip install requests pandas numpy google-auth google-auth-httplib2 google-api-python-client
 
       - name: Rodar extracao
         env:
@@ -46,9 +45,9 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add docs/data/
-          git diff --cached --quiet || git commit -m "dados: coleta automatica $(date -u '+%Y-%m-%d %H:%M UTC')"
           git pull --rebase origin main
+          git add -A docs/data/ llm/
+          git diff --cached --quiet || git commit -m "dados: coleta automatica $(date -u '+%Y-%m-%d %H:%M UTC')"
           git push
 
       - name: Agendar fechamento no Google Calendar
@@ -56,7 +55,7 @@ jobs:
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
           GOOGLE_CALENDAR_ID: ${{ secrets.GOOGLE_CALENDAR_ID }}
           HORAS_ANTES_LEMBRETE: "3"
-          MERCADO_STATUS_CSV: "docs/data/mercado_status.csv"
+          MERCADO_STATUS_CSV: "docs/data/current/status.csv"
         run: python agendaFechamentomercado.py
 
       - name: Trigger Deploy Pages

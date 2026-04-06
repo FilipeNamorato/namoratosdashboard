@@ -1030,7 +1030,8 @@ def normalizar_serie(s: pd.Series) -> pd.Series:
     return (s - mn) / (mx - mn)
 
 def gerar_times_rodada(df_atletas: pd.DataFrame, df_partidas: pd.DataFrame,
-                       df_tabela: pd.DataFrame, df_odds: pd.DataFrame) -> pd.DataFrame:
+                       df_tabela: pd.DataFrame, df_odds: pd.DataFrame,
+                       momentum: dict = None) -> pd.DataFrame:
     """
     Gera times_rodada.csv — visão consolidada por time para a rodada atual.
 
@@ -1104,7 +1105,6 @@ def gerar_times_rodada(df_atletas: pd.DataFrame, df_partidas: pd.DataFrame,
     df_conf = pd.DataFrame(confrontos)
 
     # ── Fragilidade defensiva do adversário ───────────────────
-    # Usa gc_pg (gols sofridos por jogo) do adversário no mando específico
     adv_fragilidade = {}
     if not df_tabela.empty:
         t = df_tabela.copy()
@@ -1114,17 +1114,20 @@ def gerar_times_rodada(df_atletas: pd.DataFrame, df_partidas: pd.DataFrame,
             lambda r: r["casa_gc"] / r["j_casa"] if r["j_casa"] > 0 else 0, axis=1)
         t["gc_pg_fora"] = t.apply(
             lambda r: r["fora_gc"] / r["j_fora"] if r["j_fora"] > 0 else 0, axis=1)
+        tabela_frag = t.set_index("time")
 
         for _, conf in df_conf.iterrows():
             adv_abr  = conf["adversario"]
             mandante = conf["mandante"]
-            row_adv  = get_tabela_row(adv_abr, t.set_index("time"))
+            # Usa get_tabela_row que faz mapeamento abr → nome completo
+            row_adv  = get_tabela_row(adv_abr, tabela_frag)
             if row_adv is not None:
-                # Se o time é mandante, o adversário joga fora — usa gc_pg_fora do adv
                 gc_pg = float(row_adv["gc_pg_fora"] if mandante else row_adv["gc_pg_casa"])
                 adv_fragilidade[conf["time"]] = gc_pg
             else:
-                adv_fragilidade[conf["time"]] = 0.0
+                # Fallback: usa momentum do adversário se tabela falhar
+                m_adv = get_momentum_time(adv_abr, momentum or {})
+                adv_fragilidade[conf["time"]] = m_adv.get("media_ga_recente", 1.0) if m_adv else 1.0
 
     df_conf["adv_gc_pg"] = df_conf["time"].map(adv_fragilidade).fillna(0)
 
@@ -1167,25 +1170,19 @@ def gerar_times_rodada(df_atletas: pd.DataFrame, df_partidas: pd.DataFrame,
     df_times   = df_conf.merge(df_plantel, on="time", how="left")
 
     # ── Momentum do time ──────────────────────────────────────
-    if not df_tabela.empty:
-        tabela_idx = df_tabela.set_index("time")
-        def get_momentum(abr):
-            row = get_tabela_row(abr, tabela_idx)
-            if row is None:
-                return pd.Series({"momentum_of": 1.0, "momentum_def": 1.0, "sequencia": 0})
-            return pd.Series({
-                "momentum_of":  row.get("momentum_of",  1.0),
-                "momentum_def": row.get("momentum_def", 1.0),
-                "sequencia":    row.get("sequencia",    0),
-            })
-        mom = df_times["time"].apply(get_momentum)
-        df_times["momentum_of"]  = pd.to_numeric(mom["momentum_of"],  errors="coerce").fillna(1.0)
-        df_times["momentum_def"] = pd.to_numeric(mom["momentum_def"], errors="coerce").fillna(1.0)
-        df_times["sequencia"]    = pd.to_numeric(mom["sequencia"],    errors="coerce").fillna(0)
-    else:
-        df_times["momentum_of"]  = 1.0
-        df_times["momentum_def"] = 1.0
-        df_times["sequencia"]    = 0
+    # Usa get_momentum_time que já faz o mapeamento abr → nome completo corretamente
+    mom_of_list  = []
+    mom_def_list = []
+    seq_list     = []
+    for abr in df_times["time"]:
+        m = get_momentum_time(abr, momentum or {})
+        mom_of_list.append(m.get("momentum_of",  1.0) if m else 1.0)
+        mom_def_list.append(m.get("momentum_def", 1.0) if m else 1.0)
+        seq_list.append(m.get("sequencia", 0) if m else 0)
+
+    df_times["momentum_of"]  = pd.to_numeric(mom_of_list,  errors="coerce").fillna(1.0)
+    df_times["momentum_def"] = pd.to_numeric(mom_def_list, errors="coerce").fillna(1.0)
+    df_times["sequencia"]    = pd.to_numeric(seq_list,     errors="coerce").fillna(0)
 
     # ── Score composto normalizado ────────────────────────────
     df_times["prob_vitoria"]       = pd.to_numeric(df_times["prob_vitoria"],       errors="coerce").fillna(0)
@@ -1365,7 +1362,7 @@ print("Gerando times_rodada.csv...")
 try:
     if not df_atletas_enriquecido.empty and not df_partidas.empty:
         gerar_times_rodada(
-            df_atletas_enriquecido, df_partidas, df_tabela, df_odds
+            df_atletas_enriquecido, df_partidas, df_tabela, df_odds, momentum
         )
         log.append({"endpoint": "times_rodada", "registros": 1, "status": "OK", "erro": ""})
 except Exception as e:
