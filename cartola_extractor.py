@@ -1354,10 +1354,14 @@ try:
         df_enr = enriquecer(df_mercado, df_partidas)
         if not df_tabela.empty:
             df_enr = enriquecer_com_confronto(df_enr, df_tabela, momentum)
-        df_enr.to_csv(CURRENT_DIR / "atletas.csv", index=False, encoding="utf-8-sig")
         df_atletas_enriquecido = df_enr
-        print(f"  OK — {len(df_enr)} atletas")
-        log.append({"endpoint": "atletas_enriquecido", "registros": len(df_enr), "status": "OK", "erro": ""})
+
+        # current/atletas.csv — só status relevantes (exclui status=6 Nulo)
+        df_current = df_enr[df_enr["status_id"].isin([7, 2])].copy()
+        df_current.to_csv(CURRENT_DIR / "atletas.csv", index=False, encoding="utf-8-sig")
+
+        print(f"  OK — {len(df_enr)} total | {len(df_current)} no current/ (excl. status=6)")
+        log.append({"endpoint": "atletas_enriquecido", "registros": len(df_current), "status": "OK", "erro": ""})
 except Exception as e:
     print(f"  ERRO: {e}")
     log.append({"endpoint": "atletas_enriquecido", "registros": 0, "status": "ERRO", "erro": str(e)})
