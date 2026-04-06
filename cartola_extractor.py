@@ -586,13 +586,23 @@ def normalizar_rodadas(raw: list) -> pd.DataFrame:
 # ENRIQUECIMENTO CARTOLA
 # ─────────────────────────────────────────────────────────────
 
-def calcular_min_valorizar(preco: float) -> float:
-    if preco <= 0:  return 0.0
-    if preco <= 4:  return round(preco * 2.8, 1)
-    if preco <= 8:  return round(preco * 2.3, 1)
-    if preco <= 15: return round(preco * 2.0, 1)
-    if preco <= 25: return round(preco * 1.8, 1)
-    return round(preco * 1.6, 1)
+def calcular_min_valorizar(row) -> float:
+    """
+    MPV real = última pontuação do jogador.
+    Usa pontos_rodada se disponível e > 0.
+    Fallback: heurística pela média (jogador consistente 
+    tende a precisar superar sua própria média).
+    """
+    pontos = float(row.get("pontos_rodada") or 0)
+    if pontos > 0:
+        return round(pontos, 1)
+    
+    # Fallback quando não tem pontuação recente
+    media = float(row.get("media") or 0)
+    if media > 0:
+        return round(media, 1)
+    
+    return 0.0
 
 def calcular_pb_media(row: pd.Series) -> float:
     j   = row["jogos"]
@@ -658,7 +668,8 @@ def enriquecer(df_mercado: pd.DataFrame, df_partidas: pd.DataFrame) -> pd.DataFr
     df["variacao"] = pd.to_numeric(df["variacao"], errors="coerce").fillna(0)
 
     # ── Mínimo para valorizar ────────────────────────────────
-    df["min_valorizar"] = df["preco"].apply(calcular_min_valorizar)
+    df["min_valorizar"] = df.apply(calcular_min_valorizar, axis=1)
+
 
     # ── Pontos Base e Resiliência ────────────────────────────
     for scout_col in ["scout_G", "scout_A", "scout_SG"]:
