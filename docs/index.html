@@ -691,10 +691,10 @@ footer a { color: var(--green); text-decoration: none; }
 
 const CSV_ENR    = './data/current/atletas.csv';
 const CSV_PART   = './data/current/partidas.csv';
-const CSV_ROD    = './data/current/rodadas.csv';
 const CSV_LOG    = './data/current/log.csv';
 const CSV_STATUS = './data/current/status.csv';
 const CSV_ODDS   = './data/current/odds.csv';
+const CSV_TABELA = './data/current/tabela.csv';
 const JSON_BRA   = './data/raw/brasileirao.json';
 
 const STATUS_MAP = {
@@ -1339,7 +1339,7 @@ function renderBrasileiraoCards(tabela, hist, teamStats) {
     const sgCls = sg > 0 ? 'g' : sg < 0 ? 'r' : '';
     const aClss = pct >= 60 ? 'g' : pct >= 40 ? 'y' : 'r';
     const seqVal = !isNaN(seq) && seq !== 0 ? (seq > 0 ? `+${seq} 🔥` : `${seq} 📉`) : '—';
-    const seqCls = !isNaN(seq) ? (seq > 0 ? 'o' : seq < 0 ? '' : '') : '';
+    const seqCls = !isNaN(seq) ? (seq > 0 ? 'o' : seq < 0 ? 'r' : '') : '';
 
     return `<div class="bra-card">
       <div class="bra-card-header">
@@ -1483,12 +1483,8 @@ async function init() {
   try {
     ALL = (await fetchCSV(CSV_ENR)).filter(a => a.nome);
   } catch(e) {
-    try {
-      ALL = (await fetchCSV('./data/current/atletas.csv')).filter(a => a.nome);
-    } catch(e2) {
-      document.getElementById('table-body').innerHTML =
-        `<tr><td colspan="16"><div class="err">Erro: ${e2.message}</div></td></tr>`;
-    }
+    document.getElementById('table-body').innerHTML =
+      `<tr><td colspan="16"><div class="err">Erro ao carregar atletas: ${e.message}</div></td></tr>`;
   }
 
   try { PARTIDAS = await fetchCSV(CSV_PART); } catch(e) {}

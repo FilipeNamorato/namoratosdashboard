@@ -576,6 +576,7 @@ def normalizar_pontuados(raw: dict) -> pd.DataFrame:
 def normalizar_partidas(raw: dict) -> pd.DataFrame:
     lista = raw.get("partidas", raw) if isinstance(raw, dict) else raw
     if isinstance(lista, dict):
+        print("  [WARN] normalizar_partidas: 'partidas' não encontrado no raw — usando dict completo")
         lista = list(lista.values())
     return pd.json_normalize(lista) if lista else pd.DataFrame()
 
@@ -588,10 +589,11 @@ def normalizar_rodadas(raw: list) -> pd.DataFrame:
 
 def calcular_min_valorizar(row) -> float:
     """
-    MPV real = última pontuação do jogador.
-    Usa pontos_rodada se disponível e > 0.
-    Fallback: heurística pela média (jogador consistente 
-    tende a precisar superar sua própria média).
+    Estimativa de pontos mínimos para valorizar.
+    Usa pontos_rodada (última pontuação) como proxy — não é o MPV
+    real calculado pelo Cartola (que depende da variação de preço
+    esperada pela plataforma).
+    Fallback: média histórica quando não há pontuação recente.
     """
     pontos = float(row.get("pontos_rodada") or 0)
     if pontos > 0:
@@ -686,23 +688,46 @@ def enriquecer(df_mercado: pd.DataFrame, df_partidas: pd.DataFrame) -> pd.DataFr
     # ── Confiabilidade ───────────────────────────────────────
     df["confiabilidade"] = (df["jogos"] / JOGOS_CONFIANCA_PLENA).clip(upper=1.0).round(3)
 
-    # ── Média bayesiana ──────────────────────────────────────
-    media_prior = df[df["jogos"] >= 3].groupby("posicao")["media"].mean()
+    # ── Média bayesiana com prior estratificado por faixa de preço ──
+    # Prior estratificado: jogadores do mesmo nível de preço na posição
+    # são um peer group mais justo do que toda a posição misturada.
+    def _calcular_faixa(series: pd.Series) -> pd.Series:
+        try:
+            return pd.qcut(
+                series, q=3, labels=["baixo", "medio", "alto"], duplicates="drop"
+            ).astype(str)
+        except Exception:
+            return pd.Series("medio", index=series.index)
+
+    df["_faixa_preco"] = df.groupby("posicao")["preco"].transform(_calcular_faixa)
+
+    elegiveis = df[df["jogos"] >= 3]
+    prior_estratificado = (
+        elegiveis.groupby(["posicao", "_faixa_preco"])["media"].mean().to_dict()
+    )
+    prior_posicao = elegiveis.groupby("posicao")["media"].mean().to_dict()
 
     def calcular_media_bayesiana(row):
         j = row["jogos"]
         if j < 1: return 0.0
-        prior = media_prior.get(row["posicao"], row["media"])
+        prior = (
+            prior_estratificado.get((row["posicao"], row["_faixa_preco"]))
+            or prior_posicao.get(row["posicao"])
+            or row["media"]
+        )
         return round(
             (j * row["media"] + JOGOS_CONFIANCA_PLENA * prior) / (j + JOGOS_CONFIANCA_PLENA), 3
         )
 
     df["media_bayesiana"] = df.apply(calcular_media_bayesiana, axis=1)
+    df.drop(columns=["_faixa_preco"], inplace=True)
 
-    # ── Resíduo z-score por regressão linear ─────────────────
+    # ── Resíduo z-score por regressão log-linear ──────────────
+    # log(preco) lineariza melhor a relação preço→média porque a
+    # distribuição de preços é assimétrica (poucos jogadores muito caros).
     residuos = []
-    for pos, grp in df.groupby("posicao"):
-        x = grp["preco"].values
+    for _, grp in df.groupby("posicao"):
+        x = np.log1p(grp["preco"].values)   # log1p evita log(0)
         y = grp["media_bayesiana"].values
         if len(grp) < 3 or x.std() == 0:
             residuos.append(pd.Series(0.0, index=grp.index))
@@ -987,8 +1012,10 @@ def gerenciar_snapshots(df_atletas: pd.DataFrame, df_partidas: pd.DataFrame,
         print("  [SNAPSHOT] mercado fechado — aguardando reabertura")
         return
 
-    # Janela de 2h antes do fechamento → PRÉ da rodada atual
-    dentro_janela_pre = agora_ts > (fechamento_ts - 7200)
+    # Janela de 4h antes do fechamento → PRÉ da rodada atual
+    # (configurável via env var JANELA_PRE_HORAS, padrão 4h)
+    janela_pre_seg = int(os.environ.get("JANELA_PRE_HORAS", "4")) * 3600
+    dentro_janela_pre = agora_ts > (fechamento_ts - janela_pre_seg)
     if dentro_janela_pre:
         salvar_snapshot_pre(df_atletas, df_partidas, rodada_atual)
 
@@ -1270,147 +1297,148 @@ def gerar_times_rodada(df_atletas: pd.DataFrame, df_partidas: pd.DataFrame,
 # EXECUÇÃO PRINCIPAL
 # ─────────────────────────────────────────────────────────────
 
-log = []
+if __name__ == "__main__":
+    log = []
 
-# ── 1. Coleta e normalização dos endpoints Cartola ───────────
-EXTRATORES = {
-    "mercado":   (normalizar_mercado,   "mercado"),
-    "pontuados": (normalizar_pontuados, "atletas_pontuados"),
-    "partidas":  (normalizar_partidas,  "partidas"),
-    "rodadas":   (normalizar_rodadas,   "rodadas"),
-}
+    # ── 1. Coleta e normalização dos endpoints Cartola ───────────
+    EXTRATORES = {
+        "mercado":   (normalizar_mercado,   "mercado"),
+        "pontuados": (normalizar_pontuados, "atletas_pontuados"),
+        "partidas":  (normalizar_partidas,  "partidas"),
+        "rodadas":   (normalizar_rodadas,   "rodadas"),
+    }
 
-dados_brutos = {}
-for key, (normalizador, nome_arquivo) in EXTRATORES.items():
-    print(f"Extraindo {key}...")
+    dados_brutos = {}
+    for key, (normalizador, nome_arquivo) in EXTRATORES.items():
+        print(f"Extraindo {key}...")
+        try:
+            raw = get_json(key)
+            salvar_raw_json(nome_arquivo, raw)                          # → docs/data/raw/
+            df  = normalizador(raw)
+            df.to_csv(CURRENT_DIR / f"{nome_arquivo}.csv",             # → docs/data/current/
+                      index=False, encoding="utf-8-sig")
+            dados_brutos[key] = df
+            print(f"  OK — {len(df)} registros")
+            log.append({"endpoint": key, "registros": len(df), "status": "OK", "erro": ""})
+        except Exception as e:
+            print(f"  ERRO: {e}")
+            log.append({"endpoint": key, "registros": 0, "status": "ERRO", "erro": str(e)})
+            dados_brutos[key] = pd.DataFrame()
+
+    # ── 2. Mercado status ────────────────────────────────────────
+    print("Extraindo status do mercado...")
+    raw_status = {}
     try:
-        raw = get_json(key)
-        salvar_raw_json(nome_arquivo, raw)                          # → docs/data/raw/
-        df  = normalizador(raw)
-        df.to_csv(CURRENT_DIR / f"{nome_arquivo}.csv",             # → docs/data/current/
-                  index=False, encoding="utf-8-sig")
-        dados_brutos[key] = df
-        print(f"  OK — {len(df)} registros")
-        log.append({"endpoint": key, "registros": len(df), "status": "OK", "erro": ""})
+        raw_status = get_json("status")
+        salvar_raw_json("mercado_status", raw_status)                   # → docs/data/raw/
+        pd.DataFrame([raw_status]).to_csv(                             # → docs/data/current/
+            CURRENT_DIR / "status.csv", index=False, encoding="utf-8-sig")
+        print("  OK")
+        log.append({"endpoint": "status", "registros": 1, "status": "OK", "erro": ""})
     except Exception as e:
         print(f"  ERRO: {e}")
-        log.append({"endpoint": key, "registros": 0, "status": "ERRO", "erro": str(e)})
-        dados_brutos[key] = pd.DataFrame()
+        log.append({"endpoint": "status", "registros": 0, "status": "ERRO", "erro": str(e)})
 
-# ── 2. Mercado status ────────────────────────────────────────
-print("Extraindo status do mercado...")
-raw_status = {}
-try:
-    raw_status = get_json("status")
-    salvar_raw_json("mercado_status", raw_status)                   # → docs/data/raw/
-    pd.DataFrame([raw_status]).to_csv(                             # → docs/data/current/
-        CURRENT_DIR / "status.csv", index=False, encoding="utf-8-sig")
-    print("  OK")
-    log.append({"endpoint": "status", "registros": 1, "status": "OK", "erro": ""})
-except Exception as e:
-    print(f"  ERRO: {e}")
-    log.append({"endpoint": "status", "registros": 0, "status": "ERRO", "erro": str(e)})
+    # ── 3. Odds ──────────────────────────────────────────────────
+    print("Extraindo odds...")
+    df_odds = pd.DataFrame()
+    try:
+        df_odds = get_odds()
+        if not df_odds.empty:
+            df_odds.to_csv(CURRENT_DIR / "odds.csv", index=False, encoding="utf-8-sig")
+            print(f"  OK — {len(df_odds)} jogos")
+            log.append({"endpoint": "odds", "registros": len(df_odds), "status": "OK", "erro": ""})
+        else:
+            print("  SKIP — sem dados de odds")
+    except Exception as e:
+        print(f"  ERRO: {e}")
+        log.append({"endpoint": "odds", "registros": 0, "status": "ERRO", "erro": str(e)})
 
-# ── 3. Odds ──────────────────────────────────────────────────
-print("Extraindo odds...")
-df_odds = pd.DataFrame()
-try:
-    df_odds = get_odds()
-    if not df_odds.empty:
-        df_odds.to_csv(CURRENT_DIR / "odds.csv", index=False, encoding="utf-8-sig")
-        print(f"  OK — {len(df_odds)} jogos")
-        log.append({"endpoint": "odds", "registros": len(df_odds), "status": "OK", "erro": ""})
-    else:
-        print("  SKIP — sem dados de odds")
-except Exception as e:
-    print(f"  ERRO: {e}")
-    log.append({"endpoint": "odds", "registros": 0, "status": "ERRO", "erro": str(e)})
-
-# ── 4. Partidas enriquecidas com odds ────────────────────────
-print("Enriquecendo partidas com odds...")
-df_mercado  = dados_brutos.get("mercado",  pd.DataFrame())
-df_partidas = dados_brutos.get("partidas", pd.DataFrame())
-mapa_clubes = {}
-if not df_mercado.empty:
-    for _, row in df_mercado.iterrows():
-        if pd.notna(row.get("clube_id")) and pd.notna(row.get("clube")):
-            mapa_clubes[int(row["clube_id"])] = row["clube"]
-
-try:
-    if not df_partidas.empty and not df_odds.empty:
-        df_partidas = enriquecer_partidas(df_partidas, df_odds, mapa_clubes)
-        df_partidas.to_csv(CURRENT_DIR / "partidas.csv", index=False, encoding="utf-8-sig")
-        print(f"  OK — odds cruzadas em {len(df_partidas)} partidas")
-    else:
-        print("  SKIP — partidas ou odds vazias")
-except Exception as e:
-    print(f"  ERRO: {e}")
-
-# ── 5. Brasileirão ───────────────────────────────────────────
-print("Extraindo tabela do Brasileirão...")
-df_tabela   = pd.DataFrame()
-momentum    = {}
-try:
-    _, df_tabela, momentum = get_brasileirao_data()
-    log.append({"endpoint": "brasileirao", "registros": len(df_tabela), "status": "OK", "erro": ""})
-except Exception as e:
-    print(f"  ERRO: {e}")
-    log.append({"endpoint": "brasileirao", "registros": 0, "status": "ERRO", "erro": str(e)})
-
-# ── 6. Enriquecimento dos atletas ────────────────────────────
-print("Gerando atletas enriquecidos...")
-df_atletas_enriquecido = pd.DataFrame()
-try:
+    # ── 4. Partidas enriquecidas com odds ────────────────────────
+    print("Enriquecendo partidas com odds...")
+    df_mercado  = dados_brutos.get("mercado",  pd.DataFrame())
+    df_partidas = dados_brutos.get("partidas", pd.DataFrame())
+    mapa_clubes = {}
     if not df_mercado.empty:
-        df_enr = enriquecer(df_mercado, df_partidas)
-        if not df_tabela.empty:
-            df_enr = enriquecer_com_confronto(df_enr, df_tabela, momentum)
-        df_atletas_enriquecido = df_enr
+        for _, row in df_mercado.iterrows():
+            if pd.notna(row.get("clube_id")) and pd.notna(row.get("clube")):
+                mapa_clubes[int(row["clube_id"])] = row["clube"]
 
-        # current/atletas.csv — só status relevantes (exclui status=6 Nulo)
-        df_current = df_enr[df_enr["status_id"].isin([7, 2])].copy()
-        df_current.to_csv(CURRENT_DIR / "atletas.csv", index=False, encoding="utf-8-sig")
+    try:
+        if not df_partidas.empty and not df_odds.empty:
+            df_partidas = enriquecer_partidas(df_partidas, df_odds, mapa_clubes)
+            df_partidas.to_csv(CURRENT_DIR / "partidas.csv", index=False, encoding="utf-8-sig")
+            print(f"  OK — odds cruzadas em {len(df_partidas)} partidas")
+        else:
+            print("  SKIP — partidas ou odds vazias")
+    except Exception as e:
+        print(f"  ERRO: {e}")
 
-        print(f"  OK — {len(df_enr)} total | {len(df_current)} no current/ (excl. status=6)")
-        log.append({"endpoint": "atletas_enriquecido", "registros": len(df_current), "status": "OK", "erro": ""})
-except Exception as e:
-    print(f"  ERRO: {e}")
-    log.append({"endpoint": "atletas_enriquecido", "registros": 0, "status": "ERRO", "erro": str(e)})
+    # ── 5. Brasileirão ───────────────────────────────────────────
+    print("Extraindo tabela do Brasileirão...")
+    df_tabela   = pd.DataFrame()
+    momentum    = {}
+    try:
+        _, df_tabela, momentum = get_brasileirao_data()
+        log.append({"endpoint": "brasileirao", "registros": len(df_tabela), "status": "OK", "erro": ""})
+    except Exception as e:
+        print(f"  ERRO: {e}")
+        log.append({"endpoint": "brasileirao", "registros": 0, "status": "ERRO", "erro": str(e)})
 
-# ── 7. Snapshots históricos ──────────────────────────────────
-print("Gerenciando snapshots históricos...")
-try:
-    if not df_atletas_enriquecido.empty and raw_status:
-        gerenciar_snapshots(df_atletas_enriquecido, df_partidas, raw_status)
-except Exception as e:
-    print(f"  ERRO nos snapshots: {e}")
+    # ── 6. Enriquecimento dos atletas ────────────────────────────
+    print("Gerando atletas enriquecidos...")
+    df_atletas_enriquecido = pd.DataFrame()
+    try:
+        if not df_mercado.empty:
+            df_enr = enriquecer(df_mercado, df_partidas)
+            if not df_tabela.empty:
+                df_enr = enriquecer_com_confronto(df_enr, df_tabela, momentum)
+            df_atletas_enriquecido = df_enr
 
-# ── 8. Geração do llm/input/ ─────────────────────────────────
-print("Gerando llm/input/...")
-try:
-    if not df_atletas_enriquecido.empty:
-        df_rodadas = dados_brutos.get("rodadas", pd.DataFrame())
-        gerar_llm_input(
-            df_atletas_enriquecido, df_partidas, df_tabela,
-            raw_status, df_rodadas, df_odds
-        )
-except Exception as e:
-    print(f"  ERRO no llm/input/: {e}")
+            # current/atletas.csv — só status relevantes (exclui status=6 Nulo)
+            df_current = df_enr[df_enr["status_id"].isin([7, 2])].copy()
+            df_current.to_csv(CURRENT_DIR / "atletas.csv", index=False, encoding="utf-8-sig")
 
-# ── 9. Score por time da rodada ──────────────────────────────
-print("Gerando times_rodada.csv...")
-try:
-    if not df_atletas_enriquecido.empty and not df_partidas.empty:
-        gerar_times_rodada(
-            df_atletas_enriquecido, df_partidas, df_tabela, df_odds, momentum
-        )
-        log.append({"endpoint": "times_rodada", "registros": 1, "status": "OK", "erro": ""})
-except Exception as e:
-    print(f"  ERRO no times_rodada: {e}")
-    log.append({"endpoint": "times_rodada", "registros": 0, "status": "ERRO", "erro": str(e)})
+            print(f"  OK — {len(df_enr)} total | {len(df_current)} no current/ (excl. status=6)")
+            log.append({"endpoint": "atletas_enriquecido", "registros": len(df_current), "status": "OK", "erro": ""})
+    except Exception as e:
+        print(f"  ERRO: {e}")
+        log.append({"endpoint": "atletas_enriquecido", "registros": 0, "status": "ERRO", "erro": str(e)})
 
-# ── 10. Log de execução ──────────────────────────────────────
-df_log = pd.DataFrame(log)
-df_log["timestamp"] = datetime.now(BRT).strftime("%Y-%m-%d %H:%M BRT")
-df_log.to_csv(CURRENT_DIR / "log.csv", index=False, encoding="utf-8-sig")
-print(f"\nConcluído — {len(log)} endpoints processados")
+    # ── 7. Snapshots históricos ──────────────────────────────────
+    print("Gerenciando snapshots históricos...")
+    try:
+        if not df_atletas_enriquecido.empty and raw_status:
+            gerenciar_snapshots(df_atletas_enriquecido, df_partidas, raw_status)
+    except Exception as e:
+        print(f"  ERRO nos snapshots: {e}")
+
+    # ── 8. Geração do llm/input/ ─────────────────────────────────
+    print("Gerando llm/input/...")
+    try:
+        if not df_atletas_enriquecido.empty:
+            df_rodadas = dados_brutos.get("rodadas", pd.DataFrame())
+            gerar_llm_input(
+                df_atletas_enriquecido, df_partidas, df_tabela,
+                raw_status, df_rodadas, df_odds
+            )
+    except Exception as e:
+        print(f"  ERRO no llm/input/: {e}")
+
+    # ── 9. Score por time da rodada ──────────────────────────────
+    print("Gerando times_rodada.csv...")
+    try:
+        if not df_atletas_enriquecido.empty and not df_partidas.empty:
+            gerar_times_rodada(
+                df_atletas_enriquecido, df_partidas, df_tabela, df_odds, momentum
+            )
+            log.append({"endpoint": "times_rodada", "registros": 1, "status": "OK", "erro": ""})
+    except Exception as e:
+        print(f"  ERRO no times_rodada: {e}")
+        log.append({"endpoint": "times_rodada", "registros": 0, "status": "ERRO", "erro": str(e)})
+
+    # ── 10. Log de execução ──────────────────────────────────────
+    df_log = pd.DataFrame(log)
+    df_log["timestamp"] = datetime.now(BRT).strftime("%Y-%m-%d %H:%M BRT")
+    df_log.to_csv(CURRENT_DIR / "log.csv", index=False, encoding="utf-8-sig")
+    print(f"\nConcluído — {len(log)} endpoints processados")
