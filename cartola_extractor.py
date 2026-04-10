@@ -195,7 +195,7 @@ PESO_ASSISTENCIA = 5.0
 COLUNAS_LLM = [
     "atleta_id", "nome", "clube", "posicao", "status_id", "status_label",
     "preco", "variacao", "media", "jogos",
-    "mandante", "adversario", "tendencia",
+    "mandante", "adversario", "tendencia", "prob_vitoria"
     "min_valorizar", "pb_media", "resiliencia_pct", "confiabilidade",
     "media_bayesiana", "residuo_z", "armadilha_label",
     "custo_beneficio", "cb_rank",
@@ -885,10 +885,6 @@ def enriquecer_com_confronto(df, df_tabela, momentum) -> pd.DataFrame:
     tof_norm = ((df["time_momentum_of"].fillna(1.0).clip(0.3, 2.0) - 0.3) / 1.7)
     fs       = df["forma_score_time"].fillna(0.5)
     adv_norm = ((df["adv_momentum_of"].fillna(1.0).clip(0.3, 2.0) - 0.3) / 1.7)
-    prob_series = pd.to_numeric(
-        df["prob_vitoria"] if "prob_vitoria" in df.columns else 0,
-        errors="coerce"
-    ).fillna(0)
 
     # ── Bônus contínuo por probabilidade de vitória ───────────
     SENSIBILIDADE_PROB = {
