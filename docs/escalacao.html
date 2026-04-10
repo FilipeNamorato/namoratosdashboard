@@ -1,157 +1,714 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Escalação Cartola FC</title>
-  <style>
-    body { font-family: sans-serif; max-width: 860px; margin: 40px auto; padding: 0 20px; background: #0f1923; color: #e0e0e0; }
-    h1 { color: #00c96e; }
-    h2 { color: #00c96e; border-bottom: 1px solid #1e3a2f; padding-bottom: 6px; }
-    h3 { color: #7ecfa4; }
-    h4 { color: #aaa; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; margin-top: 24px; }
-    li { margin: 6px 0; line-height: 1.6; }
-    p  { line-height: 1.6; }
-    .meta { color: #666; font-size: 0.85rem; margin-bottom: 32px; }
-    .back { display: inline-block; margin-bottom: 24px; color: #00c96e; text-decoration: none; font-size: 0.9rem; }
-    .back:hover { text-decoration: underline; }
-    .tokens { color: #555; font-size: 0.8rem; margin-top: 40px; border-top: 1px solid #1e3a2f; padding-top: 12px; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Escalação IA — Namorato</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:      #06090d;
+  --s1:      #0d1318;
+  --s2:      #131b24;
+  --s3:      #1a2535;
+  --border:  #1e2d3d;
+  --green:   #00e676;
+  --green2:  #00c853;
+  --red:     #ff3d5a;
+  --yellow:  #ffd600;
+  --blue:    #40c4ff;
+  --orange:  #ff9100;
+  --purple:  #ce93d8;
+  --text:    #dde6ef;
+  --muted:   #5a7491;
+  --fh:      'Bebas Neue', sans-serif;
+  --fb:      'DM Sans', sans-serif;
+  --fm:      'JetBrains Mono', monospace;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg); color: var(--text);
+  font-family: var(--fb); font-size: 14px;
+  min-height: 100vh; overflow-x: hidden;
+}
+body::before {
+  content: ''; position: fixed; inset: 0;
+  background:
+    radial-gradient(ellipse 80% 50% at 5% 5%, rgba(0,230,118,.06) 0%, transparent 50%),
+    radial-gradient(ellipse 60% 40% at 95% 95%, rgba(64,196,255,.04) 0%, transparent 50%),
+    repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255,255,255,.01) 40px),
+    repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255,255,255,.01) 40px);
+  pointer-events: none; z-index: 0;
+}
+
+/* HEADER */
+header {
+  position: relative; z-index: 10;
+  padding: 18px 40px;
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: space-between;
+  background: rgba(6,9,13,.9); backdrop-filter: blur(12px);
+}
+.logo { font-family: var(--fh); font-size: 28px; letter-spacing: 3px; color: var(--green); }
+.logo-sub { font-family: var(--fm); font-size: 9px; color: var(--muted); letter-spacing: 4px; margin-top: 2px; }
+.back-btn {
+  font-family: var(--fm); font-size: 11px; color: var(--muted);
+  text-decoration: none; padding: 6px 14px;
+  border: 1px solid var(--border); border-radius: 6px;
+  transition: all .2s;
+}
+.back-btn:hover { color: var(--green); border-color: var(--green); background: rgba(0,230,118,.05); }
+
+/* MAIN */
+main { position: relative; z-index: 1; padding: 28px 40px; max-width: 1400px; margin: 0 auto; }
+
+/* CONTROLES */
+.controls {
+  display: flex; gap: 12px; flex-wrap: wrap;
+  align-items: center; margin-bottom: 28px;
+  background: var(--s1); border: 1px solid var(--border);
+  border-radius: 10px; padding: 16px 20px;
+}
+.ctrl-group { display: flex; flex-direction: column; gap: 5px; }
+.ctrl-label { font-family: var(--fm); font-size: 9px; color: var(--muted); letter-spacing: 2px; text-transform: uppercase; }
+.ctrl-select {
+  background: var(--s2); border: 1px solid var(--border);
+  color: var(--text); padding: 7px 12px; border-radius: 6px;
+  font-family: var(--fb); font-size: 13px; cursor: pointer;
+  outline: none; transition: border-color .2s;
+}
+.ctrl-select:focus { border-color: var(--green); }
+.btn-gerar {
+  margin-left: auto; background: var(--green); color: #000;
+  border: none; padding: 10px 24px; border-radius: 6px;
+  font-family: var(--fh); font-size: 16px; letter-spacing: 1px;
+  cursor: pointer; transition: all .2s; align-self: flex-end;
+}
+.btn-gerar:hover { background: var(--green2); transform: translateY(-1px); }
+.btn-gerar:disabled { background: var(--s3); color: var(--muted); cursor: not-allowed; transform: none; }
+
+/* OPCOES GRID */
+.opcoes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+/* CARD DE OPÇÃO */
+.opcao-card {
+  background: var(--s1); border: 1px solid var(--border);
+  border-radius: 12px; overflow: hidden;
+  transition: border-color .2s, transform .2s;
+}
+.opcao-card:hover { border-color: rgba(0,230,118,.3); transform: translateY(-2px); }
+.opcao-card.selected { border-color: var(--green); }
+
+.opcao-header {
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: space-between;
+}
+.opcao-titulo { font-family: var(--fh); font-size: 18px; letter-spacing: 1.5px; }
+.opcao-badge {
+  font-family: var(--fm); font-size: 9px; padding: 3px 8px;
+  border-radius: 4px; letter-spacing: 1px;
+}
+.badge-val  { background: rgba(0,230,118,.1); color: var(--green); border: 1px solid rgba(0,230,118,.2); }
+.badge-pont { background: rgba(64,196,255,.1); color: var(--blue);  border: 1px solid rgba(64,196,255,.2); }
+.badge-eq   { background: rgba(255,214,0,.1);  color: var(--yellow);border: 1px solid rgba(255,214,0,.2); }
+.badge-zeb  { background: rgba(206,147,216,.1);color: var(--purple);border: 1px solid rgba(206,147,216,.2); }
+
+.opcao-desc {
+  padding: 8px 18px 10px;
+  font-family: var(--fm); font-size: 10px; color: var(--muted);
+  border-bottom: 1px solid rgba(30,45,61,.5);
+  letter-spacing: .3px; font-style: italic;
+}
+
+/* STATS DA OPÇÃO */
+.opcao-stats {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  border-bottom: 1px solid var(--border);
+}
+.stat-box {
+  padding: 10px 12px;
+  border-right: 1px solid var(--border);
+  display: flex; flex-direction: column; gap: 3px;
+}
+.stat-box:last-child { border-right: none; }
+.stat-box-label { font-family: var(--fm); font-size: 8px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+.stat-box-val { font-family: var(--fh); font-size: 20px; letter-spacing: 1px; }
+.val-g { color: var(--green); }
+.val-b { color: var(--blue); }
+.val-y { color: var(--yellow); }
+.val-o { color: var(--orange); }
+
+/* JOGADORES */
+.jogadores-lista { padding: 8px 0; }
+.jogador-row {
+  padding: 7px 18px;
+  display: flex; align-items: center; gap: 8px;
+  border-bottom: 1px solid rgba(30,45,61,.3);
+  transition: background .1s;
+}
+.jogador-row:last-child { border-bottom: none; }
+.jogador-row:hover { background: var(--s2); }
+.jogador-row.capitao { border-left: 3px solid var(--yellow); }
+.jogador-row.capitao-lx { border-left: 3px solid var(--purple); }
+
+.pos-badge {
+  font-family: var(--fm); font-size: 9px; padding: 2px 5px;
+  border-radius: 3px; background: var(--s3); color: var(--muted);
+  flex-shrink: 0; width: 30px; text-align: center;
+}
+.j-nome { flex: 1; font-weight: 500; font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.j-clube { font-family: var(--fm); font-size: 10px; color: var(--muted); flex-shrink: 0; width: 32px; }
+.j-adv {
+  font-family: var(--fm); font-size: 9px; padding: 2px 5px;
+  border-radius: 3px; flex-shrink: 0;
+}
+.adv-home { background: rgba(0,230,118,.1); color: var(--green); }
+.adv-away { background: rgba(64,196,255,.1); color: var(--blue); }
+.j-preco { font-family: var(--fm); font-size: 11px; color: var(--muted); flex-shrink: 0; }
+.j-score {
+  font-family: var(--fm); font-size: 11px; font-weight: 600;
+  flex-shrink: 0; width: 36px; text-align: right;
+}
+.score-hi { color: var(--green); }
+.score-md { color: var(--yellow); }
+.score-lo { color: var(--red); }
+
+.al-badge {
+  font-family: var(--fm); font-size: 9px; padding: 1px 5px;
+  border-radius: 3px; flex-shrink: 0;
+}
+.al-oculto { background: rgba(0,230,118,.12); color: var(--green); }
+.al-bom    { background: rgba(0,200,83,.1);   color: #69f0ae; }
+.al-neutro { background: transparent; color: var(--muted); border: 1px solid var(--border); }
+.al-leve   { background: rgba(255,145,0,.1);  color: var(--orange); }
+.al-forte  { background: rgba(255,61,90,.1);  color: var(--red); }
+
+.capitao-tag {
+  font-family: var(--fm); font-size: 9px; padding: 1px 5px;
+  border-radius: 3px; background: rgba(255,214,0,.15);
+  color: var(--yellow); flex-shrink: 0; letter-spacing: .5px;
+}
+.lx-tag {
+  font-family: var(--fm); font-size: 9px; padding: 1px 5px;
+  border-radius: 3px; background: rgba(206,147,216,.15);
+  color: var(--purple); flex-shrink: 0; letter-spacing: .5px;
+}
+
+/* ALERTA BTTS */
+.btts-alerta {
+  margin: 4px 18px;
+  padding: 5px 10px;
+  background: rgba(255,145,0,.08);
+  border: 1px solid rgba(255,145,0,.2);
+  border-radius: 5px;
+  font-family: var(--fm); font-size: 9px; color: var(--orange);
+}
+
+/* BARRA DE ORÇAMENTO */
+.orcamento-bar {
+  padding: 10px 18px;
+  border-top: 1px solid var(--border);
+}
+.orc-label {
+  display: flex; justify-content: space-between;
+  font-family: var(--fm); font-size: 10px; color: var(--muted);
+  margin-bottom: 6px;
+}
+.orc-track {
+  height: 4px; background: var(--s3); border-radius: 2px; overflow: hidden;
+}
+.orc-fill {
+  height: 100%; border-radius: 2px;
+  background: linear-gradient(90deg, var(--green2), var(--green));
+  transition: width .4s ease;
+}
+.orc-fill.alto { background: linear-gradient(90deg, #f9a825, var(--yellow)); }
+.orc-fill.over { background: linear-gradient(90deg, #c62828, var(--red)); }
+
+/* LOADING */
+.loading-state {
+  display: flex; align-items: center; justify-content: center;
+  padding: 60px; color: var(--muted);
+  font-family: var(--fm); font-size: 11px; gap: 12px;
+  flex-direction: column;
+}
+.spinner {
+  width: 20px; height: 20px;
+  border: 2px solid var(--border); border-top-color: var(--green);
+  border-radius: 50%; animation: spin .7s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.empty-state {
+  text-align: center; padding: 60px;
+  font-family: var(--fm); font-size: 11px; color: var(--muted);
+}
+.empty-state .big { font-family: var(--fh); font-size: 48px; color: var(--s3); display: block; margin-bottom: 12px; }
+
+/* FOOTER */
+footer {
+  position: relative; z-index: 1;
+  padding: 14px 40px; border-top: 1px solid var(--border);
+  display: flex; justify-content: space-between;
+  font-family: var(--fm); font-size: 9px; color: var(--muted);
+  background: rgba(6,9,13,.7); margin-top: 40px;
+}
+
+@media (max-width: 600px) {
+  header, main, footer { padding-left: 16px; padding-right: 16px; }
+  .opcoes-grid { grid-template-columns: 1fr; }
+  .controls { flex-direction: column; align-items: stretch; }
+  .btn-gerar { margin-left: 0; }
+}
+</style>
 </head>
 <body>
-  <a class="back" href="index.html">← Voltar ao Dashboard</a>
-  <h1>Escalação Sugerida</h1>
-  <div class="meta">Gerado em 14/03/2026 15:07 via Claude claude-opus-4-6</div>
-  <br>
-<br>
-<h4>Contexto da Rodada</h4>
-<br>
-<li>**Rodada 6** — Fechamento do mercado: **14/03/2026 às 18:29**</li>
-<li>**Partidas válidas (valida = True):**</li>
-<br>
-<p>| Partida | Local | Data/Hora |</p>
-<p>|---|---|---|</p>
-<p>| Vitória x Atlético-MG | Barradão | 14/03 18:30 |</p>
-<p>| Botafogo x Flamengo | Nilton Santos | 14/03 20:30 |</p>
-<p>| Fluminense x Athletico-PR | Maracanã | 15/03 16:00 |</p>
-<p>| Santos x Corinthians | Vila Belmiro | 15/03 16:00 |</p>
-<p>| Internacional x Bahia | Beira-Rio | 15/03 16:00 |</p>
-<p>| Palmeiras x Mirassol | Allianz Parque | 15/03 18:30 |</p>
-<p>| Coritiba x Remo | Couto Pereira | 15/03 18:30 |</p>
-<p>| Bragantino x São Paulo | Cícero de Souza Marques | 15/03 20:30 |</p>
-<p>| Cruzeiro x Vasco | Mineirão | 15/03 20:30 |</p>
-<p>| Chapecoense x Grêmio | Arena Condá | 16/03 20:00 |</p>
-<br>
-<li>**Pesquisa de notícias recentes:** Não foi possível acessar fontes externas em tempo real. Toda a análise está baseada exclusivamente nos dados do CSV. Jogadores com status_id = 2 (Dúvida) foram evitados na escalação principal. Sinalizados como **"sem confirmação recente"**.</li>
-<br>
-<p>---</p>
-<br>
-<h4>Análise dos Confrontos Favoráveis</h4>
-<br>
-<p>| Jogo | Prob. Mandante | Análise |</p>
-<p>|---|---|---|</p>
-<p>| **Palmeiras x Mirassol** | 64.8% | PAL favorito forte em casa. Apostar em defesa PAL (SG provável) e ataque |</p>
-<p>| **Coritiba x Remo** | 52.7% | CFC favorito em casa, bom custo-benefício |</p>
-<p>| **Cruzeiro x Vasco** | 57.2% | CRU favorito, mas ambos irregulares |</p>
-<p>| **Fluminense x CAP** | 54.6% | FLU favorito em casa, fase ofensiva boa |</p>
-<p>| **Bragantino x São Paulo** | Equil. (37.6% x 32.3%) | SAO com boas peças ofensivas, jogo aberto |</p>
-<p>| **Botafogo x Flamengo** | 26.9% x 43.6% | FLA favorito fora. Clássico imprevisível |</p>
-<p>| **Chapecoense x Grêmio** | 33% x 38.8% | GRE leve favorito fora |</p>
-<br>
-<p>---</p>
-<br>
-<h4>Escalação Principal (4-3-3)</h4>
-<br>
-<p>| Pos | Jogador | Clube | Preço | Média | Confiança | Justificativa |</p>
-<p>|---|---|---|---|---|---|---|</p>
-<p>| **GOL** | Pedro Rangel | CFC | 4.38 | 3.55 | MÉDIO | CFC mandante favorito vs REM (52.7%), preço baixo, tendência alta, excelente CB (0.811). Última rodada 6.8 pts |</p>
-<p>| **LAT** | Lucas Ramon | SAO | 11.30 | 10.0 | MÉDIO | Média absurda de 10.0, tendência alta, última rodada 11.2 pts. SAO visitante mas jogo equilibrado. CB 0.885 |</p>
-<p>| **LAT** | Samuel Xavier | FLU | 9.75 | 5.55 | MÉDIO | FLU mandante favorito vs CAP. Tendência alta, última rodada 9.6 pts. Jogador ofensivo e consistente |</p>
-<p>| **ZAG** | Jemmes | FLU | 8.64 | 6.22 | MÉDIO | FLU mandante com boa chance de SG. Tendência alta, última rodada 9.2 pts. Fase excelente |</p>
-<p>| **ZAG** | Gustavo Marques | RBB | 7.51 | 6.43 | MÉDIO | RBB mandante vs SAO, jogo equilibrado. Média alta 6.43, tendência alta, CB 0.856 |</p>
-<p>| **MEI** | Josué | CFC | 6.67 | 3.85 | MÉDIO | CFC mandante favorito. Última rodada explosiva: 12.7 pts. Tendência alta, 2 assistências no campeonato |</p>
-<p>| **MEI** | Bobadilla | SAO | 10.19 | 4.86 | MÉDIO | Última rodada 13.0 pts (explosão). Tendência alta. 1 assistência acumulada, jogos consistentes |</p>
-<p>| **MEI** | Arias | PAL | 16.40 | 6.70 | MÉDIO | PAL mandante favorito forte vs MIR (64.8%). Última rodada 10.7 pts. Tendência alta. Meio-campo decisivo |</p>
-<p>| **ATA** | Lucas Ronier | CFC | 12.40 | 11.36 | MÉDIO | Melhor atacante custo-benefício do mercado. Média 11.36, última rodada 17.5 pts. CFC mandante favorito. 3 gols no campeonato |</p>
-<p>| **ATA** | Calleri | SAO | 13.71 | 7.70 | MÉDIO | Tendência alta, última rodada 12.1 pts, 3 gols no campeonato. SAO visitante mas Calleri decisivo |</p>
-<p>| **ATA** | Canobbio | FLU | 9.97 | 5.85 | MÉDIO | Última rodada 14.2 pts (explosão). FLU mandante favorito. Tendência alta. 1 gol + 2 assistências |</p>
-<p>| **TEC** | Fernando Seabra | CFC | 7.38 | 5.64 | MÉDIO | CFC mandante favorito vs REM. Tendência alta, última rodada 8.79 pts. CB 0.764 |</p>
-<br>
-<p>**Total cartoletas titulares (sem técnico, GOL e banco):** </p>
-<li>GOL: 4.38</li>
-<li>LAT: 11.30 + 9.75 = 21.05</li>
-<li>ZAG: 8.64 + 7.51 = 16.15</li>
-<li>MEI: 6.67 + 10.19 + 16.40 = 33.26</li>
-<li>ATA: 12.40 + 13.71 + 9.97 = 36.08</li>
-<li>TEC: 7.38</li>
-<br>
-<p>**Total: 4.38 + 21.05 + 16.15 + 33.26 + 36.08 + 7.38 = 118.30** ❌ *Acima do orçamento.*</p>
-<br>
-<p>**Ajuste necessário — substituir Arias (16.40) por opção mais barata:**</p>
-<br>
-<p>Substituindo **Arias** por **Paulinho (INT)** — 5.16, média 2.76, tendência alta, última rodada 8.2 pts. INT mandante favorito vs BAH.</p>
-<br>
-<p>**Escalação ajustada:**</p>
-<br>
-<p>| Pos | Jogador | Clube | Preço | Média | Confiança | Justificativa |</p>
-<p>|---|---|---|---|---|---|---|</p>
-<p>| **GOL** | Pedro Rangel | CFC | 4.38 | 3.55 | MÉDIO | CFC mandante favorito vs REM. Tendência alta, CB 0.811, última rodada 6.8 |</p>
-<p>| **LAT** | Lucas Ramon | SAO | 11.30 | 10.0 | MÉDIO | Média 10.0, tendência alta, rodada passada 11.2. Melhor lateral do mercado em forma |</p>
-<p>| **LAT** | Samuel Xavier | FLU | 9.75 | 5.55 | MÉDIO | FLU mandante favorito vs CAP. Tendência alta, rodada passada 9.6. Ofensivo |</p>
-<p>| **ZAG** | Jemmes | FLU | 8.64 | 6.22 | MÉDIO | FLU mandante favorito. Tendência alta, rodada passada 9.2. Potencial SG |</p>
-<p>| **ZAG** | Gustavo Marques | RBB | 7.51 | 6.43 | MÉDIO | RBB mandante, jogo equilibrado. Tendência alta, CB 0.856. Consistente |</p>
-<p>| **MEI** | Josué | CFC | 6.67 | 3.85 | MÉDIO | CFC mandante favorito. Rodada passada 12.7 (explosão). 2 assistências. Tendência alta |</p>
-<p>| **MEI** | Bobadilla | SAO | 10.19 | 4.86 | MÉDIO | Rodada passada 13.0. Tendência alta. SAO com bom momento ofensivo |</p>
-<p>| **MEI** | Paulinho | INT | 5.16 | 2.76 | MÉDIO | INT mandante favorito vs BAH. Tendência alta, rodada passada 8.2. Preço baixo, CB 0.535 |</p>
-<p>| **ATA** | Lucas Ronier | CFC | 12.40 | 11.36 | MÉDIO | Melhor média de atacante. Rodada passada 17.5. CFC mandante favorito. 3G, 3A |</p>
-<p>| **ATA** | Calleri | SAO | 13.71 | 7.70 | MÉDIO | Tendência alta, rodada passada 12.1. 3 gols. Artilheiro consistente |</p>
-<p>| **ATA** | Canobbio | FLU | 9.97 | 5.85 | MÉDIO | Rodada passada 14.2 (explosão). FLU mandante favorito. Tendência alta |</p>
-<p>| **TEC** | Fernando Seabra | CFC | 7.38 | 5.64 | MÉDIO | CFC mandante favorito. Tendência alta, rodada passada 8.79 |</p>
-<br>
-<p>**Total: 4.38 + 11.30 + 9.75 + 8.64 + 7.51 + 6.67 + 10.19 + 5.16 + 12.40 + 13.71 + 9.97 + 7.38 = 107.06** ✅</p>
-<br>
-<p>**Sobra: 7.94 cartoletas**</p>
-<br>
-<p>Reotimizando com a sobra — substituir **Paulinho (5.16)** por **Marcos Antônio (SAO, 8.05)**: média 3.82, tendência alta, rodada passada 8.7, mesmo time que Calleri/Bobadilla/Lucas Ramon (sinergia SAO).</p>
-<br>
-<p>Mas concentração excessiva no SAO (4 jogadores) é arriscado. Manter diversificação.</p>
-<br>
-<p>Alternativa: substituir **Paulinho (5.16)** por **Jean Lucas (BAH, 10.34)**: média 5.80, tendência alta, rodada passada 11.9. Porém BAH é visitante no Beira-Rio (INT favorito 43.9%). Risco maior.</p>
-<br>
-<p>Alternativa melhor: substituir **Paulinho (5.16)** por **Barros (VAS, 9.71)**: média 8.50, tendência baixa. Descartado pela tendência.</p>
-<br>
-<p>Melhor uso da sobra: substituir **Gustavo Marques (7.51)** por **Sabino (SAO, 7.31)** e **Paulinho (5.16)** por **Marlon Freitas (PAL, 6.84)**:</p>
-<li>Sabino: média 5.55, SAO visitante, consistente, tendência estável</li>
-<li>Marlon Freitas: PAL mandante favorito forte (64.8%), tendência alta, rodada passada 8.0, 1 assistência</li>
-<br>
-<p>Total: 4.38 + 11.30 + 9.75 + 8.64 + 7.31 + 6.67 + 10.19 + 6.84 + 12.40 + 13.71 + 9.97 + 7.38 = **108.54** ✅</p>
-<br>
-<p>Sobra: 6.46. Posso melhorar mais.</p>
-<br>
-<p>Substituir **Sabino (7.31)** por **Noriega (GRE, 8.25)**: média 7.15, tendência baixa. Descartado.</p>
-<br>
-<p>Manter **Gustavo Marques** (melhor média que Sabino, tendência alta) e usar **Marlon Freitas** no lugar de Paulinho:</p>
-<br>
-<p>Total: 4.38 + 11.30 + 9.75 + 8.64 + 7.51 + 6.67 + 10.19 + 6.84 + 12.40 + 13.71 + 9.97 + 7.38 = **108.74** ✅</p>
-<br>
-<p>Sobra: 6.26. Posso melhorar um zagueiro.</p>
-<br>
-<p>Substituir **Gustavo Marques (7.51)** por **Alan Franco (SAO, 6.98)** — média 4.0 mas tendência estável, rodada passada 6.2. Ou manter Gustavo Marques (melhor média 6.43 e tendência alta).</p>
-<br>
-<p>**Escalação final otimizada:**</p>
-<br>
-<p>| Pos | Jogador | Clube | Preço | Média | Confiança | Justificativa |</p>
-<p>|---|---|---|---|---|---|---|</p>
-<p>| **GOL** | Pedro Rangel | CFC | 4.38 | 3.55 | MÉDIO | CFC mandante favorito vs REM. Tendência alta, rodada passada 6.8. CB 0.811 |</p>
-<p>| **LAT** | Lucas Ramon | SAO | 11.30 | 10.0 | MÉDIO | Média altíssima, tendência alta, rodada passada 11.2. Melhor lateral disponível |</p>
-<p>| **LAT** | Samuel Xavier | FLU | 9.75 | 5.55 | MÉDIO | FLU mandante favorito vs CAP. Tendência alta, rodada passada 9.6. Ofensivo |</p>
-<p>| **ZAG** | Jemmes | FLU | 8.64 | 6.22 | MÉDIO | FLU favorito, potencial SG. Tendência alta, rodada passada 9.2 |</p>
-<p>| **ZAG** | Gustavo Marques | RBB | 7.51 | 6.43 | MÉDIO | RBB mandante, tendência alta. CB 0.856. Consistente |</p>
-<p>| **MEI** | Josué | CFC | 6.67 | 3.85 | MÉDIO | CFC mandante favorito. Rodada passada 12.7 pts. Tendência alta, 2 assist. |</p>
-<p>| **MEI** | Bobadilla | SAO | 10.19 | 4.86 | MÉDIO | Rodada passada 13.0 pts. Tendência alta. Momento ofensivo excelente |</p>
-<p>| **MEI** | Marlon Freitas | PAL | 6.84 | 2.34 | MÉDIO | PAL mandante favorito forte (64.8%). Tendência alta, rodada passada 8.0. Potencial SG bônus |</p>
-<p>| **ATA** | Lucas Ronier | CFC | 12.40 | 11.36 | MÉDIO | Maior média entre atacantes. Rodada passada 17.5. CFC mandante favorito. 3G |</p>
-<p>| **ATA** | Call</p>
-  <div class="tokens">Tokens utilizados — input: 27408 | output: 4096</div>
+
+<header>
+  <div>
+    <div class="logo">⚡ Escalação</div>
+    <div class="logo-sub">Montador automático · Namorato</div>
+  </div>
+  <a href="./index.html" class="back-btn">← Dashboard</a>
+</header>
+
+<main>
+
+  <!-- CONTROLES -->
+  <div class="controls">
+    <div class="ctrl-group">
+      <div class="ctrl-label">Formação</div>
+      <select class="ctrl-select" id="sel-formacao">
+        <option value="4-3-3">4-3-3</option>
+        <option value="4-4-2">4-4-2</option>
+        <option value="4-5-1">4-5-1</option>
+        <option value="3-4-3">3-4-3</option>
+        <option value="3-5-2">3-5-2</option>
+        <option value="5-3-2">5-3-2</option>
+        <option value="5-4-1">5-4-1</option>
+      </select>
+    </div>
+    <div class="ctrl-group">
+      <div class="ctrl-label">Orçamento máximo</div>
+      <select class="ctrl-select" id="sel-orcamento">
+        <option value="125">125 C$ (padrão)</option>
+        <option value="100">100 C$</option>
+        <option value="90">90 C$</option>
+      </select>
+    </div>
+    <div class="ctrl-group">
+      <div class="ctrl-label">Preço mínimo titular</div>
+      <select class="ctrl-select" id="sel-preco-min">
+        <option value="0">Sem mínimo</option>
+        <option value="3">C$ 3+</option>
+        <option value="4">C$ 4+</option>
+        <option value="5">C$ 5+</option>
+      </select>
+    </div>
+    <button class="btn-gerar" id="btn-gerar" onclick="gerarEscalacoes()">GERAR OPÇÕES</button>
+  </div>
+
+  <!-- RESULTADO -->
+  <div id="resultado">
+    <div class="empty-state">
+      <span class="big">⚡</span>
+      Configure os parâmetros acima e clique em <strong>GERAR OPÇÕES</strong>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <span>Namorato's Dashboard · escalação automática</span>
+  <span>fonte: docs/data/current/atletas.csv</span>
+</footer>
+
+<script>
+// ── CONFIG ────────────────────────────────────────────────────
+const CSV_ATLETAS = './data/current/atletas.csv';
+const ORCAMENTO_MAX = 112;
+
+// ── PARSE CSV ─────────────────────────────────────────────────
+function parseCSV(txt) {
+  const lines = txt.trim().split('\n');
+  const heads = lines[0].split(',').map(h => h.trim().replace(/^\uFEFF/, '').replace(/^"|"$/g, ''));
+  return lines.slice(1).map(line => {
+    const vals = []; let cur = '', inQ = false;
+    for (let i = 0; i < line.length; i++) {
+      const ch = line[i];
+      if (ch === '"') { inQ = !inQ; continue; }
+      if (ch === ',' && !inQ) { vals.push(cur); cur = ''; continue; }
+      cur += ch;
+    }
+    vals.push(cur);
+    const obj = {};
+    heads.forEach((h, i) => obj[h] = (vals[i] || '').trim());
+    return obj;
+  });
+}
+
+async function fetchCSV(url) {
+  const r = await fetch(url + '?t=' + Date.now());
+  if (!r.ok) throw new Error('HTTP ' + r.status);
+  return parseCSV(await r.text());
+}
+
+// ── FORMAÇÕES ─────────────────────────────────────────────────
+const FORMACOES = {
+  '4-3-3': { Goleiro: 1, Zagueiro: 2, Lateral: 2, Meia: 3, Atacante: 3, Técnico: 1 },
+  '4-4-2': { Goleiro: 1, Zagueiro: 2, Lateral: 2, Meia: 4, Atacante: 2, Técnico: 1 },
+  '4-5-1': { Goleiro: 1, Zagueiro: 2, Lateral: 2, Meia: 5, Atacante: 1, Técnico: 1 },
+  '3-4-3': { Goleiro: 1, Zagueiro: 3, Lateral: 1, Meia: 3, Atacante: 3, Técnico: 1 },
+  '3-5-2': { Goleiro: 1, Zagueiro: 3, Lateral: 1, Meia: 4, Atacante: 2, Técnico: 1 },
+  '5-3-2': { Goleiro: 1, Zagueiro: 3, Lateral: 2, Meia: 3, Atacante: 2, Técnico: 1 },
+  '5-4-1': { Goleiro: 1, Zagueiro: 3, Lateral: 2, Meia: 4, Atacante: 1, Técnico: 1 },
+};
+
+// ── HELPERS ───────────────────────────────────────────────────
+const n = (v, d = 2) => parseFloat(v || 0).toFixed(d);
+const nf = v => parseFloat(v || 0);
+
+function pBTTS(a1, a2, partidas) {
+  // Calcula P(BTTS) entre dois jogadores
+  if (!a1.adversario || !a2.adversario) return 0;
+  if (a1.adversario !== a2.clube && a2.adversario !== a1.clube) return 0;
+  const probCasa = nf(a1.mandante === 'True' ? a1.prob_vitoria : a2.prob_vitoria);
+  const probVis  = nf(a1.mandante === 'True' ? a2.prob_vitoria : a1.prob_vitoria);
+  if (!probCasa || !probVis) return 0;
+  // P(BTTS) ≈ prob_casa × prob_vis (heurística)
+  return probCasa * probVis;
+}
+
+function temConflitoAtaque(time, jogs) {
+  // Verifica conflito: atacante/meia vs goleiro/zagueiro do mesmo jogo
+  const ataquePos = ['Atacante', 'Meia'];
+  const defesaPos = ['Goleiro', 'Zagueiro', 'Lateral'];
+  const conflitos = [];
+
+  for (let i = 0; i < jogs.length; i++) {
+    for (let j = i + 1; j < jogs.length; j++) {
+      const a = jogs[i], b = jogs[j];
+      const ataA = ataquePos.includes(a.posicao);
+      const defA = defesaPos.includes(a.posicao);
+      const ataB = ataquePos.includes(b.posicao);
+      const defB = defesaPos.includes(b.posicao);
+
+      // Mesmo jogo (adversários entre si)
+      if (a.adversario && b.adversario &&
+          ((a.adversario === b.clube) || (b.adversario === a.clube))) {
+        if ((ataA && defB) || (ataB && defA)) {
+          const pA = nf(a.mandante === 'True' ? a.prob_vitoria : null);
+          const pB = nf(b.mandante === 'True' ? b.prob_vitoria : null);
+          const btts = nf(a.prob_vitoria) * nf(b.prob_vitoria);
+          if (btts >= 0.48) {
+            conflitos.push(`${a.nome} × ${b.nome} (BTTS ${(btts*100).toFixed(0)}%)`);
+          }
+        }
+      }
+    }
+  }
+  return conflitos;
+}
+
+// ── MONTADOR DE TIME ──────────────────────────────────────────
+function montarTime(elegíveis, formacao, orcamentoMax, precoMin, estrategia) {
+  const slots = FORMACOES[formacao];
+  const time = [];
+  let orcamentoUsado = 0;
+
+  const posOrdem = ['Goleiro', 'Zagueiro', 'Lateral', 'Meia', 'Atacante', 'Técnico'];
+
+  for (const pos of posOrdem) {
+    const qtd = slots[pos] || 0;
+    if (qtd === 0) continue;
+
+    // Filtra candidatos da posição
+    let candidatos = elegíveis
+      .filter(a =>
+        a.posicao === pos &&
+        nf(a.preco) >= precoMin &&
+        nf(a.preco) > 0 &&
+        a.armadilha_label !== 'armadilha_forte'
+      );
+
+    // Ordena conforme estratégia
+    if (estrategia === 'valorizacao') {
+      candidatos.sort((a, b) => {
+        // Prioriza valor_oculto, depois valor_bom, depois residuo_z
+        const labelScore = (l) => l === 'valor_oculto' ? 2 : l === 'valor_bom' ? 1 : 0;
+        const ls = labelScore(b.armadilha_label) - labelScore(a.armadilha_label);
+        if (ls !== 0) return ls;
+        return nf(b.residuo_z) - nf(a.residuo_z);
+      });
+    } else if (estrategia === 'pontuacao') {
+      candidatos.sort((a, b) => nf(b.media_bayesiana) - nf(a.media_bayesiana));
+    } else if (estrategia === 'equilibrada') {
+      candidatos.sort((a, b) => {
+        const scoreA = nf(a.residuo_z) * 0.4 + nf(a.score_confronto_100) / 100 * 0.4 + nf(a.media_bayesiana) / 10 * 0.2;
+        const scoreB = nf(b.residuo_z) * 0.4 + nf(b.score_confronto_100) / 100 * 0.4 + nf(b.media_bayesiana) / 10 * 0.2;
+        return scoreB - scoreA;
+      });
+    } else if (estrategia === 'confronto') {
+      candidatos.sort((a, b) => nf(b.score_confronto_100) - nf(a.score_confronto_100));
+    }
+
+    // Seleciona os melhores dentro do orçamento
+    let selecionados = 0;
+    for (const c of candidatos) {
+      if (selecionados >= qtd) break;
+      const preco = nf(c.preco);
+      if (orcamentoUsado + preco <= orcamentoMax) {
+        time.push({ ...c, _slot: pos });
+        orcamentoUsado += preco;
+        selecionados++;
+      }
+    }
+
+    // Se não conseguiu preencher todos os slots, relaxa orçamento
+    if (selecionados < qtd) {
+      for (const c of candidatos) {
+        if (selecionados >= qtd) break;
+        if (time.find(t => t.atleta_id === c.atleta_id)) continue;
+        time.push({ ...c, _slot: pos });
+        orcamentoUsado += nf(c.preco);
+        selecionados++;
+      }
+    }
+  }
+
+  // Capitão: maior residuo_z com score >= 55 (valorização) ou maior media (pontuação)
+  let capitao = null;
+  const titulares = time.filter(t => t.posicao !== 'Técnico');
+  if (estrategia === 'pontuacao' || estrategia === 'confronto') {
+    capitao = [...titulares].sort((a, b) => nf(b.media_bayesiana) - nf(a.media_bayesiana))[0];
+  } else {
+    const candidatosCap = titulares.filter(t =>
+      nf(t.score_confronto_100) >= 55 &&
+      t.armadilha_label !== 'armadilha_leve'
+    );
+    if (candidatosCap.length > 0) {
+      capitao = candidatosCap.sort((a, b) => nf(b.residuo_z) - nf(a.residuo_z))[0];
+    } else {
+      capitao = [...titulares].sort((a, b) => nf(b.residuo_z) - nf(a.residuo_z))[0];
+    }
+  }
+
+  // Reserva de luxo: melhor alternativa não escalada
+  const idsTime = new Set(time.map(t => t.atleta_id));
+  const reservaLuxo = elegíveis
+    .filter(a =>
+      !idsTime.has(a.atleta_id) &&
+      a.armadilha_label !== 'armadilha_forte' &&
+      ['Atacante', 'Meia'].includes(a.posicao) &&
+      nf(a.residuo_z) > 0.5 &&
+      nf(a.score_confronto_100) >= 55
+    )
+    .sort((a, b) => nf(b.residuo_z) - nf(a.residuo_z))[0] || null;
+
+  const conflitos = temConflitoAtaque(estrategia, time);
+
+  return {
+    jogadores: time,
+    capitao,
+    reservaLuxo,
+    orcamentoUsado: parseFloat(orcamentoUsado.toFixed(2)),
+    conflitos,
+  };
+}
+
+// ── RENDER ────────────────────────────────────────────────────
+function alBadgeHtml(label) {
+  const map = {
+    'valor_oculto':    { cls: 'al-oculto', t: '💎' },
+    'valor_bom':       { cls: 'al-bom',    t: '✓'  },
+    'neutro':          { cls: 'al-neutro', t: '—'  },
+    'armadilha_leve':  { cls: 'al-leve',   t: '⚠'  },
+    'armadilha_forte': { cls: 'al-forte',  t: '🚨' },
+  };
+  const m = map[label] || map['neutro'];
+  return `<span class="al-badge ${m.cls}">${m.t}</span>`;
+}
+
+function scoreCls(s) {
+  const v = nf(s);
+  return v >= 60 ? 'score-hi' : v <= 40 ? 'score-lo' : 'score-md';
+}
+
+function renderOpcao(resultado, titulo, descricao, badgeClass, badgeTxt, orcMax) {
+  const { jogadores, capitao, reservaLuxo, orcamentoUsado, conflitos } = resultado;
+  if (jogadores.length === 0) return '';
+
+  const mediaScore = jogadores.reduce((s, j) => s + nf(j.score_confronto_100), 0) / jogadores.length;
+  const nValorOculto = jogadores.filter(j => j.armadilha_label === 'valor_oculto').length;
+  const pctOrc = Math.min(100, (orcamentoUsado / orcMax) * 100);
+  const orcCls = pctOrc > 95 ? 'over' : pctOrc > 80 ? 'alto' : '';
+  const sobra = parseFloat((orcMax - orcamentoUsado).toFixed(2));
+
+  const posOrdem = ['Goleiro', 'Zagueiro', 'Lateral', 'Meia', 'Atacante', 'Técnico'];
+  const jogadoresOrdenados = [...jogadores].sort((a, b) =>
+    posOrdem.indexOf(a.posicao) - posOrdem.indexOf(b.posicao)
+  );
+
+  const rowsHtml = jogadoresOrdenados.map(j => {
+    const isCap  = capitao && j.atleta_id === capitao.atleta_id;
+    const isMand = j.mandante === 'True';
+    const advTag = j.adversario && j.adversario !== '—'
+      ? `<span class="j-adv ${isMand ? 'adv-home' : 'adv-away'}">${isMand ? '🏠' : '✈️'} ${j.adversario}</span>`
+      : '';
+    const capTag = isCap ? '<span class="capitao-tag">©</span>' : '';
+    const rowCls = isCap ? 'jogador-row capitao' : 'jogador-row';
+
+    return `<div class="${rowCls}">
+      <span class="pos-badge">${j.posicao.substring(0,3).toUpperCase()}</span>
+      <span class="j-nome">${j.nome}</span>
+      <span class="j-clube">${j.clube}</span>
+      ${advTag}
+      <span class="j-preco">C$${n(j.preco,1)}</span>
+      ${alBadgeHtml(j.armadilha_label)}
+      <span class="j-score ${scoreCls(j.score_confronto_100)}">${n(j.score_confronto_100,1)}</span>
+      ${capTag}
+    </div>`;
+  }).join('');
+
+  const reservaHtml = reservaLuxo ? `
+    <div class="jogador-row capitao-lx">
+      <span class="pos-badge">${reservaLuxo.posicao.substring(0,3).toUpperCase()}</span>
+      <span class="j-nome">${reservaLuxo.nome}</span>
+      <span class="j-clube">${reservaLuxo.clube}</span>
+      ${reservaLuxo.adversario && reservaLuxo.adversario !== '—'
+        ? `<span class="j-adv ${reservaLuxo.mandante === 'True' ? 'adv-home' : 'adv-away'}">${reservaLuxo.mandante === 'True' ? '🏠' : '✈️'} ${reservaLuxo.adversario}</span>`
+        : ''}
+      <span class="j-preco">C$${n(reservaLuxo.preco,1)}</span>
+      ${alBadgeHtml(reservaLuxo.armadilha_label)}
+      <span class="j-score ${scoreCls(reservaLuxo.score_confronto_100)}">${n(reservaLuxo.score_confronto_100,1)}</span>
+      <span class="lx-tag">LX</span>
+    </div>` : '';
+
+  const conflitosHtml = conflitos.length > 0
+    ? conflitos.map(c => `<div class="btts-alerta">⚠ BTTS: ${c}</div>`).join('')
+    : '';
+
+  return `
+    <div class="opcao-card">
+      <div class="opcao-header">
+        <div class="opcao-titulo">${titulo}</div>
+        <span class="opcao-badge ${badgeClass}">${badgeTxt}</span>
+      </div>
+      <div class="opcao-desc">${descricao}</div>
+      <div class="opcao-stats">
+        <div class="stat-box">
+          <div class="stat-box-label">Orçamento</div>
+          <div class="stat-box-val val-g">C$${orcamentoUsado}</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-box-label">Sobra</div>
+          <div class="stat-box-val ${sobra > 20 ? 'val-y' : 'val-b'}">C$${sobra}</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-box-label">Score médio</div>
+          <div class="stat-box-val val-b">${mediaScore.toFixed(1)}</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-box-label">💎 Valores</div>
+          <div class="stat-box-val val-g">${nValorOculto}</div>
+        </div>
+      </div>
+      <div class="jogadores-lista">
+        ${rowsHtml}
+        ${conflitosHtml}
+        ${reservaHtml ? `<div style="padding:6px 18px;font-family:var(--fm);font-size:9px;color:var(--purple);letter-spacing:1px;border-top:1px dashed rgba(206,147,216,.2);margin-top:4px">RESERVA DE LUXO</div>${reservaHtml}` : ''}
+      </div>
+      <div class="orcamento-bar">
+        <div class="orc-label">
+          <span>Orçamento utilizado</span>
+          <span style="color:var(--text)">${pctOrc.toFixed(0)}%</span>
+        </div>
+        <div class="orc-track">
+          <div class="orc-fill ${orcCls}" style="width:${pctOrc}%"></div>
+        </div>
+      </div>
+    </div>`;
+}
+
+// ── GERAR ─────────────────────────────────────────────────────
+async function gerarEscalacoes() {
+  const btn = document.getElementById('btn-gerar');
+  const resultado = document.getElementById('resultado');
+  const formacao  = document.getElementById('sel-formacao').value;
+  const orcMax    = parseInt(document.getElementById('sel-orcamento').value);
+  const precoMin  = parseFloat(document.getElementById('sel-preco-min').value);
+
+  btn.disabled = true;
+  btn.textContent = 'CARREGANDO...';
+  resultado.innerHTML = `<div class="loading-state"><div class="spinner"></div><span>Calculando escalações...</span></div>`;
+
+  try {
+    const todos = await fetchCSV(CSV_ATLETAS);
+
+    // Filtra elegíveis base
+    const elegiveis = todos.filter(a =>
+      a.status_id === '7' &&
+      nf(a.preco) > 0 &&
+      a.adversario && a.adversario !== '—'
+    );
+
+    if (elegiveis.length === 0) {
+      resultado.innerHTML = `<div class="empty-state"><span class="big">⚠</span>Nenhum atleta elegível encontrado. Verifique se o arquivo atletas.csv está atualizado.</div>`;
+      return;
+    }
+
+    // Gera 4 opções
+    const opcoes = [
+      {
+        resultado: montarTime(elegiveis, formacao, orcMax, precoMin, 'valorizacao'),
+        titulo: 'VALORIZAÇÃO',
+        desc:   'Foco em residuo_z alto + jogadores baratos. Maximiza CPP e potencial de ganho patrimonial.',
+        badge: 'badge-val', badgeTxt: 'PATRIMÔNIO',
+      },
+      {
+        resultado: montarTime(elegiveis, formacao, orcMax, precoMin, 'pontuacao'),
+        titulo: 'PONTUAÇÃO',
+        desc:   'Foco em media_bayesiana alta. Prioriza quem historicamente pontua mais, independente do preço.',
+        badge: 'badge-pont', badgeTxt: 'PONTOS',
+      },
+      {
+        resultado: montarTime(elegiveis, formacao, orcMax, precoMin, 'equilibrada'),
+        titulo: 'EQUILIBRADA',
+        desc:   'Mix de residuo_z, score de confronto e média bayesiana. Tenta balancear valorização e pontuação.',
+        badge: 'badge-eq', badgeTxt: 'BALANCEADA',
+      },
+      {
+        resultado: montarTime(elegiveis, formacao, orcMax, precoMin, 'confronto'),
+        titulo: 'CONFRONTO',
+        desc:   'Foco puro no score de confronto. Escala quem tem o melhor confronto da rodada em cada posição.',
+        badge: 'badge-zeb', badgeTxt: 'CONFRONTO',
+      },
+    ];
+
+    const html = `
+      <div style="font-family:var(--fm);font-size:10px;color:var(--muted);margin-bottom:16px;letter-spacing:1px;">
+        ${elegiveis.length} atletas elegíveis · formação ${formacao} · orçamento C$${orcMax}
+      </div>
+      <div class="opcoes-grid">
+        ${opcoes.map(o => renderOpcao(o.resultado, o.titulo, o.desc, o.badge, o.badgeTxt, orcMax)).join('')}
+      </div>`;
+
+    resultado.innerHTML = html;
+
+  } catch(e) {
+    resultado.innerHTML = `<div class="empty-state"><span class="big">✗</span>Erro ao carregar dados: ${e.message}</div>`;
+  } finally {
+    btn.disabled = false;
+    btn.textContent = 'GERAR OPÇÕES';
+  }
+}
+</script>
 </body>
 </html>
