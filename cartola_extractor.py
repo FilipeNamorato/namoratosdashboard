@@ -880,18 +880,53 @@ def enriquecer_com_confronto(df, df_tabela, momentum) -> pd.DataFrame:
     tof_norm = ((df["time_momentum_of"].fillna(1.0).clip(0.3, 2.0) - 0.3) / 1.7)
     fs       = df["forma_score_time"].fillna(0.5)
     adv_norm = ((df["adv_momentum_of"].fillna(1.0).clip(0.3, 2.0) - 0.3) / 1.7)
+    prob_series = pd.to_numeric(
+        df["prob_vitoria"] if "prob_vitoria" in df.columns else 0,
+        errors="coerce"
+    ).fillna(0)
+
+    # ── Bônus contínuo por probabilidade de vitória ───────────
+    SENSIBILIDADE_PROB = {
+        "Atacante": 0.40,
+        "Meia":     0.30,
+        "Técnico":  0.30,
+        "Goleiro":  0.15,
+        "Lateral":  0.15,
+        "Zagueiro": 0.15,
+    }
+
+    def bonus_prob(prob: float, posicao: str) -> float:
+        """
+        Bônus multiplicativo baseado na prob_vitoria contínua.
+        Ponto neutro = 0.333 (empate técnico entre 3 resultados).
+        Abaixo do neutro = sem penalidade, bônus = 1.0.
+        Acima do neutro = bônus proporcional à sensibilidade da posição.
+        """
+        excesso = max(0.0, float(prob or 0) - 0.333)
+        sens    = SENSIBILIDADE_PROB.get(posicao, 0.20)
+        return round(1.0 + excesso * sens, 4)
+
+    prob_series = pd.to_numeric(
+        df["prob_vitoria"] if "prob_vitoria" in df.columns else 0,
+        errors="coerce"
+    ).fillna(0)
 
     def calcular_score(row):
         if row["posicao"] in POSICOES_DEFESA:
-            return (0.40 * row["oc"] + 0.30 * row["vm"] + 0.10 * row["tof_norm"]
-                    + 0.10 * row["fs"] + 0.10 * (1 - row["adv_norm"]))
+            base = (0.40 * row["oc"] + 0.30 * row["vm"]
+                  + 0.10 * row["tof_norm"] + 0.10 * row["fs"]
+                  + 0.10 * (1 - row["adv_norm"]))
         else:
-            return (0.35 * row["oc"] + 0.15 * row["vm"] + 0.30 * row["tof_norm"]
-                    + 0.15 * row["fs"] + 0.05 * (1 - row["adv_norm"]))
+            base = (0.35 * row["oc"] + 0.15 * row["vm"]
+                  + 0.30 * row["tof_norm"] + 0.15 * row["fs"]
+                  + 0.05 * (1 - row["adv_norm"]))
+        return base * bonus_prob(row["prob"], row["posicao"])
 
     df_temp = pd.DataFrame({
-        "posicao": df["posicao"],
-        "oc": oc, "vm": vm, "tof_norm": tof_norm, "fs": fs, "adv_norm": adv_norm,
+        "posicao":  df["posicao"],
+        "oc":       oc, "vm": vm, "tof_norm": tof_norm,
+        "fs":       fs, "adv_norm": adv_norm,
+        "prob":     prob_series,
     })
     df["score_confronto"] = df_temp.apply(calcular_score, axis=1).round(4)
 
