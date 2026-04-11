@@ -1019,6 +1019,50 @@ def _colunas_snapshot(df: pd.DataFrame) -> pd.DataFrame:
     cols = [c for c in COLUNAS_SNAPSHOT if c in df.columns]
     return df[cols].copy()
 
+def salvar_snapshot_pontuados(raw_pontuados: dict):
+    """
+    Snapshot de pontuação — salvo uma única vez por rodada, logo após os jogos.
+    Usa o raw do endpoint /atletas/pontuados, que inclui scouts individuais.
+
+    Colunas salvas:
+        atleta_id, nome, clube, posicao, pontuacao, entrou_em_campo, scout_*
+
+    A rodada é extraída do próprio JSON (campo 'rodada').
+    O endpoint só retorna dados durante/logo após a rodada — depois fica vazio.
+    """
+    rodada = raw_pontuados.get("rodada")
+    atletas = raw_pontuados.get("atletas", {})
+    if not rodada or not atletas:
+        print("  [PONTUADOS] sem rodada ou atletas no raw, pulando")
+        return
+
+    pasta = _pasta_rodada(int(rodada))
+    path  = pasta / "atletas_pontuados.csv"
+    if path.exists():
+        print(f"  [PONTUADOS] já existe — rodada {rodada}, pulando")
+        return
+
+    clubes   = {int(k): v.get("abreviacao", k) for k, v in raw_pontuados.get("clubes", {}).items()}
+    posicoes = {int(k): v if isinstance(v, str) else v.get("nome", k)
+                for k, v in raw_pontuados.get("posicoes", {}).items()}
+
+    rows = []
+    for atleta_id, a in atletas.items():
+        scouts = a.get("scout") or {}
+        rows.append({
+            "atleta_id":       int(atleta_id),
+            "nome":            a.get("apelido") or a.get("nome"),
+            "clube":           clubes.get(int(a.get("clube_id", 0)), a.get("clube_id")),
+            "posicao":         posicoes.get(int(a.get("posicao_id", 0)), a.get("posicao_id")),
+            "pontuacao":       a.get("pontuacao"),
+            "entrou_em_campo": a.get("entrou_em_campo"),
+            **{f"scout_{k}": v for k, v in scouts.items()},
+        })
+
+    pd.DataFrame(rows).to_csv(path, index=False, encoding="utf-8-sig")
+    print(f"  [PONTUADOS] salvo — rodada {rodada} ({len(rows)} atletas) → {path}")
+
+
 def salvar_snapshot_pre(df_atletas: pd.DataFrame, df_partidas: pd.DataFrame,
                         rodada: int):
     """
@@ -1382,6 +1426,7 @@ if __name__ == "__main__":
     }
 
     dados_brutos = {}
+    raw_pontuados = {}  # preserva o raw para salvar_snapshot_pontuados
     for key, (normalizador, nome_arquivo) in EXTRATORES.items():
         print(f"Extraindo {key}...")
         try:
@@ -1391,6 +1436,8 @@ if __name__ == "__main__":
             df.to_csv(CURRENT_DIR / f"{nome_arquivo}.csv",             # → docs/data/current/
                       index=False, encoding="utf-8-sig")
             dados_brutos[key] = df
+            if key == "pontuados":
+                raw_pontuados = raw                                     # ← preserva para historico
             print(f"  OK — {len(df)} registros")
             log.append({"endpoint": key, "registros": len(df), "status": "OK", "erro": ""})
         except Exception as e:
@@ -1485,6 +1532,13 @@ if __name__ == "__main__":
             gerenciar_snapshots(df_atletas_enriquecido, df_partidas, raw_status)
     except Exception as e:
         print(f"  ERRO nos snapshots: {e}")
+
+    print("Salvando pontuações da rodada...")
+    try:
+        if raw_pontuados:
+            salvar_snapshot_pontuados(raw_pontuados)
+    except Exception as e:
+        print(f"  ERRO no snapshot pontuados: {e}")
 
     # ── 8. Geração do llm/input/ ─────────────────────────────────
     print("Gerando llm/input/...")
