@@ -195,7 +195,7 @@ PESO_ASSISTENCIA = 5.0
 COLUNAS_LLM = [
     "atleta_id", "nome", "clube", "posicao", "status_id", "status_label",
     "preco", "variacao", "media", "jogos",
-    "mandante", "adversario", "tendencia", "prob_vitoria"
+    "mandante", "adversario", "tendencia", "prob_vitoria",
     "min_valorizar", "pb_media", "resiliencia_pct", "confiabilidade",
     "media_bayesiana", "residuo_z", "armadilha_label",
     "custo_beneficio", "cb_rank",
