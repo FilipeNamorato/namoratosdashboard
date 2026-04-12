@@ -79,6 +79,25 @@
     {
       "position": 5,
       "team": {
+        "id": 1768,
+        "name": "CA Paranaense",
+        "shortName": "Paranaense",
+        "tla": "CAP",
+        "crest": "https://crests.football-data.org/1768.png"
+      },
+      "playedGames": 11,
+      "form": null,
+      "won": 6,
+      "draw": 1,
+      "lost": 4,
+      "points": 19,
+      "goalsFor": 17,
+      "goalsAgainst": 13,
+      "goalDifference": 4
+    },
+    {
+      "position": 6,
+      "team": {
         "id": 1783,
         "name": "CR Flamengo",
         "shortName": "Flamengo",
@@ -94,25 +113,6 @@
       "goalsFor": 16,
       "goalsAgainst": 9,
       "goalDifference": 7
-    },
-    {
-      "position": 6,
-      "team": {
-        "id": 1768,
-        "name": "CA Paranaense",
-        "shortName": "Paranaense",
-        "tla": "CAP",
-        "crest": "https://crests.football-data.org/1768.png"
-      },
-      "playedGames": 10,
-      "form": null,
-      "won": 5,
-      "draw": 1,
-      "lost": 4,
-      "points": 16,
-      "goalsFor": 15,
-      "goalsAgainst": 13,
-      "goalDifference": 2
     },
     {
       "position": 7,
@@ -307,25 +307,6 @@
     {
       "position": 17,
       "team": {
-        "id": 1772,
-        "name": "Chapecoense AF",
-        "shortName": "Chapecoense",
-        "tla": "CHA",
-        "crest": "https://crests.football-data.org/1772_large.png"
-      },
-      "playedGames": 9,
-      "form": null,
-      "won": 1,
-      "draw": 5,
-      "lost": 3,
-      "points": 8,
-      "goalsFor": 10,
-      "goalsAgainst": 16,
-      "goalDifference": -6
-    },
-    {
-      "position": 18,
-      "team": {
         "id": 4287,
         "name": "Clube do Remo",
         "shortName": "Clube do Remo",
@@ -341,6 +322,25 @@
       "goalsFor": 11,
       "goalsAgainst": 18,
       "goalDifference": -7
+    },
+    {
+      "position": 18,
+      "team": {
+        "id": 1772,
+        "name": "Chapecoense AF",
+        "shortName": "Chapecoense",
+        "tla": "CHA",
+        "crest": "https://crests.football-data.org/1772_large.png"
+      },
+      "playedGames": 10,
+      "form": null,
+      "won": 1,
+      "draw": 5,
+      "lost": 4,
+      "points": 8,
+      "goalsFor": 10,
+      "goalsAgainst": 18,
+      "goalDifference": -8
     },
     {
       "position": 19,
@@ -446,6 +446,37 @@
     },
     {
       "player": {
+        "id": 192070,
+        "name": "Kevin Viveros",
+        "firstName": "Kevin",
+        "lastName": "Viveros",
+        "dateOfBirth": "2000-04-26",
+        "nationality": "Colombia",
+        "section": "Offence",
+        "position": null,
+        "shirtNumber": null,
+        "lastUpdated": "2023-08-22T11:53:03Z"
+      },
+      "team": {
+        "id": 1768,
+        "name": "CA Paranaense",
+        "shortName": "Paranaense",
+        "tla": "CAP",
+        "crest": "https://crests.football-data.org/1768.png",
+        "address": "Estrada do Ganchinho 1451, Umbará Curitiba, PR 81930-160",
+        "website": "http://www.atleticoparanaense.com",
+        "founded": 1924,
+        "clubColors": "Black / White / Red",
+        "venue": "Estádio Joaquim Américo Guimarães",
+        "lastUpdated": "2022-04-06T13:14:06Z"
+      },
+      "playedMatches": 11,
+      "goals": 6,
+      "assists": 1,
+      "penalties": 1
+    },
+    {
+      "player": {
         "id": 149704,
         "name": "Danilo dos Santos de Oliveira",
         "firstName": "",
@@ -477,16 +508,16 @@
     },
     {
       "player": {
-        "id": 192070,
-        "name": "Kevin Viveros",
-        "firstName": "Kevin",
-        "lastName": "Viveros",
-        "dateOfBirth": "2000-04-26",
+        "id": 8606,
+        "name": "Stiven Mendoza",
+        "firstName": "John",
+        "lastName": "Mendoza",
+        "dateOfBirth": "1992-06-27",
         "nationality": "Colombia",
-        "section": "Offence",
+        "section": "Left Winger",
         "position": null,
         "shirtNumber": null,
-        "lastUpdated": "2023-08-22T11:53:03Z"
+        "lastUpdated": "2025-02-08T15:38:40Z"
       },
       "team": {
         "id": 1768,
@@ -502,9 +533,9 @@
         "lastUpdated": "2022-04-06T13:14:06Z"
       },
       "playedMatches": 11,
-      "goals": 5,
-      "assists": 1,
-      "penalties": 1
+      "goals": 4,
+      "assists": null,
+      "penalties": null
     },
     {
       "player": {
@@ -660,37 +691,6 @@
       "goals": 3,
       "assists": null,
       "penalties": 1
-    },
-    {
-      "player": {
-        "id": 8606,
-        "name": "Stiven Mendoza",
-        "firstName": "John",
-        "lastName": "Mendoza",
-        "dateOfBirth": "1992-06-27",
-        "nationality": "Colombia",
-        "section": "Left Winger",
-        "position": null,
-        "shirtNumber": null,
-        "lastUpdated": "2025-02-08T15:38:40Z"
-      },
-      "team": {
-        "id": 1768,
-        "name": "CA Paranaense",
-        "shortName": "Paranaense",
-        "tla": "CAP",
-        "crest": "https://crests.football-data.org/1768.png",
-        "address": "Estrada do Ganchinho 1451, Umbará Curitiba, PR 81930-160",
-        "website": "http://www.atleticoparanaense.com",
-        "founded": 1924,
-        "clubColors": "Black / White / Red",
-        "venue": "Estádio Joaquim Américo Guimarães",
-        "lastUpdated": "2022-04-06T13:14:06Z"
-      },
-      "playedMatches": 11,
-      "goals": 3,
-      "assists": null,
-      "penalties": null
     },
     {
       "player": {
@@ -920,7 +920,8 @@
       "W",
       "W",
       "L",
-      "L"
+      "L",
+      "W"
     ],
     "EC Vitória": [
       "W",
@@ -981,7 +982,8 @@
       "D",
       "L",
       "L",
-      "D"
+      "D",
+      "L"
     ],
     "Santos FC": [
       "L",
@@ -1175,9 +1177,9 @@
     },
     "CA Paranaense": {
       "home": {
-        "gf": 10,
+        "gf": 12,
         "ga": 4,
-        "w": 4,
+        "w": 5,
         "d": 0,
         "l": 1
       },
@@ -1263,10 +1265,10 @@
       },
       "away": {
         "gf": 1,
-        "ga": 5,
+        "ga": 7,
         "w": 0,
         "d": 1,
-        "l": 2
+        "l": 3
       }
     },
     "Santos FC": {
