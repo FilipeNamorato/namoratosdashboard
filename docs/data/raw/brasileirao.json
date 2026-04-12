@@ -9,12 +9,12 @@
         "tla": "PAL",
         "crest": "https://crests.football-data.org/1769.png"
       },
-      "playedGames": 10,
+      "playedGames": 11,
       "form": null,
       "won": 8,
-      "draw": 1,
+      "draw": 2,
       "lost": 1,
-      "points": 25,
+      "points": 26,
       "goalsFor": 21,
       "goalsAgainst": 10,
       "goalDifference": 11
@@ -22,11 +22,11 @@
     {
       "position": 2,
       "team": {
-        "id": 1765,
-        "name": "Fluminense FC",
-        "shortName": "Fluminense",
-        "tla": "FLU",
-        "crest": "https://crests.football-data.org/1765.png"
+        "id": 1783,
+        "name": "CR Flamengo",
+        "shortName": "Flamengo",
+        "tla": "FLA",
+        "crest": "https://crests.football-data.org/1783.png"
       },
       "playedGames": 10,
       "form": null,
@@ -35,8 +35,8 @@
       "lost": 2,
       "points": 20,
       "goalsFor": 17,
-      "goalsAgainst": 11,
-      "goalDifference": 6
+      "goalsAgainst": 9,
+      "goalDifference": 8
     },
     {
       "position": 3,
@@ -60,6 +60,25 @@
     {
       "position": 4,
       "team": {
+        "id": 1765,
+        "name": "Fluminense FC",
+        "shortName": "Fluminense",
+        "tla": "FLU",
+        "crest": "https://crests.football-data.org/1765.png"
+      },
+      "playedGames": 11,
+      "form": null,
+      "won": 6,
+      "draw": 2,
+      "lost": 3,
+      "points": 20,
+      "goalsFor": 17,
+      "goalsAgainst": 12,
+      "goalDifference": 5
+    },
+    {
+      "position": 5,
+      "team": {
         "id": 1777,
         "name": "EC Bahia",
         "shortName": "Bahia",
@@ -77,7 +96,7 @@
       "goalDifference": 5
     },
     {
-      "position": 5,
+      "position": 6,
       "team": {
         "id": 1768,
         "name": "CA Paranaense",
@@ -96,25 +115,6 @@
       "goalDifference": 4
     },
     {
-      "position": 6,
-      "team": {
-        "id": 1783,
-        "name": "CR Flamengo",
-        "shortName": "Flamengo",
-        "tla": "FLA",
-        "crest": "https://crests.football-data.org/1783.png"
-      },
-      "playedGames": 9,
-      "form": null,
-      "won": 5,
-      "draw": 2,
-      "lost": 2,
-      "points": 17,
-      "goalsFor": 16,
-      "goalsAgainst": 9,
-      "goalDifference": 7
-    },
-    {
       "position": 7,
       "team": {
         "id": 4241,
@@ -129,12 +129,31 @@
       "draw": 4,
       "lost": 3,
       "points": 16,
-      "goalsFor": 12,
-      "goalsAgainst": 11,
+      "goalsFor": 13,
+      "goalsAgainst": 12,
       "goalDifference": 1
     },
     {
       "position": 8,
+      "team": {
+        "id": 4286,
+        "name": "RB Bragantino",
+        "shortName": "Bragantino",
+        "tla": "RBB",
+        "crest": "https://crests.football-data.org/4286.png"
+      },
+      "playedGames": 11,
+      "form": null,
+      "won": 4,
+      "draw": 3,
+      "lost": 4,
+      "points": 15,
+      "goalsFor": 10,
+      "goalsAgainst": 10,
+      "goalDifference": 0
+    },
+    {
+      "position": 9,
       "team": {
         "id": 1766,
         "name": "CA Mineiro",
@@ -151,25 +170,6 @@
       "goalsFor": 14,
       "goalsAgainst": 13,
       "goalDifference": 1
-    },
-    {
-      "position": 9,
-      "team": {
-        "id": 4286,
-        "name": "RB Bragantino",
-        "shortName": "Bragantino",
-        "tla": "RBB",
-        "crest": "https://crests.football-data.org/4286.png"
-      },
-      "playedGames": 10,
-      "form": null,
-      "won": 4,
-      "draw": 2,
-      "lost": 4,
-      "points": 14,
-      "goalsFor": 10,
-      "goalsAgainst": 10,
-      "goalDifference": 0
     },
     {
       "position": 10,
@@ -205,8 +205,8 @@
       "draw": 1,
       "lost": 5,
       "points": 13,
-      "goalsFor": 17,
-      "goalsAgainst": 20,
+      "goalsFor": 18,
+      "goalsAgainst": 21,
       "goalDifference": -3
     },
     {
@@ -294,12 +294,12 @@
         "tla": "COR",
         "crest": "https://crests.football-data.org/1779.png"
       },
-      "playedGames": 10,
+      "playedGames": 11,
       "form": null,
       "won": 2,
-      "draw": 4,
+      "draw": 5,
       "lost": 4,
-      "points": 10,
+      "points": 11,
       "goalsFor": 8,
       "goalsAgainst": 11,
       "goalDifference": -3
@@ -326,6 +326,25 @@
     {
       "position": 18,
       "team": {
+        "id": 1771,
+        "name": "Cruzeiro EC",
+        "shortName": "Cruzeiro",
+        "tla": "CRU",
+        "crest": "https://crests.football-data.org/1771.png"
+      },
+      "playedGames": 11,
+      "form": null,
+      "won": 1,
+      "draw": 5,
+      "lost": 5,
+      "points": 8,
+      "goalsFor": 12,
+      "goalsAgainst": 20,
+      "goalDifference": -8
+    },
+    {
+      "position": 19,
+      "team": {
         "id": 1772,
         "name": "Chapecoense AF",
         "shortName": "Chapecoense",
@@ -340,25 +359,6 @@
       "points": 8,
       "goalsFor": 10,
       "goalsAgainst": 18,
-      "goalDifference": -8
-    },
-    {
-      "position": 19,
-      "team": {
-        "id": 1771,
-        "name": "Cruzeiro EC",
-        "shortName": "Cruzeiro",
-        "tla": "CRU",
-        "crest": "https://crests.football-data.org/1771.png"
-      },
-      "playedGames": 10,
-      "form": null,
-      "won": 1,
-      "draw": 4,
-      "lost": 5,
-      "points": 7,
-      "goalsFor": 12,
-      "goalsAgainst": 20,
       "goalDifference": -8
     },
     {
@@ -632,6 +632,37 @@
     },
     {
       "player": {
+        "id": 1077,
+        "name": "Pedro",
+        "firstName": "",
+        "lastName": "Pedro",
+        "dateOfBirth": "1997-06-20",
+        "nationality": "Brazil",
+        "section": "Offence",
+        "position": null,
+        "shirtNumber": null,
+        "lastUpdated": "2023-07-30T23:15:48Z"
+      },
+      "team": {
+        "id": 1783,
+        "name": "CR Flamengo",
+        "shortName": "Flamengo",
+        "tla": "FLA",
+        "crest": "https://crests.football-data.org/1783.png",
+        "address": "null Rio de Janeiro, RJ null",
+        "website": "https://www.flamengo.com.br/pagina-inicial-basquete",
+        "founded": 1919,
+        "clubColors": "Red / Black / White",
+        "venue": "Estadio Jornalista Mário Filho",
+        "lastUpdated": "2022-04-06T13:13:43Z"
+      },
+      "playedMatches": 10,
+      "goals": 4,
+      "assists": 2,
+      "penalties": null
+    },
+    {
+      "player": {
         "id": 170698,
         "name": "José Manuel López",
         "firstName": "José Manuel",
@@ -656,7 +687,7 @@
         "venue": "Allianz Parque",
         "lastUpdated": "2022-04-06T13:14:55Z"
       },
-      "playedMatches": 10,
+      "playedMatches": 11,
       "goals": 3,
       "assists": 3,
       "penalties": null
@@ -815,37 +846,6 @@
       "goals": 3,
       "assists": null,
       "penalties": null
-    },
-    {
-      "player": {
-        "id": 274216,
-        "name": "Allan",
-        "firstName": "",
-        "lastName": "Allan",
-        "dateOfBirth": "2004-04-19",
-        "nationality": "Brazil",
-        "section": "Offence",
-        "position": null,
-        "shirtNumber": null,
-        "lastUpdated": "2025-01-18T09:59:31Z"
-      },
-      "team": {
-        "id": 1769,
-        "name": "SE Palmeiras",
-        "shortName": "Palmeiras",
-        "tla": "PAL",
-        "crest": "https://crests.football-data.org/1769.png",
-        "address": "Rua Palestra Italia nº 214, Perdizes São Paulo, SP 05005-030",
-        "website": "http://www.palmeiras.com.br",
-        "founded": 1914,
-        "clubColors": "Green / White",
-        "venue": "Allianz Parque",
-        "lastUpdated": "2022-04-06T13:14:55Z"
-      },
-      "playedMatches": 10,
-      "goals": 3,
-      "assists": null,
-      "penalties": null
     }
   ],
   "historico_times": {
@@ -882,6 +882,7 @@
       "W",
       "W",
       "L",
+      "D",
       "D",
       "D"
     ],
@@ -1079,7 +1080,8 @@
       "W",
       "L",
       "W",
-      "W"
+      "W",
+      "D"
     ],
     "Cruzeiro EC": [
       "L",
@@ -1136,10 +1138,10 @@
         "l": 2
       },
       "away": {
-        "gf": 8,
-        "ga": 6,
+        "gf": 10,
+        "ga": 8,
         "w": 3,
-        "d": 1,
+        "d": 2,
         "l": 1
       }
     },
@@ -1385,10 +1387,10 @@
     },
     "Botafogo FR": {
       "home": {
-        "gf": 7,
-        "ga": 5,
+        "gf": 9,
+        "ga": 7,
         "w": 2,
-        "d": 0,
+        "d": 1,
         "l": 1
       },
       "away": {
