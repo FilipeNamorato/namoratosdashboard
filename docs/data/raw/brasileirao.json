@@ -34,8 +34,8 @@
       "draw": 2,
       "lost": 2,
       "points": 20,
-      "goalsFor": 17,
-      "goalsAgainst": 9,
+      "goalsFor": 18,
+      "goalsAgainst": 10,
       "goalDifference": 8
     },
     {
@@ -72,8 +72,8 @@
       "draw": 2,
       "lost": 3,
       "points": 20,
-      "goalsFor": 17,
-      "goalsAgainst": 12,
+      "goalsFor": 18,
+      "goalsAgainst": 13,
       "goalDifference": 5
     },
     {
@@ -136,25 +136,6 @@
     {
       "position": 8,
       "team": {
-        "id": 4286,
-        "name": "RB Bragantino",
-        "shortName": "Bragantino",
-        "tla": "RBB",
-        "crest": "https://crests.football-data.org/4286.png"
-      },
-      "playedGames": 11,
-      "form": null,
-      "won": 4,
-      "draw": 3,
-      "lost": 4,
-      "points": 15,
-      "goalsFor": 10,
-      "goalsAgainst": 10,
-      "goalDifference": 0
-    },
-    {
-      "position": 9,
-      "team": {
         "id": 1766,
         "name": "CA Mineiro",
         "shortName": "Mineiro",
@@ -170,6 +151,25 @@
       "goalsFor": 14,
       "goalsAgainst": 13,
       "goalDifference": 1
+    },
+    {
+      "position": 9,
+      "team": {
+        "id": 4286,
+        "name": "RB Bragantino",
+        "shortName": "Bragantino",
+        "tla": "RBB",
+        "crest": "https://crests.football-data.org/4286.png"
+      },
+      "playedGames": 11,
+      "form": null,
+      "won": 4,
+      "draw": 2,
+      "lost": 5,
+      "points": 14,
+      "goalsFor": 11,
+      "goalsAgainst": 12,
+      "goalDifference": -1
     },
     {
       "position": 10,
@@ -307,6 +307,25 @@
     {
       "position": 17,
       "team": {
+        "id": 1771,
+        "name": "Cruzeiro EC",
+        "shortName": "Cruzeiro",
+        "tla": "CRU",
+        "crest": "https://crests.football-data.org/1771.png"
+      },
+      "playedGames": 11,
+      "form": null,
+      "won": 2,
+      "draw": 4,
+      "lost": 5,
+      "points": 10,
+      "goalsFor": 14,
+      "goalsAgainst": 21,
+      "goalDifference": -7
+    },
+    {
+      "position": 18,
+      "team": {
         "id": 4287,
         "name": "Clube do Remo",
         "shortName": "Clube do Remo",
@@ -322,25 +341,6 @@
       "goalsFor": 11,
       "goalsAgainst": 18,
       "goalDifference": -7
-    },
-    {
-      "position": 18,
-      "team": {
-        "id": 1771,
-        "name": "Cruzeiro EC",
-        "shortName": "Cruzeiro",
-        "tla": "CRU",
-        "crest": "https://crests.football-data.org/1771.png"
-      },
-      "playedGames": 11,
-      "form": null,
-      "won": 1,
-      "draw": 5,
-      "lost": 5,
-      "points": 8,
-      "goalsFor": 12,
-      "goalsAgainst": 20,
-      "goalDifference": -8
     },
     {
       "position": 19,
@@ -508,6 +508,37 @@
     },
     {
       "player": {
+        "id": 1077,
+        "name": "Pedro",
+        "firstName": "",
+        "lastName": "Pedro",
+        "dateOfBirth": "1997-06-20",
+        "nationality": "Brazil",
+        "section": "Offence",
+        "position": null,
+        "shirtNumber": null,
+        "lastUpdated": "2023-07-30T23:15:48Z"
+      },
+      "team": {
+        "id": 1783,
+        "name": "CR Flamengo",
+        "shortName": "Flamengo",
+        "tla": "FLA",
+        "crest": "https://crests.football-data.org/1783.png",
+        "address": "null Rio de Janeiro, RJ null",
+        "website": "https://www.flamengo.com.br/pagina-inicial-basquete",
+        "founded": 1919,
+        "clubColors": "Red / Black / White",
+        "venue": "Estadio Jornalista Mário Filho",
+        "lastUpdated": "2022-04-06T13:13:43Z"
+      },
+      "playedMatches": 10,
+      "goals": 5,
+      "assists": 2,
+      "penalties": null
+    },
+    {
+      "player": {
         "id": 8606,
         "name": "Stiven Mendoza",
         "firstName": "John",
@@ -632,33 +663,33 @@
     },
     {
       "player": {
-        "id": 1077,
-        "name": "Pedro",
+        "id": 118245,
+        "name": "Christian",
         "firstName": "",
-        "lastName": "Pedro",
-        "dateOfBirth": "1997-06-20",
+        "lastName": "Christian",
+        "dateOfBirth": "2000-12-19",
         "nationality": "Brazil",
-        "section": "Offence",
+        "section": "Midfield",
         "position": null,
         "shirtNumber": null,
-        "lastUpdated": "2023-07-30T23:15:48Z"
+        "lastUpdated": "2023-07-30T23:15:43Z"
       },
       "team": {
-        "id": 1783,
-        "name": "CR Flamengo",
-        "shortName": "Flamengo",
-        "tla": "FLA",
-        "crest": "https://crests.football-data.org/1783.png",
-        "address": "null Rio de Janeiro, RJ null",
-        "website": "https://www.flamengo.com.br/pagina-inicial-basquete",
-        "founded": 1919,
-        "clubColors": "Red / Black / White",
-        "venue": "Estadio Jornalista Mário Filho",
-        "lastUpdated": "2022-04-06T13:13:43Z"
+        "id": 1771,
+        "name": "Cruzeiro EC",
+        "shortName": "Cruzeiro",
+        "tla": "CRU",
+        "crest": "https://crests.football-data.org/1771.png",
+        "address": "Rua Timbiras 2903, Bairro Preto Belo Horizonte, MG 30140-062",
+        "website": "http://www.cruzeiro.com.br",
+        "founded": 1921,
+        "clubColors": "Blue / White",
+        "venue": "Estádio Governador Magalhães Pinto",
+        "lastUpdated": "2022-04-10T11:03:46Z"
       },
-      "playedMatches": 10,
+      "playedMatches": 11,
       "goals": 4,
-      "assists": 2,
+      "assists": 1,
       "penalties": null
     },
     {
@@ -815,37 +846,6 @@
       "goals": 3,
       "assists": 1,
       "penalties": 2
-    },
-    {
-      "player": {
-        "id": 181603,
-        "name": "Igor Formiga",
-        "firstName": "",
-        "lastName": "Igor Formiga",
-        "dateOfBirth": "1999-01-08",
-        "nationality": "Brazil",
-        "section": "Defence",
-        "position": null,
-        "shirtNumber": null,
-        "lastUpdated": "2023-07-30T19:37:09Z"
-      },
-      "team": {
-        "id": 4364,
-        "name": "Mirassol FC",
-        "shortName": "Mirassol",
-        "tla": "MIR",
-        "crest": "https://crests.football-data.org/4364.png",
-        "address": "null Mirassol, SP null",
-        "website": "http://www.mirassolfc.com.br",
-        "founded": 1925,
-        "clubColors": "Green / Yellow",
-        "venue": "Estádio José Maria de Campos Maia",
-        "lastUpdated": "2023-07-31T08:47:23Z"
-      },
-      "playedMatches": 10,
-      "goals": 3,
-      "assists": null,
-      "penalties": null
     }
   ],
   "historico_times": {
@@ -871,7 +871,8 @@
       "W",
       "W",
       "W",
-      "W"
+      "W",
+      "D"
     ],
     "Coritiba FBC": [
       "L",
@@ -896,7 +897,8 @@
       "L",
       "L",
       "W",
-      "W"
+      "W",
+      "L"
     ],
     "SC Internacional": [
       "L",
@@ -959,7 +961,8 @@
       "L",
       "W",
       "W",
-      "D"
+      "D",
+      "L"
     ],
     "Grêmio FBPA": [
       "L",
@@ -1008,7 +1011,8 @@
       "D",
       "D",
       "L",
-      "L"
+      "L",
+      "D"
     ],
     "EC Bahia": [
       "W",
@@ -1044,6 +1048,7 @@
       "W",
       "D",
       "L",
+      "W",
       "W"
     ],
     "Mirassol FC": [
@@ -1093,7 +1098,8 @@
       "L",
       "D",
       "W",
-      "L"
+      "L",
+      "W"
     ]
   },
   "team_stats": {
@@ -1125,7 +1131,7 @@
         "gf": 9,
         "ga": 6,
         "w": 3,
-        "d": 1,
+        "d": 2,
         "l": 1
       }
     },
@@ -1154,11 +1160,11 @@
         "l": 2
       },
       "away": {
-        "gf": 3,
-        "ga": 5,
+        "gf": 4,
+        "ga": 7,
         "w": 2,
         "d": 1,
-        "l": 2
+        "l": 3
       }
     },
     "SC Internacional": {
@@ -1227,11 +1233,11 @@
     },
     "Fluminense FC": {
       "home": {
-        "gf": 10,
-        "ga": 4,
+        "gf": 11,
+        "ga": 6,
         "w": 5,
         "d": 0,
-        "l": 0
+        "l": 1
       },
       "away": {
         "gf": 7,
@@ -1294,7 +1300,7 @@
         "gf": 4,
         "ga": 6,
         "w": 1,
-        "d": 1,
+        "d": 2,
         "l": 3
       },
       "away": {
@@ -1346,9 +1352,9 @@
         "l": 0
       },
       "away": {
-        "gf": 7,
-        "ga": 7,
-        "w": 2,
+        "gf": 9,
+        "ga": 8,
+        "w": 3,
         "d": 1,
         "l": 2
       }
@@ -1403,9 +1409,9 @@
     },
     "Cruzeiro EC": {
       "home": {
-        "gf": 8,
-        "ga": 6,
-        "w": 1,
+        "gf": 10,
+        "ga": 7,
+        "w": 2,
         "d": 3,
         "l": 1
       },
