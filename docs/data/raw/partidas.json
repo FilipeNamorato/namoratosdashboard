@@ -288,14 +288,14 @@
         "d",
         "e",
         "v",
-        "e"
+        "d"
       ],
       "aproveitamento_mandante": [
         "d",
         "v",
         "d",
         "e",
-        "e"
+        "v"
       ],
       "transmissao": {
         "label": "saiba como foi",
@@ -346,7 +346,7 @@
       "placar_oficial_visitante": 1,
       "placar_oficial_mandante": 1,
       "partida_id": 346330,
-      "clube_visitante_posicao": 11,
+      "clube_visitante_posicao": 12,
       "clube_visitante_id": 267,
       "clube_casa_posicao": 18,
       "clube_casa_id": 364,
@@ -357,16 +357,16 @@
     {
       "aproveitamento_visitante": [
         "v",
-        "v",
         "e",
         "d",
-        "v"
+        "v",
+        "e"
       ],
       "aproveitamento_mandante": [
-        "v",
         "d",
         "v",
         "v",
+        "e",
         "e"
       ],
       "transmissao": {
@@ -396,25 +396,25 @@
         "d",
         "v",
         "d",
-        "e"
+        "v"
       ],
       "aproveitamento_mandante": [
         "d",
         "d",
         "d",
         "d",
-        "e"
+        "d"
       ],
       "transmissao": {
-        "label": "ao vivo",
+        "label": "saiba como foi",
         "url": "https://ge.globo.com/sp/tem-esporte/futebol/brasileirao-serie-a/jogo/11-04-2026/mirassol-bahia.ghtml?utm_source=cartolafc"
       },
       "local": "Maião",
-      "status_transmissao_tr": "EM_ANDAMENTO",
-      "status_cronometro_tr": "INICIADO",
-      "periodo_tr": "SEGUNDO_TEMPO",
+      "status_transmissao_tr": "ENCERRADA",
+      "status_cronometro_tr": "PAUSADO",
+      "periodo_tr": "POS_JOGO",
       "partida_data": "2026-04-11 18:30:00",
-      "inicio_cronometro_tr": "2026-04-11T22:40:13.323Z",
+      "inicio_cronometro_tr": "2026-04-12T00:03:38.415Z",
       "placar_oficial_visitante": 2,
       "placar_oficial_mandante": 1,
       "partida_id": 346325,
@@ -432,31 +432,31 @@
         "d",
         "v",
         "v",
-        "e"
+        "d"
       ],
       "aproveitamento_mandante": [
         "d",
         "e",
         "v",
         "d",
-        "e"
+        "v"
       ],
       "transmissao": {
-        "label": "ao vivo",
+        "label": "saiba como foi",
         "url": "https://ge.globo.com/sp/santos-e-regiao/futebol/brasileirao-serie-a/jogo/11-04-2026/santos-atletico-mg.ghtml?utm_source=cartolafc"
       },
       "local": "Vila Belmiro",
-      "status_transmissao_tr": "EM_ANDAMENTO",
-      "status_cronometro_tr": "INICIADO",
-      "periodo_tr": "PRIMEIRO_TEMPO",
+      "status_transmissao_tr": "ENCERRADA",
+      "status_cronometro_tr": "PAUSADO",
+      "periodo_tr": "POS_JOGO",
       "partida_data": "2026-04-11 20:00:00",
-      "inicio_cronometro_tr": "2026-04-11T23:04:48.074Z",
+      "inicio_cronometro_tr": "2026-04-12T01:13:17.824Z",
       "placar_oficial_visitante": 0,
-      "placar_oficial_mandante": 0,
+      "placar_oficial_mandante": 1,
       "partida_id": 346323,
-      "clube_visitante_posicao": 7,
+      "clube_visitante_posicao": 8,
       "clube_visitante_id": 282,
-      "clube_casa_posicao": 15,
+      "clube_casa_posicao": 14,
       "clube_casa_id": 277,
       "timestamp": 1775948400,
       "campeonato_id": 26,
@@ -478,21 +478,21 @@
         "e"
       ],
       "transmissao": {
-        "label": "pré-jogo",
+        "label": "saiba como foi",
         "url": "https://ge.globo.com/rs/futebol/brasileirao-serie-a/jogo/11-04-2026/internacional-gremio.ghtml?utm_source=cartolafc"
       },
       "local": "Beira-Rio",
-      "status_transmissao_tr": "EM_ANDAMENTO",
+      "status_transmissao_tr": "ENCERRADA",
       "status_cronometro_tr": "PAUSADO",
-      "periodo_tr": "PRIMEIRO_TEMPO",
+      "periodo_tr": "POS_JOGO",
       "partida_data": "2026-04-11 20:30:00",
-      "inicio_cronometro_tr": "2026-04-11T23:31:44.377Z",
-      "placar_oficial_visitante": null,
-      "placar_oficial_mandante": null,
+      "inicio_cronometro_tr": "2026-04-12T01:36:47.870Z",
+      "placar_oficial_visitante": 0,
+      "placar_oficial_mandante": 0,
       "partida_id": 346327,
-      "clube_visitante_posicao": 13,
+      "clube_visitante_posicao": 11,
       "clube_visitante_id": 284,
-      "clube_casa_posicao": 14,
+      "clube_casa_posicao": 13,
       "clube_casa_id": 285,
       "timestamp": 1775950200,
       "campeonato_id": 26,
@@ -501,17 +501,17 @@
     {
       "aproveitamento_visitante": [
         "e",
+        "d",
+        "d",
         "e",
-        "d",
-        "d",
         "e"
       ],
       "aproveitamento_mandante": [
         "v",
         "v",
-        "v",
         "d",
-        "d"
+        "d",
+        "e"
       ],
       "transmissao": {
         "label": "fique por dentro",
@@ -537,17 +537,17 @@
     {
       "aproveitamento_visitante": [
         "v",
-        "v",
         "d",
+        "e",
         "e",
         "e"
       ],
       "aproveitamento_mandante": [
-        "d",
         "v",
         "d",
         "v",
-        "v"
+        "v",
+        "e"
       ],
       "transmissao": {
         "label": "fique por dentro",
@@ -562,9 +562,9 @@
       "placar_oficial_visitante": null,
       "placar_oficial_mandante": null,
       "partida_id": 346322,
-      "clube_visitante_posicao": 8,
+      "clube_visitante_posicao": 7,
       "clube_visitante_id": 294,
-      "clube_casa_posicao": 12,
+      "clube_casa_posicao": 15,
       "clube_casa_id": 263,
       "timestamp": 1776020400,
       "campeonato_id": 26,
@@ -576,14 +576,14 @@
         "v",
         "v",
         "v",
-        "v"
+        "e"
       ],
       "aproveitamento_mandante": [
         "e",
         "e",
-        "e",
         "d",
-        "d"
+        "d",
+        "e"
       ],
       "transmissao": {
         "label": "fique por dentro",
@@ -610,16 +610,16 @@
       "aproveitamento_visitante": [
         "d",
         "d",
-        "d",
         "v",
-        "v"
+        "v",
+        "e"
       ],
       "aproveitamento_mandante": [
-        "e",
         "d",
         "e",
         "v",
-        "d"
+        "d",
+        "e"
       ],
       "transmissao": {
         "label": "fique por dentro",

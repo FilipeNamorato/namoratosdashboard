@@ -117,25 +117,6 @@
     {
       "position": 7,
       "team": {
-        "id": 1766,
-        "name": "CA Mineiro",
-        "shortName": "Mineiro",
-        "tla": "CAM",
-        "crest": "https://crests.football-data.org/1766.png"
-      },
-      "playedGames": 11,
-      "form": null,
-      "won": 4,
-      "draw": 3,
-      "lost": 4,
-      "points": 15,
-      "goalsFor": 14,
-      "goalsAgainst": 12,
-      "goalDifference": 2
-    },
-    {
-      "position": 8,
-      "team": {
         "id": 4241,
         "name": "Coritiba FBC",
         "shortName": "Coritiba",
@@ -150,6 +131,25 @@
       "points": 15,
       "goalsFor": 11,
       "goalsAgainst": 10,
+      "goalDifference": 1
+    },
+    {
+      "position": 8,
+      "team": {
+        "id": 1766,
+        "name": "CA Mineiro",
+        "shortName": "Mineiro",
+        "tla": "CAM",
+        "crest": "https://crests.football-data.org/1766.png"
+      },
+      "playedGames": 11,
+      "form": null,
+      "won": 4,
+      "draw": 2,
+      "lost": 5,
+      "points": 14,
+      "goalsFor": 14,
+      "goalsAgainst": 13,
       "goalDifference": 1
     },
     {
@@ -250,6 +250,25 @@
     {
       "position": 14,
       "team": {
+        "id": 6685,
+        "name": "Santos FC",
+        "shortName": "Santos",
+        "tla": "SAN",
+        "crest": "https://crests.football-data.org/6685.png"
+      },
+      "playedGames": 11,
+      "form": null,
+      "won": 3,
+      "draw": 4,
+      "lost": 4,
+      "points": 13,
+      "goalsFor": 14,
+      "goalsAgainst": 16,
+      "goalDifference": -2
+    },
+    {
+      "position": 15,
+      "team": {
         "id": 1770,
         "name": "Botafogo FR",
         "shortName": "Botafogo",
@@ -264,25 +283,6 @@
       "points": 12,
       "goalsFor": 16,
       "goalsAgainst": 19,
-      "goalDifference": -3
-    },
-    {
-      "position": 15,
-      "team": {
-        "id": 6685,
-        "name": "Santos FC",
-        "shortName": "Santos",
-        "tla": "SAN",
-        "crest": "https://crests.football-data.org/6685.png"
-      },
-      "playedGames": 11,
-      "form": null,
-      "won": 2,
-      "draw": 5,
-      "lost": 4,
-      "points": 11,
-      "goalsFor": 13,
-      "goalsAgainst": 16,
       "goalDifference": -3
     },
     {
@@ -859,7 +859,8 @@
       "W",
       "L",
       "W",
-      "W"
+      "W",
+      "L"
     ],
     "SE Palmeiras": [
       "D",
@@ -907,7 +908,8 @@
       "W",
       "W",
       "D",
-      "W"
+      "W",
+      "D"
     ],
     "CA Paranaense": [
       "W",
@@ -968,6 +970,7 @@
       "W",
       "L",
       "L",
+      "D",
       "D"
     ],
     "Chapecoense AF": [
@@ -991,7 +994,8 @@
       "L",
       "D",
       "W",
-      "L"
+      "L",
+      "W"
     ],
     "SC Corinthians Paulista": [
       "L",
@@ -1014,7 +1018,8 @@
       "W",
       "L",
       "W",
-      "L"
+      "L",
+      "W"
     ],
     "São Paulo FC": [
       "W",
@@ -1045,6 +1050,7 @@
       "D",
       "D",
       "D",
+      "L",
       "L",
       "L",
       "L",
@@ -1099,10 +1105,10 @@
       },
       "away": {
         "gf": 5,
-        "ga": 6,
+        "ga": 7,
         "w": 1,
         "d": 0,
-        "l": 4
+        "l": 5
       }
     },
     "SE Palmeiras": {
@@ -1158,7 +1164,7 @@
         "gf": 4,
         "ga": 6,
         "w": 1,
-        "d": 1,
+        "d": 2,
         "l": 3
       },
       "away": {
@@ -1245,7 +1251,7 @@
         "gf": 4,
         "ga": 9,
         "w": 0,
-        "d": 1,
+        "d": 2,
         "l": 4
       }
     },
@@ -1267,9 +1273,9 @@
     },
     "Santos FC": {
       "home": {
-        "gf": 7,
+        "gf": 8,
         "ga": 5,
-        "w": 2,
+        "w": 3,
         "d": 2,
         "l": 1
       },
@@ -1306,9 +1312,9 @@
         "l": 1
       },
       "away": {
-        "gf": 5,
-        "ga": 5,
-        "w": 3,
+        "gf": 7,
+        "ga": 6,
+        "w": 4,
         "d": 0,
         "l": 1
       }
@@ -1347,11 +1353,11 @@
     },
     "Mirassol FC": {
       "home": {
-        "gf": 6,
-        "ga": 7,
+        "gf": 7,
+        "ga": 9,
         "w": 1,
         "d": 2,
-        "l": 2
+        "l": 3
       },
       "away": {
         "gf": 4,
