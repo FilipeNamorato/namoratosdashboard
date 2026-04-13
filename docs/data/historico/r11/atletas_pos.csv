@@ -1,0 +1,743 @@
+﻿atleta_id,nome,clube,posicao,status_id,preco,variacao,media,jogos,pontos_rodada,entrou_em_campo,mandante,adversario,residuo_z,armadilha_label,media_bayesiana,pb_media,confiabilidade,score_confronto_100,condicao_mando,pontos_esperados
+78850,Reinaldo,MIR,Lateral,6,8.05,-0.67,0.62,7,-0.3,True,False,INT,-1.368,armadilha_leve,3.228,0.62,0.875,47.2,neutro,2.67
+39148,Hulk,CAM,Atacante,7,11.64,-0.32,4.65,11,1.0,True,False,CFC,-0.027,neutro,4.718,2.56,1.0,45.5,neutro,4.29
+100652,Yuri Alberto,COR,Atacante,7,11.52,0.1,2.89,7,3.7,True,False,VIT,-0.789,armadilha_leve,3.915,1.75,0.875,16.6,desfavoravel,1.14
+141776,Gustavo Henrique,SAN,Meia,6,2.69,0.15,1.64,5,2.2,True,True,FLU,0.183,neutro,1.144,1.64,0.625,52.7,neutro,0.75
+89368,Braithwaite,GRE,Atacante,6,8.69,-1.46,0.65,4,-0.3,True,False,CRU,-0.541,armadilha_leve,3.424,0.65,0.5,42.4,neutro,1.45
+144423,Nicolas Pontes,CRU,Lateral,6,1.0,0.0,0.0,0,0.0,False,True,GRE,0.924,valor_bom,0.0,0.0,0.0,74.1,favoravel,0.0
+147297,William Fernando,CRU,Lateral,6,1.0,0.0,0.0,0,0.0,False,True,GRE,0.924,valor_bom,0.0,0.0,0.0,74.1,favoravel,0.0
+123649,Janderson,CRU,Zagueiro,6,1.0,0.0,0.0,0,0.0,False,True,GRE,0.748,valor_bom,0.0,0.0,0.0,74.2,favoravel,0.0
+142049,Bruno Alves,CRU,Zagueiro,6,2.0,0.0,0.0,0,0.0,False,True,GRE,-0.498,neutro,0.0,0.0,0.0,74.2,neutro,0.0
+80287,Luciano,SAO,Atacante,7,13.18,0.0,4.34,9,0.0,False,False,VAS,-0.508,armadilha_leve,4.562,2.01,1.0,51.9,neutro,4.74
+86292,Bolasie,CHA,Atacante,7,3.2,-0.66,0.83,9,-2.0,True,True,BOT,-0.687,armadilha_leve,0.852,0.83,1.0,47.4,neutro,0.81
+115025,Miguelito,SAN,Meia,6,4.04,0.0,1.9,4,0.0,False,True,FLU,0.04,neutro,1.898,1.9,0.5,52.7,neutro,1.0
+103445,Kaio Jorge,CRU,Atacante,2,12.03,0.0,4.62,6,0.0,False,True,GRE,-0.103,neutro,4.729,1.95,0.75,67.9,neutro,4.82
+126471,Barreal,SAN,Meia,7,9.96,0.0,3.64,9,0.0,False,True,FLU,-0.202,neutro,3.88,3.08,1.0,52.7,neutro,4.09
+146991,Rhuan Gabriel,CRU,Meia,6,1.39,0.0,1.2,1,0.0,False,True,GRE,1.251,valor_bom,0.875,1.2,0.125,67.3,favoravel,0.15
+94583,Pedro,FLA,Atacante,7,18.6,2.26,8.23,9,20.6,True,True,BAH,0.593,valor_bom,6.621,2.67,1.0,54.0,neutro,7.15
+133673,Mateus Xavier,SAN,Atacante,6,2.0,0.0,0.0,0,0.0,False,True,FLU,-0.566,armadilha_leve,0.0,0.0,0.0,52.2,neutro,0.0
+128433,Johan Rojas,VAS,Meia,7,4.58,0.54,1.78,9,4.7,True,True,SAO,-0.35,neutro,1.835,1.22,1.0,43.3,neutro,1.59
+147287,Kaiquy Luiz,CRU,Zagueiro,6,1.0,0.0,0.0,0,0.0,False,True,GRE,0.748,valor_bom,0.0,0.0,0.0,74.2,favoravel,0.0
+118655,Saldivia,VAS,Zagueiro,3,4.71,-0.7,2.01,8,-0.3,True,True,SAO,-0.059,neutro,2.212,2.01,1.0,56.7,neutro,2.51
+106104,Enamorado,GRE,Atacante,7,7.78,0.44,3.7,10,5.9,True,False,CRU,0.496,neutro,4.194,3.2,1.0,42.4,neutro,3.56
+142130,Marcelo Eráclito,CRU,Goleiro,6,1.0,0.0,0.0,0,0.0,False,True,GRE,0.713,valor_bom,0.0,0.0,0.0,74.5,favoravel,0.0
+101908,Willian Machado,MIR,Zagueiro,6,4.4,0.0,2.06,7,0.0,False,False,INT,0.153,neutro,2.249,2.06,0.875,47.3,neutro,1.86
+91639,Igor Cariús,MIR,Lateral,6,2.94,0.0,1.0,1,0.0,False,False,INT,0.538,valor_bom,2.051,1.0,0.125,47.2,neutro,0.24
+114802,Vitor Roque,PAL,Atacante,6,17.99,0.0,8.72,6,0.0,False,True,CAP,0.552,valor_bom,6.487,4.72,0.75,73.4,favoravel,7.14
+108713,Galeano,MIR,Atacante,6,5.54,0.0,1.74,7,0.0,False,False,INT,-0.896,armadilha_leve,1.923,1.74,0.875,31.4,desfavoravel,1.06
+115986,Denilson,MIR,Meia,6,4.05,0.0,0.8,3,0.0,False,False,INT,-0.3,neutro,1.597,0.8,0.375,31.7,desfavoravel,0.38
+112367,Thalisson Gabriel,REM,Zagueiro,6,3.0,0.0,0.0,0,0.0,False,False,RBB,-1.383,armadilha_leve,0.0,0.0,0.0,44.9,neutro,0.0
+78946,Dória,SAO,Zagueiro,6,6.45,0.0,0.0,1,0.0,False,False,VAS,0.494,neutro,3.465,0.0,0.125,46.7,neutro,0.4
+131516,JP Chermont,CFC,Lateral,7,5.45,0.0,4.33,7,0.0,False,True,CAM,0.419,neutro,3.693,2.33,0.875,54.3,neutro,3.51
+94514,Lucas Oliveira,MIR,Zagueiro,7,3.91,-0.33,0.95,2,0.5,True,False,INT,0.306,neutro,2.121,0.95,0.25,47.3,neutro,0.5
+145400,Cauê,RBB,Lateral,6,4.87,0.0,5.25,2,0.0,False,True,REM,0.634,valor_bom,3.558,3.75,0.25,72.8,favoravel,1.3
+126120,Marcelinho,RBB,Meia,6,3.71,0.0,4.75,2,0.0,False,True,REM,0.885,valor_bom,2.467,2.25,0.25,70.5,favoravel,0.87
+81121,Lucas Mugni,MIR,Meia,6,7.0,0.0,0.0,0,0.0,False,False,INT,-3.521,armadilha_forte,0.0,0.0,0.0,31.7,desfavoravel,0.0
+130280,Phillipe Gabriel,VAS,Goleiro,6,1.0,0.0,0.0,0,0.0,False,True,SAO,0.713,valor_bom,0.0,0.0,0.0,56.9,neutro,0.0
+133696,Wallace Davi,BOT,Meia,6,4.0,0.0,0.0,0,0.0,False,False,CHA,-2.043,armadilha_forte,0.0,0.0,0.0,75.9,neutro,0.0
+126182,Paulinho,INT,Meia,7,4.33,-0.66,2.57,10,0.0,True,True,MIR,0.279,neutro,2.271,2.57,1.0,76.8,favoravel,3.49
+141139,Mateus Iseppe,CAM,Meia,6,2.0,0.0,0.0,0,0.0,False,False,CFC,-0.436,neutro,0.0,0.0,0.0,45.4,neutro,0.0
+147090,Kauã Pascini,CAM,Lateral,6,2.85,0.0,5.0,1,0.0,False,False,CFC,1.102,valor_bom,2.495,2.0,0.125,62.8,neutro,0.39
+132412,Román Gómez,BAH,Lateral,6,8.47,0.0,7.1,2,0.0,False,False,FLA,1.243,valor_bom,5.828,5.6,0.25,34.2,neutro,1.0
+51413,Walter,MIR,Goleiro,7,6.13,0.56,3.25,9,5.8,True,False,INT,0.712,valor_bom,3.758,3.25,1.0,47.6,neutro,3.58
+103183,Andrew,FLA,Goleiro,6,3.0,0.0,0.0,0,0.0,False,True,BAH,-1.179,armadilha_leve,0.0,0.0,0.0,43.3,neutro,0.0
+90061,Bruno Pacheco,CHA,Lateral,6,4.93,-0.22,0.73,3,1.5,True,True,BOT,-0.561,armadilha_leve,2.479,0.73,0.375,28.3,neutro,0.53
+94154,Maycon,CAM,Meia,6,5.9,0.0,2.4,4,0.0,False,False,CFC,0.906,valor_bom,3.567,2.4,0.5,45.4,neutro,1.62
+70666,Marllon,REM,Zagueiro,7,6.41,0.47,3.34,11,7.7,True,False,RBB,0.63,valor_bom,3.575,2.52,1.0,44.9,neutro,3.21
+116034,Victor Hugo,CAM,Meia,7,6.93,-1.69,4.39,11,0.9,True,False,CFC,1.271,valor_bom,4.289,2.57,1.0,45.4,neutro,3.89
+83433,Patrick,REM,Meia,7,4.56,-0.31,2.33,8,3.7,True,False,RBB,-0.03,neutro,2.113,2.33,1.0,46.4,neutro,1.96
+114040,Minda,CAM,Atacante,5,7.36,0.0,1.93,4,0.0,False,False,CFC,0.298,neutro,3.851,1.93,0.5,45.5,neutro,1.75
+141873,Jacaré,COR,Lateral,7,2.0,0.0,0.0,0,0.0,False,False,VIT,-0.62,armadilha_leve,0.0,0.0,0.0,34.6,desfavoravel,0.0
+141131,Vitão,CAM,Zagueiro,6,1.0,0.0,0.0,0,0.0,False,False,CFC,0.748,valor_bom,0.0,0.0,0.0,62.9,neutro,0.0
+146894,João Bom,CHA,Atacante,6,2.0,0.0,0.0,0,0.0,False,True,BOT,-0.566,armadilha_leve,0.0,0.0,0.0,47.4,neutro,0.0
+102909,Luan,SAO,Meia,6,3.01,0.0,0.5,3,0.0,False,False,VAS,-0.524,armadilha_leve,0.743,0.5,0.375,52.5,neutro,0.29
+91251,Rodrigues,MIR,Zagueiro,6,4.11,0.0,2.0,1,0.0,False,False,INT,0.453,neutro,2.368,2.0,0.125,47.3,neutro,0.28
+93988,Breno Lopes,CFC,Atacante,7,9.5,1.21,4.64,10,9.5,True,True,CAM,0.499,neutro,4.716,1.44,1.0,41.9,neutro,3.95
+70449,Gabriel,VIT,Goleiro,6,5.6,0.0,2.2,2,0.0,False,True,COR,1.057,valor_bom,3.903,0.0,0.25,67.5,favoravel,1.32
+105157,Villagra,INT,Meia,7,5.6,-0.37,1.95,6,0.9,True,True,MIR,0.646,valor_bom,3.207,1.95,0.75,76.8,favoravel,3.69
+89256,Gerson,CRU,Meia,7,8.46,0.49,2.9,10,5.5,True,True,GRE,-0.21,neutro,3.456,2.9,1.0,67.3,neutro,4.65
+103388,Emmanuel Martínez,VIT,Meia,7,6.82,1.07,3.62,6,5.7,True,True,COR,0.908,valor_bom,3.923,3.62,0.75,41.9,neutro,2.47
+106708,Igor Formiga,MIR,Lateral,7,7.7,-0.37,5.0,9,2.7,True,False,INT,0.936,valor_bom,5.24,3.67,1.0,47.2,neutro,4.95
+69208,Gabriel Paulista,COR,Zagueiro,7,10.5,1.07,5.27,7,8.7,True,False,VIT,0.332,neutro,4.538,3.56,0.875,34.8,desfavoravel,2.76
+141614,Paulinho,SAO,Atacante,5,2.0,0.0,0.0,0,0.0,False,False,VAS,-0.566,armadilha_leve,0.0,0.0,0.0,51.9,neutro,0.0
+100342,Léo Andrade,REM,Zagueiro,6,4.79,0.0,2.95,4,0.0,False,False,RBB,0.314,neutro,2.592,2.95,0.5,44.9,neutro,1.16
+106302,Preciado,CAM,Lateral,6,7.95,0.0,4.58,6,0.0,False,False,CFC,0.691,valor_bom,5.112,3.58,0.75,62.8,neutro,4.82
+147864,Rafael Monti,REM,Atacante,6,3.56,0.0,0.0,1,0.0,False,False,RBB,0.06,neutro,1.851,0.0,0.125,46.3,neutro,0.21
+105089,Tetê,GRE,Atacante,6,9.9,-0.18,3.96,9,3.8,True,False,CRU,0.044,neutro,4.361,3.07,1.0,42.4,neutro,3.7
+147194,Bruninho,CAP,Meia,6,2.6,0.82,0.86,5,4.4,True,False,PAL,-0.072,neutro,0.844,0.86,0.625,40.2,neutro,0.42
+95362,Cassierra,CAM,Atacante,6,4.99,-0.24,0.43,8,-0.3,True,False,CFC,-1.301,armadilha_leve,1.256,0.43,1.0,45.5,neutro,1.14
+71536,Luiz Gustavo,CAP,Meia,7,5.9,-0.18,2.98,8,2.0,True,False,PAL,0.904,valor_bom,3.565,2.35,1.0,40.2,neutro,2.87
+110633,Gustavo,CFC,Meia,6,4.0,0.0,0.0,0,0.0,False,True,CAM,-2.043,armadilha_forte,0.0,0.0,0.0,42.1,neutro,0.0
+142265,Dell,BAH,Atacante,6,1.82,0.0,0.65,4,0.0,False,False,FLA,0.397,neutro,0.801,0.65,0.5,40.4,neutro,0.32
+89918,Everton Galdino,MIR,Atacante,6,2.85,0.0,0.63,4,0.0,False,False,INT,-0.496,neutro,0.795,0.63,0.5,31.4,desfavoravel,0.25
+105842,Edu,VIT,Zagueiro,5,4.13,0.0,1.5,1,0.0,False,True,COR,0.38,neutro,2.312,1.5,0.125,67.2,favoravel,0.39
+123689,Milans,COR,Lateral,6,8.25,0.0,5.55,2,0.0,False,False,VIT,1.001,valor_bom,5.518,4.05,0.25,34.6,desfavoravel,0.95
+146374,Gilberto,CAP,Lateral,2,7.09,2.81,8.8,2,11.4,True,False,PAL,0.172,neutro,4.268,5.8,0.25,19.7,desfavoravel,0.42
+122554,Freitas,REM,Meia,6,1.0,0.0,0.0,0,0.0,False,False,RBB,0.839,valor_bom,0.0,0.0,0.0,46.4,neutro,0.0
+114308,Cufré,REM,Lateral,6,3.45,0.0,-0.3,1,0.0,False,False,RBB,-0.081,neutro,1.906,0.0,0.125,44.8,neutro,0.21
+86859,José Welison,REM,Meia,6,3.06,-0.23,1.36,8,3.5,True,False,RBB,-0.169,neutro,1.097,1.36,1.0,46.4,neutro,1.02
+113125,Picco,REM,Meia,7,7.15,0.0,4.42,9,0.0,False,False,RBB,1.189,valor_bom,4.293,3.86,1.0,46.4,neutro,3.98
+68952,Marinho,VIT,Atacante,5,5.91,0.0,1.8,2,0.0,False,True,COR,-0.952,armadilha_leve,2.026,1.8,0.25,41.5,neutro,0.42
+107859,Fintelman,VIT,Goleiro,6,2.0,0.0,0.0,0,0.0,False,True,COR,-0.393,neutro,0.0,0.0,0.0,67.5,neutro,0.0
+97906,Riccieli,VIT,Zagueiro,6,4.85,0.0,3.5,2,0.0,False,True,COR,0.325,neutro,2.631,2.0,0.25,67.2,favoravel,0.88
+99789,Brenner,VAS,Atacante,6,7.51,-0.09,3.13,7,1.5,True,True,SAO,0.421,neutro,4.027,1.99,0.875,43.2,neutro,3.04
+146623,Luis Pacheco,PAL,Meia,6,2.54,0.0,0.0,1,0.0,False,True,CAP,-0.133,neutro,0.742,0.0,0.125,72.4,neutro,0.13
+141628,Pablo Lúcio,FLA,Meia,6,2.0,0.0,0.0,0,0.0,False,True,BAH,-0.436,neutro,0.0,0.0,0.0,53.1,neutro,0.0
+140496,Tiaguinho,GRE,Meia,6,1.0,0.0,0.0,0,0.0,False,False,CRU,0.839,valor_bom,0.0,0.0,0.0,42.8,neutro,0.0
+90370,Matheus Pereira,COR,Meia,2,3.76,0.0,1.07,6,0.0,False,False,VIT,-0.175,neutro,1.542,1.07,0.75,16.7,desfavoravel,0.39
+145404,Arthur,PAL,Lateral,7,3.37,0.26,2.96,7,5.0,True,True,CAP,0.673,valor_bom,2.545,2.1,0.875,63.1,favoravel,2.81
+110598,Marino Hinestroza,VAS,Atacante,6,6.24,-0.28,2.25,7,1.5,True,True,SAO,0.477,neutro,3.616,2.25,0.875,43.2,neutro,2.73
+147088,Cissé,CAM,Meia,6,1.42,0.0,1.1,3,0.0,False,False,CFC,1.247,valor_bom,0.907,1.1,0.375,45.4,neutro,0.31
+130608,Riquelme Fillipi,PAL,Atacante,6,0.71,0.0,-0.3,1,0.0,False,True,CAP,1.767,valor_oculto,0.746,0.0,0.125,73.4,favoravel,0.14
+87552,Vitor Bueno,REM,Meia,5,10.04,0.0,5.37,7,0.0,False,False,RBB,0.709,valor_bom,4.72,3.23,0.875,46.4,neutro,3.83
+145436,Belé,PAL,Atacante,6,3.0,0.0,0.0,0,0.0,False,True,CAP,-1.385,armadilha_leve,0.0,0.0,0.0,73.4,neutro,0.0
+141551,Índio,CAM,Meia,6,1.0,0.0,0.0,0,0.0,False,False,CFC,0.839,valor_bom,0.0,0.0,0.0,45.4,neutro,0.0
+107075,Yuri Sena,VIT,Goleiro,6,1.0,0.0,0.0,0,0.0,False,True,COR,0.713,valor_bom,0.0,0.0,0.0,67.5,favoravel,0.0
+101729,Fabinho,CFC,Atacante,6,1.51,0.0,-0.03,6,0.0,False,True,CAM,0.421,neutro,0.488,0.0,0.75,41.9,neutro,0.31
+130906,Riquelme,CAP,Meia,6,0.71,0.0,-0.3,1,0.0,False,False,PAL,2.118,valor_oculto,0.708,0.0,0.125,40.2,neutro,0.07
+104134,Fabri,VIT,Atacante,6,5.57,0.0,3.32,5,0.0,False,True,COR,-0.285,neutro,2.559,2.32,0.625,41.5,neutro,1.33
+94930,Lucas Paquetá,FLA,Meia,7,14.26,-1.05,5.91,8,2.7,True,True,BAH,0.035,neutro,5.03,4.66,1.0,53.1,neutro,5.34
+124270,Allex,INT,Meia,6,1.77,0.0,2.3,1,0.0,False,True,MIR,0.922,valor_bom,0.997,2.3,0.125,76.8,favoravel,0.19
+107093,Luciano Juba,BAH,Lateral,7,11.97,1.84,7.56,10,11.5,True,False,FLA,0.924,valor_bom,6.649,3.46,1.0,34.2,neutro,4.55
+130847,Zé Breno,VIT,Meia,6,2.0,0.0,0.0,0,0.0,False,True,COR,-0.436,neutro,0.0,0.0,0.0,41.9,neutro,0.0
+147788,Arthur Izaque,BOT,Atacante,6,1.0,0.0,0.0,0,0.0,False,False,CHA,0.588,valor_bom,0.0,0.0,0.0,75.0,neutro,0.0
+146632,Alisson,INT,Lateral,6,1.0,0.0,0.0,0,0.0,False,True,MIR,0.924,valor_bom,0.0,0.0,0.0,60.5,favoravel,0.0
+147202,João Bezerra,INT,Atacante,6,1.0,0.0,0.0,0,0.0,False,True,MIR,0.588,valor_bom,0.0,0.0,0.0,77.3,favoravel,0.0
+142086,Kauan Toledo,BOT,Atacante,6,1.0,0.0,0.0,0,0.0,False,False,CHA,0.588,valor_bom,0.0,0.0,0.0,75.0,neutro,0.0
+118844,Kaio César,COR,Atacante,6,10.83,0.0,9.3,1,0.0,False,False,VIT,0.743,valor_bom,5.31,4.3,0.125,16.6,desfavoravel,0.22
+142638,João Victor,INT,Atacante,6,1.0,0.0,0.0,0,0.0,False,True,MIR,0.588,valor_bom,0.0,0.0,0.0,77.3,favoravel,0.0
+145036,Fernando Pradella,SAN,Atacante,6,0.82,0.0,0.0,1,0.0,False,True,FLU,1.622,valor_oculto,0.779,0.0,0.125,52.2,neutro,0.1
+141615,Pedro Ferreira,SAO,Meia,6,1.04,0.0,0.5,1,0.0,False,False,VAS,1.662,valor_oculto,0.797,0.5,0.125,52.5,neutro,0.1
+147883,João Vitor,VAS,Atacante,6,1.18,0.0,0.67,3,0.0,False,True,SAO,1.148,valor_bom,0.82,0.67,0.375,43.2,neutro,0.27
+147782,Arthur Novaes,BOT,Meia,6,1.0,0.0,0.0,0,0.0,False,False,CHA,0.839,valor_bom,0.0,0.0,0.0,75.9,neutro,0.0
+129666,JP,VAS,Meia,2,1.41,0.16,0.95,2,1.0,True,True,SAO,1.204,valor_bom,0.857,0.95,0.25,43.3,neutro,0.19
+101715,Alerrandro,INT,Atacante,6,6.17,0.15,2.62,10,2.0,True,True,MIR,-0.708,armadilha_leve,2.381,1.82,1.0,77.3,neutro,3.68
+130698,Kadu,BOT,Lateral,6,1.0,0.0,0.0,0,0.0,False,False,CHA,0.924,valor_bom,0.0,0.0,0.0,57.4,neutro,0.0
+141126,Pedro Cobra,CAM,Goleiro,6,1.0,0.0,0.0,0,0.0,False,False,CFC,0.713,valor_bom,0.0,0.0,0.0,63.2,neutro,0.0
+108131,Garcez,CHA,Atacante,5,4.04,-0.25,1.83,3,0.7,True,True,BOT,-0.065,neutro,2.014,1.83,0.375,47.4,neutro,0.72
+141991,Tico,REM,Atacante,6,1.0,0.0,0.0,0,0.0,False,False,RBB,0.588,valor_bom,0.0,0.0,0.0,46.3,neutro,0.0
+148103,Rafael Soares,REM,Meia,6,1.0,0.0,0.0,0,0.0,False,False,RBB,0.839,valor_bom,0.0,0.0,0.0,46.4,neutro,0.0
+148109,Filipe Lima,REM,Atacante,6,1.0,0.0,0.0,0,0.0,False,False,RBB,0.588,valor_bom,0.0,0.0,0.0,46.3,neutro,0.0
+90608,Chico da Costa,CRU,Atacante,6,4.47,0.0,1.76,5,0.0,False,True,GRE,-0.352,neutro,1.959,0.76,0.625,67.9,neutro,1.66
+123738,Herrera,RBB,Atacante,6,4.89,0.0,2.8,8,0.0,False,True,REM,-0.089,neutro,2.441,1.8,1.0,69.7,neutro,3.4
+95550,Pedro Henrique,VIT,Atacante,6,3.0,0.0,0.0,0,0.0,False,True,COR,-1.385,armadilha_leve,0.0,0.0,0.0,41.5,neutro,0.0
+112939,Catarozzi,REM,Meia,6,5.41,0.0,0.9,1,0.0,False,False,RBB,-0.84,armadilha_leve,1.786,0.9,0.125,46.4,neutro,0.21
+122413,Pablo Baianinho,VIT,Meia,6,1.0,0.0,0.0,0,0.0,False,True,COR,0.839,valor_bom,0.0,0.0,0.0,41.9,neutro,0.0
+130438,Diego,INT,Goleiro,6,1.0,0.0,0.0,0,0.0,False,True,MIR,0.713,valor_bom,0.0,0.0,0.0,60.8,favoravel,0.0
+99815,Arias,PAL,Meia,7,15.99,0.0,8.29,7,0.0,False,True,CAP,0.866,valor_bom,6.082,6.15,0.875,72.4,favoravel,7.71
+116065,Cuiabano,VAS,Lateral,7,13.14,0.22,8.67,7,5.8,True,True,SAO,0.955,valor_bom,6.985,4.96,0.875,56.6,neutro,6.92
+147546,Roger,GRE,Meia,6,1.5,0.0,1.2,2,0.0,False,False,CRU,1.145,valor_bom,0.907,1.2,0.25,42.8,neutro,0.19
+108162,Nardoni,GRE,Meia,6,7.01,-0.39,2.41,8,0.9,True,False,CRU,0.118,neutro,3.28,1.79,1.0,42.8,neutro,2.81
+82407,Chico Kim,MIR,Meia,6,4.0,0.0,0.0,0,0.0,False,False,INT,-2.043,armadilha_forte,0.0,0.0,0.0,31.7,desfavoravel,0.0
+148152,Ararat,CFC,Meia,6,4.0,0.0,0.0,0,0.0,False,True,CAM,-2.043,armadilha_forte,0.0,0.0,0.0,42.1,neutro,0.0
+143463,Wesley Natã,FLU,Atacante,6,1.0,0.0,0.0,0,0.0,False,False,SAN,0.588,valor_bom,0.0,0.0,0.0,42.1,neutro,0.0
+148215,Djhordney,SAO,Meia,6,0.64,0.0,-1.6,1,0.0,False,False,VAS,2.09,valor_oculto,0.564,0.0,0.125,52.5,neutro,0.07
+148124,Vinicius,CHA,Zagueiro,6,2.0,0.0,0.0,0,0.0,False,True,BOT,-0.498,neutro,0.0,0.0,0.0,28.5,neutro,0.0
+110144,Spinelli,VAS,Atacante,6,5.49,-0.44,2.35,6,0.0,True,True,SAO,-0.605,armadilha_leve,2.197,1.02,0.75,43.2,neutro,1.42
+97911,Lucas Silva,VIT,Atacante,6,3.63,0.0,0.0,1,0.0,False,True,COR,0.016,neutro,1.851,0.0,0.125,41.5,neutro,0.19
+146430,Justino,BOT,Zagueiro,6,2.74,0.0,1.34,3,0.0,False,False,CHA,0.735,valor_bom,1.748,1.34,0.375,57.5,neutro,0.75
+146410,Marquinhos,BOT,Meia,6,0.85,0.0,0.0,1,0.0,False,False,CHA,1.908,valor_oculto,0.742,0.0,0.125,75.9,neutro,0.14
+143173,Leonel Pérez,GRE,Meia,6,4.78,0.0,1.93,3,0.0,False,False,CRU,-0.382,neutro,1.906,1.93,0.375,42.8,neutro,0.61
+141165,Enzo Vagner,CFC,Atacante,6,1.04,0.0,0.5,1,0.0,False,True,CAM,1.352,valor_bom,0.835,0.5,0.125,41.9,neutro,0.09
+148206,Nadson,SAN,Atacante,6,1.0,0.0,0.0,0,0.0,False,True,FLU,0.588,valor_bom,0.0,0.0,0.0,52.2,neutro,0.0
+130393,Luiz Gustavo,BAH,Zagueiro,6,1.0,0.0,0.0,0,0.0,False,False,FLA,0.748,valor_bom,0.0,0.0,0.0,34.3,neutro,0.0
+93371,Rodrigo Rodrigues,CFC,Atacante,5,4.0,0.0,0.0,0,0.0,False,True,CAM,-2.021,armadilha_forte,0.0,0.0,0.0,41.9,neutro,0.0
+97899,Matheus Bahia,INT,Lateral,7,6.59,0.0,2.6,4,0.0,False,True,MIR,-0.989,armadilha_leve,2.957,1.1,0.5,60.5,neutro,1.79
+104036,Labyad,COR,Meia,6,5.24,0.0,1.43,3,0.0,False,False,VIT,-0.775,armadilha_leve,1.769,1.43,0.375,16.7,desfavoravel,0.22
+124386,Kainã,CHA,Goleiro,6,1.0,0.0,0.0,0,0.0,False,True,BOT,0.713,valor_bom,0.0,0.0,0.0,28.7,neutro,0.0
+131763,Yuri Leles,RBB,Meia,6,2.0,0.0,0.0,0,0.0,False,True,REM,-0.436,neutro,0.0,0.0,0.0,70.5,neutro,0.0
+109987,Medina,BOT,Meia,6,6.33,0.16,1.2,4,4.0,True,False,CHA,0.272,neutro,3.167,1.2,0.5,75.9,neutro,2.4
+131964,Jhoan Hernández,BOT,Lateral,6,3.69,-0.31,0.0,1,0.0,True,False,CHA,-0.244,neutro,1.94,0.0,0.125,57.4,neutro,0.28
+145563,João Ananias,SAN,Zagueiro,6,1.0,0.0,0.0,0,0.0,False,True,FLU,0.748,valor_bom,0.0,0.0,0.0,46.7,neutro,0.0
+105048,Jajá,REM,Atacante,7,4.99,0.25,3.89,8,2.6,True,False,RBB,0.398,neutro,2.986,2.89,1.0,46.3,neutro,2.77
+101807,Oliva,SAN,Meia,7,7.05,-1.15,4.23,6,0.2,True,True,FLU,1.108,valor_bom,4.185,3.4,0.75,52.7,neutro,3.31
+104666,Moisés,SAN,Atacante,7,6.88,1.61,4.06,7,9.5,True,True,FLU,1.066,valor_bom,4.461,1.06,0.875,52.2,neutro,4.08
+141595,Gabriel Mec,GRE,Atacante,6,1.35,-0.13,0.79,8,0.2,True,False,CRU,0.947,valor_bom,0.833,0.79,1.0,42.4,neutro,0.71
+142261,Jeferson,GRE,Atacante,6,1.0,0.0,0.0,0,0.0,False,False,CRU,0.588,valor_bom,0.0,0.0,0.0,42.4,neutro,0.0
+133671,Gustavo Reis,RBB,Goleiro,6,1.0,0.0,0.0,0,0.0,False,True,REM,0.713,valor_bom,0.0,0.0,0.0,73.2,favoravel,0.0
+147875,Daniel Silva,FLA,Zagueiro,6,1.0,0.0,0.0,0,0.0,False,True,BAH,0.748,valor_bom,0.0,0.0,0.0,43.1,neutro,0.0
+147545,Jefinho,GRE,Meia,6,1.46,0.0,1.5,1,0.0,False,False,CRU,1.197,valor_bom,0.908,1.5,0.125,42.8,neutro,0.1
+126189,Tomás Pérez,CAM,Meia,7,3.82,-0.68,1.63,6,-1.2,True,False,CFC,0.052,neutro,1.782,1.63,0.75,45.4,neutro,1.21
+92747,Eduardo Domínguez,CAM,Técnico,7,10.75,-0.86,5.98,7,1.68,True,False,CFC,1.3,valor_bom,6.239,5.98,0.875,45.5,neutro,4.97
+93368,Lucas Veríssimo,SAN,Zagueiro,7,11.14,0.83,6.57,4,7.7,True,True,FLU,0.44,neutro,4.789,4.32,0.5,46.7,neutro,2.24
+132553,Jemmes,FLU,Zagueiro,7,7.15,0.33,3.78,9,3.8,True,False,SAN,0.623,valor_bom,3.836,2.78,1.0,50.8,neutro,3.9
+143465,Keven Samuel,FLU,Atacante,6,1.0,0.0,0.0,0,0.0,False,False,SAN,0.588,valor_bom,0.0,0.0,0.0,42.1,neutro,0.0
+100804,Tchamba,REM,Zagueiro,7,5.13,-0.59,2.9,7,2.3,True,False,RBB,0.192,neutro,2.641,2.47,0.875,44.9,neutro,2.08
+139200,Pedro Kauã,INT,Zagueiro,6,1.0,0.0,0.0,0,0.0,False,True,MIR,0.748,valor_bom,0.0,0.0,0.0,60.6,favoravel,0.0
+142275,Luiz Felipe,FLA,Meia,6,1.0,0.0,0.0,0,0.0,False,True,BAH,0.839,valor_bom,0.0,0.0,0.0,53.1,neutro,0.0
+124219,Millán,FLU,Zagueiro,6,6.0,0.0,0.0,0,0.0,False,False,SAN,-3.103,armadilha_forte,0.0,0.0,0.0,50.8,neutro,0.0
+88963,Leonardo Jardim,FLA,Técnico,7,13.57,0.09,7.14,7,7.31,True,True,BAH,0.039,neutro,6.78,7.14,0.875,52.8,neutro,6.26
+93834,Keiller,CFC,Goleiro,6,4.0,0.0,0.0,0,0.0,False,True,CAM,-1.788,armadilha_forte,0.0,0.0,0.0,54.6,neutro,0.0
+37457,Léo Condé,REM,Técnico,7,7.91,-0.12,4.49,7,4.69,True,False,RBB,-0.466,neutro,4.578,4.49,0.875,46.4,neutro,3.72
+141400,Huguinho,BOT,Meia,6,3.0,0.0,0.0,0,0.0,False,False,CHA,-1.341,armadilha_leve,0.0,0.0,0.0,75.9,neutro,0.0
+71898,Gabriel Pires,MIR,Meia,6,5.77,-0.86,3.63,6,1.2,True,False,INT,1.366,valor_bom,3.927,2.8,0.75,31.7,desfavoravel,1.87
+41929,Renato Gaúcho,VAS,Técnico,7,9.95,-0.3,5.18,7,3.29,True,True,SAO,-1.185,armadilha_leve,5.236,5.18,0.875,43.4,neutro,3.98
+133690,Bruno Lopes,VAS,Atacante,6,1.0,0.0,0.0,0,0.0,False,True,SAO,0.588,valor_bom,0.0,0.0,0.0,43.2,neutro,0.0
+124424,Rodrigo Castillo,FLU,Atacante,6,6.95,-0.04,3.22,7,0.8,True,False,SAN,0.656,valor_bom,4.069,0.93,0.875,42.1,neutro,3.0
+81720,Lingard,COR,Atacante,6,4.48,-0.42,-0.07,3,0.0,True,False,VIT,-0.812,armadilha_leve,1.496,0.0,0.375,16.6,desfavoravel,0.19
+142260,Bernardo Zortea,GRE,Meia,6,1.11,0.0,0.5,2,0.0,False,False,CRU,1.523,valor_oculto,0.767,0.5,0.25,42.8,neutro,0.16
+79437,Roger Machado,SAO,Técnico,7,10.35,-0.91,4.92,7,1.87,True,False,VAS,-2.137,armadilha_forte,5.115,4.92,0.875,52.2,neutro,4.67
+115537,Marcos Victor,BAH,Zagueiro,6,3.0,0.0,0.0,0,0.0,False,False,FLA,-1.383,armadilha_leve,0.0,0.0,0.0,34.3,neutro,0.0
+147268,Anderson Pato,VIT,Atacante,6,3.12,0.0,1.38,4,0.0,False,True,COR,-0.443,neutro,1.045,1.38,0.5,41.5,neutro,0.43
+121823,Kauê,COR,Goleiro,6,2.77,0.0,4.8,1,0.0,False,False,VIT,1.825,valor_oculto,3.079,4.8,0.125,35.0,desfavoravel,0.27
+84268,Georgemy,MIR,Goleiro,6,3.0,0.0,0.0,0,0.0,False,False,INT,-1.179,armadilha_leve,0.0,0.0,0.0,47.6,neutro,0.0
+141594,Pedro Gabriel,GRE,Lateral,7,4.0,0.25,3.4,3,3.3,True,False,CRU,0.127,neutro,2.514,1.4,0.375,30.7,desfavoravel,0.58
+129661,Wendel,BAH,Meia,6,1.0,0.0,0.0,0,0.0,False,False,FLA,0.839,valor_bom,0.0,0.0,0.0,40.8,neutro,0.0
+145659,Nicolas,SAO,Lateral,6,2.79,0.0,5.0,1,0.0,False,False,VAS,1.162,valor_bom,2.495,2.0,0.125,46.5,neutro,0.29
+140726,David Martins,BAH,Meia,6,0.72,0.0,-0.15,2,0.0,False,False,FLA,2.021,valor_oculto,0.637,0.0,0.25,40.8,neutro,0.13
+130232,Caio Roque,BOT,Lateral,7,5.72,-0.26,4.0,3,3.0,True,False,CHA,-0.082,neutro,3.371,2.33,0.375,57.4,neutro,1.45
+141752,Caio Valle,BOT,Meia,6,1.0,0.0,0.0,0,0.0,False,False,CHA,0.839,valor_bom,0.0,0.0,0.0,75.9,neutro,0.0
+122922,Wanderson Aranha,PAL,Goleiro,6,1.0,0.0,0.0,0,0.0,False,True,CAP,0.713,valor_bom,0.0,0.0,0.0,63.5,favoravel,0.0
+141184,Walace Falcão,VAS,Zagueiro,6,1.0,0.0,0.0,0,0.0,False,True,SAO,0.748,valor_bom,0.0,0.0,0.0,56.7,neutro,0.0
+95131,Gabriel Taliari,REM,Atacante,7,9.59,-0.73,6.8,5,2.9,True,False,RBB,1.32,valor_bom,5.576,3.6,0.625,46.3,neutro,3.23
+148125,Ryan Augusto,RBB,Lateral,6,4.35,-0.39,4.65,4,3.5,True,True,REM,0.395,neutro,3.005,3.9,0.5,72.8,favoravel,2.19
+143153,Tarzia,VIT,Atacante,7,1.95,-0.94,0.6,5,-1.3,True,True,COR,0.238,neutro,0.77,0.6,0.625,41.5,neutro,0.4
+110605,Vinícius Balieiro,CHA,Meia,6,3.61,0.0,0.0,1,0.0,False,True,BOT,0.085,neutro,1.686,0.0,0.125,47.9,neutro,0.2
+42411,Cuca,SAN,Técnico,7,11.0,0.91,6.35,4,8.65,True,True,FLU,1.65,valor_oculto,6.427,6.35,0.5,52.5,neutro,3.37
+142257,Luis Eduardo,GRE,Zagueiro,6,2.0,0.0,0.0,0,0.0,False,False,CRU,-0.498,neutro,0.0,0.0,0.0,30.9,desfavoravel,0.0
+107871,Wermeson,CHA,Meia,6,2.0,0.0,0.0,0,0.0,False,True,BOT,-0.436,neutro,0.0,0.0,0.0,47.9,neutro,0.0
+102877,Gabriel Poveda,REM,Atacante,6,4.01,-0.62,0.67,3,0.0,True,False,RBB,-0.36,neutro,1.697,0.67,0.375,46.3,neutro,0.59
+127273,Artur Jorge,CRU,Técnico,7,12.71,0.42,6.75,3,6.78,True,True,GRE,0.101,neutro,6.543,6.75,0.375,66.6,favoravel,3.27
+147192,Claudinho,CAP,Lateral,6,1.0,0.0,0.0,0,0.0,False,False,PAL,0.924,valor_bom,0.0,0.0,0.0,19.7,desfavoravel,0.0
+143252,Gean,VIT,Lateral,6,1.0,0.0,0.0,0,0.0,False,True,COR,0.924,valor_bom,0.0,0.0,0.0,67.1,favoravel,0.0
+147560,Caio Suassuna,BAH,Atacante,6,2.0,0.0,0.0,0,0.0,False,False,FLA,-0.566,armadilha_leve,0.0,0.0,0.0,40.4,neutro,0.0
+107256,Zé Vitor,VIT,Meia,6,4.41,0.13,2.53,3,2.0,True,True,COR,0.007,neutro,2.069,2.53,0.375,41.9,neutro,0.65
+123005,Sidney,BAH,Meia,6,1.0,0.0,0.0,0,0.0,False,False,FLA,0.839,valor_bom,0.0,0.0,0.0,40.8,neutro,0.0
+103347,Matheus Alexandre,REM,Lateral,6,6.25,0.0,6.5,1,0.0,False,False,RBB,-0.223,neutro,3.509,3.5,0.125,44.8,neutro,0.39
+130209,Renê,VIT,Atacante,6,5.52,-0.38,2.53,3,1.7,True,True,COR,-0.611,armadilha_leve,2.205,2.53,0.375,41.5,neutro,0.69
+149715,Rafael Gonzaga,SAN,Lateral,7,2.0,0.0,0.0,0,0.0,False,True,FLU,-0.62,armadilha_leve,0.0,0.0,0.0,46.6,neutro,0.0
+121811,Da Silva,CHA,Meia,6,3.0,0.0,0.0,0,0.0,False,True,BOT,-1.341,armadilha_leve,0.0,0.0,0.0,47.9,neutro,0.0
+123016,David Braga,REM,Meia,7,4.64,0.81,3.13,3,5.0,True,False,RBB,0.059,neutro,2.233,3.13,0.375,46.4,neutro,0.78
+147089,Cauã Soares,CAM,Atacante,6,1.59,0.59,1.7,1,1.7,True,False,CFC,0.803,valor_bom,0.968,1.7,0.125,45.5,neutro,0.11
+101820,Mayk,REM,Lateral,7,6.73,-0.98,4.23,3,0.9,True,False,RBB,-0.547,armadilha_leve,3.434,3.23,0.375,44.8,neutro,1.15
+130282,Anthony,BOT,Zagueiro,6,3.0,0.0,0.0,0,0.0,False,False,CHA,-1.383,armadilha_leve,0.0,0.0,0.0,57.5,neutro,0.0
+97905,Matheus Aurélio,CHA,Goleiro,6,2.0,0.0,0.0,0,0.0,False,True,BOT,-0.393,neutro,0.0,0.0,0.0,28.7,neutro,0.0
+124264,Kauan Jesus,INT,Goleiro,6,1.0,0.0,0.0,0,0.0,False,True,MIR,0.713,valor_bom,0.0,0.0,0.0,60.8,favoravel,0.0
+141405,Avellar,VAS,Lateral,6,1.49,0.0,1.5,1,0.0,False,True,SAO,2.345,valor_oculto,2.106,1.5,0.125,56.6,neutro,0.3
+94034,Kevin Ramírez,CHA,Atacante,6,3.19,0.0,1.2,1,0.0,False,True,BOT,-0.621,armadilha_leve,0.913,1.2,0.125,47.4,neutro,0.11
+149990,Franclim Carvalho,BOT,Técnico,7,12.83,1.09,5.06,1,5.06,True,False,CHA,-0.849,armadilha_leve,6.309,5.06,0.125,74.9,neutro,1.18
+148717,Tetê,SAO,Atacante,6,0.66,-0.25,-0.65,2,-1.3,True,False,VAS,1.68,valor_oculto,0.571,0.0,0.25,51.9,neutro,0.15
+130309,Rodrigo Falcão,SAN,Goleiro,6,1.0,0.0,0.0,0,0.0,False,True,FLU,0.713,valor_bom,0.0,0.0,0.0,47.0,neutro,0.0
+107771,Fábio Matias,CHA,Técnico,7,7.66,0.26,2.11,1,2.11,True,True,BOT,-0.771,armadilha_leve,4.372,2.11,0.125,47.9,neutro,0.52
+149994,Jhuan Nunes,RBB,Atacante,6,1.83,0.83,2.3,1,2.3,True,True,REM,0.617,valor_bom,1.035,2.3,0.125,69.7,favoravel,0.18
+150197,Osorio,SAO,Zagueiro,6,1.0,0.0,0.0,0,0.0,False,False,VAS,0.748,valor_bom,0.0,0.0,0.0,46.7,neutro,0.0
+130048,Noriega,GRE,Zagueiro,7,8.4,0.98,5.21,8,6.7,True,False,CRU,0.969,valor_bom,4.554,3.08,1.0,30.9,desfavoravel,2.81
+141406,Andrey Fernandes,VAS,Atacante,6,1.41,0.0,1.7,1,0.0,False,True,SAO,1.008,valor_bom,0.968,1.7,0.125,43.2,neutro,0.1
+149993,Iago Machado,COR,Zagueiro,6,1.0,0.0,0.0,0,0.0,False,False,VIT,0.748,valor_bom,0.0,0.0,0.0,34.8,desfavoravel,0.0
+149991,David,CFC,Atacante,6,1.0,0.0,0.0,0,0.0,False,True,CAM,0.588,valor_bom,0.0,0.0,0.0,41.9,neutro,0.0
+109573,Martinelli,FLU,Meia,3,5.25,-0.59,1.97,11,-1.9,True,False,SAN,-0.591,armadilha_leve,1.939,1.52,1.0,42.5,neutro,1.65
+116137,João Moreira,SAO,Lateral,6,4.0,0.0,0.0,0,0.0,False,False,VAS,-2.566,armadilha_forte,0.0,0.0,0.0,46.5,neutro,0.0
+101254,Alef Manga,REM,Atacante,7,8.67,0.4,5.22,11,4.6,True,False,RBB,1.06,valor_bom,5.048,2.4,1.0,46.3,neutro,4.67
+106593,Villalba,CRU,Zagueiro,6,6.65,-0.56,2.43,8,0.0,True,True,GRE,0.083,neutro,3.164,1.68,1.0,74.2,favoravel,4.7
+97810,Erick,VIT,Atacante,7,8.82,0.32,4.44,9,5.6,True,True,COR,0.591,valor_bom,4.615,2.44,1.0,41.5,neutro,3.83
+141795,Kauan Coutinho,VIT,Zagueiro,6,1.0,0.0,0.0,0,0.0,False,True,COR,0.748,valor_bom,0.0,0.0,0.0,67.2,favoravel,0.0
+104758,Enzo Díaz,SAO,Lateral,7,9.06,-0.79,4.73,8,1.5,True,False,VAS,0.255,neutro,5.12,3.73,1.0,46.5,neutro,4.76
+130233,Iuri,BAH,Goleiro,6,1.0,0.0,0.0,0,0.0,False,False,FLA,0.713,valor_bom,0.0,0.0,0.0,34.5,neutro,0.0
+92171,Arthur Cabral,BOT,Atacante,7,10.93,1.44,6.33,7,11.7,True,False,CHA,0.925,valor_bom,5.52,2.19,0.875,75.0,neutro,7.24
+104502,Christian,CRU,Meia,7,10.01,-0.04,6.29,11,9.7,True,True,GRE,1.46,valor_bom,5.389,4.02,1.0,67.3,favoravel,7.25
+68685,Alan Patrick,INT,Meia,7,7.78,-0.04,4.5,9,2.3,True,True,MIR,1.001,valor_bom,4.335,3.39,1.0,76.8,favoravel,6.66
+103056,Gabriel Brazão,SAN,Goleiro,7,6.95,1.67,3.36,10,8.9,True,True,FLU,0.445,neutro,3.791,1.86,1.0,47.0,neutro,3.56
+69012,Santos,CAP,Goleiro,7,9.24,0.66,4.2,9,6.3,True,False,PAL,0.188,neutro,4.261,2.53,1.0,20.0,desfavoravel,1.7
+42234,Cássio,CRU,Goleiro,5,6.89,0.0,1.32,5,0.0,False,True,GRE,-0.105,neutro,3.172,1.32,0.625,74.5,neutro,2.95
+72294,Everson,CAM,Goleiro,7,9.78,-0.51,5.38,11,0.3,True,False,CFC,0.673,valor_bom,4.938,3.56,1.0,63.2,neutro,6.24
+105949,Rochet,INT,Goleiro,7,7.26,-0.04,3.68,10,6.3,True,True,MIR,0.504,valor_bom,3.968,2.18,1.0,60.8,favoravel,4.83
+68928,Rafael,SAO,Goleiro,7,8.35,-0.5,4.15,11,3.2,True,False,VAS,0.403,neutro,4.225,2.79,1.0,46.9,neutro,3.96
+63007,Neymar,SAN,Meia,7,19.91,-1.37,9.08,5,5.3,True,True,FLU,0.173,neutro,6.046,5.08,0.625,52.7,neutro,3.98
+61987,Alex Sandro,FLA,Lateral,2,9.05,-0.37,3.99,7,-0.4,True,True,BAH,-0.083,neutro,4.801,2.7,0.875,42.9,neutro,3.6
+96591,Renan Lodi,CAM,Lateral,7,10.18,-0.41,5.03,11,1.8,True,False,CFC,-0.027,neutro,5.232,3.76,1.0,62.8,neutro,6.57
+99274,Alexander Barboza,BOT,Zagueiro,7,10.62,-0.98,5.43,7,1.9,True,False,CHA,0.382,neutro,4.613,2.72,0.875,57.5,neutro,4.64
+101727,Matheuzinho,COR,Lateral,3,9.42,-0.41,3.91,9,1.6,True,False,VIT,-0.369,neutro,4.663,2.91,1.0,34.6,desfavoravel,3.23
+90768,Fabrício Bruno,CRU,Zagueiro,7,6.85,0.07,2.3,11,1.5,True,True,GRE,-0.205,neutro,2.973,1.75,1.0,74.2,neutro,4.41
+37656,Fábio,FLU,Goleiro,7,10.23,0.4,4.79,11,5.8,True,False,SAN,0.246,neutro,4.596,3.43,1.0,51.0,neutro,4.69
+87008,Léo Jardim,VAS,Goleiro,7,6.26,-0.61,2.23,11,1.6,True,True,SAO,0.068,neutro,3.114,2.23,1.0,56.9,neutro,3.54
+100898,Vitinho,BOT,Lateral,7,10.14,0.04,5.47,9,5.2,True,False,CHA,0.261,neutro,5.489,4.58,1.0,57.4,neutro,6.3
+91772,David Duarte,BAH,Zagueiro,7,5.4,-1.92,3.76,5,-1.5,True,False,FLA,0.377,neutro,2.931,1.96,0.625,34.3,neutro,1.26
+105436,Carrascal,FLA,Meia,3,9.54,-1.84,4.19,9,-0.9,True,True,BAH,0.245,neutro,4.171,3.08,1.0,53.1,neutro,4.43
+85425,João Paulo,BAH,Goleiro,6,6.19,0.0,1.7,1,0.0,False,False,FLA,0.947,valor_bom,4.037,1.7,0.125,34.5,neutro,0.35
+68996,Willian José,BAH,Atacante,6,8.29,-0.44,2.71,9,-0.6,True,False,FLA,-0.151,neutro,3.699,0.38,1.0,40.4,neutro,2.99
+80313,Gilberto,BAH,Lateral,6,7.16,-0.15,3.23,3,1.5,True,False,FLA,-1.046,armadilha_leve,3.161,1.56,0.375,34.2,neutro,0.81
+80196,Yago Pikachu,REM,Meia,7,4.93,0.0,1.86,10,0.0,False,False,RBB,-0.496,neutro,1.876,1.36,1.0,46.4,neutro,1.74
+109401,Erick Pulga,BAH,Atacante,7,7.86,-0.1,3.47,10,5.5,True,False,FLA,0.344,neutro,4.066,3.47,1.0,40.4,neutro,3.29
+91101,Ronaldo,BAH,Goleiro,5,7.57,0.0,5.03,7,0.0,False,False,FLA,1.039,valor_bom,4.656,2.89,0.875,34.5,neutro,2.81
+104783,Acevedo,BAH,Meia,7,6.95,0.47,4.26,9,5.6,True,False,FLA,1.173,valor_bom,4.208,4.26,1.0,40.8,neutro,3.43
+105373,Gabriel Xavier,BAH,Zagueiro,6,7.1,0.0,4.5,5,0.0,False,False,FLA,0.963,valor_bom,4.13,2.7,0.625,34.3,neutro,1.77
+98517,Jean Lucas,BAH,Meia,7,9.68,0.1,5.45,10,4.0,True,False,FLA,0.982,valor_bom,4.872,3.45,1.0,40.8,neutro,3.98
+113397,Cristian Olivera,BAH,Atacante,7,8.52,0.26,5.48,10,4.9,True,False,FLA,1.237,valor_bom,5.183,4.18,1.0,40.4,neutro,4.19
+101314,Ademir,BAH,Atacante,6,5.95,-0.28,2.11,10,1.0,True,False,FLA,-0.898,armadilha_leve,2.098,2.11,1.0,40.4,neutro,1.7
+97868,Iago,BAH,Lateral,6,5.57,0.0,5.0,1,0.0,False,False,FLA,-0.027,neutro,3.342,2.0,0.125,34.2,neutro,0.29
+105990,Santiago Mingo,BAH,Zagueiro,7,4.63,0.19,2.3,10,0.7,True,False,FLA,0.136,neutro,2.35,1.1,1.0,34.3,neutro,1.61
+98022,Erick,BAH,Meia,6,5.71,0.0,3.27,9,0.0,False,False,FLA,1.124,valor_bom,3.684,2.71,1.0,40.8,neutro,3.01
+123360,Cauly,SAO,Meia,6,6.07,-0.48,2.64,8,-0.3,True,False,VAS,0.639,valor_bom,3.395,2.02,1.0,52.5,neutro,3.56
+106323,Caio Alexandre,BAH,Meia,7,4.14,-0.23,1.22,8,-0.3,True,False,FLA,-0.399,neutro,1.558,1.22,1.0,40.8,neutro,1.27
+122994,Victor Nascimento,BAH,Goleiro,6,1.0,0.0,0.0,0,0.0,False,False,FLA,0.713,valor_bom,0.0,0.0,0.0,34.5,neutro,0.0
+98484,Kanu,BAH,Zagueiro,6,4.67,0.0,3.4,1,0.0,False,False,FLA,0.303,neutro,2.523,0.4,0.125,34.3,neutro,0.22
+123717,Zé Guilherme,BAH,Lateral,6,3.0,0.0,0.0,0,0.0,False,False,FLA,-1.716,armadilha_forte,0.0,0.0,0.0,34.2,neutro,0.0
+97341,Rogério Ceni,BAH,Técnico,7,11.19,0.27,6.01,10,5.87,True,False,FLA,0.665,valor_bom,6.212,6.01,1.0,41.0,neutro,5.09
+68806,Neto,BOT,Goleiro,6,8.62,0.0,4.43,3,0.0,False,False,CHA,0.447,neutro,4.357,2.76,0.375,57.7,neutro,1.89
+106822,Rodrigo Nestor,BAH,Meia,6,4.2,-0.29,0.77,6,-0.3,True,False,FLA,-0.596,armadilha_leve,1.414,0.77,0.75,40.8,neutro,0.87
+111829,Kayky,INT,Atacante,5,4.14,-0.64,1.6,4,0.0,True,True,MIR,-0.211,neutro,1.922,1.6,0.5,77.3,neutro,1.49
+72493,Alex Telles,BOT,Lateral,6,9.95,0.0,4.89,8,0.0,False,False,CHA,0.017,neutro,5.2,3.01,1.0,57.4,neutro,5.97
+111831,Matheus Martins,BOT,Atacante,6,6.09,-1.17,3.43,9,0.9,True,False,CHA,-0.269,neutro,2.796,1.65,1.0,75.0,neutro,4.19
+129663,Ruan Pablo,BAH,Atacante,5,2.0,0.0,0.0,0,0.0,False,False,FLA,-0.566,armadilha_leve,0.0,0.0,0.0,40.4,neutro,0.0
+141419,Fredi Lippert,BAH,Zagueiro,6,2.0,0.0,0.0,0,0.0,False,False,FLA,-0.498,neutro,0.0,0.0,0.0,34.3,neutro,0.0
+145379,Kauê Furquim,BAH,Atacante,6,2.0,0.0,0.0,0,0.0,False,False,FLA,-0.566,armadilha_leve,0.0,0.0,0.0,40.4,neutro,0.0
+107173,Michel Araújo,BAH,Meia,6,2.57,0.0,0.14,7,0.0,False,False,FLA,-0.417,neutro,0.51,0.14,0.875,40.8,neutro,0.36
+77485,Carrillo,COR,Meia,2,4.61,-0.46,1.29,7,-0.6,True,False,VIT,-0.613,armadilha_leve,1.613,1.29,0.875,16.7,desfavoravel,0.47
+98280,Bastos,BOT,Zagueiro,7,4.55,-0.08,1.0,4,2.4,True,False,CHA,-0.266,neutro,1.942,1.0,0.5,57.5,neutro,1.12
+107183,Léo Linck,BOT,Goleiro,6,6.0,0.0,0.0,0,0.0,False,False,CHA,-2.706,armadilha_forte,0.0,0.0,0.0,57.7,neutro,0.0
+69140,Allan,BOT,Meia,7,5.28,0.0,2.23,7,0.0,False,False,CHA,-0.48,neutro,2.052,2.23,0.875,75.9,neutro,2.73
+136955,Sanabria,BAH,Atacante,6,7.43,1.42,3.54,5,8.5,True,False,FLA,0.737,valor_bom,4.322,0.94,0.625,40.4,neutro,2.18
+107231,Danilo,BOT,Meia,7,15.83,1.53,8.97,8,11.1,True,False,CHA,1.426,valor_bom,6.56,4.6,1.0,75.9,neutro,9.96
+104191,Raul,BOT,Goleiro,7,4.55,-0.41,3.15,6,1.9,True,False,CHA,0.683,valor_bom,2.986,3.15,0.75,57.7,neutro,2.58
+96353,Joaquín Correa,BOT,Atacante,5,7.44,0.0,1.55,2,0.0,False,False,CHA,0.574,valor_bom,4.159,1.55,0.25,75.0,neutro,1.56
+129930,Cristhian Loor,BOT,Goleiro,6,2.0,0.0,0.0,0,0.0,False,False,CHA,-0.393,neutro,0.0,0.0,0.0,57.7,neutro,0.0
+124481,Mateo Ponte,BOT,Lateral,6,5.42,0.0,2.35,4,0.0,False,False,CHA,-0.441,neutro,2.873,1.6,0.5,57.4,neutro,1.65
+126013,Ythallo,BOT,Zagueiro,6,3.5,0.0,0.2,1,0.0,False,False,CHA,0.127,neutro,1.712,0.2,0.125,57.5,neutro,0.25
+105214,Santi Rodríguez,BOT,Meia,7,6.07,-0.49,2.08,6,-0.1,True,False,CHA,0.492,neutro,3.263,2.08,0.75,75.9,neutro,3.71
+108274,David Ricardo,BOT,Zagueiro,6,7.0,0.0,0.0,0,0.0,False,False,CHA,-3.513,armadilha_forte,0.0,0.0,0.0,57.5,neutro,0.0
+142890,Montoro,BOT,Meia,7,8.43,-0.57,4.1,8,2.8,True,False,CHA,0.544,valor_bom,4.125,2.22,1.0,75.9,neutro,6.26
+104693,Newton,BOT,Meia,6,4.7,0.0,2.42,5,0.0,False,False,CHA,-0.125,neutro,2.098,2.42,0.625,75.9,neutro,1.99
+95799,Artur,SAO,Atacante,6,8.79,-0.16,4.63,7,5.5,True,False,VAS,0.709,valor_bom,4.727,2.77,0.875,51.9,neutro,4.29
+98672,Savarino,FLU,Meia,7,10.05,1.23,4.98,9,9.1,True,False,SAN,0.561,valor_bom,4.59,3.31,1.0,42.5,neutro,3.9
+70360,Eduardo Sasha,RBB,Atacante,5,5.39,0.0,1.95,7,0.0,False,True,REM,-0.734,armadilha_leve,2.021,1.95,0.875,69.7,neutro,2.47
+39850,Vagner Mancini,RBB,Técnico,7,8.37,-0.6,5.53,11,4.29,True,True,REM,0.844,valor_bom,5.162,5.53,1.0,69.7,favoravel,7.2
+103179,Chris Ramos,BOT,Atacante,6,7.09,0.09,1.6,1,1.6,True,False,CHA,0.985,valor_bom,4.455,1.6,0.125,75.0,neutro,0.84
+78605,Gabriel,RBB,Meia,7,4.99,-0.13,2.62,9,2.1,True,True,REM,-0.079,neutro,2.28,2.06,1.0,70.5,neutro,3.21
+124757,Nathan Fernandes,BOT,Atacante,6,5.61,0.0,3.17,3,0.0,False,False,CHA,-0.479,neutro,2.379,1.5,0.375,75.0,neutro,1.34
+94067,Matheus Fernandes,RBB,Meia,7,4.56,-0.37,2.56,9,1.6,True,True,REM,0.12,neutro,2.248,2.56,1.0,70.5,favoravel,3.17
+87225,Pedro Henrique,RBB,Zagueiro,6,7.03,0.0,3.43,7,0.0,False,True,REM,0.498,neutro,3.68,2.14,0.875,72.9,favoravel,4.69
+91158,Kaio,BOT,Zagueiro,5,7.0,0.0,0.0,0,0.0,False,False,CHA,-3.513,armadilha_forte,0.0,0.0,0.0,57.5,neutro,0.0
+142484,Barrera,BOT,Meia,6,5.01,-0.09,2.0,7,1.6,True,False,CHA,-0.461,neutro,1.945,2.0,0.875,75.9,neutro,2.58
+94968,Juninho Capixaba,RBB,Lateral,7,14.21,-0.23,8.62,10,6.2,True,True,REM,0.948,valor_bom,7.238,5.22,1.0,72.8,favoravel,10.54
+146375,Kadir,BOT,Atacante,6,5.17,0.0,1.95,2,0.0,False,False,CHA,-0.6,armadilha_leve,2.056,1.95,0.25,75.0,neutro,0.77
+142877,Villalba,BOT,Atacante,6,5.05,-1.7,2.78,5,0.0,True,False,CHA,-0.254,neutro,2.351,1.18,0.625,75.0,neutro,2.2
+93882,Cleiton,RBB,Goleiro,6,6.19,0.0,2.56,7,0.0,False,True,REM,0.455,neutro,3.504,1.13,0.875,73.2,favoravel,4.49
+143072,Gabriel Abdias,BOT,Lateral,5,3.0,0.0,0.0,0,0.0,False,False,CHA,-1.716,armadilha_forte,0.0,0.0,0.0,57.4,neutro,0.0
+105213,Sant Anna,RBB,Lateral,7,9.23,0.0,9.0,3,0.0,False,True,REM,1.628,valor_oculto,6.462,4.33,0.375,72.8,favoravel,3.53
+100848,Luan Cândido,VIT,Lateral,7,5.6,1.36,2.63,3,7.0,True,True,COR,-0.414,neutro,2.997,1.63,0.375,67.1,neutro,1.51
+100695,Fernando,RBB,Atacante,5,2.35,0.0,0.1,2,0.0,False,True,REM,-0.172,neutro,0.721,0.1,0.25,69.7,neutro,0.25
+106434,Eduardo Santos,RBB,Zagueiro,6,4.6,0.0,1.4,3,0.0,False,True,REM,-0.081,neutro,2.137,1.4,0.375,72.9,neutro,1.17
+110750,Gustavo Marques,RBB,Zagueiro,7,7.49,-0.67,5.22,9,2.2,True,True,REM,1.331,valor_bom,4.598,3.89,1.0,72.9,favoravel,6.7
+107170,Jeffinho,BOT,Atacante,6,5.0,0.0,0.0,0,0.0,False,False,CHA,-2.54,armadilha_forte,0.0,0.0,0.0,75.0,neutro,0.0
+111246,Alix Vinicius,RBB,Zagueiro,7,5.14,-0.73,2.65,9,1.1,True,True,REM,0.076,neutro,2.539,1.32,1.0,72.9,favoravel,3.7
+110715,Andrés Hurtado,RBB,Lateral,6,6.61,0.98,3.91,9,9.5,True,True,REM,-0.369,neutro,3.545,2.24,1.0,72.8,neutro,5.16
+108133,Isidro Pitta,RBB,Atacante,7,5.14,-0.03,2.64,10,5.9,True,True,REM,-0.256,neutro,2.392,0.54,1.0,69.7,neutro,3.33
+112886,Lucas Barbosa,RBB,Atacante,7,9.42,-1.39,6.46,10,2.8,True,True,REM,1.514,valor_oculto,5.727,4.36,1.0,69.7,favoravel,7.98
+107236,Vanderlan,RBB,Lateral,5,5.0,0.0,0.0,0,0.0,False,True,REM,-3.26,armadilha_forte,0.0,0.0,0.0,72.8,neutro,0.0
+113157,Nathan Mendes,VIT,Lateral,6,7.59,2.23,4.82,8,12.7,True,True,COR,0.904,valor_bom,5.165,3.07,1.0,67.1,favoravel,6.93
+103295,Eric Ramires,RBB,Meia,6,2.75,-0.22,0.45,6,0.5,True,True,REM,-0.394,neutro,0.67,0.45,0.75,70.5,neutro,0.71
+122394,Gustavinho,RBB,Meia,6,6.19,-0.11,3.38,9,-0.3,True,True,REM,0.972,valor_bom,3.743,2.82,1.0,70.5,favoravel,5.28
+122897,Guzmán Rodríguez,RBB,Zagueiro,5,6.0,0.0,0.0,0,0.0,False,True,REM,-3.103,armadilha_forte,0.0,0.0,0.0,72.9,neutro,0.0
+107744,Praxedes,RBB,Meia,6,4.0,0.0,0.0,0,0.0,False,True,REM,-2.043,armadilha_forte,0.0,0.0,0.0,70.5,neutro,0.0
+104588,Fabrício,RBB,Goleiro,5,2.0,0.0,0.0,0,0.0,False,True,REM,-0.393,neutro,0.0,0.0,0.0,73.2,neutro,0.0
+72605,Vitor Hugo,CAM,Zagueiro,2,7.17,0.0,3.0,3,0.0,False,False,CFC,0.416,neutro,3.653,2.0,0.375,62.9,neutro,1.72
+132580,Vinicinho,RBB,Atacante,7,4.4,0.55,2.12,6,4.0,True,True,REM,-0.178,neutro,2.099,2.12,0.75,69.7,neutro,2.19
+39656,Alan Franco,CAM,Meia,7,5.57,0.44,2.74,10,3.3,True,False,CFC,-0.275,neutro,2.365,2.24,1.0,45.4,neutro,2.15
+68920,Dudu,CAM,Atacante,6,6.5,-0.34,2.73,10,0.0,True,False,CFC,0.415,neutro,3.655,1.13,1.0,45.5,neutro,3.33
+98909,Cuello,CAM,Atacante,7,9.14,-0.2,6.22,11,3.6,True,False,CFC,1.493,valor_bom,5.627,4.31,1.0,45.5,neutro,5.12
+111760,Fabinho,RBB,Meia,6,2.04,0.0,-0.08,5,0.0,False,True,REM,0.059,neutro,0.483,0.0,0.625,70.5,favoravel,0.43
+88312,Junior Alonso,CAM,Zagueiro,6,6.04,0.0,3.32,6,0.0,False,False,CFC,-0.057,neutro,2.802,2.82,0.75,62.9,neutro,2.64
+138021,Palacios,RBB,Zagueiro,6,3.0,0.0,0.0,0,0.0,False,True,REM,-1.383,armadilha_leve,0.0,0.0,0.0,72.9,neutro,0.0
+140906,Davi Gomes,RBB,Atacante,5,5.19,0.0,4.25,2,0.0,False,True,REM,-0.157,neutro,2.516,4.25,0.25,69.7,neutro,0.88
+101002,Júnior Santos,BOT,Atacante,7,5.46,0.0,3.1,5,0.0,False,False,CHA,-0.32,neutro,2.474,1.5,0.625,75.0,neutro,2.32
+87999,Gustavo Scarpa,CAM,Meia,6,7.52,0.0,2.98,9,0.0,False,False,CFC,0.203,neutro,3.531,1.87,1.0,45.4,neutro,3.21
+124239,Henry Mosquera,RBB,Atacante,6,6.27,0.0,4.16,10,0.0,False,True,REM,1.285,valor_bom,4.45,3.16,1.0,69.7,favoravel,6.2
+91607,Rony,SAN,Atacante,7,5.93,0.4,2.26,8,3.2,True,True,FLU,-0.818,armadilha_leve,2.171,2.26,1.0,52.2,neutro,2.27
+78248,Gustavo Henrique,COR,Zagueiro,7,9.24,0.42,3.56,8,6.4,True,False,VIT,-0.196,neutro,3.729,2.81,1.0,34.8,desfavoravel,2.6
+132274,Ignacio Sosa,RBB,Meia,6,3.38,-0.13,1.12,8,0.1,True,True,REM,-0.541,armadilha_leve,0.977,1.12,1.0,70.5,neutro,1.38
+100842,Ruan,CAM,Zagueiro,7,5.87,0.56,3.49,10,4.7,True,False,CFC,0.248,neutro,3.012,2.29,1.0,62.9,neutro,3.79
+122755,Lucas Cunha,RBB,Zagueiro,6,3.0,0.0,0.0,0,0.0,False,True,REM,-1.383,armadilha_leve,0.0,0.0,0.0,72.9,neutro,0.0
+107554,Natanael,CAM,Lateral,7,8.98,-2.03,6.68,4,-0.6,True,False,CFC,1.12,valor_bom,5.9,3.43,0.5,62.8,neutro,3.71
+100084,Igor Gomes,CAM,Meia,6,3.72,0.0,-0.14,5,0.0,False,False,CFC,-0.625,armadilha_leve,1.113,0.0,0.625,45.4,neutro,0.63
+115674,Gabriel Delfim,CAM,Goleiro,6,2.0,0.0,0.0,0,0.0,False,False,CFC,-0.393,neutro,0.0,0.0,0.0,63.2,neutro,0.0
+105068,Reinier,CAM,Meia,7,4.77,0.64,3.08,10,4.3,True,False,CFC,0.344,neutro,2.554,2.08,1.0,45.4,neutro,2.32
+103767,Gabriel Menino,SAN,Meia,5,9.21,0.0,5.24,7,0.0,False,True,FLU,0.887,valor_bom,4.659,4.53,0.875,52.7,neutro,4.3
+118774,Alexsander,CAM,Meia,6,6.76,-0.38,0.85,2,0.0,True,False,CFC,0.451,neutro,3.49,0.85,0.25,45.4,neutro,0.79
+92087,Lyanco,CAM,Zagueiro,2,10.0,-1.97,4.83,3,-1.0,True,False,CFC,0.047,neutro,4.152,2.83,0.375,62.9,neutro,1.96
+72460,Bernard,CAM,Meia,6,3.96,-0.29,1.76,8,0.0,True,False,CFC,0.013,neutro,1.828,1.14,1.0,45.4,neutro,1.66
+130889,Riquelme,GRE,Meia,6,4.0,0.0,0.0,0,0.0,False,False,CRU,-2.043,armadilha_forte,0.0,0.0,0.0,42.8,neutro,0.0
+85048,Memphis Depay,COR,Atacante,5,9.81,0.0,2.15,6,0.0,False,False,VIT,-0.61,armadilha_leve,3.671,0.82,0.75,16.6,desfavoravel,0.91
+95556,Raniele,COR,Meia,7,7.68,-0.47,3.71,8,2.8,True,False,VIT,0.588,valor_bom,3.93,3.71,1.0,16.7,desfavoravel,1.31
+78435,Vitinho,COR,Atacante,6,4.49,0.0,1.77,6,0.0,False,False,VIT,-0.372,neutro,1.949,1.77,0.75,16.6,desfavoravel,0.49
+101574,Hugo Souza,COR,Goleiro,7,10.93,1.4,5.0,9,10.2,True,False,VIT,0.162,neutro,4.684,3.33,1.0,35.0,desfavoravel,3.28
+98720,Angileri,COR,Lateral,6,4.04,0.0,1.94,5,0.0,False,False,VIT,-0.359,neutro,2.089,1.34,0.625,34.6,desfavoravel,0.9
+122990,Patrick,CAM,Meia,5,4.0,0.0,0.0,0,0.0,False,False,CFC,-2.043,armadilha_forte,0.0,0.0,0.0,45.4,neutro,0.0
+124661,Iván Román,CAM,Zagueiro,6,8.47,0.0,6.4,4,0.0,False,False,CFC,1.141,valor_bom,4.732,3.4,0.5,62.9,neutro,2.98
+105531,Matheus Bidu,COR,Lateral,7,13.1,2.21,7.69,7,12.1,True,False,VIT,0.477,neutro,6.528,5.26,0.875,34.6,desfavoravel,3.95
+97468,Marçal,BOT,Lateral,5,5.11,0.0,7.0,1,0.0,False,False,CHA,0.487,neutro,3.564,4.0,0.125,57.4,neutro,0.51
+92440,André Ramalho,COR,Zagueiro,3,6.08,0.0,2.6,3,0.0,False,False,VIT,0.737,valor_bom,3.544,1.6,0.375,34.8,desfavoravel,0.92
+107179,Matheus Donelli,COR,Goleiro,6,3.0,0.0,0.0,0,0.0,False,False,VIT,-1.179,armadilha_leve,0.0,0.0,0.0,35.0,desfavoravel,0.0
+102340,Cacá,VIT,Zagueiro,7,7.64,2.42,4.02,7,13.0,True,True,COR,0.574,valor_bom,3.955,1.88,0.875,67.2,favoravel,4.65
+97642,Félix Torres,INT,Zagueiro,7,4.28,0.04,2.68,8,5.0,True,True,MIR,0.548,valor_bom,2.547,1.93,1.0,60.6,favoravel,3.09
+117910,Breno Bidon,COR,Meia,7,9.25,-0.18,3.52,9,3.0,True,False,VIT,-0.061,neutro,3.817,2.96,1.0,16.7,desfavoravel,1.27
+117632,Garro,COR,Meia,7,10.18,-0.7,4.1,10,1.0,True,False,VIT,0.005,neutro,4.122,2.6,1.0,16.7,desfavoravel,1.38
+98225,Pedro Raul,COR,Atacante,6,3.06,0.0,0.1,5,0.0,False,False,VIT,-0.86,armadilha_leve,0.578,0.1,0.625,16.6,desfavoravel,0.12
+107908,Hugo,COR,Lateral,5,4.0,0.0,0.0,0,0.0,False,False,VIT,-2.566,armadilha_forte,0.0,0.0,0.0,34.6,desfavoravel,0.0
+121824,Kayke,COR,Atacante,7,4.02,0.67,1.68,5,4.4,True,False,VIT,-0.138,neutro,1.928,1.68,0.625,16.6,desfavoravel,0.4
+96342,Charles,COR,Meia,6,3.53,0.0,1.03,3,0.0,False,False,VIT,-0.746,armadilha_leve,0.888,1.03,0.375,16.7,desfavoravel,0.11
+42500,Fagner,CRU,Lateral,7,6.29,0.71,2.89,7,7.9,True,True,GRE,-0.767,armadilha_leve,3.021,1.75,0.875,74.1,neutro,3.92
+125488,João Pedro,COR,Zagueiro,6,8.84,0.0,7.7,2,0.0,False,False,VIT,0.943,valor_bom,4.658,3.2,0.25,34.8,desfavoravel,0.81
+131753,Felipe Longo,COR,Goleiro,6,2.0,0.0,0.0,0,0.0,False,False,VIT,-0.393,neutro,0.0,0.0,0.0,35.0,desfavoravel,0.0
+89275,William,CRU,Lateral,6,8.51,0.0,3.57,8,0.0,False,True,GRE,-0.152,neutro,4.54,2.82,1.0,74.1,neutro,6.73
+145744,André,COR,Meia,3,5.84,-1.43,4.14,9,-2.8,True,False,VIT,1.576,valor_oculto,4.145,3.58,1.0,16.7,desfavoravel,1.38
+79701,Lucas Silva,CRU,Meia,7,4.2,0.18,0.54,10,1.7,True,True,GRE,-0.897,armadilha_leve,1.143,0.54,1.0,67.3,neutro,1.54
+96610,Matheus Pereira,CRU,Meia,7,14.59,0.18,5.53,10,6.7,True,True,GRE,-0.158,neutro,4.917,4.03,1.0,67.3,neutro,6.62
+100742,Matheus Henrique,CRU,Meia,6,5.26,0.0,1.84,11,1.2,True,True,GRE,-0.679,armadilha_leve,1.864,1.84,1.0,67.3,neutro,2.51
+127242,Bahia,COR,Meia,6,2.0,0.0,0.0,0,0.0,False,False,VIT,-0.436,neutro,0.0,0.0,0.0,16.7,desfavoravel,0.0
+141995,Dieguinho,COR,Meia,6,3.18,0.0,0.73,4,0.0,False,False,VIT,-0.592,armadilha_leve,0.799,0.73,0.5,16.7,desfavoravel,0.13
+122396,Ryan,COR,Meia,6,3.0,0.0,0.0,0,0.0,False,False,VIT,-1.341,armadilha_leve,0.0,0.0,0.0,16.7,desfavoravel,0.0
+84558,Lucas Romero,CRU,Meia,6,7.5,0.0,3.02,5,0.0,False,True,GRE,0.416,neutro,3.716,1.02,0.625,67.3,favoravel,3.13
+111690,Matheus Cunha,CRU,Goleiro,7,3.7,0.76,2.43,7,2.9,True,True,GRE,0.837,valor_bom,2.661,0.29,0.875,74.5,favoravel,3.47
+105047,João Marcelo,CRU,Zagueiro,6,3.75,0.0,0.9,3,0.0,False,True,GRE,-0.131,neutro,1.628,0.9,0.375,74.2,neutro,0.91
+88479,Walace,CRU,Meia,6,4.0,0.0,0.0,0,0.0,False,True,GRE,-2.043,armadilha_forte,0.0,0.0,0.0,67.3,neutro,0.0
+124912,Jonathan Jesus,CRU,Zagueiro,7,4.74,-0.07,0.83,3,2.0,True,True,GRE,-0.326,neutro,1.982,0.83,0.375,74.2,neutro,1.1
+133543,Gui Negão,COR,Atacante,5,3.97,0.0,1.35,4,0.0,False,False,VIT,-0.198,neutro,1.838,1.35,0.5,16.6,desfavoravel,0.31
+93478,Wanderson,CRU,Atacante,6,4.18,-0.02,1.42,10,0.5,True,True,GRE,-0.437,neutro,1.715,0.62,1.0,67.9,neutro,2.33
+132264,Arroyo,CRU,Atacante,7,4.77,-1.12,2.29,10,0.9,True,True,GRE,-0.27,neutro,2.198,1.79,1.0,67.9,neutro,2.98
+143600,Kauã Moraes,CRU,Lateral,6,6.33,-0.01,4.84,5,2.5,True,True,GRE,0.037,neutro,3.791,2.04,0.625,74.1,favoravel,3.51
+117404,Otávio,CRU,Goleiro,6,2.0,0.0,0.0,0,0.0,False,True,GRE,-0.393,neutro,0.0,0.0,0.0,74.5,neutro,0.0
+92854,Borré,INT,Atacante,7,6.2,-0.17,2.48,11,0.0,True,True,MIR,0.342,neutro,3.462,1.75,1.0,77.3,favoravel,5.35
+114405,Sinisterra,CRU,Atacante,5,5.76,0.0,1.7,1,0.0,False,True,GRE,-0.876,armadilha_leve,2.04,1.7,0.125,67.9,neutro,0.35
+113158,Marquinhos,CRU,Atacante,5,4.0,0.0,0.0,0,0.0,False,True,GRE,-2.021,armadilha_forte,0.0,0.0,0.0,67.9,neutro,0.0
+139345,Kauã Prates,CRU,Lateral,6,3.39,0.0,0.0,1,0.0,False,True,GRE,0.007,neutro,1.94,0.0,0.125,74.1,favoravel,0.36
+146807,Rayan Lelis,CRU,Atacante,6,2.0,0.0,0.0,0,0.0,False,True,GRE,-0.566,armadilha_leve,0.0,0.0,0.0,67.9,neutro,0.0
+88136,Ivan,REM,Goleiro,6,4.0,0.0,0.0,0,0.0,False,False,RBB,-1.788,armadilha_forte,0.0,0.0,0.0,45.1,neutro,0.0
+86757,Everton,FLA,Atacante,6,6.32,0.0,1.8,5,0.0,False,True,BAH,0.482,neutro,3.653,1.8,0.625,54.0,neutro,2.47
+83528,Léo Pereira,FLA,Zagueiro,7,9.96,0.06,4.55,7,3.8,True,True,BAH,0.113,neutro,4.202,2.41,0.875,43.1,neutro,3.17
+84816,Varela,FLA,Lateral,7,8.68,0.36,5.14,8,5.0,True,True,BAH,0.621,valor_bom,5.325,3.39,1.0,42.9,neutro,4.57
+69783,Danilo,FLA,Zagueiro,6,6.23,-0.73,0.5,3,0.0,True,True,BAH,0.046,neutro,2.971,0.5,0.375,43.1,neutro,0.96
+137542,Kaique Kenji,CRU,Atacante,6,1.95,0.0,0.0,3,0.0,False,True,GRE,0.108,neutro,0.638,0.0,0.375,67.9,favoravel,0.32
+82627,Luiz Araújo,FLA,Atacante,2,8.24,-0.72,3.75,6,0.5,True,True,BAH,0.511,valor_bom,4.357,1.58,0.75,54.0,neutro,3.53
+131967,Villarreal,CRU,Atacante,2,10.52,3.0,6.98,6,15.6,True,True,GRE,1.242,valor_bom,5.741,2.98,0.75,67.9,favoravel,5.85
+122660,Japa,CRU,Meia,6,5.93,0.0,5.2,3,0.0,False,True,GRE,1.859,valor_oculto,4.437,3.53,0.375,67.3,favoravel,2.24
+143350,Murilo Rhikman,CRU,Meia,6,2.95,0.0,0.5,1,0.0,False,True,GRE,-0.416,neutro,0.797,0.5,0.125,67.3,neutro,0.13
+97867,Léo Ortiz,FLA,Zagueiro,7,8.96,-0.28,3.99,9,1.2,True,True,BAH,0.128,neutro,3.947,2.32,1.0,43.1,neutro,3.4
+96870,Emerson Royal,FLA,Lateral,6,6.12,0.0,3.92,4,0.0,False,True,BAH,-0.274,neutro,3.397,2.42,0.5,42.9,neutro,1.46
+90285,Bruno Henrique,FLA,Atacante,6,6.07,-1.22,1.13,4,-0.8,True,True,BAH,-1.273,armadilha_leve,1.765,1.13,0.5,54.0,neutro,0.95
+98873,Samuel Lino,FLA,Atacante,7,11.68,2.01,6.44,9,14.0,True,True,BAH,0.903,valor_bom,5.674,3.0,1.0,54.0,neutro,6.13
+87863,Arrascaeta,FLA,Meia,7,15.17,-0.6,4.93,7,1.7,True,True,BAH,-0.72,armadilha_leve,4.514,3.5,0.875,53.1,neutro,4.19
+91473,Erick Pulgar,FLA,Meia,5,6.08,0.0,1.53,6,0.0,False,True,BAH,0.225,neutro,3.027,1.53,0.75,53.1,neutro,2.41
+88393,Ayrton Lucas,FLA,Lateral,2,7.7,0.0,3.04,5,0.0,False,True,BAH,0.208,neutro,4.56,1.84,0.625,42.9,neutro,2.45
+84735,Jorginho,FLA,Meia,5,10.36,0.0,3.31,7,0.0,False,True,BAH,-0.45,neutro,3.758,2.6,0.875,53.1,neutro,3.49
+80061,Saúl,FLA,Meia,6,7.0,0.0,0.0,0,0.0,False,True,BAH,-3.521,armadilha_forte,0.0,0.0,0.0,53.1,neutro,0.0
+109096,Plata,FLA,Atacante,6,11.92,1.58,8.15,4,12.8,True,True,BAH,1.095,valor_bom,5.924,4.9,0.5,54.0,neutro,3.2
+115914,Evertton Araújo,FLA,Meia,7,2.99,0.31,0.85,6,2.5,True,True,BAH,-0.399,neutro,0.841,0.85,0.75,53.1,neutro,0.67
+140492,João Victor,FLA,Zagueiro,6,2.0,0.0,0.0,0,0.0,False,True,BAH,-0.498,neutro,0.0,0.0,0.0,43.1,neutro,0.0
+130189,Léo Nannetti,FLA,Goleiro,6,2.0,0.0,0.0,0,0.0,False,True,BAH,-0.393,neutro,0.0,0.0,0.0,43.3,neutro,0.0
+122318,Dyogo Alves,FLA,Goleiro,6,3.0,0.0,0.0,0,0.0,False,True,BAH,-1.179,armadilha_leve,0.0,0.0,0.0,43.3,neutro,0.0
+122573,Wallace Yan,FLA,Atacante,6,3.64,0.0,0.27,3,0.0,False,True,BAH,-0.248,neutro,1.588,0.27,0.375,54.0,neutro,0.64
+122320,Daniel Sales,FLA,Lateral,6,2.0,0.0,0.0,0,0.0,False,True,BAH,-0.62,armadilha_leve,0.0,0.0,0.0,42.9,neutro,0.0
+96652,Allan,COR,Meia,6,2.85,0.0,0.88,6,0.0,False,False,VIT,-0.272,neutro,0.854,0.88,0.75,16.7,desfavoravel,0.21
+78445,Renê,FLU,Lateral,7,10.25,0.47,6.89,7,5.0,True,False,SAN,0.936,valor_bom,6.154,4.6,0.875,50.6,neutro,5.45
+143295,Joshua,FLA,Meia,6,3.0,0.0,0.0,0,0.0,False,True,BAH,-1.341,armadilha_leve,0.0,0.0,0.0,53.1,neutro,0.0
+140303,Da Mata,FLA,Zagueiro,6,2.0,0.0,0.0,0,0.0,False,True,BAH,-0.498,neutro,0.0,0.0,0.0,43.1,neutro,0.0
+78117,Everaldo,BAH,Atacante,7,6.9,-0.16,5.46,8,2.4,True,False,FLA,1.722,valor_oculto,5.136,2.46,1.0,40.4,neutro,4.15
+99228,De la Cruz,FLA,Meia,2,6.02,-0.16,1.56,5,2.5,True,True,BAH,0.393,neutro,3.154,1.56,0.625,53.1,neutro,2.09
+62977,Ganso,FLU,Meia,2,3.66,-0.49,1.13,10,-0.3,True,False,SAN,-0.187,neutro,1.471,1.13,1.0,42.5,neutro,1.25
+145705,Douglas Telles,FLA,Atacante,6,2.0,0.0,0.0,0,0.0,False,True,BAH,-0.566,armadilha_leve,0.0,0.0,0.0,54.0,neutro,0.0
+130382,Guilherme Gomes,FLA,Meia,6,3.0,0.0,0.0,0,0.0,False,True,BAH,-1.341,armadilha_leve,0.0,0.0,0.0,53.1,neutro,0.0
+73384,Samuel Xavier,FLU,Lateral,7,8.23,-0.28,4.22,8,1.2,True,False,SAN,0.31,neutro,4.865,3.47,1.0,50.6,neutro,4.92
+86485,Keno,CFC,Atacante,5,4.12,0.0,0.73,4,0.0,False,True,CAM,-0.485,neutro,1.632,0.73,0.5,41.9,neutro,0.68
+82463,Otávio,FLU,Meia,6,3.21,0.0,0.73,4,0.0,False,False,SAN,-0.614,armadilha_leve,0.799,0.73,0.5,42.5,neutro,0.34
+99366,Luis Zubeldía,FLU,Técnico,7,10.06,-0.05,5.83,11,3.48,True,False,SAN,-0.051,neutro,5.601,5.83,1.0,42.7,neutro,4.78
+87258,Soteldo,FLU,Atacante,6,4.37,0.0,1.07,6,0.0,False,False,SAN,-0.604,armadilha_leve,1.649,1.07,0.75,42.1,neutro,1.04
+101319,Guga,FLU,Lateral,6,5.0,-0.15,1.97,6,0.5,True,False,SAN,-0.437,neutro,2.636,0.97,0.75,50.6,neutro,2.0
+79631,Cano,FLU,Atacante,5,5.37,0.0,0.8,2,0.0,False,False,SAN,-0.917,armadilha_leve,1.826,0.8,0.25,42.1,neutro,0.38
+101478,Marcelo Pitaluga,FLU,Goleiro,6,3.0,0.0,0.0,0,0.0,False,False,SAN,-1.179,armadilha_leve,0.0,0.0,0.0,51.0,neutro,0.0
+102137,Vitor Eudes,FLU,Goleiro,6,2.0,0.0,0.0,0,0.0,False,False,SAN,-0.393,neutro,0.0,0.0,0.0,51.0,neutro,0.0
+116447,Hércules,FLU,Meia,7,8.04,0.24,5.12,9,5.0,True,False,SAN,1.275,valor_bom,4.664,3.45,1.0,42.5,neutro,3.96
+100987,Nonato,FLU,Meia,5,7.28,0.0,5.3,2,0.0,False,False,SAN,1.236,valor_bom,4.38,0.3,0.25,42.5,neutro,0.93
+102928,Canobbio,FLU,Atacante,3,10.64,-0.35,7.47,8,3.9,True,False,SAN,1.606,valor_oculto,6.141,3.84,1.0,42.1,neutro,5.17
+110759,John Kennedy,FLU,Atacante,7,9.14,-1.28,6.58,10,2.0,True,False,SAN,1.657,valor_oculto,5.794,3.38,1.0,42.1,neutro,4.88
+87228,Guilherme Arana,FLU,Lateral,6,8.38,-0.74,4.14,7,0.8,True,False,SAN,0.255,neutro,4.871,2.43,0.875,50.6,neutro,4.31
+78855,Thiago Santos,CFC,Zagueiro,6,3.2,-0.73,2.3,5,0.0,True,True,CAM,0.714,valor_bom,2.055,1.1,0.625,54.4,neutro,1.4
+132071,Serna,FLU,Atacante,7,5.69,-0.39,2.32,11,1.3,True,False,SAN,-0.669,armadilha_leve,2.22,1.87,1.0,42.1,neutro,1.87
+103523,Ignácio,FLU,Zagueiro,6,6.14,0.0,2.77,4,0.0,False,False,SAN,0.687,valor_bom,3.522,2.77,0.5,50.8,neutro,1.79
+87887,Balbuena,GRE,Zagueiro,6,6.3,0.0,3.18,5,0.0,False,False,CRU,0.728,valor_bom,3.622,2.58,0.625,30.9,desfavoravel,1.4
+72018,Tiago Volpi,RBB,Goleiro,7,10.61,-0.64,6.38,4,4.5,True,True,REM,0.54,valor_bom,5.013,3.88,0.5,73.2,favoravel,3.67
+113034,Freytes,FLU,Zagueiro,7,4.96,0.08,2.88,10,1.3,True,False,SAN,0.314,neutro,2.673,1.98,1.0,50.8,neutro,2.72
+63013,Marcos Rocha,GRE,Lateral,6,7.36,0.0,0.0,1,0.0,False,False,CRU,-1.539,armadilha_forte,2.787,0.0,0.125,30.7,desfavoravel,0.21
+89493,Igor Rabello,FLU,Zagueiro,6,5.0,0.0,0.0,0,0.0,False,False,SAN,-2.629,armadilha_forte,0.0,0.0,0.0,50.8,neutro,0.0
+88037,Luís Castro,GRE,Técnico,7,9.62,-0.28,4.86,11,4.11,True,False,CRU,-1.427,armadilha_leve,5.039,4.86,1.0,42.9,neutro,4.32
+105807,Luan Freitas,FLU,Zagueiro,6,3.0,0.0,0.0,0,0.0,False,False,SAN,-1.383,armadilha_leve,0.0,0.0,0.0,50.8,neutro,0.0
+140484,Riquelme Felipe,FLU,Atacante,6,4.0,0.0,0.0,0,0.0,False,False,SAN,-2.021,armadilha_forte,0.0,0.0,0.0,42.1,neutro,0.0
+89273,João Pedro,GRE,Lateral,5,3.33,0.0,0.6,4,0.0,False,False,CRU,-0.245,neutro,1.655,0.6,0.5,30.7,desfavoravel,0.51
+130650,Bernal,FLU,Meia,7,2.9,0.0,0.3,4,0.0,False,False,SAN,-0.533,armadilha_leve,0.656,0.3,0.5,42.5,neutro,0.28
+87342,Kannemann,GRE,Zagueiro,7,5.0,0.0,0.0,0,0.0,False,False,CRU,-2.629,armadilha_forte,0.0,0.0,0.0,30.9,desfavoravel,0.0
+92182,Juninho,INT,Zagueiro,6,6.58,0.0,5.0,1,0.0,False,True,MIR,1.047,valor_bom,4.02,2.0,0.125,60.6,favoravel,0.61
+127932,Júlio Fidelis,FLU,Lateral,6,2.0,0.0,0.0,0,0.0,False,False,SAN,-0.62,armadilha_leve,0.0,0.0,0.0,50.6,neutro,0.0
+90532,Arthur Melo,GRE,Meia,7,8.84,0.29,3.68,6,3.0,True,False,CRU,0.214,neutro,3.949,3.68,0.75,42.8,neutro,2.54
+42135,Willian,GRE,Meia,5,3.93,0.0,1.25,6,0.0,False,False,CRU,-0.2,neutro,1.619,1.25,0.75,42.8,neutro,1.04
+102318,Caio Paulista,GRE,Lateral,6,6.4,0.54,3.86,5,5.0,True,False,CRU,-0.403,neutro,3.414,2.66,0.625,30.7,desfavoravel,1.31
+111309,Gustavo Martins,GRE,Zagueiro,7,6.53,-0.42,3.2,8,3.4,True,False,CRU,0.553,valor_bom,3.549,1.2,1.0,30.9,desfavoravel,2.19
+91706,Marlon,GRE,Lateral,5,10.32,0.0,6.62,6,0.0,False,False,CRU,0.733,valor_bom,5.986,4.29,0.75,30.7,desfavoravel,2.76
+105563,Carlos Vinícius,GRE,Atacante,7,14.96,-1.01,6.6,11,-1.1,True,False,CRU,0.418,neutro,5.847,1.51,1.0,42.4,neutro,4.96
+89883,Dodi,GRE,Meia,6,3.04,0.0,0.13,6,0.0,False,False,CRU,-0.781,armadilha_leve,0.532,0.13,0.75,42.8,neutro,0.34
+90703,Matheuzinho,VIT,Meia,7,5.92,-0.51,3.08,9,3.9,True,True,COR,0.916,valor_bom,3.584,2.52,1.0,41.9,neutro,3.0
+112616,Gabriel Grando,GRE,Goleiro,6,4.0,0.0,0.0,0,0.0,False,False,CRU,-1.788,armadilha_forte,0.0,0.0,0.0,31.0,desfavoravel,0.0
+125467,Viery,GRE,Zagueiro,3,3.78,-0.75,2.49,8,1.4,True,False,CRU,0.47,neutro,2.196,1.37,1.0,30.9,desfavoravel,1.36
+142004,Amuzu,GRE,Atacante,7,7.56,-1.48,4.99,10,0.4,True,False,CRU,1.272,valor_bom,4.911,3.19,1.0,42.4,neutro,4.16
+91908,Pavón,GRE,Atacante,7,6.16,0.05,3.67,11,3.2,True,False,CRU,-0.094,neutro,3.002,3.67,1.0,42.4,neutro,2.55
+109966,Monsalve,GRE,Meia,7,2.71,0.0,0.25,6,0.0,False,False,CRU,-0.456,neutro,0.584,0.25,0.75,42.8,neutro,0.37
+121792,André,GRE,Atacante,6,3.21,0.0,1.2,3,0.0,False,False,CRU,-0.583,armadilha_leve,0.965,1.2,0.375,42.4,neutro,0.31
+118238,Ronald,GRE,Meia,6,3.0,0.0,0.0,0,0.0,False,False,CRU,-1.341,armadilha_leve,0.0,0.0,0.0,42.8,neutro,0.0
+97145,Villasanti,GRE,Meia,6,7.0,0.0,0.0,0,0.0,False,False,CRU,-3.521,armadilha_forte,0.0,0.0,0.0,42.8,neutro,0.0
+72951,Mercado,INT,Zagueiro,3,7.21,-0.31,5.21,8,5.5,True,True,MIR,1.386,valor_bom,4.554,3.33,1.0,60.6,favoravel,5.52
+104994,Wagner Leonardo,GRE,Zagueiro,6,5.73,0.0,2.93,3,0.0,False,False,CRU,-0.19,neutro,2.554,2.93,0.375,30.9,desfavoravel,0.59
+92981,Ronaldo,INT,Meia,6,3.89,0.0,2.85,7,0.0,False,True,MIR,0.627,valor_bom,2.341,2.14,0.875,76.8,favoravel,3.15
+70944,Bruno Henrique,INT,Meia,6,3.78,0.26,0.98,9,1.7,True,True,MIR,-0.334,neutro,1.411,0.98,1.0,76.8,neutro,2.17
+116067,Thiago Beltrame,GRE,Goleiro,6,2.0,0.0,0.0,0,0.0,False,False,CRU,-0.393,neutro,0.0,0.0,0.0,31.0,desfavoravel,0.0
+107989,Carbonero,INT,Atacante,7,7.95,0.02,3.83,11,1.9,True,True,MIR,0.489,neutro,4.243,2.65,1.0,77.3,favoravel,6.56
+86711,Richard,INT,Meia,6,4.0,0.0,0.0,0,0.0,False,True,MIR,-2.043,armadilha_forte,0.0,0.0,0.0,76.8,neutro,0.0
+106202,Bruno Gomes,INT,Meia,7,6.8,0.21,3.38,11,3.6,True,True,MIR,0.673,valor_bom,3.704,3.38,1.0,76.8,favoravel,5.69
+89637,Thiago Maia,INT,Meia,6,3.95,0.11,0.85,6,2.0,True,True,MIR,-0.403,neutro,1.448,0.85,0.75,76.8,neutro,1.67
+63289,Edenílson,BOT,Meia,6,6.97,1.22,3.09,8,7.7,True,False,CHA,0.512,valor_bom,3.62,1.21,1.0,75.9,neutro,5.5
+101960,Vitinho,INT,Atacante,7,8.01,0.4,4.59,10,8.1,True,True,MIR,0.907,valor_bom,4.688,3.09,1.0,77.3,favoravel,7.25
+137543,Tevis,CRU,Atacante,6,2.0,0.0,0.0,0,0.0,False,True,GRE,-0.566,armadilha_leve,0.0,0.0,0.0,67.9,neutro,0.0
+115479,Paulo Pezzolano,INT,Técnico,7,7.38,-0.29,4.66,11,4.45,True,True,MIR,0.715,valor_bom,4.658,4.66,1.0,75.7,favoravel,7.05
+111683,Anthoni,INT,Goleiro,6,3.34,0.0,1.6,1,0.0,False,True,MIR,1.112,valor_bom,2.723,1.6,0.125,60.8,favoravel,0.41
+111466,Victor Gabriel,INT,Zagueiro,7,4.55,0.0,2.37,9,0.0,False,True,MIR,0.224,neutro,2.391,1.7,1.0,60.6,favoravel,2.9
+110510,Aguirre,INT,Lateral,6,5.65,0.0,3.35,9,0.0,False,True,MIR,-0.172,neutro,3.249,2.46,1.0,60.5,neutro,3.93
+71684,Gustavo Gómez,PAL,Zagueiro,7,10.74,0.47,4.71,10,4.4,True,True,CAP,0.062,neutro,4.349,2.11,1.0,63.2,favoravel,5.5
+70592,Felipe Anderson,PAL,Meia,6,6.22,-0.12,2.02,8,1.5,True,True,CAP,0.228,neutro,3.085,2.02,1.0,72.4,favoravel,4.47
+123744,Alan Rodríguez,INT,Meia,6,3.27,-0.3,0.58,7,0.0,True,True,MIR,-0.751,armadilha_leve,0.716,0.58,0.875,76.8,neutro,0.96
+71631,Weverton,GRE,Goleiro,7,8.37,-0.49,4.49,11,9.4,True,False,CRU,0.579,valor_bom,4.422,2.67,1.0,31.0,desfavoravel,2.74
+107174,Bruno Tabata,INT,Meia,6,3.54,0.0,0.68,4,0.0,False,True,MIR,-0.87,armadilha_leve,0.783,0.68,0.5,76.8,neutro,0.6
+68872,Marcelo Lomba,PAL,Goleiro,6,4.0,0.0,0.0,0,0.0,False,True,CAP,-1.788,armadilha_forte,0.0,0.0,0.0,63.5,neutro,0.0
+102130,Piquerez,PAL,Lateral,5,11.43,0.0,6.43,6,0.0,False,True,CAP,0.29,neutro,5.905,4.6,0.75,63.1,favoravel,5.59
+93790,Marlon Freitas,PAL,Meia,3,6.38,-0.65,3.35,11,0.5,True,True,CAP,0.828,valor_bom,3.687,1.99,1.0,72.4,favoravel,5.34
+97653,Murilo,PAL,Zagueiro,7,7.74,0.66,4.03,9,5.9,True,True,CAP,0.553,valor_bom,3.968,2.14,1.0,63.2,favoravel,5.02
+105647,Maurício,PAL,Meia,7,6.79,-0.16,3.08,10,2.4,True,True,CAP,0.512,valor_bom,3.556,2.08,1.0,72.4,favoravel,5.15
+143488,Raykkonen,INT,Atacante,6,2.63,0.0,0.5,1,0.0,False,True,MIR,-0.289,neutro,0.835,0.5,0.125,77.3,neutro,0.16
+110506,Abel Ferreira,PAL,Técnico,7,12.19,0.06,6.56,11,5.76,True,True,CAP,0.588,valor_bom,6.52,6.56,1.0,71.5,favoravel,9.32
+104085,Bruno Fuchs,PAL,Zagueiro,6,8.0,0.0,3.33,3,0.0,False,True,CAP,0.217,neutro,3.743,2.33,0.375,63.2,favoravel,1.77
+104084,Carlos Miguel,PAL,Goleiro,7,8.75,1.04,4.65,11,10.2,True,True,CAP,0.557,valor_bom,4.515,3.29,1.0,63.5,favoravel,5.73
+99440,Baralhas,VIT,Meia,7,10.65,1.16,6.67,8,9.5,True,True,COR,1.306,valor_bom,5.41,4.17,1.0,41.9,neutro,4.53
+105175,Khellven,PAL,Lateral,6,5.97,1.51,2.4,8,8.5,True,True,CAP,-0.868,armadilha_leve,2.767,2.02,1.0,63.1,neutro,3.49
+111832,Jefté,PAL,Lateral,5,3.01,0.0,0.33,3,0.0,False,True,CAP,0.071,neutro,1.677,0.33,0.375,63.1,favoravel,0.79
+137618,Clayton Sampaio,INT,Zagueiro,6,3.0,0.0,0.0,0,0.0,False,True,MIR,-1.383,armadilha_leve,0.0,0.0,0.0,60.6,neutro,0.0
+124526,Giay,PAL,Lateral,7,6.88,1.28,3.78,10,7.6,True,True,CAP,-0.557,armadilha_leve,3.493,2.88,1.0,63.1,neutro,4.41
+92811,Bruno Rodrigues,CRU,Atacante,6,2.31,-0.38,0.32,5,-0.1,True,True,GRE,-0.195,neutro,0.663,0.32,0.625,67.9,neutro,0.56
+113103,Flaco López,PAL,Atacante,7,14.62,0.13,6.55,11,7.4,True,True,CAP,0.451,neutro,5.818,3.46,1.0,73.4,favoravel,8.54
+130612,Luighi,PAL,Atacante,6,2.83,0.3,0.97,6,2.5,True,True,CAP,-0.361,neutro,0.917,0.97,0.75,73.4,neutro,1.01
+99818,Paulinho,PAL,Atacante,6,15.0,0.0,0.0,0,0.0,False,True,CAP,-5.333,armadilha_forte,0.0,0.0,0.0,73.4,neutro,0.0
+108683,Emiliano Martínez,PAL,Meia,6,4.63,0.0,0.95,2,0.0,False,True,CAP,-0.52,armadilha_leve,1.707,0.95,0.25,72.4,neutro,0.62
+141451,Allan,PAL,Meia,7,13.23,-0.04,6.09,11,4.7,True,True,CAP,0.525,valor_bom,5.273,4.73,1.0,72.4,favoravel,7.64
+84674,Lucas Evangelista,PAL,Meia,7,4.82,-0.33,1.41,9,0.8,True,True,CAP,-0.7,armadilha_leve,1.639,0.85,1.0,72.4,neutro,2.37
+97321,Alesson,MIR,Atacante,6,7.76,-0.47,4.04,9,0.9,True,False,INT,0.708,valor_bom,4.403,3.48,1.0,31.4,desfavoravel,2.77
+82775,Lucas Ramon,SAO,Lateral,3,10.1,-1.17,6.26,7,-2.8,True,False,VAS,0.672,valor_bom,5.86,4.69,0.875,46.5,neutro,4.77
+97460,João Victor,MIR,Zagueiro,7,4.63,0.1,1.85,9,1.7,True,False,INT,-0.121,neutro,2.115,1.29,1.0,47.3,neutro,2.0
+81005,André Luis,MIR,Atacante,7,2.96,-0.62,0.2,5,-0.3,True,False,INT,-0.751,armadilha_leve,0.617,0.2,0.625,31.4,desfavoravel,0.24
+136156,Larson,PAL,Meia,6,2.44,0.0,0.47,3,0.0,False,True,CAP,-0.05,neutro,0.735,0.47,0.375,72.4,neutro,0.4
+133679,Benedetti,PAL,Zagueiro,6,3.0,0.0,0.0,0,0.0,False,True,CAP,-1.383,armadilha_leve,0.0,0.0,0.0,63.2,neutro,0.0
+73318,Daniel Borges,MIR,Lateral,6,4.18,0.0,1.3,1,0.0,False,False,INT,-0.469,neutro,2.084,1.3,0.125,47.2,neutro,0.25
+72279,Thomazella,MIR,Goleiro,6,2.0,0.0,0.0,0,0.0,False,False,INT,-0.393,neutro,0.0,0.0,0.0,47.6,neutro,0.0
+79066,Alex Muralha,MIR,Goleiro,6,3.0,0.0,0.0,0,0.0,False,False,INT,-1.179,armadilha_leve,0.0,0.0,0.0,47.6,neutro,0.0
+87742,Neto Moura,MIR,Meia,7,3.78,-0.22,1.76,7,1.4,True,False,INT,0.135,neutro,1.833,1.76,0.875,31.7,desfavoravel,1.02
+97520,Shaylon,MIR,Meia,7,4.06,-0.56,2.08,6,-0.3,True,False,INT,0.113,neutro,1.975,1.25,0.75,31.7,desfavoravel,0.94
+83263,Yuri Lara,MIR,Meia,5,4.85,0.0,2.02,5,0.0,False,False,INT,-0.377,neutro,1.944,2.02,0.625,31.7,desfavoravel,0.77
+98384,Negueba,MIR,Atacante,7,8.57,0.38,5.23,8,4.4,True,False,INT,1.063,valor_bom,5.021,4.23,1.0,31.4,desfavoravel,3.15
+104027,Rafael Guanaes,MIR,Técnico,7,6.71,-0.3,3.71,9,2.18,True,False,INT,0.173,neutro,4.155,3.71,1.0,32.2,desfavoravel,2.68
+90917,Carlos Eduardo,MIR,Atacante,6,3.98,0.0,1.15,4,0.0,False,False,INT,-0.269,neutro,1.772,1.15,0.5,31.4,desfavoravel,0.56
+102667,Nathan Fogaça,MIR,Atacante,6,5.81,0.32,4.07,6,3.1,True,False,INT,-0.018,neutro,2.934,1.4,0.75,31.4,desfavoravel,1.38
+101708,Felipe Jonatan,CFC,Lateral,6,4.9,0.07,2.07,6,2.7,True,True,CAM,-0.328,neutro,2.678,1.57,0.75,54.3,neutro,2.18
+83257,Gabriel,SAN,Atacante,7,8.76,0.48,3.86,5,5.9,True,True,FLU,0.441,neutro,4.445,1.26,0.625,52.2,neutro,2.9
+117403,Renato Marques,CFC,Atacante,6,4.01,0.0,1.45,2,0.8,True,True,CAM,-0.105,neutro,1.956,1.45,0.25,41.9,neutro,0.41
+81150,Mayke,SAN,Lateral,6,4.67,0.0,1.2,1,0.0,False,True,FLU,0.082,neutro,2.92,1.2,0.125,46.6,neutro,0.34
+104204,Edson Carioca,MIR,Atacante,7,4.62,0.04,1.58,4,2.7,True,False,INT,-0.473,neutro,1.915,1.58,0.5,31.4,desfavoravel,0.6
+105903,Aldo Filho,MIR,Meia,7,4.12,-0.82,2.33,8,0.7,True,False,INT,0.23,neutro,2.113,1.71,1.0,31.7,desfavoravel,1.34
+77777,João Schmidt,SAN,Meia,6,4.12,0.0,1.13,6,0.0,False,True,FLU,-0.376,neutro,1.568,1.13,0.75,52.7,neutro,1.24
+84847,Luan Peres,SAN,Zagueiro,7,5.36,1.01,2.58,9,6.7,True,True,FLU,-0.073,neutro,2.502,1.58,1.0,46.7,neutro,2.34
+95466,Igor Vinícius,SAN,Lateral,7,11.02,1.84,7.04,7,13.0,True,True,FLU,0.759,valor_bom,6.224,5.04,0.875,46.6,neutro,5.08
+82455,Zé Rafael,SAN,Meia,6,8.88,0.0,5.35,4,0.0,False,True,FLU,0.869,valor_bom,4.55,2.85,0.5,52.7,neutro,2.4
+78478,Willian Arão,SAN,Meia,6,6.04,0.89,2.38,6,6.7,True,True,FLU,0.649,valor_bom,3.392,2.38,0.75,52.7,neutro,2.68
+87470,Thaciano,SAN,Meia,6,6.68,-0.84,3.29,8,0.0,True,True,FLU,0.739,valor_bom,3.72,2.04,1.0,52.7,neutro,3.92
+102975,Escobar,SAN,Lateral,3,10.77,0.02,8.08,6,6.0,True,True,FLU,1.254,valor_bom,6.612,5.75,0.75,46.6,neutro,4.62
+74187,Rincón,SAN,Meia,6,3.05,0.0,-1.6,1,0.0,False,True,FLU,-0.754,armadilha_leve,0.564,0.0,0.125,52.7,neutro,0.07
+84042,Tiquinho Soares,MIR,Atacante,6,5.86,0.0,2.1,5,0.0,False,False,INT,-0.869,armadilha_leve,2.089,2.1,0.625,31.4,desfavoravel,0.82
+118775,Lautaro Díaz,SAN,Atacante,6,6.24,-1.28,3.48,5,1.5,True,True,FLU,1.148,valor_bom,4.299,1.88,0.625,52.2,neutro,2.81
+63008,Rafael Tolói,SAO,Zagueiro,3,7.32,-0.47,4.05,4,2.5,True,False,VAS,0.683,valor_bom,3.949,3.3,0.5,46.7,neutro,1.84
+102256,Rollheiser,SAN,Meia,6,4.48,0.0,0.34,7,0.0,False,True,FLU,-1.032,armadilha_leve,1.17,0.34,0.875,52.7,neutro,1.08
+91866,Zé Ivaldo,SAN,Zagueiro,6,5.75,0.0,1.9,4,0.0,False,True,FLU,-0.54,armadilha_leve,2.242,1.9,0.5,46.7,neutro,1.05
+142867,Robinho Jr.,SAN,Atacante,6,3.06,0.0,0.0,2,0.0,False,True,FLU,-0.739,armadilha_leve,0.701,0.0,0.25,52.2,neutro,0.18
+113690,Diógenes,SAN,Goleiro,6,2.0,0.0,0.0,0,0.0,False,True,FLU,-0.393,neutro,0.0,0.0,0.0,47.0,neutro,0.0
+130811,Souza,SAN,Lateral,6,8.0,0.0,0.0,0,0.0,False,True,FLU,-4.804,armadilha_forte,0.0,0.0,0.0,46.6,neutro,0.0
+99889,Alan Franco,SAO,Zagueiro,7,5.76,-0.34,2.65,9,1.2,True,False,VAS,-0.22,neutro,2.539,1.65,1.0,46.7,neutro,2.37
+141754,Gabriel Bontempo,SAN,Meia,6,4.9,0.75,2.51,8,7.4,True,True,FLU,-0.116,neutro,2.203,2.51,1.0,52.7,neutro,2.32
+141868,Vinicius Lira,SAN,Lateral,5,3.79,0.0,2.42,4,0.0,False,True,FLU,0.019,neutro,2.261,2.42,0.5,46.6,neutro,1.05
+85403,Danielzinho,SAO,Meia,7,7.65,0.48,3.61,9,3.7,True,False,VAS,0.525,valor_bom,3.864,2.5,1.0,52.5,neutro,4.06
+70164,Lucas Moura,SAO,Meia,5,7.89,0.0,2.69,7,0.0,False,False,VAS,0.0,neutro,3.469,1.26,0.875,52.5,neutro,3.19
+89840,Calleri,SAO,Atacante,7,13.84,0.0,7.41,10,0.0,False,False,VAS,1.026,valor_bom,6.255,2.61,1.0,51.9,neutro,6.49
+101290,Ferreira,SAO,Atacante,7,6.88,-2.99,4.14,8,2.1,True,False,VAS,1.081,valor_bom,4.476,1.14,1.0,51.9,neutro,4.65
+104075,Sabino,SAO,Zagueiro,7,7.1,0.0,4.83,9,0.0,False,False,VAS,1.249,valor_bom,4.391,3.5,1.0,46.7,neutro,4.1
+108469,Adonis Frías,SAN,Zagueiro,6,4.69,0.0,1.53,4,0.0,False,True,FLU,-0.149,neutro,2.119,1.53,0.5,46.7,neutro,0.99
+105300,Ferraresi,BOT,Zagueiro,6,6.06,0.0,2.41,7,0.0,False,False,CHA,0.374,neutro,3.204,1.98,0.875,57.5,neutro,3.22
+106294,Marcos Antônio,SAO,Meia,7,6.64,-0.49,2.84,11,1.7,True,False,VAS,0.391,neutro,3.392,1.93,1.0,52.5,neutro,3.56
+77656,Cédric Soares,SAO,Lateral,7,4.66,-0.46,1.15,4,0.8,True,False,VAS,-0.389,neutro,2.473,1.15,0.5,46.5,neutro,1.15
+81845,Alisson,FLU,Meia,6,4.09,0.0,0.43,4,0.0,False,False,SAN,-0.535,armadilha_leve,1.408,0.43,0.5,42.5,neutro,0.6
+131617,André Silva,SAO,Atacante,6,4.34,0.21,0.33,7,1.8,True,False,VAS,-0.966,armadilha_leve,1.265,0.33,0.875,51.9,neutro,1.15
+101597,Ramon,VIT,Lateral,7,10.07,2.1,6.22,9,14.2,True,True,COR,0.711,valor_bom,5.886,3.55,1.0,67.1,favoravel,7.9
+80570,Wendell,SAO,Lateral,6,8.2,-0.08,4.2,6,0.9,True,False,VAS,0.412,neutro,4.949,2.37,0.75,46.5,neutro,3.45
+91573,Arboleda,SAO,Zagueiro,6,8.95,0.0,3.98,6,0.0,False,False,VAS,0.116,neutro,3.933,2.98,0.75,46.7,neutro,2.76
+113359,Pablo Maia,SAO,Meia,5,4.28,0.0,1.36,8,0.0,False,False,VAS,-0.406,neutro,1.628,1.36,1.0,52.5,neutro,1.71
+118563,Rodriguinho,RBB,Meia,7,5.43,-0.5,2.96,5,1.2,True,True,REM,-0.273,neutro,2.306,1.96,0.625,70.5,neutro,2.03
+72391,Fernando Diniz,COR,Técnico,7,8.42,0.57,4.29,4,4.59,True,False,VIT,-1.442,armadilha_leve,4.533,4.29,0.5,17.7,desfavoravel,0.8
+140542,Ryan Francisco,SAO,Atacante,6,5.0,0.0,0.0,0,0.0,False,False,VAS,-2.54,armadilha_forte,0.0,0.0,0.0,51.9,neutro,0.0
+71123,Thiago Mendes,VAS,Meia,7,8.37,0.87,4.87,10,6.7,True,True,SAO,1.036,valor_bom,4.55,2.87,1.0,43.3,neutro,3.94
+141611,Maik,SAO,Lateral,6,6.54,0.0,4.35,4,0.0,False,False,VAS,-0.339,neutro,3.54,3.6,0.5,46.5,neutro,1.65
+93716,Paulo Henrique,VAS,Lateral,7,8.39,-0.43,3.67,8,3.0,True,True,SAO,-0.05,neutro,4.59,2.42,1.0,56.6,neutro,5.2
+117818,Young,SAO,Goleiro,6,3.0,0.0,0.0,0,0.0,False,False,VAS,-1.179,armadilha_leve,0.0,0.0,0.0,46.9,neutro,0.0
+81091,Jair,VAS,Meia,5,6.0,0.0,0.0,0,0.0,False,True,SAO,-3.101,armadilha_forte,0.0,0.0,0.0,43.3,neutro,0.0
+107873,Bobadilla,SAO,Meia,7,8.15,0.0,3.89,9,0.0,False,False,VAS,0.514,valor_bom,4.013,3.33,1.0,52.5,neutro,4.21
+90309,David,VAS,Atacante,7,4.54,-1.21,2.74,9,-0.2,True,True,SAO,0.075,neutro,2.431,0.41,1.0,43.2,neutro,2.1
+106028,Coronel,SAO,Goleiro,6,5.0,0.0,0.0,0,0.0,False,False,VAS,-2.285,armadilha_forte,0.0,0.0,0.0,46.9,neutro,0.0
+99213,Puma Rodríguez,VAS,Lateral,6,8.33,0.0,4.73,7,0.0,False,True,SAO,0.569,valor_bom,5.146,1.73,0.875,56.6,neutro,5.1
+97095,Carlos Cuesta,VAS,Zagueiro,7,6.0,0.0,0.7,3,0.0,False,True,SAO,-0.975,armadilha_leve,1.946,0.7,0.375,56.7,neutro,0.83
+86686,Tchê Tchê,VAS,Meia,7,3.92,-0.23,1.58,8,0.0,True,True,SAO,-0.062,neutro,1.738,0.96,1.0,43.3,neutro,1.51
+86410,Victor Luis,MIR,Lateral,7,3.26,-1.15,1.1,4,-1.5,True,False,INT,-0.005,neutro,1.821,1.1,0.5,47.2,neutro,0.86
+141609,Lucca,SAO,Atacante,6,2.77,-0.23,0.0,1,0.0,True,False,VAS,-0.452,neutro,0.779,0.0,0.125,51.9,neutro,0.1
+111682,Adson,VAS,Meia,6,6.57,0.0,2.8,2,0.0,False,True,SAO,0.962,valor_bom,3.88,2.8,0.25,43.3,neutro,0.84
+116706,Andrés Gómez,VAS,Atacante,7,13.06,1.42,7.79,10,10.8,True,True,SAO,1.387,valor_bom,6.466,5.99,1.0,43.2,neutro,5.59
+122485,Barros,VAS,Meia,2,9.54,-0.83,6.67,9,-0.1,True,True,SAO,1.703,valor_oculto,5.484,5.0,1.0,43.3,neutro,4.75
+142279,Nuno Moreira,VAS,Meia,6,5.62,0.0,2.62,10,0.0,False,True,SAO,0.74,valor_bom,3.3,2.12,1.0,43.3,neutro,2.86
+99198,Vegetti,VAS,Atacante,6,11.0,0.0,0.0,0,0.0,False,True,SAO,-4.514,armadilha_forte,0.0,0.0,0.0,43.2,neutro,0.0
+117330,Robert Renan,VAS,Zagueiro,7,4.6,-0.48,1.37,11,0.2,True,True,SAO,-0.439,neutro,1.809,1.37,1.0,56.7,neutro,2.05
+101594,Hugo Moura,VAS,Meia,6,2.96,0.0,1.2,6,0.0,False,True,SAO,-0.209,neutro,0.991,1.2,0.75,43.3,neutro,0.64
+115141,Lucas Freitas,VAS,Zagueiro,6,3.61,0.0,0.0,1,0.0,False,True,SAO,0.029,neutro,1.69,0.0,0.125,56.7,neutro,0.24
+95936,Daniel Fuzato,VAS,Goleiro,6,2.0,0.0,0.0,0,0.0,False,True,SAO,-0.393,neutro,0.0,0.0,0.0,56.9,neutro,0.0
+118752,Mateus Carvalho,VAS,Meia,5,4.0,0.0,0.0,0,0.0,False,True,SAO,-2.043,armadilha_forte,0.0,0.0,0.0,43.3,neutro,0.0
+112709,Kaiki Bruno,CRU,Lateral,7,10.83,-0.05,5.23,10,5.1,True,True,GRE,-0.111,neutro,5.355,3.93,1.0,74.1,neutro,7.94
+105584,Lucas Piton,VAS,Lateral,6,5.02,0.0,1.06,8,0.0,False,True,SAO,-1.027,armadilha_leve,2.097,1.06,1.0,56.6,neutro,2.37
+83786,Neris,VIT,Zagueiro,5,3.08,0.0,1.5,1,0.0,False,True,COR,0.587,valor_bom,1.857,1.5,0.125,67.2,favoravel,0.31
+92180,Jair Ventura,VIT,Técnico,7,9.12,1.14,5.45,9,9.46,True,True,COR,0.45,neutro,5.372,5.45,1.0,42.0,neutro,4.51
+93411,Cantalapiedra,VIT,Meia,6,4.65,0.0,1.27,6,0.0,False,True,COR,-0.619,armadilha_leve,1.628,1.27,0.75,41.9,neutro,1.02
+97645,Thiago Couto,VIT,Goleiro,6,3.0,0.0,0.0,0,0.0,False,True,COR,-1.179,armadilha_leve,0.0,0.0,0.0,67.5,neutro,0.0
+90588,Caíque,VIT,Meia,6,5.11,0.38,2.3,7,4.8,True,True,COR,-0.357,neutro,2.085,2.3,0.875,41.9,neutro,1.53
+115100,Matheus França,VAS,Meia,6,3.12,0.0,0.57,3,0.0,False,True,SAO,-0.588,armadilha_leve,0.762,0.57,0.375,43.3,neutro,0.25
+92696,Renato Kayzer,VIT,Atacante,7,7.08,-0.59,3.54,7,1.5,True,True,COR,0.756,valor_bom,4.218,1.25,0.875,41.5,neutro,3.06
+42222,Osvaldo,VIT,Atacante,6,4.37,0.0,0.8,1,0.0,False,True,COR,-0.318,neutro,1.94,0.8,0.125,41.5,neutro,0.2
+112863,Ramón Sosa,PAL,Atacante,6,5.17,-0.03,1.67,10,1.1,True,True,CAP,-0.799,armadilha_leve,1.853,0.87,1.0,73.4,neutro,2.72
+96793,Camutanga,VIT,Zagueiro,5,6.71,0.0,3.95,7,0.0,False,True,COR,0.888,valor_bom,3.922,2.66,0.875,67.2,favoravel,4.61
+104118,Lucas Arcanjo,VIT,Goleiro,7,10.78,1.59,7.06,7,12.8,True,True,COR,1.045,valor_bom,5.604,4.92,0.875,67.5,favoravel,6.62
+104330,Dudu,VIT,Meia,5,5.01,0.0,3.95,2,0.0,False,True,COR,-0.059,neutro,2.307,1.45,0.25,41.9,neutro,0.48
+111879,Mateus Silva,VIT,Lateral,5,4.95,0.0,4.85,2,0.0,False,True,COR,0.496,neutro,3.478,3.35,0.25,67.1,favoravel,1.17
+100969,Ronald Lopes,VIT,Meia,6,3.02,-0.32,-0.83,3,0.0,True,True,COR,-0.935,armadilha_leve,0.38,0.0,0.375,41.9,neutro,0.12
+102796,Julimar,CAP,Atacante,6,6.71,-1.38,4.62,9,0.2,True,False,PAL,1.373,valor_bom,4.71,1.4,1.0,39.8,desfavoravel,3.75
+90031,Mendoza,CAP,Atacante,7,9.88,1.71,5.75,9,12.0,True,False,PAL,0.979,valor_bom,5.308,2.19,1.0,39.8,desfavoravel,4.23
+108588,Tapia,SAO,Atacante,6,4.69,-0.64,2.07,7,0.1,True,False,VAS,-0.349,neutro,2.077,2.07,0.875,51.9,neutro,1.89
+101752,Claudinho,VIT,Lateral,6,4.0,0.0,0.0,0,0.0,False,True,COR,-2.566,armadilha_forte,0.0,0.0,0.0,67.1,neutro,0.0
+109138,Kike Saverio,VIT,Atacante,6,5.0,0.0,0.0,0,0.0,False,True,COR,-2.54,armadilha_forte,0.0,0.0,0.0,41.5,neutro,0.0
+92273,Odair Hellmann,CAP,Técnico,7,8.98,0.95,5.47,9,8.56,True,False,PAL,0.693,valor_bom,5.383,5.47,1.0,40.4,neutro,4.35
+80129,Jadson,CAP,Meia,7,4.28,0.0,1.41,7,0.0,False,False,PAL,-0.36,neutro,1.669,1.41,0.875,40.2,neutro,1.17
+116461,Jamerson,VIT,Lateral,5,6.19,0.0,4.1,3,0.0,False,True,COR,-0.31,neutro,3.398,2.1,0.375,67.1,neutro,1.71
+145387,Rúben Ismael,VIT,Meia,5,4.0,0.0,0.0,0,0.0,False,True,COR,-2.043,armadilha_forte,0.0,0.0,0.0,41.9,neutro,0.0
+110668,Esquivel,CAP,Lateral,7,8.14,1.45,5.33,7,10.8,True,False,PAL,0.948,valor_bom,5.426,3.04,0.875,19.7,desfavoravel,1.87
+85626,Léo,CAP,Zagueiro,6,6.77,0.0,4.9,2,0.0,False,False,PAL,1.056,valor_bom,4.098,3.4,0.25,19.9,desfavoravel,0.41
+113113,Benavídez,CAP,Lateral,2,6.72,0.0,4.4,8,0.0,False,False,PAL,-0.186,neutro,3.767,2.4,1.0,19.7,desfavoravel,1.48
+111951,Renzo López,VIT,Atacante,6,2.09,0.0,0.4,4,0.0,False,True,COR,0.055,neutro,0.718,0.4,0.5,41.5,neutro,0.3
+110698,Mycael,CAP,Goleiro,6,5.0,0.0,0.0,0,0.0,False,False,PAL,-2.285,armadilha_forte,0.0,0.0,0.0,20.0,desfavoravel,0.0
+123869,Aguirre,CAP,Zagueiro,7,5.69,0.93,2.98,8,4.7,True,False,PAL,-0.015,neutro,2.697,1.85,1.0,19.9,desfavoravel,1.07
+107985,Terán,CAP,Zagueiro,6,4.92,0.0,2.72,5,0.0,False,False,PAL,0.179,neutro,2.531,2.12,0.625,19.9,desfavoravel,0.63
+130620,Edenílson,VIT,Meia,7,3.15,0.0,1.27,3,0.0,False,True,COR,-0.398,neutro,0.953,1.27,0.375,41.9,neutro,0.3
+112017,Felipinho,CAP,Meia,6,3.76,-0.44,0.75,2,0.0,True,False,PAL,-0.036,neutro,1.667,0.75,0.25,40.2,neutro,0.34
+105518,Renan Peixoto,CAP,Atacante,6,3.56,-0.05,0.5,2,1.0,True,False,PAL,-0.024,neutro,1.766,0.5,0.25,39.8,desfavoravel,0.35
+120433,Léo Derik,CAP,Lateral,7,4.37,0.0,2.84,5,0.0,False,False,PAL,0.398,neutro,3.021,2.24,0.625,19.7,desfavoravel,0.74
+125746,Dudu,CAP,Meia,7,2.67,0.2,2.45,8,2.2,True,False,PAL,0.754,valor_bom,1.642,1.83,1.0,40.2,neutro,1.32
+115266,Renan Viana,CAP,Atacante,6,2.0,0.0,0.0,0,0.0,False,False,PAL,-0.566,armadilha_leve,0.0,0.0,0.0,39.8,desfavoravel,0.0
+122439,Isaac,CAP,Atacante,6,2.0,0.0,0.0,0,0.0,False,False,PAL,-0.566,armadilha_leve,0.0,0.0,0.0,39.8,desfavoravel,0.0
+143193,Viveros,CAP,Atacante,7,12.19,1.74,7.09,9,11.4,True,False,PAL,1.129,valor_bom,6.018,2.98,1.0,39.8,desfavoravel,4.79
+122316,Batata,CAP,Lateral,6,1.0,0.0,0.0,0,0.0,False,False,PAL,0.924,valor_bom,0.0,0.0,0.0,19.7,desfavoravel,0.0
+128431,João Cruz,CAP,Meia,6,5.44,0.46,2.8,5,6.2,True,False,PAL,-0.346,neutro,2.244,0.8,0.625,40.2,neutro,1.13
+131832,Portilla,CAP,Meia,6,2.85,-0.73,1.3,9,-0.3,True,False,PAL,-0.02,neutro,1.081,1.3,1.0,40.2,neutro,0.87
+125926,Zapelli,CAP,Meia,6,5.41,-0.08,2.39,7,1.7,True,False,PAL,-0.462,neutro,2.127,1.68,0.875,40.2,neutro,1.5
+128427,Alejandro García,CAP,Meia,6,4.0,0.0,0.0,0,0.0,False,False,PAL,-2.043,armadilha_forte,0.0,0.0,0.0,40.2,neutro,0.0
+71227,Maicon,CFC,Zagueiro,7,4.16,-0.01,2.16,10,0.5,True,True,CAM,0.319,neutro,2.273,1.26,1.0,54.4,neutro,2.47
+127970,Felipe Chiqueti,CAP,Meia,6,1.85,0.0,1.35,4,0.0,False,False,PAL,0.843,valor_bom,1.006,1.35,0.5,40.2,neutro,0.4
+123101,Leozinho,CAP,Atacante,6,2.33,0.0,-0.15,2,0.0,False,False,PAL,-0.204,neutro,0.671,0.0,0.25,39.8,desfavoravel,0.13
+128429,Marcão,CAP,Zagueiro,6,3.0,0.0,0.0,0,0.0,False,False,PAL,-1.383,armadilha_leve,0.0,0.0,0.0,19.9,desfavoravel,0.0
+130842,Matheus Soares,CAP,Goleiro,6,1.0,0.0,0.0,0,0.0,False,False,PAL,0.713,valor_bom,0.0,0.0,0.0,20.0,desfavoravel,0.0
+63354,Rodrigo Moledo,CFC,Zagueiro,6,3.0,0.0,0.0,0,0.0,False,True,CAM,-1.383,armadilha_leve,0.0,0.0,0.0,54.4,neutro,0.0
+143532,Carlos Eduardo,CAP,Goleiro,6,1.0,0.0,0.0,0,0.0,False,False,PAL,0.713,valor_bom,0.0,0.0,0.0,20.0,desfavoravel,0.0
+84339,Bruno Melo,CFC,Lateral,7,6.44,0.0,4.33,10,5.8,True,True,CAM,-0.011,neutro,3.799,2.93,1.0,54.3,neutro,4.13
+90302,Pedro Rocha,CFC,Atacante,7,6.79,-0.14,3.56,11,1.5,True,True,CAM,0.731,valor_bom,4.087,2.11,1.0,41.9,neutro,3.42
+145609,Élan Ricardo,CAP,Meia,6,3.0,0.0,0.0,0,0.0,False,False,PAL,-1.341,armadilha_leve,0.0,0.0,0.0,40.2,neutro,0.0
+84626,Josué,CFC,Meia,7,5.8,0.19,3.1,10,6.2,True,True,CAM,0.952,valor_bom,3.567,1.1,1.0,42.1,neutro,3.0
+50742,Gabriel Leite,CFC,Goleiro,6,3.0,0.0,0.0,0,0.0,False,True,CAM,-1.179,armadilha_leve,0.0,0.0,0.0,54.6,neutro,0.0
+82628,Tinga,CFC,Lateral,6,5.07,0.18,2.28,7,2.0,True,True,CAM,-0.374,neutro,2.736,2.28,0.875,54.3,neutro,2.6
+81952,Willian Oliveira,CFC,Meia,6,5.22,0.0,2.43,7,0.0,False,True,CAM,-0.347,neutro,2.145,2.43,0.875,42.1,neutro,1.58
+123648,Lucas Ronier,CFC,Atacante,7,10.63,-0.42,7.93,11,2.8,True,True,CAM,2.076,valor_oculto,6.617,5.84,1.0,41.9,neutro,5.55
+84428,Fernando Sobral,CFC,Meia,6,4.56,0.0,1.5,2,0.0,False,True,CAM,-0.358,neutro,1.817,1.5,0.25,42.1,neutro,0.38
+110708,Pedro Rangel,CFC,Goleiro,7,5.99,0.12,4.25,8,3.5,True,True,CAM,1.257,valor_bom,4.29,2.38,1.0,54.6,neutro,4.68
+97878,Jacy,CFC,Zagueiro,7,4.95,-0.61,4.03,10,1.0,True,True,CAM,1.017,valor_bom,3.312,2.83,1.0,54.4,neutro,3.6
+126977,Fernando Seabra,CFC,Técnico,7,7.85,0.32,5.25,11,5.91,True,True,CAM,1.11,valor_bom,4.999,5.25,1.0,42.2,neutro,4.22
+104811,Sebastián Gómez,CFC,Meia,7,4.62,0.82,2.34,9,6.5,True,True,CAM,-0.043,neutro,2.131,2.34,1.0,42.1,neutro,1.79
+101405,Wallisson,CFC,Meia,7,5.25,0.73,2.9,8,4.6,True,True,CAM,-0.081,neutro,2.398,2.9,1.0,42.1,neutro,2.02
+125803,Pedro Morisco,CFC,Goleiro,5,8.04,0.0,5.0,4,0.0,False,True,CAM,0.798,valor_bom,4.553,5.0,0.5,54.6,neutro,2.49
+117930,Lavega,CFC,Atacante,6,5.95,1.44,3.57,10,8.4,True,True,CAM,-0.101,neutro,2.909,1.17,1.0,41.9,neutro,2.44
+109127,Tiago Cóser,CFC,Zagueiro,6,3.39,-0.91,2.82,9,1.5,True,True,CAM,0.942,valor_bom,2.388,1.15,1.0,54.4,neutro,2.6
+124358,João Almeida,CFC,Lateral,6,1.0,0.0,0.0,0,0.0,False,True,CAM,0.924,valor_bom,0.0,0.0,0.0,54.3,neutro,0.0
+124834,Ruan Assis,CFC,Atacante,6,1.0,0.0,0.0,0,0.0,False,True,CAM,0.588,valor_bom,0.0,0.0,0.0,41.9,neutro,0.0
+125551,Jean Gabriel,CFC,Meia,6,2.0,0.0,0.0,0,0.0,False,True,CAM,-0.436,neutro,0.0,0.0,0.0,42.1,neutro,0.0
+112576,Vini Paulista,CFC,Meia,6,4.57,0.89,2.55,11,7.7,True,True,CAM,0.145,neutro,2.275,2.55,1.0,42.1,neutro,1.92
+115840,Benassi,CFC,Goleiro,6,1.0,0.0,0.0,0,0.0,False,True,CAM,0.713,valor_bom,0.0,0.0,0.0,54.6,neutro,0.0
+97795,Marcelinho,REM,Lateral,6,4.92,-0.32,4.02,8,5.8,True,False,RBB,0.622,valor_bom,3.577,3.64,1.0,44.8,neutro,3.2
+131279,Thiago Azaf,CFC,Atacante,6,1.0,0.0,0.0,0,0.0,False,True,CAM,0.588,valor_bom,0.0,0.0,0.0,41.9,neutro,0.0
+82730,Marcelo Rangel,REM,Goleiro,7,4.99,-0.86,3.01,11,2.1,True,False,RBB,0.44,neutro,2.948,2.56,1.0,45.1,neutro,2.66
+84708,Panagiotis,REM,Meia,6,3.0,0.0,0.0,0,0.0,False,False,RBB,-1.341,armadilha_leve,0.0,0.0,0.0,46.4,neutro,0.0
+141337,Lucas Taverna,CFC,Lateral,6,1.0,0.0,0.0,0,0.0,False,True,CAM,0.924,valor_bom,0.0,0.0,0.0,54.3,neutro,0.0
+95555,Sávio,REM,Lateral,6,4.66,0.0,2.47,3,0.0,False,False,RBB,0.126,neutro,2.954,2.47,0.375,44.8,neutro,0.99
+104257,João Lucas,REM,Lateral,5,4.59,0.0,2.82,6,0.0,False,False,RBB,0.222,neutro,3.0,2.82,0.75,44.8,neutro,2.02
+130283,Matheus Dias,CFC,Meia,6,1.0,0.0,0.0,0,0.0,False,True,CAM,0.839,valor_bom,0.0,0.0,0.0,42.1,neutro,0.0
+83074,Ygor Vinhas,REM,Goleiro,6,3.0,0.0,0.0,0,0.0,False,False,RBB,-1.179,armadilha_leve,0.0,0.0,0.0,45.1,neutro,0.0
+96831,Carlinhos,REM,Atacante,6,3.5,0.0,-1.0,0,0.0,False,False,RBB,-1.721,armadilha_forte,0.0,0.0,0.0,46.3,neutro,0.0
+98224,Jáderson,REM,Meia,6,3.24,0.71,1.03,7,4.0,True,False,RBB,-0.496,neutro,0.926,1.03,0.875,46.4,neutro,0.75
+97735,Giovanni Pavani,REM,Meia,6,2.98,0.0,1.5,1,0.0,False,False,RBB,-0.317,neutro,0.908,1.5,0.125,46.4,neutro,0.11
+122441,Kayky Almeida,REM,Zagueiro,6,2.81,0.0,1.89,7,0.0,False,False,RBB,0.84,valor_bom,1.896,1.89,0.875,44.9,neutro,1.49
+143455,PH Gama,REM,Meia,6,2.0,0.0,0.0,0,0.0,False,False,RBB,-0.436,neutro,0.0,0.0,0.0,46.4,neutro,0.0
+102911,Zé Ricardo,REM,Meia,6,4.7,0.1,3.3,10,1.5,True,False,RBB,0.517,valor_bom,2.676,3.3,1.0,46.4,neutro,2.48
+142593,Nicolás Ferreira,REM,Atacante,6,2.74,0.0,0.2,1,0.0,False,False,RBB,-0.406,neutro,0.802,0.2,0.125,46.3,neutro,0.09
+117338,Yago Ferreira,REM,Meia,6,2.0,0.0,0.0,0,0.0,False,False,RBB,-0.436,neutro,0.0,0.0,0.0,46.4,neutro,0.0
+107700,Eduardo Melo,REM,Atacante,6,2.13,0.0,1.4,1,0.0,False,False,RBB,0.231,neutro,0.935,1.4,0.125,46.3,neutro,0.11
+111945,Diego Hernández,REM,Meia,6,4.51,0.82,2.35,4,5.0,True,False,RBB,-0.073,neutro,2.048,1.1,0.5,46.4,neutro,0.95
+68822,Rafael Santos,CHA,Goleiro,7,5.42,0.18,4.6,3,4.5,True,True,BOT,1.594,valor_oculto,4.403,4.6,0.375,28.7,neutro,0.95
+107172,Patrick de Paula,REM,Meia,6,7.36,0.0,5.48,6,0.0,False,False,RBB,1.583,valor_oculto,4.72,3.81,0.75,46.4,neutro,3.29
+145782,Tassano,REM,Zagueiro,6,3.0,0.0,0.0,0,0.0,False,False,RBB,-1.383,armadilha_leve,0.0,0.0,0.0,44.9,neutro,0.0
+146040,João Pedro,REM,Atacante,6,3.13,0.0,2.06,5,0.0,False,False,RBB,-0.168,neutro,1.332,0.46,0.625,46.3,neutro,0.77
+70958,Jean Carlos,CHA,Meia,7,7.34,-0.7,3.96,10,-1.3,True,True,BOT,0.841,valor_bom,4.045,1.96,1.0,47.9,neutro,3.88
+95620,Bruno Leonardo,CHA,Zagueiro,7,3.01,0.21,1.47,9,1.1,True,True,BOT,0.439,neutro,1.673,1.14,1.0,28.5,neutro,0.95
+71043,Léo Vieira,BAH,Goleiro,7,7.24,0.41,5.76,10,5.5,True,False,FLA,1.578,valor_oculto,5.124,4.76,1.0,34.5,neutro,3.54
+97969,Marcos Vinícius,CHA,Lateral,6,3.25,-0.66,2.15,4,0.2,True,True,BOT,0.378,neutro,2.171,0.9,0.5,28.3,neutro,0.61
+97432,Victor Caetano,CHA,Zagueiro,6,3.47,0.0,2.0,5,0.0,False,True,BOT,0.396,neutro,1.939,2.0,0.625,28.5,neutro,0.69
+141385,João Victor,REM,Goleiro,6,1.0,0.0,0.0,0,0.0,False,False,RBB,0.713,valor_bom,0.0,0.0,0.0,45.1,neutro,0.0
+105664,Walter Clar,CHA,Lateral,7,7.88,0.0,5.2,9,0.0,False,True,BOT,0.972,valor_bom,5.346,2.31,1.0,28.3,neutro,3.03
+141386,Marcos Alexandre,REM,Goleiro,6,1.0,0.0,0.0,0,0.0,False,False,RBB,0.713,valor_bom,0.0,0.0,0.0,45.1,neutro,0.0
+88293,Neto Pessoa,CHA,Atacante,6,4.39,-0.5,3.0,5,2.9,True,True,BOT,0.158,neutro,2.436,1.4,0.625,47.4,neutro,1.44
+109336,Rafael Carvalheira,CHA,Meia,7,4.94,0.01,2.39,9,1.2,True,True,BOT,-0.188,neutro,2.158,1.83,1.0,47.9,neutro,2.07
+102906,Anderson,CHA,Goleiro,6,3.0,0.0,0.0,0,0.0,False,True,BOT,-1.179,armadilha_leve,0.0,0.0,0.0,28.7,neutro,0.0
+83048,Rafael Thyere,CHA,Zagueiro,6,4.0,0.0,0.0,0,0.0,False,True,BOT,-2.069,armadilha_forte,0.0,0.0,0.0,28.5,neutro,0.0
+68938,Giovanni Augusto,CHA,Meia,6,3.2,0.0,0.93,7,0.0,False,True,BOT,-0.518,armadilha_leve,0.879,0.93,0.875,47.9,neutro,0.74
+95332,Marcinho,CHA,Atacante,6,3.19,0.15,1.69,9,1.2,True,True,BOT,-0.234,neutro,1.307,1.69,1.0,47.4,neutro,1.24
+116066,Rubens,CHA,Atacante,6,3.15,0.0,2.28,5,0.0,False,True,BOT,-0.098,neutro,1.417,0.68,0.625,47.4,neutro,0.84
+107453,João Paulo,CHA,Zagueiro,6,4.91,0.0,7.0,1,0.0,False,True,BOT,0.613,valor_bom,2.923,2.0,0.125,28.5,neutro,0.21
+101393,Eduardo Doma,CHA,Zagueiro,7,4.59,-0.6,3.58,10,0.7,True,True,BOT,0.936,valor_bom,3.062,2.68,1.0,28.5,neutro,1.75
+104519,Camilo,CHA,Meia,7,4.8,-0.61,2.84,9,1.7,True,True,BOT,0.152,neutro,2.396,2.84,1.0,47.9,neutro,2.3
+107516,Ênio,CHA,Atacante,7,4.71,-0.54,2.63,3,1.3,True,True,BOT,-0.206,neutro,2.232,2.63,0.375,47.4,neutro,0.79
+103987,Higor Meritão,CHA,Meia,6,7.92,0.3,4.94,8,4.9,True,True,BOT,1.185,valor_bom,4.545,4.32,1.0,47.9,neutro,4.35
+130414,Robert,CHA,Meia,5,3.51,0.0,3.0,1,0.0,False,True,BOT,-0.524,armadilha_leve,1.075,3.0,0.125,47.9,neutro,0.13
+123625,Ítalo,CHA,Atacante,7,2.96,-0.07,1.92,10,1.3,True,True,BOT,0.073,neutro,1.456,1.92,1.0,47.4,neutro,1.38
+104470,Everton,CHA,Lateral,7,3.73,0.0,2.27,8,0.0,False,True,BOT,0.03,neutro,2.226,1.27,1.0,28.3,neutro,1.26
+122138,João Vitor,CHA,Meia,6,3.57,0.33,2.1,6,3.3,True,True,BOT,-0.23,neutro,1.377,2.1,0.75,47.9,neutro,0.99
+130843,Arthur Dias,CAP,Zagueiro,7,6.69,1.61,4.05,8,9.2,True,False,PAL,0.953,valor_bom,3.974,2.92,1.0,19.9,desfavoravel,1.58
+97900,Vitão,FLA,Zagueiro,6,8.27,0.0,1.9,3,0.0,False,True,BAH,-0.301,neutro,3.353,0.9,0.375,43.1,neutro,1.08
+110426,Bernabei,INT,Lateral,3,10.01,-0.44,5.6,10,9.6,True,True,MIR,0.382,neutro,5.56,4.1,1.0,60.5,favoravel,6.73
+99552,Rossi,FLA,Goleiro,7,7.97,0.49,3.67,9,4.2,True,True,BAH,0.29,neutro,3.98,2.0,1.0,43.3,neutro,3.45
+111279,Mancha,CHA,Lateral,6,3.0,0.0,0.0,0,0.0,False,True,BOT,-1.716,armadilha_forte,0.0,0.0,0.0,28.3,neutro,0.0
+140438,David,CHA,Meia,6,1.31,0.0,0.77,3,0.0,False,True,BOT,1.293,valor_bom,0.817,0.77,0.375,47.9,neutro,0.29
+89837,Lucho Acosta,FLU,Meia,2,11.51,-0.27,6.86,10,0.0,True,False,SAN,1.355,valor_bom,5.656,3.86,1.0,42.5,neutro,4.81
+51772,Everton Ribeiro,BAH,Meia,7,9.76,-0.4,5.48,6,5.2,True,False,FLA,0.789,valor_bom,4.72,3.81,0.75,40.8,neutro,2.89
+121870,Gustavo Talles,CHA,Lateral,6,2.0,0.0,0.0,0,0.0,False,True,BOT,-0.62,armadilha_leve,0.0,0.0,0.0,28.3,neutro,0.0
+89274,Andreas Pereira,PAL,Meia,7,13.73,-0.58,6.51,11,0.9,True,True,CAP,0.686,valor_bom,5.516,2.42,1.0,72.4,favoravel,7.99
+124674,Felipe Negrucci,SAO,Meia,6,2.0,0.0,0.0,0,0.0,False,False,VAS,-0.436,neutro,0.0,0.0,0.0,52.5,neutro,0.0
+130806,Kauan,CHA,Zagueiro,6,1.0,0.0,0.0,0,0.0,False,True,BOT,0.748,valor_bom,0.0,0.0,0.0,28.5,neutro,0.0
+127969,Matheus Reis,FLU,Atacante,5,1.0,0.0,0.0,0,0.0,False,False,SAN,0.588,valor_bom,0.0,0.0,0.0,42.1,neutro,0.0
+68708,Eduardo,MIR,Meia,3,6.21,-0.42,2.98,5,1.3,True,False,INT,0.916,valor_bom,3.7,1.98,0.625,31.7,desfavoravel,1.47
