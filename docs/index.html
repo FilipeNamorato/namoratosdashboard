@@ -401,6 +401,48 @@ footer a { color: var(--green); text-decoration: none; }
 .zona-legenda { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 14px; }
 .zona-leg-item { display: flex; align-items: center; gap: 6px; font-family: var(--fm); font-size: 10px; color: var(--muted); }
 
+/* RECOMENDACAO BADGES — TITULAR / RESERVA_LUXO / BANCO / EVITAR / WATCH */
+.rec-badge { font-family: var(--fm); font-size: 9px; padding: 2px 7px; border-radius: 3px; letter-spacing: .5px; display: inline-block; white-space: nowrap; font-weight: 600; }
+.rec-titular { background: rgba(0,230,118,.18); color: var(--green);  border: 1px solid rgba(0,230,118,.35); }
+.rec-luxo    { background: rgba(255,214,0,.14); color: var(--yellow); border: 1px solid rgba(255,214,0,.3); }
+.rec-banco   { background: rgba(74,158,255,.12); color: var(--blue);  border: 1px solid rgba(74,158,255,.25); }
+.rec-evitar  { background: rgba(255,61,90,.14); color: var(--red);    border: 1px solid rgba(255,61,90,.3); }
+.rec-watch   { background: rgba(90,116,145,.12); color: var(--muted); border: 1px solid rgba(90,116,145,.25); }
+
+/* TIER BADGES — times_rodada A/B/C/D */
+.tier-badge { font-family: var(--fm); font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 4px; letter-spacing: 1px; display: inline-block; }
+.tier-a { background: rgba(0,230,118,.2);  color: var(--green);  border: 1px solid rgba(0,230,118,.4); }
+.tier-b { background: rgba(255,214,0,.15); color: var(--yellow); border: 1px solid rgba(255,214,0,.3); }
+.tier-c { background: rgba(255,145,0,.14); color: var(--orange); border: 1px solid rgba(255,145,0,.28); }
+.tier-d { background: rgba(255,61,90,.12); color: var(--red);    border: 1px solid rgba(255,61,90,.25); }
+
+/* BTTS CHIP — probabilidade de ambos marcarem */
+.btts-chip { font-family: var(--fm); font-size: 9px; padding: 2px 6px; border-radius: 3px; letter-spacing: .5px; display: inline-block; }
+.btts-alto  { background: rgba(0,230,118,.12); color: var(--green);  border: 1px solid rgba(0,230,118,.25); }
+.btts-medio { background: rgba(255,214,0,.1);  color: var(--yellow); border: 1px solid rgba(255,214,0,.2); }
+.btts-baixo { background: rgba(90,116,145,.1); color: var(--muted);  border: 1px solid rgba(90,116,145,.2); }
+
+/* CALIBRATION PILL — header */
+.calib-pill { display: inline-flex; align-items: center; gap: 6px; padding: 3px 9px; border-radius: 999px; font-family: var(--fm); font-size: 9px; letter-spacing: .8px; }
+.calib-ok   { background: rgba(0,230,118,.12); color: var(--green); border: 1px solid rgba(0,230,118,.25); }
+.calib-heur { background: rgba(90,116,145,.1); color: var(--muted); border: 1px solid var(--border); }
+.calib-pill b { font-family: var(--fb); font-weight: 600; }
+
+/* TIMES RODADA — cards */
+.tr-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; }
+.tr-card { background: var(--s1); border: 1px solid var(--border); border-radius: 10px; padding: 14px; transition: border-color .15s, transform .1s; }
+.tr-card:hover { border-color: var(--green); transform: translateY(-1px); }
+.tr-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.tr-title { font-weight: 600; font-size: 14px; }
+.tr-sub { font-family: var(--fm); font-size: 10px; color: var(--muted); margin-bottom: 10px; }
+.tr-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px 12px; }
+.tr-stat { display: flex; flex-direction: column; gap: 2px; }
+.tr-stat-lbl { font-family: var(--fm); font-size: 9px; color: var(--muted); letter-spacing: .5px; }
+.tr-stat-val { font-family: var(--fm); font-size: 13px; font-weight: 600; }
+.tr-stat-val.g { color: var(--green); }
+.tr-stat-val.y { color: var(--yellow); }
+.tr-stat-val.r { color: var(--red); }
+
 /* TOP CONFRONTO CARD — lista mais rica */
 .conf-list-item {
   padding: 10px 18px;
@@ -429,6 +471,7 @@ footer a { color: var(--green); text-decoration: none; }
   </div>
   <div class="header-right">
     <div class="rodada-pill" id="rodada-pill">Rodada —</div>
+    <span class="calib-pill calib-heur" id="calib-pill" data-tip="Status do modelo de pontos_esperados">heurística</span>
     <div class="last-update">coleta: <span id="last-update">—</span></div>
     <button class="btn" onclick="init()">↻ Atualizar</button>
     <a href="./escalacao.html" class="btn" style="text-decoration:none;">⚡ Escalação IA</a>
@@ -537,6 +580,13 @@ footer a { color: var(--green); text-decoration: none; }
         <button class="filter-btn" data-pos="Atacante">ATA</button>
         <button class="filter-btn" data-pos="Técnico">TEC</button>
       </div>
+      <div id="filter-rec" style="display:flex;gap:6px;flex-wrap:wrap;margin-left:4px;">
+        <button class="filter-btn active" data-rec="all">Rec: Todas</button>
+        <button class="filter-btn" data-rec="TITULAR">TITULAR</button>
+        <button class="filter-btn" data-rec="RESERVA_LUXO">LUXO</button>
+        <button class="filter-btn" data-rec="BANCO">BANCO</button>
+        <button class="filter-btn" data-rec="EVITAR">EVITAR</button>
+      </div>
       <button class="filter-btn danger" id="btn-mandante" data-active="false">🏠 Mandante</button>
       <button class="filter-btn danger" id="btn-armadilha" data-active="false">🚨 Armadilha</button>
       <button class="filter-btn danger" id="btn-valor" data-active="false">💎 Valor Oculto</button>
@@ -552,6 +602,7 @@ footer a { color: var(--green); text-decoration: none; }
         <table>
           <thead>
             <tr>
+              <th data-col="recomendacao" data-tip="Classificação consolidada: TITULAR (consistente) · LUXO (alto teto) · BANCO (barato/estável) · EVITAR (armadilha ou fora) · WATCH">REC</th>
               <th data-col="nome">ATLETA</th>
               <th data-col="clube">CLUBE</th>
               <th data-col="posicao">POS</th>
@@ -572,7 +623,7 @@ footer a { color: var(--green); text-decoration: none; }
             </tr>
           </thead>
           <tbody id="table-body">
-            <tr><td colspan="17"><div class="loading"><div class="spinner"></div>carregando...</div></td></tr>
+            <tr><td colspan="18"><div class="loading"><div class="spinner"></div>carregando...</div></td></tr>
           </tbody>
         </table>
       </div>
@@ -709,7 +760,9 @@ const CSV_LOG    = './data/current/log.csv';
 const CSV_STATUS = './data/current/status.csv';
 const CSV_ODDS   = './data/current/odds.csv';
 const CSV_TABELA = './data/current/tabela.csv';
+const CSV_TIMES  = './data/current/times_rodada.csv';
 const JSON_BRA   = './data/raw/brasileirao.json';
+const JSON_CALIB = './data/current/calibracao_pontos.json';
 
 const STATUS_MAP = {
   '7': { l: 'Provável',   c: 's7' },
@@ -750,7 +803,8 @@ const ABR_TO_NOME = {
 
 // ── STATE ─────────────────────────────────────────────────────
 let ALL = [], PARTIDAS = [], ODDS = [], TABELA_BRA = [], TABELA_IDX = {};
-let fPos = 'all', fText = '', fMand = false, fArm = false, fValor = false, fFav = false;
+let TIMES_RODADA = [], CALIB = null;
+let fPos = 'all', fText = '', fMand = false, fArm = false, fValor = false, fFav = false, fRec = 'all';
 let sortCol = 'score_confronto_100', sortAsc = false;
 let timerInterval = null;
 
@@ -848,6 +902,53 @@ function score100Html(nota) {
   if (val <= 40) cls = 'tr'; // Vermelho (Fogueira)
   
   return `<span class="${cls}" style="font-weight:600;">${val.toFixed(1)}</span>`;
+}
+
+function recHtml(rec) {
+  const map = {
+    'TITULAR':      { cls: 'rec-titular', text: 'TITULAR' },
+    'RESERVA_LUXO': { cls: 'rec-luxo',    text: 'LUXO'    },
+    'BANCO':        { cls: 'rec-banco',   text: 'BANCO'   },
+    'EVITAR':       { cls: 'rec-evitar',  text: 'EVITAR'  },
+    'WATCH':        { cls: 'rec-watch',   text: 'WATCH'   },
+  };
+  const m = map[rec];
+  if (!m) return '<span class="tm">—</span>';
+  return `<span class="rec-badge ${m.cls}">${m.text}</span>`;
+}
+
+function tierHtml(tier) {
+  if (!tier) return '';
+  const t = String(tier).toUpperCase();
+  const cls = { A: 'tier-a', B: 'tier-b', C: 'tier-c', D: 'tier-d' }[t];
+  if (!cls) return '';
+  return `<span class="tier-badge ${cls}">${t}</span>`;
+}
+
+function renderCalibPill() {
+  const el = document.getElementById('calib-pill');
+  if (!el) return;
+  if (!CALIB) { el.className = 'calib-pill calib-heur'; el.textContent = 'heurística'; return; }
+  if (CALIB.status === 'ok') {
+    const mae = CALIB.metricas?.mae_modelo;
+    const ganho = CALIB.metricas?.ganho_pct;
+    el.className = 'calib-pill calib-ok';
+    el.innerHTML = `<b>modelo</b> · MAE ${mae?.toFixed(2) ?? '—'}${ganho ? ` · +${ganho}%` : ''}`;
+    el.setAttribute('data-tip', `Calibrado em ${CALIB.n_rodadas} rodada(s), ${CALIB.n_registros} registros`);
+  } else {
+    el.className = 'calib-pill calib-heur';
+    const mae = CALIB.metricas?.mae_heuristica;
+    el.innerHTML = `<b>heurística</b>${mae ? ` · MAE ${mae.toFixed(2)}` : ''}`;
+    el.setAttribute('data-tip', CALIB.motivo || 'Dados insuficientes para calibrar');
+  }
+}
+
+function bttsChip(p) {
+  const v = parseFloat(p);
+  if (isNaN(v)) return '';
+  const pct = Math.round(v * 100);
+  const cls = v >= 0.55 ? 'btts-alto' : v >= 0.40 ? 'btts-medio' : 'btts-baixo';
+  return `<span class="btts-chip ${cls}" data-tip="Prob. ambos marcarem (Poisson)">BTTS ${pct}%</span>`;
 }
 
 function opcHtml(opc, vm) {
@@ -1123,6 +1224,7 @@ function renderTopConfrontos() {
 function getFiltered() {
   return ALL.filter(a => {
     if (fPos !== 'all' && a.posicao !== fPos) return false;
+    if (fRec !== 'all' && a.recomendacao !== fRec) return false;
     if (fMand  && a.mandante !== 'True') return false;
     if (fArm   && a.armadilha_label !== 'armadilha_forte') return false;
     if (fValor && a.armadilha_label !== 'valor_oculto') return false;
@@ -1149,7 +1251,7 @@ function renderTable() {
   const data = getSorted(getFiltered());
   const tbody = document.getElementById('table-body');
   if (!data.length) {
-    tbody.innerHTML = '<tr><td colspan="17"><div class="err">Nenhum atleta encontrado</div></td></tr>';
+    tbody.innerHTML = '<tr><td colspan="18"><div class="err">Nenhum atleta encontrado</div></td></tr>';
     document.getElementById('table-count').textContent = '0 atletas'; return;
   }
   tbody.innerHTML = data.map(a => {
@@ -1170,6 +1272,7 @@ function renderTable() {
       : '—';
 
     return `<tr class="${rowCls}">
+      <td>${recHtml(a.recomendacao)}</td>
       <td class="nm">${a.nome||'—'}</td>
       <td class="tm">${a.clube||'—'}</td>
       <td class="tm">${(a.posicao||'').substring(0,3).toUpperCase()}</td>
@@ -1255,6 +1358,7 @@ function renderConfrontos() {
         <span class="jogo-tag bb">${dt}</span>
         ${local !== '—' ? `<span class="jogo-tag" style="background:rgba(90,116,145,.1);color:var(--muted)">${local}</span>` : ''}
         ${validaTag}
+        ${bttsChip(p.prob_btts_aprox)}
       </div>
       ${momBlock}
       ${bottomHTML}
@@ -1479,6 +1583,14 @@ document.getElementById('filter-pos').addEventListener('click', e => {
   btn.classList.add('active');
   renderTable();
 });
+document.getElementById('filter-rec').addEventListener('click', e => {
+  const btn = e.target.closest('[data-rec]');
+  if (!btn) return;
+  fRec = btn.dataset.rec;
+  document.querySelectorAll('#filter-rec [data-rec]').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderTable();
+});
 document.getElementById('btn-mandante').addEventListener('click', function() {
   fMand = !fMand; this.classList.toggle('active', fMand); renderTable();
 });
@@ -1526,7 +1638,7 @@ async function init() {
     ALL = (await fetchCSV(CSV_ENR)).filter(a => a.nome);
   } catch(e) {
     document.getElementById('table-body').innerHTML =
-      `<tr><td colspan="17"><div class="err">Erro ao carregar atletas: ${e.message}</div></td></tr>`;
+      `<tr><td colspan="18"><div class="err">Erro ao carregar atletas: ${e.message}</div></td></tr>`;
   }
 
   try { PARTIDAS = await fetchCSV(CSV_PART); } catch(e) {}
@@ -1537,6 +1649,13 @@ async function init() {
     TABELA_BRA = await fetchCSV(CSV_TABELA);
     buildTabelaIdx();
   } catch(e) { console.warn('brasileirao_tabela.csv não disponível'); }
+
+  // Calibração do modelo de pontos_esperados (opcional)
+  try {
+    const r = await fetch(JSON_CALIB + '?t=' + Date.now());
+    if (r.ok) CALIB = await r.json();
+  } catch(e) { /* sem calibração — fica em heurística */ }
+  renderCalibPill();
 
   markDefaultSort();
   renderStats();

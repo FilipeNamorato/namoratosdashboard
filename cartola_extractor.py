@@ -194,20 +194,25 @@ PESO_SG_POS = {
 }
 PESO_ASSISTENCIA = 5.0
 
-# Colunas que vão para o llm/input/ (apenas o que o modelo precisa)
+# Colunas que vão para o llm/input/ (apenas o que o modelo precisa).
+# Enxutas: removidos atleta_id (ruído pra LLM), score_confronto_z
+# (redundante com _100), forma_score_time (já capturado em tier/score_time de
+# times_rodada.csv). Adicionadas recomendacao + caro_e_vale para que a LLM não
+# precise recalcular heurísticas.
 COLUNAS_LLM = [
-    "atleta_id", "nome", "clube", "posicao", "status_id", "status_label",
+    "nome", "clube", "posicao", "status_label",
     "preco", "variacao", "media", "jogos",
     "mandante", "adversario", "tendencia", "prob_vitoria",
     "min_valorizar", "pb_media", "resiliencia_pct", "confiabilidade",
     "media_bayesiana", "residuo_z", "armadilha_label",
     "custo_beneficio", "cb_rank",
     "oportunidade_confronto", "vantagem_mando",
-    "score_confronto_z", "score_confronto_100",
+    "score_confronto_100",
     "condicao_mando", "pontos_esperados",
+    "caro_e_vale", "recomendacao",
     "time_momentum_of", "time_momentum_def",
     "adv_momentum_of", "adv_momentum_def",
-    "sequencia_time", "forma_score_time",
+    "sequencia_time",
 ]
 
 # ─────────────────────────────────────────────────────────────
@@ -813,6 +818,55 @@ def enriquecer_partidas(df_partidas, df_odds, mapa_clubes) -> pd.DataFrame:
 
     return df
 
+def enriquecer_partidas_btts(df_partidas: pd.DataFrame, df_tabela: pd.DataFrame,
+                              mapa_clubes: dict) -> pd.DataFrame:
+    """
+    Estima a probabilidade de 'ambos marcam' via Poisson:
+        λ_casa = 0.5 × (gf_recente_casa + ga_recente_vis)
+        λ_vis  = 0.5 × (gf_recente_vis + ga_recente_casa)
+        P(BTTS) = (1 - e^-λ_casa) × (1 - e^-λ_vis)
+
+    Substitui a fórmula errada que estava no prompt (multiplicar probabilidades
+    de vitória — eventos mutuamente excludentes, não BTTS).
+    """
+    if df_partidas.empty or df_tabela.empty:
+        return df_partidas
+
+    df = df_partidas.copy()
+    col_casa = next((c for c in df.columns if "casa_id"      in c), None)
+    col_vis  = next((c for c in df.columns if "visitante_id" in c), None)
+    if not col_casa or not col_vis:
+        return df
+
+    tabela_idx = df_tabela.set_index("time")
+
+    def _lambda_btts(row) -> tuple:
+        try:
+            abr_casa = mapa_clubes.get(int(row[col_casa]))
+            abr_vis  = mapa_clubes.get(int(row[col_vis]))
+        except Exception:
+            return (None, None, None)
+        r_casa = get_tabela_row(abr_casa, tabela_idx) if abr_casa else None
+        r_vis  = get_tabela_row(abr_vis,  tabela_idx) if abr_vis  else None
+        if r_casa is None or r_vis is None:
+            return (None, None, None)
+
+        gf_c = float(r_casa.get("media_gf_recente") or r_casa.get("media_gf_temporada") or 0)
+        ga_c = float(r_casa.get("media_ga_recente") or r_casa.get("media_ga_temporada") or 0)
+        gf_v = float(r_vis .get("media_gf_recente") or r_vis .get("media_gf_temporada") or 0)
+        ga_v = float(r_vis .get("media_ga_recente") or r_vis .get("media_ga_temporada") or 0)
+
+        lam_casa = 0.5 * (gf_c + ga_v)
+        lam_vis  = 0.5 * (gf_v + ga_c)
+        p_btts = (1 - np.exp(-lam_casa)) * (1 - np.exp(-lam_vis))
+        return (round(lam_casa, 2), round(lam_vis, 2), round(float(p_btts), 3))
+
+    triples = df.apply(_lambda_btts, axis=1)
+    df["lambda_gols_casa"] = [t[0] for t in triples]
+    df["lambda_gols_vis"]  = [t[1] for t in triples]
+    df["prob_btts_aprox"]  = [t[2] for t in triples]
+    return df
+
 # ─────────────────────────────────────────────────────────────
 # ENRIQUECIMENTO COM DADOS DO BRASILEIRÃO
 # ─────────────────────────────────────────────────────────────
@@ -982,15 +1036,119 @@ def enriquecer_com_confronto(df, df_tabela, momentum) -> pd.DataFrame:
     df["condicao_mando"] = df.apply(_condicao_mando, axis=1)
 
     # ── Pontos Esperados ─────────────────────────────────────
-    # Retorno absoluto esperado na rodada — não eficiência, mas volume de pontos.
-    # confronto=100 → ×2.0 (amplifica), confronto=50 → ×1.0 (neutro), confronto=0 → ×0.0
-    df["pontos_esperados"] = (
-        df["media_bayesiana"]
-        * (df["score_confronto_100"].fillna(50) / 50)
-        * df["confiabilidade"]
-    ).round(2)
+    # Retorno absoluto esperado na rodada. Usa modelo calibrado a partir do histórico
+    # (calibracao_pontos.json) quando há dados suficientes; caso contrário, aplica a
+    # heurística multiplicativa original.
+    df["pontos_esperados"] = calcular_pontos_esperados(df).round(2)
+
+    # ── Caro e vale + Recomendação ───────────────────────────
+    df = _classificar_atletas(df)
 
     return df
+
+
+# Limiares de "caro" por posição — mesmos do prompt. Jogador acima do limiar
+# exige justificativa forte (condição de mando favorável + pontos esperados
+# acima da mediana da posição).
+LIMIAR_CARO = {
+    "Goleiro":  8.0,
+    "Lateral":  9.0,
+    "Zagueiro": 9.0,
+    "Meia":    12.0,
+    "Atacante": 14.0,
+    "Técnico":  6.0,
+}
+
+def _classificar_atletas(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Adiciona as colunas derivadas que resumem a decisão:
+
+    caro_e_vale (bool): preço acima do limiar + condição de mando favorável +
+        pontos esperados acima da mediana da posição. Responde "esse jogador
+        caro vale o custo nessa rodada?" sem a LLM ter de recalcular.
+
+    recomendacao (categórica):
+        EVITAR       — armadilha_forte ou status != Provável
+        RESERVA_LUXO — valor_oculto com alto teto (pontos_esperados no top 20% da posição)
+        TITULAR      — pontos_esperados >= mediana, confiável, resiliente
+        BANCO        — barato (preço ≤ p25), confiável e com residuo >= 0
+        WATCH        — demais casos
+    """
+    df = df.copy()
+
+    mediana_pe = df.groupby("posicao")["pontos_esperados"].transform("median")
+    p20_pe     = df.groupby("posicao")["pontos_esperados"].transform(lambda s: s.quantile(0.80))
+    p25_preco  = df.groupby("posicao")["preco"].transform(lambda s: s.quantile(0.25))
+
+    limiar_preco = df["posicao"].map(LIMIAR_CARO).fillna(10.0)
+
+    df["caro_e_vale"] = (
+        (df["preco"] > limiar_preco) &
+        (df.get("condicao_mando", "neutro") == "favoravel") &
+        (df["pontos_esperados"] > mediana_pe)
+    )
+
+    is_provavel      = df.get("status_label", "") == "Provável"
+    is_armadilha_f   = df["armadilha_label"] == "armadilha_forte"
+    is_armadilha_l   = df["armadilha_label"] == "armadilha_leve"
+    is_valor_oculto  = df["armadilha_label"] == "valor_oculto"
+    conf             = df["confiabilidade"].astype(float)
+    resil            = df.get("resiliencia_pct", pd.Series(0.0, index=df.index)).astype(float)
+    resid            = df["residuo_z"].astype(float)
+
+    titular_cand = (
+        (df["pontos_esperados"] >= mediana_pe) &
+        (resil >= 0.5) & (conf >= 0.6) &
+        (~is_armadilha_l) & (~is_armadilha_f)
+    )
+    alto_teto = is_valor_oculto & (df["pontos_esperados"] >= p20_pe)
+    banco_cand = (
+        (df["preco"] <= p25_preco) & (conf >= 0.4) & (resid >= 0) & (~is_armadilha_f)
+    )
+
+    # Ordem de prioridade (primeira regra que bate vence):
+    # 1) EVITAR sobrescreve tudo
+    # 2) valor_oculto com alto teto → TITULAR se também é consistente, senão RESERVA_LUXO
+    # 3) TITULAR padrão
+    # 4) BANCO (barato e estável)
+    # 5) WATCH
+    recomendacao = pd.Series("WATCH", index=df.index)
+    recomendacao[banco_cand]                       = "BANCO"
+    recomendacao[titular_cand]                     = "TITULAR"
+    recomendacao[alto_teto & (~titular_cand)]      = "RESERVA_LUXO"
+    recomendacao[is_armadilha_f | (~is_provavel)]  = "EVITAR"
+
+    df["recomendacao"] = recomendacao
+    return df
+
+
+def _carregar_calibracao() -> dict:
+    path = CURRENT_DIR / "calibracao_pontos.json"
+    if not path.exists():
+        return {}
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return {}
+
+def calcular_pontos_esperados(df: pd.DataFrame) -> pd.Series:
+    bayes = df["media_bayesiana"].astype(float)
+    score_ratio = (df["score_confronto_100"].fillna(50).astype(float) / 50)
+    conf = df["confiabilidade"].astype(float)
+
+    calib = _carregar_calibracao()
+    if calib.get("status") == "ok" and "coefs" in calib:
+        c = calib["coefs"]
+        return (
+            c.get("intercept",   0.0)
+            + c.get("bayes",      0.0) * bayes
+            + c.get("score_ratio", 0.0) * score_ratio
+            + c.get("conf",       0.0) * conf
+            + c.get("interacao",  0.0) * bayes * score_ratio * conf
+        )
+    # Fallback: heurística multiplicativa original
+    return bayes * score_ratio * conf
 
 # ─────────────────────────────────────────────────────────────
 # SNAPSHOT HISTÓRICO
@@ -1505,6 +1663,15 @@ if __name__ == "__main__":
         print(f"  ERRO: {e}")
         log.append({"endpoint": "brasileirao", "registros": 0, "status": "ERRO", "erro": str(e)})
 
+    # ── 5b. BTTS aproximado via Poisson ──────────────────────────
+    try:
+        if not df_partidas.empty and not df_tabela.empty:
+            df_partidas = enriquecer_partidas_btts(df_partidas, df_tabela, mapa_clubes)
+            df_partidas.to_csv(CURRENT_DIR / "partidas.csv", index=False, encoding="utf-8-sig")
+            print("  OK — prob_btts_aprox calculada via Poisson")
+    except Exception as e:
+        print(f"  ERRO no BTTS: {e}")
+
     # ── 6. Enriquecimento dos atletas ────────────────────────────
     print("Gerando atletas enriquecidos...")
     df_atletas_enriquecido = pd.DataFrame()
@@ -1539,6 +1706,16 @@ if __name__ == "__main__":
             salvar_snapshot_pontuados(raw_pontuados)
     except Exception as e:
         print(f"  ERRO no snapshot pontuados: {e}")
+
+    # ── 7b. Calibração do pontos_esperados ───────────────────────
+    # Ajusta os coeficientes sempre que há novos snapshots. O run SEGUINTE do
+    # extractor consome calibracao_pontos.json via calcular_pontos_esperados().
+    print("Calibrando pontos_esperados...")
+    try:
+        import calibrar_pontos_esperados as calibrador
+        calibrador.main()
+    except Exception as e:
+        print(f"  ERRO na calibração: {e}")
 
     # ── 8. Geração do llm/input/ ─────────────────────────────────
     print("Gerando llm/input/...")
