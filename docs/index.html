@@ -503,6 +503,7 @@ footer a { color: var(--green); text-decoration: none; }
   <button class="nav-tab" data-tab="atletas">Atletas</button>
   <button class="nav-tab" data-tab="confrontos">Confrontos</button>
   <button class="nav-tab" data-tab="brasileirao">Brasileirão</button>
+  <button class="nav-tab" data-tab="times">Times</button>
 </div>
 
 <main>
@@ -710,6 +711,14 @@ footer a { color: var(--green); text-decoration: none; }
         </div>
       </div>
 
+    </div>
+  </div>
+
+  <div class="tab-panel" id="tab-times">
+    <div class="section-title"><span class="accent"></span>Times da Rodada</div>
+    <div class="section-sub">Visão agregada por time — tier, score, valores ocultos e prováveis escaláveis.</div>
+    <div class="tr-grid" id="times-grid">
+      <div class="loading"><div class="spinner"></div>carregando...</div>
     </div>
   </div>
 
@@ -1220,6 +1229,61 @@ function renderTopConfrontos() {
   }).join('');
 }
 
+// ── TIMES RODADA ──────────────────────────────────────────────
+function renderTimesRodada() {
+  const grid = document.getElementById('times-grid');
+  if (!grid) return;
+  if (!TIMES_RODADA.length) {
+    grid.innerHTML = '<div class="err">Sem dados de times_rodada.</div>';
+    return;
+  }
+
+  const nf = v => parseFloat(v || 0);
+  const sorted = [...TIMES_RODADA].sort((a, b) => nf(b.score_time) - nf(a.score_time));
+
+  grid.innerHTML = sorted.map(t => {
+    const mand = t.mandante === 'True';
+    const advTag = `<span style="font-family:var(--fm);font-size:10px;color:var(--muted)">${mand ? '🏠 vs' : '✈️ @'} ${t.adversario}</span>`;
+    const pct = Math.round(nf(t.prob_vitoria) * 100);
+    const scoreVal = nf(t.score_time);
+    const scoreCls = scoreVal >= 0.7 ? 'g' : scoreVal >= 0.5 ? 'y' : 'r';
+
+    return `<div class="tr-card">
+      <div class="tr-head">
+        <span class="tr-title">${t.time}</span>
+        ${tierHtml(t.tier_time)}
+      </div>
+      <div class="tr-sub">${advTag} · <span style="color:${pct >= 50 ? 'var(--green)' : 'var(--muted)'}">${pct}% vit.</span> · <span style="color:var(--muted);font-family:var(--fm);font-size:10px">${t.forca || '—'}</span></div>
+      <div class="tr-stats">
+        <div class="tr-stat">
+          <span class="tr-stat-lbl">Score</span>
+          <span class="tr-stat-val ${scoreCls}">${scoreVal.toFixed(2)}</span>
+        </div>
+        <div class="tr-stat">
+          <span class="tr-stat-lbl">Prováveis</span>
+          <span class="tr-stat-val">${t.n_provaveis || '—'}</span>
+        </div>
+        <div class="tr-stat">
+          <span class="tr-stat-lbl">💎 Valores</span>
+          <span class="tr-stat-val g">${nf(t.n_valor_oculto) + nf(t.n_valor_bom)}</span>
+        </div>
+        <div class="tr-stat">
+          <span class="tr-stat-lbl">Res.Z médio</span>
+          <span class="tr-stat-val ${nf(t.media_residuo_z) > 0 ? 'g' : 'r'}">${nf(t.media_residuo_z).toFixed(2)}</span>
+        </div>
+        <div class="tr-stat">
+          <span class="tr-stat-lbl">Pb médio</span>
+          <span class="tr-stat-val y">${nf(t.media_pb).toFixed(2)}</span>
+        </div>
+        <div class="tr-stat">
+          <span class="tr-stat-lbl">Preço médio</span>
+          <span class="tr-stat-val">C$${nf(t.preco_medio).toFixed(1)}</span>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
 // ── TABLE ─────────────────────────────────────────────────────
 function getFiltered() {
   return ALL.filter(a => {
@@ -1657,12 +1721,15 @@ async function init() {
   } catch(e) { /* sem calibração — fica em heurística */ }
   renderCalibPill();
 
+  try { TIMES_RODADA = await fetchCSV(CSV_TIMES); } catch(e) { console.warn('times_rodada.csv não disponível'); }
+
   markDefaultSort();
   renderStats();
   renderDestaques();
   renderTopConfrontos();
   renderTable();
   renderConfrontos();
+  renderTimesRodada();
   fetchMeta();
   loadBrasileiro();
 }

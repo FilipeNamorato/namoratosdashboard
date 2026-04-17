@@ -659,7 +659,7 @@ async function gerarEscalacoes() {
   const btn = document.getElementById('btn-gerar');
   const resultado = document.getElementById('resultado');
   const formacao  = document.getElementById('sel-formacao').value;
-  const orcMax    = parseInt(document.getElementById('sel-orcamento').value);
+  const orcMax    = calcOrcamento();
   const precoMin  = parseFloat(document.getElementById('sel-preco-min').value);
 
   btn.disabled = true;
