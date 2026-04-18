@@ -22,6 +22,25 @@
     {
       "position": 2,
       "team": {
+        "id": 1776,
+        "name": "São Paulo FC",
+        "shortName": "São Paulo",
+        "tla": "PAU",
+        "crest": "https://crests.football-data.org/1776.png"
+      },
+      "playedGames": 12,
+      "form": null,
+      "won": 6,
+      "draw": 3,
+      "lost": 3,
+      "points": 21,
+      "goalsFor": 15,
+      "goalsAgainst": 9,
+      "goalDifference": 6
+    },
+    {
+      "position": 3,
+      "team": {
         "id": 1783,
         "name": "CR Flamengo",
         "shortName": "Flamengo",
@@ -37,25 +56,6 @@
       "goalsFor": 18,
       "goalsAgainst": 10,
       "goalDifference": 8
-    },
-    {
-      "position": 3,
-      "team": {
-        "id": 1776,
-        "name": "São Paulo FC",
-        "shortName": "São Paulo",
-        "tla": "PAU",
-        "crest": "https://crests.football-data.org/1776.png"
-      },
-      "playedGames": 11,
-      "form": null,
-      "won": 6,
-      "draw": 2,
-      "lost": 3,
-      "points": 20,
-      "goalsFor": 15,
-      "goalsAgainst": 9,
-      "goalDifference": 6
     },
     {
       "position": 4,
@@ -174,6 +174,25 @@
     {
       "position": 10,
       "team": {
+        "id": 1770,
+        "name": "Botafogo FR",
+        "shortName": "Botafogo",
+        "tla": "BOT",
+        "crest": "https://crests.football-data.org/1770.png"
+      },
+      "playedGames": 11,
+      "form": null,
+      "won": 4,
+      "draw": 2,
+      "lost": 5,
+      "points": 14,
+      "goalsFor": 18,
+      "goalsAgainst": 21,
+      "goalDifference": -3
+    },
+    {
+      "position": 11,
+      "team": {
         "id": 1782,
         "name": "EC Vitória",
         "shortName": "Vitória",
@@ -191,26 +210,26 @@
       "goalDifference": -3
     },
     {
-      "position": 11,
+      "position": 12,
       "team": {
-        "id": 1770,
-        "name": "Botafogo FR",
-        "shortName": "Botafogo",
-        "tla": "BOT",
-        "crest": "https://crests.football-data.org/1770.png"
+        "id": 1780,
+        "name": "CR Vasco da Gama",
+        "shortName": "Vasco da Gama",
+        "tla": "VAS",
+        "crest": "https://crests.football-data.org/1780.png"
       },
-      "playedGames": 10,
+      "playedGames": 12,
       "form": null,
-      "won": 4,
-      "draw": 1,
-      "lost": 5,
-      "points": 13,
-      "goalsFor": 18,
-      "goalsAgainst": 21,
-      "goalDifference": -3
+      "won": 3,
+      "draw": 5,
+      "lost": 4,
+      "points": 14,
+      "goalsFor": 16,
+      "goalsAgainst": 17,
+      "goalDifference": -1
     },
     {
-      "position": 12,
+      "position": 13,
       "team": {
         "id": 1767,
         "name": "Grêmio FBPA",
@@ -227,25 +246,6 @@
       "goalsFor": 14,
       "goalsAgainst": 14,
       "goalDifference": 0
-    },
-    {
-      "position": 13,
-      "team": {
-        "id": 1780,
-        "name": "CR Vasco da Gama",
-        "shortName": "Vasco da Gama",
-        "tla": "VAS",
-        "crest": "https://crests.football-data.org/1780.png"
-      },
-      "playedGames": 11,
-      "form": null,
-      "won": 3,
-      "draw": 4,
-      "lost": 4,
-      "points": 13,
-      "goalsFor": 16,
-      "goalsAgainst": 17,
-      "goalDifference": -1
     },
     {
       "position": 14,
@@ -326,6 +326,25 @@
     {
       "position": 18,
       "team": {
+        "id": 1772,
+        "name": "Chapecoense AF",
+        "shortName": "Chapecoense",
+        "tla": "CHA",
+        "crest": "https://crests.football-data.org/1772_large.png"
+      },
+      "playedGames": 11,
+      "form": null,
+      "won": 1,
+      "draw": 6,
+      "lost": 4,
+      "points": 9,
+      "goalsFor": 10,
+      "goalsAgainst": 18,
+      "goalDifference": -8
+    },
+    {
+      "position": 19,
+      "team": {
         "id": 4287,
         "name": "Clube do Remo",
         "shortName": "Clube do Remo",
@@ -341,25 +360,6 @@
       "goalsFor": 11,
       "goalsAgainst": 18,
       "goalDifference": -7
-    },
-    {
-      "position": 19,
-      "team": {
-        "id": 1772,
-        "name": "Chapecoense AF",
-        "shortName": "Chapecoense",
-        "tla": "CHA",
-        "crest": "https://crests.football-data.org/1772_large.png"
-      },
-      "playedGames": 10,
-      "form": null,
-      "won": 1,
-      "draw": 5,
-      "lost": 4,
-      "points": 8,
-      "goalsFor": 10,
-      "goalsAgainst": 18,
-      "goalDifference": -8
     },
     {
       "position": 20,
@@ -439,9 +439,9 @@
         "venue": "Estádio Nilton Santos",
         "lastUpdated": "2023-02-18T08:43:47Z"
       },
-      "playedMatches": 8,
+      "playedMatches": 9,
       "goals": 6,
-      "assists": 1,
+      "assists": 2,
       "penalties": null
     },
     {
@@ -470,7 +470,7 @@
         "venue": "Estádio do Morumbi",
         "lastUpdated": "2023-02-18T08:43:44Z"
       },
-      "playedMatches": 10,
+      "playedMatches": 11,
       "goals": 6,
       "assists": null,
       "penalties": 1
@@ -566,6 +566,37 @@
       "playedMatches": 11,
       "goals": 4,
       "assists": null,
+      "penalties": null
+    },
+    {
+      "player": {
+        "id": 1580,
+        "name": "Edenilson",
+        "firstName": "",
+        "lastName": "Edenilson",
+        "dateOfBirth": "1989-12-18",
+        "nationality": "Brazil",
+        "section": "Midfield",
+        "position": null,
+        "shirtNumber": null,
+        "lastUpdated": "2024-06-18T09:41:48Z"
+      },
+      "team": {
+        "id": 1770,
+        "name": "Botafogo FR",
+        "shortName": "Botafogo",
+        "tla": "BOT",
+        "crest": "https://crests.football-data.org/1770.png",
+        "address": "Avenida Venceslau Brás 72, Bairro Botafago Rio de Janeiro, RJ 22290-140",
+        "website": "http://www.botafogo.com.br",
+        "founded": 1904,
+        "clubColors": "Black / White",
+        "venue": "Estádio Nilton Santos",
+        "lastUpdated": "2023-02-18T08:43:47Z"
+      },
+      "playedMatches": 11,
+      "goals": 4,
+      "assists": 2,
       "penalties": null
     },
     {
@@ -815,37 +846,6 @@
       "goals": 3,
       "assists": 3,
       "penalties": null
-    },
-    {
-      "player": {
-        "id": 105065,
-        "name": "Walter Clar",
-        "firstName": "Walter",
-        "lastName": "Clar",
-        "dateOfBirth": "1994-09-27",
-        "nationality": "Paraguay",
-        "section": "Midfield",
-        "position": null,
-        "shirtNumber": null,
-        "lastUpdated": "2024-09-01T09:43:54Z"
-      },
-      "team": {
-        "id": 1772,
-        "name": "Chapecoense AF",
-        "shortName": "Chapecoense",
-        "tla": "CHA",
-        "crest": "https://crests.football-data.org/1772_large.png",
-        "address": "Rua Clevelândia S/N, Centro Chapecó, SC 89801-445",
-        "website": "http://www.chapecoense.com",
-        "founded": 1973,
-        "clubColors": "Green / White",
-        "venue": "Arena Condá",
-        "lastUpdated": "2021-07-22T10:53:42Z"
-      },
-      "playedMatches": 10,
-      "goals": 3,
-      "assists": 1,
-      "penalties": 2
     }
   ],
   "historico_times": {
