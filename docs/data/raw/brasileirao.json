@@ -22,25 +22,6 @@
     {
       "position": 2,
       "team": {
-        "id": 1776,
-        "name": "São Paulo FC",
-        "shortName": "São Paulo",
-        "tla": "PAU",
-        "crest": "https://crests.football-data.org/1776.png"
-      },
-      "playedGames": 12,
-      "form": null,
-      "won": 6,
-      "draw": 3,
-      "lost": 3,
-      "points": 21,
-      "goalsFor": 15,
-      "goalsAgainst": 9,
-      "goalDifference": 6
-    },
-    {
-      "position": 3,
-      "team": {
         "id": 1783,
         "name": "CR Flamengo",
         "shortName": "Flamengo",
@@ -58,7 +39,7 @@
       "goalDifference": 8
     },
     {
-      "position": 4,
+      "position": 3,
       "team": {
         "id": 1765,
         "name": "Fluminense FC",
@@ -74,6 +55,25 @@
       "points": 20,
       "goalsFor": 18,
       "goalsAgainst": 13,
+      "goalDifference": 5
+    },
+    {
+      "position": 4,
+      "team": {
+        "id": 1776,
+        "name": "São Paulo FC",
+        "shortName": "São Paulo",
+        "tla": "PAU",
+        "crest": "https://crests.football-data.org/1776.png"
+      },
+      "playedGames": 12,
+      "form": null,
+      "won": 6,
+      "draw": 2,
+      "lost": 4,
+      "points": 20,
+      "goalsFor": 16,
+      "goalsAgainst": 11,
       "goalDifference": 5
     },
     {
@@ -117,6 +117,25 @@
     {
       "position": 7,
       "team": {
+        "id": 1770,
+        "name": "Botafogo FR",
+        "shortName": "Botafogo",
+        "tla": "BOT",
+        "crest": "https://crests.football-data.org/1770.png"
+      },
+      "playedGames": 11,
+      "form": null,
+      "won": 5,
+      "draw": 1,
+      "lost": 5,
+      "points": 16,
+      "goalsFor": 22,
+      "goalsAgainst": 22,
+      "goalDifference": 0
+    },
+    {
+      "position": 8,
+      "team": {
         "id": 4241,
         "name": "Coritiba FBC",
         "shortName": "Coritiba",
@@ -134,7 +153,45 @@
       "goalDifference": 1
     },
     {
-      "position": 8,
+      "position": 9,
+      "team": {
+        "id": 1780,
+        "name": "CR Vasco da Gama",
+        "shortName": "Vasco da Gama",
+        "tla": "VAS",
+        "crest": "https://crests.football-data.org/1780.png"
+      },
+      "playedGames": 12,
+      "form": null,
+      "won": 4,
+      "draw": 4,
+      "lost": 4,
+      "points": 16,
+      "goalsFor": 18,
+      "goalsAgainst": 18,
+      "goalDifference": 0
+    },
+    {
+      "position": 10,
+      "team": {
+        "id": 1782,
+        "name": "EC Vitória",
+        "shortName": "Vitória",
+        "tla": "VIT",
+        "crest": "https://crests.football-data.org/1782.png"
+      },
+      "playedGames": 11,
+      "form": null,
+      "won": 4,
+      "draw": 3,
+      "lost": 4,
+      "points": 15,
+      "goalsFor": 11,
+      "goalsAgainst": 14,
+      "goalDifference": -3
+    },
+    {
+      "position": 11,
       "team": {
         "id": 1766,
         "name": "CA Mineiro",
@@ -153,7 +210,7 @@
       "goalDifference": 1
     },
     {
-      "position": 9,
+      "position": 12,
       "team": {
         "id": 4286,
         "name": "RB Bragantino",
@@ -172,63 +229,6 @@
       "goalDifference": -1
     },
     {
-      "position": 10,
-      "team": {
-        "id": 1770,
-        "name": "Botafogo FR",
-        "shortName": "Botafogo",
-        "tla": "BOT",
-        "crest": "https://crests.football-data.org/1770.png"
-      },
-      "playedGames": 11,
-      "form": null,
-      "won": 4,
-      "draw": 2,
-      "lost": 5,
-      "points": 14,
-      "goalsFor": 18,
-      "goalsAgainst": 21,
-      "goalDifference": -3
-    },
-    {
-      "position": 11,
-      "team": {
-        "id": 1782,
-        "name": "EC Vitória",
-        "shortName": "Vitória",
-        "tla": "VIT",
-        "crest": "https://crests.football-data.org/1782.png"
-      },
-      "playedGames": 10,
-      "form": null,
-      "won": 4,
-      "draw": 2,
-      "lost": 4,
-      "points": 14,
-      "goalsFor": 11,
-      "goalsAgainst": 14,
-      "goalDifference": -3
-    },
-    {
-      "position": 12,
-      "team": {
-        "id": 1780,
-        "name": "CR Vasco da Gama",
-        "shortName": "Vasco da Gama",
-        "tla": "VAS",
-        "crest": "https://crests.football-data.org/1780.png"
-      },
-      "playedGames": 12,
-      "form": null,
-      "won": 3,
-      "draw": 5,
-      "lost": 4,
-      "points": 14,
-      "goalsFor": 16,
-      "goalsAgainst": 17,
-      "goalDifference": -1
-    },
-    {
       "position": 13,
       "team": {
         "id": 1767,
@@ -237,12 +237,12 @@
         "tla": "FBP",
         "crest": "https://crests.football-data.org/1767.png"
       },
-      "playedGames": 11,
+      "playedGames": 12,
       "form": null,
       "won": 3,
-      "draw": 4,
+      "draw": 5,
       "lost": 4,
-      "points": 13,
+      "points": 14,
       "goalsFor": 14,
       "goalsAgainst": 14,
       "goalDifference": 0
@@ -294,12 +294,12 @@
         "tla": "COR",
         "crest": "https://crests.football-data.org/1779.png"
       },
-      "playedGames": 11,
+      "playedGames": 12,
       "form": null,
       "won": 2,
-      "draw": 5,
+      "draw": 6,
       "lost": 4,
-      "points": 11,
+      "points": 12,
       "goalsFor": 8,
       "goalsAgainst": 11,
       "goalDifference": -3
@@ -313,37 +313,18 @@
         "tla": "CRU",
         "crest": "https://crests.football-data.org/1771.png"
       },
-      "playedGames": 11,
+      "playedGames": 12,
       "form": null,
       "won": 2,
-      "draw": 4,
+      "draw": 5,
       "lost": 5,
-      "points": 10,
+      "points": 11,
       "goalsFor": 14,
       "goalsAgainst": 21,
       "goalDifference": -7
     },
     {
       "position": 18,
-      "team": {
-        "id": 1772,
-        "name": "Chapecoense AF",
-        "shortName": "Chapecoense",
-        "tla": "CHA",
-        "crest": "https://crests.football-data.org/1772_large.png"
-      },
-      "playedGames": 11,
-      "form": null,
-      "won": 1,
-      "draw": 6,
-      "lost": 4,
-      "points": 9,
-      "goalsFor": 10,
-      "goalsAgainst": 18,
-      "goalDifference": -8
-    },
-    {
-      "position": 19,
       "team": {
         "id": 4287,
         "name": "Clube do Remo",
@@ -360,6 +341,25 @@
       "goalsFor": 11,
       "goalsAgainst": 18,
       "goalDifference": -7
+    },
+    {
+      "position": 19,
+      "team": {
+        "id": 1772,
+        "name": "Chapecoense AF",
+        "shortName": "Chapecoense",
+        "tla": "CHA",
+        "crest": "https://crests.football-data.org/1772_large.png"
+      },
+      "playedGames": 11,
+      "form": null,
+      "won": 1,
+      "draw": 5,
+      "lost": 5,
+      "points": 8,
+      "goalsFor": 11,
+      "goalsAgainst": 22,
+      "goalDifference": -11
     },
     {
       "position": 20,
@@ -408,7 +408,7 @@
         "venue": "Arena do Grêmio",
         "lastUpdated": "2023-02-18T08:42:52Z"
       },
-      "playedMatches": 11,
+      "playedMatches": 12,
       "goals": 7,
       "assists": null,
       "penalties": 1
@@ -570,6 +570,37 @@
     },
     {
       "player": {
+        "id": 169234,
+        "name": "Matheus Martins",
+        "firstName": "",
+        "lastName": "Matheus Martins",
+        "dateOfBirth": "2003-07-16",
+        "nationality": "Brazil",
+        "section": "Midfield",
+        "position": null,
+        "shirtNumber": null,
+        "lastUpdated": "2024-08-04T23:09:37Z"
+      },
+      "team": {
+        "id": 1770,
+        "name": "Botafogo FR",
+        "shortName": "Botafogo",
+        "tla": "BOT",
+        "crest": "https://crests.football-data.org/1770.png",
+        "address": "Avenida Venceslau Brás 72, Bairro Botafago Rio de Janeiro, RJ 22290-140",
+        "website": "http://www.botafogo.com.br",
+        "founded": 1904,
+        "clubColors": "Black / White",
+        "venue": "Estádio Nilton Santos",
+        "lastUpdated": "2023-02-18T08:43:47Z"
+      },
+      "playedMatches": 11,
+      "goals": 4,
+      "assists": null,
+      "penalties": null
+    },
+    {
+      "player": {
         "id": 1580,
         "name": "Edenilson",
         "firstName": "",
@@ -718,7 +749,7 @@
         "venue": "Estádio Governador Magalhães Pinto",
         "lastUpdated": "2022-04-10T11:03:46Z"
       },
-      "playedMatches": 11,
+      "playedMatches": 12,
       "goals": 4,
       "assists": 1,
       "penalties": null
@@ -815,37 +846,6 @@
       "goals": 3,
       "assists": null,
       "penalties": 1
-    },
-    {
-      "player": {
-        "id": 76910,
-        "name": "Luciano Acosta",
-        "firstName": "Luciano",
-        "lastName": "Acosta",
-        "dateOfBirth": "1994-05-31",
-        "nationality": "Argentina",
-        "section": "Midfield",
-        "position": null,
-        "shirtNumber": 10,
-        "lastUpdated": "2022-04-07T08:16:59Z"
-      },
-      "team": {
-        "id": 1765,
-        "name": "Fluminense FC",
-        "shortName": "Fluminense",
-        "tla": "FLU",
-        "crest": "https://crests.football-data.org/1765.png",
-        "address": "Rua Álvaro Chaves 41, Bairro Laranjeiras Rio de Janeiro, RJ 22231-220",
-        "website": "http://www.fluminense.com.br",
-        "founded": 1902,
-        "clubColors": "Maroon / Green / White",
-        "venue": "Estadio Jornalista Mário Filho",
-        "lastUpdated": "2024-07-29T17:24:37Z"
-      },
-      "playedMatches": 10,
-      "goals": 3,
-      "assists": 3,
-      "penalties": null
     }
   ],
   "historico_times": {
@@ -988,6 +988,7 @@
       "L",
       "L",
       "D",
+      "L",
       "L"
     ],
     "Santos FC": [
@@ -1088,7 +1089,8 @@
       "L",
       "W",
       "W",
-      "D"
+      "D",
+      "W"
     ],
     "Cruzeiro EC": [
       "L",
@@ -1267,11 +1269,11 @@
     },
     "Chapecoense AF": {
       "home": {
-        "gf": 9,
-        "ga": 11,
+        "gf": 10,
+        "ga": 15,
         "w": 1,
         "d": 4,
-        "l": 1
+        "l": 2
       },
       "away": {
         "gf": 1,
@@ -1402,9 +1404,9 @@
         "l": 1
       },
       "away": {
-        "gf": 9,
-        "ga": 14,
-        "w": 2,
+        "gf": 13,
+        "ga": 15,
+        "w": 3,
         "d": 0,
         "l": 4
       }
