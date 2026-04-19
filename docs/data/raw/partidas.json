@@ -288,25 +288,25 @@
         "e",
         "v",
         "d",
-        "e"
+        "d"
       ],
       "aproveitamento_mandante": [
         "v",
         "e",
         "d",
         "e",
-        "e"
+        "v"
       ],
       "transmissao": {
-        "label": "acompanhe em tempo real",
+        "label": "saiba como foi",
         "url": "https://ge.globo.com/rj/futebol/brasileirao-serie-a/jogo/18-04-2026/vasco-sao-paulo.ghtml?utm_source=cartolafc"
       },
       "local": "São Januário",
-      "status_transmissao_tr": "EM_ANDAMENTO",
-      "status_cronometro_tr": "INICIADO",
-      "periodo_tr": "SEGUNDO_TEMPO",
+      "status_transmissao_tr": "ENCERRADA",
+      "status_cronometro_tr": "PAUSADO",
+      "periodo_tr": "POS_JOGO",
       "partida_data": "2026-04-18 18:30:00",
-      "inicio_cronometro_tr": "2026-04-18T22:39:33.243Z",
+      "inicio_cronometro_tr": "2026-04-18T23:47:57.521Z",
       "placar_oficial_visitante": 1,
       "placar_oficial_mandante": 2,
       "partida_id": 346352,
@@ -324,25 +324,25 @@
         "v",
         "v",
         "e",
-        "e"
+        "v"
       ],
       "aproveitamento_mandante": [
         "d",
         "d",
         "e",
         "d",
-        "e"
+        "d"
       ],
       "transmissao": {
-        "label": "ao vivo",
+        "label": "saiba como foi",
         "url": "https://ge.globo.com/sc/futebol/brasileirao-serie-a/jogo/18-04-2026/chapecoense-botafogo.ghtml?utm_source=cartolafc"
       },
       "local": "Arena Condá",
-      "status_transmissao_tr": "EM_ANDAMENTO",
+      "status_transmissao_tr": "ENCERRADA",
       "status_cronometro_tr": "PAUSADO",
-      "periodo_tr": "FIM_DE_JOGO",
+      "periodo_tr": "POS_JOGO",
       "partida_data": "2026-04-18 18:30:00",
-      "inicio_cronometro_tr": "2026-04-18T23:27:25.053Z",
+      "inicio_cronometro_tr": "2026-04-18T23:32:52.154Z",
       "placar_oficial_visitante": 4,
       "placar_oficial_mandante": 1,
       "partida_id": 346360,
@@ -370,19 +370,19 @@
         "e"
       ],
       "transmissao": {
-        "label": "ao vivo",
+        "label": "saiba como foi",
         "url": "https://ge.globo.com/ba/futebol/brasileirao-serie-a/jogo/18-04-2026/vitoria-corinthians.ghtml?utm_source=cartolafc"
       },
       "local": "Barradão",
-      "status_transmissao_tr": "EM_ANDAMENTO",
-      "status_cronometro_tr": "INICIADO",
-      "periodo_tr": "PRIMEIRO_TEMPO",
+      "status_transmissao_tr": "ENCERRADA",
+      "status_cronometro_tr": "PAUSADO",
+      "periodo_tr": "POS_JOGO",
       "partida_data": "2026-04-18 20:00:00",
-      "inicio_cronometro_tr": "2026-04-18T23:02:50.126Z",
+      "inicio_cronometro_tr": "2026-04-19T01:09:23.720Z",
       "placar_oficial_visitante": 0,
       "placar_oficial_mandante": 0,
       "partida_id": 346359,
-      "clube_visitante_posicao": 16,
+      "clube_visitante_posicao": 17,
       "clube_visitante_id": 264,
       "clube_casa_posicao": 10,
       "clube_casa_id": 287,
@@ -396,31 +396,31 @@
         "d",
         "e",
         "e",
-        "e"
+        "d"
       ],
       "aproveitamento_mandante": [
         "e",
         "v",
         "d",
         "v",
-        "e"
+        "v"
       ],
       "transmissao": {
-        "label": "ao vivo",
+        "label": "saiba como foi",
         "url": "https://ge.globo.com/mg/futebol/brasileirao-serie-a/jogo/18-04-2026/cruzeiro-gremio.ghtml?utm_source=cartolafc"
       },
       "local": "Mineirão",
-      "status_transmissao_tr": "EM_ANDAMENTO",
+      "status_transmissao_tr": "ENCERRADA",
       "status_cronometro_tr": "PAUSADO",
-      "periodo_tr": "PRIMEIRO_TEMPO",
+      "periodo_tr": "POS_JOGO",
       "partida_data": "2026-04-18 20:30:00",
-      "inicio_cronometro_tr": "2026-04-18T23:31:18.991Z",
-      "placar_oficial_visitante": null,
-      "placar_oficial_mandante": null,
+      "inicio_cronometro_tr": "2026-04-19T01:32:48.604Z",
+      "placar_oficial_visitante": 0,
+      "placar_oficial_mandante": 2,
       "partida_id": 346356,
-      "clube_visitante_posicao": 13,
+      "clube_visitante_posicao": 14,
       "clube_visitante_id": 284,
-      "clube_casa_posicao": 17,
+      "clube_casa_posicao": 16,
       "clube_casa_id": 283,
       "timestamp": 1776555000,
       "campeonato_id": 26,
@@ -432,13 +432,13 @@
         "d",
         "d",
         "d",
-        "d"
+        "e"
       ],
       "aproveitamento_mandante": [
         "v",
-        "v",
         "e",
         "v",
+        "e",
         "e"
       ],
       "transmissao": {
@@ -456,7 +456,7 @@
       "partida_id": 346357,
       "clube_visitante_posicao": 20,
       "clube_visitante_id": 2305,
-      "clube_casa_posicao": 14,
+      "clube_casa_posicao": 13,
       "clube_casa_id": 285,
       "timestamp": 1776607200,
       "campeonato_id": 26,
@@ -464,18 +464,18 @@
     },
     {
       "aproveitamento_visitante": [
-        "d",
         "v",
         "v",
         "e",
-        "d"
+        "d",
+        "e"
       ],
       "aproveitamento_mandante": [
-        "d",
         "e",
         "v",
         "d",
-        "v"
+        "v",
+        "e"
       ],
       "transmissao": {
         "label": "fique por dentro",
@@ -500,15 +500,15 @@
     },
     {
       "aproveitamento_visitante": [
-        "v",
         "d",
         "v",
         "v",
-        "d"
+        "d",
+        "e"
       ],
       "aproveitamento_mandante": [
-        "v",
         "d",
+        "e",
         "e",
         "e",
         "e"
@@ -537,16 +537,16 @@
     {
       "aproveitamento_visitante": [
         "v",
+        "d",
+        "d",
         "v",
-        "d",
-        "d",
-        "v"
+        "e"
       ],
       "aproveitamento_mandante": [
         "v",
         "v",
         "v",
-        "v",
+        "e",
         "e"
       ],
       "transmissao": {
@@ -572,18 +572,18 @@
     },
     {
       "aproveitamento_visitante": [
-        "d",
         "v",
         "d",
+        "e",
         "e",
         "e"
       ],
       "aproveitamento_mandante": [
         "d",
+        "v",
+        "v",
         "d",
-        "v",
-        "v",
-        "d"
+        "e"
       ],
       "transmissao": {
         "label": "fique por dentro",
@@ -608,18 +608,18 @@
     },
     {
       "aproveitamento_visitante": [
-        "v",
         "d",
         "v",
         "d",
-        "v"
+        "v",
+        "e"
       ],
       "aproveitamento_mandante": [
-        "v",
         "e",
         "d",
         "v",
-        "v"
+        "v",
+        "e"
       ],
       "transmissao": {
         "label": "fique por dentro",
