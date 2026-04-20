@@ -890,29 +890,33 @@ def enriquecer_com_confronto(df, df_tabela, momentum) -> pd.DataFrame:
     t["percentil_of_fora"]  = t["gp_pg_fora"].rank(pct=True).round(3)
 
     tabela_idx = t.set_index("time")
-    results = []
 
-    for _, atleta in df.iterrows():
-        clube_abr = str(atleta.get("clube", ""))
-        adv_abr   = str(atleta.get("adversario", ""))
-        mandante  = atleta.get("mandante")
-        posicao   = str(atleta.get("posicao", ""))
+    # Pré-computa lookups por abreviação única (~20 times) em vez de por atleta (~500x)
+    abrevs_unicas = set(df["clube"].astype(str).unique()) | set(df["adversario"].astype(str).unique())
+    cache_row = {abr: get_tabela_row(abr, tabela_idx) for abr in abrevs_unicas}
+    cache_mom = {abr: get_momentum_time(abr, momentum) for abr in abrevs_unicas}
 
-        row_time = get_tabela_row(clube_abr, tabela_idx)
-        row_adv  = get_tabela_row(adv_abr,   tabela_idx)
-        mom_time = get_momentum_time(clube_abr, momentum)
-        mom_adv  = get_momentum_time(adv_abr,   momentum)
+    def _rec_confronto(atleta):
+        clube_abr = str(atleta["clube"])
+        adv_abr   = str(atleta["adversario"])
+        mandante  = atleta["mandante"]
+        posicao   = str(atleta["posicao"])
+
+        row_time = cache_row.get(clube_abr)
+        row_adv  = cache_row.get(adv_abr)
+        mom_time = cache_mom.get(clube_abr, {})
+        mom_adv  = cache_mom.get(adv_abr,  {})
 
         rec = {
-            "time_pos":              int(row_time["posicao"]) if row_time is not None else None,
-            "adv_pos":               int(row_adv["posicao"])  if row_adv  is not None else None,
-            "time_momentum_of":      mom_time.get("momentum_of"),
-            "time_momentum_def":     mom_time.get("momentum_def"),
-            "adv_momentum_of":       mom_adv.get("momentum_of"),
-            "adv_momentum_def":      mom_adv.get("momentum_def"),
-            "sequencia_time":        mom_time.get("sequencia"),
-            "forma_score_time":      mom_time.get("forma_score"),
-            "vantagem_mando":        None,
+            "time_pos":               int(row_time["posicao"]) if row_time is not None else None,
+            "adv_pos":                int(row_adv["posicao"])  if row_adv  is not None else None,
+            "time_momentum_of":       mom_time.get("momentum_of"),
+            "time_momentum_def":      mom_time.get("momentum_def"),
+            "adv_momentum_of":        mom_adv.get("momentum_of"),
+            "adv_momentum_def":       mom_adv.get("momentum_def"),
+            "sequencia_time":         mom_time.get("sequencia"),
+            "forma_score_time":       mom_time.get("forma_score"),
+            "vantagem_mando":         None,
             "oportunidade_confronto": None,
         }
 
@@ -931,11 +935,11 @@ def enriquecer_com_confronto(df, df_tabela, momentum) -> pd.DataFrame:
                 rec["oportunidade_confronto"] = round(1.0 - float(
                     row_adv["percentil_of_fora"] if mandante else row_adv["percentil_of_casa"]
                 ), 3)
+        return rec
 
-        results.append(rec)
-
-    for col in results[0].keys():
-        df[col] = [r[col] for r in results]
+    results_df = df.apply(_rec_confronto, axis=1, result_type="expand")
+    for col in results_df.columns:
+        df[col] = results_df[col].values
 
     # ── Score composto dinâmico por posição ──────────────────
     oc       = df["oportunidade_confronto"].fillna(0.5)
@@ -1088,7 +1092,7 @@ def _classificar_atletas(df: pd.DataFrame) -> pd.DataFrame:
         (df["pontos_esperados"] > mediana_pe)
     )
 
-    is_provavel      = df.get("status_label", "") == "Provável"
+    is_provavel      = df["status_label"].eq("Provável") if "status_label" in df.columns else pd.Series(False, index=df.index)
     is_armadilha_f   = df["armadilha_label"] == "armadilha_forte"
     is_armadilha_l   = df["armadilha_label"] == "armadilha_leve"
     is_valor_oculto  = df["armadilha_label"] == "valor_oculto"
@@ -1115,8 +1119,8 @@ def _classificar_atletas(df: pd.DataFrame) -> pd.DataFrame:
     recomendacao = pd.Series("WATCH", index=df.index)
     recomendacao[banco_cand]                       = "BANCO"
     recomendacao[titular_cand]                     = "TITULAR"
-    recomendacao[alto_teto & (~titular_cand)]      = "RESERVA_LUXO"
-    recomendacao[is_armadilha_f | (~is_provavel)]  = "EVITAR"
+    recomendacao[alto_teto & ~titular_cand]      = "RESERVA_LUXO"
+    recomendacao[is_armadilha_f | ~is_provavel]  = "EVITAR"
 
     df["recomendacao"] = recomendacao
     return df
@@ -1132,21 +1136,99 @@ def _carregar_calibracao() -> dict:
     except Exception:
         return {}
 
+
+def _calcular_forma_historica(df: pd.DataFrame, n: int = 3) -> pd.DataFrame:
+    """
+    Carrega histórico de pontuações reais de docs/data/historico/ e calcula
+    features de forma recente para cada atleta em df (sem vazamento — todas
+    as rodadas no histórico são anteriores à rodada sendo prevista).
+
+    Colunas adicionadas:
+        forma_media_3r   — média das últimas N pontuações (fallback: media_bayesiana)
+        forma_jogou_3r   — quantas das últimas N rodadas o atleta entrou em campo
+        forma_tendencia  — última pontuação menos média das anteriores
+    """
+    df = df.copy()
+    historico: dict = {}
+
+    if HISTORICO_DIR.exists():
+        for pasta in sorted(HISTORICO_DIR.glob("r*"), key=lambda p: int(p.name.lstrip("r"))):
+            pts_path = pasta / "atletas_pontuados.csv"
+            if not pts_path.exists():
+                continue
+            try:
+                pts = pd.read_csv(pts_path, encoding="utf-8-sig")
+                if "atleta_id" not in pts.columns or "pontuacao" not in pts.columns:
+                    continue
+                entrou_col = "entrou_em_campo" if "entrou_em_campo" in pts.columns else None
+                for row in pts.itertuples(index=False):
+                    if entrou_col:
+                        entrou = str(getattr(row, entrou_col)).lower() in ("true", "1", "1.0")
+                        if not entrou:
+                            continue
+                    aid = int(row.atleta_id)
+                    historico.setdefault(aid, []).append(float(row.pontuacao))
+            except Exception:
+                continue
+
+    bayes = df["media_bayesiana"].astype(float).values
+    medias, jogou, tendencias = [], [], []
+
+    for i, aid in enumerate(df["atleta_id"]):
+        try:
+            hist = historico.get(int(aid), [])
+        except Exception:
+            hist = []
+        ultimas = hist[-n:]
+
+        if not ultimas:
+            medias.append(bayes[i])  # sem histórico: usa media_bayesiana como proxy
+            jogou.append(0)
+            tendencias.append(0.0)
+        else:
+            media = float(np.mean(ultimas))
+            medias.append(media)
+            jogou.append(len(ultimas))
+            tend = float(ultimas[-1] - np.mean(ultimas[:-1])) if len(ultimas) >= 2 else 0.0
+            tendencias.append(tend)
+
+    df["forma_media_3r"]  = medias
+    df["forma_jogou_3r"]  = jogou
+    df["forma_tendencia"] = tendencias
+    return df
+
+
 def calcular_pontos_esperados(df: pd.DataFrame) -> pd.Series:
-    bayes = df["media_bayesiana"].astype(float)
+    bayes       = df["media_bayesiana"].astype(float)
     score_ratio = (df["score_confronto_100"].fillna(50).astype(float) / 50)
-    conf = df["confiabilidade"].astype(float)
+    conf        = df["confiabilidade"].astype(float)
 
     calib = _carregar_calibracao()
     if calib.get("status") == "ok" and "coefs" in calib:
         c = calib["coefs"]
+
+        # Calcula forma recente se o modelo foi treinado com essas features
+        if "forma_media_3r" in c:
+            df_forma    = _calcular_forma_historica(df)
+            forma_media = df_forma["forma_media_3r"].astype(float)
+            forma_jogou = df_forma["forma_jogou_3r"].astype(float)
+            forma_tend  = df_forma["forma_tendencia"].astype(float)
+        else:
+            forma_media = bayes
+            forma_jogou = pd.Series(0.0, index=df.index)
+            forma_tend  = pd.Series(0.0, index=df.index)
+
         return (
-            c.get("intercept",   0.0)
-            + c.get("bayes",      0.0) * bayes
-            + c.get("score_ratio", 0.0) * score_ratio
-            + c.get("conf",       0.0) * conf
-            + c.get("interacao",  0.0) * bayes * score_ratio * conf
+            c.get("intercept",        0.0)
+            + c.get("bayes",          0.0) * bayes
+            + c.get("score_ratio",    0.0) * score_ratio
+            + c.get("conf",           0.0) * conf
+            + c.get("interacao",      0.0) * bayes * score_ratio * conf
+            + c.get("forma_media_3r", 0.0) * forma_media
+            + c.get("forma_jogou_3r", 0.0) * forma_jogou
+            + c.get("forma_tendencia",0.0) * forma_tend
         )
+
     # Fallback: heurística multiplicativa original
     return bayes * score_ratio * conf
 
@@ -1168,7 +1250,7 @@ COLUNAS_SNAPSHOT = [
 ]
 
 def _pasta_rodada(rodada: int) -> Path:
-    pasta = HISTORICO_DIR / f"r{rodada:02d}"
+    pasta = HISTORICO_DIR / f"r{rodada}"
     pasta.mkdir(parents=True, exist_ok=True)
     return pasta
 
@@ -1369,7 +1451,7 @@ def normalizar_serie(s: pd.Series) -> pd.Series:
     return (s - mn) / (mx - mn)
 
 def gerar_times_rodada(df_atletas: pd.DataFrame, df_partidas: pd.DataFrame,
-                       df_tabela: pd.DataFrame, df_odds: pd.DataFrame,
+                       df_tabela: pd.DataFrame,
                        momentum: dict = None) -> pd.DataFrame:
     """
     Gera times_rodada.csv — visão consolidada por time para a rodada atual.
@@ -1734,7 +1816,7 @@ if __name__ == "__main__":
     try:
         if not df_atletas_enriquecido.empty and not df_partidas.empty:
             gerar_times_rodada(
-                df_atletas_enriquecido, df_partidas, df_tabela, df_odds, momentum
+                df_atletas_enriquecido, df_partidas, df_tabela, momentum
             )
             log.append({"endpoint": "times_rodada", "registros": 1, "status": "OK", "erro": ""})
     except Exception as e:

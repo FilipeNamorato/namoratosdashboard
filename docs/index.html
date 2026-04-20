@@ -773,6 +773,37 @@ const CSV_TIMES  = './data/current/times_rodada.csv';
 const JSON_BRA   = './data/raw/brasileirao.json';
 const JSON_CALIB = './data/current/calibracao_pontos.json';
 
+// Mapeamento de nomes da API (football-data.org) → "Nome Popular (SIG)"
+const NOME_DISPLAY = {
+  "CR Flamengo":              "Flamengo (FLA)",
+  "SE Palmeiras":             "Palmeiras (PAL)",
+  "CA Mineiro":               "Atlético-MG (CAM)",
+  "Fluminense FC":            "Fluminense (FLU)",
+  "SC Corinthians Paulista":  "Corinthians (COR)",
+  "São Paulo FC":             "São Paulo (SAO)",
+  "SC Internacional":         "Internacional (INT)",
+  "Grêmio FBPA":              "Grêmio (GRE)",
+  "Botafogo FR":              "Botafogo (BOT)",
+  "CR Vasco da Gama":         "Vasco (VAS)",
+  "EC Bahia":                 "Bahia (BAH)",
+  "Cruzeiro EC":              "Cruzeiro (CRU)",
+  "CA Paranaense":            "Athletico-PR (CAP)",
+  "Santos FC":                "Santos (SAN)",
+  "EC Vitória":               "Vitória (VIT)",
+  "RB Bragantino":            "Red Bull Bragantino (RBB)",
+  "Mirassol FC":              "Mirassol (MIR)",
+  "Chapecoense AF":           "Chapecoense (CHA)",
+  "Coritiba FBC":             "Coritiba (CFC)",
+  "Clube do Remo":            "Remo (REM)",
+  "Sport Club do Recife":     "Sport (SPT)",
+  "Ceará SC":                 "Ceará (CEA)",
+  "Fortaleza EC":             "Fortaleza (FOR)",
+  "Juventude":                "Juventude (JUV)",
+  "América Mineiro":          "América-MG (AME)",
+  "Goiás EC":                 "Goiás (GOI)",
+  "Cuiabá EC":                "Cuiabá (CUI)",
+};
+
 const STATUS_MAP = {
   '7': { l: 'Provável',   c: 's7' },
   '2': { l: 'Dúvida',     c: 's2' },
@@ -1469,8 +1500,9 @@ function renderBrasileiro(data) {
   }
 
   tbody.innerHTML = tabela.map(e => {
-    const pos  = e.position;
-    const nome = e.team?.name || '—';
+    const pos      = e.position;
+    const nome     = e.team?.name || '—';
+    const nomeExib = NOME_DISPLAY[nome] || nome;
     const pts  = e.points;
     const j    = e.playedGames;
     const w    = e.won; const d = e.draw; const l = e.lost;
@@ -1496,7 +1528,7 @@ function renderBrasileiro(data) {
 
     return `<tr class="${ZONA_BREAKS.includes(pos) ? 'zona-separator' : ''}">
       <td><span class="zona-badge ${zonaClass(pos)}">${pos}</span></td>
-      <td class="nm">${nome}</td>
+      <td class="nm">${nomeExib}</td>
       <td class="pts-cell">${pts}</td>
       <td class="mo">${j}</td>
       <td class="tg">${w}</td>
@@ -1527,7 +1559,8 @@ function renderBrasileiraoCards(tabela, hist, teamStats) {
   TABELA_BRA.forEach(r => { if (r.time) tabelaIdx[r.time] = r; });
 
   el.innerHTML = tabela.map(e => {
-    const pos  = e.position; const nome = e.team?.name || '—';
+    const pos      = e.position; const nome = e.team?.name || '—';
+    const nomeExib = NOME_DISPLAY[nome] || nome;
     const pts  = e.points;   const j = e.playedGames;
     const w    = e.won; const d = e.draw; const l = e.lost;
     const gf   = e.goalsFor; const ga = e.goalsAgainst; const sg = e.goalDifference;
@@ -1548,7 +1581,7 @@ function renderBrasileiraoCards(tabela, hist, teamStats) {
     return `<div class="bra-card">
       <div class="bra-card-header">
         <span class="zona-badge ${zonaClass(pos)}">${pos}</span>
-        <span class="bra-card-nome">${nome}</span>
+        <span class="bra-card-nome">${nomeExib}</span>
         <div style="text-align:right"><div class="bra-card-pts">${pts}</div><div class="bra-card-pts-label">PTS</div></div>
       </div>
       <div class="bra-card-grid">
