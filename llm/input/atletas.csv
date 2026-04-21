@@ -23,7 +23,7 @@ Isidro Pitta,RBB,Atacante,Provável,7.5,2.36,4.04,11,True,PAL,alta,0.303,18.0,0.
 Matheus Martins,BOT,Atacante,Provável,9.76,3.67,5.25,10,True,INT,alta,0.576,21.6,2.05,0.39,1.0,5.025,0.742,valor_bom,0.515,32,0.05,5.0,43.7,neutro,4.39,False,WATCH,1.2,1.0,1.2,0.6,4.0
 Artur,SAO,Atacante,Provável,8.97,0.18,4.8,8,True,MIR,estavel,0.446,6.0,3.17,0.66,1.0,4.772,0.715,valor_bom,0.532,29,0.6,53.3,55.4,neutro,5.29,False,TITULAR,0.9,1.527,0.846,1.035,-2.0
 Breno Lopes,CFC,Atacante,Provável,9.4,-0.1,4.89,11,False,GRE,estavel,,7.4,1.25,0.256,1.0,4.828,0.641,valor_bom,0.514,34,0.475,-12.2,47.4,neutro,4.58,False,WATCH,0.96,1.2,0.343,0.9,4.0
-Erick,VIT,Atacante,Provável,7.95,-0.87,4.05,10,False,CAP,baixa,0.284,0.5,2.25,0.556,1.0,4.358,0.618,valor_bom,0.548,22,0.25,-70.0,30.8,desfavoravel,2.68,False,TITULAR,0.8,0.629,0.988,1.2,3.0
+Erick,VIT,Atacante,Provável,7.95,-0.87,4.05,10,False,CAP,baixa,0.284,0.5,2.25,0.556,1.0,4.358,0.618,valor_bom,0.548,22,0.25,-70.0,30.7,desfavoravel,2.68,False,TITULAR,0.8,0.629,0.988,1.2,3.0
 Alesson,MIR,Atacante,Provável,9.73,1.97,4.91,10,False,SAO,alta,0.331,12.7,3.41,0.695,1.0,4.836,0.551,valor_bom,0.497,39,0.15,-53.3,24.4,desfavoravel,2.36,False,TITULAR,0.846,1.035,0.9,1.527,1.0
 Pedro Rocha,CFC,Atacante,Provável,7.99,1.2,4.01,12,False,GRE,alta,,9.0,2.01,0.501,1.0,4.304,0.546,valor_bom,0.539,26,0.475,-12.2,47.4,neutro,4.08,False,TITULAR,0.96,1.2,0.343,0.9,4.0
 Enamorado,GRE,Atacante,Provável,7.91,0.13,3.91,11,True,CFC,estavel,0.501,6.0,3.46,0.885,1.0,4.261,0.529,valor_bom,0.539,26,0.4,12.2,33.5,neutro,2.85,False,TITULAR,0.343,0.9,0.96,1.2,-1.0
@@ -39,12 +39,12 @@ Edson Carioca,MIR,Atacante,Provável,3.78,-0.84,1.2,5,False,SAO,baixa,0.331,1.2,
 Hulk,CAM,Atacante,Provável,11.8,0.16,4.55,12,True,FLA,estavel,0.249,3.5,2.63,0.578,1.0,4.628,-0.224,neutro,0.392,59,0.4,17.7,45.4,neutro,4.2,False,TITULAR,1.029,0.8,0.88,1.32,-2.0
 Júnior Santos,BOT,Atacante,Provável,5.02,-0.44,2.78,6,True,INT,estavel,0.576,1.2,1.45,0.522,0.75,2.338,-0.268,neutro,0.349,69,0.05,5.0,43.7,neutro,1.53,False,TITULAR,1.2,1.0,1.2,0.6,4.0
 Vinicinho,RBB,Atacante,Provável,5.0,0.6,2.69,7,True,PAL,alta,0.303,6.1,2.69,1.0,0.875,2.325,-0.271,neutro,0.407,55,0.15,-5.5,48.1,neutro,1.96,False,TITULAR,1.6,1.029,0.655,0.48,1.0
-Ênio,CHA,Atacante,Provável,4.71,0.0,2.63,3,False,FLU,estavel,0.376,2.6,2.63,1.0,0.375,2.176,-0.272,neutro,0.173,112,0.475,-75.0,24.9,desfavoravel,0.41,False,WATCH,0.4,1.3,1.029,0.96,-2.0
+Ênio,CHA,Atacante,Provável,4.71,0.0,2.63,3,False,FLU,estavel,0.385,2.6,2.63,1.0,0.375,2.176,-0.272,neutro,0.173,112,0.475,-75.0,25.0,desfavoravel,0.41,False,WATCH,0.4,1.3,1.029,0.96,-2.0
 Kaio Jorge,CRU,Atacante,Provável,11.76,-0.27,4.26,7,False,REM,estavel,0.246,2.1,1.97,0.462,0.875,4.518,-0.331,neutro,0.336,74,0.85,-33.3,59.9,neutro,4.74,False,WATCH,1.2,0.571,1.292,0.873,2.0
 Arroyo,CRU,Atacante,Provável,5.7,0.93,2.68,11,False,REM,alta,0.246,6.6,2.23,0.832,1.0,2.396,-0.543,armadilha_leve,0.42,53,0.85,-33.3,59.9,neutro,2.87,False,WATCH,1.2,0.571,1.292,0.873,2.0
 Lautaro Díaz,SAN,Atacante,Provável,5.73,-0.51,2.9,6,False,BAH,baixa,,2.9,1.57,0.541,0.75,2.389,-0.565,armadilha_leve,0.313,79,0.35,-40.0,34.8,desfavoravel,1.25,False,WATCH,0.9,0.758,1.027,1.65,-1.0
 André Luis,MIR,Atacante,Provável,4.43,1.47,1.38,6,False,SAO,alta,0.331,7.3,0.05,0.036,0.75,1.738,-0.577,armadilha_leve,0.294,82,0.15,-53.3,24.4,desfavoravel,0.64,False,WATCH,0.846,1.035,0.9,1.527,1.0
-Bolasie,CHA,Atacante,Provável,4.25,1.05,1.25,10,False,FLU,alta,0.376,5.0,0.75,0.6,1.0,1.586,-0.631,armadilha_leve,0.373,65,0.475,-75.0,24.9,desfavoravel,0.79,False,WATCH,0.4,1.3,1.029,0.96,-2.0
+Bolasie,CHA,Atacante,Provável,4.25,1.05,1.25,10,False,FLU,alta,0.385,5.0,0.75,0.6,1.0,1.586,-0.631,armadilha_leve,0.373,65,0.475,-75.0,25.0,desfavoravel,0.79,False,WATCH,0.4,1.3,1.029,0.96,-2.0
 Luciano,SAO,Atacante,Provável,14.33,1.15,4.71,10,True,MIR,alta,0.446,8.0,1.81,0.384,1.0,4.725,-0.69,armadilha_leve,0.33,76,0.6,53.3,55.4,neutro,5.24,False,WATCH,0.9,1.527,0.846,1.035,-2.0
 Yuri Alberto,COR,Atacante,Provável,10.84,-0.68,2.68,8,True,VAS,baixa,0.464,1.2,1.68,0.627,1.0,3.712,-0.946,armadilha_leve,0.342,72,0.75,7.8,50.1,neutro,3.72,False,WATCH,0.6,1.091,0.933,0.8,2.0
 Ramón Sosa,PAL,Atacante,Provável,5.37,0.2,1.76,11,False,RBB,estavel,0.165,2.7,1.03,0.585,1.0,1.863,-0.947,armadilha_leve,0.347,70,0.7,5.5,52.5,neutro,1.96,False,WATCH,0.655,0.48,1.6,1.029,7.0
@@ -52,7 +52,7 @@ Léo Vieira,BAH,Goleiro,Provável,7.4,0.16,5.76,11,True,SAN,estavel,0.499,5.8,4.
 Anthoni,INT,Goleiro,Provável,2.77,-0.57,0.45,2,False,BOT,baixa,0.324,0.5,0.45,1.0,0.25,2.706,1.476,valor_bom,0.244,25,0.0,-5.0,36.2,neutro,0.49,False,WATCH,1.2,0.6,1.2,1.0,-1.0
 Lucas Arcanjo,VIT,Goleiro,Provável,9.83,-0.95,6.8,8,False,CAP,baixa,0.284,5.0,4.3,0.632,1.0,5.492,1.198,valor_bom,0.559,8,0.2,-70.0,31.6,desfavoravel,3.47,False,TITULAR,0.8,0.629,0.988,1.2,3.0
 Pedro Rangel,CFC,Goleiro,Provável,8.38,2.39,5.54,9,False,GRE,alta,,15.9,3.32,0.599,1.0,4.902,1.041,valor_bom,0.585,6,0.2,-12.2,44.7,neutro,4.38,False,TITULAR,0.96,1.2,0.343,0.9,4.0
-Rafael Santos,CHA,Goleiro,Provável,4.94,-0.48,3.75,4,False,FLU,estavel,0.376,1.2,3.75,1.0,0.5,3.43,0.916,valor_bom,0.347,21,0.325,-75.0,29.7,desfavoravel,1.02,False,WATCH,0.4,1.3,1.029,0.96,-2.0
+Rafael Santos,CHA,Goleiro,Provável,4.94,-0.48,3.75,4,False,FLU,estavel,0.385,1.2,3.75,1.0,0.5,3.43,0.916,valor_bom,0.347,21,0.325,-75.0,29.7,desfavoravel,1.02,False,WATCH,0.4,1.3,1.029,0.96,-2.0
 Marcelo Rangel,REM,Goleiro,Provável,5.03,0.04,2.97,12,True,CRU,estavel,0.277,2.5,2.55,0.859,1.0,3.456,0.9,valor_bom,0.687,3,0.6,33.3,64.0,favoravel,4.42,False,TITULAR,1.292,0.873,1.2,0.571,-1.0
 Matheus Cunha,CRU,Goleiro,Provável,4.46,0.76,2.91,8,False,REM,alta,0.246,6.3,0.41,0.141,1.0,3.09,0.83,valor_bom,0.693,1,0.525,-33.3,47.9,neutro,2.96,False,WATCH,1.2,0.571,1.292,0.873,2.0
 Gabriel Brazão,SAN,Goleiro,Provável,5.14,-1.81,2.78,11,False,BAH,baixa,,2.8,1.42,0.511,1.0,3.371,0.772,valor_bom,0.656,4,0.525,-40.0,43.7,neutro,2.95,False,TITULAR,0.9,0.758,1.027,1.65,-1.0
@@ -93,19 +93,18 @@ Paulo Henrique,VAS,Lateral,Provável,8.46,0.07,3.7,9,False,COR,estavel,,3.9,2.59
 Alex Telles,BOT,Lateral,Provável,10.36,0.41,4.9,9,True,INT,estavel,0.576,5.0,2.68,0.547,1.0,5.14,-0.202,neutro,0.496,37,0.45,5.0,56.3,neutro,5.79,False,TITULAR,1.2,1.0,1.2,0.6,4.0
 Luan Cândido,VIT,Lateral,Provável,6.82,1.22,4.4,4,False,CAP,alta,0.284,9.7,2.9,0.659,0.5,3.786,-0.237,neutro,0.278,62,0.2,-70.0,30.9,desfavoravel,1.17,False,WATCH,0.8,0.629,0.988,1.2,3.0
 Victor Luis,MIR,Lateral,Provável,3.04,-0.22,0.88,5,False,SAO,estavel,0.331,0.9,0.88,1.0,0.625,1.446,-0.24,neutro,0.297,58,0.2,-53.3,29.1,desfavoravel,0.53,False,WATCH,0.846,1.035,0.9,1.527,1.0
-Everton,CHA,Lateral,Provável,3.71,-0.02,2.02,9,False,FLU,estavel,0.376,2.0,1.13,0.559,1.0,1.916,-0.319,neutro,0.516,32,0.325,-75.0,28.9,desfavoravel,1.11,False,WATCH,0.4,1.3,1.029,0.96,-2.0
+Everton,CHA,Lateral,Provável,3.71,-0.02,2.02,9,False,FLU,estavel,0.385,2.0,1.13,0.559,1.0,1.916,-0.319,neutro,0.516,32,0.325,-75.0,28.9,desfavoravel,1.11,False,WATCH,0.4,1.3,1.029,0.96,-2.0
 Fagner,CRU,Lateral,Provável,5.98,-0.31,3.08,8,False,REM,estavel,0.246,4.4,1.71,0.555,1.0,3.279,-0.351,neutro,0.548,22,0.525,-33.3,47.2,neutro,3.1,False,TITULAR,1.2,0.571,1.292,0.873,2.0
 Alex Sandro,FLA,Lateral,Provável,9.58,0.53,4.04,8,False,CAM,alta,0.139,4.4,2.54,0.629,1.0,4.725,-0.38,neutro,0.493,38,0.4,-17.7,47.1,neutro,4.45,False,TITULAR,0.88,1.32,1.029,0.8,3.0
 Mayk,REM,Lateral,Provável,6.69,-0.04,3.8,4,True,CRU,estavel,0.277,2.5,3.05,0.803,0.5,3.586,-0.391,neutro,0.268,63,0.6,33.3,63.3,neutro,2.27,False,WATCH,1.292,0.873,1.2,0.571,-1.0
-Bruno Pacheco,CHA,Lateral,Provável,5.86,0.93,2.22,4,False,FLU,alta,0.376,6.7,2.22,1.0,0.5,3.059,-0.525,armadilha_leve,0.261,65,0.325,-75.0,28.9,desfavoravel,0.88,False,WATCH,0.4,1.3,1.029,0.96,-2.0
+Bruno Pacheco,CHA,Lateral,Provável,5.86,0.93,2.22,4,False,FLU,alta,0.385,6.7,2.22,1.0,0.5,3.059,-0.525,armadilha_leve,0.261,65,0.325,-75.0,28.9,desfavoravel,0.88,False,WATCH,0.4,1.3,1.029,0.96,-2.0
 Tinga,CFC,Lateral,Provável,6.79,1.72,3.37,8,False,GRE,alta,,11.0,3.0,0.89,1.0,3.424,-0.617,armadilha_leve,0.504,35,0.2,-12.2,43.9,neutro,3.01,False,WATCH,0.96,1.2,0.343,0.9,4.0
 Danilo,BOT,Meia,Provável,15.83,0.0,9.08,9,True,INT,estavel,0.576,10.0,4.64,0.511,1.0,6.764,1.596,valor_oculto,0.427,66,0.05,5.0,42.8,neutro,5.79,False,TITULAR,1.2,1.0,1.2,0.6,4.0
 Christian,CRU,Meia,Provável,10.22,0.21,6.56,12,False,REM,estavel,0.246,9.5,4.06,0.619,1.0,5.599,1.594,valor_oculto,0.548,21,0.85,-33.3,60.5,neutro,6.77,False,TITULAR,1.2,0.571,1.292,0.873,2.0
 Barros,VAS,Meia,Provável,9.54,0.0,6.17,10,False,COR,estavel,,1.7,4.67,0.757,1.0,5.276,1.431,valor_bom,0.553,19,0.475,-7.8,47.0,neutro,4.96,False,TITULAR,0.933,0.8,0.6,1.091,2.0
-Baralhas,VIT,Meia,Provável,9.64,-1.01,6.23,9,False,CAP,baixa,0.284,2.7,4.01,0.644,1.0,5.255,1.377,valor_bom,0.545,22,0.25,-70.0,30.2,desfavoravel,3.17,False,TITULAR,0.8,0.629,0.988,1.2,3.0
 Hércules,FLU,Meia,Provável,9.04,1.0,5.62,10,True,CHA,alta,0.725,10.1,4.12,0.733,1.0,4.97,1.242,valor_bom,0.55,20,0.7,75.0,73.0,favoravel,7.26,False,TITULAR,1.029,0.96,0.4,1.3,1.0
 Acevedo,BAH,Meia,Provável,7.12,0.17,4.41,10,True,SAN,estavel,0.499,5.8,4.41,1.0,1.0,4.298,1.171,valor_bom,0.604,8,0.9,40.0,69.0,favoravel,5.93,False,TITULAR,1.027,1.65,0.9,0.758,-1.0
-Higor Meritão,CHA,Meia,Provável,7.49,-0.43,4.65,9,False,FLU,estavel,0.376,2.3,4.09,0.88,1.0,4.419,1.163,valor_bom,0.59,10,0.475,-75.0,24.1,desfavoravel,2.13,False,TITULAR,0.4,1.3,1.029,0.96,-2.0
+Higor Meritão,CHA,Meia,Provável,7.49,-0.43,4.65,9,False,FLU,estavel,0.385,2.3,4.09,0.88,1.0,4.419,1.163,valor_bom,0.59,10,0.475,-75.0,24.1,desfavoravel,2.13,False,TITULAR,0.4,1.3,1.029,0.96,-2.0
 Picco,REM,Meia,Provável,7.15,0.0,4.42,9,True,CRU,estavel,0.277,4.4,3.86,0.873,1.0,4.297,1.158,valor_bom,0.601,9,1.0,33.3,70.7,favoravel,6.08,False,TITULAR,1.292,0.873,1.2,0.571,-1.0
 Vitor Bueno,REM,Meia,Provável,7.58,-2.46,4.7,8,True,CRU,baixa,0.277,4.7,2.83,0.602,1.0,4.429,1.14,valor_bom,0.584,13,1.0,33.3,70.7,favoravel,6.26,False,TITULAR,1.292,0.873,1.2,0.571,-1.0
 Thiago Mendes,VAS,Meia,Provável,7.49,-0.88,4.52,11,False,COR,baixa,,1.0,2.7,0.597,1.0,4.368,1.105,valor_bom,0.583,14,0.475,-7.8,47.0,neutro,4.11,False,TITULAR,0.933,0.8,0.6,1.091,2.0
@@ -132,14 +131,14 @@ Reinier,CAM,Meia,Provável,4.41,-0.36,2.95,11,True,FLA,estavel,0.249,1.7,2.04,0.
 Villagra,INT,Meia,Provável,6.32,0.72,2.43,7,False,BOT,alta,0.324,5.3,2.43,1.0,0.875,3.352,0.436,neutro,0.464,51,0.95,-5.0,64.6,neutro,3.79,False,TITULAR,1.2,0.6,1.2,1.0,-1.0
 Medina,BOT,Meia,Provável,6.04,-0.29,1.7,5,True,INT,estavel,0.576,3.7,1.7,1.0,0.625,3.213,0.405,neutro,0.332,107,0.05,5.0,42.8,neutro,1.72,False,TITULAR,1.2,1.0,1.2,0.6,4.0
 Vini Paulista,CFC,Meia,Provável,4.66,0.09,2.89,12,False,GRE,estavel,,6.6,2.89,1.0,1.0,2.479,0.283,neutro,0.532,25,0.475,-12.2,47.6,neutro,2.36,False,TITULAR,0.96,1.2,0.343,0.9,4.0
-João Vitor,CHA,Meia,Provável,4.23,0.66,2.63,7,False,FLU,alta,0.376,5.8,2.63,1.0,0.875,2.221,0.248,neutro,0.459,53,0.475,-75.0,24.1,desfavoravel,0.94,False,WATCH,0.4,1.3,1.029,0.96,-2.0
+João Vitor,CHA,Meia,Provável,4.23,0.66,2.63,7,False,FLU,alta,0.385,5.8,2.63,1.0,0.875,2.221,0.248,neutro,0.459,53,0.475,-75.0,24.1,desfavoravel,0.94,False,WATCH,0.4,1.3,1.029,0.96,-2.0
 Lucas Romero,CRU,Meia,Provável,9.71,2.21,4.42,6,False,REM,alta,0.246,11.4,1.92,0.434,0.75,4.27,0.239,neutro,0.33,109,0.85,-33.3,60.5,neutro,3.88,False,WATCH,1.2,0.571,1.292,0.873,2.0
 Aldo Filho,MIR,Meia,Provável,3.73,-0.39,1.98,9,False,SAO,estavel,0.331,2.0,1.42,0.717,1.0,1.925,0.239,neutro,0.516,32,0.15,-53.3,23.7,desfavoravel,0.91,False,WATCH,0.846,1.035,0.9,1.527,1.0
 Neymar,SAN,Meia,Provável,19.84,-0.07,8.82,6,False,BAH,estavel,,7.5,5.49,0.622,0.75,6.156,0.212,neutro,0.233,134,0.35,-40.0,34.4,desfavoravel,3.18,False,TITULAR,0.9,0.758,1.027,1.65,-1.0
 Arthur Melo,GRE,Meia,Provável,9.0,0.16,3.8,7,True,CFC,estavel,0.501,4.5,3.8,1.0,0.875,3.991,0.146,neutro,0.388,83,0.4,12.2,32.6,neutro,2.28,False,TITULAR,0.343,0.9,0.96,1.2,-1.0
 Portilla,CAP,Meia,Provável,2.49,-0.36,1.01,10,True,VIT,estavel,0.46,1.0,1.01,1.0,1.0,0.959,0.133,neutro,0.385,85,0.95,70.0,70.3,favoravel,1.35,False,TITULAR,0.988,1.2,0.8,0.629,-1.0
 Patrick,REM,Meia,Provável,3.99,-0.57,2.09,9,True,CRU,baixa,0.277,0.2,2.09,1.0,1.0,1.983,0.131,neutro,0.497,39,1.0,33.3,70.7,favoravel,2.8,False,TITULAR,1.292,0.873,1.2,0.571,-1.0
-Camilo,CHA,Meia,Provável,4.8,0.0,2.84,9,False,FLU,estavel,0.376,2.8,2.84,1.0,1.0,2.381,0.093,neutro,0.496,40,0.475,-75.0,24.1,desfavoravel,1.15,False,WATCH,0.4,1.3,1.029,0.96,-2.0
+Camilo,CHA,Meia,Provável,4.8,0.0,2.84,9,False,FLU,estavel,0.385,2.8,2.84,1.0,1.0,2.381,0.093,neutro,0.496,40,0.475,-75.0,24.1,desfavoravel,1.15,False,WATCH,0.4,1.3,1.029,0.96,-2.0
 Gabriel Bontempo,SAN,Meia,Provável,4.83,-0.07,2.81,9,False,BAH,estavel,,5.2,2.81,1.0,1.0,2.365,0.058,neutro,0.49,42,0.35,-40.0,34.4,desfavoravel,1.63,False,TITULAR,0.9,0.758,1.027,1.65,-1.0
 Josué,CFC,Meia,Provável,5.13,-0.67,2.95,11,False,GRE,baixa,,1.4,1.13,0.383,1.0,2.493,0.04,neutro,0.486,44,0.475,-12.2,47.6,neutro,2.37,False,WATCH,0.96,1.2,0.343,0.9,4.0
 Tomás Pérez,CAM,Meia,Provável,3.82,0.0,1.63,6,True,FLA,estavel,0.249,1.6,1.63,1.0,0.75,1.763,-0.006,neutro,0.346,102,0.4,17.7,45.4,neutro,1.2,False,TITULAR,1.029,0.8,0.88,1.32,-2.0
@@ -180,7 +179,7 @@ Artur Jorge,CRU,Técnico,Provável,13.05,0.34,7.21,4,False,REM,estavel,0.246,8.6
 Leonardo Jardim,FLA,Técnico,Provável,13.81,0.24,7.3,8,False,CAM,estavel,0.139,8.4,7.3,1.0,1.0,6.858,0.195,neutro,0.497,14,0.75,-17.7,56.4,neutro,7.74,False,TITULAR,0.88,1.32,1.029,0.8,3.0
 Cuca,SAN,Técnico,Provável,10.17,-0.83,5.92,5,False,BAH,baixa,,4.2,5.92,1.0,0.625,5.537,-0.172,neutro,0.34,16,0.35,-40.0,36.7,desfavoravel,2.54,False,WATCH,0.9,0.758,1.027,1.65,-1.0
 Léo Condé,REM,Técnico,Provável,7.62,-0.29,4.3,8,True,CRU,estavel,0.277,3.0,4.3,1.0,1.0,4.392,-0.299,neutro,0.576,6,1.0,33.3,70.6,neutro,6.2,False,TITULAR,1.292,0.873,1.2,0.571,-1.0
-Celso Rodrigues,CHA,Técnico,Provável,7.71,0.31,4.14,2,False,FLU,estavel,0.376,4.0,4.14,1.0,0.25,4.415,-0.364,neutro,0.143,19,0.475,-75.0,27.0,desfavoravel,0.6,False,WATCH,0.4,1.3,1.029,0.96,-2.0
+Celso Rodrigues,CHA,Técnico,Provável,7.71,0.31,4.14,2,False,FLU,estavel,0.385,4.0,4.14,1.0,0.25,4.415,-0.364,neutro,0.143,19,0.475,-75.0,27.0,desfavoravel,0.6,False,WATCH,0.4,1.3,1.029,0.96,-2.0
 Rafael Guanaes,MIR,Técnico,Provável,7.42,0.71,3.99,10,False,SAO,alta,0.331,6.5,3.99,1.0,1.0,4.21,-0.551,armadilha_leve,0.567,8,0.15,-53.3,26.6,desfavoravel,2.24,False,WATCH,0.846,1.035,0.9,1.527,1.0
 Franclim Carvalho,BOT,Técnico,Provável,13.9,1.07,6.82,2,True,INT,alta,0.576,8.6,6.82,1.0,0.25,6.497,-0.993,armadilha_leve,0.117,21,0.05,5.0,44.5,neutro,1.45,False,WATCH,1.2,1.0,1.2,0.6,4.0
 Luís Castro,GRE,Técnico,Provável,9.44,-0.18,4.74,12,True,CFC,estavel,0.501,3.4,4.74,1.0,1.0,4.963,-1.051,armadilha_leve,0.526,11,0.4,12.2,35.0,neutro,3.47,False,WATCH,0.343,0.9,0.96,1.2,-1.0
@@ -193,7 +192,7 @@ Lucas Oliveira,MIR,Zagueiro,Provável,6.61,2.7,4.63,3,False,SAO,alta,0.331,12.0,
 Noriega,GRE,Zagueiro,Provável,7.28,-1.12,4.62,9,True,CFC,baixa,0.501,4.6,2.73,0.591,1.0,4.291,1.045,valor_bom,0.589,9,0.075,12.2,37.7,neutro,3.24,False,TITULAR,0.343,0.9,0.96,1.2,-1.0
 Sabino,SAO,Zagueiro,Provável,7.09,-0.01,4.45,10,True,MIR,estavel,0.446,1.0,3.25,0.73,1.0,4.215,1.034,valor_bom,0.594,8,0.325,53.3,58.8,neutro,4.96,False,TITULAR,0.9,1.527,0.846,1.035,-2.0
 Cacá,VIT,Zagueiro,Provável,6.9,-0.74,4.2,8,False,CAP,baixa,0.284,5.5,1.95,0.464,1.0,4.061,0.939,valor_bom,0.589,9,0.2,-70.0,31.1,desfavoravel,2.53,False,WATCH,0.8,0.629,0.988,1.2,3.0
-Eduardo Doma,CHA,Zagueiro,Provável,4.63,0.04,3.39,11,False,FLU,estavel,0.376,1.5,2.57,0.758,1.0,2.959,0.781,valor_bom,0.639,4,0.325,-75.0,29.1,desfavoravel,1.72,False,TITULAR,0.4,1.3,1.029,0.96,-2.0
+Eduardo Doma,CHA,Zagueiro,Provável,4.63,0.04,3.39,11,False,FLU,estavel,0.385,1.5,2.57,0.758,1.0,2.959,0.781,valor_bom,0.639,4,0.325,-75.0,29.1,desfavoravel,1.72,False,TITULAR,0.4,1.3,1.029,0.96,-2.0
 Wagner Leonardo,GRE,Zagueiro,Provável,6.17,0.44,2.87,4,True,CFC,estavel,0.501,2.7,2.87,1.0,0.5,3.571,0.704,valor_bom,0.289,52,0.075,12.2,37.7,neutro,1.35,False,WATCH,0.343,0.9,0.96,1.2,-1.0
 Rafael Tolói,SAO,Zagueiro,Provável,7.32,0.0,4.05,4,True,MIR,estavel,0.446,4.0,3.3,0.815,0.5,3.964,0.675,valor_bom,0.271,55,0.325,53.3,58.8,neutro,2.33,False,WATCH,0.9,1.527,0.846,1.035,-2.0
 Jemmes,FLU,Zagueiro,Provável,6.66,-0.49,3.51,10,True,CHA,estavel,0.725,1.1,2.61,0.744,1.0,3.693,0.634,valor_bom,0.555,14,0.95,75.0,88.2,favoravel,6.51,False,TITULAR,1.029,0.96,0.4,1.3,1.0
@@ -208,7 +207,7 @@ Bruno Fuchs,PAL,Zagueiro,Provável,8.15,0.15,3.75,4,False,RBB,estavel,0.165,5.0,
 Tchamba,REM,Zagueiro,Provável,3.68,-1.45,1.93,8,True,CRU,baixa,0.277,1.9,1.55,0.803,1.0,1.935,0.236,neutro,0.526,18,0.6,33.3,63.4,favoravel,2.45,False,TITULAR,1.292,0.873,1.2,0.571,-1.0
 Freytes,FLU,Zagueiro,Provável,4.91,-0.05,2.75,11,True,CHA,estavel,0.725,1.5,1.93,0.702,1.0,2.589,0.23,neutro,0.527,17,0.95,75.0,88.2,favoravel,4.57,False,TITULAR,1.029,0.96,0.4,1.3,1.0
 Gustavo Gómez,PAL,Zagueiro,Provável,12.67,1.93,5.69,11,False,RBB,alta,0.165,15.5,2.51,0.441,1.0,4.945,0.216,neutro,0.39,42,0.325,5.5,47.3,neutro,4.68,False,WATCH,0.655,0.48,1.6,1.029,7.0
-Bruno Leonardo,CHA,Zagueiro,Provável,3.59,0.58,1.76,10,False,FLU,alta,0.376,4.4,1.46,0.83,1.0,1.84,0.192,neutro,0.513,21,0.325,-75.0,29.1,desfavoravel,1.07,False,WATCH,0.4,1.3,1.029,0.96,-2.0
+Bruno Leonardo,CHA,Zagueiro,Provável,3.59,0.58,1.76,10,False,FLU,alta,0.385,4.4,1.46,0.83,1.0,1.84,0.192,neutro,0.513,21,0.325,-75.0,29.1,desfavoravel,1.07,False,WATCH,0.4,1.3,1.029,0.96,-2.0
 Marllon,REM,Zagueiro,Provável,5.65,-0.76,3.23,12,True,CRU,baixa,0.277,2.0,2.48,0.768,1.0,2.885,0.19,neutro,0.511,23,0.6,33.3,63.4,favoravel,3.66,False,TITULAR,1.292,0.873,1.2,0.571,-1.0
 Luan Peres,SAN,Zagueiro,Provável,4.69,-0.67,2.49,10,False,BAH,baixa,,1.7,1.59,0.639,1.0,2.435,0.179,neutro,0.519,19,0.525,-40.0,43.1,neutro,2.1,False,TITULAR,0.9,0.758,1.027,1.65,-1.0
 Aguirre,CAP,Zagueiro,Provável,4.96,-0.73,2.67,9,True,VIT,baixa,0.46,0.2,1.67,0.625,1.0,2.527,0.137,neutro,0.509,24,0.85,70.0,77.5,favoravel,3.92,False,TITULAR,0.988,1.2,0.8,0.629,-1.0
