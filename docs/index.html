@@ -206,6 +206,7 @@ td.ty  { color: var(--yellow);font-family: var(--fm); font-size: 11px; }
 [data-tip] { position: relative; }
 [data-tip]::after { content: attr(data-tip); position: absolute; bottom: calc(100% + 6px); left: 50%; transform: translateX(-50%); background: var(--s3); border: 1px solid var(--border); color: var(--text); font-family: var(--fb); font-size: 11px; font-weight: 400; letter-spacing: 0; text-transform: none; padding: 6px 10px; border-radius: 6px; white-space: nowrap; pointer-events: none; opacity: 0; transition: opacity .15s; z-index: 100; }
 [data-tip]:hover::after { opacity: 1; }
+.tip-multi[data-tip]::after { white-space: pre-line; max-width: 360px; text-align: left; line-height: 1.5; }
 
 /* LOADING / ERROR */
 .loading { display: flex; align-items: center; justify-content: center; padding: 50px; color: var(--muted); font-family: var(--fm); font-size: 11px; gap: 10px; }
@@ -492,6 +493,8 @@ footer a { color: var(--green); text-decoration: none; }
   <div class="stat-item"><div class="stat-label">Em dúvida</div><div class="stat-value y" id="s-duv">—</div></div>
   <div class="stat-item"><div class="stat-label">Fora</div><div class="stat-value r" id="s-fora">—</div></div>
   <div class="stat-item"><div class="stat-label">Mandantes</div><div class="stat-value g" id="s-mand">—</div></div>
+  <div class="stat-item" title="Visitantes com confronto muito favorável (score > 70, ex: 1º vs. último fora de casa) e residuo_z > 0"><div class="stat-label">Visitantes Top</div><div class="stat-value" style="color:var(--orange)" id="s-vis-top">—</div></div>
+  <div class="stat-item" title="Caros acima do limiar da posição, confronto favorável (favoravel ou favoravel_visitante) e pontos_esperados acima da mediana"><div class="stat-label">Caros que Valem</div><div class="stat-value" style="color:var(--orange)" id="s-caro-vale">—</div></div>
   <div class="stat-item"><div class="stat-label">Armadilhas Fortes</div><div class="stat-value" style="color:var(--red)" id="s-arm">—</div></div>
   <div class="stat-item"><div class="stat-label">Valores Ocultos</div><div class="stat-value g" id="s-ocultos">—</div></div>
   <div class="stat-item"><div class="stat-label">Maior alta</div><div class="stat-value g" id="s-alta">—</div></div>
@@ -553,8 +556,8 @@ footer a { color: var(--green); text-decoration: none; }
 
       <div class="card">
         <div class="card-header">
-          <div class="card-title" data-tip="Jogadores caros com condição de mando favorável nessa rodada: joga em casa, vantagem de aproveitamento positiva, confronto acima de 60 e residuo_z positivo">🎯 CAROS QUE VALEM</div>
-          <div class="badge" style="background:rgba(255,145,0,.15);border-color:rgba(255,145,0,.3);color:var(--orange)">MANDO FAVORÁVEL</div>
+          <div class="card-title" data-tip="Jogadores caros com confronto favorável: 🎯 em casa (vantagem de mando + score>60) ou ✈️🎯 fora de casa com confronto muito favorável (score>70, ex: 1º vs. último). Ambos exigem residuo_z positivo e pontos_esperados acima da mediana.">🎯 CAROS QUE VALEM</div>
+          <div class="badge" style="background:rgba(255,145,0,.15);border-color:rgba(255,145,0,.3);color:var(--orange)">CONFRONTO FAVORÁVEL</div>
         </div>
         <div class="card-expl">Jogadores com preço acima do limiar da posição que, nessa rodada específica, reúnem condições favoráveis: joga em casa, time com aproveitamento melhor em casa que adversário fora, confronto sólido e desempenho acima do esperado pelo preço. Ordenado por pontos esperados.</div>
         <ul class="card-list" id="l-caros-fav"><li><div class="loading"><div class="spinner"></div>carregando...</div></li></ul>
@@ -623,6 +626,7 @@ footer a { color: var(--green); text-decoration: none; }
               <th data-col="min_valorizar" data-tip="Estimativa do mínimo de pontos para não desvalorizar">MÍNIMO</th>
               <th data-col="variacao" data-tip="Variação de preço após a última rodada">VAR</th>
               <th data-col="media" data-tip="Média bruta de pontos por rodada">MÉDIA</th>
+              <th data-col="pontos_rodada" data-tip="Pontuação real na última rodada disputada. Valor entre parênteses indica que o atleta não entrou em campo (resta ver se viaja/fica no banco).">ÚLT.</th>
               <th data-col="pb_media" data-tip="Pontos Base Médios (Média retirando Gols, Assistências e SG). Indica a segurança do atleta.">PB MÉDIO</th>
               <th data-col="media_bayesiana" data-tip="Média com encolhimento bayesiano">BAYES</th>
               <th data-col="pontos_esperados" data-tip="Retorno absoluto esperado na rodada: média bayesiana × (score_confronto/50) × confiabilidade. Quanto maior, mais vale o custo nessa rodada específica.">PONTOS ESP.</th>
@@ -636,7 +640,7 @@ footer a { color: var(--green); text-decoration: none; }
             </tr>
           </thead>
           <tbody id="table-body">
-            <tr><td colspan="18"><div class="loading"><div class="spinner"></div>carregando...</div></td></tr>
+            <tr><td colspan="19"><div class="loading"><div class="spinner"></div>carregando...</div></td></tr>
           </tbody>
         </table>
       </div>
@@ -758,7 +762,7 @@ footer a { color: var(--green); text-decoration: none; }
       <div style="color:var(--muted); font-size:9px; letter-spacing:2px; text-transform:uppercase; margin-top:4px;">— Avaliação —</div>
       <div style="display:flex; gap:10px;"><span style="color:var(--green); min-width:80px;">LABEL</span><span style="color:var(--muted)">Avaliação por regressão linear (preço → média) dentro da posição: 💎 valor_oculto · ✓ valor_bom · — neutro · ⚠ armadilha_leve · 🚨 armadilha_forte</span></div>
       <div style="display:flex; gap:10px;"><span style="color:var(--yellow); min-width:80px;">SCORE</span><span style="color:var(--muted)">Escore-Z do confronto. Mede a distância para a média da posição. <strong>50.0</strong> = Confronto mediano/neutro. <strong>60.0 ou mais</strong> = Confronto excelente. <strong>40.0 ou menos</strong> = Fogueira (evite escalar). Mistura mando de campo, fragilidade do adversário e momentum.</span></div>
-      <div style="display:flex; gap:10px;"><span style="color:var(--orange); min-width:80px;">PONTOS ESP.</span><span style="color:var(--muted)">Retorno absoluto esperado nesta rodada: média bayesiana × (score_confronto ÷ 50) × confiabilidade. Confronto 100 dobra o retorno esperado; confronto 50 mantém neutro. Linhas em laranja com 🎯 indicam jogadores caros com condição de mando favorável.</span></div>
+      <div style="display:flex; gap:10px;"><span style="color:var(--orange); min-width:80px;">PONTOS ESP.</span><span style="color:var(--muted)">Retorno absoluto esperado nesta rodada: média bayesiana × (score_confronto ÷ 50) × confiabilidade. Confronto 100 dobra o retorno esperado; confronto 50 mantém neutro. Linhas em laranja com 🎯 indicam mandantes com confronto favorável; ✈️🎯 indica visitantes com confronto muito favorável (score&gt;70) — ex: time forte fora contra lanterna.</span></div>
       <div style="color:var(--muted); font-size:9px; letter-spacing:2px; text-transform:uppercase; margin-top:4px;">— Brasileirão —</div>
       <div style="display:flex; gap:10px;"><span style="color:var(--green); min-width:80px;">MOF</span><span style="color:var(--muted)">Momentum ofensivo: ratio gols marcados recentes ÷ média da temporada. &gt;1 = time marcando mais que o normal</span></div>
       <div style="display:flex; gap:10px;"><span style="color:var(--green); min-width:80px;">MDF</span><span style="color:var(--muted)">Momentum defensivo: ratio gols sofridos recentes ÷ média. &lt;1 = defesa mais sólida que o normal</span></div>
@@ -1013,11 +1017,56 @@ function opcHtml(opc, vm) {
   return `<div class="opc-wrap"><div class="opc-bar"><div class="opc-fill ${cls}" style="width:${pct}%"></div></div><span class="opc-val">${pct}%</span>${vmStr}</div>`;
 }
 
+// Célula ÚLT.: pontos_rodada com cor por faixa + indicação se não entrou em campo.
+// Parênteses (ex: "(2.5)") = não entrou em campo na última rodada.
+function ultHtml(a) {
+  const raw = a.pontos_rodada;
+  if (raw === undefined || raw === '' || raw === null || raw === '0.0' || raw === '0') {
+    const jogou = String(a.entrou_em_campo).toLowerCase() === 'true';
+    if (!jogou && raw !== '' && raw !== undefined && raw !== null) {
+      return `<span class="tm" data-tip="Não entrou em campo">—</span>`;
+    }
+    return '<span class="tm">—</span>';
+  }
+  const v = parseFloat(raw);
+  if (isNaN(v)) return '<span class="tm">—</span>';
+  const jogou = String(a.entrou_em_campo).toLowerCase() === 'true';
+  const cor = v >= 8 ? 'var(--green)'
+            : v >= 4 ? 'var(--text)'
+            : v >  0 ? 'var(--yellow)'
+            :          'var(--red)';
+  const txt = jogou ? v.toFixed(1) : `(${v.toFixed(1)})`;
+  const tip = jogou ? `Pontuou ${v.toFixed(2)} na última rodada` : `Não entrou em campo (valor informativo)`;
+  return `<span style="color:${cor};font-weight:${jogou ? 600 : 400}" data-tip="${tip}">${txt}</span>`;
+}
+
 function confCellHtml(a) {
   const isMand = a.mandante === 'True';
   const adv = a.adversario && a.adversario !== '—' && a.adversario !== '' ? a.adversario : null;
   if (!adv) return '<span class="tm">—</span>';
-  return `<div class="conf-cell">
+
+  // Tooltip com contexto completo do confronto: posições na tabela, momentums
+  // dos dois times e probabilidade de vitória. Justifica o score_confronto_100.
+  const tPos   = a.time_pos && a.time_pos !== '' ? `${a.time_pos}º` : '?';
+  const aPos   = a.adv_pos  && a.adv_pos  !== '' ? `${a.adv_pos}º`  : '?';
+  const tOf    = parseFloat(a.time_momentum_of);
+  const tDef   = parseFloat(a.time_momentum_def);
+  const aOf    = parseFloat(a.adv_momentum_of);
+  const aDef   = parseFloat(a.adv_momentum_def);
+  const prob   = parseFloat(a.prob_vitoria);
+  const fmt    = v => isNaN(v) ? '?' : v.toFixed(2);
+  const fmtPct = v => isNaN(v) ? '?' : `${Math.round(v * 100)}%`;
+
+  const tipParts = [
+    `${a.clube || ''} (${tPos}) ${isMand ? 'vs' : '@'} ${adv} (${aPos})`,
+    `Prob. vitória: ${fmtPct(prob)}`,
+    `Time — momentum OF ${fmt(tOf)} / DEF ${fmt(tDef)}`,
+    `Adv  — momentum OF ${fmt(aOf)} / DEF ${fmt(aDef)}`,
+    `(ratio gols recentes ÷ média da temporada)`,
+  ];
+  const tip = tipParts.join('\n').replace(/"/g, '&quot;');
+
+  return `<div class="conf-cell tip-multi" data-tip="${tip}">
     <span class="conf-tag ${isMand ? 'conf-home' : 'conf-away'}">${isMand ? '🏠' : '✈️'} ${adv}</span>
     ${opcHtml(a.oportunidade_confronto, a.vantagem_mando)}
   </div>`;
@@ -1135,22 +1184,26 @@ function buildMomentumBlock(abrCasa, abrVis) {
 
 // ── STATS BAR ─────────────────────────────────────────────────
 function renderStats() {
-  const prov  = ALL.filter(a => a.status_id === '7').length;
-  const duv   = ALL.filter(a => a.status_id === '2').length;
-  const fora  = ALL.filter(a => ['3','5'].includes(a.status_id)).length;
-  const mand  = ALL.filter(a => a.mandante === 'True').length;
-  const arm   = ALL.filter(a => a.armadilha_label === 'armadilha_forte').length;
-  const ocult = ALL.filter(a => a.armadilha_label === 'valor_oculto').length;
-  const sorted = [...ALL].filter(a => +a.variacao !== 0).sort((a, b) => +b.variacao - +a.variacao);
-  document.getElementById('s-total').textContent  = ALL.length;
-  document.getElementById('s-prov').textContent   = prov;
-  document.getElementById('s-duv').textContent    = duv;
-  document.getElementById('s-fora').textContent   = fora;
-  document.getElementById('s-mand').textContent   = mand;
-  document.getElementById('s-arm').textContent    = arm;
-  document.getElementById('s-ocultos').textContent= ocult;
-  document.getElementById('s-alta').textContent   = sorted[0]  ? '+'+parseFloat(sorted[0].variacao).toFixed(1)   : '—';
-  document.getElementById('s-baixa').textContent  = sorted.at(-1) ? parseFloat(sorted.at(-1).variacao).toFixed(1) : '—';
+  const prov    = ALL.filter(a => a.status_id === '7').length;
+  const duv     = ALL.filter(a => a.status_id === '2').length;
+  const fora    = ALL.filter(a => ['3','5'].includes(a.status_id)).length;
+  const mand    = ALL.filter(a => a.mandante === 'True').length;
+  const visTop  = ALL.filter(a => a.condicao_mando === 'favoravel_visitante').length;
+  const caroOk  = ALL.filter(a => String(a.caro_e_vale).toLowerCase() === 'true').length;
+  const arm     = ALL.filter(a => a.armadilha_label === 'armadilha_forte').length;
+  const ocult   = ALL.filter(a => a.armadilha_label === 'valor_oculto').length;
+  const sorted  = [...ALL].filter(a => +a.variacao !== 0).sort((a, b) => +b.variacao - +a.variacao);
+  document.getElementById('s-total').textContent    = ALL.length;
+  document.getElementById('s-prov').textContent     = prov;
+  document.getElementById('s-duv').textContent      = duv;
+  document.getElementById('s-fora').textContent     = fora;
+  document.getElementById('s-mand').textContent     = mand;
+  document.getElementById('s-vis-top').textContent  = visTop;
+  document.getElementById('s-caro-vale').textContent= caroOk;
+  document.getElementById('s-arm').textContent      = arm;
+  document.getElementById('s-ocultos').textContent  = ocult;
+  document.getElementById('s-alta').textContent     = sorted[0]  ? '+'+parseFloat(sorted[0].variacao).toFixed(1)   : '—';
+  document.getElementById('s-baixa').textContent    = sorted.at(-1) ? parseFloat(sorted.at(-1).variacao).toFixed(1) : '—';
 }
 
 // ── CARD LIST ─────────────────────────────────────────────────
@@ -1198,14 +1251,14 @@ function renderDestaques() {
     a => 'C$' + parseFloat(a.preco||0).toFixed(1), 'down');
   document.getElementById('leg-arm').textContent = 'residuo_z < −1.5 — rendimento muito abaixo do esperado pelo preço';
 
-  // Caros que valem: condicao_mando == favoravel, ordenado por pontos_esperados desc
+  // Caros que valem: condicao_mando == favoravel ou favoravel_visitante, ordenado por pontos_esperados desc
   const LIMIARES = { Goleiro: 8, Lateral: 9, Zagueiro: 9, Meia: 12, Atacante: 14, Técnico: 6 };
   const carosFav = [...ALL].filter(a => {
     const lim = LIMIARES[a.posicao] || 10;
-    return a.condicao_mando === 'favoravel' && parseFloat(a.preco || 0) >= lim;
+    return (a.condicao_mando === 'favoravel' || a.condicao_mando === 'favoravel_visitante') && parseFloat(a.preco || 0) >= lim;
   }).sort((a, b) => parseFloat(b.pontos_esperados || 0) - parseFloat(a.pontos_esperados || 0));
   renderCardList('l-caros-fav', top8(carosFav),
-    a => parseFloat(a.pontos_esperados || 0).toFixed(2) + ' pts', 'up');
+    a => (a.condicao_mando === 'favoravel_visitante' ? '✈️ ' : '') + parseFloat(a.pontos_esperados || 0).toFixed(2) + ' pts', 'up');
   document.getElementById('leg-caros-fav').textContent =
     `${carosFav.length} jogador(es) caro(s) com condição favorável nessa rodada`;
 }
@@ -1335,7 +1388,7 @@ function getFiltered() {
     if (fMand  && a.mandante !== 'True') return false;
     if (fArm   && a.armadilha_label !== 'armadilha_forte') return false;
     if (fValor && a.armadilha_label !== 'valor_oculto') return false;
-    if (fFav   && a.condicao_mando  !== 'favoravel') return false;
+    if (fFav   && a.condicao_mando !== 'favoravel' && a.condicao_mando !== 'favoravel_visitante') return false;
     if (fText) {
       const t = fText;
       if (!(a.nome||'').toLowerCase().includes(t) && !(a.clube||'').toLowerCase().includes(t)) return false;
@@ -1358,7 +1411,7 @@ function renderTable() {
   const data = getSorted(getFiltered());
   const tbody = document.getElementById('table-body');
   if (!data.length) {
-    tbody.innerHTML = '<tr><td colspan="18"><div class="err">Nenhum atleta encontrado</div></td></tr>';
+    tbody.innerHTML = '<tr><td colspan="19"><div class="err">Nenhum atleta encontrado</div></td></tr>';
     document.getElementById('table-count').textContent = '0 atletas'; return;
   }
   tbody.innerHTML = data.map(a => {
@@ -1368,14 +1421,16 @@ function renderTable() {
     const tend = a.tendencia || 'estavel';
     const label = a.armadilha_label || 'neutro';
     const cond  = a.condicao_mando || 'neutro';
+    const isFav = cond === 'favoravel' || cond === 'favoravel_visitante';
     const rowCls = label === 'armadilha_forte' ? 'armadilha-row'
                  : label === 'valor_oculto'    ? 'valor-row'
-                 : cond  === 'favoravel'        ? 'favoravel-row'
+                 : isFav                        ? 'favoravel-row'
                  : '';
 
     const ptEsp = parseFloat(a.pontos_esperados || 0);
+    const ptEspIcon = cond === 'favoravel' ? ' 🎯' : cond === 'favoravel_visitante' ? ' ✈️🎯' : '';
     const ptEspHtml = ptEsp > 0
-      ? `<span style="color:${cond === 'favoravel' ? 'var(--orange)' : 'var(--text)'};font-weight:${cond === 'favoravel' ? '600' : '400'}">${ptEsp.toFixed(2)}${cond === 'favoravel' ? ' 🎯' : ''}</span>`
+      ? `<span style="color:${isFav ? 'var(--orange)' : 'var(--text)'};font-weight:${isFav ? '600' : '400'}">${ptEsp.toFixed(2)}${ptEspIcon}</span>`
       : '—';
 
     return `<tr class="${rowCls}">
@@ -1387,6 +1442,7 @@ function renderTable() {
       <td class="mo" style="color:var(--orange)">${parseFloat(a.min_valorizar) > 0 ? parseFloat(a.min_valorizar).toFixed(2) : '—'}</td>
       <td class="${vcls}">${vf > 0 ? '+' : ''}${vf.toFixed(2)}</td>
       <td class="mo">${parseFloat(a.media||0).toFixed(2)}</td>
+      <td class="mo">${ultHtml(a)}</td>
       <td class="mo" style="color: ${parseFloat(a.resiliencia_pct) >= 0.6 ? 'var(--green)' : 'var(--text)'}">${parseFloat(a.pb_media) > 0 ? parseFloat(a.pb_media).toFixed(2) : '—'}</td>
       <td class="mo" style="color:var(--blue)">${parseFloat(a.media_bayesiana||0).toFixed(2)}</td>
       <td class="mo">${ptEspHtml}</td>
@@ -1747,7 +1803,7 @@ async function init() {
     ALL = (await fetchCSV(CSV_ENR)).filter(a => a.nome);
   } catch(e) {
     document.getElementById('table-body').innerHTML =
-      `<tr><td colspan="18"><div class="err">Erro ao carregar atletas: ${e.message}</div></td></tr>`;
+      `<tr><td colspan="19"><div class="err">Erro ao carregar atletas: ${e.message}</div></td></tr>`;
   }
 
   try { PARTIDAS = await fetchCSV(CSV_PART); } catch(e) {}

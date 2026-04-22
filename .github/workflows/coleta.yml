@@ -2,6 +2,8 @@ name: Coleta Cartola FC
 
 on:
   schedule:
+    # Cobertura diária (10 runs/dia)
+    - cron: "0 7 * * *"     # 04h BRT — madrugada
     - cron: "0 9 * * *"     # 06h BRT
     - cron: "0 13 * * *"    # 10h BRT
     - cron: "40 15 * * *"   # 12h40 BRT
@@ -11,6 +13,14 @@ on:
     - cron: "0 23 * * *"    # 20h BRT
     - cron: "30 0 * * *"    # 21h30 BRT
     - cron: "0 2 * * *"     # 23h BRT
+
+    # Reforço de fim de semana — sáb e dom têm a maioria dos jogos do
+    # Brasileirão. Preenche os gaps de 2h+ e cobre os horários de jogo
+    # (16h30, 18h30, 21h) com dados mais frescos no dashboard.
+    - cron: "0 15 * * 6,0"  # 12h BRT sáb/dom — preenche gap 10h→12h40
+    - cron: "0 17 * * 6,0"  # 14h BRT sáb/dom — preenche gap 12h40→15h
+    - cron: "0 19 * * 6,0"  # 16h BRT sáb/dom — durante primeiro jogo
+    - cron: "0 1 * * 0,1"   # 22h BRT sáb/dom — durante jogo noturno
 
   workflow_dispatch:
 

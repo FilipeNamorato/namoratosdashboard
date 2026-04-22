@@ -115,9 +115,13 @@ Ao pesquisar, filtre apenas notícias dos últimos 5 dias. Cite a fonte e a data
 Limiares: Goleiro 8C | Lateral 9C | Zagueiro 9C | Meia 12C | Atacante 14C | Técnico 6C
 
 Para todo jogador acima do limiar da sua posição, avaliar obrigatoriamente:
-- **condicao_mando**: se 'favoravel', o jogador joga em casa com vantagem real de mando e confronto favorável — sinal positivo para assumir o custo alto
+- **condicao_mando**: sinal de oportunidade do confronto para o jogador
+  - 'favoravel': joga em casa com vantagem de mando real e confronto acima de 60 — sinal positivo máximo
+  - 'favoravel_visitante': joga fora, mas confronto muito favorável (score > 70, ex: 1º vs. último) e entrega acima do preço — sinal positivo mesmo sem mando
+  - 'neutro': sem sinal claro em nenhuma direção
+  - 'desfavoravel': visitante com confronto ruim e desvantagem de mando — evitar jogadores caros
 - **pontos_esperados**: retorno absoluto esperado na rodada (media_bayesiana ajustada pelo confronto e confiabilidade). Use este campo, não a média bruta, para justificar jogadores caros
-- **Decisão**: um jogador caro só deve entrar na escalação principal se pontos_esperados estiver acima da mediana da posição E condicao_mando != 'desfavoravel'
+- **Decisão**: um jogador caro só deve entrar na escalação principal se pontos_esperados estiver acima da mediana da posição E condicao_mando não for 'desfavoravel' nem 'neutro'
 
 ### Validação cruzada (obrigatória)
 Para cada jogador considerado na escalação principal:

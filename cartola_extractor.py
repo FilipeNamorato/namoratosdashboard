@@ -36,7 +36,15 @@ COLUNAS GERADAS em atletas.csv (current):
     forma_score_time    → pontuação de forma ponderada 0-1
     score_confronto_z   → score composto do confronto, normalizado por posição
     score_confronto_100 → score_confronto_z convertido para escala 0-100
-    condicao_mando      → 'favoravel' | 'neutro' | 'desfavoravel' baseado em vantagem_mando + score_confronto + residuo_z
+                          Defesa: mistura oc, vm, tof, tdef (mom. defensivo próprio),
+                                  fs e (1-adv_of) (adv fraco no ataque).
+                          Ataque: mistura oc, vm, tof, fs e adv_def (defesa do adv
+                                  sofrendo mais gols recentemente).
+                          Pesos em PESOS_SCORE_DEFAULT; sobrescritos por
+                          calibracao_score.json quando calibrado empiricamente.
+    condicao_mando      → 'favoravel' | 'favoravel_visitante' | 'neutro' | 'desfavoravel'
+                          favoravel: mandante + vantagem_mando>5 + sc>60 + rz>0
+                          favoravel_visitante: visitante + sc>70 + rz>0 (ex: 1º vs último fora de casa)
                           (proxy enquanto histórico individual acumula; substituir por delta_mando_jogador quando disponível)
     pontos_esperados    → media_bayesiana × (score_confronto_100/50) × confiabilidade — retorno absoluto esperado na rodada
 """
@@ -174,6 +182,32 @@ JANELA_MOMENTUM       = 5
 PESOS_FORMA           = [0.10, 0.15, 0.20, 0.25, 0.30]
 POSICOES_ATAQUE       = {"Atacante", "Meia", "Técnico"}
 POSICOES_DEFESA       = {"Zagueiro", "Lateral", "Goleiro"}
+
+# Pesos default do score_confronto. Somam 1.0 por grupo.
+# Sobrescritos por docs/data/current/calibracao_score.json quando disponível
+# (ver calibrar_score.py).
+#
+# Grupo defesa: Goleiro/Zagueiro/Lateral. Inclui tdef (momentum defensivo
+# próprio) e adv_of (adv ofensivo — usado invertido como 1-adv_of_norm).
+# Grupo ataque: Atacante/Meia/Técnico. Usa adv_def (fragilidade defensiva
+# recente do adv, não mais adv_of que não tem sentido lógico aqui).
+PESOS_SCORE_DEFAULT = {
+    "defesa": {
+        "oc":     0.30,  # fragilidade ofensiva do adv (percentil posicional)
+        "vm":     0.25,  # vantagem de aproveitamento no mando
+        "tof":    0.10,  # momentum ofensivo próprio (time ganhando segura SG)
+        "tdef":   0.15,  # momentum defensivo próprio (1 - ratio, invertido)
+        "fs":     0.05,  # forma recente (V/E/D)
+        "adv_of": 0.15,  # 1 - adv_momentum_of (adv fraco no ataque = bom)
+    },
+    "ataque": {
+        "oc":      0.30,  # fragilidade defensiva do adv (percentil posicional)
+        "vm":      0.15,  # vantagem de aproveitamento no mando
+        "tof":     0.30,  # momentum ofensivo próprio
+        "fs":      0.10,  # forma recente (V/E/D)
+        "adv_def": 0.15,  # adv_momentum_def (defesa adv sofrendo mais)
+    },
+}
 
 # Pesos de pontuação por evento volátil (para cálculo do PB)
 PESO_GOL_POS = {
@@ -942,11 +976,19 @@ def enriquecer_com_confronto(df, df_tabela, momentum) -> pd.DataFrame:
         df[col] = results_df[col].values
 
     # ── Score composto dinâmico por posição ──────────────────
-    oc       = df["oportunidade_confronto"].fillna(0.5)
-    vm       = ((df["vantagem_mando"].fillna(0).clip(-50, 50) + 50) / 100)
-    tof_norm = ((df["time_momentum_of"].fillna(1.0).clip(0.3, 2.0) - 0.3) / 1.7)
-    fs       = df["forma_score_time"].fillna(0.5)
-    adv_norm = ((df["adv_momentum_of"].fillna(1.0).clip(0.3, 2.0) - 0.3) / 1.7)
+    oc           = df["oportunidade_confronto"].fillna(0.5)
+    vm           = ((df["vantagem_mando"].fillna(0).clip(-50, 50) + 50) / 100)
+    tof_norm     = ((df["time_momentum_of"].fillna(1.0).clip(0.3, 2.0) - 0.3) / 1.7)
+    # tdef: momentum defensivo próprio. Ratio < 1 = defesa em boa fase (sofre
+    # menos gols recentemente). Invertido para que "defesa sólida" = valor alto.
+    tdef_norm    = 1 - ((df["time_momentum_def"].fillna(1.0).clip(0.3, 2.0) - 0.3) / 1.7)
+    fs           = df["forma_score_time"].fillna(0.5)
+    adv_of_norm  = ((df["adv_momentum_of"].fillna(1.0).clip(0.3, 2.0) - 0.3) / 1.7)
+    # adv_def: momentum defensivo do adv. Ratio > 1 = defesa sofrendo mais gols
+    # recentemente. Direto (não invertido): valor alto = defesa adv fraca =
+    # oportunidade para o ataque do time_alvo. Substitui o antigo adv_of_norm
+    # usado erroneamente para ataque.
+    adv_def_norm = ((df["adv_momentum_def"].fillna(1.0).clip(0.3, 2.0) - 0.3) / 1.7)
 
     # ── Bônus contínuo por probabilidade de vitória ───────────
     SENSIBILIDADE_PROB = {
@@ -974,22 +1016,36 @@ def enriquecer_com_confronto(df, df_tabela, momentum) -> pd.DataFrame:
         errors="coerce"
     ).fillna(0)
 
+    pesos_cfg = _carregar_pesos_score()
+
     def calcular_score(row):
         if row["posicao"] in POSICOES_DEFESA:
-            base = (0.40 * row["oc"] + 0.30 * row["vm"]
-                  + 0.10 * row["tof_norm"] + 0.10 * row["fs"]
-                  + 0.10 * (1 - row["adv_norm"]))
+            p = pesos_cfg["defesa"]
+            base = (p.get("oc",     0) * row["oc"]
+                  + p.get("vm",     0) * row["vm"]
+                  + p.get("tof",    0) * row["tof_norm"]
+                  + p.get("tdef",   0) * row["tdef_norm"]
+                  + p.get("fs",     0) * row["fs"]
+                  + p.get("adv_of", 0) * (1 - row["adv_of_norm"]))
         else:
-            base = (0.35 * row["oc"] + 0.15 * row["vm"]
-                  + 0.30 * row["tof_norm"] + 0.15 * row["fs"]
-                  + 0.05 * (1 - row["adv_norm"]))
+            p = pesos_cfg["ataque"]
+            base = (p.get("oc",      0) * row["oc"]
+                  + p.get("vm",      0) * row["vm"]
+                  + p.get("tof",     0) * row["tof_norm"]
+                  + p.get("fs",      0) * row["fs"]
+                  + p.get("adv_def", 0) * row["adv_def_norm"])
         return base * bonus_prob(row["prob"], row["posicao"])
 
     df_temp = pd.DataFrame({
-        "posicao":  df["posicao"],
-        "oc":       oc, "vm": vm, "tof_norm": tof_norm,
-        "fs":       fs, "adv_norm": adv_norm,
-        "prob":     prob_series,
+        "posicao":      df["posicao"],
+        "oc":           oc,
+        "vm":           vm,
+        "tof_norm":     tof_norm,
+        "tdef_norm":    tdef_norm,
+        "fs":           fs,
+        "adv_of_norm":  adv_of_norm,
+        "adv_def_norm": adv_def_norm,
+        "prob":         prob_series,
     })
     df["score_confronto"] = df_temp.apply(calcular_score, axis=1).round(4)
 
@@ -1021,11 +1077,15 @@ def enriquecer_com_confronto(df, df_tabela, momentum) -> pd.DataFrame:
     # acumula rodadas suficientes. Quando disponível, substituir vantagem_mando > 5
     # pelo delta_mando_jogador > 1.5 calculado do histórico.
     #
-    # Critérios atuais (todos devem ser satisfeitos para 'favoravel'):
-    #   - mandante == True (joga em casa nessa rodada)
-    #   - vantagem_mando > 5 (o time performa bem em casa vs. adversário fora)
-    #   - score_confronto_100 > 60 (confronto favorável nessa rodada)
+    # Critérios para 'favoravel' (mandante):
+    #   - mandante == True
+    #   - vantagem_mando > 5 (time performa bem em casa vs. adversário fora)
+    #   - score_confronto_100 > 60 (confronto favorável)
     #   - residuo_z > 0 (jogador entrega acima do esperado pelo preço)
+    #
+    # Critérios para 'favoravel_visitante' (visitante privilegiado):
+    #   - mandante == False, mas confronto muito favorável (sc > 70)
+    #   - residuo_z > 0 — ex: 1º vs. último, time forte fora contra fraco em casa
     def _condicao_mando(row):
         vm  = row["vantagem_mando"]  if pd.notna(row["vantagem_mando"])  else 0.0
         sc  = row["score_confronto_100"] if pd.notna(row["score_confronto_100"]) else 50.0
@@ -1033,6 +1093,8 @@ def enriquecer_com_confronto(df, df_tabela, momentum) -> pd.DataFrame:
         m   = row["mandante"]        if pd.notna(row["mandante"])        else False
         if m and vm > 5 and sc > 60 and rz > 0:
             return "favoravel"
+        if (not m) and sc > 70 and rz > 0:
+            return "favoravel_visitante"
         if (not m) and vm < -5 and sc < 40:
             return "desfavoravel"
         return "neutro"
@@ -1088,7 +1150,7 @@ def _classificar_atletas(df: pd.DataFrame) -> pd.DataFrame:
 
     df["caro_e_vale"] = (
         (df["preco"] > limiar_preco) &
-        (df.get("condicao_mando", "neutro") == "favoravel") &
+        (df["condicao_mando"].isin(["favoravel", "favoravel_visitante"])) &
         (df["pontos_esperados"] > mediana_pe)
     )
 
@@ -1137,6 +1199,33 @@ def _carregar_calibracao() -> dict:
             return json.load(f)
     except Exception:
         return {}
+
+
+def _carregar_pesos_score() -> dict:
+    """
+    Lê os pesos calibrados do score_confronto de calibracao_score.json.
+    Retorna PESOS_SCORE_DEFAULT quando o arquivo não existe, está inválido
+    ou quando o modelo ainda não superou a heurística (status != 'ok').
+    """
+    path = CURRENT_DIR / "calibracao_score.json"
+    if not path.exists():
+        return PESOS_SCORE_DEFAULT
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            payload = json.load(f)
+    except Exception:
+        return PESOS_SCORE_DEFAULT
+    if payload.get("status") != "ok":
+        return PESOS_SCORE_DEFAULT
+    pesos = payload.get("pesos", {})
+    if not (isinstance(pesos, dict) and "defesa" in pesos and "ataque" in pesos):
+        return PESOS_SCORE_DEFAULT
+    # merge preservando defaults para chaves ausentes
+    merged = {
+        "defesa": {**PESOS_SCORE_DEFAULT["defesa"], **pesos.get("defesa", {})},
+        "ataque": {**PESOS_SCORE_DEFAULT["ataque"], **pesos.get("ataque", {})},
+    }
+    return merged
 
 
 def _calcular_forma_historica(df: pd.DataFrame, n: int = 3) -> pd.DataFrame:
@@ -1240,6 +1329,8 @@ def calcular_pontos_esperados(df: pd.DataFrame) -> pd.Series:
 
 # Colunas salvas nos snapshots históricos
 # Inclui entrou_em_campo para calcular taxa de participação futuramente
+# Features brutas de confronto (oc, vm, momentums, forma, prob) são necessárias
+# para calibrar os pesos do score_confronto via calibrar_score.py.
 COLUNAS_SNAPSHOT = [
     "atleta_id", "nome", "clube", "posicao", "status_id",
     "preco", "variacao", "media", "jogos", "pontos_rodada",
@@ -1249,6 +1340,11 @@ COLUNAS_SNAPSHOT = [
     "media_bayesiana", "pb_media", "confiabilidade",
     "score_confronto_100",
     "condicao_mando", "pontos_esperados",  # ← base para split real de mando no futuro
+    # Features brutas para calibração do score_confronto
+    "oportunidade_confronto", "vantagem_mando",
+    "time_momentum_of", "time_momentum_def",
+    "adv_momentum_of",  "adv_momentum_def",
+    "forma_score_time", "prob_vitoria",
 ]
 
 def _pasta_rodada(rodada: int) -> Path:
@@ -1800,6 +1896,17 @@ if __name__ == "__main__":
         calibrador.main()
     except Exception as e:
         print(f"  ERRO na calibração: {e}")
+
+    # ── 7c. Calibração dos pesos do score_confronto ──────────────
+    # Só produz modelo quando snapshots rN tiverem as features brutas
+    # (oportunidade_confronto, vantagem_mando, *_momentum_*, forma_score_time).
+    # Snapshots pré-migração ficam ignorados sem quebrar.
+    print("Calibrando score_confronto...")
+    try:
+        import calibrar_score as cal_score
+        cal_score.main()
+    except Exception as e:
+        print(f"  ERRO na calibração do score: {e}")
 
     # ── 8. Geração do llm/input/ ─────────────────────────────────
     print("Gerando llm/input/...")
