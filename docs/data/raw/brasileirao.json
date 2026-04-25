@@ -72,8 +72,8 @@
       "draw": 3,
       "lost": 3,
       "points": 21,
-      "goalsFor": 15,
-      "goalsAgainst": 12,
+      "goalsFor": 17,
+      "goalsAgainst": 14,
       "goalDifference": 3
     },
     {
@@ -167,8 +167,8 @@
       "draw": 2,
       "lost": 5,
       "points": 17,
-      "goalsFor": 22,
-      "goalsAgainst": 22,
+      "goalsFor": 24,
+      "goalsAgainst": 24,
       "goalDifference": 0
     },
     {
@@ -193,6 +193,25 @@
     {
       "position": 11,
       "team": {
+        "id": 1771,
+        "name": "Cruzeiro EC",
+        "shortName": "Cruzeiro",
+        "tla": "CRU",
+        "crest": "https://crests.football-data.org/1771.png"
+      },
+      "playedGames": 13,
+      "form": null,
+      "won": 4,
+      "draw": 4,
+      "lost": 5,
+      "points": 16,
+      "goalsFor": 17,
+      "goalsAgainst": 21,
+      "goalDifference": -4
+    },
+    {
+      "position": 12,
+      "team": {
         "id": 1782,
         "name": "EC Vitória",
         "shortName": "Vitória",
@@ -210,7 +229,7 @@
       "goalDifference": -3
     },
     {
-      "position": 12,
+      "position": 13,
       "team": {
         "id": 1766,
         "name": "CA Mineiro",
@@ -229,7 +248,7 @@
       "goalDifference": -1
     },
     {
-      "position": 13,
+      "position": 14,
       "team": {
         "id": 6684,
         "name": "SC Internacional",
@@ -243,12 +262,12 @@
       "draw": 5,
       "lost": 5,
       "points": 14,
-      "goalsFor": 10,
-      "goalsAgainst": 12,
+      "goalsFor": 12,
+      "goalsAgainst": 14,
       "goalDifference": -2
     },
     {
-      "position": 14,
+      "position": 15,
       "team": {
         "id": 6685,
         "name": "Santos FC",
@@ -262,28 +281,9 @@
       "draw": 5,
       "lost": 5,
       "points": 14,
-      "goalsFor": 16,
-      "goalsAgainst": 19,
-      "goalDifference": -3
-    },
-    {
-      "position": 15,
-      "team": {
-        "id": 1771,
-        "name": "Cruzeiro EC",
-        "shortName": "Cruzeiro",
-        "tla": "CRU",
-        "crest": "https://crests.football-data.org/1771.png"
-      },
-      "playedGames": 13,
-      "form": null,
-      "won": 3,
-      "draw": 5,
-      "lost": 5,
-      "points": 14,
-      "goalsFor": 16,
+      "goalsFor": 18,
       "goalsAgainst": 21,
-      "goalDifference": -5
+      "goalDifference": -3
     },
     {
       "position": 16,
@@ -354,12 +354,12 @@
       "playedGames": 13,
       "form": null,
       "won": 1,
-      "draw": 6,
-      "lost": 6,
-      "points": 9,
+      "draw": 5,
+      "lost": 7,
+      "points": 8,
       "goalsFor": 13,
-      "goalsAgainst": 22,
-      "goalDifference": -9
+      "goalsAgainst": 23,
+      "goalDifference": -10
     },
     {
       "position": 20,
@@ -440,7 +440,7 @@
         "lastUpdated": "2023-02-18T08:43:47Z"
       },
       "playedMatches": 10,
-      "goals": 6,
+      "goals": 7,
       "assists": 2,
       "penalties": null
     },
@@ -470,7 +470,7 @@
         "venue": "Estádio do Morumbi",
         "lastUpdated": "2023-02-18T08:43:44Z"
       },
-      "playedMatches": 11,
+      "playedMatches": 12,
       "goals": 6,
       "assists": null,
       "penalties": 1
@@ -567,6 +567,37 @@
       "goals": 5,
       "assists": 1,
       "penalties": null
+    },
+    {
+      "player": {
+        "id": 140873,
+        "name": "Luciano Juba",
+        "firstName": "",
+        "lastName": "Luciano Juba",
+        "dateOfBirth": "1999-08-29",
+        "nationality": "Brazil",
+        "section": "Defence",
+        "position": null,
+        "shirtNumber": null,
+        "lastUpdated": "2023-07-31T10:01:14Z"
+      },
+      "team": {
+        "id": 1777,
+        "name": "EC Bahia",
+        "shortName": "Bahia",
+        "tla": "BAH",
+        "crest": "https://crests.football-data.org/1777.png",
+        "address": "Rua Antônio Fernandes S/N, Jardim das Margaridas Salvador, BA 41502-590",
+        "website": "http://www.esporteclubebahia.com.br",
+        "founded": 1931,
+        "clubColors": "Blue / White / Red",
+        "venue": "Estádio Governador Roberto Santos",
+        "lastUpdated": "2024-10-28T10:09:10Z"
+      },
+      "playedMatches": 12,
+      "goals": 5,
+      "assists": 1,
+      "penalties": 1
     },
     {
       "player": {
@@ -756,37 +787,6 @@
     },
     {
       "player": {
-        "id": 140873,
-        "name": "Luciano Juba",
-        "firstName": "",
-        "lastName": "Luciano Juba",
-        "dateOfBirth": "1999-08-29",
-        "nationality": "Brazil",
-        "section": "Defence",
-        "position": null,
-        "shirtNumber": null,
-        "lastUpdated": "2023-07-31T10:01:14Z"
-      },
-      "team": {
-        "id": 1777,
-        "name": "EC Bahia",
-        "shortName": "Bahia",
-        "tla": "BAH",
-        "crest": "https://crests.football-data.org/1777.png",
-        "address": "Rua Antônio Fernandes S/N, Jardim das Margaridas Salvador, BA 41502-590",
-        "website": "http://www.esporteclubebahia.com.br",
-        "founded": 1931,
-        "clubColors": "Blue / White / Red",
-        "venue": "Estádio Governador Roberto Santos",
-        "lastUpdated": "2024-10-28T10:09:10Z"
-      },
-      "playedMatches": 12,
-      "goals": 4,
-      "assists": 1,
-      "penalties": 1
-    },
-    {
-      "player": {
         "id": 1327,
         "name": "Gabriel Barbosa",
         "firstName": "",
@@ -917,7 +917,8 @@
       "D",
       "W",
       "D",
-      "L"
+      "L",
+      "D"
     ],
     "CA Paranaense": [
       "W",
@@ -958,6 +959,7 @@
       "L",
       "D",
       "D",
+      "L",
       "L"
     ],
     "Fluminense FC": [
@@ -1107,7 +1109,8 @@
       "W",
       "W",
       "D",
-      "W"
+      "W",
+      "D"
     ],
     "Cruzeiro EC": [
       "L",
@@ -1120,6 +1123,7 @@
       "D",
       "W",
       "L",
+      "W",
       "W",
       "W"
     ]
@@ -1198,10 +1202,10 @@
         "l": 4
       },
       "away": {
-        "gf": 5,
-        "ga": 4,
+        "gf": 7,
+        "ga": 6,
         "w": 2,
-        "d": 2,
+        "d": 3,
         "l": 1
       }
     },
@@ -1240,10 +1244,10 @@
     "Clube do Remo": {
       "home": {
         "gf": 8,
-        "ga": 7,
+        "ga": 8,
         "w": 1,
         "d": 3,
-        "l": 1
+        "l": 2
       },
       "away": {
         "gf": 5,
@@ -1415,10 +1419,10 @@
     },
     "Botafogo FR": {
       "home": {
-        "gf": 9,
-        "ga": 7,
+        "gf": 11,
+        "ga": 9,
         "w": 2,
-        "d": 1,
+        "d": 2,
         "l": 1
       },
       "away": {
@@ -1438,9 +1442,9 @@
         "l": 1
       },
       "away": {
-        "gf": 4,
+        "gf": 5,
         "ga": 14,
-        "w": 0,
+        "w": 1,
         "d": 1,
         "l": 4
       }
