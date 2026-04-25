@@ -60,6 +60,25 @@
     {
       "position": 4,
       "team": {
+        "id": 1777,
+        "name": "EC Bahia",
+        "shortName": "Bahia",
+        "tla": "BAH",
+        "crest": "https://crests.football-data.org/1777.png"
+      },
+      "playedGames": 12,
+      "form": null,
+      "won": 6,
+      "draw": 3,
+      "lost": 3,
+      "points": 21,
+      "goalsFor": 15,
+      "goalsAgainst": 12,
+      "goalDifference": 3
+    },
+    {
+      "position": 5,
+      "team": {
         "id": 1776,
         "name": "São Paulo FC",
         "shortName": "São Paulo",
@@ -75,25 +94,6 @@
       "goalsFor": 16,
       "goalsAgainst": 11,
       "goalDifference": 5
-    },
-    {
-      "position": 5,
-      "team": {
-        "id": 1777,
-        "name": "EC Bahia",
-        "shortName": "Bahia",
-        "tla": "BAH",
-        "crest": "https://crests.football-data.org/1777.png"
-      },
-      "playedGames": 11,
-      "form": null,
-      "won": 6,
-      "draw": 2,
-      "lost": 3,
-      "points": 20,
-      "goalsFor": 15,
-      "goalsAgainst": 12,
-      "goalDifference": 3
     },
     {
       "position": 6,
@@ -161,12 +161,12 @@
         "tla": "BOT",
         "crest": "https://crests.football-data.org/1770.png"
       },
-      "playedGames": 11,
+      "playedGames": 12,
       "form": null,
       "won": 5,
-      "draw": 1,
+      "draw": 2,
       "lost": 5,
-      "points": 16,
+      "points": 17,
       "goalsFor": 22,
       "goalsAgainst": 22,
       "goalDifference": 0
@@ -231,6 +231,63 @@
     {
       "position": 13,
       "team": {
+        "id": 6684,
+        "name": "SC Internacional",
+        "shortName": "Internacional",
+        "tla": "SCI",
+        "crest": "https://crests.football-data.org/6684.png"
+      },
+      "playedGames": 13,
+      "form": null,
+      "won": 3,
+      "draw": 5,
+      "lost": 5,
+      "points": 14,
+      "goalsFor": 10,
+      "goalsAgainst": 12,
+      "goalDifference": -2
+    },
+    {
+      "position": 14,
+      "team": {
+        "id": 6685,
+        "name": "Santos FC",
+        "shortName": "Santos",
+        "tla": "SAN",
+        "crest": "https://crests.football-data.org/6685.png"
+      },
+      "playedGames": 13,
+      "form": null,
+      "won": 3,
+      "draw": 5,
+      "lost": 5,
+      "points": 14,
+      "goalsFor": 16,
+      "goalsAgainst": 19,
+      "goalDifference": -3
+    },
+    {
+      "position": 15,
+      "team": {
+        "id": 1771,
+        "name": "Cruzeiro EC",
+        "shortName": "Cruzeiro",
+        "tla": "CRU",
+        "crest": "https://crests.football-data.org/1771.png"
+      },
+      "playedGames": 13,
+      "form": null,
+      "won": 3,
+      "draw": 5,
+      "lost": 5,
+      "points": 14,
+      "goalsFor": 16,
+      "goalsAgainst": 21,
+      "goalDifference": -5
+    },
+    {
+      "position": 16,
+      "team": {
         "id": 1767,
         "name": "Grêmio FBPA",
         "shortName": "Grêmio",
@@ -246,63 +303,6 @@
       "goalsFor": 14,
       "goalsAgainst": 16,
       "goalDifference": -2
-    },
-    {
-      "position": 14,
-      "team": {
-        "id": 6684,
-        "name": "SC Internacional",
-        "shortName": "Internacional",
-        "tla": "SCI",
-        "crest": "https://crests.football-data.org/6684.png"
-      },
-      "playedGames": 12,
-      "form": null,
-      "won": 3,
-      "draw": 4,
-      "lost": 5,
-      "points": 13,
-      "goalsFor": 10,
-      "goalsAgainst": 12,
-      "goalDifference": -2
-    },
-    {
-      "position": 15,
-      "team": {
-        "id": 6685,
-        "name": "Santos FC",
-        "shortName": "Santos",
-        "tla": "SAN",
-        "crest": "https://crests.football-data.org/6685.png"
-      },
-      "playedGames": 12,
-      "form": null,
-      "won": 3,
-      "draw": 4,
-      "lost": 5,
-      "points": 13,
-      "goalsFor": 16,
-      "goalsAgainst": 19,
-      "goalDifference": -3
-    },
-    {
-      "position": 16,
-      "team": {
-        "id": 1771,
-        "name": "Cruzeiro EC",
-        "shortName": "Cruzeiro",
-        "tla": "CRU",
-        "crest": "https://crests.football-data.org/1771.png"
-      },
-      "playedGames": 12,
-      "form": null,
-      "won": 3,
-      "draw": 4,
-      "lost": 5,
-      "points": 13,
-      "goalsFor": 16,
-      "goalsAgainst": 21,
-      "goalDifference": -5
     },
     {
       "position": 17,
@@ -351,12 +351,12 @@
         "tla": "CRE",
         "crest": "https://crests.football-data.org/4287.png"
       },
-      "playedGames": 12,
+      "playedGames": 13,
       "form": null,
       "won": 1,
-      "draw": 5,
+      "draw": 6,
       "lost": 6,
-      "points": 8,
+      "points": 9,
       "goalsFor": 13,
       "goalsAgainst": 22,
       "goalDifference": -9
@@ -439,7 +439,7 @@
         "venue": "Estádio Nilton Santos",
         "lastUpdated": "2023-02-18T08:43:47Z"
       },
-      "playedMatches": 9,
+      "playedMatches": 10,
       "goals": 6,
       "assists": 2,
       "penalties": null
@@ -625,7 +625,7 @@
         "venue": "Estádio Governador Magalhães Pinto",
         "lastUpdated": "2022-04-10T11:03:46Z"
       },
-      "playedMatches": 12,
+      "playedMatches": 13,
       "goals": 5,
       "assists": 1,
       "penalties": null
@@ -718,7 +718,7 @@
         "venue": "Estádio Nilton Santos",
         "lastUpdated": "2023-02-18T08:43:47Z"
       },
-      "playedMatches": 11,
+      "playedMatches": 12,
       "goals": 4,
       "assists": null,
       "penalties": null
@@ -749,7 +749,7 @@
         "venue": "Estádio Nilton Santos",
         "lastUpdated": "2023-02-18T08:43:47Z"
       },
-      "playedMatches": 11,
+      "playedMatches": 12,
       "goals": 4,
       "assists": 2,
       "penalties": null
@@ -780,7 +780,7 @@
         "venue": "Estádio Governador Roberto Santos",
         "lastUpdated": "2024-10-28T10:09:10Z"
       },
-      "playedMatches": 11,
+      "playedMatches": 12,
       "goals": 4,
       "assists": 1,
       "penalties": 1
