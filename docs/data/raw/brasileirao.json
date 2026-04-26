@@ -60,6 +60,25 @@
     {
       "position": 4,
       "team": {
+        "id": 1776,
+        "name": "São Paulo FC",
+        "shortName": "São Paulo",
+        "tla": "PAU",
+        "crest": "https://crests.football-data.org/1776.png"
+      },
+      "playedGames": 13,
+      "form": null,
+      "won": 7,
+      "draw": 2,
+      "lost": 4,
+      "points": 23,
+      "goalsFor": 17,
+      "goalsAgainst": 11,
+      "goalDifference": 6
+    },
+    {
+      "position": 5,
+      "team": {
         "id": 1777,
         "name": "EC Bahia",
         "shortName": "Bahia",
@@ -75,25 +94,6 @@
       "goalsFor": 17,
       "goalsAgainst": 14,
       "goalDifference": 3
-    },
-    {
-      "position": 5,
-      "team": {
-        "id": 1776,
-        "name": "São Paulo FC",
-        "shortName": "São Paulo",
-        "tla": "PAU",
-        "crest": "https://crests.football-data.org/1776.png"
-      },
-      "playedGames": 12,
-      "form": null,
-      "won": 6,
-      "draw": 2,
-      "lost": 4,
-      "points": 20,
-      "goalsFor": 16,
-      "goalsAgainst": 11,
-      "goalDifference": 5
     },
     {
       "position": 6,
@@ -332,15 +332,15 @@
         "tla": "MIR",
         "crest": "https://crests.football-data.org/4364.png"
       },
-      "playedGames": 11,
+      "playedGames": 12,
       "form": null,
       "won": 2,
       "draw": 3,
-      "lost": 6,
+      "lost": 7,
       "points": 9,
       "goalsFor": 13,
-      "goalsAgainst": 17,
-      "goalDifference": -4
+      "goalsAgainst": 18,
+      "goalDifference": -5
     },
     {
       "position": 19,
@@ -725,6 +725,37 @@
     },
     {
       "player": {
+        "id": 42901,
+        "name": "Luciano",
+        "firstName": "",
+        "lastName": "Luciano",
+        "dateOfBirth": "1993-05-18",
+        "nationality": "Brazil",
+        "section": "Offence",
+        "position": null,
+        "shirtNumber": null,
+        "lastUpdated": "2023-07-30T23:15:46Z"
+      },
+      "team": {
+        "id": 1776,
+        "name": "São Paulo FC",
+        "shortName": "São Paulo",
+        "tla": "PAU",
+        "crest": "https://crests.football-data.org/1776.png",
+        "address": "null São Paulo, SP null",
+        "website": "http://www.saopaulofc.net",
+        "founded": 1930,
+        "clubColors": "White / Red / Black",
+        "venue": "Estádio do Morumbi",
+        "lastUpdated": "2023-02-18T08:43:44Z"
+      },
+      "playedMatches": 12,
+      "goals": 4,
+      "assists": 1,
+      "penalties": null
+    },
+    {
+      "player": {
         "id": 169234,
         "name": "Matheus Martins",
         "firstName": "",
@@ -815,37 +846,6 @@
       "goals": 4,
       "assists": 2,
       "penalties": 1
-    },
-    {
-      "player": {
-        "id": 170698,
-        "name": "José Manuel López",
-        "firstName": "José Manuel",
-        "lastName": "López",
-        "dateOfBirth": "2000-12-06",
-        "nationality": "Argentina",
-        "section": "Midfield",
-        "position": null,
-        "shirtNumber": null,
-        "lastUpdated": "2024-06-13T09:41:56Z"
-      },
-      "team": {
-        "id": 1769,
-        "name": "SE Palmeiras",
-        "shortName": "Palmeiras",
-        "tla": "PAL",
-        "crest": "https://crests.football-data.org/1769.png",
-        "address": "Rua Palestra Italia nº 214, Perdizes São Paulo, SP 05005-030",
-        "website": "http://www.palmeiras.com.br",
-        "founded": 1914,
-        "clubColors": "Green / White",
-        "venue": "Allianz Parque",
-        "lastUpdated": "2022-04-06T13:14:55Z"
-      },
-      "playedMatches": 12,
-      "goals": 3,
-      "assists": 3,
-      "penalties": null
     }
   ],
   "historico_times": {
@@ -1015,7 +1015,8 @@
       "W",
       "L",
       "W",
-      "L"
+      "L",
+      "D"
     ],
     "SC Corinthians Paulista": [
       "L",
@@ -1042,7 +1043,8 @@
       "W",
       "L",
       "W",
-      "L"
+      "L",
+      "D"
     ],
     "São Paulo FC": [
       "W",
@@ -1056,7 +1058,8 @@
       "D",
       "W",
       "L",
-      "L"
+      "L",
+      "W"
     ],
     "CR Flamengo": [
       "L",
@@ -1082,7 +1085,8 @@
       "L",
       "L",
       "L",
-      "W"
+      "W",
+      "L"
     ],
     "CR Vasco da Gama": [
       "L",
@@ -1314,10 +1318,10 @@
         "l": 2
       },
       "away": {
-        "gf": 6,
-        "ga": 11,
+        "gf": 8,
+        "ga": 13,
         "w": 0,
-        "d": 2,
+        "d": 3,
         "l": 3
       }
     },
@@ -1339,10 +1343,10 @@
     },
     "EC Bahia": {
       "home": {
-        "gf": 8,
-        "ga": 4,
+        "gf": 10,
+        "ga": 6,
         "w": 2,
-        "d": 2,
+        "d": 3,
         "l": 1
       },
       "away": {
@@ -1355,9 +1359,9 @@
     },
     "São Paulo FC": {
       "home": {
-        "gf": 10,
+        "gf": 11,
         "ga": 3,
-        "w": 4,
+        "w": 5,
         "d": 0,
         "l": 1
       },
@@ -1395,10 +1399,10 @@
       },
       "away": {
         "gf": 6,
-        "ga": 8,
+        "ga": 9,
         "w": 1,
         "d": 1,
-        "l": 3
+        "l": 4
       }
     },
     "CR Vasco da Gama": {
