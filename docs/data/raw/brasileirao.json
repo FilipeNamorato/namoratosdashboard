@@ -11,13 +11,13 @@
       },
       "playedGames": 13,
       "form": null,
-      "won": 9,
-      "draw": 3,
+      "won": 10,
+      "draw": 2,
       "lost": 1,
-      "points": 30,
-      "goalsFor": 22,
+      "points": 32,
+      "goalsFor": 23,
       "goalsAgainst": 10,
-      "goalDifference": 12
+      "goalDifference": 13
     },
     {
       "position": 2,
@@ -28,12 +28,12 @@
         "tla": "FLA",
         "crest": "https://crests.football-data.org/1783.png"
       },
-      "playedGames": 11,
+      "playedGames": 12,
       "form": null,
       "won": 7,
-      "draw": 2,
+      "draw": 3,
       "lost": 2,
-      "points": 23,
+      "points": 24,
       "goalsFor": 20,
       "goalsAgainst": 10,
       "goalDifference": 10
@@ -47,12 +47,12 @@
         "tla": "FLU",
         "crest": "https://crests.football-data.org/1765.png"
       },
-      "playedGames": 12,
+      "playedGames": 13,
       "form": null,
       "won": 7,
-      "draw": 2,
+      "draw": 3,
       "lost": 3,
-      "points": 23,
+      "points": 24,
       "goalsFor": 21,
       "goalsAgainst": 15,
       "goalDifference": 6
@@ -79,6 +79,25 @@
     {
       "position": 5,
       "team": {
+        "id": 1768,
+        "name": "CA Paranaense",
+        "shortName": "Paranaense",
+        "tla": "CAP",
+        "crest": "https://crests.football-data.org/1768.png"
+      },
+      "playedGames": 13,
+      "form": null,
+      "won": 7,
+      "draw": 1,
+      "lost": 5,
+      "points": 22,
+      "goalsFor": 20,
+      "goalsAgainst": 15,
+      "goalDifference": 5
+    },
+    {
+      "position": 6,
+      "team": {
         "id": 1777,
         "name": "EC Bahia",
         "shortName": "Bahia",
@@ -91,25 +110,6 @@
       "draw": 3,
       "lost": 3,
       "points": 21,
-      "goalsFor": 17,
-      "goalsAgainst": 14,
-      "goalDifference": 3
-    },
-    {
-      "position": 6,
-      "team": {
-        "id": 1768,
-        "name": "CA Paranaense",
-        "shortName": "Paranaense",
-        "tla": "CAP",
-        "crest": "https://crests.football-data.org/1768.png"
-      },
-      "playedGames": 13,
-      "form": null,
-      "won": 6,
-      "draw": 2,
-      "lost": 5,
-      "points": 20,
       "goalsFor": 17,
       "goalsAgainst": 14,
       "goalDifference": 3
@@ -136,25 +136,6 @@
     {
       "position": 8,
       "team": {
-        "id": 4286,
-        "name": "RB Bragantino",
-        "shortName": "Bragantino",
-        "tla": "RBB",
-        "crest": "https://crests.football-data.org/4286.png"
-      },
-      "playedGames": 13,
-      "form": null,
-      "won": 5,
-      "draw": 3,
-      "lost": 5,
-      "points": 18,
-      "goalsFor": 15,
-      "goalsAgainst": 14,
-      "goalDifference": 1
-    },
-    {
-      "position": 9,
-      "team": {
         "id": 1770,
         "name": "Botafogo FR",
         "shortName": "Botafogo",
@@ -169,6 +150,25 @@
       "points": 17,
       "goalsFor": 24,
       "goalsAgainst": 24,
+      "goalDifference": 0
+    },
+    {
+      "position": 9,
+      "team": {
+        "id": 4286,
+        "name": "RB Bragantino",
+        "shortName": "Bragantino",
+        "tla": "RBB",
+        "crest": "https://crests.football-data.org/4286.png"
+      },
+      "playedGames": 13,
+      "form": null,
+      "won": 5,
+      "draw": 2,
+      "lost": 6,
+      "points": 17,
+      "goalsFor": 15,
+      "goalsAgainst": 15,
       "goalDifference": 0
     },
     {
@@ -212,25 +212,6 @@
     {
       "position": 12,
       "team": {
-        "id": 1782,
-        "name": "EC Vitória",
-        "shortName": "Vitória",
-        "tla": "VIT",
-        "crest": "https://crests.football-data.org/1782.png"
-      },
-      "playedGames": 12,
-      "form": null,
-      "won": 4,
-      "draw": 4,
-      "lost": 4,
-      "points": 16,
-      "goalsFor": 11,
-      "goalsAgainst": 14,
-      "goalDifference": -3
-    },
-    {
-      "position": 13,
-      "team": {
         "id": 1771,
         "name": "Cruzeiro EC",
         "shortName": "Cruzeiro",
@@ -248,7 +229,45 @@
       "goalDifference": -4
     },
     {
+      "position": 13,
+      "team": {
+        "id": 1766,
+        "name": "CA Mineiro",
+        "shortName": "Mineiro",
+        "tla": "CAM",
+        "crest": "https://crests.football-data.org/1766.png"
+      },
+      "playedGames": 13,
+      "form": null,
+      "won": 4,
+      "draw": 3,
+      "lost": 6,
+      "points": 15,
+      "goalsFor": 14,
+      "goalsAgainst": 15,
+      "goalDifference": -1
+    },
+    {
       "position": 14,
+      "team": {
+        "id": 1782,
+        "name": "EC Vitória",
+        "shortName": "Vitória",
+        "tla": "VIT",
+        "crest": "https://crests.football-data.org/1782.png"
+      },
+      "playedGames": 12,
+      "form": null,
+      "won": 4,
+      "draw": 3,
+      "lost": 5,
+      "points": 15,
+      "goalsFor": 12,
+      "goalsAgainst": 17,
+      "goalDifference": -5
+    },
+    {
+      "position": 15,
       "team": {
         "id": 1779,
         "name": "SC Corinthians Paulista",
@@ -265,25 +284,6 @@
       "goalsFor": 9,
       "goalsAgainst": 11,
       "goalDifference": -2
-    },
-    {
-      "position": 15,
-      "team": {
-        "id": 1766,
-        "name": "CA Mineiro",
-        "shortName": "Mineiro",
-        "tla": "CAM",
-        "crest": "https://crests.football-data.org/1766.png"
-      },
-      "playedGames": 12,
-      "form": null,
-      "won": 4,
-      "draw": 2,
-      "lost": 6,
-      "points": 14,
-      "goalsFor": 14,
-      "goalsAgainst": 15,
-      "goalDifference": -1
     },
     {
       "position": 16,
@@ -345,6 +345,25 @@
     {
       "position": 19,
       "team": {
+        "id": 1772,
+        "name": "Chapecoense AF",
+        "shortName": "Chapecoense",
+        "tla": "CHA",
+        "crest": "https://crests.football-data.org/1772_large.png"
+      },
+      "playedGames": 12,
+      "form": null,
+      "won": 1,
+      "draw": 6,
+      "lost": 5,
+      "points": 9,
+      "goalsFor": 11,
+      "goalsAgainst": 22,
+      "goalDifference": -11
+    },
+    {
+      "position": 20,
+      "team": {
         "id": 4287,
         "name": "Clube do Remo",
         "shortName": "Clube do Remo",
@@ -360,28 +379,40 @@
       "goalsFor": 13,
       "goalsAgainst": 23,
       "goalDifference": -10
-    },
-    {
-      "position": 20,
-      "team": {
-        "id": 1772,
-        "name": "Chapecoense AF",
-        "shortName": "Chapecoense",
-        "tla": "CHA",
-        "crest": "https://crests.football-data.org/1772_large.png"
-      },
-      "playedGames": 11,
-      "form": null,
-      "won": 1,
-      "draw": 5,
-      "lost": 5,
-      "points": 8,
-      "goalsFor": 11,
-      "goalsAgainst": 22,
-      "goalDifference": -11
     }
   ],
   "artilheiros": [
+    {
+      "player": {
+        "id": 192070,
+        "name": "Kevin Viveros",
+        "firstName": "Kevin",
+        "lastName": "Viveros",
+        "dateOfBirth": "2000-04-26",
+        "nationality": "Colombia",
+        "section": "Offence",
+        "position": null,
+        "shirtNumber": null,
+        "lastUpdated": "2023-08-22T11:53:03Z"
+      },
+      "team": {
+        "id": 1768,
+        "name": "CA Paranaense",
+        "shortName": "Paranaense",
+        "tla": "CAP",
+        "crest": "https://crests.football-data.org/1768.png",
+        "address": "Estrada do Ganchinho 1451, Umbará Curitiba, PR 81930-160",
+        "website": "http://www.atleticoparanaense.com",
+        "founded": 1924,
+        "clubColors": "Black / White / Red",
+        "venue": "Estádio Joaquim Américo Guimarães",
+        "lastUpdated": "2022-04-06T13:14:06Z"
+      },
+      "playedMatches": 13,
+      "goals": 8,
+      "assists": 1,
+      "penalties": 2
+    },
     {
       "player": {
         "id": 37833,
@@ -477,34 +508,34 @@
     },
     {
       "player": {
-        "id": 192070,
-        "name": "Kevin Viveros",
-        "firstName": "Kevin",
-        "lastName": "Viveros",
-        "dateOfBirth": "2000-04-26",
-        "nationality": "Colombia",
+        "id": 1077,
+        "name": "Pedro",
+        "firstName": "",
+        "lastName": "Pedro",
+        "dateOfBirth": "1997-06-20",
+        "nationality": "Brazil",
         "section": "Offence",
         "position": null,
         "shirtNumber": null,
-        "lastUpdated": "2023-08-22T11:53:03Z"
+        "lastUpdated": "2023-07-30T23:15:48Z"
       },
       "team": {
-        "id": 1768,
-        "name": "CA Paranaense",
-        "shortName": "Paranaense",
-        "tla": "CAP",
-        "crest": "https://crests.football-data.org/1768.png",
-        "address": "Estrada do Ganchinho 1451, Umbará Curitiba, PR 81930-160",
-        "website": "http://www.atleticoparanaense.com",
-        "founded": 1924,
-        "clubColors": "Black / White / Red",
-        "venue": "Estádio Joaquim Américo Guimarães",
-        "lastUpdated": "2022-04-06T13:14:06Z"
+        "id": 1783,
+        "name": "CR Flamengo",
+        "shortName": "Flamengo",
+        "tla": "FLA",
+        "crest": "https://crests.football-data.org/1783.png",
+        "address": "null Rio de Janeiro, RJ null",
+        "website": "https://www.flamengo.com.br/pagina-inicial-basquete",
+        "founded": 1919,
+        "clubColors": "Red / Black / White",
+        "venue": "Estadio Jornalista Mário Filho",
+        "lastUpdated": "2022-04-06T13:13:43Z"
       },
-      "playedMatches": 13,
+      "playedMatches": 12,
       "goals": 6,
-      "assists": 1,
-      "penalties": 1
+      "assists": 3,
+      "penalties": null
     },
     {
       "player": {
@@ -532,7 +563,7 @@
         "venue": "Estadio Jornalista Mário Filho",
         "lastUpdated": "2024-07-29T17:24:37Z"
       },
-      "playedMatches": 12,
+      "playedMatches": 13,
       "goals": 5,
       "assists": null,
       "penalties": null
@@ -598,37 +629,6 @@
       "goals": 5,
       "assists": 1,
       "penalties": 1
-    },
-    {
-      "player": {
-        "id": 1077,
-        "name": "Pedro",
-        "firstName": "",
-        "lastName": "Pedro",
-        "dateOfBirth": "1997-06-20",
-        "nationality": "Brazil",
-        "section": "Offence",
-        "position": null,
-        "shirtNumber": null,
-        "lastUpdated": "2023-07-30T23:15:48Z"
-      },
-      "team": {
-        "id": 1783,
-        "name": "CR Flamengo",
-        "shortName": "Flamengo",
-        "tla": "FLA",
-        "crest": "https://crests.football-data.org/1783.png",
-        "address": "null Rio de Janeiro, RJ null",
-        "website": "https://www.flamengo.com.br/pagina-inicial-basquete",
-        "founded": 1919,
-        "clubColors": "Red / Black / White",
-        "venue": "Estadio Jornalista Mário Filho",
-        "lastUpdated": "2022-04-06T13:13:43Z"
-      },
-      "playedMatches": 11,
-      "goals": 5,
-      "assists": 3,
-      "penalties": null
     },
     {
       "player": {
@@ -875,6 +875,7 @@
       "W",
       "W",
       "D",
+      "W",
       "W"
     ],
     "Coritiba FBC": [
@@ -904,7 +905,8 @@
       "W",
       "W",
       "L",
-      "W"
+      "W",
+      "L"
     ],
     "SC Internacional": [
       "L",
@@ -933,7 +935,8 @@
       "L",
       "L",
       "W",
-      "L"
+      "L",
+      "W"
     ],
     "EC Vitória": [
       "W",
@@ -946,7 +949,8 @@
       "L",
       "D",
       "W",
-      "D"
+      "D",
+      "L"
     ],
     "Clube do Remo": [
       "L",
@@ -1162,9 +1166,9 @@
         "l": 0
       },
       "away": {
-        "gf": 9,
+        "gf": 10,
         "ga": 6,
-        "w": 3,
+        "w": 4,
         "d": 2,
         "l": 1
       }
@@ -1188,10 +1192,10 @@
     "RB Bragantino": {
       "home": {
         "gf": 11,
-        "ga": 7,
+        "ga": 8,
         "w": 3,
         "d": 1,
-        "l": 2
+        "l": 3
       },
       "away": {
         "gf": 4,
@@ -1219,9 +1223,9 @@
     },
     "CA Paranaense": {
       "home": {
-        "gf": 12,
-        "ga": 4,
-        "w": 5,
+        "gf": 15,
+        "ga": 5,
+        "w": 6,
         "d": 0,
         "l": 1
       },
@@ -1242,11 +1246,11 @@
         "l": 1
       },
       "away": {
-        "gf": 3,
-        "ga": 12,
+        "gf": 4,
+        "ga": 15,
         "w": 0,
         "d": 2,
-        "l": 3
+        "l": 4
       }
     },
     "Clube do Remo": {
