@@ -1469,7 +1469,7 @@ def gerenciar_snapshots(df_atletas: pd.DataFrame, df_partidas: pd.DataFrame,
 
     # Janela de 4h antes do fechamento → PRÉ da rodada atual
     # (configurável via env var JANELA_PRE_HORAS, padrão 4h)
-    janela_pre_seg = int(os.environ.get("JANELA_PRE_HORAS", "4")) * 3600
+    janela_pre_seg = int(os.environ.get("JANELA_PRE_HORAS", "8")) * 3600
     dentro_janela_pre = agora_ts > (fechamento_ts - janela_pre_seg)
     if dentro_janela_pre:
         salvar_snapshot_pre(df_atletas, df_partidas, rodada_atual)

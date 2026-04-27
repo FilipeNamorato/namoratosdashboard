@@ -114,11 +114,13 @@ def coletar_dataset() -> pd.DataFrame:
 
         merged = pre.merge(
             pts[["atleta_id", "pontuacao", "entrou_em_campo"]],
-            on="atleta_id", how="inner"
+            on="atleta_id", how="inner",
+            suffixes=("_pre", "_pts"),
         )
-        # só mantém quem efetivamente jogou
+        # só mantém quem efetivamente jogou (usa entrou_em_campo do pontuados, não do pré)
+        ec_col = "entrou_em_campo_pts" if "entrou_em_campo_pts" in merged.columns else "entrou_em_campo"
         merged = merged[
-            merged["entrou_em_campo"].astype(str).str.lower().isin(["true", "1", "1.0"])
+            merged[ec_col].astype(str).str.lower().isin(["true", "1", "1.0"])
         ].copy()
         if merged.empty:
             continue
