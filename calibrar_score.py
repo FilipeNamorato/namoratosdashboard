@@ -46,23 +46,23 @@ POSICOES_DEFESA = {"Zagueiro", "Lateral", "Goleiro"}
 PESOS_SCORE_DEFAULT = {
     "defesa": {
         "oc": 0.30, "vm": 0.25, "tof": 0.10,
-        "tdef": 0.15, "fs": 0.05, "adv_of": 0.15,
+        "tdef": 0.15, "fs": 0.05, "adv_of": 0.10, "prob_gols": 0.05,
     },
     "ataque": {
-        "oc": 0.30, "vm": 0.15, "tof": 0.30,
-        "fs": 0.10, "adv_def": 0.15,
+        "oc": 0.25, "vm": 0.15, "tof": 0.25,
+        "fs": 0.10, "adv_def": 0.15, "prob_gols": 0.10,
     },
 }
 
-FEATURES_DEF = ["oc", "vm", "tof", "tdef", "fs", "adv_of"]
-FEATURES_ATK = ["oc", "vm", "tof", "fs", "adv_def"]
+FEATURES_DEF = ["oc", "vm", "tof", "tdef", "fs", "adv_of", "prob_gols"]
+FEATURES_ATK = ["oc", "vm", "tof", "fs", "adv_def", "prob_gols"]
 
 
 # ─────────────────────────────────────────────────────────────
 # Coleta e normalização
 # ─────────────────────────────────────────────────────────────
 
-def _normalizar(df: pd.DataFrame) -> pd.DataFrame:
+def _normalizar(df: pd.DataFrame, grupo: str = "ataque") -> pd.DataFrame:
     """Reproduz a normalização do extractor para as features brutas."""
     out = pd.DataFrame(index=df.index)
     out["oc"]      = pd.to_numeric(df.get("oportunidade_confronto"), errors="coerce").fillna(0.5)
@@ -79,6 +79,10 @@ def _normalizar(df: pd.DataFrame) -> pd.DataFrame:
     out["adv_of"]  = 1 - ((adv_of_raw.clip(0.3, 2.0) - 0.3) / 1.7)
     adv_def_raw    = pd.to_numeric(df.get("adv_momentum_def"), errors="coerce").fillna(1.0)
     out["adv_def"] = (adv_def_raw.clip(0.3, 2.0) - 0.3) / 1.7
+    # prob_gols = prob_over_25. Para defesa, invertido: jogo fechado = melhor SG.
+    # Para ataque, direto: mais gols esperados = mais scouts.
+    prob_gols_raw  = pd.to_numeric(df.get("prob_gols"), errors="coerce").fillna(0.5)
+    out["prob_gols"] = (1 - prob_gols_raw) if grupo == "defesa" else prob_gols_raw
     return out
 
 
@@ -200,7 +204,8 @@ def _cv_leave_one_round_out(df_full: pd.DataFrame, df_norm: pd.DataFrame,
 # Pipeline por grupo
 # ─────────────────────────────────────────────────────────────
 
-def _calibrar_grupo(df_grupo: pd.DataFrame, features: list, pesos_default: dict) -> dict:
+def _calibrar_grupo(df_grupo: pd.DataFrame, features: list, pesos_default: dict,
+                     grupo: str = "ataque") -> dict:
     """Retorna dict com coefs, pesos normalizados e métricas, ou status insuficiente."""
     if df_grupo.empty or df_grupo["rodada"].nunique() < MIN_RODADAS or len(df_grupo) < MIN_REGISTROS:
         return {
@@ -210,7 +215,7 @@ def _calibrar_grupo(df_grupo: pd.DataFrame, features: list, pesos_default: dict)
             "motivo": f"precisa ≥{MIN_RODADAS} rodadas e ≥{MIN_REGISTROS} registros",
         }
 
-    df_norm = _normalizar(df_grupo)
+    df_norm = _normalizar(df_grupo, grupo)
     y       = df_grupo["pontuacao"].astype(float).values
     w       = _pesos_recencia(df_grupo["rodada"].values)
     X       = _monta_X(df_norm, features)
@@ -275,8 +280,8 @@ def main() -> None:
     df_def = df[df["posicao"].isin(POSICOES_DEFESA)].copy()
     df_atk = df[df["posicao"].isin(POSICOES_ATAQUE)].copy()
 
-    res_def = _calibrar_grupo(df_def, FEATURES_DEF, PESOS_SCORE_DEFAULT["defesa"])
-    res_atk = _calibrar_grupo(df_atk, FEATURES_ATK, PESOS_SCORE_DEFAULT["ataque"])
+    res_def = _calibrar_grupo(df_def, FEATURES_DEF, PESOS_SCORE_DEFAULT["defesa"], grupo="defesa")
+    res_atk = _calibrar_grupo(df_atk, FEATURES_ATK, PESOS_SCORE_DEFAULT["ataque"], grupo="ataque")
 
     # Se pelo menos um grupo foi calibrado, salva status ok (consumidor faz
     # merge com defaults).

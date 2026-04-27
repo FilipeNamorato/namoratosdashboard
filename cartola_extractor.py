@@ -193,19 +193,21 @@ POSICOES_DEFESA       = {"Zagueiro", "Lateral", "Goleiro"}
 # recente do adv, não mais adv_of que não tem sentido lógico aqui).
 PESOS_SCORE_DEFAULT = {
     "defesa": {
-        "oc":     0.30,  # fragilidade ofensiva do adv (percentil posicional)
-        "vm":     0.25,  # vantagem de aproveitamento no mando
-        "tof":    0.10,  # momentum ofensivo próprio (time ganhando segura SG)
-        "tdef":   0.15,  # momentum defensivo próprio (1 - ratio, invertido)
-        "fs":     0.05,  # forma recente (V/E/D)
-        "adv_of": 0.15,  # 1 - adv_momentum_of (adv fraco no ataque = bom)
+        "oc":       0.30,  # fragilidade ofensiva do adv (percentil posicional)
+        "vm":       0.25,  # vantagem de aproveitamento no mando
+        "tof":      0.10,  # momentum ofensivo próprio (time ganhando segura SG)
+        "tdef":     0.15,  # momentum defensivo próprio (1 - ratio, invertido)
+        "fs":       0.05,  # forma recente (V/E/D)
+        "adv_of":   0.10,  # 1 - adv_momentum_of (adv fraco no ataque = bom)
+        "prob_gols": 0.05, # prob over 2.5 invertida (jogo fechado = bom p/ defesa)
     },
     "ataque": {
-        "oc":      0.30,  # fragilidade defensiva do adv (percentil posicional)
-        "vm":      0.15,  # vantagem de aproveitamento no mando
-        "tof":     0.30,  # momentum ofensivo próprio
-        "fs":      0.10,  # forma recente (V/E/D)
-        "adv_def": 0.15,  # adv_momentum_def (defesa adv sofrendo mais)
+        "oc":       0.25,  # fragilidade defensiva do adv (percentil posicional)
+        "vm":       0.15,  # vantagem de aproveitamento no mando
+        "tof":      0.25,  # momentum ofensivo próprio
+        "fs":       0.10,  # forma recente (V/E/D)
+        "adv_def":  0.15,  # adv_momentum_def (defesa adv sofrendo mais)
+        "prob_gols": 0.10, # prob over 2.5 (jogo aberto = mais scouts p/ atacantes)
     },
 }
 
@@ -309,7 +311,7 @@ def get_odds() -> pd.DataFrame:
     resp = requests.get(ODDS_URL, params={
         "apiKey":      ODDS_API_KEY,
         "regions":     "eu",
-        "markets":     "h2h",
+        "markets":     "h2h,totals",
         "oddsFormat":  "decimal",
     }, timeout=15)
     resp.raise_for_status()
@@ -326,6 +328,7 @@ def get_odds() -> pd.DataFrame:
             continue
 
         odd_casa = odd_vis = odd_empate = None
+        odd_over_25 = odd_under_25 = None
         for bm in jogo.get("bookmakers", [])[:1]:
             for market in bm.get("markets", []):
                 if market["key"] == "h2h":
@@ -334,6 +337,11 @@ def get_odds() -> pd.DataFrame:
                         if abr == abr_casa:   odd_casa   = o["price"]
                         elif abr == abr_vis:  odd_vis    = o["price"]
                         else:                 odd_empate = o["price"]
+                elif market["key"] == "totals":
+                    for o in market["outcomes"]:
+                        if abs(float(o.get("point", 0)) - 2.5) < 0.01:
+                            if o["name"] == "Over":  odd_over_25  = o["price"]
+                            if o["name"] == "Under": odd_under_25 = o["price"]
 
         if not odd_casa or not odd_vis:
             continue
@@ -341,6 +349,12 @@ def get_odds() -> pd.DataFrame:
         soma      = (1/odd_casa) + (1/odd_vis) + (1/odd_empate if odd_empate else 0)
         prob_casa = round((1/odd_casa) / soma, 3) if soma else None
         prob_vis  = round((1/odd_vis)  / soma, 3) if soma else None
+
+        # Probabilidade implícita de over 2.5 gols (remove vig)
+        prob_over_25 = None
+        if odd_over_25 and odd_under_25:
+            soma_gols = (1/odd_over_25) + (1/odd_under_25)
+            prob_over_25 = round((1/odd_over_25) / soma_gols, 3)
 
         def classificar(odd):
             if odd < 1.5: return "favorito_forte"
@@ -356,6 +370,7 @@ def get_odds() -> pd.DataFrame:
             "odd_empate":    odd_empate,
             "prob_casa":     prob_casa,
             "prob_vis":      prob_vis,
+            "prob_over_25":  prob_over_25,
             "forca_casa":    classificar(odd_casa),
             "forca_vis":     classificar(odd_vis),
             "commence_time": jogo.get("commence_time"),
@@ -683,12 +698,16 @@ def enriquecer(df_mercado: pd.DataFrame, df_partidas: pd.DataFrame) -> pd.DataFr
                 id_vis    = int(p[col_vis])  if col_vis  else None
                 abr_casa  = mapa_abr.get(id_casa, str(id_casa))
                 abr_vis   = mapa_abr.get(id_vis,  str(id_vis))
-                prob_casa = float(p.get("prob_casa") or 0)
-                prob_vis  = float(p.get("prob_vis")  or 0)
+                prob_casa  = float(p.get("prob_casa")   or 0)
+                prob_vis   = float(p.get("prob_vis")    or 0)
+                prob_gols  = p.get("prob_over_25")
+                prob_gols  = float(prob_gols) if prob_gols is not None else None
                 if id_casa: mapa_confronto[id_casa] = {
-                    "mandante": True,  "adversario": abr_vis,  "prob_vitoria": prob_casa}
+                    "mandante": True,  "adversario": abr_vis,  "prob_vitoria": prob_casa,
+                    "prob_gols": prob_gols}
                 if id_vis:  mapa_confronto[id_vis]  = {
-                    "mandante": False, "adversario": abr_casa, "prob_vitoria": prob_vis}
+                    "mandante": False, "adversario": abr_casa, "prob_vitoria": prob_vis,
+                    "prob_gols": prob_gols}
             except Exception:
                 continue
 
@@ -696,9 +715,10 @@ def enriquecer(df_mercado: pd.DataFrame, df_partidas: pd.DataFrame) -> pd.DataFr
         try:    return mapa_confronto.get(int(clube_id), {}).get(campo, default)
         except: return default
 
-    df["mandante"]    = df["clube_id"].apply(lambda x: get_confronto(x, "mandante",     None))
-    df["adversario"]  = df["clube_id"].apply(lambda x: get_confronto(x, "adversario",   "—"))
+    df["mandante"]     = df["clube_id"].apply(lambda x: get_confronto(x, "mandante",     None))
+    df["adversario"]   = df["clube_id"].apply(lambda x: get_confronto(x, "adversario",   "—"))
     df["prob_vitoria"] = df["clube_id"].apply(lambda x: get_confronto(x, "prob_vitoria", 0.0))
+    df["prob_gols"]    = df["clube_id"].apply(lambda x: get_confronto(x, "prob_gols",    None))
 
     # ── Tendência ────────────────────────────────────────────
     def calcular_tendencia(v):
@@ -830,10 +850,10 @@ def enriquecer_partidas(df_partidas, df_odds, mapa_clubes) -> pd.DataFrame:
     mapa_odds = {}
     for _, o in df_odds.iterrows():
         mapa_odds[o["abr_casa"]] = {
-            "odd_casa":   o["odd_casa"],   "odd_vis":   o["odd_vis"],
-            "odd_empate": o["odd_empate"], "prob_casa": o["prob_casa"],
-            "prob_vis":   o["prob_vis"],   "forca_casa": o["forca_casa"],
-            "forca_vis":  o["forca_vis"],
+            "odd_casa":    o["odd_casa"],    "odd_vis":    o["odd_vis"],
+            "odd_empate":  o["odd_empate"],  "prob_casa":  o["prob_casa"],
+            "prob_vis":    o["prob_vis"],    "forca_casa": o["forca_casa"],
+            "forca_vis":   o["forca_vis"],   "prob_over_25": o.get("prob_over_25"),
         }
 
     def get_odd(clube_id, campo):
@@ -842,13 +862,14 @@ def enriquecer_partidas(df_partidas, df_odds, mapa_clubes) -> pd.DataFrame:
             return mapa_odds.get(abr, {}).get(campo)
         except: return None
 
-    df["odd_casa"]   = df[col_casa].apply(lambda x: get_odd(x, "odd_casa"))
-    df["odd_vis"]    = df[col_vis].apply( lambda x: get_odd(x, "odd_vis"))
-    df["odd_empate"] = df[col_casa].apply(lambda x: get_odd(x, "odd_empate"))
-    df["prob_casa"]  = df[col_casa].apply(lambda x: get_odd(x, "prob_casa"))
-    df["prob_vis"]   = df[col_vis].apply( lambda x: get_odd(x, "prob_vis"))
-    df["forca_casa"] = df[col_casa].apply(lambda x: get_odd(x, "forca_casa"))
-    df["forca_vis"]  = df[col_vis].apply( lambda x: get_odd(x, "forca_vis"))
+    df["odd_casa"]    = df[col_casa].apply(lambda x: get_odd(x, "odd_casa"))
+    df["odd_vis"]     = df[col_vis].apply( lambda x: get_odd(x, "odd_vis"))
+    df["odd_empate"]  = df[col_casa].apply(lambda x: get_odd(x, "odd_empate"))
+    df["prob_casa"]   = df[col_casa].apply(lambda x: get_odd(x, "prob_casa"))
+    df["prob_vis"]    = df[col_vis].apply( lambda x: get_odd(x, "prob_vis"))
+    df["prob_over_25"]= df[col_casa].apply(lambda x: get_odd(x, "prob_over_25"))
+    df["forca_casa"]  = df[col_casa].apply(lambda x: get_odd(x, "forca_casa"))
+    df["forca_vis"]   = df[col_vis].apply( lambda x: get_odd(x, "forca_vis"))
 
     return df
 
@@ -1016,24 +1037,34 @@ def enriquecer_com_confronto(df, df_tabela, momentum) -> pd.DataFrame:
         errors="coerce"
     ).fillna(0)
 
+    # prob_over_25: jogo esperado aberto (>2.5 gols). Neutro = 0.5.
+    # Para defesa usamos o complemento (1 - prob_gols): jogo fechado = melhor SG.
+    # Para ataque usamos direto: mais gols esperados = mais scouts.
+    prob_gols_series = pd.to_numeric(
+        df["prob_gols"] if "prob_gols" in df.columns else pd.Series(None, index=df.index),
+        errors="coerce"
+    ).fillna(0.5)
+
     pesos_cfg = _carregar_pesos_score()
 
     def calcular_score(row):
         if row["posicao"] in POSICOES_DEFESA:
             p = pesos_cfg["defesa"]
-            base = (p.get("oc",     0) * row["oc"]
-                  + p.get("vm",     0) * row["vm"]
-                  + p.get("tof",    0) * row["tof_norm"]
-                  + p.get("tdef",   0) * row["tdef_norm"]
-                  + p.get("fs",     0) * row["fs"]
-                  + p.get("adv_of", 0) * (1 - row["adv_of_norm"]))
+            base = (p.get("oc",        0) * row["oc"]
+                  + p.get("vm",        0) * row["vm"]
+                  + p.get("tof",       0) * row["tof_norm"]
+                  + p.get("tdef",      0) * row["tdef_norm"]
+                  + p.get("fs",        0) * row["fs"]
+                  + p.get("adv_of",    0) * (1 - row["adv_of_norm"])
+                  + p.get("prob_gols", 0) * (1 - row["prob_gols"]))
         else:
             p = pesos_cfg["ataque"]
-            base = (p.get("oc",      0) * row["oc"]
-                  + p.get("vm",      0) * row["vm"]
-                  + p.get("tof",     0) * row["tof_norm"]
-                  + p.get("fs",      0) * row["fs"]
-                  + p.get("adv_def", 0) * row["adv_def_norm"])
+            base = (p.get("oc",        0) * row["oc"]
+                  + p.get("vm",        0) * row["vm"]
+                  + p.get("tof",       0) * row["tof_norm"]
+                  + p.get("fs",        0) * row["fs"]
+                  + p.get("adv_def",   0) * row["adv_def_norm"]
+                  + p.get("prob_gols", 0) * row["prob_gols"])
         return base * bonus_prob(row["prob"], row["posicao"])
 
     df_temp = pd.DataFrame({
@@ -1046,6 +1077,7 @@ def enriquecer_com_confronto(df, df_tabela, momentum) -> pd.DataFrame:
         "adv_of_norm":  adv_of_norm,
         "adv_def_norm": adv_def_norm,
         "prob":         prob_series,
+        "prob_gols":    prob_gols_series,
     })
     df["score_confronto"] = df_temp.apply(calcular_score, axis=1).round(4)
 
@@ -1344,7 +1376,7 @@ COLUNAS_SNAPSHOT = [
     "oportunidade_confronto", "vantagem_mando",
     "time_momentum_of", "time_momentum_def",
     "adv_momentum_of",  "adv_momentum_def",
-    "forma_score_time", "prob_vitoria",
+    "forma_score_time", "prob_vitoria", "prob_gols",
 ]
 
 def _pasta_rodada(rodada: int) -> Path:
