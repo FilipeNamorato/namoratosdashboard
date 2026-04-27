@@ -30,13 +30,13 @@
       },
       "playedGames": 12,
       "form": null,
-      "won": 7,
-      "draw": 3,
+      "won": 8,
+      "draw": 2,
       "lost": 2,
-      "points": 24,
-      "goalsFor": 20,
+      "points": 26,
+      "goalsFor": 23,
       "goalsAgainst": 10,
-      "goalDifference": 10
+      "goalDifference": 13
     },
     {
       "position": 3,
@@ -231,25 +231,6 @@
     {
       "position": 13,
       "team": {
-        "id": 1766,
-        "name": "CA Mineiro",
-        "shortName": "Mineiro",
-        "tla": "CAM",
-        "crest": "https://crests.football-data.org/1766.png"
-      },
-      "playedGames": 13,
-      "form": null,
-      "won": 4,
-      "draw": 3,
-      "lost": 6,
-      "points": 15,
-      "goalsFor": 14,
-      "goalsAgainst": 15,
-      "goalDifference": -1
-    },
-    {
-      "position": 14,
-      "team": {
         "id": 1782,
         "name": "EC Vitória",
         "shortName": "Vitória",
@@ -267,7 +248,7 @@
       "goalDifference": -5
     },
     {
-      "position": 15,
+      "position": 14,
       "team": {
         "id": 1779,
         "name": "SC Corinthians Paulista",
@@ -284,6 +265,25 @@
       "goalsFor": 9,
       "goalsAgainst": 11,
       "goalDifference": -2
+    },
+    {
+      "position": 15,
+      "team": {
+        "id": 1766,
+        "name": "CA Mineiro",
+        "shortName": "Mineiro",
+        "tla": "CAM",
+        "crest": "https://crests.football-data.org/1766.png"
+      },
+      "playedGames": 13,
+      "form": null,
+      "won": 4,
+      "draw": 2,
+      "lost": 7,
+      "points": 14,
+      "goalsFor": 14,
+      "goalsAgainst": 18,
+      "goalDifference": -4
     },
     {
       "position": 16,
