@@ -9,14 +9,16 @@
       "tof": 0.1,
       "tdef": 0.15,
       "fs": 0.05,
-      "adv_of": 0.15
+      "adv_of": 0.1,
+      "prob_gols": 0.05
     },
     "ataque": {
-      "oc": 0.3,
+      "oc": 0.25,
       "vm": 0.15,
-      "tof": 0.3,
+      "tof": 0.25,
       "fs": 0.1,
-      "adv_def": 0.15
+      "adv_def": 0.15,
+      "prob_gols": 0.1
     }
   },
   "grupos": {
@@ -39,5 +41,5 @@
     "min_rodadas": 3,
     "min_registros": 150
   },
-  "atualizado_em": "2026-04-27 16:02 BRT"
+  "atualizado_em": "2026-04-30 08:00 BRT"
 }
