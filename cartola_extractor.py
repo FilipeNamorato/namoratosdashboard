@@ -57,6 +57,14 @@ import requests
 import pandas as pd
 from pathlib import Path
 from datetime import datetime, timezone, timedelta
+
+_CSV_INJECTION_CHARS = ("=", "+", "-", "@", "\t", "\r")
+
+def _esc(val):
+    """Previne CSV injection prefixando fórmulas com apóstrofo."""
+    if isinstance(val, str) and val.startswith(_CSV_INJECTION_CHARS):
+        return "'" + val
+    return val
 from collections import defaultdict
 
 # ─────────────────────────────────────────────────────────────
@@ -596,11 +604,11 @@ def normalizar_mercado(raw: dict) -> pd.DataFrame:
         scouts = a.get("scout") or {}
         rows.append({
             "atleta_id":     a.get("atleta_id"),
-            "nome":          a.get("apelido", a.get("nome")),
+            "nome":          _esc(a.get("apelido", a.get("nome"))),
             "clube_id":      a.get("clube_id"),
-            "clube":         clubes.get(int(a.get("clube_id", 0)), a.get("clube_id")),
+            "clube":         _esc(clubes.get(int(a.get("clube_id", 0)), a.get("clube_id"))),
             "posicao_id":    a.get("posicao_id"),
-            "posicao":       posicoes.get(a.get("posicao_id"), a.get("posicao_id")),
+            "posicao":       _esc(posicoes.get(a.get("posicao_id"), a.get("posicao_id"))),
             "status_id":     a.get("status_id"),
             "preco":         a.get("preco_num"),
             "variacao":      a.get("variacao_num"),
@@ -620,9 +628,9 @@ def normalizar_pontuados(raw: dict) -> pd.DataFrame:
         scouts = a.get("scout") or {}
         rows.append({
             "atleta_id": int(atleta_id),
-            "nome":      a.get("apelido", a.get("nome")),
+            "nome":      _esc(a.get("apelido", a.get("nome"))),
             "clube_id":  a.get("clube_id"),
-            "clube":     clubes.get(a.get("clube_id"), a.get("clube_id")),
+            "clube":     _esc(clubes.get(a.get("clube_id"), a.get("clube_id"))),
             "posicao_id": a.get("posicao_id"),
             "pontos":    a.get("pontos_num"),
             "preco":     a.get("preco_num"),

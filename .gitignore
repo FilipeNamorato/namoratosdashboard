@@ -1,0 +1,29 @@
+# Bytecode
+__pycache__/
+*.pyc
+*.pyo
+
+# Ambiente
+.env
+.env.*
+venv/
+.venv/
+
+# Scripts locais com tokens / experimentais
+requiscaoGlobo.py
+extrairTabelaBrasileiro.py
+teste.py
+teste.json
+
+# Prompts / rascunhos
+prompt.md
+prompt.txt
+
+# Saídas locais não publicadas
+docs/escalacao.txt
+
+# IDE
+.vscode/
+.idea/
+*.swp
+.DS_Store

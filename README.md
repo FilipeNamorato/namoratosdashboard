@@ -1,91 +1,120 @@
-# cartola-data
+# Cartola Data — Dashboard & Escalação Inteligente
 
-Coleta automática de dados da API do Cartola FC via GitHub Actions, com dashboard visual hospedado no GitHub Pages. Inclui calibração dinâmica de modelo para previsão de pontos esperados baseado em Ridge regression.
+Pipeline completo de dados para o Cartola FC: coleta automática das APIs, enriquecimento estatístico, dashboard interativo e geração de escalação via LLM (Claude).
 
-## Dashboard
+**Dashboard ao vivo:** https://filipenamorato.github.io/extracaoCartola/
 
-Acesse em: **https://filipenamorato.github.io/extracaoCartola/**
+---
 
-## Arquivos gerados em `docs/data/`
+## O que o projeto faz
 
-| Arquivo | Conteúdo |
-| --- | --- |
-| `atletas_mercado.csv` | Todos os atletas do mercado com preço, média, variação e scouts |
-| `atletas_mercado.json` | JSON bruto do endpoint `/atletas/mercado` |
-| `atletas_pontuados.csv` | Atletas que pontuaram na rodada atual |
-| `atletas_pontuados.json` | JSON bruto do endpoint `/atletas/pontuados` |
-| `atletas_enriquecido.csv` | Atletas com colunas extras: mandante, adversário, tendência, custo-benefício, rank, armadilha |
-| `partidas.csv` | Partidas da rodada |
-| `partidas.json` | JSON bruto do endpoint `/partidas` |
-| `rodadas.csv` | Histórico de rodadas |
-| `rodadas.json` | JSON bruto do endpoint `/rodadas` |
-| `mercado_status.csv` | Status atual do mercado com rodada atual e horário de fechamento |
-| `mercado_status.json` | JSON bruto do endpoint `/mercado/status` |
-| `log.csv` | Histórico de execuções com status e timestamp |
+1. **Coleta dados** da API do Cartola FC, The Odds API e football-data.org automaticamente 14x por dia via GitHub Actions
+2. **Enriquece** cada atleta com métricas calculadas: média bayesiana, score de confronto, armadilha de preço, pontos esperados e mais
+3. **Calibra** um modelo Ridge Regression com os dados reais de cada rodada, substituindo a heurística inicial quando o modelo performa melhor
+4. **Publica** um dashboard interativo no GitHub Pages com tabela do Brasileirão, rankings de custo-benefício e análise de confrontos
+5. **Gera escalação** automaticamente: envia os dados para o Claude (Anthropic) que analisa e monta o time ideal respeitando orçamento e formação
+6. **Agenda lembretes** no Google Calendar antes do fechamento do mercado de cada rodada
 
-## Colunas extras em `atletas_enriquecido.csv`
+---
+
+## Stack
+
+- **Linguagem:** Python 3.11
+- **Dados:** pandas, numpy, Ridge Regression (scikit-learn)
+- **APIs:** Cartola FC, The Odds API, football-data.org, Google Calendar
+- **LLM:** Claude (Anthropic) via SDK
+- **Infra:** GitHub Actions (CI/CD + coleta), GitHub Pages (dashboard)
+
+---
+
+## Métricas calculadas por atleta
 
 | Coluna | Descrição |
 | --- | --- |
-| `mandante` | True se o clube joga em casa nessa rodada |
-| `adversario` | Abreviação do adversário na rodada |
-| `tendencia` | alta / baixa / estavel com base na variação |
-| `custo_beneficio` | média ÷ preço |
-| `cb_rank` | Ranking de custo-benefício dentro da posição |
-| `armadilha` | True se preço acima da mediana mas média abaixo |
-| `status_label` | Texto legível do status (Provável, Dúvida, etc.) |
-| `pontos_esperados` | Pontos esperados (heurística ou modelo calibrado) |
-| `media_bayesiana` | Média com encolhimento (prior por posição + faixa de preço) |
-| `confiabilidade` | Fator 0-1 baseado no número de jogos |
-| `oportunidade_confronto` | Percentil 0-1 de oportunidade ofensiva/defensiva por posição |
-| `score_confronto_100` | Score composto do confronto normalizado 0-100 |
+| `media_bayesiana` | Média com encolhimento — prior por posição + faixa de preço, reduz ruído em atletas com poucos jogos |
+| `pontos_esperados` | Previsão de pontos: heurística ou modelo Ridge calibrado (substituído automaticamente quando MAE melhora) |
+| `score_confronto_100` | Score 0–100 composto por posição do adversário, momentum ofensivo/defensivo, forma recente e vantagem de mando |
+| `condicao_mando` | `favoravel` / `favoravel_visitante` / `neutro` / `desfavoravel` — sinal de oportunidade do confronto |
+| `armadilha_label` | `armadilha_forte` / `armadilha_leve` / `neutro` / `valor_bom` / `valor_oculto` — detecta jogadores caros com entrega abaixo do esperado |
+| `confiabilidade` | Fator 0–1 baseado no número de jogos — pondera previsões de atletas com histórico curto |
+| `oportunidade_confronto` | Percentil de oportunidade ofensiva ou defensiva por posição dentro da rodada |
+| `recomendacao` | Indicação consolidada: `recomendado` / `monitorar` / `evitar` |
+| `caro_e_vale` | Flag para jogadores acima do limiar de preço que ainda justificam o investimento |
+
+---
 
 ## Calibração de `pontos_esperados`
 
-O sistema executa `calibrar_pontos_esperados.py` continuamente para melhorar as previsões.
+O sistema roda `calibrar_pontos_esperados.py` a cada coleta para atualizar o modelo com dados reais.
 
-**Heurística original:** `pontos_esperados = media_bayesiana × (score_confronto_100/50) × confiabilidade`
+**Heurística base:**
+```
+pontos_esperados = media_bayesiana × (score_confronto_100 / 50) × confiabilidade
+```
 
-**Modelo aprendido (quando há dados suficientes ≥3 rodadas, ≥200 registros):**
-- Ridge regression com features: `media_bayesiana`, `score_ratio`, `confiabilidade`, interação 3-way
-- Features de forma recente: `media_3r`, `jogou_3r`, `tendencia` (últimas 3 rodadas anteriores)
-- Ponderação por recência: rodadas antigas pesam menos (decay = 0.9)
+**Modelo Ridge (ativo quando há ≥ 3 rodadas e ≥ 200 registros):**
+- Features: `media_bayesiana`, `score_ratio`, `confiabilidade`, interação 3-way
+- Features de forma recente: `media_3r`, `jogou_3r`, `tendencia` (últimas 3 rodadas)
+- Ponderação por recência: decay = 0.9 (rodadas antigas pesam menos)
 - Validação: leave-one-round-out cross-validation
-- **Adoção**: modelo só substitui heurística se `MAE_OOS < MAE_heuristica`
+- Adoção automática: modelo só entra se `MAE_OOS < MAE_heuristica`
 
-Saída: `docs/data/current/calibracao_pontos.json`
+Resultado salvo em `docs/data/current/calibracao_pontos.json`.
 
-## Agendamento
+---
 
-Coleta automática 9 vezes ao dia via GitHub Actions:
+## Estrutura de dados
 
-| Horário BRT | Horário UTC |
+```
+docs/data/
+├── current/          # CSVs mais recentes (dashboard + LLM consomem daqui)
+│   ├── atletas.csv          # ~250 atletas com todas as métricas
+│   ├── atletas_pontuados.csv
+│   ├── partidas.csv
+│   ├── odds.csv
+│   ├── tabela.csv
+│   ├── times_rodada.csv
+│   ├── status.csv
+│   ├── calibracao_pontos.json
+│   └── calibracao_score.json
+├── historico/        # Snapshots pré/pós por rodada (base histórica do modelo)
+│   └── rN/
+│       ├── atletas_pre.csv
+│       ├── atletas_pos.csv
+│       └── atletas_pontuados.csv
+└── raw/              # JSONs brutos das APIs (nunca modificados)
+```
+
+---
+
+## Coleta automática
+
+14 execuções por dia via GitHub Actions, com cobertura reforçada nos fins de semana (maioria dos jogos do Brasileirão):
+
+| Dias | Horários BRT |
 | --- | --- |
-| 06h00 | 09h00 |
-| 10h00 | 13h00 |
-| 12h40 | 15h40 |
-| 15h00 | 18h00 |
-| 17h00 | 20h00 |
-| 18h30 | 21h30 |
-| 20h00 | 23h00 |
-| 21h30 | 00h30 |
-| 23h00 | 02h00 |
+| Segunda a Sexta | 04h, 06h, 10h, 12h40, 15h, 17h, 18h30, 20h, 21h30, 23h |
+| Sábado e Domingo | + 12h, 14h, 16h, 22h |
+
+Cada execução: coleta → enriquece → calibra → commita CSVs → publica dashboard → agenda Google Calendar.
 
 Para rodar manualmente: `Actions > Coleta Cartola FC > Run workflow`
+
+---
 
 ## Uso local
 
 ```bash
-pip install requests pandas numpy
-python cartola_extractor.py      # coleta e processa dados
-python calibrar_pontos_esperados.py  # calibra modelo de previsão (rodadas ≥3 com ≥200 registros)
+pip install requests pandas numpy scikit-learn anthropic google-auth google-auth-httplib2 google-api-python-client
+
+# Coleta e processa dados
+python cartola_extractor.py
+
+# Calibra modelo de previsão
+python calibrar_pontos_esperados.py
+
+# Gera escalação via LLM (requer ANTHROPIC_API_KEY)
+ANTHROPIC_API_KEY=sua_chave python gerarEscalacao.py
 ```
 
 Os arquivos serão gerados em `docs/data/`.
-
-## Dashboard — Brasileirão
-
-A aba **Brasileirão** exibe:
-- **Tabela**: posição, pontos, aproveitamento, momentum (ofensivo/defensivo), forma recente, sequência
-- **Cards**: visão consolidada por time com estatísticas casa/fora
-- **Nomes padronizados**: "Palmeiras (PAL)", "Atlético-MG (CAM)" etc. (mapeamento limpeza de nomes da API)
