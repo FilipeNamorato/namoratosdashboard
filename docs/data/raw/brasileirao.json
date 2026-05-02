@@ -12,12 +12,12 @@
       "playedGames": 14,
       "form": null,
       "won": 10,
-      "draw": 2,
-      "lost": 2,
-      "points": 32,
-      "goalsFor": 23,
+      "draw": 3,
+      "lost": 1,
+      "points": 33,
+      "goalsFor": 24,
       "goalsAgainst": 11,
-      "goalDifference": 12
+      "goalDifference": 13
     },
     {
       "position": 2,
@@ -85,12 +85,12 @@
         "tla": "CAP",
         "crest": "https://crests.football-data.org/1768.png"
       },
-      "playedGames": 13,
+      "playedGames": 14,
       "form": null,
       "won": 7,
-      "draw": 1,
+      "draw": 2,
       "lost": 5,
-      "points": 22,
+      "points": 23,
       "goalsFor": 20,
       "goalsAgainst": 15,
       "goalDifference": 5
@@ -129,9 +129,9 @@
       "draw": 4,
       "lost": 5,
       "points": 19,
-      "goalsFor": 15,
-      "goalsAgainst": 15,
-      "goalDifference": 0
+      "goalsFor": 16,
+      "goalsAgainst": 17,
+      "goalDifference": -1
     },
     {
       "position": 8,
@@ -148,9 +148,9 @@
       "draw": 3,
       "lost": 5,
       "points": 18,
-      "goalsFor": 14,
-      "goalsAgainst": 17,
-      "goalDifference": -3
+      "goalsFor": 16,
+      "goalsAgainst": 18,
+      "goalDifference": -2
     },
     {
       "position": 9,
@@ -193,11 +193,11 @@
     {
       "position": 11,
       "team": {
-        "id": 6685,
-        "name": "Santos FC",
-        "shortName": "Santos",
-        "tla": "SAN",
-        "crest": "https://crests.football-data.org/6685.png"
+        "id": 1767,
+        "name": "Grêmio FBPA",
+        "shortName": "Grêmio",
+        "tla": "FBP",
+        "crest": "https://crests.football-data.org/1767.png"
       },
       "playedGames": 14,
       "form": null,
@@ -205,9 +205,9 @@
       "draw": 5,
       "lost": 5,
       "points": 17,
-      "goalsFor": 19,
-      "goalsAgainst": 21,
-      "goalDifference": -2
+      "goalsFor": 15,
+      "goalsAgainst": 16,
+      "goalDifference": -1
     },
     {
       "position": 12,
@@ -231,25 +231,6 @@
     {
       "position": 13,
       "team": {
-        "id": 1767,
-        "name": "Grêmio FBPA",
-        "shortName": "Grêmio",
-        "tla": "FBP",
-        "crest": "https://crests.football-data.org/1767.png"
-      },
-      "playedGames": 13,
-      "form": null,
-      "won": 4,
-      "draw": 4,
-      "lost": 5,
-      "points": 16,
-      "goalsFor": 15,
-      "goalsAgainst": 16,
-      "goalDifference": -1
-    },
-    {
-      "position": 14,
-      "team": {
         "id": 1771,
         "name": "Cruzeiro EC",
         "shortName": "Cruzeiro",
@@ -267,7 +248,7 @@
       "goalDifference": -4
     },
     {
-      "position": 15,
+      "position": 14,
       "team": {
         "id": 1779,
         "name": "SC Corinthians Paulista",
@@ -284,6 +265,25 @@
       "goalsFor": 9,
       "goalsAgainst": 11,
       "goalDifference": -2
+    },
+    {
+      "position": 15,
+      "team": {
+        "id": 6685,
+        "name": "Santos FC",
+        "shortName": "Santos",
+        "tla": "SAN",
+        "crest": "https://crests.football-data.org/6685.png"
+      },
+      "playedGames": 14,
+      "form": null,
+      "won": 3,
+      "draw": 6,
+      "lost": 5,
+      "points": 15,
+      "goalsFor": 19,
+      "goalsAgainst": 22,
+      "goalDifference": -3
     },
     {
       "position": 16,
@@ -408,7 +408,7 @@
         "venue": "Estádio Joaquim Américo Guimarães",
         "lastUpdated": "2022-04-06T13:14:06Z"
       },
-      "playedMatches": 13,
+      "playedMatches": 14,
       "goals": 8,
       "assists": 1,
       "penalties": 2
@@ -570,6 +570,37 @@
     },
     {
       "player": {
+        "id": 170698,
+        "name": "José Manuel López",
+        "firstName": "José Manuel",
+        "lastName": "López",
+        "dateOfBirth": "2000-12-06",
+        "nationality": "Argentina",
+        "section": "Midfield",
+        "position": null,
+        "shirtNumber": null,
+        "lastUpdated": "2024-06-13T09:41:56Z"
+      },
+      "team": {
+        "id": 1769,
+        "name": "SE Palmeiras",
+        "shortName": "Palmeiras",
+        "tla": "PAL",
+        "crest": "https://crests.football-data.org/1769.png",
+        "address": "Rua Palestra Italia nº 214, Perdizes São Paulo, SP 05005-030",
+        "website": "http://www.palmeiras.com.br",
+        "founded": 1914,
+        "clubColors": "Green / White",
+        "venue": "Allianz Parque",
+        "lastUpdated": "2022-04-06T13:14:55Z"
+      },
+      "playedMatches": 14,
+      "goals": 5,
+      "assists": 3,
+      "penalties": null
+    },
+    {
+      "player": {
         "id": 169022,
         "name": "Breno Lopes",
         "firstName": "",
@@ -656,7 +687,7 @@
         "venue": "Estádio Governador Magalhães Pinto",
         "lastUpdated": "2022-04-10T11:03:46Z"
       },
-      "playedMatches": 13,
+      "playedMatches": 14,
       "goals": 5,
       "assists": 1,
       "penalties": null
@@ -694,37 +725,6 @@
     },
     {
       "player": {
-        "id": 170698,
-        "name": "José Manuel López",
-        "firstName": "José Manuel",
-        "lastName": "López",
-        "dateOfBirth": "2000-12-06",
-        "nationality": "Argentina",
-        "section": "Midfield",
-        "position": null,
-        "shirtNumber": null,
-        "lastUpdated": "2024-06-13T09:41:56Z"
-      },
-      "team": {
-        "id": 1769,
-        "name": "SE Palmeiras",
-        "shortName": "Palmeiras",
-        "tla": "PAL",
-        "crest": "https://crests.football-data.org/1769.png",
-        "address": "Rua Palestra Italia nº 214, Perdizes São Paulo, SP 05005-030",
-        "website": "http://www.palmeiras.com.br",
-        "founded": 1914,
-        "clubColors": "Green / White",
-        "venue": "Allianz Parque",
-        "lastUpdated": "2022-04-06T13:14:55Z"
-      },
-      "playedMatches": 14,
-      "goals": 4,
-      "assists": 3,
-      "penalties": null
-    },
-    {
-      "player": {
         "id": 8606,
         "name": "Stiven Mendoza",
         "firstName": "John",
@@ -749,7 +749,7 @@
         "venue": "Estádio Joaquim Américo Guimarães",
         "lastUpdated": "2022-04-06T13:14:06Z"
       },
-      "playedMatches": 13,
+      "playedMatches": 14,
       "goals": 4,
       "assists": null,
       "penalties": null
@@ -877,6 +877,7 @@
       "W",
       "D",
       "W",
+      "W",
       "W"
     ],
     "Coritiba FBC": [
@@ -892,6 +893,7 @@
       "D",
       "D",
       "W",
+      "L",
       "L"
     ],
     "RB Bragantino": [
@@ -951,7 +953,8 @@
       "D",
       "W",
       "D",
-      "L"
+      "L",
+      "W"
     ],
     "Clube do Remo": [
       "L",
@@ -1026,7 +1029,8 @@
       "L",
       "W",
       "L",
-      "D"
+      "D",
+      "L"
     ],
     "SC Corinthians Paulista": [
       "L",
@@ -1165,9 +1169,9 @@
     },
     "SE Palmeiras": {
       "home": {
-        "gf": 13,
-        "ga": 4,
-        "w": 6,
+        "gf": 15,
+        "ga": 5,
+        "w": 7,
         "d": 0,
         "l": 0
       },
@@ -1188,11 +1192,11 @@
         "l": 2
       },
       "away": {
-        "gf": 10,
-        "ga": 9,
+        "gf": 11,
+        "ga": 13,
         "w": 3,
         "d": 2,
-        "l": 2
+        "l": 3
       }
     },
     "RB Bragantino": {
@@ -1245,9 +1249,9 @@
     },
     "EC Vitória": {
       "home": {
-        "gf": 8,
-        "ga": 2,
-        "w": 4,
+        "gf": 12,
+        "ga": 3,
+        "w": 5,
         "d": 1,
         "l": 1
       },
@@ -1332,11 +1336,11 @@
         "l": 2
       },
       "away": {
-        "gf": 8,
-        "ga": 13,
+        "gf": 9,
+        "ga": 15,
         "w": 0,
         "d": 3,
-        "l": 3
+        "l": 4
       }
     },
     "SC Corinthians Paulista": {
