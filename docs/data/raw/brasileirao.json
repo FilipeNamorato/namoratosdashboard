@@ -193,6 +193,25 @@
     {
       "position": 11,
       "team": {
+        "id": 1766,
+        "name": "CA Mineiro",
+        "shortName": "Mineiro",
+        "tla": "CAM",
+        "crest": "https://crests.football-data.org/1766.png"
+      },
+      "playedGames": 14,
+      "form": null,
+      "won": 5,
+      "draw": 2,
+      "lost": 7,
+      "points": 17,
+      "goalsFor": 17,
+      "goalsAgainst": 20,
+      "goalDifference": -3
+    },
+    {
+      "position": 12,
+      "team": {
         "id": 1767,
         "name": "Grêmio FBPA",
         "shortName": "Grêmio",
@@ -210,7 +229,7 @@
       "goalDifference": -1
     },
     {
-      "position": 12,
+      "position": 13,
       "team": {
         "id": 1780,
         "name": "CR Vasco da Gama",
@@ -229,7 +248,7 @@
       "goalDifference": -1
     },
     {
-      "position": 13,
+      "position": 14,
       "team": {
         "id": 1771,
         "name": "Cruzeiro EC",
@@ -237,18 +256,18 @@
         "tla": "CRU",
         "crest": "https://crests.football-data.org/1771.png"
       },
-      "playedGames": 13,
+      "playedGames": 14,
       "form": null,
       "won": 4,
       "draw": 4,
-      "lost": 5,
+      "lost": 6,
       "points": 16,
-      "goalsFor": 17,
-      "goalsAgainst": 21,
-      "goalDifference": -4
+      "goalsFor": 18,
+      "goalsAgainst": 24,
+      "goalDifference": -6
     },
     {
-      "position": 14,
+      "position": 15,
       "team": {
         "id": 1779,
         "name": "SC Corinthians Paulista",
@@ -267,7 +286,7 @@
       "goalDifference": -2
     },
     {
-      "position": 15,
+      "position": 16,
       "team": {
         "id": 6685,
         "name": "Santos FC",
@@ -284,25 +303,6 @@
       "goalsFor": 19,
       "goalsAgainst": 22,
       "goalDifference": -3
-    },
-    {
-      "position": 16,
-      "team": {
-        "id": 1766,
-        "name": "CA Mineiro",
-        "shortName": "Mineiro",
-        "tla": "CAM",
-        "crest": "https://crests.football-data.org/1766.png"
-      },
-      "playedGames": 13,
-      "form": null,
-      "won": 4,
-      "draw": 2,
-      "lost": 7,
-      "points": 14,
-      "goalsFor": 14,
-      "goalsAgainst": 19,
-      "goalDifference": -5
     },
     {
       "position": 17,
@@ -862,7 +862,8 @@
       "W",
       "L",
       "L",
-      "L"
+      "L",
+      "W"
     ],
     "SE Palmeiras": [
       "D",
@@ -939,7 +940,8 @@
       "L",
       "W",
       "L",
-      "W"
+      "W",
+      "D"
     ],
     "EC Vitória": [
       "W",
@@ -1000,7 +1002,8 @@
       "D",
       "D",
       "L",
-      "W"
+      "W",
+      "D"
     ],
     "Chapecoense AF": [
       "W",
@@ -1147,7 +1150,8 @@
       "L",
       "W",
       "W",
-      "W"
+      "W",
+      "L"
     ]
   },
   "team_stats": {
@@ -1160,9 +1164,9 @@
         "l": 1
       },
       "away": {
-        "gf": 5,
-        "ga": 9,
-        "w": 1,
+        "gf": 8,
+        "ga": 10,
+        "w": 2,
         "d": 0,
         "l": 6
       }
@@ -1193,7 +1197,7 @@
       },
       "away": {
         "gf": 11,
-        "ga": 13,
+        "ga": 14,
         "w": 3,
         "d": 2,
         "l": 3
@@ -1236,7 +1240,7 @@
         "gf": 15,
         "ga": 5,
         "w": 6,
-        "d": 0,
+        "d": 1,
         "l": 1
       },
       "away": {
@@ -1297,7 +1301,7 @@
     },
     "Grêmio FBPA": {
       "home": {
-        "gf": 11,
+        "gf": 12,
         "ga": 5,
         "w": 4,
         "d": 2,
@@ -1307,7 +1311,7 @@
         "gf": 4,
         "ga": 11,
         "w": 0,
-        "d": 2,
+        "d": 3,
         "l": 5
       }
     },
@@ -1457,11 +1461,11 @@
     },
     "Cruzeiro EC": {
       "home": {
-        "gf": 12,
-        "ga": 7,
+        "gf": 13,
+        "ga": 10,
         "w": 3,
         "d": 3,
-        "l": 1
+        "l": 2
       },
       "away": {
         "gf": 5,
