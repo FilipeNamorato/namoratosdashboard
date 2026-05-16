@@ -1,10 +1,27 @@
 {
-  "status": "insuficiente",
-  "n_rodadas": 5,
-  "n_registros": 191,
-  "motivo": "precisa ≥3 rodadas e ≥200 registros",
-  "atualizado_em": "2026-05-16 17:41 BRT",
+  "status": "ok",
+  "n_rodadas": 6,
+  "n_registros": 262,
+  "coefs": {
+    "intercept": 0.32526191816322636,
+    "bayes": 0.11060654018557903,
+    "score_ratio": 1.2134315360971268,
+    "conf": -0.35218622357782625,
+    "interacao": -0.21243089124210857,
+    "forma_media_3r": 0.4253653259975628,
+    "forma_jogou_3r": 0.9383497911121843,
+    "forma_tendencia": -0.19306540125656127
+  },
   "metricas": {
-    "mae_heuristica": 2.72
-  }
+    "mae_heuristica": 2.823,
+    "mae_modelo_cv": 2.447,
+    "mae_modelo_in": 2.335,
+    "r2_modelo_in": 0.105,
+    "ganho_pct_cv": 13.3
+  },
+  "hiperparams": {
+    "ridge_lambda": 1.0,
+    "recency_decay": 0.9
+  },
+  "atualizado_em": "2026-05-16 19:08 BRT"
 }

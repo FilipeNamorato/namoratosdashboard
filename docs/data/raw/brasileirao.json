@@ -47,12 +47,12 @@
         "tla": "FLU",
         "crest": "https://crests.football-data.org/1765.png"
       },
-      "playedGames": 15,
+      "playedGames": 16,
       "form": null,
       "won": 8,
-      "draw": 3,
+      "draw": 4,
       "lost": 4,
-      "points": 27,
+      "points": 28,
       "goalsFor": 25,
       "goalsAgainst": 20,
       "goalDifference": 5
@@ -66,12 +66,12 @@
         "tla": "PAU",
         "crest": "https://crests.football-data.org/1776.png"
       },
-      "playedGames": 15,
+      "playedGames": 16,
       "form": null,
       "won": 7,
-      "draw": 3,
+      "draw": 4,
       "lost": 5,
-      "points": 24,
+      "points": 25,
       "goalsFor": 21,
       "goalsAgainst": 16,
       "goalDifference": 5
@@ -117,6 +117,44 @@
     {
       "position": 7,
       "team": {
+        "id": 1766,
+        "name": "CA Mineiro",
+        "shortName": "Mineiro",
+        "tla": "CAM",
+        "crest": "https://crests.football-data.org/1766.png"
+      },
+      "playedGames": 16,
+      "form": null,
+      "won": 6,
+      "draw": 3,
+      "lost": 7,
+      "points": 21,
+      "goalsFor": 19,
+      "goalsAgainst": 21,
+      "goalDifference": -2
+    },
+    {
+      "position": 8,
+      "team": {
+        "id": 6684,
+        "name": "SC Internacional",
+        "shortName": "Internacional",
+        "tla": "SCI",
+        "crest": "https://crests.football-data.org/6684.png"
+      },
+      "playedGames": 16,
+      "form": null,
+      "won": 5,
+      "draw": 6,
+      "lost": 5,
+      "points": 21,
+      "goalsFor": 18,
+      "goalsAgainst": 16,
+      "goalDifference": 2
+    },
+    {
+      "position": 9,
+      "team": {
         "id": 4286,
         "name": "RB Bragantino",
         "shortName": "Bragantino",
@@ -134,26 +172,7 @@
       "goalDifference": -1
     },
     {
-      "position": 8,
-      "team": {
-        "id": 1780,
-        "name": "CR Vasco da Gama",
-        "shortName": "Vasco da Gama",
-        "tla": "VAS",
-        "crest": "https://crests.football-data.org/1780.png"
-      },
-      "playedGames": 15,
-      "form": null,
-      "won": 5,
-      "draw": 5,
-      "lost": 5,
-      "points": 20,
-      "goalsFor": 21,
-      "goalsAgainst": 21,
-      "goalDifference": 0
-    },
-    {
-      "position": 9,
+      "position": 10,
       "team": {
         "id": 4241,
         "name": "Coritiba FBC",
@@ -172,7 +191,26 @@
       "goalDifference": -1
     },
     {
-      "position": 10,
+      "position": 11,
+      "team": {
+        "id": 1780,
+        "name": "CR Vasco da Gama",
+        "shortName": "Vasco da Gama",
+        "tla": "VAS",
+        "crest": "https://crests.football-data.org/1780.png"
+      },
+      "playedGames": 16,
+      "form": null,
+      "won": 5,
+      "draw": 5,
+      "lost": 6,
+      "points": 20,
+      "goalsFor": 21,
+      "goalsAgainst": 23,
+      "goalDifference": -2
+    },
+    {
+      "position": 12,
       "team": {
         "id": 1782,
         "name": "EC Vitória",
@@ -191,7 +229,7 @@
       "goalDifference": -2
     },
     {
-      "position": 11,
+      "position": 13,
       "team": {
         "id": 1771,
         "name": "Cruzeiro EC",
@@ -210,7 +248,7 @@
       "goalDifference": -5
     },
     {
-      "position": 12,
+      "position": 14,
       "team": {
         "id": 1770,
         "name": "Botafogo FR",
@@ -227,44 +265,6 @@
       "goalsFor": 26,
       "goalsAgainst": 27,
       "goalDifference": -1
-    },
-    {
-      "position": 13,
-      "team": {
-        "id": 1766,
-        "name": "CA Mineiro",
-        "shortName": "Mineiro",
-        "tla": "CAM",
-        "crest": "https://crests.football-data.org/1766.png"
-      },
-      "playedGames": 15,
-      "form": null,
-      "won": 5,
-      "draw": 3,
-      "lost": 7,
-      "points": 18,
-      "goalsFor": 18,
-      "goalsAgainst": 21,
-      "goalDifference": -3
-    },
-    {
-      "position": 14,
-      "team": {
-        "id": 6684,
-        "name": "SC Internacional",
-        "shortName": "Internacional",
-        "tla": "SCI",
-        "crest": "https://crests.football-data.org/6684.png"
-      },
-      "playedGames": 15,
-      "form": null,
-      "won": 4,
-      "draw": 6,
-      "lost": 5,
-      "points": 18,
-      "goalsFor": 16,
-      "goalsAgainst": 16,
-      "goalDifference": 0
     },
     {
       "position": 15,
@@ -332,15 +332,15 @@
         "tla": "MIR",
         "crest": "https://crests.football-data.org/4364.png"
       },
-      "playedGames": 14,
+      "playedGames": 15,
       "form": null,
       "won": 3,
       "draw": 4,
-      "lost": 7,
+      "lost": 8,
       "points": 13,
       "goalsFor": 16,
-      "goalsAgainst": 20,
-      "goalDifference": -4
+      "goalsAgainst": 21,
+      "goalDifference": -5
     },
     {
       "position": 19,
@@ -532,7 +532,7 @@
         "venue": "Estadio Jornalista Mário Filho",
         "lastUpdated": "2024-07-29T17:24:37Z"
       },
-      "playedMatches": 15,
+      "playedMatches": 16,
       "goals": 7,
       "assists": 1,
       "penalties": null
