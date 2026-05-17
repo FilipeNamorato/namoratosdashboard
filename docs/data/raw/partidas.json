@@ -288,17 +288,17 @@
         "d",
         "v",
         "e",
-        "e"
+        "d"
       ],
       "aproveitamento_mandante": [
         "d",
         "d",
         "v",
         "e",
-        "e"
+        "v"
       ],
       "transmissao": {
-        "label": "ao vivo",
+        "label": "saiba como foi",
         "url": "https://ge.globo.com/mg/futebol/brasileirao-serie-a/jogo/16-05-2026/atletico-mg-mirassol.ghtml?utm_source=cartolafc"
       },
       "local": "Arena MRV",
@@ -324,17 +324,17 @@
         "d",
         "e",
         "v",
-        "e"
+        "d"
       ],
       "aproveitamento_mandante": [
         "d",
         "e",
         "v",
         "e",
-        "e"
+        "v"
       ],
       "transmissao": {
-        "label": "acompanhe em tempo real",
+        "label": "saiba como foi",
         "url": "https://ge.globo.com/rs/futebol/brasileirao-serie-a/jogo/16-05-2026/internacional-vasco.ghtml?utm_source=cartolafc"
       },
       "local": "Beira-Rio",
@@ -360,25 +360,25 @@
         "v",
         "e",
         "d",
-        "e"
+        "d"
       ],
       "aproveitamento_mandante": [
         "v",
         "v",
         "d",
         "e",
-        "e"
+        "v"
       ],
       "transmissao": {
-        "label": "ao vivo",
+        "label": "saiba como foi",
         "url": "https://ge.globo.com/rj/futebol/brasileirao-serie-a/jogo/16-05-2026/fluminense-sao-paulo.ghtml?utm_source=cartolafc"
       },
       "local": "Maracanã",
-      "status_transmissao_tr": "EM_ANDAMENTO",
-      "status_cronometro_tr": "INICIADO",
-      "periodo_tr": "SEGUNDO_TEMPO",
+      "status_transmissao_tr": "ENCERRADA",
+      "status_cronometro_tr": "PAUSADO",
+      "periodo_tr": "POS_JOGO",
       "partida_data": "2026-05-16 19:00:00",
-      "inicio_cronometro_tr": "2026-05-16T23:04:58.694Z",
+      "inicio_cronometro_tr": "2026-05-17T00:03:18.085Z",
       "placar_oficial_visitante": 1,
       "placar_oficial_mandante": 2,
       "partida_id": 346455,
@@ -406,19 +406,19 @@
         "e"
       ],
       "transmissao": {
-        "label": "ao vivo",
+        "label": "saiba como foi",
         "url": "https://ge.globo.com/sp/futebol/brasileirao-serie-a/jogo/16-05-2026/palmeiras-cruzeiro.ghtml?utm_source=cartolafc"
       },
       "local": "Arena Barueri",
-      "status_transmissao_tr": "EM_ANDAMENTO",
+      "status_transmissao_tr": "ENCERRADA",
       "status_cronometro_tr": "PAUSADO",
-      "periodo_tr": "PRE_JOGO",
+      "periodo_tr": "POS_JOGO",
       "partida_data": "2026-05-16 21:00:00",
-      "inicio_cronometro_tr": "2026-05-16T22:59:27.145Z",
-      "placar_oficial_visitante": null,
-      "placar_oficial_mandante": null,
+      "inicio_cronometro_tr": "2026-05-17T02:04:19.039Z",
+      "placar_oficial_visitante": 1,
+      "placar_oficial_mandante": 1,
       "partida_id": 346458,
-      "clube_visitante_posicao": 13,
+      "clube_visitante_posicao": 12,
       "clube_visitante_id": 283,
       "clube_casa_posicao": 1,
       "clube_casa_id": 275,
@@ -428,18 +428,18 @@
     },
     {
       "aproveitamento_visitante": [
-        "e",
         "v",
         "d",
         "d",
+        "e",
         "e"
       ],
       "aproveitamento_mandante": [
-        "v",
         "d",
         "e",
         "e",
-        "v"
+        "v",
+        "e"
       ],
       "transmissao": {
         "label": "fique por dentro",
@@ -465,16 +465,16 @@
     {
       "aproveitamento_visitante": [
         "e",
-        "e",
         "v",
         "d",
-        "v"
+        "v",
+        "e"
       ],
       "aproveitamento_mandante": [
-        "e",
         "v",
         "e",
         "d",
+        "e",
         "e"
       ],
       "transmissao": {
@@ -500,18 +500,18 @@
     },
     {
       "aproveitamento_visitante": [
-        "e",
         "d",
         "v",
         "e",
-        "d"
+        "d",
+        "e"
       ],
       "aproveitamento_mandante": [
-        "v",
         "d",
         "e",
         "e",
-        "d"
+        "d",
+        "e"
       ],
       "transmissao": {
         "label": "fique por dentro",
@@ -536,18 +536,18 @@
     },
     {
       "aproveitamento_visitante": [
-        "v",
         "e",
         "d",
         "v",
+        "e",
         "e"
       ],
       "aproveitamento_mandante": [
-        "d",
         "v",
         "d",
         "v",
-        "d"
+        "d",
+        "e"
       ],
       "transmissao": {
         "label": "fique por dentro",
@@ -562,7 +562,7 @@
       "placar_oficial_visitante": null,
       "placar_oficial_mandante": null,
       "partida_id": 346459,
-      "clube_visitante_posicao": 12,
+      "clube_visitante_posicao": 13,
       "clube_visitante_id": 287,
       "clube_casa_posicao": 9,
       "clube_casa_id": 280,
@@ -572,17 +572,17 @@
     },
     {
       "aproveitamento_visitante": [
-        "e",
         "d",
         "d",
         "v",
+        "e",
         "e"
       ],
       "aproveitamento_mandante": [
         "d",
         "d",
         "d",
-        "d",
+        "e",
         "e"
       ],
       "transmissao": {
@@ -610,16 +610,16 @@
       "aproveitamento_visitante": [
         "v",
         "v",
-        "v",
         "e",
-        "v"
+        "v",
+        "e"
       ],
       "aproveitamento_mandante": [
-        "v",
         "d",
         "v",
         "e",
-        "d"
+        "d",
+        "e"
       ],
       "transmissao": {
         "label": "fique por dentro",
