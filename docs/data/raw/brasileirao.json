@@ -123,18 +123,37 @@
         "tla": "BAH",
         "crest": "https://crests.football-data.org/1777.png"
       },
-      "playedGames": 14,
+      "playedGames": 15,
       "form": null,
       "won": 6,
-      "draw": 4,
+      "draw": 5,
       "lost": 4,
-      "points": 22,
+      "points": 23,
       "goalsFor": 20,
       "goalsAgainst": 18,
       "goalDifference": 2
     },
     {
       "position": 8,
+      "team": {
+        "id": 1770,
+        "name": "Botafogo FR",
+        "shortName": "Botafogo",
+        "tla": "BOT",
+        "crest": "https://crests.football-data.org/1770.png"
+      },
+      "playedGames": 15,
+      "form": null,
+      "won": 6,
+      "draw": 3,
+      "lost": 6,
+      "points": 21,
+      "goalsFor": 28,
+      "goalsAgainst": 28,
+      "goalDifference": 0
+    },
+    {
+      "position": 9,
       "team": {
         "id": 1766,
         "name": "CA Mineiro",
@@ -153,7 +172,7 @@
       "goalDifference": -1
     },
     {
-      "position": 9,
+      "position": 10,
       "team": {
         "id": 6684,
         "name": "SC Internacional",
@@ -172,7 +191,7 @@
       "goalDifference": 3
     },
     {
-      "position": 10,
+      "position": 11,
       "team": {
         "id": 4286,
         "name": "RB Bragantino",
@@ -191,7 +210,7 @@
       "goalDifference": -1
     },
     {
-      "position": 11,
+      "position": 12,
       "team": {
         "id": 1780,
         "name": "CR Vasco da Gama",
@@ -210,7 +229,7 @@
       "goalDifference": -3
     },
     {
-      "position": 12,
+      "position": 13,
       "team": {
         "id": 1771,
         "name": "Cruzeiro EC",
@@ -229,7 +248,7 @@
       "goalDifference": -5
     },
     {
-      "position": 13,
+      "position": 14,
       "team": {
         "id": 1782,
         "name": "EC Vitória",
@@ -248,26 +267,26 @@
       "goalDifference": -2
     },
     {
-      "position": 14,
+      "position": 15,
       "team": {
-        "id": 1770,
-        "name": "Botafogo FR",
-        "shortName": "Botafogo",
-        "tla": "BOT",
-        "crest": "https://crests.football-data.org/1770.png"
+        "id": 1767,
+        "name": "Grêmio FBPA",
+        "shortName": "Grêmio",
+        "tla": "FBP",
+        "crest": "https://crests.football-data.org/1767.png"
       },
-      "playedGames": 14,
+      "playedGames": 16,
       "form": null,
-      "won": 5,
-      "draw": 3,
+      "won": 4,
+      "draw": 6,
       "lost": 6,
       "points": 18,
-      "goalsFor": 26,
-      "goalsAgainst": 27,
-      "goalDifference": -1
+      "goalsFor": 15,
+      "goalsAgainst": 17,
+      "goalDifference": -2
     },
     {
-      "position": 15,
+      "position": 16,
       "team": {
         "id": 1779,
         "name": "SC Corinthians Paulista",
@@ -275,18 +294,18 @@
         "tla": "COR",
         "crest": "https://crests.football-data.org/1779.png"
       },
-      "playedGames": 15,
+      "playedGames": 16,
       "form": null,
       "won": 4,
       "draw": 6,
-      "lost": 5,
+      "lost": 6,
       "points": 18,
-      "goalsFor": 13,
-      "goalsAgainst": 15,
-      "goalDifference": -2
+      "goalsFor": 14,
+      "goalsAgainst": 17,
+      "goalDifference": -3
     },
     {
-      "position": 16,
+      "position": 17,
       "team": {
         "id": 6685,
         "name": "Santos FC",
@@ -303,25 +322,6 @@
       "goalsFor": 21,
       "goalsAgainst": 25,
       "goalDifference": -4
-    },
-    {
-      "position": 17,
-      "team": {
-        "id": 1767,
-        "name": "Grêmio FBPA",
-        "shortName": "Grêmio",
-        "tla": "FBP",
-        "crest": "https://crests.football-data.org/1767.png"
-      },
-      "playedGames": 15,
-      "form": null,
-      "won": 4,
-      "draw": 5,
-      "lost": 6,
-      "points": 17,
-      "goalsFor": 15,
-      "goalsAgainst": 17,
-      "goalDifference": -2
     },
     {
       "position": 18,
@@ -632,6 +632,37 @@
     },
     {
       "player": {
+        "id": 1723,
+        "name": "Arthur Cabral",
+        "firstName": "",
+        "lastName": "Arthur Cabral",
+        "dateOfBirth": "1998-04-25",
+        "nationality": "Brazil",
+        "section": "Centre-Forward",
+        "position": null,
+        "shirtNumber": null,
+        "lastUpdated": "2024-11-01T22:50:30Z"
+      },
+      "team": {
+        "id": 1770,
+        "name": "Botafogo FR",
+        "shortName": "Botafogo",
+        "tla": "BOT",
+        "crest": "https://crests.football-data.org/1770.png",
+        "address": "Avenida Venceslau Brás 72, Bairro Botafago Rio de Janeiro, RJ 22290-140",
+        "website": "http://www.botafogo.com.br",
+        "founded": 1904,
+        "clubColors": "Black / White",
+        "venue": "Estádio Nilton Santos",
+        "lastUpdated": "2023-02-18T08:43:47Z"
+      },
+      "playedMatches": 15,
+      "goals": 6,
+      "assists": 1,
+      "penalties": null
+    },
+    {
+      "player": {
         "id": 170698,
         "name": "José Manuel López",
         "firstName": "José Manuel",
@@ -814,37 +845,6 @@
       "playedMatches": 14,
       "goals": 4,
       "assists": null,
-      "penalties": null
-    },
-    {
-      "player": {
-        "id": 90803,
-        "name": "Alef Manga",
-        "firstName": "",
-        "lastName": "Alef Manga",
-        "dateOfBirth": "1994-11-29",
-        "nationality": "Brazil",
-        "section": "Offence",
-        "position": null,
-        "shirtNumber": null,
-        "lastUpdated": "2023-07-30T23:15:49Z"
-      },
-      "team": {
-        "id": 4287,
-        "name": "Clube do Remo",
-        "shortName": "Clube do Remo",
-        "tla": "CRE",
-        "crest": "https://crests.football-data.org/4287.png",
-        "address": "Avenida Nazaré, 962, Bairro Nazaré Belém, PA 66035-170",
-        "website": "http://www.clubedoremo.com.br",
-        "founded": 1905,
-        "clubColors": "Navy Blue / White",
-        "venue": "Estádio Estadual Jornalista Edgar Augusto Proença",
-        "lastUpdated": "2023-09-09T10:24:14Z"
-      },
-      "playedMatches": 15,
-      "goals": 4,
-      "assists": 3,
       "penalties": null
     }
   ],
