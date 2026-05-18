@@ -31,12 +31,12 @@
       "playedGames": 15,
       "form": null,
       "won": 9,
-      "draw": 3,
-      "lost": 3,
-      "points": 30,
-      "goalsFor": 27,
+      "draw": 4,
+      "lost": 2,
+      "points": 31,
+      "goalsFor": 28,
       "goalsAgainst": 13,
-      "goalDifference": 14
+      "goalDifference": 15
     },
     {
       "position": 3,
@@ -60,25 +60,6 @@
     {
       "position": 4,
       "team": {
-        "id": 1768,
-        "name": "CA Paranaense",
-        "shortName": "Paranaense",
-        "tla": "CAP",
-        "crest": "https://crests.football-data.org/1768.png"
-      },
-      "playedGames": 16,
-      "form": null,
-      "won": 8,
-      "draw": 2,
-      "lost": 6,
-      "points": 26,
-      "goalsFor": 21,
-      "goalsAgainst": 16,
-      "goalDifference": 5
-    },
-    {
-      "position": 5,
-      "team": {
         "id": 1776,
         "name": "São Paulo FC",
         "shortName": "São Paulo",
@@ -96,6 +77,25 @@
       "goalDifference": 4
     },
     {
+      "position": 5,
+      "team": {
+        "id": 1768,
+        "name": "CA Paranaense",
+        "shortName": "Paranaense",
+        "tla": "CAP",
+        "crest": "https://crests.football-data.org/1768.png"
+      },
+      "playedGames": 16,
+      "form": null,
+      "won": 7,
+      "draw": 3,
+      "lost": 6,
+      "points": 24,
+      "goalsFor": 21,
+      "goalsAgainst": 17,
+      "goalDifference": 4
+    },
+    {
       "position": 6,
       "team": {
         "id": 4286,
@@ -110,9 +110,9 @@
       "draw": 2,
       "lost": 7,
       "points": 23,
-      "goalsFor": 18,
+      "goalsFor": 19,
       "goalsAgainst": 18,
-      "goalDifference": 0
+      "goalDifference": 1
     },
     {
       "position": 7,
@@ -263,8 +263,8 @@
       "lost": 6,
       "points": 19,
       "goalsFor": 18,
-      "goalsAgainst": 21,
-      "goalDifference": -3
+      "goalsAgainst": 22,
+      "goalDifference": -4
     },
     {
       "position": 15,
@@ -384,6 +384,37 @@
   "artilheiros": [
     {
       "player": {
+        "id": 1077,
+        "name": "Pedro",
+        "firstName": "",
+        "lastName": "Pedro",
+        "dateOfBirth": "1997-06-20",
+        "nationality": "Brazil",
+        "section": "Offence",
+        "position": null,
+        "shirtNumber": null,
+        "lastUpdated": "2023-07-30T23:15:48Z"
+      },
+      "team": {
+        "id": 1783,
+        "name": "CR Flamengo",
+        "shortName": "Flamengo",
+        "tla": "FLA",
+        "crest": "https://crests.football-data.org/1783.png",
+        "address": "null Rio de Janeiro, RJ null",
+        "website": "https://www.flamengo.com.br/pagina-inicial-basquete",
+        "founded": 1919,
+        "clubColors": "Red / Black / White",
+        "venue": "Estadio Jornalista Mário Filho",
+        "lastUpdated": "2022-04-06T13:13:43Z"
+      },
+      "playedMatches": 15,
+      "goals": 9,
+      "assists": 3,
+      "penalties": null
+    },
+    {
+      "player": {
         "id": 157533,
         "name": "John Kennedy",
         "firstName": "",
@@ -443,37 +474,6 @@
       "goals": 8,
       "assists": 1,
       "penalties": 2
-    },
-    {
-      "player": {
-        "id": 1077,
-        "name": "Pedro",
-        "firstName": "",
-        "lastName": "Pedro",
-        "dateOfBirth": "1997-06-20",
-        "nationality": "Brazil",
-        "section": "Offence",
-        "position": null,
-        "shirtNumber": null,
-        "lastUpdated": "2023-07-30T23:15:48Z"
-      },
-      "team": {
-        "id": 1783,
-        "name": "CR Flamengo",
-        "shortName": "Flamengo",
-        "tla": "FLA",
-        "crest": "https://crests.football-data.org/1783.png",
-        "address": "null Rio de Janeiro, RJ null",
-        "website": "https://www.flamengo.com.br/pagina-inicial-basquete",
-        "founded": 1919,
-        "clubColors": "Red / Black / White",
-        "venue": "Estadio Jornalista Mário Filho",
-        "lastUpdated": "2022-04-06T13:13:43Z"
-      },
-      "playedMatches": 15,
-      "goals": 8,
-      "assists": 3,
-      "penalties": null
     },
     {
       "player": {
@@ -954,7 +954,8 @@
       "L",
       "W",
       "D",
-      "L"
+      "L",
+      "D"
     ],
     "EC Vitória": [
       "W",
@@ -1129,7 +1130,8 @@
       "W",
       "W",
       "D",
-      "W"
+      "W",
+      "D"
     ],
     "Mirassol FC": [
       "W",
@@ -1285,10 +1287,10 @@
     },
     "CA Paranaense": {
       "home": {
-        "gf": 15,
-        "ga": 5,
+        "gf": 16,
+        "ga": 6,
         "w": 6,
-        "d": 1,
+        "d": 2,
         "l": 1
       },
       "away": {
@@ -1333,7 +1335,7 @@
     },
     "Fluminense FC": {
       "home": {
-        "gf": 18,
+        "gf": 17,
         "ga": 10,
         "w": 7,
         "d": 1,
@@ -1437,7 +1439,7 @@
       },
       "away": {
         "gf": 9,
-        "ga": 14,
+        "ga": 13,
         "w": 2,
         "d": 2,
         "l": 5
@@ -1452,10 +1454,10 @@
         "l": 0
       },
       "away": {
-        "gf": 14,
-        "ga": 8,
+        "gf": 15,
+        "ga": 9,
         "w": 5,
-        "d": 1,
+        "d": 2,
         "l": 2
       }
     },
