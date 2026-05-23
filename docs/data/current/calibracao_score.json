@@ -1,7 +1,7 @@
 {
   "status": "insuficiente",
-  "n_rodadas": 4,
-  "n_registros": 192,
+  "n_rodadas": 5,
+  "n_registros": 240,
   "pesos": {
     "defesa": {
       "oc": 0.3,
@@ -24,14 +24,14 @@
   "grupos": {
     "defesa": {
       "status": "insuficiente",
-      "n_rodadas": 4,
-      "n_registros": 80,
+      "n_rodadas": 5,
+      "n_registros": 100,
       "motivo": "precisa ≥3 rodadas e ≥150 registros"
     },
     "ataque": {
       "status": "insuficiente",
-      "n_rodadas": 4,
-      "n_registros": 112,
+      "n_rodadas": 5,
+      "n_registros": 140,
       "motivo": "precisa ≥3 rodadas e ≥150 registros"
     }
   },
@@ -41,5 +41,5 @@
     "min_rodadas": 3,
     "min_registros": 150
   },
-  "atualizado_em": "2026-05-23 15:52 BRT"
+  "atualizado_em": "2026-05-23 17:08 BRT"
 }
