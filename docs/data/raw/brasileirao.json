@@ -47,12 +47,12 @@
         "tla": "FLU",
         "crest": "https://crests.football-data.org/1765.png"
       },
-      "playedGames": 16,
+      "playedGames": 17,
       "form": null,
       "won": 9,
-      "draw": 3,
+      "draw": 4,
       "lost": 4,
-      "points": 30,
+      "points": 31,
       "goalsFor": 27,
       "goalsAgainst": 21,
       "goalDifference": 6
@@ -68,13 +68,13 @@
       },
       "playedGames": 17,
       "form": null,
-      "won": 8,
-      "draw": 3,
+      "won": 7,
+      "draw": 4,
       "lost": 6,
-      "points": 27,
+      "points": 25,
       "goalsFor": 23,
-      "goalsAgainst": 18,
-      "goalDifference": 5
+      "goalsAgainst": 19,
+      "goalDifference": 4
     },
     {
       "position": 5,
@@ -155,6 +155,25 @@
     {
       "position": 9,
       "team": {
+        "id": 1770,
+        "name": "Botafogo FR",
+        "shortName": "Botafogo",
+        "tla": "BOT",
+        "crest": "https://crests.football-data.org/1770.png"
+      },
+      "playedGames": 16,
+      "form": null,
+      "won": 6,
+      "draw": 4,
+      "lost": 6,
+      "points": 22,
+      "goalsFor": 30,
+      "goalsAgainst": 29,
+      "goalDifference": 1
+    },
+    {
+      "position": 10,
+      "team": {
         "id": 1782,
         "name": "EC Vitória",
         "shortName": "Vitória",
@@ -170,25 +189,6 @@
       "goalsFor": 19,
       "goalsAgainst": 22,
       "goalDifference": -3
-    },
-    {
-      "position": 10,
-      "team": {
-        "id": 1770,
-        "name": "Botafogo FR",
-        "shortName": "Botafogo",
-        "tla": "BOT",
-        "crest": "https://crests.football-data.org/1770.png"
-      },
-      "playedGames": 16,
-      "form": null,
-      "won": 6,
-      "draw": 3,
-      "lost": 7,
-      "points": 21,
-      "goalsFor": 29,
-      "goalsAgainst": 29,
-      "goalDifference": 0
     },
     {
       "position": 11,
@@ -275,12 +275,12 @@
         "tla": "FBP",
         "crest": "https://crests.football-data.org/1767.png"
       },
-      "playedGames": 16,
+      "playedGames": 17,
       "form": null,
       "won": 4,
-      "draw": 6,
+      "draw": 7,
       "lost": 6,
-      "points": 18,
+      "points": 19,
       "goalsFor": 16,
       "goalsAgainst": 18,
       "goalDifference": -2
@@ -294,12 +294,12 @@
         "tla": "SAN",
         "crest": "https://crests.football-data.org/6685.png"
       },
-      "playedGames": 16,
+      "playedGames": 17,
       "form": null,
       "won": 4,
-      "draw": 6,
+      "draw": 7,
       "lost": 6,
-      "points": 18,
+      "points": 19,
       "goalsFor": 21,
       "goalsAgainst": 25,
       "goalDifference": -4
@@ -351,12 +351,12 @@
         "tla": "MIR",
         "crest": "https://crests.football-data.org/4364.png"
       },
-      "playedGames": 15,
+      "playedGames": 16,
       "form": null,
       "won": 3,
-      "draw": 4,
+      "draw": 5,
       "lost": 8,
-      "points": 13,
+      "points": 14,
       "goalsFor": 17,
       "goalsAgainst": 23,
       "goalDifference": -6
@@ -439,7 +439,7 @@
         "venue": "Estadio Jornalista Mário Filho",
         "lastUpdated": "2024-07-29T17:24:37Z"
       },
-      "playedMatches": 16,
+      "playedMatches": 17,
       "goals": 8,
       "assists": 1,
       "penalties": null
@@ -501,7 +501,7 @@
         "venue": "Arena do Grêmio",
         "lastUpdated": "2023-02-18T08:42:52Z"
       },
-      "playedMatches": 15,
+      "playedMatches": 16,
       "goals": 7,
       "assists": null,
       "penalties": 1
@@ -937,7 +937,8 @@
       "D",
       "W",
       "D",
-      "W"
+      "W",
+      "L"
     ],
     "CA Paranaense": [
       "W",
@@ -972,7 +973,8 @@
       "L",
       "W",
       "D",
-      "L"
+      "L",
+      "W"
     ],
     "Clube do Remo": [
       "L",
@@ -1114,7 +1116,8 @@
       "W",
       "D",
       "L",
-      "L"
+      "L",
+      "D"
     ],
     "CR Flamengo": [
       "L",
@@ -1183,7 +1186,8 @@
       "D",
       "L",
       "D",
-      "W"
+      "W",
+      "D"
     ],
     "Cruzeiro EC": [
       "L",
@@ -1279,10 +1283,10 @@
       },
       "away": {
         "gf": 9,
-        "ga": 8,
+        "ga": 10,
         "w": 2,
         "d": 4,
-        "l": 1
+        "l": 2
       }
     },
     "CA Paranaense": {
@@ -1303,9 +1307,9 @@
     },
     "EC Vitória": {
       "home": {
-        "gf": 12,
+        "gf": 14,
         "ga": 3,
-        "w": 5,
+        "w": 6,
         "d": 1,
         "l": 1
       },
@@ -1335,7 +1339,7 @@
     },
     "Fluminense FC": {
       "home": {
-        "gf": 17,
+        "gf": 18,
         "ga": 10,
         "w": 7,
         "d": 1,
@@ -1431,15 +1435,15 @@
     },
     "São Paulo FC": {
       "home": {
-        "gf": 13,
-        "ga": 5,
+        "gf": 14,
+        "ga": 6,
         "w": 5,
-        "d": 1,
+        "d": 2,
         "l": 1
       },
       "away": {
         "gf": 9,
-        "ga": 13,
+        "ga": 14,
         "w": 2,
         "d": 2,
         "l": 5
@@ -1502,10 +1506,10 @@
         "l": 2
       },
       "away": {
-        "gf": 14,
-        "ga": 16,
+        "gf": 15,
+        "ga": 17,
         "w": 3,
-        "d": 1,
+        "d": 2,
         "l": 4
       }
     },
