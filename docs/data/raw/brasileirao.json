@@ -9,15 +9,15 @@
         "tla": "PAL",
         "crest": "https://crests.football-data.org/1769.png"
       },
-      "playedGames": 16,
+      "playedGames": 17,
       "form": null,
-      "won": 10,
+      "won": 11,
       "draw": 5,
       "lost": 1,
-      "points": 35,
-      "goalsFor": 26,
+      "points": 38,
+      "goalsFor": 29,
       "goalsAgainst": 13,
-      "goalDifference": 13
+      "goalDifference": 16
     },
     {
       "position": 2,
@@ -28,15 +28,15 @@
         "tla": "FLA",
         "crest": "https://crests.football-data.org/1783.png"
       },
-      "playedGames": 15,
+      "playedGames": 16,
       "form": null,
       "won": 9,
       "draw": 4,
-      "lost": 2,
+      "lost": 3,
       "points": 31,
       "goalsFor": 28,
-      "goalsAgainst": 13,
-      "goalDifference": 15
+      "goalsAgainst": 16,
+      "goalDifference": 12
     },
     {
       "position": 3,
@@ -632,6 +632,37 @@
     },
     {
       "player": {
+        "id": 170698,
+        "name": "José Manuel López",
+        "firstName": "José Manuel",
+        "lastName": "López",
+        "dateOfBirth": "2000-12-06",
+        "nationality": "Argentina",
+        "section": "Midfield",
+        "position": null,
+        "shirtNumber": null,
+        "lastUpdated": "2024-06-13T09:41:56Z"
+      },
+      "team": {
+        "id": 1769,
+        "name": "SE Palmeiras",
+        "shortName": "Palmeiras",
+        "tla": "PAL",
+        "crest": "https://crests.football-data.org/1769.png",
+        "address": "Rua Palestra Italia nº 214, Perdizes São Paulo, SP 05005-030",
+        "website": "http://www.palmeiras.com.br",
+        "founded": 1914,
+        "clubColors": "Green / White",
+        "venue": "Allianz Parque",
+        "lastUpdated": "2022-04-06T13:14:55Z"
+      },
+      "playedMatches": 17,
+      "goals": 6,
+      "assists": 3,
+      "penalties": null
+    },
+    {
+      "player": {
         "id": 42901,
         "name": "Luciano",
         "firstName": "",
@@ -722,37 +753,6 @@
       "goals": 6,
       "assists": 2,
       "penalties": 1
-    },
-    {
-      "player": {
-        "id": 170698,
-        "name": "José Manuel López",
-        "firstName": "José Manuel",
-        "lastName": "López",
-        "dateOfBirth": "2000-12-06",
-        "nationality": "Argentina",
-        "section": "Midfield",
-        "position": null,
-        "shirtNumber": null,
-        "lastUpdated": "2024-06-13T09:41:56Z"
-      },
-      "team": {
-        "id": 1769,
-        "name": "SE Palmeiras",
-        "shortName": "Palmeiras",
-        "tla": "PAL",
-        "crest": "https://crests.football-data.org/1769.png",
-        "address": "Rua Palestra Italia nº 214, Perdizes São Paulo, SP 05005-030",
-        "website": "http://www.palmeiras.com.br",
-        "founded": 1914,
-        "clubColors": "Green / White",
-        "venue": "Allianz Parque",
-        "lastUpdated": "2022-04-06T13:14:55Z"
-      },
-      "playedMatches": 17,
-      "goals": 5,
-      "assists": 3,
-      "penalties": null
     },
     {
       "player": {
@@ -883,7 +883,8 @@
       "W",
       "D",
       "D",
-      "D"
+      "D",
+      "W"
     ],
     "Coritiba FBC": [
       "L",
@@ -1010,7 +1011,8 @@
       "W",
       "L",
       "D",
-      "W"
+      "W",
+      "L"
     ],
     "Grêmio FBPA": [
       "L",
@@ -1028,7 +1030,8 @@
       "W",
       "D",
       "L",
-      "D"
+      "D",
+      "W"
     ],
     "Chapecoense AF": [
       "W",
@@ -1063,6 +1066,7 @@
       "D",
       "D",
       "W",
+      "L",
       "L"
     ],
     "SC Corinthians Paulista": [
@@ -1134,7 +1138,8 @@
       "W",
       "D",
       "W",
-      "D"
+      "D",
+      "L"
     ],
     "Mirassol FC": [
       "W",
@@ -1151,7 +1156,8 @@
       "L",
       "W",
       "D",
-      "L"
+      "L",
+      "W"
     ],
     "CR Vasco da Gama": [
       "L",
@@ -1234,9 +1240,9 @@
         "l": 0
       },
       "away": {
-        "gf": 11,
+        "gf": 14,
         "ga": 7,
-        "w": 4,
+        "w": 5,
         "d": 3,
         "l": 1
       }
@@ -1347,17 +1353,17 @@
       },
       "away": {
         "gf": 10,
-        "ga": 11,
+        "ga": 12,
         "w": 2,
         "d": 2,
-        "l": 3
+        "l": 4
       }
     },
     "Grêmio FBPA": {
       "home": {
-        "gf": 11,
-        "ga": 6,
-        "w": 4,
+        "gf": 14,
+        "ga": 8,
+        "w": 5,
         "d": 2,
         "l": 1
       },
@@ -1394,11 +1400,11 @@
         "l": 3
       },
       "away": {
-        "gf": 9,
-        "ga": 14,
+        "gf": 11,
+        "ga": 17,
         "w": 0,
         "d": 4,
-        "l": 3
+        "l": 4
       }
     },
     "SC Corinthians Paulista": {
@@ -1452,10 +1458,10 @@
     "CR Flamengo": {
       "home": {
         "gf": 13,
-        "ga": 4,
+        "ga": 7,
         "w": 4,
         "d": 2,
-        "l": 0
+        "l": 1
       },
       "away": {
         "gf": 15,
@@ -1467,9 +1473,9 @@
     },
     "Mirassol FC": {
       "home": {
-        "gf": 10,
+        "gf": 11,
         "ga": 11,
-        "w": 2,
+        "w": 3,
         "d": 3,
         "l": 3
       },
