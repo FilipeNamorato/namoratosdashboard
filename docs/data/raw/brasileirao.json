@@ -98,6 +98,25 @@
     {
       "position": 6,
       "team": {
+        "id": 1777,
+        "name": "EC Bahia",
+        "shortName": "Bahia",
+        "tla": "BAH",
+        "crest": "https://crests.football-data.org/1777.png"
+      },
+      "playedGames": 16,
+      "form": null,
+      "won": 7,
+      "draw": 5,
+      "lost": 4,
+      "points": 26,
+      "goalsFor": 22,
+      "goalsAgainst": 19,
+      "goalDifference": 3
+    },
+    {
+      "position": 7,
+      "team": {
         "id": 1776,
         "name": "São Paulo FC",
         "shortName": "São Paulo",
@@ -115,26 +134,7 @@
       "goalDifference": 4
     },
     {
-      "position": 7,
-      "team": {
-        "id": 1777,
-        "name": "EC Bahia",
-        "shortName": "Bahia",
-        "tla": "BAH",
-        "crest": "https://crests.football-data.org/1777.png"
-      },
-      "playedGames": 15,
-      "form": null,
-      "won": 6,
-      "draw": 5,
-      "lost": 4,
-      "points": 23,
-      "goalsFor": 21,
-      "goalsAgainst": 19,
-      "goalDifference": 2
-    },
-    {
-      "position": 7,
+      "position": 8,
       "team": {
         "id": 4241,
         "name": "Coritiba FBC",
@@ -142,15 +142,15 @@
         "tla": "COR",
         "crest": "https://crests.football-data.org/4241.png"
       },
-      "playedGames": 16,
+      "playedGames": 17,
       "form": null,
       "won": 6,
       "draw": 5,
-      "lost": 5,
+      "lost": 6,
       "points": 23,
       "goalsFor": 21,
-      "goalsAgainst": 19,
-      "goalDifference": 2
+      "goalsAgainst": 20,
+      "goalDifference": 1
     },
     {
       "position": 9,
@@ -1053,7 +1053,7 @@
       "L",
       "D",
       "L",
-      "D"
+      "L"
     ],
     "Santos FC": [
       "L",
@@ -1219,7 +1219,7 @@
       "L",
       "W",
       "D",
-      "D"
+      "W"
     ]
   },
   "team_stats": {
@@ -1280,7 +1280,7 @@
         "l": 3
       },
       "away": {
-        "gf": 9,
+        "gf": 8,
         "ga": 10,
         "w": 4,
         "d": 1,
@@ -1312,7 +1312,7 @@
         "l": 1
       },
       "away": {
-        "gf": 8,
+        "gf": 7,
         "ga": 12,
         "w": 2,
         "d": 1,
@@ -1338,7 +1338,7 @@
     "Clube do Remo": {
       "home": {
         "gf": 10,
-        "ga": 12,
+        "ga": 11,
         "w": 1,
         "d": 4,
         "l": 3
@@ -1353,7 +1353,7 @@
     },
     "Fluminense FC": {
       "home": {
-        "gf": 18,
+        "gf": 17,
         "ga": 10,
         "w": 7,
         "d": 1,
@@ -1392,11 +1392,11 @@
         "l": 4
       },
       "away": {
-        "gf": 5,
+        "gf": 4,
         "ga": 12,
         "w": 0,
-        "d": 3,
-        "l": 4
+        "d": 2,
+        "l": 5
       }
     },
     "Santos FC": {
@@ -1457,7 +1457,7 @@
       },
       "away": {
         "gf": 9,
-        "ga": 14,
+        "ga": 13,
         "w": 2,
         "d": 2,
         "l": 5
@@ -1498,7 +1498,7 @@
     "CR Vasco da Gama": {
       "home": {
         "gf": 12,
-        "ga": 12,
+        "ga": 11,
         "w": 5,
         "d": 1,
         "l": 3
@@ -1530,9 +1530,9 @@
     "Cruzeiro EC": {
       "home": {
         "gf": 15,
-        "ga": 12,
-        "w": 3,
-        "d": 4,
+        "ga": 11,
+        "w": 4,
+        "d": 3,
         "l": 2
       },
       "away": {
