@@ -98,6 +98,25 @@
     {
       "position": 6,
       "team": {
+        "id": 1777,
+        "name": "EC Bahia",
+        "shortName": "Bahia",
+        "tla": "BAH",
+        "crest": "https://crests.football-data.org/1777.png"
+      },
+      "playedGames": 17,
+      "form": null,
+      "won": 7,
+      "draw": 5,
+      "lost": 5,
+      "points": 26,
+      "goalsFor": 25,
+      "goalsAgainst": 23,
+      "goalDifference": 2
+    },
+    {
+      "position": 7,
+      "team": {
         "id": 4241,
         "name": "Coritiba FBC",
         "shortName": "Coritiba",
@@ -115,7 +134,7 @@
       "goalDifference": 0
     },
     {
-      "position": 7,
+      "position": 8,
       "team": {
         "id": 1776,
         "name": "São Paulo FC",
@@ -132,25 +151,6 @@
       "goalsFor": 23,
       "goalsAgainst": 19,
       "goalDifference": 4
-    },
-    {
-      "position": 8,
-      "team": {
-        "id": 1777,
-        "name": "EC Bahia",
-        "shortName": "Bahia",
-        "tla": "BAH",
-        "crest": "https://crests.football-data.org/1777.png"
-      },
-      "playedGames": 17,
-      "form": null,
-      "won": 6,
-      "draw": 6,
-      "lost": 5,
-      "points": 24,
-      "goalsFor": 24,
-      "goalsAgainst": 23,
-      "goalDifference": 1
     },
     {
       "position": 9,
@@ -174,25 +174,6 @@
     {
       "position": 10,
       "team": {
-        "id": 1770,
-        "name": "Botafogo FR",
-        "shortName": "Botafogo",
-        "tla": "BOT",
-        "crest": "https://crests.football-data.org/1770.png"
-      },
-      "playedGames": 17,
-      "form": null,
-      "won": 6,
-      "draw": 5,
-      "lost": 6,
-      "points": 23,
-      "goalsFor": 31,
-      "goalsAgainst": 30,
-      "goalDifference": 1
-    },
-    {
-      "position": 11,
-      "team": {
         "id": 1771,
         "name": "Cruzeiro EC",
         "shortName": "Cruzeiro",
@@ -210,6 +191,25 @@
       "goalDifference": -4
     },
     {
+      "position": 11,
+      "team": {
+        "id": 1770,
+        "name": "Botafogo FR",
+        "shortName": "Botafogo",
+        "tla": "BOT",
+        "crest": "https://crests.football-data.org/1770.png"
+      },
+      "playedGames": 17,
+      "form": null,
+      "won": 6,
+      "draw": 4,
+      "lost": 7,
+      "points": 22,
+      "goalsFor": 31,
+      "goalsAgainst": 31,
+      "goalDifference": 0
+    },
+    {
       "position": 12,
       "team": {
         "id": 1782,
@@ -218,15 +218,15 @@
         "tla": "VIT",
         "crest": "https://crests.football-data.org/1782.png"
       },
-      "playedGames": 16,
+      "playedGames": 17,
       "form": null,
       "won": 6,
       "draw": 4,
-      "lost": 6,
+      "lost": 7,
       "points": 22,
       "goalsFor": 20,
-      "goalsAgainst": 22,
-      "goalDifference": -2
+      "goalsAgainst": 23,
+      "goalDifference": -3
     },
     {
       "position": 13,
@@ -288,6 +288,25 @@
     {
       "position": 16,
       "team": {
+        "id": 6685,
+        "name": "Santos FC",
+        "shortName": "Santos",
+        "tla": "SAN",
+        "crest": "https://crests.football-data.org/6685.png"
+      },
+      "playedGames": 18,
+      "form": null,
+      "won": 5,
+      "draw": 6,
+      "lost": 7,
+      "points": 21,
+      "goalsFor": 24,
+      "goalsAgainst": 28,
+      "goalDifference": -4
+    },
+    {
+      "position": 17,
+      "team": {
         "id": 1780,
         "name": "CR Vasco da Gama",
         "shortName": "Vasco da Gama",
@@ -303,25 +322,6 @@
       "goalsFor": 22,
       "goalsAgainst": 28,
       "goalDifference": -6
-    },
-    {
-      "position": 17,
-      "team": {
-        "id": 6685,
-        "name": "Santos FC",
-        "shortName": "Santos",
-        "tla": "SAN",
-        "crest": "https://crests.football-data.org/6685.png"
-      },
-      "playedGames": 17,
-      "form": null,
-      "won": 4,
-      "draw": 6,
-      "lost": 7,
-      "points": 18,
-      "goalsFor": 23,
-      "goalsAgainst": 28,
-      "goalDifference": -5
     },
     {
       "position": 18,
@@ -1038,7 +1038,8 @@
       "D",
       "L",
       "D",
-      "W"
+      "W",
+      "L"
     ],
     "Chapecoense AF": [
       "W",
@@ -1094,6 +1095,7 @@
       "L",
       "W",
       "L",
+      "W",
       "W"
     ],
     "EC Bahia": [
@@ -1112,7 +1114,8 @@
       "D",
       "L",
       "D",
-      "L"
+      "L",
+      "W"
     ],
     "São Paulo FC": [
       "W",
@@ -1206,7 +1209,8 @@
       "L",
       "D",
       "W",
-      "D"
+      "D",
+      "L"
     ],
     "Cruzeiro EC": [
       "L",
@@ -1375,11 +1379,11 @@
     },
     "Grêmio FBPA": {
       "home": {
-        "gf": 14,
-        "ga": 8,
+        "gf": 15,
+        "ga": 11,
         "w": 5,
         "d": 2,
-        "l": 1
+        "l": 2
       },
       "away": {
         "gf": 5,
@@ -1430,18 +1434,18 @@
         "l": 3
       },
       "away": {
-        "gf": 6,
-        "ga": 10,
-        "w": 1,
+        "gf": 9,
+        "ga": 11,
+        "w": 2,
         "d": 4,
         "l": 3
       }
     },
     "EC Bahia": {
       "home": {
-        "gf": 12,
-        "ga": 9,
-        "w": 2,
+        "gf": 14,
+        "ga": 10,
+        "w": 3,
         "d": 4,
         "l": 2
       },
@@ -1526,11 +1530,11 @@
         "l": 2
       },
       "away": {
-        "gf": 15,
-        "ga": 17,
+        "gf": 16,
+        "ga": 19,
         "w": 3,
         "d": 2,
-        "l": 4
+        "l": 5
       }
     },
     "Cruzeiro EC": {
