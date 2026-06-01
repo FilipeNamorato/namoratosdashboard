@@ -41,6 +41,25 @@
     {
       "position": 3,
       "team": {
+        "id": 1765,
+        "name": "Fluminense FC",
+        "shortName": "Fluminense",
+        "tla": "FLU",
+        "crest": "https://crests.football-data.org/1765.png"
+      },
+      "playedGames": 18,
+      "form": null,
+      "won": 9,
+      "draw": 4,
+      "lost": 5,
+      "points": 31,
+      "goalsFor": 27,
+      "goalsAgainst": 22,
+      "goalDifference": 5
+    },
+    {
+      "position": 4,
+      "team": {
         "id": 1768,
         "name": "CA Paranaense",
         "shortName": "Paranaense",
@@ -56,25 +75,6 @@
       "goalsFor": 24,
       "goalsAgainst": 18,
       "goalDifference": 6
-    },
-    {
-      "position": 4,
-      "team": {
-        "id": 1765,
-        "name": "Fluminense FC",
-        "shortName": "Fluminense",
-        "tla": "FLU",
-        "crest": "https://crests.football-data.org/1765.png"
-      },
-      "playedGames": 17,
-      "form": null,
-      "won": 9,
-      "draw": 3,
-      "lost": 5,
-      "points": 30,
-      "goalsFor": 27,
-      "goalsAgainst": 22,
-      "goalDifference": 5
     },
     {
       "position": 5,
@@ -98,6 +98,25 @@
     {
       "position": 6,
       "team": {
+        "id": 1776,
+        "name": "São Paulo FC",
+        "shortName": "São Paulo",
+        "tla": "PAU",
+        "crest": "https://crests.football-data.org/1776.png"
+      },
+      "playedGames": 18,
+      "form": null,
+      "won": 7,
+      "draw": 5,
+      "lost": 6,
+      "points": 26,
+      "goalsFor": 23,
+      "goalsAgainst": 19,
+      "goalDifference": 4
+    },
+    {
+      "position": 7,
+      "team": {
         "id": 1777,
         "name": "EC Bahia",
         "shortName": "Bahia",
@@ -115,7 +134,7 @@
       "goalDifference": 2
     },
     {
-      "position": 7,
+      "position": 8,
       "team": {
         "id": 4241,
         "name": "Coritiba FBC",
@@ -132,25 +151,6 @@
       "goalsFor": 24,
       "goalsAgainst": 24,
       "goalDifference": 0
-    },
-    {
-      "position": 8,
-      "team": {
-        "id": 1776,
-        "name": "São Paulo FC",
-        "shortName": "São Paulo",
-        "tla": "PAU",
-        "crest": "https://crests.football-data.org/1776.png"
-      },
-      "playedGames": 17,
-      "form": null,
-      "won": 7,
-      "draw": 4,
-      "lost": 6,
-      "points": 25,
-      "goalsFor": 23,
-      "goalsAgainst": 19,
-      "goalDifference": 4
     },
     {
       "position": 9,
@@ -199,12 +199,12 @@
         "tla": "CRU",
         "crest": "https://crests.football-data.org/1771.png"
       },
-      "playedGames": 17,
+      "playedGames": 18,
       "form": null,
       "won": 6,
-      "draw": 5,
+      "draw": 6,
       "lost": 6,
-      "points": 23,
+      "points": 24,
       "goalsFor": 23,
       "goalsAgainst": 27,
       "goalDifference": -4
@@ -351,12 +351,12 @@
         "tla": "CRE",
         "crest": "https://crests.football-data.org/4287.png"
       },
-      "playedGames": 17,
+      "playedGames": 18,
       "form": null,
       "won": 3,
-      "draw": 6,
+      "draw": 7,
       "lost": 8,
-      "points": 15,
+      "points": 16,
       "goalsFor": 20,
       "goalsAgainst": 29,
       "goalDifference": -9
@@ -501,7 +501,7 @@
         "venue": "Estadio Jornalista Mário Filho",
         "lastUpdated": "2024-07-29T17:24:37Z"
       },
-      "playedMatches": 17,
+      "playedMatches": 18,
       "goals": 8,
       "assists": 1,
       "penalties": null
@@ -749,7 +749,7 @@
         "venue": "Estádio do Morumbi",
         "lastUpdated": "2023-02-18T08:43:44Z"
       },
-      "playedMatches": 15,
+      "playedMatches": 16,
       "goals": 6,
       "assists": 1,
       "penalties": 1
