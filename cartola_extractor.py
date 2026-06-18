@@ -1805,6 +1805,7 @@ if __name__ == "__main__":
 
     dados_brutos = {}
     raw_pontuados = {}  # preserva o raw para salvar_snapshot_pontuados
+    raw_mercado   = {}  # preserva o raw para mapa_clubes completo (inclui jogos inválidos)
     for key, (normalizador, nome_arquivo) in EXTRATORES.items():
         print(f"Extraindo {key}...")
         try:
@@ -1816,6 +1817,8 @@ if __name__ == "__main__":
             dados_brutos[key] = df
             if key == "pontuados":
                 raw_pontuados = raw                                     # ← preserva para historico
+            if key == "mercado":
+                raw_mercado = raw                                       # ← preserva para mapa_clubes completo
             print(f"  OK — {len(df)} registros")
             log.append({"endpoint": key, "registros": len(df), "status": "OK", "erro": ""})
         except Exception as e:
@@ -1857,10 +1860,33 @@ if __name__ == "__main__":
     df_mercado  = dados_brutos.get("mercado",  pd.DataFrame())
     df_partidas = dados_brutos.get("partidas", pd.DataFrame())
     mapa_clubes = {}
+    # Popula primeiro a partir do dict 'clubes' da API (cobre todos os times,
+    # inclusive os de jogos inválidos que podem não ter atletas no mercado)
+    for id_str, clube_info in raw_mercado.get("clubes", {}).items():
+        try:
+            mapa_clubes[int(id_str)] = clube_info.get("abreviacao", id_str)
+        except (ValueError, TypeError):
+            pass
+    # Complementa/sobrescreve com dados dos atletas (mesma fonte, mas garante consistência)
     if not df_mercado.empty:
         for _, row in df_mercado.iterrows():
             if pd.notna(row.get("clube_id")) and pd.notna(row.get("clube")):
                 mapa_clubes[int(row["clube_id"])] = row["clube"]
+
+    # Adiciona nome_casa e nome_visitante no df_partidas para evitar depender dos atletas
+    if not df_partidas.empty and mapa_clubes:
+        col_casa_id = next((c for c in df_partidas.columns if "casa_id"      in c), None)
+        col_vis_id  = next((c for c in df_partidas.columns if "visitante_id" in c), None)
+        def _nome(club_id):
+            try:
+                return mapa_clubes.get(int(club_id), '')
+            except (ValueError, TypeError):
+                return ''
+        if col_casa_id:
+            df_partidas["nome_casa"]      = df_partidas[col_casa_id].apply(_nome)
+        if col_vis_id:
+            df_partidas["nome_visitante"] = df_partidas[col_vis_id].apply(_nome)
+        df_partidas.to_csv(CURRENT_DIR / "partidas.csv", index=False, encoding="utf-8-sig")
 
     try:
         if not df_partidas.empty and not df_odds.empty:
