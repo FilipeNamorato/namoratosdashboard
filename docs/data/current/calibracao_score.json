@@ -1,7 +1,7 @@
 {
   "status": "insuficiente",
-  "n_rodadas": 4,
-  "n_registros": 192,
+  "n_rodadas": 6,
+  "n_registros": 290,
   "pesos": {
     "defesa": {
       "oc": 0.3,
@@ -24,15 +24,19 @@
   "grupos": {
     "defesa": {
       "status": "insuficiente",
-      "n_rodadas": 4,
-      "n_registros": 80,
+      "n_rodadas": 6,
+      "n_registros": 123,
       "motivo": "precisa ≥3 rodadas e ≥150 registros"
     },
     "ataque": {
       "status": "insuficiente",
-      "n_rodadas": 4,
-      "n_registros": 112,
-      "motivo": "precisa ≥3 rodadas e ≥150 registros"
+      "n_rodadas": 6,
+      "n_registros": 167,
+      "motivo": "modelo OOS MAE=1.955 não supera heurística=1.634",
+      "metricas": {
+        "mae_heuristica": 1.634,
+        "mae_modelo_cv": 1.955
+      }
     }
   },
   "hiperparams": {
@@ -41,5 +45,5 @@
     "min_rodadas": 3,
     "min_registros": 150
   },
-  "atualizado_em": "2026-05-23 13:38 BRT"
+  "atualizado_em": "2026-06-18 08:10 BRT"
 }
