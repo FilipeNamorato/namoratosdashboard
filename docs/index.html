@@ -460,6 +460,11 @@ footer a { color: var(--green); text-decoration: none; }
   .nav-tabs { padding: 0 16px; }
   .timer-bar { padding: 14px 16px; }
   .timer-digits { font-size: 38px; letter-spacing: 3px; }
+  .filters-search-row { order: -1; width: 100%; }
+  .filters-search-row .search-wrap { width: auto; flex: 1; }
+  .filters-search-row .search-input { width: 100%; }
+  .filters-main-row { flex-wrap: wrap; }
+  .filters-divider { display: none; }
 }
 </style>
 </head>
@@ -574,9 +579,10 @@ footer a { color: var(--green); text-decoration: none; }
   </div>
 
   <div class="tab-panel" id="tab-atletas">
-    <div class="filters" style="flex-direction:column;align-items:flex-start;gap:6px;">
-      <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;">
-        <div id="filter-pos" style="display:flex;gap:6px;flex-wrap:wrap;">
+    <div class="filters" style="flex-direction:column;align-items:flex-start;gap:8px;">
+      <!-- Linha 1: filtros + busca + legenda na mesma linha -->
+      <div class="filters-main-row" style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;width:100%;">
+        <div id="filter-pos" style="display:flex;gap:4px;flex-wrap:wrap;">
           <button class="filter-btn active" data-pos="all">Todos</button>
           <button class="filter-btn" data-pos="Goleiro">GOL</button>
           <button class="filter-btn" data-pos="Lateral">LAT</button>
@@ -585,24 +591,28 @@ footer a { color: var(--green); text-decoration: none; }
           <button class="filter-btn" data-pos="Atacante">ATA</button>
           <button class="filter-btn" data-pos="Técnico">TEC</button>
         </div>
-        <div id="filter-rec" style="display:flex;gap:6px;flex-wrap:wrap;">
+        <div class="filters-divider" style="width:1px;height:16px;background:rgba(255,255,255,.1);margin:0 2px;"></div>
+        <div id="filter-rec" style="display:flex;gap:4px;flex-wrap:wrap;">
           <button class="filter-btn active" data-rec="all">Rec: Todas</button>
           <button class="filter-btn" data-rec="TITULAR">TITULAR</button>
           <button class="filter-btn" data-rec="RESERVA_LUXO">LUXO</button>
           <button class="filter-btn" data-rec="BANCO">BANCO</button>
           <button class="filter-btn" data-rec="EVITAR">EVITAR</button>
         </div>
+        <div class="filters-search-row" style="margin-left:auto;display:flex;gap:6px;align-items:center;">
+          <div class="search-wrap" style="width:240px;">
+            <span class="search-icon"><img src="./icons/busca.svg" style="width:13px;height:13px;vertical-align:middle;"></span>
+            <input class="search-input" type="text" id="search-input" placeholder="Atleta ou clube...">
+          </div>
+          <button class="filter-btn" id="btn-legenda" title="Legenda dos campos"><img src="./icons/ajuda.svg" style="width:13px;height:13px;vertical-align:middle;"></button>
+        </div>
       </div>
+      <!-- Linha 2: filtros especiais -->
       <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;">
         <button class="filter-btn danger" id="btn-mandante" data-active="false"><img src="./icons/casa.svg" style="width:13px;height:13px;vertical-align:middle;margin-right:4px;"> Mandante</button>
         <button class="filter-btn danger" id="btn-armadilha" data-active="false"><img src="./icons/alerta.svg" style="width:12px;height:12px;vertical-align:middle;margin-right:4px;"> Armadilha</button>
         <button class="filter-btn danger" id="btn-valor" data-active="false"><img src="./icons/diamante.svg" style="width:12px;height:12px;vertical-align:middle;margin-right:4px;"> Valor Oculto</button>
         <button class="filter-btn" id="btn-favoravel" data-active="false" style="border-color:rgba(255,145,0,.4);color:var(--orange)"><img src="./icons/alvo.svg" style="width:12px;height:12px;vertical-align:middle;margin-right:4px;"> Favorável</button>
-        <button class="filter-btn" id="btn-legenda" title="Legenda dos campos"><img src="./icons/ajuda.svg" style="width:13px;height:13px;vertical-align:middle;"></button>
-        <div class="search-wrap">
-          <span class="search-icon"><img src="./icons/busca.svg" style="width:13px;height:13px;vertical-align:middle;"></span>
-          <input class="search-input" type="text" id="search-input" placeholder="Atleta ou clube...">
-        </div>
       </div>
     </div>
 

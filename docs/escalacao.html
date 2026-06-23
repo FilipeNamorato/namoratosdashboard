@@ -273,8 +273,8 @@ footer {
 
 <header>
   <div>
-    <div class="logo">⚡ Escalação</div>
-    <div class="logo-sub">Montador automático · Namorato</div>
+    <div class="logo">Namorato's Dashboard</div>
+    <div class="logo-sub"><img src="./icons/escalacao.svg" style="width:11px;height:11px;vertical-align:middle;margin-right:4px;"> Sugestão de Escalação</div>
   </div>
   <a href="./index.html" class="back-btn">← Dashboard</a>
 </header>
@@ -294,25 +294,6 @@ footer {
         <option value="5-3-2">5-3-2</option>
         <option value="5-4-1">5-4-1</option>
       </select>
-      </div>
-    <div class="ctrl-group">
-      <div class="ctrl-label">Patrimônio atual (C$)</div>
-      <input type="number" class="ctrl-select" id="inp-patrimonio"
-             value="120" min="50" max="200" step="1" style="width:90px">
-    </div>
-    <div class="ctrl-group">
-      <div class="ctrl-label">Risco — orçamento: <span id="orc-calc">120</span> C$</div>
-      <input type="range" id="inp-risco" min="50" max="100" value="100" step="5"
-             style="width:160px;accent-color:var(--green);cursor:pointer">
-    </div>
-    <div class="ctrl-group">
-      <div class="ctrl-label">Preço mínimo titular</div>
-      <select class="ctrl-select" id="sel-preco-min">
-        <option value="0">Sem mínimo</option>
-        <option value="3">C$ 3+</option>
-        <option value="4">C$ 4+</option>
-        <option value="5">C$ 5+</option>
-      </select>
     </div>
     <button class="btn-gerar" id="btn-gerar" onclick="gerarEscalacoes()">GERAR OPÇÕES</button>
   </div>
@@ -320,7 +301,7 @@ footer {
   <!-- RESULTADO -->
   <div id="resultado">
     <div class="empty-state">
-      <span class="big">⚡</span>
+      <span class="big"><img src="./icons/escalacao.svg" style="width:40px;height:40px;"></span>
       Configure os parâmetros acima e clique em <strong>GERAR OPÇÕES</strong>
     </div>
   </div>
@@ -373,20 +354,9 @@ const FORMACOES = {
   '5-4-1': { Goleiro: 1, Zagueiro: 3, Lateral: 2, Meia: 4, Atacante: 1, Técnico: 1 },
 };
 
-// ── PATRIMÔNIO + RISCO ────────────────────────────────────────
 function calcOrcamento() {
-  const pat   = parseFloat(document.getElementById('inp-patrimonio').value) || 112;
-  const risco = parseFloat(document.getElementById('inp-risco').value) || 100;
-  // Orçamento = mín(patrimônio × risco%, 112) — nunca passa do teto do Cartola
-  const orc = Math.min(pat * risco / 100, 130);
-  document.getElementById('orc-calc').textContent = orc.toFixed(0);
-  return parseFloat(orc.toFixed(0));
+  return ORCAMENTO_MAX;
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-  document.getElementById('inp-patrimonio').addEventListener('input', calcOrcamento);
-  document.getElementById('inp-risco').addEventListener('input', calcOrcamento);
-});
 
 // ── HELPERS ───────────────────────────────────────────────────
 const n = (v, d = 2) => parseFloat(v || 0).toFixed(d);
@@ -543,11 +513,11 @@ function montarTime(elegíveis, formacao, orcamentoMax, precoMin, estrategia) {
 // ── RENDER ────────────────────────────────────────────────────
 function alBadgeHtml(label) {
   const map = {
-    'valor_oculto':    { cls: 'al-oculto', t: '💎' },
+    'valor_oculto':    { cls: 'al-oculto', t: '<img src="./icons/diamante.svg" style="width:11px;height:11px;vertical-align:middle;">' },
     'valor_bom':       { cls: 'al-bom',    t: '✓'  },
     'neutro':          { cls: 'al-neutro', t: '—'  },
-    'armadilha_leve':  { cls: 'al-leve',   t: '⚠'  },
-    'armadilha_forte': { cls: 'al-forte',  t: '🚨' },
+    'armadilha_leve':  { cls: 'al-leve',   t: '<img src="./icons/aviso.svg" style="width:11px;height:11px;vertical-align:middle;">'  },
+    'armadilha_forte': { cls: 'al-forte',  t: '<img src="./icons/alerta.svg" style="width:11px;height:11px;vertical-align:middle;">' },
   };
   const m = map[label] || map['neutro'];
   return `<span class="al-badge ${m.cls}">${m.t}</span>`;
@@ -577,7 +547,7 @@ function renderOpcao(resultado, titulo, descricao, badgeClass, badgeTxt, orcMax)
     const isCap  = capitao && j.atleta_id === capitao.atleta_id;
     const isMand = j.mandante === 'True';
     const advTag = j.adversario && j.adversario !== '—'
-      ? `<span class="j-adv ${isMand ? 'adv-home' : 'adv-away'}">${isMand ? '🏠' : '✈️'} ${j.adversario}</span>`
+      ? `<span class="j-adv ${isMand ? 'adv-home' : 'adv-away'}"><img src="./icons/${isMand ? 'casa' : 'visitante'}.svg" style="width:11px;height:11px;vertical-align:middle;margin-right:3px;"> ${j.adversario}</span>`
       : '';
     const capTag = isCap ? '<span class="capitao-tag">©</span>' : '';
     const rowCls = isCap ? 'jogador-row capitao' : 'jogador-row';
@@ -609,7 +579,7 @@ function renderOpcao(resultado, titulo, descricao, badgeClass, badgeTxt, orcMax)
     </div>` : '';
 
   const conflitosHtml = conflitos.length > 0
-    ? conflitos.map(c => `<div class="btts-alerta">⚠ BTTS: ${c}</div>`).join('')
+    ? conflitos.map(c => `<div class="btts-alerta"><img src="./icons/aviso.svg" style="width:11px;height:11px;vertical-align:middle;margin-right:4px;"> BTTS: ${c}</div>`).join('')
     : '';
 
   return `
@@ -633,7 +603,7 @@ function renderOpcao(resultado, titulo, descricao, badgeClass, badgeTxt, orcMax)
           <div class="stat-box-val val-b">${mediaScore.toFixed(1)}</div>
         </div>
         <div class="stat-box">
-          <div class="stat-box-label">💎 Valores</div>
+          <div class="stat-box-label"><img src="./icons/diamante.svg" style="width:11px;height:11px;vertical-align:middle;margin-right:3px;"> Valores</div>
           <div class="stat-box-val val-g">${nValorOculto}</div>
         </div>
       </div>
@@ -641,15 +611,6 @@ function renderOpcao(resultado, titulo, descricao, badgeClass, badgeTxt, orcMax)
         ${rowsHtml}
         ${conflitosHtml}
         ${reservaHtml ? `<div style="padding:6px 18px;font-family:var(--fm);font-size:9px;color:var(--purple);letter-spacing:1px;border-top:1px dashed rgba(206,147,216,.2);margin-top:4px">RESERVA DE LUXO</div>${reservaHtml}` : ''}
-      </div>
-      <div class="orcamento-bar">
-        <div class="orc-label">
-          <span>Orçamento utilizado</span>
-          <span style="color:var(--text)">${pctOrc.toFixed(0)}%</span>
-        </div>
-        <div class="orc-track">
-          <div class="orc-fill ${orcCls}" style="width:${pctOrc}%"></div>
-        </div>
       </div>
     </div>`;
 }
@@ -660,7 +621,7 @@ async function gerarEscalacoes() {
   const resultado = document.getElementById('resultado');
   const formacao  = document.getElementById('sel-formacao').value;
   const orcMax    = calcOrcamento();
-  const precoMin  = parseFloat(document.getElementById('sel-preco-min').value);
+  const precoMin  = 0;
 
   btn.disabled = true;
   btn.textContent = 'CARREGANDO...';
@@ -677,7 +638,7 @@ async function gerarEscalacoes() {
     );
 
     if (elegiveis.length === 0) {
-      resultado.innerHTML = `<div class="empty-state"><span class="big">⚠</span>Nenhum atleta elegível encontrado. Verifique se o arquivo atletas.csv está atualizado.</div>`;
+      resultado.innerHTML = `<div class="empty-state"><span class="big"><img src="./icons/aviso.svg" style="width:40px;height:40px;"></span>Nenhum atleta elegível encontrado. Verifique se o arquivo atletas.csv está atualizado.</div>`;
       return;
     }
 
@@ -711,7 +672,7 @@ async function gerarEscalacoes() {
 
     const html = `
       <div style="font-family:var(--fm);font-size:10px;color:var(--muted);margin-bottom:16px;letter-spacing:1px;">
-        ${elegiveis.length} atletas elegíveis · formação ${formacao} · orçamento C$${orcMax}
+        ${elegiveis.length} atletas elegíveis · formação ${formacao}
       </div>
       <div class="opcoes-grid">
         ${opcoes.map(o => renderOpcao(o.resultado, o.titulo, o.desc, o.badge, o.badgeTxt, orcMax)).join('')}
