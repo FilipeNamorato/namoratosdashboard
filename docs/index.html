@@ -475,7 +475,7 @@ footer a { color: var(--green); text-decoration: none; }
     <span class="calib-pill calib-heur" id="calib-pill" data-tip="Status do modelo de pontos_esperados">heurística</span>
     <div class="last-update">coleta: <span id="last-update">—</span></div>
     <button class="btn" onclick="init()">↻ Atualizar</button>
-    <a href="./escalacao.html" class="btn" style="text-decoration:none;">⚡ Sugestão de Escalação</a>
+    <a href="./escalacao.html" class="btn" style="text-decoration:none;"><img src="./icons/escalacao.svg" style="width:13px;height:13px;vertical-align:middle;margin-right:4px;"> Sugestão de Escalação</a>
   </div>
 </header>
 
@@ -519,7 +519,7 @@ footer a { color: var(--green); text-decoration: none; }
           <div class="card-title" data-tip="Atletas com maior alta de preço na última rodada">MAIORES ALTAS</div>
           <div class="badge bg">VAR +</div>
         </div>
-        <div class="card-expl">Quem mais valorizou após a última rodada — bom sinal de forma recente, mas verifique o preço atual antes de escalar.</div>
+        <div class="card-expl">Quem mais valorizou após a última rodada: bom sinal de forma recente, mas verifique o preço atual antes de escalar.</div>
         <ul class="card-list" id="l-altas"><li><div class="loading"><div class="spinner"></div>carregando...</div></li></ul>
         <div class="card-leg" id="leg-altas"></div>
       </div>
@@ -529,14 +529,14 @@ footer a { color: var(--green); text-decoration: none; }
           <div class="card-title" data-tip="Atletas com maior queda de preço na última rodada">MAIORES BAIXAS</div>
           <div class="badge br">VAR −</div>
         </div>
-        <div class="card-expl">Quem mais desvalorizou — pode ser oportunidade de compra se a queda foi pontual, ou sinal de perda de forma.</div>
+        <div class="card-expl">Quem mais desvalorizou: pode ser oportunidade de compra se a queda foi pontual, ou sinal de perda de forma.</div>
         <ul class="card-list" id="l-baixas"><li><div class="loading"><div class="spinner"></div>carregando...</div></li></ul>
         <div class="card-leg" id="leg-baixas"></div>
       </div>
 
       <div class="card">
         <div class="card-header">
-          <div class="card-title" data-tip="Atletas com residuo_z > 1.5: entregam muito acima do esperado pelo preço, detectado por regressão linear dentro da posição">💎 VALORES OCULTOS</div>
+          <div class="card-title" data-tip="Atletas com residuo_z > 1.5: entregam muito acima do esperado pelo preço, detectado por regressão linear dentro da posição"><img src="./icons/diamante.svg" style="width:14px;height:14px;vertical-align:middle;margin-right:5px;"> VALORES OCULTOS</div>
           <div class="badge bg">RENDIMENTO ACIMA DO PREÇO</div>
         </div>
         <div class="card-expl">Atletas cujo rendimento real supera significativamente o que o preço deles prevê — detectados por regressão linear dentro de cada posição. São as melhores oportunidades de mercado.</div>
@@ -546,7 +546,7 @@ footer a { color: var(--green); text-decoration: none; }
 
       <div class="card">
         <div class="card-header">
-          <div class="card-title" data-tip="Atletas com residuo_z < -1.5: entregam muito abaixo do esperado pelo preço — risco real de perda de cartoletas">🚨 ARMADILHAS FORTES</div>
+          <div class="card-title" data-tip="Atletas com residuo_z < -1.5: entregam muito abaixo do esperado pelo preço — risco real de perda de cartoletas"><img src="./icons/alerta.svg" style="width:14px;height:14px;vertical-align:middle;margin-right:5px;"> ARMADILHAS FORTES</div>
           <div class="badge br">PREÇO ALTO · PERFORMANCE BAIXA</div>
         </div>
         <div class="card-expl">Atletas que rendem muito abaixo do que o preço sugere, medido por regressão contra a posição inteira. Escalar um desses é queimar cartoletas — cuidado mesmo se parecerem óbvios.</div>
@@ -556,7 +556,7 @@ footer a { color: var(--green); text-decoration: none; }
 
       <div class="card">
         <div class="card-header">
-          <div class="card-title" data-tip="Jogadores caros com confronto favorável: 🎯 em casa (vantagem de mando + score>60) ou ✈️🎯 fora de casa com confronto muito favorável (score>70, ex: 1º vs. último). Ambos exigem residuo_z positivo e pontos_esperados acima da mediana.">🎯 CAROS QUE VALEM</div>
+          <div class="card-title" data-tip="Jogadores caros com confronto favorável: ⭐ em casa (vantagem de mando + score>60) ou ✈️⭐ fora de casa com confronto muito favorável (score>70, ex: 1º vs. último). Ambos exigem residuo_z positivo e pontos_esperados acima da mediana."><img src="./icons/alvo.svg" style="width:14px;height:14px;vertical-align:middle;margin-right:5px;"> CAROS QUE VALEM</div>
           <div class="badge" style="background:rgba(255,145,0,.15);border-color:rgba(255,145,0,.3);color:var(--orange)">CONFRONTO FAVORÁVEL</div>
         </div>
         <div class="card-expl">Jogadores com preço acima do limiar da posição que, nessa rodada específica, reúnem condições favoráveis: joga em casa, time com aproveitamento melhor em casa que adversário fora, confronto sólido e desempenho acima do esperado pelo preço. Ordenado por pontos esperados.</div>
@@ -591,13 +591,13 @@ footer a { color: var(--green); text-decoration: none; }
         <button class="filter-btn" data-rec="BANCO">BANCO</button>
         <button class="filter-btn" data-rec="EVITAR">EVITAR</button>
       </div>
-      <button class="filter-btn danger" id="btn-mandante" data-active="false">🏠 Mandante</button>
-      <button class="filter-btn danger" id="btn-armadilha" data-active="false">🚨 Armadilha</button>
-      <button class="filter-btn danger" id="btn-valor" data-active="false">💎 Valor Oculto</button>
-      <button class="filter-btn" id="btn-favoravel" data-active="false" style="border-color:rgba(255,145,0,.4);color:var(--orange)">🎯 Favorável</button>
-      <button class="filter-btn" id="btn-legenda" title="Legenda dos campos">❓</button>
+      <button class="filter-btn danger" id="btn-mandante" data-active="false"><img src="./icons/casa.svg" style="width:13px;height:13px;vertical-align:middle;margin-right:4px;"> Mandante</button>
+      <button class="filter-btn danger" id="btn-armadilha" data-active="false"><img src="./icons/alerta.svg" style="width:12px;height:12px;vertical-align:middle;margin-right:4px;"> Armadilha</button>
+      <button class="filter-btn danger" id="btn-valor" data-active="false"><img src="./icons/diamante.svg" style="width:12px;height:12px;vertical-align:middle;margin-right:4px;"> Valor Oculto</button>
+      <button class="filter-btn" id="btn-favoravel" data-active="false" style="border-color:rgba(255,145,0,.4);color:var(--orange)"><img src="./icons/alvo.svg" style="width:12px;height:12px;vertical-align:middle;margin-right:4px;"> Favorável</button>
+      <button class="filter-btn" id="btn-legenda" title="Legenda dos campos"><img src="./icons/ajuda.svg" style="width:13px;height:13px;vertical-align:middle;"></button>
       <div class="search-wrap">
-        <span class="search-icon">🔎</span>
+        <span class="search-icon"><img src="./icons/busca.svg" style="width:13px;height:13px;vertical-align:middle;"></span>
         <input class="search-input" type="text" id="search-input" placeholder="Atleta ou clube...">
       </div>
     </div>
@@ -653,7 +653,7 @@ footer a { color: var(--green); text-decoration: none; }
 
   <div class="tab-panel" id="tab-confrontos">
     <div class="section-title"><div class="accent"></div>JOGOS DA RODADA</div>
-    <div class="section-sub">Cards incluem odds, probabilidades e — quando disponível — análise de momentum dos dois times (gols recentes vs temporada, forma ponderada e sequência de resultados).</div>
+    <div class="section-sub">Cards incluem odds, probabilidades e, quando disponível, análise de momentum dos dois times (gols recentes vs temporada, forma ponderada e sequência de resultados).</div>
     <div class="confrontos-grid" id="confrontos-grid">
       <div class="loading"><div class="spinner"></div>carregando...</div>
     </div>
@@ -732,7 +732,7 @@ footer a { color: var(--green); text-decoration: none; }
 
   <div class="tab-panel" id="tab-times">
     <div class="section-title"><span class="accent"></span>Times da Rodada</div>
-    <div class="section-sub">Visão agregada por time — tier, score, valores ocultos e prováveis escaláveis.</div>
+    <div class="section-sub">Visão agregada por time: tier, score, valores ocultos e prováveis escaláveis.</div>
     <div class="tr-grid" id="times-grid">
       <div class="loading"><div class="spinner"></div>carregando...</div>
     </div>
@@ -939,11 +939,11 @@ function getOdds(abr_casa, abr_vis) {
 // ── HELPERS ───────────────────────────────────────────────────
 function armadilhaHtml(label) {
   const map = {
-    'valor_oculto':   { cls: 'al-oculto', text: '💎 VALOR'    },
+    'valor_oculto':   { cls: 'al-oculto', text: '<img src="./icons/diamante.svg" style="width:11px;height:11px;vertical-align:middle;margin-right:2px;"> VALOR'    },
     'valor_bom':      { cls: 'al-bom',    text: '✓ BOM'       },
     'neutro':         { cls: 'al-neutro', text: '—'           },
-    'armadilha_leve': { cls: 'al-leve',   text: '⚠ LEVE'     },
-    'armadilha_forte':{ cls: 'al-forte',  text: '🚨 FORTE'    },
+    'armadilha_leve': { cls: 'al-leve',   text: '<img src="./icons/aviso.svg" style="width:11px;height:11px;vertical-align:middle;margin-right:2px;"> LEVE'     },
+    'armadilha_forte':{ cls: 'al-forte',  text: '<img src="./icons/alerta.svg" style="width:11px;height:11px;vertical-align:middle;margin-right:2px;"> FORTE'    },
   };
   const m = map[label] || map['neutro'];
   return `<span class="al-badge ${m.cls}">${m.text}</span>`;
@@ -1067,7 +1067,7 @@ function confCellHtml(a) {
   const tip = tipParts.join('\n').replace(/"/g, '&quot;');
 
   return `<div class="conf-cell tip-multi" data-tip="${tip}">
-    <span class="conf-tag ${isMand ? 'conf-home' : 'conf-away'}">${isMand ? '🏠' : '✈️'} ${adv}</span>
+    <span class="conf-tag ${isMand ? 'conf-home' : 'conf-away'}"><img src="./icons/${isMand ? 'casa' : 'visitante'}.svg" style="width:12px;height:12px;vertical-align:middle;margin-right:3px;"> ${adv}</span>
     ${opcHtml(a.oportunidade_confronto, a.vantagem_mando)}
   </div>`;
 }
@@ -1075,8 +1075,8 @@ function confCellHtml(a) {
 function sequenciaTexto(seq) {
   const n = parseInt(seq);
   if (isNaN(n) || n === 0) return '';
-  if (n > 0) return `<span class="seq-text hot">🔥 Invicto há ${n}</span>`;
-  return `<span class="seq-text cold">📉 ${Math.abs(n)} sem ganhar</span>`;
+  if (n > 0) return `<span class="seq-text hot"><img src="./icons/fogo.svg" style="width:11px;height:11px;vertical-align:middle;margin-right:2px;"> Invicto há ${n}</span>`;
+  return `<span class="seq-text cold"><img src="./icons/queda.svg" style="width:11px;height:11px;vertical-align:middle;margin-right:2px;"> ${Math.abs(n)} sem ganhar</span>`;
 }
 
 function momentumArrow(val, inverso) {
@@ -1163,7 +1163,7 @@ function buildMomentumBlock(abrCasa, abrVis) {
     const mdfCls = !isNaN(mdf) ? (mdf < 0.95 ? 'def-up' : mdf > 1.05 ? 'def-down' : 'of-neu') : 'of-neu';
     const mofStr = !isNaN(mof) ? `<span class="mom-chip ${mofCls}">⚔️ MOF ${mof > 1 ? '↑' : mof < 1 ? '↓' : '→'}${mof.toFixed(2)}</span>` : '';
     const mdfStr = !isNaN(mdf) ? `<span class="mom-chip ${mdfCls}">🛡 MDF ${mdf < 1 ? '↓' : mdf > 1 ? '↑' : '→'}${mdf.toFixed(2)}</span>` : '';
-    const seqStr = (!isNaN(seq) && seq !== 0) ? (seq > 0 ? `<span class="mom-seq hot">🔥 Invicto há ${seq}</span>` : `<span class="mom-seq cold">📉 ${Math.abs(seq)} sem ganhar</span>`) : '';
+    const seqStr = (!isNaN(seq) && seq !== 0) ? (seq > 0 ? `<span class="mom-seq hot"><img src="./icons/fogo.svg" style="width:10px;height:10px;vertical-align:middle;margin-right:2px;"> Invicto há ${seq}</span>` : `<span class="mom-seq cold"><img src="./icons/queda.svg" style="width:10px;height:10px;vertical-align:middle;margin-right:2px;"> ${Math.abs(seq)} sem ganhar</span>`) : '';
     const fsStr  = !isNaN(fs) ? `<span style="font-family:var(--fm);font-size:9px;color:var(--muted)">Forma ${Math.round(fs*100)}%</span>` : '';
     const forma  = formaDotsMini(t.forma || '');
 
@@ -1213,7 +1213,7 @@ function renderCardList(id, items, valueFn, cls) {
   el.innerHTML = items.map((a, i) => {
     const isMand = a.mandante === 'True';
     const confTag = a.adversario && a.adversario !== '—'
-      ? `<span class="conf-tag ${isMand?'conf-home':'conf-away'}">${isMand?'🏠':'✈️'} ${a.adversario}</span>` : '';
+      ? `<span class="conf-tag ${isMand?'conf-home':'conf-away'}"><img src="./icons/${isMand?'casa':'visitante'}.svg" style="width:11px;height:11px;vertical-align:middle;margin-right:3px;"> ${a.adversario}</span>` : '';
     return `<li>
       <span class="rank">${i+1}</span>
       <span class="pname">${a.nome||'—'}</span>
@@ -1258,7 +1258,7 @@ function renderDestaques() {
     return (a.condicao_mando === 'favoravel' || a.condicao_mando === 'favoravel_visitante') && parseFloat(a.preco || 0) >= lim;
   }).sort((a, b) => parseFloat(b.pontos_esperados || 0) - parseFloat(a.pontos_esperados || 0));
   renderCardList('l-caros-fav', top8(carosFav),
-    a => (a.condicao_mando === 'favoravel_visitante' ? '✈️ ' : '') + parseFloat(a.pontos_esperados || 0).toFixed(2) + ' pts', 'up');
+    a => (a.condicao_mando === 'favoravel_visitante' ? '<img src="./icons/visitante.svg" style="width:11px;height:11px;vertical-align:middle;margin-right:2px;"> ' : '') + parseFloat(a.pontos_esperados || 0).toFixed(2) + ' pts', 'up');
   document.getElementById('leg-caros-fav').textContent =
     `${carosFav.length} jogador(es) caro(s) com condição favorável nessa rodada`;
 }
@@ -1304,7 +1304,7 @@ function renderTopConfrontos() {
           <span class="rank">${i+1}</span>
           <span class="pname">${a.nome}</span>
           <span class="pclub">${a.clube}</span>
-          <span class="conf-tag ${isMand?'conf-home':'conf-away'}">${isMand?'🏠':'✈️'} ${adv}</span>
+          <span class="conf-tag ${isMand?'conf-home':'conf-away'}"><img src="./icons/${isMand?'casa':'visitante'}.svg" style="width:11px;height:11px;vertical-align:middle;margin-right:3px;"> ${adv}</span>
           <span class="${scoreCls}" style="font-family:var(--fm);font-size:12px;font-weight:600;margin-left:auto">${score.toFixed(1)}</span>
         </div>
         <div class="conf-list-bottom">
@@ -1339,7 +1339,7 @@ function renderTimesRodada() {
 
   grid.innerHTML = sorted.map(t => {
     const mand = t.mandante === 'True';
-    const advTag = `<span style="font-family:var(--fm);font-size:10px;color:var(--muted)">${mand ? '🏠 vs' : '✈️ @'} ${t.adversario}</span>`;
+    const advTag = `<span style="font-family:var(--fm);font-size:10px;color:var(--muted)"><img src="./icons/${mand?'casa':'visitante'}.svg" style="width:11px;height:11px;vertical-align:middle;margin-right:2px;">${mand ? ' vs' : ' @'} ${t.adversario}</span>`;
     const pct = Math.round(nf(t.prob_vitoria) * 100);
     const scoreVal = nf(t.score_time);
     const scoreCls = scoreVal >= 0.7 ? 'g' : scoreVal >= 0.5 ? 'y' : 'r';
@@ -1428,7 +1428,7 @@ function renderTable() {
                  : '';
 
     const ptEsp = parseFloat(a.pontos_esperados || 0);
-    const ptEspIcon = cond === 'favoravel' ? ' 🎯' : cond === 'favoravel_visitante' ? ' ✈️🎯' : '';
+    const ptEspIcon = cond === 'favoravel' ? ' <img src="./icons/alvo.svg" style="width:11px;height:11px;vertical-align:middle;">' : cond === 'favoravel_visitante' ? ' <img src="./icons/visitante.svg" style="width:11px;height:11px;vertical-align:middle;"><img src="./icons/alvo.svg" style="width:11px;height:11px;vertical-align:middle;">' : '';
     const ptEspHtml = ptEsp > 0
       ? `<span style="color:${isFav ? 'var(--orange)' : 'var(--text)'};font-weight:${isFav ? '600' : '400'}">${ptEsp.toFixed(2)}${ptEspIcon}</span>`
       : '—';
@@ -1517,7 +1517,7 @@ function renderConfrontos() {
         <div class="time-bloco vis"><div class="time-nome">${vis}</div></div>
       </div>
       <div class="jogo-meta">
-        <span class="jogo-tag bg conf-home">🏠 ${casa}</span>
+        <span class="jogo-tag bg conf-home"><img src="./icons/casa.svg" style="width:11px;height:11px;vertical-align:middle;margin-right:3px;"> ${casa}</span>
         <span class="jogo-tag bb">${dt}</span>
         ${local !== '—' ? `<span class="jogo-tag" style="background:rgba(90,116,145,.1);color:var(--muted)">${local}</span>` : ''}
         ${validaTag}
@@ -1643,7 +1643,7 @@ function renderBrasileiraoCards(tabela, hist, teamStats) {
     const fs   = parseFloat(csv.forma_score);
     const sgCls = sg > 0 ? 'g' : sg < 0 ? 'r' : '';
     const aClss = pct >= 60 ? 'g' : pct >= 40 ? 'y' : 'r';
-    const seqVal = !isNaN(seq) && seq !== 0 ? (seq > 0 ? `+${seq} 🔥` : `${seq} 📉`) : '—';
+    const seqVal = !isNaN(seq) && seq !== 0 ? (seq > 0 ? `+${seq} <img src="./icons/fogo.svg" style="width:11px;height:11px;vertical-align:middle;">` : `${seq} <img src="./icons/queda.svg" style="width:11px;height:11px;vertical-align:middle;">`) : '—';
     const seqCls = !isNaN(seq) ? (seq > 0 ? 'o' : seq < 0 ? 'r' : '') : '';
 
     return `<div class="bra-card">
