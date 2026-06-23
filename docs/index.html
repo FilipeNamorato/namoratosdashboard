@@ -574,31 +574,35 @@ footer a { color: var(--green); text-decoration: none; }
   </div>
 
   <div class="tab-panel" id="tab-atletas">
-    <div class="filters">
-      <div id="filter-pos" style="display:flex;gap:6px;flex-wrap:wrap;">
-        <button class="filter-btn active" data-pos="all">Todos</button>
-        <button class="filter-btn" data-pos="Goleiro">GOL</button>
-        <button class="filter-btn" data-pos="Lateral">LAT</button>
-        <button class="filter-btn" data-pos="Zagueiro">ZAG</button>
-        <button class="filter-btn" data-pos="Meia">MEI</button>
-        <button class="filter-btn" data-pos="Atacante">ATA</button>
-        <button class="filter-btn" data-pos="Técnico">TEC</button>
+    <div class="filters" style="flex-direction:column;align-items:flex-start;gap:6px;">
+      <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;">
+        <div id="filter-pos" style="display:flex;gap:6px;flex-wrap:wrap;">
+          <button class="filter-btn active" data-pos="all">Todos</button>
+          <button class="filter-btn" data-pos="Goleiro">GOL</button>
+          <button class="filter-btn" data-pos="Lateral">LAT</button>
+          <button class="filter-btn" data-pos="Zagueiro">ZAG</button>
+          <button class="filter-btn" data-pos="Meia">MEI</button>
+          <button class="filter-btn" data-pos="Atacante">ATA</button>
+          <button class="filter-btn" data-pos="Técnico">TEC</button>
+        </div>
+        <div id="filter-rec" style="display:flex;gap:6px;flex-wrap:wrap;">
+          <button class="filter-btn active" data-rec="all">Rec: Todas</button>
+          <button class="filter-btn" data-rec="TITULAR">TITULAR</button>
+          <button class="filter-btn" data-rec="RESERVA_LUXO">LUXO</button>
+          <button class="filter-btn" data-rec="BANCO">BANCO</button>
+          <button class="filter-btn" data-rec="EVITAR">EVITAR</button>
+        </div>
       </div>
-      <div id="filter-rec" style="display:flex;gap:6px;flex-wrap:wrap;margin-left:4px;">
-        <button class="filter-btn active" data-rec="all">Rec: Todas</button>
-        <button class="filter-btn" data-rec="TITULAR">TITULAR</button>
-        <button class="filter-btn" data-rec="RESERVA_LUXO">LUXO</button>
-        <button class="filter-btn" data-rec="BANCO">BANCO</button>
-        <button class="filter-btn" data-rec="EVITAR">EVITAR</button>
-      </div>
-      <button class="filter-btn danger" id="btn-mandante" data-active="false"><img src="./icons/casa.svg" style="width:13px;height:13px;vertical-align:middle;margin-right:4px;"> Mandante</button>
-      <button class="filter-btn danger" id="btn-armadilha" data-active="false"><img src="./icons/alerta.svg" style="width:12px;height:12px;vertical-align:middle;margin-right:4px;"> Armadilha</button>
-      <button class="filter-btn danger" id="btn-valor" data-active="false"><img src="./icons/diamante.svg" style="width:12px;height:12px;vertical-align:middle;margin-right:4px;"> Valor Oculto</button>
-      <button class="filter-btn" id="btn-favoravel" data-active="false" style="border-color:rgba(255,145,0,.4);color:var(--orange)"><img src="./icons/alvo.svg" style="width:12px;height:12px;vertical-align:middle;margin-right:4px;"> Favorável</button>
-      <button class="filter-btn" id="btn-legenda" title="Legenda dos campos"><img src="./icons/ajuda.svg" style="width:13px;height:13px;vertical-align:middle;"></button>
-      <div class="search-wrap">
-        <span class="search-icon"><img src="./icons/busca.svg" style="width:13px;height:13px;vertical-align:middle;"></span>
-        <input class="search-input" type="text" id="search-input" placeholder="Atleta ou clube...">
+      <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;">
+        <button class="filter-btn danger" id="btn-mandante" data-active="false"><img src="./icons/casa.svg" style="width:13px;height:13px;vertical-align:middle;margin-right:4px;"> Mandante</button>
+        <button class="filter-btn danger" id="btn-armadilha" data-active="false"><img src="./icons/alerta.svg" style="width:12px;height:12px;vertical-align:middle;margin-right:4px;"> Armadilha</button>
+        <button class="filter-btn danger" id="btn-valor" data-active="false"><img src="./icons/diamante.svg" style="width:12px;height:12px;vertical-align:middle;margin-right:4px;"> Valor Oculto</button>
+        <button class="filter-btn" id="btn-favoravel" data-active="false" style="border-color:rgba(255,145,0,.4);color:var(--orange)"><img src="./icons/alvo.svg" style="width:12px;height:12px;vertical-align:middle;margin-right:4px;"> Favorável</button>
+        <button class="filter-btn" id="btn-legenda" title="Legenda dos campos"><img src="./icons/ajuda.svg" style="width:13px;height:13px;vertical-align:middle;"></button>
+        <div class="search-wrap">
+          <span class="search-icon"><img src="./icons/busca.svg" style="width:13px;height:13px;vertical-align:middle;"></span>
+          <input class="search-input" type="text" id="search-input" placeholder="Atleta ou clube...">
+        </div>
       </div>
     </div>
 
@@ -757,12 +761,12 @@ footer a { color: var(--green); text-decoration: none; }
       <div style="display:flex; gap:10px;"><span style="color:var(--green); min-width:80px;">C/B</span><span style="color:var(--muted)">Custo-benefício: média bayesiana ÷ preço × confiabilidade</span></div>
       <div style="display:flex; gap:10px;"><span style="color:var(--green); min-width:80px;">RANK</span><span style="color:var(--muted)">Ranking de C/B dentro da posição</span></div>
       <div style="color:var(--muted); font-size:9px; letter-spacing:2px; text-transform:uppercase; margin-top:4px;">— Confronto —</div>
-      <div style="display:flex; gap:10px;"><span style="color:var(--green); min-width:80px;">CONF/OPC</span><span style="color:var(--muted)">Confronto (🏠 casa / ✈️ fora) + barra de oportunidade posicional (0–1) + vantagem de aproveitamento em pp</span></div>
+      <div style="display:flex; gap:10px;"><span style="color:var(--green); min-width:80px;">CONF/OPC</span><span style="color:var(--muted)">Confronto (<img src="./icons/casa.svg" style="width:11px;height:11px;vertical-align:middle;"> casa / <img src="./icons/visitante.svg" style="width:11px;height:11px;vertical-align:middle;"> fora) + barra de oportunidade posicional (0–1) + vantagem de aproveitamento em pp</span></div>
       <div style="display:flex; gap:10px;"><span style="color:var(--green); min-width:80px;">OPC (barra)</span><span style="color:var(--muted)">Atacantes/Meias: quão fraca é a defesa do adversário no mando. Defensores/GOL: quão fraco é o ataque adversário. Percentil 0–1.</span></div>
       <div style="color:var(--muted); font-size:9px; letter-spacing:2px; text-transform:uppercase; margin-top:4px;">— Avaliação —</div>
-      <div style="display:flex; gap:10px;"><span style="color:var(--green); min-width:80px;">LABEL</span><span style="color:var(--muted)">Avaliação por regressão linear (preço → média) dentro da posição: 💎 valor_oculto · ✓ valor_bom · — neutro · ⚠ armadilha_leve · 🚨 armadilha_forte</span></div>
+      <div style="display:flex; gap:10px;"><span style="color:var(--green); min-width:80px;">LABEL</span><span style="color:var(--muted)">Avaliação por regressão linear (preço → média) dentro da posição: <img src="./icons/diamante.svg" style="width:11px;height:11px;vertical-align:middle;"> valor_oculto · ✓ valor_bom · — neutro · <img src="./icons/aviso.svg" style="width:11px;height:11px;vertical-align:middle;"> armadilha_leve · <img src="./icons/alerta.svg" style="width:11px;height:11px;vertical-align:middle;"> armadilha_forte</span></div>
       <div style="display:flex; gap:10px;"><span style="color:var(--yellow); min-width:80px;">SCORE</span><span style="color:var(--muted)">Escore-Z do confronto. Mede a distância para a média da posição. <strong>50.0</strong> = Confronto mediano/neutro. <strong>60.0 ou mais</strong> = Confronto excelente. <strong>40.0 ou menos</strong> = Fogueira (evite escalar). Mistura mando de campo, fragilidade do adversário e momentum.</span></div>
-      <div style="display:flex; gap:10px;"><span style="color:var(--orange); min-width:80px;">PONTOS ESP.</span><span style="color:var(--muted)">Retorno absoluto esperado nesta rodada: média bayesiana × (score_confronto ÷ 50) × confiabilidade. Confronto 100 dobra o retorno esperado; confronto 50 mantém neutro. Linhas em laranja com 🎯 indicam mandantes com confronto favorável; ✈️🎯 indica visitantes com confronto muito favorável (score&gt;70) — ex: time forte fora contra lanterna.</span></div>
+      <div style="display:flex; gap:10px;"><span style="color:var(--orange); min-width:80px;">PONTOS ESP.</span><span style="color:var(--muted)">Retorno absoluto esperado nesta rodada: média bayesiana × (score_confronto ÷ 50) × confiabilidade. Confronto 100 dobra o retorno esperado; confronto 50 mantém neutro. Linhas em laranja com <img src="./icons/alvo.svg" style="width:11px;height:11px;vertical-align:middle;"> indicam mandantes com confronto favorável; <img src="./icons/visitante.svg" style="width:11px;height:11px;vertical-align:middle;"><img src="./icons/alvo.svg" style="width:11px;height:11px;vertical-align:middle;"> indica visitantes com confronto muito favorável (score&gt;70) — ex: time forte fora contra lanterna.</span></div>
       <div style="color:var(--muted); font-size:9px; letter-spacing:2px; text-transform:uppercase; margin-top:4px;">— Brasileirão —</div>
       <div style="display:flex; gap:10px;"><span style="color:var(--green); min-width:80px;">MOF</span><span style="color:var(--muted)">Momentum ofensivo: ratio gols marcados recentes ÷ média da temporada. &gt;1 = time marcando mais que o normal</span></div>
       <div style="display:flex; gap:10px;"><span style="color:var(--green); min-width:80px;">MDF</span><span style="color:var(--muted)">Momentum defensivo: ratio gols sofridos recentes ÷ média. &lt;1 = defesa mais sólida que o normal</span></div>
