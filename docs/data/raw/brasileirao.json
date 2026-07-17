@@ -41,24 +41,43 @@
     {
       "position": 3,
       "team": {
+        "id": 4286,
+        "name": "RB Bragantino",
+        "shortName": "Bragantino",
+        "tla": "RBB",
+        "crest": "https://crests.football-data.org/4286.png"
+      },
+      "playedGames": 19,
+      "form": null,
+      "won": 10,
+      "draw": 2,
+      "lost": 7,
+      "points": 32,
+      "goalsFor": 26,
+      "goalsAgainst": 19,
+      "goalDifference": 7
+    },
+    {
+      "position": 4,
+      "team": {
         "id": 1765,
         "name": "Fluminense FC",
         "shortName": "Fluminense",
         "tla": "FLU",
         "crest": "https://crests.football-data.org/1765.png"
       },
-      "playedGames": 18,
+      "playedGames": 19,
       "form": null,
       "won": 9,
       "draw": 4,
-      "lost": 5,
+      "lost": 6,
       "points": 31,
       "goalsFor": 28,
-      "goalsAgainst": 23,
-      "goalDifference": 5
+      "goalsAgainst": 24,
+      "goalDifference": 4
     },
     {
-      "position": 4,
+      "position": 5,
       "team": {
         "id": 1768,
         "name": "CA Paranaense",
@@ -77,25 +96,6 @@
       "goalDifference": 6
     },
     {
-      "position": 5,
-      "team": {
-        "id": 4286,
-        "name": "RB Bragantino",
-        "shortName": "Bragantino",
-        "tla": "RBB",
-        "crest": "https://crests.football-data.org/4286.png"
-      },
-      "playedGames": 18,
-      "form": null,
-      "won": 9,
-      "draw": 2,
-      "lost": 7,
-      "points": 29,
-      "goalsFor": 25,
-      "goalsAgainst": 19,
-      "goalDifference": 6
-    },
-    {
       "position": 6,
       "team": {
         "id": 1777,
@@ -104,15 +104,15 @@
         "tla": "BAH",
         "crest": "https://crests.football-data.org/1777.png"
       },
-      "playedGames": 17,
+      "playedGames": 18,
       "form": null,
-      "won": 7,
+      "won": 8,
       "draw": 5,
       "lost": 5,
-      "points": 26,
-      "goalsFor": 25,
+      "points": 29,
+      "goalsFor": 27,
       "goalsAgainst": 23,
-      "goalDifference": 2
+      "goalDifference": 4
     },
     {
       "position": 7,
@@ -269,25 +269,6 @@
     {
       "position": 15,
       "team": {
-        "id": 1767,
-        "name": "Grêmio FBPA",
-        "shortName": "Grêmio",
-        "tla": "FBP",
-        "crest": "https://crests.football-data.org/1767.png"
-      },
-      "playedGames": 18,
-      "form": null,
-      "won": 5,
-      "draw": 6,
-      "lost": 7,
-      "points": 21,
-      "goalsFor": 20,
-      "goalsAgainst": 23,
-      "goalDifference": -3
-    },
-    {
-      "position": 16,
-      "team": {
         "id": 6685,
         "name": "Santos FC",
         "shortName": "Santos",
@@ -302,6 +283,25 @@
       "points": 21,
       "goalsFor": 27,
       "goalsAgainst": 31,
+      "goalDifference": -4
+    },
+    {
+      "position": 16,
+      "team": {
+        "id": 1767,
+        "name": "Grêmio FBPA",
+        "shortName": "Grêmio",
+        "tla": "FBP",
+        "crest": "https://crests.football-data.org/1767.png"
+      },
+      "playedGames": 19,
+      "form": null,
+      "won": 5,
+      "draw": 6,
+      "lost": 8,
+      "points": 21,
+      "goalsFor": 20,
+      "goalsAgainst": 24,
       "goalDifference": -4
     },
     {
@@ -326,6 +326,25 @@
     {
       "position": 18,
       "team": {
+        "id": 4364,
+        "name": "Mirassol FC",
+        "shortName": "Mirassol",
+        "tla": "MIR",
+        "crest": "https://crests.football-data.org/4364.png"
+      },
+      "playedGames": 18,
+      "form": null,
+      "won": 5,
+      "draw": 4,
+      "lost": 9,
+      "points": 19,
+      "goalsFor": 19,
+      "goalsAgainst": 24,
+      "goalDifference": -5
+    },
+    {
+      "position": 19,
+      "team": {
         "id": 4287,
         "name": "Clube do Remo",
         "shortName": "Clube do Remo",
@@ -343,25 +362,6 @@
       "goalDifference": -8
     },
     {
-      "position": 19,
-      "team": {
-        "id": 4364,
-        "name": "Mirassol FC",
-        "shortName": "Mirassol",
-        "tla": "MIR",
-        "crest": "https://crests.football-data.org/4364.png"
-      },
-      "playedGames": 17,
-      "form": null,
-      "won": 4,
-      "draw": 4,
-      "lost": 9,
-      "points": 16,
-      "goalsFor": 18,
-      "goalsAgainst": 24,
-      "goalDifference": -6
-    },
-    {
       "position": 20,
       "team": {
         "id": 1772,
@@ -370,15 +370,15 @@
         "tla": "CHA",
         "crest": "https://crests.football-data.org/1772_large.png"
       },
-      "playedGames": 17,
+      "playedGames": 18,
       "form": null,
       "won": 1,
       "draw": 6,
-      "lost": 10,
+      "lost": 11,
       "points": 9,
       "goalsFor": 17,
-      "goalsAgainst": 33,
-      "goalDifference": -16
+      "goalsAgainst": 35,
+      "goalDifference": -18
     }
   ],
   "artilheiros": [
@@ -470,7 +470,7 @@
         "venue": "Arena do Grêmio",
         "lastUpdated": "2023-02-18T08:42:52Z"
       },
-      "playedMatches": 17,
+      "playedMatches": 18,
       "goals": 9,
       "assists": null,
       "penalties": 1
@@ -501,7 +501,7 @@
         "venue": "Estadio Jornalista Mário Filho",
         "lastUpdated": "2024-07-29T17:24:37Z"
       },
-      "playedMatches": 18,
+      "playedMatches": 19,
       "goals": 9,
       "assists": 1,
       "penalties": null
@@ -625,7 +625,7 @@
         "venue": "Estádio Governador Roberto Santos",
         "lastUpdated": "2024-10-28T10:09:10Z"
       },
-      "playedMatches": 17,
+      "playedMatches": 16,
       "goals": 7,
       "assists": 1,
       "penalties": 2
