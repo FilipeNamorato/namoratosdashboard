@@ -1,27 +1,27 @@
 {
   "status": "ok",
-  "n_rodadas": 8,
-  "n_registros": 359,
+  "n_rodadas": 9,
+  "n_registros": 389,
   "coefs": {
-    "intercept": -0.004220874253845981,
-    "bayes": 0.48922161617596843,
-    "score_ratio": 1.4663225601832985,
-    "conf": -0.36099497129449293,
-    "interacao": -0.44540954117874576,
-    "forma_media_3r": 0.3601911451115354,
-    "forma_jogou_3r": 0.4837617576789319,
-    "forma_tendencia": -0.1929530929998458
+    "intercept": -1.0173676348339462,
+    "bayes": 0.47446348814207306,
+    "score_ratio": 2.0073281218058603,
+    "conf": 0.6490768589969793,
+    "interacao": -0.5546754819183658,
+    "forma_media_3r": 0.36557748768974513,
+    "forma_jogou_3r": 0.5506929647143948,
+    "forma_tendencia": -0.20345958013335122
   },
   "metricas": {
-    "mae_heuristica": 2.897,
-    "mae_modelo_cv": 2.452,
-    "mae_modelo_in": 2.346,
-    "r2_modelo_in": 0.097,
-    "ganho_pct_cv": 15.4
+    "mae_heuristica": 2.93,
+    "mae_modelo_cv": 2.495,
+    "mae_modelo_in": 2.403,
+    "r2_modelo_in": 0.087,
+    "ganho_pct_cv": 14.8
   },
   "hiperparams": {
     "ridge_lambda": 1.0,
     "recency_decay": 0.9
   },
-  "atualizado_em": "2026-07-21 19:25 BRT"
+  "atualizado_em": "2026-07-21 21:57 BRT"
 }
