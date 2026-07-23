@@ -34,12 +34,31 @@
       "draw": 4,
       "lost": 3,
       "points": 37,
-      "goalsFor": 32,
+      "goalsFor": 35,
       "goalsAgainst": 16,
-      "goalDifference": 16
+      "goalDifference": 19
     },
     {
       "position": 3,
+      "team": {
+        "id": 1768,
+        "name": "CA Paranaense",
+        "shortName": "Paranaense",
+        "tla": "CAP",
+        "crest": "https://crests.football-data.org/1768.png"
+      },
+      "playedGames": 19,
+      "form": null,
+      "won": 10,
+      "draw": 3,
+      "lost": 6,
+      "points": 33,
+      "goalsFor": 26,
+      "goalsAgainst": 19,
+      "goalDifference": 7
+    },
+    {
+      "position": 4,
       "team": {
         "id": 1765,
         "name": "Fluminense FC",
@@ -58,7 +77,7 @@
       "goalDifference": 5
     },
     {
-      "position": 4,
+      "position": 5,
       "team": {
         "id": 4286,
         "name": "RB Bragantino",
@@ -75,25 +94,6 @@
       "goalsFor": 26,
       "goalsAgainst": 20,
       "goalDifference": 6
-    },
-    {
-      "position": 5,
-      "team": {
-        "id": 1768,
-        "name": "CA Paranaense",
-        "shortName": "Paranaense",
-        "tla": "CAP",
-        "crest": "https://crests.football-data.org/1768.png"
-      },
-      "playedGames": 19,
-      "form": null,
-      "won": 9,
-      "draw": 3,
-      "lost": 7,
-      "points": 30,
-      "goalsFor": 24,
-      "goalsAgainst": 19,
-      "goalDifference": 5
     },
     {
       "position": 6,
@@ -117,25 +117,6 @@
     {
       "position": 7,
       "team": {
-        "id": 1776,
-        "name": "São Paulo FC",
-        "shortName": "São Paulo",
-        "tla": "PAU",
-        "crest": "https://crests.football-data.org/1776.png"
-      },
-      "playedGames": 19,
-      "form": null,
-      "won": 8,
-      "draw": 4,
-      "lost": 7,
-      "points": 28,
-      "goalsFor": 24,
-      "goalsAgainst": 20,
-      "goalDifference": 4
-    },
-    {
-      "position": 8,
-      "team": {
         "id": 1771,
         "name": "Cruzeiro EC",
         "shortName": "Cruzeiro",
@@ -148,12 +129,12 @@
       "draw": 6,
       "lost": 6,
       "points": 27,
-      "goalsFor": 25,
-      "goalsAgainst": 28,
+      "goalsFor": 26,
+      "goalsAgainst": 29,
       "goalDifference": -3
     },
     {
-      "position": 9,
+      "position": 8,
       "team": {
         "id": 4241,
         "name": "Coritiba FBC",
@@ -170,6 +151,25 @@
       "goalsFor": 25,
       "goalsAgainst": 27,
       "goalDifference": -2
+    },
+    {
+      "position": 9,
+      "team": {
+        "id": 1776,
+        "name": "São Paulo FC",
+        "shortName": "São Paulo",
+        "tla": "PAU",
+        "crest": "https://crests.football-data.org/1776.png"
+      },
+      "playedGames": 19,
+      "form": null,
+      "won": 7,
+      "draw": 4,
+      "lost": 8,
+      "points": 25,
+      "goalsFor": 24,
+      "goalsAgainst": 22,
+      "goalDifference": 2
     },
     {
       "position": 10,
@@ -262,8 +262,8 @@
       "draw": 6,
       "lost": 8,
       "points": 21,
-      "goalsFor": 21,
-      "goalsAgainst": 23,
+      "goalsFor": 22,
+      "goalsAgainst": 24,
       "goalDifference": -2
     },
     {
@@ -377,11 +377,42 @@
       "lost": 12,
       "points": 9,
       "goalsFor": 17,
-      "goalsAgainst": 36,
-      "goalDifference": -19
+      "goalsAgainst": 39,
+      "goalDifference": -22
     }
   ],
   "artilheiros": [
+    {
+      "player": {
+        "id": 1077,
+        "name": "Pedro",
+        "firstName": "",
+        "lastName": "Pedro",
+        "dateOfBirth": "1997-06-20",
+        "nationality": "Brazil",
+        "section": "Offence",
+        "position": null,
+        "shirtNumber": null,
+        "lastUpdated": "2023-07-30T23:15:48Z"
+      },
+      "team": {
+        "id": 1783,
+        "name": "CR Flamengo",
+        "shortName": "Flamengo",
+        "tla": "FLA",
+        "crest": "https://crests.football-data.org/1783.png",
+        "address": "null Rio de Janeiro, RJ null",
+        "website": "https://www.flamengo.com.br/pagina-inicial-basquete",
+        "founded": 1919,
+        "clubColors": "Red / Black / White",
+        "venue": "Estadio Jornalista Mário Filho",
+        "lastUpdated": "2022-04-06T13:13:43Z"
+      },
+      "playedMatches": 18,
+      "goals": 12,
+      "assists": 5,
+      "penalties": null
+    },
     {
       "player": {
         "id": 192070,
@@ -412,37 +443,6 @@
       "goals": 11,
       "assists": 1,
       "penalties": 2
-    },
-    {
-      "player": {
-        "id": 1077,
-        "name": "Pedro",
-        "firstName": "",
-        "lastName": "Pedro",
-        "dateOfBirth": "1997-06-20",
-        "nationality": "Brazil",
-        "section": "Offence",
-        "position": null,
-        "shirtNumber": null,
-        "lastUpdated": "2023-07-30T23:15:48Z"
-      },
-      "team": {
-        "id": 1783,
-        "name": "CR Flamengo",
-        "shortName": "Flamengo",
-        "tla": "FLA",
-        "crest": "https://crests.football-data.org/1783.png",
-        "address": "null Rio de Janeiro, RJ null",
-        "website": "https://www.flamengo.com.br/pagina-inicial-basquete",
-        "founded": 1919,
-        "clubColors": "Red / Black / White",
-        "venue": "Estadio Jornalista Mário Filho",
-        "lastUpdated": "2022-04-06T13:13:43Z"
-      },
-      "playedMatches": 18,
-      "goals": 11,
-      "assists": 4,
-      "penalties": null
     },
     {
       "player": {
@@ -951,6 +951,7 @@
       "D",
       "W",
       "L",
+      "L",
       "L"
     ],
     "CA Paranaense": [
@@ -970,6 +971,7 @@
       "D",
       "L",
       "D",
+      "W",
       "W",
       "W"
     ],
@@ -1073,6 +1075,7 @@
       "L",
       "L",
       "L",
+      "L",
       "L"
     ],
     "Santos FC": [
@@ -1155,6 +1158,7 @@
       "L",
       "L",
       "D",
+      "L",
       "L"
     ],
     "CR Flamengo": [
@@ -1174,6 +1178,7 @@
       "W",
       "D",
       "L",
+      "W",
       "W"
     ],
     "Mirassol FC": [
@@ -1255,7 +1260,8 @@
       "W",
       "D",
       "W",
-      "D"
+      "D",
+      "W"
     ]
   },
   "team_stats": {
@@ -1325,11 +1331,11 @@
     },
     "SC Internacional": {
       "home": {
-        "gf": 11,
-        "ga": 9,
+        "gf": 12,
+        "ga": 11,
         "w": 3,
         "d": 2,
-        "l": 4
+        "l": 5
       },
       "away": {
         "gf": 10,
@@ -1348,9 +1354,9 @@
         "l": 1
       },
       "away": {
-        "gf": 7,
-        "ga": 12,
-        "w": 2,
+        "gf": 9,
+        "ga": 13,
+        "w": 3,
         "d": 1,
         "l": 5
       }
@@ -1422,10 +1428,10 @@
     "Chapecoense AF": {
       "home": {
         "gf": 13,
-        "ga": 20,
+        "ga": 24,
         "w": 1,
         "d": 4,
-        "l": 4
+        "l": 5
       },
       "away": {
         "gf": 4,
@@ -1485,11 +1491,11 @@
     },
     "São Paulo FC": {
       "home": {
-        "gf": 14,
-        "ga": 6,
+        "gf": 15,
+        "ga": 8,
         "w": 5,
         "d": 2,
-        "l": 1
+        "l": 2
       },
       "away": {
         "gf": 9,
@@ -1508,9 +1514,9 @@
         "l": 1
       },
       "away": {
-        "gf": 15,
+        "gf": 19,
         "ga": 9,
-        "w": 5,
+        "w": 6,
         "d": 2,
         "l": 2
       }
@@ -1572,9 +1578,9 @@
         "l": 2
       },
       "away": {
-        "gf": 8,
-        "ga": 16,
-        "w": 2,
+        "gf": 10,
+        "ga": 17,
+        "w": 3,
         "d": 2,
         "l": 4
       }
