@@ -117,6 +117,25 @@
     {
       "position": 7,
       "team": {
+        "id": 1779,
+        "name": "SC Corinthians Paulista",
+        "shortName": "Corinthians",
+        "tla": "COR",
+        "crest": "https://crests.football-data.org/1779.png"
+      },
+      "playedGames": 19,
+      "form": null,
+      "won": 7,
+      "draw": 6,
+      "lost": 6,
+      "points": 27,
+      "goalsFor": 21,
+      "goalsAgainst": 19,
+      "goalDifference": 2
+    },
+    {
+      "position": 8,
+      "team": {
         "id": 1771,
         "name": "Cruzeiro EC",
         "shortName": "Cruzeiro",
@@ -134,7 +153,26 @@
       "goalDifference": -3
     },
     {
-      "position": 8,
+      "position": 9,
+      "team": {
+        "id": 1770,
+        "name": "Botafogo FR",
+        "shortName": "Botafogo",
+        "tla": "BOT",
+        "crest": "https://crests.football-data.org/1770.png"
+      },
+      "playedGames": 19,
+      "form": null,
+      "won": 7,
+      "draw": 5,
+      "lost": 7,
+      "points": 26,
+      "goalsFor": 33,
+      "goalsAgainst": 32,
+      "goalDifference": 1
+    },
+    {
+      "position": 10,
       "team": {
         "id": 4241,
         "name": "Coritiba FBC",
@@ -153,7 +191,26 @@
       "goalDifference": -2
     },
     {
-      "position": 9,
+      "position": 11,
+      "team": {
+        "id": 1782,
+        "name": "EC Vitória",
+        "shortName": "Vitória",
+        "tla": "VIT",
+        "crest": "https://crests.football-data.org/1782.png"
+      },
+      "playedGames": 19,
+      "form": null,
+      "won": 7,
+      "draw": 5,
+      "lost": 7,
+      "points": 26,
+      "goalsFor": 22,
+      "goalsAgainst": 25,
+      "goalDifference": -3
+    },
+    {
+      "position": 12,
       "team": {
         "id": 1776,
         "name": "São Paulo FC",
@@ -172,26 +229,7 @@
       "goalDifference": 2
     },
     {
-      "position": 10,
-      "team": {
-        "id": 1770,
-        "name": "Botafogo FR",
-        "shortName": "Botafogo",
-        "tla": "BOT",
-        "crest": "https://crests.football-data.org/1770.png"
-      },
-      "playedGames": 18,
-      "form": null,
-      "won": 7,
-      "draw": 4,
-      "lost": 7,
-      "points": 25,
-      "goalsFor": 33,
-      "goalsAgainst": 32,
-      "goalDifference": 1
-    },
-    {
-      "position": 11,
+      "position": 13,
       "team": {
         "id": 1766,
         "name": "CA Mineiro",
@@ -207,44 +245,6 @@
       "points": 25,
       "goalsFor": 23,
       "goalsAgainst": 24,
-      "goalDifference": -1
-    },
-    {
-      "position": 12,
-      "team": {
-        "id": 1782,
-        "name": "EC Vitória",
-        "shortName": "Vitória",
-        "tla": "VIT",
-        "crest": "https://crests.football-data.org/1782.png"
-      },
-      "playedGames": 18,
-      "form": null,
-      "won": 7,
-      "draw": 4,
-      "lost": 7,
-      "points": 25,
-      "goalsFor": 22,
-      "goalsAgainst": 25,
-      "goalDifference": -3
-    },
-    {
-      "position": 13,
-      "team": {
-        "id": 1779,
-        "name": "SC Corinthians Paulista",
-        "shortName": "Corinthians",
-        "tla": "COR",
-        "crest": "https://crests.football-data.org/1779.png"
-      },
-      "playedGames": 18,
-      "form": null,
-      "won": 6,
-      "draw": 6,
-      "lost": 6,
-      "points": 24,
-      "goalsFor": 18,
-      "goalsAgainst": 19,
       "goalDifference": -1
     },
     {
@@ -351,15 +351,15 @@
         "tla": "CRE",
         "crest": "https://crests.football-data.org/4287.png"
       },
-      "playedGames": 18,
+      "playedGames": 19,
       "form": null,
       "won": 4,
       "draw": 6,
-      "lost": 8,
+      "lost": 9,
       "points": 18,
       "goalsFor": 21,
-      "goalsAgainst": 29,
-      "goalDifference": -8
+      "goalsAgainst": 32,
+      "goalDifference": -11
     },
     {
       "position": 20,
@@ -993,7 +993,8 @@
       "L",
       "W",
       "L",
-      "W"
+      "W",
+      "D"
     ],
     "Clube do Remo": [
       "L",
@@ -1013,7 +1014,8 @@
       "D",
       "W",
       "L",
-      "W"
+      "W",
+      "L"
     ],
     "Fluminense FC": [
       "W",
@@ -1116,6 +1118,7 @@
       "L",
       "W",
       "L",
+      "W",
       "W",
       "W"
     ],
@@ -1240,7 +1243,8 @@
       "W",
       "D",
       "L",
-      "W"
+      "W",
+      "D"
     ],
     "Cruzeiro EC": [
       "L",
@@ -1373,7 +1377,7 @@
         "gf": 7,
         "ga": 22,
         "w": 0,
-        "d": 3,
+        "d": 4,
         "l": 6
       }
     },
@@ -1387,10 +1391,10 @@
       },
       "away": {
         "gf": 10,
-        "ga": 18,
+        "ga": 21,
         "w": 2,
         "d": 2,
-        "l": 5
+        "l": 6
       }
     },
     "Fluminense FC": {
@@ -1459,9 +1463,9 @@
     },
     "SC Corinthians Paulista": {
       "home": {
-        "gf": 9,
+        "gf": 12,
         "ga": 8,
-        "w": 4,
+        "w": 5,
         "d": 2,
         "l": 3
       },
@@ -1558,7 +1562,7 @@
         "gf": 17,
         "ga": 13,
         "w": 4,
-        "d": 2,
+        "d": 3,
         "l": 2
       },
       "away": {
