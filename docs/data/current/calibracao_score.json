@@ -1,16 +1,16 @@
 {
-  "status": "insuficiente",
-  "n_rodadas": 7,
-  "n_registros": 322,
+  "status": "ok",
+  "n_rodadas": 8,
+  "n_registros": 370,
   "pesos": {
     "defesa": {
-      "oc": 0.3,
-      "vm": 0.25,
-      "tof": 0.1,
-      "tdef": 0.15,
-      "fs": 0.05,
-      "adv_of": 0.1,
-      "prob_gols": 0.05
+      "oc": 0.0,
+      "vm": 0.4628,
+      "tof": 0.0,
+      "tdef": 0.2531,
+      "fs": 0.1016,
+      "adv_of": 0.1825,
+      "prob_gols": 0.0
     },
     "ataque": {
       "oc": 0.25,
@@ -23,19 +23,43 @@
   },
   "grupos": {
     "defesa": {
-      "status": "insuficiente",
-      "n_rodadas": 7,
-      "n_registros": 135,
-      "motivo": "precisa ≥3 rodadas e ≥150 registros"
+      "status": "ok",
+      "n_rodadas": 8,
+      "n_registros": 157,
+      "pesos": {
+        "oc": 0.0,
+        "vm": 0.4628,
+        "tof": 0.0,
+        "tdef": 0.2531,
+        "fs": 0.1016,
+        "adv_of": 0.1825,
+        "prob_gols": 0.0
+      },
+      "coefs_brutos": {
+        "oc": -1.7524,
+        "vm": 3.4137,
+        "tof": -0.0949,
+        "tdef": 1.867,
+        "fs": 0.749,
+        "adv_of": 1.3459,
+        "prob_gols": -0.2978
+      },
+      "intercept": 1.5387,
+      "metricas": {
+        "mae_heuristica": 4.171,
+        "mae_modelo_cv": 2.384,
+        "mae_modelo_in": 2.008,
+        "ganho_pct_cv": 42.9
+      }
     },
     "ataque": {
       "status": "insuficiente",
-      "n_rodadas": 7,
-      "n_registros": 187,
-      "motivo": "modelo OOS MAE=2.101 não supera heurística=1.782",
+      "n_rodadas": 8,
+      "n_registros": 213,
+      "motivo": "modelo OOS MAE=2.234 não supera heurística=1.897",
       "metricas": {
-        "mae_heuristica": 1.782,
-        "mae_modelo_cv": 2.101
+        "mae_heuristica": 1.897,
+        "mae_modelo_cv": 2.234
       }
     }
   },
@@ -45,5 +69,5 @@
     "min_rodadas": 3,
     "min_registros": 150
   },
-  "atualizado_em": "2026-07-25 17:43 BRT"
+  "atualizado_em": "2026-07-25 19:23 BRT"
 }
