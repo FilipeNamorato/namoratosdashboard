@@ -49,13 +49,13 @@
       },
       "playedGames": 20,
       "form": null,
-      "won": 10,
-      "draw": 4,
+      "won": 11,
+      "draw": 3,
       "lost": 6,
-      "points": 34,
-      "goalsFor": 26,
+      "points": 36,
+      "goalsFor": 28,
       "goalsAgainst": 19,
-      "goalDifference": 7
+      "goalDifference": 9
     },
     {
       "position": 4,
@@ -250,21 +250,21 @@
     {
       "position": 14,
       "team": {
-        "id": 6684,
-        "name": "SC Internacional",
-        "shortName": "Internacional",
-        "tla": "SCI",
-        "crest": "https://crests.football-data.org/6684.png"
+        "id": 4364,
+        "name": "Mirassol FC",
+        "shortName": "Mirassol",
+        "tla": "MIR",
+        "crest": "https://crests.football-data.org/4364.png"
       },
-      "playedGames": 20,
+      "playedGames": 19,
       "form": null,
-      "won": 5,
-      "draw": 7,
-      "lost": 8,
+      "won": 6,
+      "draw": 4,
+      "lost": 9,
       "points": 22,
-      "goalsFor": 22,
-      "goalsAgainst": 24,
-      "goalDifference": -2
+      "goalsFor": 21,
+      "goalsAgainst": 25,
+      "goalDifference": -4
     },
     {
       "position": 15,
@@ -281,12 +281,31 @@
       "draw": 7,
       "lost": 8,
       "points": 22,
-      "goalsFor": 27,
-      "goalsAgainst": 31,
+      "goalsFor": 29,
+      "goalsAgainst": 33,
       "goalDifference": -4
     },
     {
       "position": 16,
+      "team": {
+        "id": 6684,
+        "name": "SC Internacional",
+        "shortName": "Internacional",
+        "tla": "SCI",
+        "crest": "https://crests.football-data.org/6684.png"
+      },
+      "playedGames": 20,
+      "form": null,
+      "won": 5,
+      "draw": 6,
+      "lost": 9,
+      "points": 21,
+      "goalsFor": 22,
+      "goalsAgainst": 26,
+      "goalDifference": -4
+    },
+    {
+      "position": 17,
       "team": {
         "id": 1767,
         "name": "Grêmio FBPA",
@@ -305,7 +324,7 @@
       "goalDifference": -4
     },
     {
-      "position": 17,
+      "position": 18,
       "team": {
         "id": 1780,
         "name": "CR Vasco da Gama",
@@ -313,34 +332,15 @@
         "tla": "VAS",
         "crest": "https://crests.football-data.org/1780.png"
       },
-      "playedGames": 19,
+      "playedGames": 20,
       "form": null,
       "won": 5,
       "draw": 5,
-      "lost": 9,
+      "lost": 10,
       "points": 20,
       "goalsFor": 22,
-      "goalsAgainst": 30,
-      "goalDifference": -8
-    },
-    {
-      "position": 18,
-      "team": {
-        "id": 4364,
-        "name": "Mirassol FC",
-        "shortName": "Mirassol",
-        "tla": "MIR",
-        "crest": "https://crests.football-data.org/4364.png"
-      },
-      "playedGames": 18,
-      "form": null,
-      "won": 5,
-      "draw": 4,
-      "lost": 9,
-      "points": 19,
-      "goalsFor": 20,
-      "goalsAgainst": 25,
-      "goalDifference": -5
+      "goalsAgainst": 31,
+      "goalDifference": -9
     },
     {
       "position": 19,
@@ -376,12 +376,43 @@
       "draw": 7,
       "lost": 12,
       "points": 10,
-      "goalsFor": 17,
-      "goalsAgainst": 39,
+      "goalsFor": 19,
+      "goalsAgainst": 41,
       "goalDifference": -22
     }
   ],
   "artilheiros": [
+    {
+      "player": {
+        "id": 192070,
+        "name": "Kevin Viveros",
+        "firstName": "Kevin",
+        "lastName": "Viveros",
+        "dateOfBirth": "2000-04-26",
+        "nationality": "Colombia",
+        "section": "Offence",
+        "position": null,
+        "shirtNumber": null,
+        "lastUpdated": "2023-08-22T11:53:03Z"
+      },
+      "team": {
+        "id": 1768,
+        "name": "CA Paranaense",
+        "shortName": "Paranaense",
+        "tla": "CAP",
+        "crest": "https://crests.football-data.org/1768.png",
+        "address": "Estrada do Ganchinho 1451, Umbará Curitiba, PR 81930-160",
+        "website": "http://www.atleticoparanaense.com",
+        "founded": 1924,
+        "clubColors": "Black / White / Red",
+        "venue": "Estádio Joaquim Américo Guimarães",
+        "lastUpdated": "2022-04-06T13:14:06Z"
+      },
+      "playedMatches": 19,
+      "goals": 12,
+      "assists": 2,
+      "penalties": 2
+    },
     {
       "player": {
         "id": 1077,
@@ -412,37 +443,6 @@
       "goals": 12,
       "assists": 5,
       "penalties": null
-    },
-    {
-      "player": {
-        "id": 192070,
-        "name": "Kevin Viveros",
-        "firstName": "Kevin",
-        "lastName": "Viveros",
-        "dateOfBirth": "2000-04-26",
-        "nationality": "Colombia",
-        "section": "Offence",
-        "position": null,
-        "shirtNumber": null,
-        "lastUpdated": "2023-08-22T11:53:03Z"
-      },
-      "team": {
-        "id": 1768,
-        "name": "CA Paranaense",
-        "shortName": "Paranaense",
-        "tla": "CAP",
-        "crest": "https://crests.football-data.org/1768.png",
-        "address": "Estrada do Ganchinho 1451, Umbará Curitiba, PR 81930-160",
-        "website": "http://www.atleticoparanaense.com",
-        "founded": 1924,
-        "clubColors": "Black / White / Red",
-        "venue": "Estádio Joaquim Américo Guimarães",
-        "lastUpdated": "2022-04-06T13:14:06Z"
-      },
-      "playedMatches": 19,
-      "goals": 11,
-      "assists": 2,
-      "penalties": 2
     },
     {
       "player": {
@@ -756,6 +756,37 @@
     },
     {
       "player": {
+        "id": 8491,
+        "name": "Neymar",
+        "firstName": "",
+        "lastName": "Neymar",
+        "dateOfBirth": "1992-02-05",
+        "nationality": "Brazil",
+        "section": "Offence",
+        "position": null,
+        "shirtNumber": null,
+        "lastUpdated": "2023-07-30T17:03:23Z"
+      },
+      "team": {
+        "id": 6685,
+        "name": "Santos FC",
+        "shortName": "Santos",
+        "tla": "SAN",
+        "crest": "https://crests.football-data.org/6685.png",
+        "address": "Rua Princesa Isabel S/N, Vila Belmiro Santos, SP 11075-501",
+        "website": "http://santosfc.com.br",
+        "founded": 1912,
+        "clubColors": "Black / White",
+        "venue": "Estádio Urbano Caldeira",
+        "lastUpdated": "2023-02-18T08:43:18Z"
+      },
+      "playedMatches": 9,
+      "goals": 6,
+      "assists": 2,
+      "penalties": 2
+    },
+    {
+      "player": {
         "id": 114353,
         "name": "Isidro Pitta",
         "firstName": "Isidro",
@@ -814,37 +845,6 @@
       "playedMatches": 20,
       "goals": 5,
       "assists": null,
-      "penalties": null
-    },
-    {
-      "player": {
-        "id": 259981,
-        "name": "Joaquín Lavega",
-        "firstName": "Joaquín",
-        "lastName": "Lavega",
-        "dateOfBirth": "2005-02-03",
-        "nationality": "Uruguay",
-        "section": "Offence",
-        "position": null,
-        "shirtNumber": null,
-        "lastUpdated": "2026-05-06T07:57:07Z"
-      },
-      "team": {
-        "id": 4241,
-        "name": "Coritiba FBC",
-        "shortName": "Coritiba",
-        "tla": "COR",
-        "crest": "https://crests.football-data.org/4241.png",
-        "address": "Rua Ubaldino do Amaral 37, Alto da Glória Curitiba, PR 80060-195",
-        "website": "http://www.coritiba.com.br",
-        "founded": 1909,
-        "clubColors": "Green / White",
-        "venue": "Estádio Major Antônio Couto Pereira",
-        "lastUpdated": "2023-02-18T08:43:33Z"
-      },
-      "playedMatches": 18,
-      "goals": 5,
-      "assists": 1,
       "penalties": null
     }
   ],
@@ -952,6 +952,7 @@
       "W",
       "L",
       "L",
+      "L",
       "L"
     ],
     "CA Paranaense": [
@@ -971,6 +972,7 @@
       "D",
       "L",
       "D",
+      "W",
       "W",
       "W",
       "W"
@@ -1078,7 +1080,8 @@
       "L",
       "L",
       "L",
-      "L"
+      "L",
+      "D"
     ],
     "Santos FC": [
       "L",
@@ -1099,7 +1102,8 @@
       "L",
       "L",
       "W",
-      "L"
+      "L",
+      "D"
     ],
     "SC Corinthians Paulista": [
       "L",
@@ -1343,17 +1347,17 @@
       },
       "away": {
         "gf": 10,
-        "ga": 13,
+        "ga": 15,
         "w": 2,
         "d": 4,
-        "l": 3
+        "l": 4
       }
     },
     "CA Paranaense": {
       "home": {
-        "gf": 17,
+        "gf": 19,
         "ga": 6,
-        "w": 7,
+        "w": 8,
         "d": 2,
         "l": 1
       },
@@ -1438,19 +1442,19 @@
         "l": 5
       },
       "away": {
-        "gf": 4,
-        "ga": 15,
+        "gf": 6,
+        "ga": 17,
         "w": 0,
-        "d": 2,
+        "d": 3,
         "l": 7
       }
     },
     "Santos FC": {
       "home": {
-        "gf": 15,
-        "ga": 12,
+        "gf": 17,
+        "ga": 14,
         "w": 5,
-        "d": 2,
+        "d": 3,
         "l": 3
       },
       "away": {
