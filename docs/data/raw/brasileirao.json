@@ -9,15 +9,15 @@
         "tla": "PAL",
         "crest": "https://crests.football-data.org/1769.png"
       },
-      "playedGames": 19,
+      "playedGames": 20,
       "form": null,
       "won": 13,
       "draw": 5,
-      "lost": 1,
+      "lost": 2,
       "points": 44,
-      "goalsFor": 33,
-      "goalsAgainst": 14,
-      "goalDifference": 19
+      "goalsFor": 34,
+      "goalsAgainst": 16,
+      "goalDifference": 18
     },
     {
       "position": 2,
@@ -34,8 +34,8 @@
       "draw": 5,
       "lost": 3,
       "points": 38,
-      "goalsFor": 35,
-      "goalsAgainst": 16,
+      "goalsFor": 36,
+      "goalsAgainst": 17,
       "goalDifference": 19
     },
     {
@@ -72,8 +72,8 @@
       "draw": 6,
       "lost": 5,
       "points": 33,
-      "goalsFor": 29,
-      "goalsAgainst": 24,
+      "goalsFor": 30,
+      "goalsAgainst": 25,
       "goalDifference": 5
     },
     {
@@ -136,6 +136,25 @@
     {
       "position": 8,
       "team": {
+        "id": 1766,
+        "name": "CA Mineiro",
+        "shortName": "Mineiro",
+        "tla": "CAM",
+        "crest": "https://crests.football-data.org/1766.png"
+      },
+      "playedGames": 20,
+      "form": null,
+      "won": 8,
+      "draw": 4,
+      "lost": 8,
+      "points": 28,
+      "goalsFor": 25,
+      "goalsAgainst": 25,
+      "goalDifference": 0
+    },
+    {
+      "position": 9,
+      "team": {
         "id": 1779,
         "name": "SC Corinthians Paulista",
         "shortName": "Corinthians",
@@ -153,7 +172,7 @@
       "goalDifference": 2
     },
     {
-      "position": 9,
+      "position": 10,
       "team": {
         "id": 4241,
         "name": "Coritiba FBC",
@@ -172,7 +191,7 @@
       "goalDifference": -2
     },
     {
-      "position": 10,
+      "position": 11,
       "team": {
         "id": 1771,
         "name": "Cruzeiro EC",
@@ -191,7 +210,7 @@
       "goalDifference": -4
     },
     {
-      "position": 11,
+      "position": 12,
       "team": {
         "id": 1776,
         "name": "São Paulo FC",
@@ -205,12 +224,12 @@
       "draw": 5,
       "lost": 8,
       "points": 26,
-      "goalsFor": 24,
-      "goalsAgainst": 22,
+      "goalsFor": 25,
+      "goalsAgainst": 23,
       "goalDifference": 2
     },
     {
-      "position": 12,
+      "position": 13,
       "team": {
         "id": 1782,
         "name": "EC Vitória",
@@ -218,34 +237,15 @@
         "tla": "VIT",
         "crest": "https://crests.football-data.org/1782.png"
       },
-      "playedGames": 19,
+      "playedGames": 20,
       "form": null,
       "won": 7,
       "draw": 5,
-      "lost": 7,
+      "lost": 8,
       "points": 26,
       "goalsFor": 22,
-      "goalsAgainst": 25,
-      "goalDifference": -3
-    },
-    {
-      "position": 13,
-      "team": {
-        "id": 1766,
-        "name": "CA Mineiro",
-        "shortName": "Mineiro",
-        "tla": "CAM",
-        "crest": "https://crests.football-data.org/1766.png"
-      },
-      "playedGames": 19,
-      "form": null,
-      "won": 7,
-      "draw": 4,
-      "lost": 8,
-      "points": 25,
-      "goalsFor": 23,
-      "goalsAgainst": 24,
-      "goalDifference": -1
+      "goalsAgainst": 27,
+      "goalDifference": -5
     },
     {
       "position": 14,
@@ -281,8 +281,8 @@
       "draw": 7,
       "lost": 8,
       "points": 22,
-      "goalsFor": 21,
-      "goalsAgainst": 25,
+      "goalsFor": 22,
+      "goalsAgainst": 26,
       "goalDifference": -4
     },
     {
@@ -326,6 +326,25 @@
     {
       "position": 18,
       "team": {
+        "id": 4287,
+        "name": "Clube do Remo",
+        "shortName": "Clube do Remo",
+        "tla": "CRE",
+        "crest": "https://crests.football-data.org/4287.png"
+      },
+      "playedGames": 20,
+      "form": null,
+      "won": 5,
+      "draw": 6,
+      "lost": 9,
+      "points": 21,
+      "goalsFor": 23,
+      "goalsAgainst": 32,
+      "goalDifference": -9
+    },
+    {
+      "position": 19,
+      "team": {
         "id": 4364,
         "name": "Mirassol FC",
         "shortName": "Mirassol",
@@ -341,25 +360,6 @@
       "goalsFor": 21,
       "goalsAgainst": 26,
       "goalDifference": -5
-    },
-    {
-      "position": 19,
-      "team": {
-        "id": 4287,
-        "name": "Clube do Remo",
-        "shortName": "Clube do Remo",
-        "tla": "CRE",
-        "crest": "https://crests.football-data.org/4287.png"
-      },
-      "playedGames": 19,
-      "form": null,
-      "won": 4,
-      "draw": 6,
-      "lost": 9,
-      "points": 18,
-      "goalsFor": 21,
-      "goalsAgainst": 32,
-      "goalDifference": -11
     },
     {
       "position": 20,
@@ -570,6 +570,37 @@
     },
     {
       "player": {
+        "id": 3137,
+        "name": "Jonathan Calleri",
+        "firstName": "Jonathan",
+        "lastName": "Calleri",
+        "dateOfBirth": "1993-09-23",
+        "nationality": "Argentina",
+        "section": "Offence",
+        "position": null,
+        "shirtNumber": null,
+        "lastUpdated": "2023-07-30T23:15:46Z"
+      },
+      "team": {
+        "id": 1776,
+        "name": "São Paulo FC",
+        "shortName": "São Paulo",
+        "tla": "PAU",
+        "crest": "https://crests.football-data.org/1776.png",
+        "address": "null São Paulo, SP null",
+        "website": "http://www.saopaulofc.net",
+        "founded": 1930,
+        "clubColors": "White / Red / Black",
+        "venue": "Estádio do Morumbi",
+        "lastUpdated": "2023-02-18T08:43:44Z"
+      },
+      "playedMatches": 18,
+      "goals": 7,
+      "assists": 1,
+      "penalties": 1
+    },
+    {
+      "player": {
         "id": 1723,
         "name": "Arthur Cabral",
         "firstName": "",
@@ -725,37 +756,6 @@
     },
     {
       "player": {
-        "id": 3137,
-        "name": "Jonathan Calleri",
-        "firstName": "Jonathan",
-        "lastName": "Calleri",
-        "dateOfBirth": "1993-09-23",
-        "nationality": "Argentina",
-        "section": "Offence",
-        "position": null,
-        "shirtNumber": null,
-        "lastUpdated": "2023-07-30T23:15:46Z"
-      },
-      "team": {
-        "id": 1776,
-        "name": "São Paulo FC",
-        "shortName": "São Paulo",
-        "tla": "PAU",
-        "crest": "https://crests.football-data.org/1776.png",
-        "address": "null São Paulo, SP null",
-        "website": "http://www.saopaulofc.net",
-        "founded": 1930,
-        "clubColors": "White / Red / Black",
-        "venue": "Estádio do Morumbi",
-        "lastUpdated": "2023-02-18T08:43:44Z"
-      },
-      "playedMatches": 18,
-      "goals": 6,
-      "assists": 1,
-      "penalties": 1
-    },
-    {
-      "player": {
         "id": 8491,
         "name": "Neymar",
         "firstName": "",
@@ -868,7 +868,8 @@
       "W",
       "L",
       "W",
-      "D"
+      "D",
+      "W"
     ],
     "SE Palmeiras": [
       "D",
@@ -889,7 +890,8 @@
       "D",
       "W",
       "W",
-      "W"
+      "W",
+      "L"
     ],
     "Coritiba FBC": [
       "L",
@@ -910,7 +912,8 @@
       "W",
       "W",
       "L",
-      "L"
+      "L",
+      "D"
     ],
     "RB Bragantino": [
       "W",
@@ -931,6 +934,7 @@
       "W",
       "W",
       "W",
+      "D",
       "D"
     ],
     "SC Internacional": [
@@ -996,7 +1000,8 @@
       "W",
       "L",
       "W",
-      "D"
+      "D",
+      "L"
     ],
     "Clube do Remo": [
       "L",
@@ -1017,7 +1022,8 @@
       "W",
       "L",
       "W",
-      "L"
+      "L",
+      "W"
     ],
     "Fluminense FC": [
       "W",
@@ -1037,6 +1043,7 @@
       "D",
       "W",
       "L",
+      "D",
       "D",
       "D"
     ],
@@ -1059,7 +1066,8 @@
       "D",
       "W",
       "L",
-      "L"
+      "L",
+      "D"
     ],
     "Chapecoense AF": [
       "W",
@@ -1168,7 +1176,8 @@
       "L",
       "D",
       "L",
-      "L"
+      "L",
+      "D"
     ],
     "CR Flamengo": [
       "L",
@@ -1188,7 +1197,8 @@
       "D",
       "L",
       "W",
-      "W"
+      "W",
+      "D"
     ],
     "Mirassol FC": [
       "W",
@@ -1288,20 +1298,20 @@
         "l": 1
       },
       "away": {
-        "gf": 9,
-        "ga": 11,
-        "w": 3,
+        "gf": 11,
+        "ga": 12,
+        "w": 4,
         "d": 0,
         "l": 7
       }
     },
     "SE Palmeiras": {
       "home": {
-        "gf": 16,
-        "ga": 6,
+        "gf": 17,
+        "ga": 8,
         "w": 7,
         "d": 2,
-        "l": 0
+        "l": 1
       },
       "away": {
         "gf": 17,
@@ -1323,7 +1333,7 @@
         "gf": 14,
         "ga": 16,
         "w": 4,
-        "d": 2,
+        "d": 3,
         "l": 4
       }
     },
@@ -1332,7 +1342,7 @@
         "gf": 16,
         "ga": 9,
         "w": 5,
-        "d": 1,
+        "d": 2,
         "l": 3
       },
       "away": {
@@ -1385,17 +1395,17 @@
       },
       "away": {
         "gf": 7,
-        "ga": 22,
+        "ga": 24,
         "w": 0,
         "d": 4,
-        "l": 6
+        "l": 7
       }
     },
     "Clube do Remo": {
       "home": {
-        "gf": 11,
+        "gf": 13,
         "ga": 11,
-        "w": 2,
+        "w": 3,
         "d": 4,
         "l": 3
       },
@@ -1416,19 +1426,19 @@
         "l": 1
       },
       "away": {
-        "gf": 11,
-        "ga": 13,
+        "gf": 12,
+        "ga": 14,
         "w": 2,
-        "d": 3,
+        "d": 4,
         "l": 4
       }
     },
     "Grêmio FBPA": {
       "home": {
-        "gf": 15,
-        "ga": 11,
+        "gf": 16,
+        "ga": 12,
         "w": 5,
-        "d": 2,
+        "d": 3,
         "l": 2
       },
       "away": {
@@ -1512,19 +1522,19 @@
         "l": 2
       },
       "away": {
-        "gf": 9,
-        "ga": 14,
+        "gf": 10,
+        "ga": 15,
         "w": 2,
-        "d": 2,
+        "d": 3,
         "l": 6
       }
     },
     "CR Flamengo": {
       "home": {
-        "gf": 16,
-        "ga": 7,
+        "gf": 17,
+        "ga": 8,
         "w": 5,
-        "d": 2,
+        "d": 3,
         "l": 1
       },
       "away": {
