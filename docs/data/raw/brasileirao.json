@@ -11,13 +11,13 @@
       },
       "playedGames": 21,
       "form": null,
-      "won": 13,
-      "draw": 6,
+      "won": 14,
+      "draw": 5,
       "lost": 2,
-      "points": 45,
-      "goalsFor": 34,
+      "points": 47,
+      "goalsFor": 38,
       "goalsAgainst": 16,
-      "goalDifference": 18
+      "goalDifference": 22
     },
     {
       "position": 2,
@@ -212,25 +212,6 @@
     {
       "position": 12,
       "team": {
-        "id": 1782,
-        "name": "EC Vitória",
-        "shortName": "Vitória",
-        "tla": "VIT",
-        "crest": "https://crests.football-data.org/1782.png"
-      },
-      "playedGames": 21,
-      "form": null,
-      "won": 7,
-      "draw": 6,
-      "lost": 8,
-      "points": 27,
-      "goalsFor": 22,
-      "goalsAgainst": 27,
-      "goalDifference": -5
-    },
-    {
-      "position": 13,
-      "team": {
         "id": 1776,
         "name": "São Paulo FC",
         "shortName": "São Paulo",
@@ -246,6 +227,25 @@
       "goalsFor": 25,
       "goalsAgainst": 23,
       "goalDifference": 2
+    },
+    {
+      "position": 13,
+      "team": {
+        "id": 1782,
+        "name": "EC Vitória",
+        "shortName": "Vitória",
+        "tla": "VIT",
+        "crest": "https://crests.football-data.org/1782.png"
+      },
+      "playedGames": 21,
+      "form": null,
+      "won": 7,
+      "draw": 5,
+      "lost": 9,
+      "points": 26,
+      "goalsFor": 22,
+      "goalsAgainst": 31,
+      "goalDifference": -9
     },
     {
       "position": 14,
@@ -891,7 +891,8 @@
       "W",
       "W",
       "W",
-      "L"
+      "L",
+      "W"
     ],
     "Coritiba FBC": [
       "L",
@@ -1002,6 +1003,7 @@
       "L",
       "W",
       "D",
+      "L",
       "L"
     ],
     "Clube do Remo": [
@@ -1045,6 +1047,7 @@
       "D",
       "W",
       "L",
+      "D",
       "D",
       "D",
       "D"
@@ -1156,6 +1159,7 @@
       "L",
       "W",
       "W",
+      "D",
       "D",
       "D"
     ],
@@ -1318,9 +1322,9 @@
         "l": 1
       },
       "away": {
-        "gf": 17,
+        "gf": 21,
         "ga": 8,
-        "w": 6,
+        "w": 7,
         "d": 3,
         "l": 1
       }
@@ -1392,10 +1396,10 @@
     "EC Vitória": {
       "home": {
         "gf": 15,
-        "ga": 3,
+        "ga": 7,
         "w": 7,
         "d": 1,
-        "l": 1
+        "l": 2
       },
       "away": {
         "gf": 7,
@@ -1426,7 +1430,7 @@
         "gf": 18,
         "ga": 11,
         "w": 7,
-        "d": 2,
+        "d": 3,
         "l": 1
       },
       "away": {
@@ -1513,7 +1517,7 @@
         "gf": 12,
         "ga": 14,
         "w": 4,
-        "d": 2,
+        "d": 3,
         "l": 3
       }
     },
