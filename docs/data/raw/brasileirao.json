@@ -66,14 +66,14 @@
         "tla": "FLU",
         "crest": "https://crests.football-data.org/1765.png"
       },
-      "playedGames": 21,
+      "playedGames": 22,
       "form": null,
       "won": 9,
-      "draw": 7,
+      "draw": 8,
       "lost": 5,
-      "points": 34,
-      "goalsFor": 30,
-      "goalsAgainst": 25,
+      "points": 35,
+      "goalsFor": 31,
+      "goalsAgainst": 26,
       "goalDifference": 5
     },
     {
@@ -117,6 +117,44 @@
     {
       "position": 7,
       "team": {
+        "id": 1770,
+        "name": "Botafogo FR",
+        "shortName": "Botafogo",
+        "tla": "BOT",
+        "crest": "https://crests.football-data.org/1770.png"
+      },
+      "playedGames": 21,
+      "form": null,
+      "won": 8,
+      "draw": 6,
+      "lost": 7,
+      "points": 30,
+      "goalsFor": 35,
+      "goalsAgainst": 33,
+      "goalDifference": 2
+    },
+    {
+      "position": 8,
+      "team": {
+        "id": 4241,
+        "name": "Coritiba FBC",
+        "shortName": "Coritiba",
+        "tla": "COR",
+        "crest": "https://crests.football-data.org/4241.png"
+      },
+      "playedGames": 22,
+      "form": null,
+      "won": 8,
+      "draw": 6,
+      "lost": 8,
+      "points": 30,
+      "goalsFor": 27,
+      "goalsAgainst": 29,
+      "goalDifference": -2
+    },
+    {
+      "position": 9,
+      "team": {
         "id": 1771,
         "name": "Cruzeiro EC",
         "shortName": "Cruzeiro",
@@ -134,26 +172,7 @@
       "goalDifference": -3
     },
     {
-      "position": 8,
-      "team": {
-        "id": 1770,
-        "name": "Botafogo FR",
-        "shortName": "Botafogo",
-        "tla": "BOT",
-        "crest": "https://crests.football-data.org/1770.png"
-      },
-      "playedGames": 20,
-      "form": null,
-      "won": 8,
-      "draw": 5,
-      "lost": 7,
-      "points": 29,
-      "goalsFor": 34,
-      "goalsAgainst": 32,
-      "goalDifference": 2
-    },
-    {
-      "position": 9,
+      "position": 10,
       "team": {
         "id": 1766,
         "name": "CA Mineiro",
@@ -172,7 +191,7 @@
       "goalDifference": 0
     },
     {
-      "position": 10,
+      "position": 11,
       "team": {
         "id": 1779,
         "name": "SC Corinthians Paulista",
@@ -189,25 +208,6 @@
       "goalsFor": 22,
       "goalsAgainst": 20,
       "goalDifference": 2
-    },
-    {
-      "position": 11,
-      "team": {
-        "id": 4241,
-        "name": "Coritiba FBC",
-        "shortName": "Coritiba",
-        "tla": "COR",
-        "crest": "https://crests.football-data.org/4241.png"
-      },
-      "playedGames": 22,
-      "form": null,
-      "won": 7,
-      "draw": 7,
-      "lost": 8,
-      "points": 28,
-      "goalsFor": 25,
-      "goalsAgainst": 28,
-      "goalDifference": -3
     },
     {
       "position": 12,
@@ -373,12 +373,12 @@
       "playedGames": 21,
       "form": null,
       "won": 1,
-      "draw": 8,
-      "lost": 12,
-      "points": 11,
-      "goalsFor": 19,
-      "goalsAgainst": 41,
-      "goalDifference": -22
+      "draw": 7,
+      "lost": 13,
+      "points": 10,
+      "goalsFor": 20,
+      "goalsAgainst": 43,
+      "goalDifference": -23
     }
   ],
   "artilheiros": [
@@ -915,7 +915,8 @@
       "L",
       "L",
       "D",
-      "L"
+      "L",
+      "W"
     ],
     "RB Bragantino": [
       "W",
@@ -1097,7 +1098,8 @@
       "L",
       "L",
       "L",
-      "D"
+      "D",
+      "L"
     ],
     "Santos FC": [
       "L",
@@ -1337,9 +1339,9 @@
     },
     "Coritiba FBC": {
       "home": {
-        "gf": 11,
-        "ga": 12,
-        "w": 3,
+        "gf": 13,
+        "ga": 13,
+        "w": 4,
         "d": 3,
         "l": 4
       },
@@ -1472,11 +1474,11 @@
         "l": 5
       },
       "away": {
-        "gf": 6,
-        "ga": 17,
+        "gf": 7,
+        "ga": 19,
         "w": 0,
         "d": 3,
-        "l": 7
+        "l": 8
       }
     },
     "Santos FC": {
