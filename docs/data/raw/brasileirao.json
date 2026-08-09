@@ -9,12 +9,12 @@
         "tla": "PAL",
         "crest": "https://crests.football-data.org/1769.png"
       },
-      "playedGames": 21,
+      "playedGames": 22,
       "form": null,
       "won": 14,
-      "draw": 5,
+      "draw": 6,
       "lost": 2,
-      "points": 47,
+      "points": 48,
       "goalsFor": 38,
       "goalsAgainst": 16,
       "goalDifference": 22
@@ -79,24 +79,43 @@
     {
       "position": 5,
       "team": {
+        "id": 1771,
+        "name": "Cruzeiro EC",
+        "shortName": "Cruzeiro",
+        "tla": "CRU",
+        "crest": "https://crests.football-data.org/1771.png"
+      },
+      "playedGames": 22,
+      "form": null,
+      "won": 9,
+      "draw": 6,
+      "lost": 7,
+      "points": 33,
+      "goalsFor": 30,
+      "goalsAgainst": 31,
+      "goalDifference": -1
+    },
+    {
+      "position": 6,
+      "team": {
         "id": 1777,
         "name": "EC Bahia",
         "shortName": "Bahia",
         "tla": "BAH",
         "crest": "https://crests.football-data.org/1777.png"
       },
-      "playedGames": 21,
+      "playedGames": 22,
       "form": null,
       "won": 8,
-      "draw": 8,
+      "draw": 9,
       "lost": 5,
-      "points": 32,
+      "points": 33,
       "goalsFor": 29,
       "goalsAgainst": 25,
       "goalDifference": 4
     },
     {
-      "position": 6,
+      "position": 7,
       "team": {
         "id": 4286,
         "name": "RB Bragantino",
@@ -113,25 +132,6 @@
       "goalsFor": 26,
       "goalsAgainst": 20,
       "goalDifference": 6
-    },
-    {
-      "position": 7,
-      "team": {
-        "id": 1771,
-        "name": "Cruzeiro EC",
-        "shortName": "Cruzeiro",
-        "tla": "CRU",
-        "crest": "https://crests.football-data.org/1771.png"
-      },
-      "playedGames": 22,
-      "form": null,
-      "won": 8,
-      "draw": 7,
-      "lost": 7,
-      "points": 31,
-      "goalsFor": 27,
-      "goalsAgainst": 30,
-      "goalDifference": -3
     },
     {
       "position": 8,
@@ -278,15 +278,34 @@
       "playedGames": 21,
       "form": null,
       "won": 6,
-      "draw": 6,
+      "draw": 5,
+      "lost": 10,
+      "points": 23,
+      "goalsFor": 24,
+      "goalsAgainst": 30,
+      "goalDifference": -6
+    },
+    {
+      "position": 16,
+      "team": {
+        "id": 6684,
+        "name": "SC Internacional",
+        "shortName": "Internacional",
+        "tla": "SCI",
+        "crest": "https://crests.football-data.org/6684.png"
+      },
+      "playedGames": 22,
+      "form": null,
+      "won": 5,
+      "draw": 8,
       "lost": 9,
-      "points": 24,
+      "points": 23,
       "goalsFor": 23,
       "goalsAgainst": 27,
       "goalDifference": -4
     },
     {
-      "position": 16,
+      "position": 17,
       "team": {
         "id": 6685,
         "name": "Santos FC",
@@ -305,13 +324,13 @@
       "goalDifference": -4
     },
     {
-      "position": 17,
+      "position": 18,
       "team": {
-        "id": 6684,
-        "name": "SC Internacional",
-        "shortName": "Internacional",
-        "tla": "SCI",
-        "crest": "https://crests.football-data.org/6684.png"
+        "id": 1780,
+        "name": "CR Vasco da Gama",
+        "shortName": "Vasco da Gama",
+        "tla": "VAS",
+        "crest": "https://crests.football-data.org/1780.png"
       },
       "playedGames": 21,
       "form": null,
@@ -320,11 +339,11 @@
       "lost": 9,
       "points": 22,
       "goalsFor": 23,
-      "goalsAgainst": 27,
-      "goalDifference": -4
+      "goalsAgainst": 31,
+      "goalDifference": -8
     },
     {
-      "position": 18,
+      "position": 19,
       "team": {
         "id": 4287,
         "name": "Clube do Remo",
@@ -341,25 +360,6 @@
       "goalsFor": 26,
       "goalsAgainst": 36,
       "goalDifference": -10
-    },
-    {
-      "position": 19,
-      "team": {
-        "id": 1780,
-        "name": "CR Vasco da Gama",
-        "shortName": "Vasco da Gama",
-        "tla": "VAS",
-        "crest": "https://crests.football-data.org/1780.png"
-      },
-      "playedGames": 20,
-      "form": null,
-      "won": 5,
-      "draw": 6,
-      "lost": 9,
-      "points": 21,
-      "goalsFor": 23,
-      "goalsAgainst": 31,
-      "goalDifference": -8
     },
     {
       "position": 20,
@@ -656,7 +656,7 @@
         "venue": "Estádio Governador Roberto Santos",
         "lastUpdated": "2024-10-28T10:09:10Z"
       },
-      "playedMatches": 16,
+      "playedMatches": 17,
       "goals": 7,
       "assists": 1,
       "penalties": 2
@@ -718,7 +718,7 @@
         "venue": "Allianz Parque",
         "lastUpdated": "2022-04-06T13:14:55Z"
       },
-      "playedMatches": 18,
+      "playedMatches": 19,
       "goals": 6,
       "assists": 3,
       "penalties": null
@@ -753,6 +753,37 @@
       "goals": 6,
       "assists": 1,
       "penalties": null
+    },
+    {
+      "player": {
+        "id": 91310,
+        "name": "Kaio Jorge",
+        "firstName": "",
+        "lastName": "Kaio Jorge",
+        "dateOfBirth": "2002-01-24",
+        "nationality": "Brazil",
+        "section": "Centre-Forward",
+        "position": null,
+        "shirtNumber": null,
+        "lastUpdated": "2024-09-02T09:59:11Z"
+      },
+      "team": {
+        "id": 1771,
+        "name": "Cruzeiro EC",
+        "shortName": "Cruzeiro",
+        "tla": "CRU",
+        "crest": "https://crests.football-data.org/1771.png",
+        "address": "Rua Timbiras 2903, Bairro Preto Belo Horizonte, MG 30140-062",
+        "website": "http://www.cruzeiro.com.br",
+        "founded": 1921,
+        "clubColors": "Blue / White",
+        "venue": "Estádio Governador Magalhães Pinto",
+        "lastUpdated": "2022-04-10T11:03:46Z"
+      },
+      "playedMatches": 15,
+      "goals": 6,
+      "assists": null,
+      "penalties": 3
     },
     {
       "player": {
@@ -814,37 +845,6 @@
       "playedMatches": 17,
       "goals": 6,
       "assists": 1,
-      "penalties": null
-    },
-    {
-      "player": {
-        "id": 8606,
-        "name": "Stiven Mendoza",
-        "firstName": "John",
-        "lastName": "Mendoza",
-        "dateOfBirth": "1992-06-27",
-        "nationality": "Colombia",
-        "section": "Left Winger",
-        "position": null,
-        "shirtNumber": null,
-        "lastUpdated": "2025-02-08T15:38:40Z"
-      },
-      "team": {
-        "id": 1768,
-        "name": "CA Paranaense",
-        "shortName": "Paranaense",
-        "tla": "CAP",
-        "crest": "https://crests.football-data.org/1768.png",
-        "address": "Estrada do Ganchinho 1451, Umbará Curitiba, PR 81930-160",
-        "website": "http://www.atleticoparanaense.com",
-        "founded": 1924,
-        "clubColors": "Black / White / Red",
-        "venue": "Estádio Joaquim Américo Guimarães",
-        "lastUpdated": "2022-04-06T13:14:06Z"
-      },
-      "playedMatches": 20,
-      "goals": 5,
-      "assists": null,
       "penalties": null
     }
   ],
@@ -1237,7 +1237,8 @@
       "L",
       "W",
       "D",
-      "W"
+      "W",
+      "L"
     ],
     "CR Vasco da Gama": [
       "L",
@@ -1305,6 +1306,7 @@
       "D",
       "W",
       "L",
+      "W",
       "W"
     ]
   },
@@ -1574,11 +1576,11 @@
         "l": 3
       },
       "away": {
-        "gf": 8,
-        "ga": 14,
+        "gf": 9,
+        "ga": 17,
         "w": 1,
         "d": 2,
-        "l": 6
+        "l": 7
       }
     },
     "CR Vasco da Gama": {
@@ -1615,9 +1617,9 @@
     },
     "Cruzeiro EC": {
       "home": {
-        "gf": 16,
-        "ga": 13,
-        "w": 4,
+        "gf": 19,
+        "ga": 14,
+        "w": 5,
         "d": 4,
         "l": 3
       },
