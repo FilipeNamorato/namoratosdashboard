@@ -117,6 +117,25 @@
     {
       "position": 7,
       "team": {
+        "id": 1771,
+        "name": "Cruzeiro EC",
+        "shortName": "Cruzeiro",
+        "tla": "CRU",
+        "crest": "https://crests.football-data.org/1771.png"
+      },
+      "playedGames": 22,
+      "form": null,
+      "won": 8,
+      "draw": 7,
+      "lost": 7,
+      "points": 31,
+      "goalsFor": 27,
+      "goalsAgainst": 30,
+      "goalDifference": -3
+    },
+    {
+      "position": 8,
+      "team": {
         "id": 1770,
         "name": "Botafogo FR",
         "shortName": "Botafogo",
@@ -134,7 +153,7 @@
       "goalDifference": 2
     },
     {
-      "position": 8,
+      "position": 9,
       "team": {
         "id": 4241,
         "name": "Coritiba FBC",
@@ -151,25 +170,6 @@
       "goalsFor": 27,
       "goalsAgainst": 29,
       "goalDifference": -2
-    },
-    {
-      "position": 9,
-      "team": {
-        "id": 1771,
-        "name": "Cruzeiro EC",
-        "shortName": "Cruzeiro",
-        "tla": "CRU",
-        "crest": "https://crests.football-data.org/1771.png"
-      },
-      "playedGames": 21,
-      "form": null,
-      "won": 8,
-      "draw": 6,
-      "lost": 7,
-      "points": 30,
-      "goalsFor": 27,
-      "goalsAgainst": 30,
-      "goalDifference": -3
     },
     {
       "position": 10,
@@ -275,12 +275,12 @@
         "tla": "MIR",
         "crest": "https://crests.football-data.org/4364.png"
       },
-      "playedGames": 20,
+      "playedGames": 21,
       "form": null,
       "won": 6,
-      "draw": 5,
+      "draw": 6,
       "lost": 9,
-      "points": 23,
+      "points": 24,
       "goalsFor": 23,
       "goalsAgainst": 27,
       "goalDifference": -4
@@ -869,7 +869,8 @@
       "L",
       "W",
       "D",
-      "W"
+      "W",
+      "D"
     ],
     "SE Palmeiras": [
       "D",
@@ -1030,7 +1031,8 @@
       "W",
       "L",
       "W",
-      "L"
+      "L",
+      "D"
     ],
     "Fluminense FC": [
       "W",
@@ -1316,10 +1318,10 @@
         "l": 1
       },
       "away": {
-        "gf": 11,
-        "ga": 12,
+        "gf": 13,
+        "ga": 14,
         "w": 4,
-        "d": 0,
+        "d": 1,
         "l": 7
       }
     },
@@ -1421,10 +1423,10 @@
     },
     "Clube do Remo": {
       "home": {
-        "gf": 13,
-        "ga": 11,
+        "gf": 15,
+        "ga": 13,
         "w": 3,
-        "d": 4,
+        "d": 5,
         "l": 3
       },
       "away": {
