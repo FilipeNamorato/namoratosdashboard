@@ -28,15 +28,15 @@
         "tla": "FLA",
         "crest": "https://crests.football-data.org/1783.png"
       },
-      "playedGames": 20,
+      "playedGames": 21,
       "form": null,
-      "won": 11,
+      "won": 12,
       "draw": 6,
       "lost": 3,
-      "points": 39,
-      "goalsFor": 37,
+      "points": 42,
+      "goalsFor": 38,
       "goalsAgainst": 18,
-      "goalDifference": 19
+      "goalDifference": 20
     },
     {
       "position": 3,
@@ -49,13 +49,13 @@
       },
       "playedGames": 22,
       "form": null,
-      "won": 11,
-      "draw": 5,
+      "won": 12,
+      "draw": 4,
       "lost": 6,
-      "points": 38,
-      "goalsFor": 28,
+      "points": 40,
+      "goalsFor": 30,
       "goalsAgainst": 19,
-      "goalDifference": 9
+      "goalDifference": 11
     },
     {
       "position": 4,
@@ -117,6 +117,25 @@
     {
       "position": 7,
       "team": {
+        "id": 1779,
+        "name": "SC Corinthians Paulista",
+        "shortName": "Corinthians",
+        "tla": "COR",
+        "crest": "https://crests.football-data.org/1779.png"
+      },
+      "playedGames": 22,
+      "form": null,
+      "won": 8,
+      "draw": 8,
+      "lost": 6,
+      "points": 32,
+      "goalsFor": 24,
+      "goalsAgainst": 20,
+      "goalDifference": 4
+    },
+    {
+      "position": 8,
+      "team": {
         "id": 4286,
         "name": "RB Bragantino",
         "shortName": "Bragantino",
@@ -126,15 +145,15 @@
       "playedGames": 21,
       "form": null,
       "won": 9,
-      "draw": 5,
-      "lost": 7,
-      "points": 32,
+      "draw": 4,
+      "lost": 8,
+      "points": 31,
       "goalsFor": 26,
-      "goalsAgainst": 20,
-      "goalDifference": 6
+      "goalsAgainst": 22,
+      "goalDifference": 4
     },
     {
-      "position": 8,
+      "position": 9,
       "team": {
         "id": 1770,
         "name": "Botafogo FR",
@@ -153,7 +172,7 @@
       "goalDifference": 2
     },
     {
-      "position": 9,
+      "position": 10,
       "team": {
         "id": 4241,
         "name": "Coritiba FBC",
@@ -170,25 +189,6 @@
       "goalsFor": 27,
       "goalsAgainst": 29,
       "goalDifference": -2
-    },
-    {
-      "position": 10,
-      "team": {
-        "id": 1779,
-        "name": "SC Corinthians Paulista",
-        "shortName": "Corinthians",
-        "tla": "COR",
-        "crest": "https://crests.football-data.org/1779.png"
-      },
-      "playedGames": 22,
-      "form": null,
-      "won": 7,
-      "draw": 9,
-      "lost": 6,
-      "points": 30,
-      "goalsFor": 22,
-      "goalsAgainst": 20,
-      "goalDifference": 2
     },
     {
       "position": 11,
@@ -237,15 +237,15 @@
         "tla": "VIT",
         "crest": "https://crests.football-data.org/1782.png"
       },
-      "playedGames": 21,
+      "playedGames": 22,
       "form": null,
       "won": 7,
       "draw": 5,
-      "lost": 9,
+      "lost": 10,
       "points": 26,
       "goalsFor": 22,
-      "goalsAgainst": 31,
-      "goalDifference": -9
+      "goalsAgainst": 32,
+      "goalDifference": -10
     },
     {
       "position": 14,
@@ -288,25 +288,6 @@
     {
       "position": 16,
       "team": {
-        "id": 6685,
-        "name": "Santos FC",
-        "shortName": "Santos",
-        "tla": "SAN",
-        "crest": "https://crests.football-data.org/6685.png"
-      },
-      "playedGames": 21,
-      "form": null,
-      "won": 5,
-      "draw": 8,
-      "lost": 8,
-      "points": 23,
-      "goalsFor": 29,
-      "goalsAgainst": 33,
-      "goalDifference": -4
-    },
-    {
-      "position": 17,
-      "team": {
         "id": 6684,
         "name": "SC Internacional",
         "shortName": "Internacional",
@@ -322,6 +303,25 @@
       "goalsFor": 23,
       "goalsAgainst": 27,
       "goalDifference": -4
+    },
+    {
+      "position": 17,
+      "team": {
+        "id": 6685,
+        "name": "Santos FC",
+        "shortName": "Santos",
+        "tla": "SAN",
+        "crest": "https://crests.football-data.org/6685.png"
+      },
+      "playedGames": 21,
+      "form": null,
+      "won": 5,
+      "draw": 7,
+      "lost": 9,
+      "points": 22,
+      "goalsFor": 29,
+      "goalsAgainst": 35,
+      "goalDifference": -6
     },
     {
       "position": 18,
@@ -409,7 +409,7 @@
         "lastUpdated": "2022-04-06T13:14:06Z"
       },
       "playedMatches": 20,
-      "goals": 13,
+      "goals": 14,
       "assists": 2,
       "penalties": 2
     },
@@ -439,7 +439,7 @@
         "venue": "Estadio Jornalista Mário Filho",
         "lastUpdated": "2022-04-06T13:13:43Z"
       },
-      "playedMatches": 19,
+      "playedMatches": 20,
       "goals": 12,
       "assists": 5,
       "penalties": null
@@ -940,7 +940,8 @@
       "W",
       "W",
       "D",
-      "D"
+      "D",
+      "L"
     ],
     "SC Internacional": [
       "L",
@@ -987,7 +988,8 @@
       "W",
       "W",
       "W",
-      "D"
+      "D",
+      "W"
     ],
     "EC Vitória": [
       "W",
@@ -1126,7 +1128,8 @@
       "L",
       "W",
       "L",
-      "D"
+      "D",
+      "L"
     ],
     "SC Corinthians Paulista": [
       "L",
@@ -1149,7 +1152,8 @@
       "W",
       "W",
       "D",
-      "D"
+      "D",
+      "W"
     ],
     "EC Bahia": [
       "W",
@@ -1366,10 +1370,10 @@
     "RB Bragantino": {
       "home": {
         "gf": 16,
-        "ga": 9,
+        "ga": 11,
         "w": 5,
         "d": 2,
-        "l": 3
+        "l": 4
       },
       "away": {
         "gf": 10,
@@ -1404,9 +1408,9 @@
         "l": 1
       },
       "away": {
-        "gf": 9,
+        "gf": 11,
         "ga": 13,
-        "w": 3,
+        "w": 4,
         "d": 2,
         "l": 5
       }
@@ -1494,10 +1498,10 @@
     "Santos FC": {
       "home": {
         "gf": 17,
-        "ga": 14,
+        "ga": 16,
         "w": 5,
         "d": 3,
-        "l": 3
+        "l": 4
       },
       "away": {
         "gf": 12,
@@ -1516,9 +1520,9 @@
         "l": 3
       },
       "away": {
-        "gf": 10,
+        "gf": 12,
         "ga": 12,
-        "w": 2,
+        "w": 3,
         "d": 5,
         "l": 3
       }
