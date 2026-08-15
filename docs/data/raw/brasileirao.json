@@ -11,13 +11,13 @@
       },
       "playedGames": 23,
       "form": null,
-      "won": 15,
+      "won": 14,
       "draw": 6,
-      "lost": 2,
-      "points": 51,
-      "goalsFor": 39,
-      "goalsAgainst": 16,
-      "goalDifference": 23
+      "lost": 3,
+      "points": 48,
+      "goalsFor": 40,
+      "goalsAgainst": 19,
+      "goalDifference": 21
     },
     {
       "position": 2,
@@ -47,12 +47,12 @@
         "tla": "CAP",
         "crest": "https://crests.football-data.org/1768.png"
       },
-      "playedGames": 22,
+      "playedGames": 23,
       "form": null,
       "won": 12,
-      "draw": 4,
+      "draw": 5,
       "lost": 6,
-      "points": 40,
+      "points": 41,
       "goalsFor": 30,
       "goalsAgainst": 19,
       "goalDifference": 11
@@ -68,13 +68,13 @@
       },
       "playedGames": 23,
       "form": null,
-      "won": 9,
+      "won": 10,
       "draw": 8,
-      "lost": 6,
-      "points": 35,
-      "goalsFor": 31,
-      "goalsAgainst": 27,
-      "goalDifference": 4
+      "lost": 5,
+      "points": 38,
+      "goalsFor": 34,
+      "goalsAgainst": 28,
+      "goalDifference": 6
     },
     {
       "position": 5,
@@ -117,6 +117,25 @@
     {
       "position": 7,
       "team": {
+        "id": 4286,
+        "name": "RB Bragantino",
+        "shortName": "Bragantino",
+        "tla": "RBB",
+        "crest": "https://crests.football-data.org/4286.png"
+      },
+      "playedGames": 22,
+      "form": null,
+      "won": 9,
+      "draw": 5,
+      "lost": 8,
+      "points": 32,
+      "goalsFor": 26,
+      "goalsAgainst": 22,
+      "goalDifference": 4
+    },
+    {
+      "position": 8,
+      "team": {
         "id": 1779,
         "name": "SC Corinthians Paulista",
         "shortName": "Corinthians",
@@ -131,25 +150,6 @@
       "points": 32,
       "goalsFor": 24,
       "goalsAgainst": 20,
-      "goalDifference": 4
-    },
-    {
-      "position": 8,
-      "team": {
-        "id": 4286,
-        "name": "RB Bragantino",
-        "shortName": "Bragantino",
-        "tla": "RBB",
-        "crest": "https://crests.football-data.org/4286.png"
-      },
-      "playedGames": 21,
-      "form": null,
-      "won": 9,
-      "draw": 4,
-      "lost": 8,
-      "points": 31,
-      "goalsFor": 26,
-      "goalsAgainst": 22,
       "goalDifference": 4
     },
     {
@@ -408,7 +408,7 @@
         "venue": "Estádio Joaquim Américo Guimarães",
         "lastUpdated": "2022-04-06T13:14:06Z"
       },
-      "playedMatches": 20,
+      "playedMatches": 21,
       "goals": 14,
       "assists": 2,
       "penalties": 2
@@ -720,7 +720,7 @@
       },
       "playedMatches": 20,
       "goals": 6,
-      "assists": 3,
+      "assists": 4,
       "penalties": null
     },
     {
@@ -842,7 +842,7 @@
         "venue": "Estádio Nabi Abi Chedid",
         "lastUpdated": "2023-02-18T08:43:26Z"
       },
-      "playedMatches": 18,
+      "playedMatches": 19,
       "goals": 6,
       "assists": 1,
       "penalties": null
@@ -894,7 +894,8 @@
       "W",
       "L",
       "W",
-      "D"
+      "D",
+      "L"
     ],
     "Coritiba FBC": [
       "L",
@@ -1061,7 +1062,8 @@
       "D",
       "D",
       "D",
-      "D"
+      "D",
+      "W"
     ],
     "Grêmio FBPA": [
       "L",
@@ -1346,11 +1348,11 @@
         "l": 1
       },
       "away": {
-        "gf": 21,
-        "ga": 8,
+        "gf": 23,
+        "ga": 11,
         "w": 7,
         "d": 3,
-        "l": 1
+        "l": 2
       }
     },
     "Coritiba FBC": {
@@ -1451,9 +1453,9 @@
     },
     "Fluminense FC": {
       "home": {
-        "gf": 18,
-        "ga": 11,
-        "w": 7,
+        "gf": 21,
+        "ga": 13,
+        "w": 8,
         "d": 3,
         "l": 1
       },
