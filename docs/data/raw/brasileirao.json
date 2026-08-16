@@ -91,8 +91,8 @@
       "draw": 10,
       "lost": 5,
       "points": 34,
-      "goalsFor": 29,
-      "goalsAgainst": 25,
+      "goalsFor": 32,
+      "goalsAgainst": 28,
       "goalDifference": 4
     },
     {
@@ -136,6 +136,25 @@
     {
       "position": 8,
       "team": {
+        "id": 1766,
+        "name": "CA Mineiro",
+        "shortName": "Mineiro",
+        "tla": "CAM",
+        "crest": "https://crests.football-data.org/1766.png"
+      },
+      "playedGames": 22,
+      "form": null,
+      "won": 9,
+      "draw": 5,
+      "lost": 8,
+      "points": 32,
+      "goalsFor": 28,
+      "goalsAgainst": 27,
+      "goalDifference": 1
+    },
+    {
+      "position": 9,
+      "team": {
         "id": 1779,
         "name": "SC Corinthians Paulista",
         "shortName": "Corinthians",
@@ -153,7 +172,7 @@
       "goalDifference": 4
     },
     {
-      "position": 9,
+      "position": 10,
       "team": {
         "id": 4241,
         "name": "Coritiba FBC",
@@ -172,7 +191,7 @@
       "goalDifference": -2
     },
     {
-      "position": 10,
+      "position": 11,
       "team": {
         "id": 1770,
         "name": "Botafogo FR",
@@ -189,25 +208,6 @@
       "goalsFor": 35,
       "goalsAgainst": 33,
       "goalDifference": 2
-    },
-    {
-      "position": 11,
-      "team": {
-        "id": 1766,
-        "name": "CA Mineiro",
-        "shortName": "Mineiro",
-        "tla": "CAM",
-        "crest": "https://crests.football-data.org/1766.png"
-      },
-      "playedGames": 21,
-      "form": null,
-      "won": 8,
-      "draw": 5,
-      "lost": 8,
-      "points": 29,
-      "goalsFor": 27,
-      "goalsAgainst": 27,
-      "goalDifference": 0
     },
     {
       "position": 12,
@@ -256,15 +256,15 @@
         "tla": "FBP",
         "crest": "https://crests.football-data.org/1767.png"
       },
-      "playedGames": 21,
+      "playedGames": 22,
       "form": null,
       "won": 6,
       "draw": 7,
-      "lost": 8,
+      "lost": 9,
       "points": 25,
       "goalsFor": 24,
-      "goalsAgainst": 27,
-      "goalDifference": -3
+      "goalsAgainst": 28,
+      "goalDifference": -4
     },
     {
       "position": 15,
@@ -313,12 +313,12 @@
         "tla": "SAN",
         "crest": "https://crests.football-data.org/6685.png"
       },
-      "playedGames": 21,
+      "playedGames": 22,
       "form": null,
       "won": 5,
-      "draw": 7,
+      "draw": 8,
       "lost": 9,
-      "points": 22,
+      "points": 23,
       "goalsFor": 29,
       "goalsAgainst": 35,
       "goalDifference": -6
@@ -332,12 +332,12 @@
         "tla": "VAS",
         "crest": "https://crests.football-data.org/1780.png"
       },
-      "playedGames": 21,
+      "playedGames": 22,
       "form": null,
       "won": 5,
-      "draw": 7,
+      "draw": 8,
       "lost": 9,
-      "points": 22,
+      "points": 23,
       "goalsFor": 23,
       "goalsAgainst": 31,
       "goalDifference": -8
@@ -376,8 +376,8 @@
       "draw": 8,
       "lost": 13,
       "points": 11,
-      "goalsFor": 20,
-      "goalsAgainst": 43,
+      "goalsFor": 23,
+      "goalsAgainst": 46,
       "goalDifference": -23
     }
   ],
@@ -656,7 +656,7 @@
         "venue": "Estádio Governador Roberto Santos",
         "lastUpdated": "2024-10-28T10:09:10Z"
       },
-      "playedMatches": 17,
+      "playedMatches": 18,
       "goals": 7,
       "assists": 1,
       "penalties": 2
@@ -1107,7 +1107,8 @@
       "L",
       "L",
       "D",
-      "L"
+      "L",
+      "D"
     ],
     "Santos FC": [
       "L",
@@ -1175,6 +1176,7 @@
       "L",
       "W",
       "W",
+      "D",
       "D",
       "D",
       "D",
@@ -1483,10 +1485,10 @@
     },
     "Chapecoense AF": {
       "home": {
-        "gf": 13,
-        "ga": 24,
+        "gf": 16,
+        "ga": 27,
         "w": 1,
-        "d": 4,
+        "d": 5,
         "l": 5
       },
       "away": {
@@ -1538,10 +1540,10 @@
         "l": 2
       },
       "away": {
-        "gf": 12,
-        "ga": 14,
+        "gf": 15,
+        "ga": 17,
         "w": 4,
-        "d": 3,
+        "d": 4,
         "l": 3
       }
     },
