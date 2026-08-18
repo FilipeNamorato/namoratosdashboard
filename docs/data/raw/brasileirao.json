@@ -250,25 +250,6 @@
     {
       "position": 14,
       "team": {
-        "id": 6684,
-        "name": "SC Internacional",
-        "shortName": "Internacional",
-        "tla": "SCI",
-        "crest": "https://crests.football-data.org/6684.png"
-      },
-      "playedGames": 23,
-      "form": null,
-      "won": 6,
-      "draw": 8,
-      "lost": 9,
-      "points": 26,
-      "goalsFor": 24,
-      "goalsAgainst": 27,
-      "goalDifference": -3
-    },
-    {
-      "position": 15,
-      "team": {
         "id": 6685,
         "name": "Santos FC",
         "shortName": "Santos",
@@ -286,7 +267,7 @@
       "goalDifference": -3
     },
     {
-      "position": 16,
+      "position": 15,
       "team": {
         "id": 1767,
         "name": "Grêmio FBPA",
@@ -303,6 +284,25 @@
       "goalsFor": 24,
       "goalsAgainst": 30,
       "goalDifference": -6
+    },
+    {
+      "position": 16,
+      "team": {
+        "id": 6684,
+        "name": "SC Internacional",
+        "shortName": "Internacional",
+        "tla": "SCI",
+        "crest": "https://crests.football-data.org/6684.png"
+      },
+      "playedGames": 23,
+      "form": null,
+      "won": 5,
+      "draw": 9,
+      "lost": 9,
+      "points": 24,
+      "goalsFor": 24,
+      "goalsAgainst": 28,
+      "goalDifference": -4
     },
     {
       "position": 17,
@@ -335,12 +335,12 @@
       "playedGames": 23,
       "form": null,
       "won": 5,
-      "draw": 7,
-      "lost": 11,
-      "points": 22,
-      "goalsFor": 26,
+      "draw": 8,
+      "lost": 10,
+      "points": 23,
+      "goalsFor": 27,
       "goalsAgainst": 37,
-      "goalDifference": -11
+      "goalDifference": -10
     },
     {
       "position": 19,
@@ -969,6 +969,7 @@
       "L",
       "L",
       "D",
+      "D",
       "D"
     ],
     "CA Paranaense": [
@@ -1043,6 +1044,7 @@
       "L",
       "W",
       "L",
+      "D",
       "D"
     ],
     "Fluminense FC": [
@@ -1405,10 +1407,10 @@
     },
     "SC Internacional": {
       "home": {
-        "gf": 13,
-        "ga": 12,
+        "gf": 14,
+        "ga": 13,
         "w": 3,
-        "d": 3,
+        "d": 4,
         "l": 5
       },
       "away": {
@@ -1460,10 +1462,10 @@
         "l": 3
       },
       "away": {
-        "gf": 11,
-        "ga": 23,
+        "gf": 12,
+        "ga": 24,
         "w": 2,
-        "d": 2,
+        "d": 3,
         "l": 7
       }
     },
