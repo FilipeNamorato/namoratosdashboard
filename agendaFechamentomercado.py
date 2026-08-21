@@ -152,7 +152,11 @@ def main():
 
     service = construir_servico()
 
+    print(f"[DIAG] CALENDAR_ID usado: {CALENDAR_ID}")
+
     eventos_existentes = buscar_eventos_existentes(service, rodada)
+    for ev in eventos_existentes:
+        print(f"[DIAG] Evento encontrado: {ev.get('htmlLink')} (organizer={ev.get('organizer')})")
 
     if eventos_existentes and not timestamp_mudou(eventos_existentes, dt_fechamento):
         print("Evento ja existe com o mesmo horario. Nada a fazer.")
