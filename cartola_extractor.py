@@ -311,10 +311,34 @@ def salvar_raw_json(nome: str, dados: dict):
 # ODDS API
 # ─────────────────────────────────────────────────────────────
 
+ODDS_CACHE_HORAS = float(os.environ.get("ODDS_CACHE_HORAS", "6"))
+ODDS_META_PATH   = CURRENT_DIR / "odds_meta.json"
+
+def _idade_odds_horas():
+    """Horas desde a última coleta de odds, ou None se nunca coletou.
+
+    Lê de odds_meta.json e não do mtime do CSV: o checkout do CI reescreve
+    o mtime a cada run, o que faria o arquivo parecer sempre recém-criado.
+    """
+    try:
+        meta = json.loads(ODDS_META_PATH.read_text(encoding="utf-8"))
+        ts = datetime.fromisoformat(meta["coletado_em"])
+    except Exception:
+        return None
+    if ts.tzinfo is None:
+        ts = ts.replace(tzinfo=timezone.utc)
+    return (datetime.now(timezone.utc) - ts).total_seconds() / 3600
+
 def get_odds() -> pd.DataFrame:
     if not ODDS_API_KEY:
         print("  SKIP — ODDS_API_KEY não definida")
         return pd.DataFrame()
+
+    idade = _idade_odds_horas()
+    csv_atual = CURRENT_DIR / "odds.csv"
+    if idade is not None and idade < ODDS_CACHE_HORAS and csv_atual.exists():
+        print(f"  CACHE — coletadas há {idade:.1f}h (janela de {ODDS_CACHE_HORAS:.0f}h), sem chamar a API")
+        return pd.read_csv(csv_atual, encoding="utf-8-sig")
 
     resp = requests.get(ODDS_URL, params={
         "apiKey":      ODDS_API_KEY,
@@ -327,6 +351,13 @@ def get_odds() -> pd.DataFrame:
 
     # Salva JSON bruto antes de processar
     salvar_raw_json("odds", jogos)
+
+    # Marca a coleta assim que a API responde: o crédito já foi consumido,
+    # mesmo que nenhuma linha sobreviva ao mapeamento de nomes abaixo.
+    ODDS_META_PATH.write_text(
+        json.dumps({"coletado_em": datetime.now(timezone.utc).isoformat()}, indent=2),
+        encoding="utf-8",
+    )
 
     rows = []
     for jogo in jogos:
@@ -855,29 +886,29 @@ def enriquecer_partidas(df_partidas, df_odds, mapa_clubes) -> pd.DataFrame:
     if not col_casa or not col_vis:
         return df
 
+    # Chaveia pelo CONFRONTO (casa, visitante), nunca só pelo mandante: o
+    # df_odds traz também jogos de rodadas futuras, e um clube que é visitante
+    # agora costuma ser mandante na rodada seguinte. Chavear só por abr_casa
+    # fazia o odd_vis/prob_vis serem lidos do jogo errado.
     mapa_odds = {}
     for _, o in df_odds.iterrows():
-        mapa_odds[o["abr_casa"]] = {
+        mapa_odds[(o["abr_casa"], o["abr_vis"])] = {
             "odd_casa":    o["odd_casa"],    "odd_vis":    o["odd_vis"],
             "odd_empate":  o["odd_empate"],  "prob_casa":  o["prob_casa"],
             "prob_vis":    o["prob_vis"],    "forca_casa": o["forca_casa"],
             "forca_vis":   o["forca_vis"],   "prob_over_25": o.get("prob_over_25"),
         }
 
-    def get_odd(clube_id, campo):
+    def get_odd(row, campo):
         try:
-            abr = mapa_clubes.get(int(clube_id))
-            return mapa_odds.get(abr, {}).get(campo)
+            abr_casa = mapa_clubes.get(int(row[col_casa]))
+            abr_vis  = mapa_clubes.get(int(row[col_vis]))
+            return mapa_odds.get((abr_casa, abr_vis), {}).get(campo)
         except: return None
 
-    df["odd_casa"]    = df[col_casa].apply(lambda x: get_odd(x, "odd_casa"))
-    df["odd_vis"]     = df[col_vis].apply( lambda x: get_odd(x, "odd_vis"))
-    df["odd_empate"]  = df[col_casa].apply(lambda x: get_odd(x, "odd_empate"))
-    df["prob_casa"]   = df[col_casa].apply(lambda x: get_odd(x, "prob_casa"))
-    df["prob_vis"]    = df[col_vis].apply( lambda x: get_odd(x, "prob_vis"))
-    df["prob_over_25"]= df[col_casa].apply(lambda x: get_odd(x, "prob_over_25"))
-    df["forca_casa"]  = df[col_casa].apply(lambda x: get_odd(x, "forca_casa"))
-    df["forca_vis"]   = df[col_vis].apply( lambda x: get_odd(x, "forca_vis"))
+    for campo in ("odd_casa", "odd_vis", "odd_empate", "prob_casa",
+                  "prob_vis", "prob_over_25", "forca_casa", "forca_vis"):
+        df[campo] = df.apply(lambda r, c=campo: get_odd(r, c), axis=1)
 
     return df
 
