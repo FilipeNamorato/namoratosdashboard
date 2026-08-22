@@ -68,13 +68,13 @@
       },
       "playedGames": 24,
       "form": null,
-      "won": 10,
+      "won": 11,
       "draw": 8,
-      "lost": 6,
-      "points": 38,
-      "goalsFor": 34,
+      "lost": 5,
+      "points": 41,
+      "goalsFor": 36,
       "goalsAgainst": 29,
-      "goalDifference": 5
+      "goalDifference": 7
     },
     {
       "position": 5,
@@ -117,6 +117,25 @@
     {
       "position": 7,
       "team": {
+        "id": 1766,
+        "name": "CA Mineiro",
+        "shortName": "Mineiro",
+        "tla": "CAM",
+        "crest": "https://crests.football-data.org/1766.png"
+      },
+      "playedGames": 23,
+      "form": null,
+      "won": 9,
+      "draw": 6,
+      "lost": 8,
+      "points": 33,
+      "goalsFor": 30,
+      "goalsAgainst": 27,
+      "goalDifference": 3
+    },
+    {
+      "position": 8,
+      "team": {
         "id": 4286,
         "name": "RB Bragantino",
         "shortName": "Bragantino",
@@ -132,25 +151,6 @@
       "goalsFor": 27,
       "goalsAgainst": 23,
       "goalDifference": 4
-    },
-    {
-      "position": 8,
-      "team": {
-        "id": 1766,
-        "name": "CA Mineiro",
-        "shortName": "Mineiro",
-        "tla": "CAM",
-        "crest": "https://crests.football-data.org/1766.png"
-      },
-      "playedGames": 22,
-      "form": null,
-      "won": 9,
-      "draw": 5,
-      "lost": 8,
-      "points": 32,
-      "goalsFor": 30,
-      "goalsAgainst": 27,
-      "goalDifference": 3
     },
     {
       "position": 9,
@@ -250,25 +250,6 @@
     {
       "position": 14,
       "team": {
-        "id": 4287,
-        "name": "Clube do Remo",
-        "shortName": "Clube do Remo",
-        "tla": "CRE",
-        "crest": "https://crests.football-data.org/4287.png"
-      },
-      "playedGames": 24,
-      "form": null,
-      "won": 6,
-      "draw": 8,
-      "lost": 10,
-      "points": 26,
-      "goalsFor": 28,
-      "goalsAgainst": 37,
-      "goalDifference": -9
-    },
-    {
-      "position": 15,
-      "team": {
         "id": 6685,
         "name": "Santos FC",
         "shortName": "Santos",
@@ -286,7 +267,7 @@
       "goalDifference": -3
     },
     {
-      "position": 16,
+      "position": 15,
       "team": {
         "id": 1767,
         "name": "Grêmio FBPA",
@@ -305,7 +286,7 @@
       "goalDifference": -6
     },
     {
-      "position": 17,
+      "position": 16,
       "team": {
         "id": 6684,
         "name": "SC Internacional",
@@ -313,18 +294,18 @@
         "tla": "SCI",
         "crest": "https://crests.football-data.org/6684.png"
       },
-      "playedGames": 23,
+      "playedGames": 24,
       "form": null,
       "won": 5,
-      "draw": 9,
+      "draw": 10,
       "lost": 9,
-      "points": 24,
+      "points": 25,
       "goalsFor": 24,
       "goalsAgainst": 28,
       "goalDifference": -4
     },
     {
-      "position": 18,
+      "position": 17,
       "team": {
         "id": 4364,
         "name": "Mirassol FC",
@@ -341,6 +322,25 @@
       "goalsFor": 25,
       "goalsAgainst": 35,
       "goalDifference": -10
+    },
+    {
+      "position": 18,
+      "team": {
+        "id": 4287,
+        "name": "Clube do Remo",
+        "shortName": "Clube do Remo",
+        "tla": "CRE",
+        "crest": "https://crests.football-data.org/4287.png"
+      },
+      "playedGames": 24,
+      "form": null,
+      "won": 5,
+      "draw": 8,
+      "lost": 11,
+      "points": 23,
+      "goalsFor": 28,
+      "goalsAgainst": 39,
+      "goalDifference": -11
     },
     {
       "position": 19,
@@ -1045,7 +1045,8 @@
       "W",
       "L",
       "D",
-      "D"
+      "D",
+      "L"
     ],
     "Fluminense FC": [
       "W",
@@ -1070,6 +1071,7 @@
       "D",
       "D",
       "D",
+      "W",
       "W"
     ],
     "Grêmio FBPA": [
@@ -1462,18 +1464,18 @@
         "l": 3
       },
       "away": {
-        "gf": 12,
-        "ga": 24,
+        "gf": 13,
+        "ga": 26,
         "w": 2,
         "d": 3,
-        "l": 7
+        "l": 8
       }
     },
     "Fluminense FC": {
       "home": {
-        "gf": 21,
-        "ga": 13,
-        "w": 8,
+        "gf": 23,
+        "ga": 14,
+        "w": 9,
         "d": 3,
         "l": 1
       },
