@@ -31,12 +31,12 @@
       "playedGames": 23,
       "form": null,
       "won": 13,
-      "draw": 7,
-      "lost": 3,
-      "points": 46,
-      "goalsFor": 44,
-      "goalsAgainst": 19,
-      "goalDifference": 25
+      "draw": 6,
+      "lost": 4,
+      "points": 45,
+      "goalsFor": 45,
+      "goalsAgainst": 21,
+      "goalDifference": 24
     },
     {
       "position": 3,
@@ -87,13 +87,13 @@
       },
       "playedGames": 24,
       "form": null,
-      "won": 10,
-      "draw": 7,
+      "won": 11,
+      "draw": 6,
       "lost": 7,
-      "points": 37,
-      "goalsFor": 32,
-      "goalsAgainst": 32,
-      "goalDifference": 0
+      "points": 39,
+      "goalsFor": 34,
+      "goalsAgainst": 33,
+      "goalDifference": 1
     },
     {
       "position": 6,
@@ -384,6 +384,37 @@
   "artilheiros": [
     {
       "player": {
+        "id": 1077,
+        "name": "Pedro",
+        "firstName": "",
+        "lastName": "Pedro",
+        "dateOfBirth": "1997-06-20",
+        "nationality": "Brazil",
+        "section": "Offence",
+        "position": null,
+        "shirtNumber": null,
+        "lastUpdated": "2023-07-30T23:15:48Z"
+      },
+      "team": {
+        "id": 1783,
+        "name": "CR Flamengo",
+        "shortName": "Flamengo",
+        "tla": "FLA",
+        "crest": "https://crests.football-data.org/1783.png",
+        "address": "null Rio de Janeiro, RJ null",
+        "website": "https://www.flamengo.com.br/pagina-inicial-basquete",
+        "founded": 1919,
+        "clubColors": "Red / Black / White",
+        "venue": "Estadio Jornalista Mário Filho",
+        "lastUpdated": "2022-04-06T13:13:43Z"
+      },
+      "playedMatches": 22,
+      "goals": 15,
+      "assists": 5,
+      "penalties": null
+    },
+    {
+      "player": {
         "id": 192070,
         "name": "Kevin Viveros",
         "firstName": "Kevin",
@@ -412,37 +443,6 @@
       "goals": 14,
       "assists": 3,
       "penalties": 2
-    },
-    {
-      "player": {
-        "id": 1077,
-        "name": "Pedro",
-        "firstName": "",
-        "lastName": "Pedro",
-        "dateOfBirth": "1997-06-20",
-        "nationality": "Brazil",
-        "section": "Offence",
-        "position": null,
-        "shirtNumber": null,
-        "lastUpdated": "2023-07-30T23:15:48Z"
-      },
-      "team": {
-        "id": 1783,
-        "name": "CR Flamengo",
-        "shortName": "Flamengo",
-        "tla": "FLA",
-        "crest": "https://crests.football-data.org/1783.png",
-        "address": "null Rio de Janeiro, RJ null",
-        "website": "https://www.flamengo.com.br/pagina-inicial-basquete",
-        "founded": 1919,
-        "clubColors": "Red / Black / White",
-        "venue": "Estadio Jornalista Mário Filho",
-        "lastUpdated": "2022-04-06T13:13:43Z"
-      },
-      "playedMatches": 22,
-      "goals": 14,
-      "assists": 5,
-      "penalties": null
     },
     {
       "player": {
@@ -756,6 +756,37 @@
     },
     {
       "player": {
+        "id": 45490,
+        "name": "Matheus Pereira",
+        "firstName": "",
+        "lastName": "Matheus Pereira",
+        "dateOfBirth": "1996-05-05",
+        "nationality": "Brazil",
+        "section": "Offence",
+        "position": null,
+        "shirtNumber": null,
+        "lastUpdated": "2023-07-30T23:15:45Z"
+      },
+      "team": {
+        "id": 1771,
+        "name": "Cruzeiro EC",
+        "shortName": "Cruzeiro",
+        "tla": "CRU",
+        "crest": "https://crests.football-data.org/1771.png",
+        "address": "Rua Timbiras 2903, Bairro Preto Belo Horizonte, MG 30140-062",
+        "website": "http://www.cruzeiro.com.br",
+        "founded": 1921,
+        "clubColors": "Blue / White",
+        "venue": "Estádio Governador Magalhães Pinto",
+        "lastUpdated": "2022-04-10T11:03:46Z"
+      },
+      "playedMatches": 21,
+      "goals": 6,
+      "assists": 2,
+      "penalties": null
+    },
+    {
+      "player": {
         "id": 91310,
         "name": "Kaio Jorge",
         "firstName": "",
@@ -815,37 +846,6 @@
       "goals": 6,
       "assists": 2,
       "penalties": 2
-    },
-    {
-      "player": {
-        "id": 178710,
-        "name": "Samuel Lino",
-        "firstName": "",
-        "lastName": "Samuel Lino",
-        "dateOfBirth": "1999-12-23",
-        "nationality": "Brazil",
-        "section": "Left Winger",
-        "position": null,
-        "shirtNumber": null,
-        "lastUpdated": "2024-11-28T13:36:10Z"
-      },
-      "team": {
-        "id": 1783,
-        "name": "CR Flamengo",
-        "shortName": "Flamengo",
-        "tla": "FLA",
-        "crest": "https://crests.football-data.org/1783.png",
-        "address": "null Rio de Janeiro, RJ null",
-        "website": "https://www.flamengo.com.br/pagina-inicial-basquete",
-        "founded": 1919,
-        "clubColors": "Red / Black / White",
-        "venue": "Estadio Jornalista Mário Filho",
-        "lastUpdated": "2022-04-06T13:13:43Z"
-      },
-      "playedMatches": 22,
-      "goals": 6,
-      "assists": 7,
-      "penalties": null
     }
   ],
   "historico_times": {
@@ -1244,7 +1244,8 @@
       "D",
       "D",
       "W",
-      "W"
+      "W",
+      "L"
     ],
     "Mirassol FC": [
       "W",
@@ -1339,6 +1340,7 @@
       "D",
       "W",
       "L",
+      "W",
       "W",
       "W",
       "W"
@@ -1594,11 +1596,11 @@
         "l": 1
       },
       "away": {
-        "gf": 25,
-        "ga": 11,
+        "gf": 26,
+        "ga": 13,
         "w": 7,
         "d": 3,
-        "l": 2
+        "l": 3
       }
     },
     "Mirassol FC": {
@@ -1651,9 +1653,9 @@
     },
     "Cruzeiro EC": {
       "home": {
-        "gf": 19,
-        "ga": 14,
-        "w": 5,
+        "gf": 21,
+        "ga": 15,
+        "w": 6,
         "d": 4,
         "l": 3
       },
