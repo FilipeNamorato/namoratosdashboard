@@ -11,13 +11,13 @@
       },
       "playedGames": 24,
       "form": null,
-      "won": 14,
-      "draw": 7,
+      "won": 15,
+      "draw": 6,
       "lost": 3,
-      "points": 49,
-      "goalsFor": 40,
+      "points": 51,
+      "goalsFor": 42,
       "goalsAgainst": 19,
-      "goalDifference": 21
+      "goalDifference": 23
     },
     {
       "position": 2,
@@ -354,12 +354,12 @@
       "playedGames": 23,
       "form": null,
       "won": 5,
-      "draw": 8,
-      "lost": 10,
-      "points": 23,
+      "draw": 7,
+      "lost": 11,
+      "points": 22,
       "goalsFor": 23,
-      "goalsAgainst": 34,
-      "goalDifference": -11
+      "goalsAgainst": 36,
+      "goalDifference": -13
     },
     {
       "position": 20,
@@ -570,6 +570,37 @@
     },
     {
       "player": {
+        "id": 170698,
+        "name": "José Manuel López",
+        "firstName": "José Manuel",
+        "lastName": "López",
+        "dateOfBirth": "2000-12-06",
+        "nationality": "Argentina",
+        "section": "Offence",
+        "position": null,
+        "shirtNumber": null,
+        "lastUpdated": "2026-06-01T11:16:29Z"
+      },
+      "team": {
+        "id": 1769,
+        "name": "SE Palmeiras",
+        "shortName": "Palmeiras",
+        "tla": "PAL",
+        "crest": "https://crests.football-data.org/1769.png",
+        "address": "Rua Palestra Italia nº 214, Perdizes São Paulo, SP 05005-030",
+        "website": "http://www.palmeiras.com.br",
+        "founded": 1914,
+        "clubColors": "Green / White",
+        "venue": "Allianz Parque",
+        "lastUpdated": "2022-04-06T13:14:55Z"
+      },
+      "playedMatches": 21,
+      "goals": 7,
+      "assists": 4,
+      "penalties": null
+    },
+    {
+      "player": {
         "id": 149704,
         "name": "Danilo dos Santos de Oliveira",
         "firstName": "",
@@ -694,37 +725,6 @@
     },
     {
       "player": {
-        "id": 170698,
-        "name": "José Manuel López",
-        "firstName": "José Manuel",
-        "lastName": "López",
-        "dateOfBirth": "2000-12-06",
-        "nationality": "Argentina",
-        "section": "Offence",
-        "position": null,
-        "shirtNumber": null,
-        "lastUpdated": "2026-06-01T11:16:29Z"
-      },
-      "team": {
-        "id": 1769,
-        "name": "SE Palmeiras",
-        "shortName": "Palmeiras",
-        "tla": "PAL",
-        "crest": "https://crests.football-data.org/1769.png",
-        "address": "Rua Palestra Italia nº 214, Perdizes São Paulo, SP 05005-030",
-        "website": "http://www.palmeiras.com.br",
-        "founded": 1914,
-        "clubColors": "Green / White",
-        "venue": "Allianz Parque",
-        "lastUpdated": "2022-04-06T13:14:55Z"
-      },
-      "playedMatches": 21,
-      "goals": 6,
-      "assists": 4,
-      "penalties": null
-    },
-    {
-      "player": {
         "id": 42901,
         "name": "Luciano",
         "firstName": "",
@@ -750,6 +750,37 @@
         "lastUpdated": "2023-02-18T08:43:44Z"
       },
       "playedMatches": 18,
+      "goals": 6,
+      "assists": 1,
+      "penalties": null
+    },
+    {
+      "player": {
+        "id": 119594,
+        "name": "Mauricio",
+        "firstName": null,
+        "lastName": "Mauricio",
+        "dateOfBirth": "2001-06-22",
+        "nationality": "Paraguay",
+        "section": "Midfield",
+        "position": null,
+        "shirtNumber": null,
+        "lastUpdated": "2026-06-03T09:41:57Z"
+      },
+      "team": {
+        "id": 1769,
+        "name": "SE Palmeiras",
+        "shortName": "Palmeiras",
+        "tla": "PAL",
+        "crest": "https://crests.football-data.org/1769.png",
+        "address": "Rua Palestra Italia nº 214, Perdizes São Paulo, SP 05005-030",
+        "website": "http://www.palmeiras.com.br",
+        "founded": 1914,
+        "clubColors": "Green / White",
+        "venue": "Allianz Parque",
+        "lastUpdated": "2022-04-06T13:14:55Z"
+      },
+      "playedMatches": 22,
       "goals": 6,
       "assists": 1,
       "penalties": null
@@ -815,37 +846,6 @@
       "goals": 6,
       "assists": null,
       "penalties": 3
-    },
-    {
-      "player": {
-        "id": 8491,
-        "name": "Neymar",
-        "firstName": "",
-        "lastName": "Neymar",
-        "dateOfBirth": "1992-02-05",
-        "nationality": "Brazil",
-        "section": "Offence",
-        "position": null,
-        "shirtNumber": null,
-        "lastUpdated": "2023-07-30T17:03:23Z"
-      },
-      "team": {
-        "id": 6685,
-        "name": "Santos FC",
-        "shortName": "Santos",
-        "tla": "SAN",
-        "crest": "https://crests.football-data.org/6685.png",
-        "address": "Rua Princesa Isabel S/N, Vila Belmiro Santos, SP 11075-501",
-        "website": "http://santosfc.com.br",
-        "founded": 1912,
-        "clubColors": "Black / White",
-        "venue": "Estádio Urbano Caldeira",
-        "lastUpdated": "2023-02-18T08:43:18Z"
-      },
-      "playedMatches": 10,
-      "goals": 6,
-      "assists": 2,
-      "penalties": 2
     }
   ],
   "historico_times": {
