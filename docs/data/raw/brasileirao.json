@@ -9,12 +9,12 @@
         "tla": "PAL",
         "crest": "https://crests.football-data.org/1769.png"
       },
-      "playedGames": 23,
+      "playedGames": 24,
       "form": null,
       "won": 14,
-      "draw": 6,
+      "draw": 7,
       "lost": 3,
-      "points": 48,
+      "points": 49,
       "goalsFor": 40,
       "goalsAgainst": 19,
       "goalDifference": 21
@@ -104,18 +104,37 @@
         "tla": "BAH",
         "crest": "https://crests.football-data.org/1777.png"
       },
-      "playedGames": 23,
+      "playedGames": 24,
       "form": null,
       "won": 8,
-      "draw": 10,
+      "draw": 11,
       "lost": 5,
-      "points": 34,
+      "points": 35,
       "goalsFor": 32,
       "goalsAgainst": 28,
       "goalDifference": 4
     },
     {
       "position": 7,
+      "team": {
+        "id": 4286,
+        "name": "RB Bragantino",
+        "shortName": "Bragantino",
+        "tla": "RBB",
+        "crest": "https://crests.football-data.org/4286.png"
+      },
+      "playedGames": 23,
+      "form": null,
+      "won": 9,
+      "draw": 6,
+      "lost": 8,
+      "points": 33,
+      "goalsFor": 27,
+      "goalsAgainst": 23,
+      "goalDifference": 4
+    },
+    {
+      "position": 8,
       "team": {
         "id": 1766,
         "name": "CA Mineiro",
@@ -132,25 +151,6 @@
       "goalsFor": 30,
       "goalsAgainst": 27,
       "goalDifference": 3
-    },
-    {
-      "position": 8,
-      "team": {
-        "id": 4286,
-        "name": "RB Bragantino",
-        "shortName": "Bragantino",
-        "tla": "RBB",
-        "crest": "https://crests.football-data.org/4286.png"
-      },
-      "playedGames": 22,
-      "form": null,
-      "won": 9,
-      "draw": 5,
-      "lost": 8,
-      "points": 32,
-      "goalsFor": 27,
-      "goalsAgainst": 23,
-      "goalDifference": 4
     },
     {
       "position": 9,
@@ -218,12 +218,12 @@
         "tla": "VIT",
         "crest": "https://crests.football-data.org/1782.png"
       },
-      "playedGames": 23,
+      "playedGames": 24,
       "form": null,
       "won": 8,
-      "draw": 5,
+      "draw": 6,
       "lost": 10,
-      "points": 29,
+      "points": 30,
       "goalsFor": 23,
       "goalsAgainst": 33,
       "goalDifference": -10
@@ -250,6 +250,25 @@
     {
       "position": 14,
       "team": {
+        "id": 1767,
+        "name": "Grêmio FBPA",
+        "shortName": "Grêmio",
+        "tla": "FBP",
+        "crest": "https://crests.football-data.org/1767.png"
+      },
+      "playedGames": 23,
+      "form": null,
+      "won": 6,
+      "draw": 8,
+      "lost": 9,
+      "points": 26,
+      "goalsFor": 24,
+      "goalsAgainst": 30,
+      "goalDifference": -6
+    },
+    {
+      "position": 15,
+      "team": {
         "id": 6685,
         "name": "Santos FC",
         "shortName": "Santos",
@@ -265,25 +284,6 @@
       "goalsFor": 32,
       "goalsAgainst": 35,
       "goalDifference": -3
-    },
-    {
-      "position": 15,
-      "team": {
-        "id": 1767,
-        "name": "Grêmio FBPA",
-        "shortName": "Grêmio",
-        "tla": "FBP",
-        "crest": "https://crests.football-data.org/1767.png"
-      },
-      "playedGames": 22,
-      "form": null,
-      "won": 6,
-      "draw": 7,
-      "lost": 9,
-      "points": 25,
-      "goalsFor": 24,
-      "goalsAgainst": 30,
-      "goalDifference": -6
     },
     {
       "position": 16,
@@ -351,12 +351,12 @@
         "tla": "VAS",
         "crest": "https://crests.football-data.org/1780.png"
       },
-      "playedGames": 22,
+      "playedGames": 23,
       "form": null,
       "won": 5,
-      "draw": 7,
+      "draw": 8,
       "lost": 10,
-      "points": 22,
+      "points": 23,
       "goalsFor": 23,
       "goalsAgainst": 34,
       "goalDifference": -11
@@ -470,7 +470,7 @@
         "venue": "Arena do Grêmio",
         "lastUpdated": "2023-02-18T08:42:52Z"
       },
-      "playedMatches": 20,
+      "playedMatches": 21,
       "goals": 10,
       "assists": 1,
       "penalties": 1
@@ -687,7 +687,7 @@
         "venue": "Estádio Governador Roberto Santos",
         "lastUpdated": "2024-10-28T10:09:10Z"
       },
-      "playedMatches": 18,
+      "playedMatches": 19,
       "goals": 7,
       "assists": 1,
       "penalties": 2
@@ -718,7 +718,7 @@
         "venue": "Allianz Parque",
         "lastUpdated": "2022-04-06T13:14:55Z"
       },
-      "playedMatches": 20,
+      "playedMatches": 21,
       "goals": 6,
       "assists": 4,
       "penalties": null
