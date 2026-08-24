@@ -47,15 +47,15 @@
         "tla": "CAP",
         "crest": "https://crests.football-data.org/1768.png"
       },
-      "playedGames": 23,
+      "playedGames": 24,
       "form": null,
-      "won": 12,
+      "won": 13,
       "draw": 5,
       "lost": 6,
-      "points": 41,
-      "goalsFor": 31,
+      "points": 44,
+      "goalsFor": 33,
       "goalsAgainst": 20,
-      "goalDifference": 11
+      "goalDifference": 13
     },
     {
       "position": 4,
@@ -199,15 +199,15 @@
         "tla": "BOT",
         "crest": "https://crests.football-data.org/1770.png"
       },
-      "playedGames": 22,
+      "playedGames": 23,
       "form": null,
       "won": 8,
       "draw": 6,
-      "lost": 8,
+      "lost": 9,
       "points": 30,
       "goalsFor": 35,
-      "goalsAgainst": 34,
-      "goalDifference": 1
+      "goalsAgainst": 36,
+      "goalDifference": -1
     },
     {
       "position": 12,
@@ -384,6 +384,37 @@
   "artilheiros": [
     {
       "player": {
+        "id": 192070,
+        "name": "Kevin Viveros",
+        "firstName": "Kevin",
+        "lastName": "Viveros",
+        "dateOfBirth": "2000-04-26",
+        "nationality": "Colombia",
+        "section": "Offence",
+        "position": null,
+        "shirtNumber": null,
+        "lastUpdated": "2023-08-22T11:53:03Z"
+      },
+      "team": {
+        "id": 1768,
+        "name": "CA Paranaense",
+        "shortName": "Paranaense",
+        "tla": "CAP",
+        "crest": "https://crests.football-data.org/1768.png",
+        "address": "Estrada do Ganchinho 1451, Umbará Curitiba, PR 81930-160",
+        "website": "http://www.atleticoparanaense.com",
+        "founded": 1924,
+        "clubColors": "Black / White / Red",
+        "venue": "Estádio Joaquim Américo Guimarães",
+        "lastUpdated": "2022-04-06T13:14:06Z"
+      },
+      "playedMatches": 22,
+      "goals": 15,
+      "assists": 3,
+      "penalties": 2
+    },
+    {
+      "player": {
         "id": 1077,
         "name": "Pedro",
         "firstName": "",
@@ -412,37 +443,6 @@
       "goals": 15,
       "assists": 5,
       "penalties": null
-    },
-    {
-      "player": {
-        "id": 192070,
-        "name": "Kevin Viveros",
-        "firstName": "Kevin",
-        "lastName": "Viveros",
-        "dateOfBirth": "2000-04-26",
-        "nationality": "Colombia",
-        "section": "Offence",
-        "position": null,
-        "shirtNumber": null,
-        "lastUpdated": "2023-08-22T11:53:03Z"
-      },
-      "team": {
-        "id": 1768,
-        "name": "CA Paranaense",
-        "shortName": "Paranaense",
-        "tla": "CAP",
-        "crest": "https://crests.football-data.org/1768.png",
-        "address": "Estrada do Ganchinho 1451, Umbará Curitiba, PR 81930-160",
-        "website": "http://www.atleticoparanaense.com",
-        "founded": 1924,
-        "clubColors": "Black / White / Red",
-        "venue": "Estádio Joaquim Américo Guimarães",
-        "lastUpdated": "2022-04-06T13:14:06Z"
-      },
-      "playedMatches": 21,
-      "goals": 14,
-      "assists": 3,
-      "penalties": 2
     },
     {
       "player": {
