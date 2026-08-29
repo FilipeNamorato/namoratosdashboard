@@ -129,8 +129,8 @@
       "draw": 6,
       "lost": 8,
       "points": 36,
-      "goalsFor": 31,
-      "goalsAgainst": 27,
+      "goalsFor": 32,
+      "goalsAgainst": 28,
       "goalDifference": 4
     },
     {
@@ -142,15 +142,15 @@
         "tla": "RBB",
         "crest": "https://crests.football-data.org/4286.png"
       },
-      "playedGames": 23,
+      "playedGames": 24,
       "form": null,
       "won": 10,
       "draw": 5,
-      "lost": 8,
+      "lost": 9,
       "points": 35,
       "goalsFor": 28,
-      "goalsAgainst": 23,
-      "goalDifference": 5
+      "goalsAgainst": 24,
+      "goalDifference": 4
     },
     {
       "position": 9,
@@ -193,6 +193,25 @@
     {
       "position": 11,
       "team": {
+        "id": 1776,
+        "name": "São Paulo FC",
+        "shortName": "São Paulo",
+        "tla": "PAU",
+        "crest": "https://crests.football-data.org/1776.png"
+      },
+      "playedGames": 24,
+      "form": null,
+      "won": 8,
+      "draw": 6,
+      "lost": 10,
+      "points": 30,
+      "goalsFor": 28,
+      "goalsAgainst": 27,
+      "goalDifference": 1
+    },
+    {
+      "position": 12,
+      "team": {
         "id": 1770,
         "name": "Botafogo FR",
         "shortName": "Botafogo",
@@ -210,7 +229,7 @@
       "goalDifference": 0
     },
     {
-      "position": 12,
+      "position": 13,
       "team": {
         "id": 1782,
         "name": "EC Vitória",
@@ -224,28 +243,9 @@
       "draw": 5,
       "lost": 12,
       "points": 29,
-      "goalsFor": 23,
-      "goalsAgainst": 36,
+      "goalsFor": 24,
+      "goalsAgainst": 37,
       "goalDifference": -13
-    },
-    {
-      "position": 13,
-      "team": {
-        "id": 1776,
-        "name": "São Paulo FC",
-        "shortName": "São Paulo",
-        "tla": "PAU",
-        "crest": "https://crests.football-data.org/1776.png"
-      },
-      "playedGames": 23,
-      "form": null,
-      "won": 7,
-      "draw": 6,
-      "lost": 10,
-      "points": 27,
-      "goalsFor": 27,
-      "goalsAgainst": 27,
-      "goalDifference": 0
     },
     {
       "position": 14,
@@ -601,6 +601,37 @@
     },
     {
       "player": {
+        "id": 42901,
+        "name": "Luciano",
+        "firstName": "",
+        "lastName": "Luciano",
+        "dateOfBirth": "1993-05-18",
+        "nationality": "Brazil",
+        "section": "Offence",
+        "position": null,
+        "shirtNumber": null,
+        "lastUpdated": "2023-07-30T23:15:46Z"
+      },
+      "team": {
+        "id": 1776,
+        "name": "São Paulo FC",
+        "shortName": "São Paulo",
+        "tla": "PAU",
+        "crest": "https://crests.football-data.org/1776.png",
+        "address": "null São Paulo, SP null",
+        "website": "http://www.saopaulofc.net",
+        "founded": 1930,
+        "clubColors": "White / Red / Black",
+        "venue": "Estádio do Morumbi",
+        "lastUpdated": "2023-02-18T08:43:44Z"
+      },
+      "playedMatches": 20,
+      "goals": 7,
+      "assists": 1,
+      "penalties": 1
+    },
+    {
+      "player": {
         "id": 149704,
         "name": "Danilo dos Santos de Oliveira",
         "firstName": "",
@@ -656,7 +687,7 @@
         "venue": "Estádio do Morumbi",
         "lastUpdated": "2023-02-18T08:43:44Z"
       },
-      "playedMatches": 20,
+      "playedMatches": 21,
       "goals": 7,
       "assists": 1,
       "penalties": 1
@@ -722,37 +753,6 @@
       "goals": 7,
       "assists": 1,
       "penalties": 2
-    },
-    {
-      "player": {
-        "id": 42901,
-        "name": "Luciano",
-        "firstName": "",
-        "lastName": "Luciano",
-        "dateOfBirth": "1993-05-18",
-        "nationality": "Brazil",
-        "section": "Offence",
-        "position": null,
-        "shirtNumber": null,
-        "lastUpdated": "2023-07-30T23:15:46Z"
-      },
-      "team": {
-        "id": 1776,
-        "name": "São Paulo FC",
-        "shortName": "São Paulo",
-        "tla": "PAU",
-        "crest": "https://crests.football-data.org/1776.png",
-        "address": "null São Paulo, SP null",
-        "website": "http://www.saopaulofc.net",
-        "founded": 1930,
-        "clubColors": "White / Red / Black",
-        "venue": "Estádio do Morumbi",
-        "lastUpdated": "2023-02-18T08:43:44Z"
-      },
-      "playedMatches": 19,
-      "goals": 6,
-      "assists": 1,
-      "penalties": null
     },
     {
       "player": {
