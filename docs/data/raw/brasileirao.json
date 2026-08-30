@@ -15,8 +15,8 @@
       "draw": 7,
       "lost": 3,
       "points": 52,
-      "goalsFor": 44,
-      "goalsAgainst": 20,
+      "goalsFor": 45,
+      "goalsAgainst": 21,
       "goalDifference": 24
     },
     {
@@ -79,6 +79,25 @@
     {
       "position": 5,
       "team": {
+        "id": 1777,
+        "name": "EC Bahia",
+        "shortName": "Bahia",
+        "tla": "BAH",
+        "crest": "https://crests.football-data.org/1777.png"
+      },
+      "playedGames": 25,
+      "form": null,
+      "won": 10,
+      "draw": 10,
+      "lost": 5,
+      "points": 40,
+      "goalsFor": 37,
+      "goalsAgainst": 29,
+      "goalDifference": 8
+    },
+    {
+      "position": 6,
+      "team": {
         "id": 1771,
         "name": "Cruzeiro EC",
         "shortName": "Cruzeiro",
@@ -94,25 +113,6 @@
       "goalsFor": 35,
       "goalsAgainst": 36,
       "goalDifference": -1
-    },
-    {
-      "position": 6,
-      "team": {
-        "id": 1777,
-        "name": "EC Bahia",
-        "shortName": "Bahia",
-        "tla": "BAH",
-        "crest": "https://crests.football-data.org/1777.png"
-      },
-      "playedGames": 24,
-      "form": null,
-      "won": 9,
-      "draw": 10,
-      "lost": 5,
-      "points": 37,
-      "goalsFor": 34,
-      "goalsAgainst": 28,
-      "goalDifference": 6
     },
     {
       "position": 7,
@@ -281,9 +281,9 @@
       "draw": 7,
       "lost": 10,
       "points": 28,
-      "goalsFor": 26,
+      "goalsFor": 27,
       "goalsAgainst": 32,
-      "goalDifference": -6
+      "goalDifference": -5
     },
     {
       "position": 16,
@@ -300,8 +300,8 @@
       "draw": 7,
       "lost": 11,
       "points": 25,
-      "goalsFor": 26,
-      "goalsAgainst": 36,
+      "goalsFor": 27,
+      "goalsAgainst": 37,
       "goalDifference": -10
     },
     {
@@ -332,15 +332,15 @@
         "tla": "SCI",
         "crest": "https://crests.football-data.org/6684.png"
       },
-      "playedGames": 24,
+      "playedGames": 25,
       "form": null,
       "won": 5,
       "draw": 10,
-      "lost": 9,
+      "lost": 10,
       "points": 25,
-      "goalsFor": 24,
-      "goalsAgainst": 28,
-      "goalDifference": -4
+      "goalsFor": 25,
+      "goalsAgainst": 31,
+      "goalDifference": -6
     },
     {
       "position": 19,
@@ -377,8 +377,8 @@
       "lost": 14,
       "points": 14,
       "goalsFor": 25,
-      "goalsAgainst": 48,
-      "goalDifference": -23
+      "goalsAgainst": 49,
+      "goalDifference": -24
     }
   ],
   "artilheiros": [
@@ -756,6 +756,37 @@
     },
     {
       "player": {
+        "id": 119594,
+        "name": "Mauricio",
+        "firstName": null,
+        "lastName": "Mauricio",
+        "dateOfBirth": "2001-06-22",
+        "nationality": "Paraguay",
+        "section": "Midfield",
+        "position": null,
+        "shirtNumber": null,
+        "lastUpdated": "2026-06-03T09:41:57Z"
+      },
+      "team": {
+        "id": 1769,
+        "name": "SE Palmeiras",
+        "shortName": "Palmeiras",
+        "tla": "PAL",
+        "crest": "https://crests.football-data.org/1769.png",
+        "address": "Rua Palestra Italia nº 214, Perdizes São Paulo, SP 05005-030",
+        "website": "http://www.palmeiras.com.br",
+        "founded": 1914,
+        "clubColors": "Green / White",
+        "venue": "Allianz Parque",
+        "lastUpdated": "2022-04-06T13:14:55Z"
+      },
+      "playedMatches": 23,
+      "goals": 7,
+      "assists": 1,
+      "penalties": null
+    },
+    {
+      "player": {
         "id": 140873,
         "name": "Luciano Juba",
         "firstName": "",
@@ -784,37 +815,6 @@
       "goals": 7,
       "assists": 1,
       "penalties": 2
-    },
-    {
-      "player": {
-        "id": 119594,
-        "name": "Mauricio",
-        "firstName": null,
-        "lastName": "Mauricio",
-        "dateOfBirth": "2001-06-22",
-        "nationality": "Paraguay",
-        "section": "Midfield",
-        "position": null,
-        "shirtNumber": null,
-        "lastUpdated": "2026-06-03T09:41:57Z"
-      },
-      "team": {
-        "id": 1769,
-        "name": "SE Palmeiras",
-        "shortName": "Palmeiras",
-        "tla": "PAL",
-        "crest": "https://crests.football-data.org/1769.png",
-        "address": "Rua Palestra Italia nº 214, Perdizes São Paulo, SP 05005-030",
-        "website": "http://www.palmeiras.com.br",
-        "founded": 1914,
-        "clubColors": "Green / White",
-        "venue": "Allianz Parque",
-        "lastUpdated": "2022-04-06T13:14:55Z"
-      },
-      "playedMatches": 23,
-      "goals": 6,
-      "assists": 1,
-      "penalties": null
     },
     {
       "player": {
@@ -899,7 +899,8 @@
       "W",
       "D",
       "L",
-      "W"
+      "W",
+      "D"
     ],
     "Coritiba FBC": [
       "L",
@@ -1109,7 +1110,8 @@
       "D",
       "W",
       "L",
-      "L"
+      "L",
+      "W"
     ],
     "Chapecoense AF": [
       "W",
@@ -1134,7 +1136,8 @@
       "D",
       "L",
       "D",
-      "W"
+      "W",
+      "L"
     ],
     "Santos FC": [
       "L",
@@ -1287,6 +1290,7 @@
       "W",
       "L",
       "L",
+      "D",
       "D"
     ],
     "CR Vasco da Gama": [
@@ -1394,10 +1398,10 @@
         "l": 1
       },
       "away": {
-        "gf": 23,
-        "ga": 11,
+        "gf": 24,
+        "ga": 12,
         "w": 7,
-        "d": 3,
+        "d": 4,
         "l": 2
       }
     },
@@ -1515,9 +1519,9 @@
     },
     "Grêmio FBPA": {
       "home": {
-        "gf": 18,
-        "ga": 13,
-        "w": 6,
+        "gf": 21,
+        "ga": 14,
+        "w": 7,
         "d": 3,
         "l": 2
       },
@@ -1538,11 +1542,11 @@
         "l": 5
       },
       "away": {
-        "gf": 7,
-        "ga": 19,
+        "gf": 8,
+        "ga": 22,
         "w": 0,
         "d": 3,
-        "l": 8
+        "l": 9
       }
     },
     "Santos FC": {
@@ -1627,10 +1631,10 @@
     },
     "Mirassol FC": {
       "home": {
-        "gf": 16,
-        "ga": 18,
+        "gf": 17,
+        "ga": 19,
         "w": 5,
-        "d": 3,
+        "d": 4,
         "l": 4
       },
       "away": {
