@@ -9,12 +9,12 @@
         "tla": "PAL",
         "crest": "https://crests.football-data.org/1769.png"
       },
-      "playedGames": 24,
+      "playedGames": 25,
       "form": null,
       "won": 15,
-      "draw": 6,
+      "draw": 7,
       "lost": 3,
-      "points": 51,
+      "points": 52,
       "goalsFor": 44,
       "goalsAgainst": 20,
       "goalDifference": 24
@@ -28,15 +28,15 @@
         "tla": "FLA",
         "crest": "https://crests.football-data.org/1783.png"
       },
-      "playedGames": 23,
+      "playedGames": 24,
       "form": null,
-      "won": 13,
+      "won": 14,
       "draw": 6,
       "lost": 4,
-      "points": 45,
-      "goalsFor": 45,
+      "points": 48,
+      "goalsFor": 48,
       "goalsAgainst": 21,
-      "goalDifference": 24
+      "goalDifference": 27
     },
     {
       "position": 3,
@@ -180,15 +180,15 @@
         "tla": "COR",
         "crest": "https://crests.football-data.org/1779.png"
       },
-      "playedGames": 24,
+      "playedGames": 25,
       "form": null,
       "won": 8,
       "draw": 8,
-      "lost": 8,
+      "lost": 9,
       "points": 32,
       "goalsFor": 26,
-      "goalsAgainst": 24,
-      "goalDifference": 2
+      "goalsAgainst": 25,
+      "goalDifference": 1
     },
     {
       "position": 11,
@@ -218,15 +218,15 @@
         "tla": "BOT",
         "crest": "https://crests.football-data.org/1770.png"
       },
-      "playedGames": 23,
+      "playedGames": 24,
       "form": null,
       "won": 8,
       "draw": 6,
-      "lost": 9,
+      "lost": 10,
       "points": 30,
       "goalsFor": 37,
-      "goalsAgainst": 37,
-      "goalDifference": 0
+      "goalsAgainst": 40,
+      "goalDifference": -3
     },
     {
       "position": 13,
@@ -256,15 +256,15 @@
         "tla": "SAN",
         "crest": "https://crests.football-data.org/6685.png"
       },
-      "playedGames": 23,
+      "playedGames": 24,
       "form": null,
-      "won": 6,
+      "won": 7,
       "draw": 8,
       "lost": 9,
-      "points": 26,
-      "goalsFor": 33,
+      "points": 29,
+      "goalsFor": 34,
       "goalsAgainst": 36,
-      "goalDifference": -3
+      "goalDifference": -2
     },
     {
       "position": 15,
@@ -275,18 +275,37 @@
         "tla": "FBP",
         "crest": "https://crests.football-data.org/1767.png"
       },
-      "playedGames": 23,
+      "playedGames": 24,
       "form": null,
       "won": 6,
-      "draw": 7,
+      "draw": 8,
       "lost": 10,
-      "points": 25,
-      "goalsFor": 24,
-      "goalsAgainst": 31,
+      "points": 26,
+      "goalsFor": 25,
+      "goalsAgainst": 32,
       "goalDifference": -7
     },
     {
       "position": 16,
+      "team": {
+        "id": 4364,
+        "name": "Mirassol FC",
+        "shortName": "Mirassol",
+        "tla": "MIR",
+        "crest": "https://crests.football-data.org/4364.png"
+      },
+      "playedGames": 24,
+      "form": null,
+      "won": 6,
+      "draw": 7,
+      "lost": 11,
+      "points": 25,
+      "goalsFor": 26,
+      "goalsAgainst": 36,
+      "goalDifference": -10
+    },
+    {
+      "position": 17,
       "team": {
         "id": 1780,
         "name": "CR Vasco da Gama",
@@ -305,7 +324,7 @@
       "goalDifference": -12
     },
     {
-      "position": 17,
+      "position": 18,
       "team": {
         "id": 6684,
         "name": "SC Internacional",
@@ -322,25 +341,6 @@
       "goalsFor": 24,
       "goalsAgainst": 28,
       "goalDifference": -4
-    },
-    {
-      "position": 18,
-      "team": {
-        "id": 4364,
-        "name": "Mirassol FC",
-        "shortName": "Mirassol",
-        "tla": "MIR",
-        "crest": "https://crests.football-data.org/4364.png"
-      },
-      "playedGames": 23,
-      "form": null,
-      "won": 6,
-      "draw": 6,
-      "lost": 11,
-      "points": 24,
-      "goalsFor": 26,
-      "goalsAgainst": 36,
-      "goalDifference": -10
     },
     {
       "position": 19,
@@ -370,14 +370,14 @@
         "tla": "CHA",
         "crest": "https://crests.football-data.org/1772_large.png"
       },
-      "playedGames": 23,
+      "playedGames": 24,
       "form": null,
       "won": 2,
-      "draw": 8,
+      "draw": 9,
       "lost": 13,
-      "points": 14,
-      "goalsFor": 24,
-      "goalsAgainst": 46,
+      "points": 15,
+      "goalsFor": 25,
+      "goalsAgainst": 47,
       "goalDifference": -22
     }
   ],
@@ -470,7 +470,7 @@
         "venue": "Arena do Grêmio",
         "lastUpdated": "2023-02-18T08:42:52Z"
       },
-      "playedMatches": 21,
+      "playedMatches": 22,
       "goals": 10,
       "assists": 1,
       "penalties": 1
@@ -532,7 +532,7 @@
         "venue": "Allianz Parque",
         "lastUpdated": "2022-04-06T13:14:55Z"
       },
-      "playedMatches": 21,
+      "playedMatches": 22,
       "goals": 8,
       "assists": 4,
       "penalties": null
@@ -598,6 +598,37 @@
       "goals": 8,
       "assists": 2,
       "penalties": 1
+    },
+    {
+      "player": {
+        "id": 178710,
+        "name": "Samuel Lino",
+        "firstName": "",
+        "lastName": "Samuel Lino",
+        "dateOfBirth": "1999-12-23",
+        "nationality": "Brazil",
+        "section": "Left Winger",
+        "position": null,
+        "shirtNumber": null,
+        "lastUpdated": "2024-11-28T13:36:10Z"
+      },
+      "team": {
+        "id": 1783,
+        "name": "CR Flamengo",
+        "shortName": "Flamengo",
+        "tla": "FLA",
+        "crest": "https://crests.football-data.org/1783.png",
+        "address": "null Rio de Janeiro, RJ null",
+        "website": "https://www.flamengo.com.br/pagina-inicial-basquete",
+        "founded": 1919,
+        "clubColors": "Red / Black / White",
+        "venue": "Estadio Jornalista Mário Filho",
+        "lastUpdated": "2022-04-06T13:13:43Z"
+      },
+      "playedMatches": 22,
+      "goals": 8,
+      "assists": 7,
+      "penalties": null
     },
     {
       "player": {
@@ -780,7 +811,7 @@
         "venue": "Allianz Parque",
         "lastUpdated": "2022-04-06T13:14:55Z"
       },
-      "playedMatches": 22,
+      "playedMatches": 23,
       "goals": 6,
       "assists": 1,
       "penalties": null
@@ -815,37 +846,6 @@
       "goals": 6,
       "assists": 3,
       "penalties": null
-    },
-    {
-      "player": {
-        "id": 16154,
-        "name": "Pedro Rocha",
-        "firstName": "",
-        "lastName": "Pedro Rocha",
-        "dateOfBirth": "1994-10-01",
-        "nationality": "Brazil",
-        "section": "Offence",
-        "position": null,
-        "shirtNumber": null,
-        "lastUpdated": "2023-09-18T08:57:30Z"
-      },
-      "team": {
-        "id": 4241,
-        "name": "Coritiba FBC",
-        "shortName": "Coritiba",
-        "tla": "COR",
-        "crest": "https://crests.football-data.org/4241.png",
-        "address": "Rua Ubaldino do Amaral 37, Alto da Glória Curitiba, PR 80060-195",
-        "website": "http://www.coritiba.com.br",
-        "founded": 1909,
-        "clubColors": "Green / White",
-        "venue": "Estádio Major Antônio Couto Pereira",
-        "lastUpdated": "2023-02-18T08:43:33Z"
-      },
-      "playedMatches": 21,
-      "goals": 6,
-      "assists": 1,
-      "penalties": null
     }
   ],
   "historico_times": {
@@ -872,7 +872,8 @@
       "W",
       "D",
       "W",
-      "D"
+      "D",
+      "W"
     ],
     "SE Palmeiras": [
       "D",
@@ -949,7 +950,8 @@
       "D",
       "L",
       "D",
-      "W"
+      "W",
+      "L"
     ],
     "SC Internacional": [
       "L",
@@ -1028,6 +1030,7 @@
       "L",
       "L",
       "W",
+      "L",
       "L"
     ],
     "Clube do Remo": [
@@ -1233,7 +1236,8 @@
       "D",
       "L",
       "D",
-      "L"
+      "L",
+      "W"
     ],
     "CR Flamengo": [
       "L",
@@ -1308,7 +1312,8 @@
       "D",
       "D",
       "L",
-      "L"
+      "L",
+      "W"
     ],
     "Botafogo FR": [
       "W",
@@ -1359,15 +1364,16 @@
       "W",
       "W",
       "W",
-      "W"
+      "W",
+      "L"
     ]
   },
   "team_stats": {
     "CA Mineiro": {
       "home": {
-        "gf": 17,
-        "ga": 13,
-        "w": 5,
+        "gf": 19,
+        "ga": 14,
+        "w": 6,
         "d": 4,
         "l": 1
       },
@@ -1420,11 +1426,11 @@
         "l": 4
       },
       "away": {
-        "gf": 11,
-        "ga": 12,
+        "gf": 12,
+        "ga": 14,
         "w": 4,
         "d": 3,
-        "l": 4
+        "l": 5
       }
     },
     "SC Internacional": {
@@ -1468,11 +1474,11 @@
         "l": 3
       },
       "away": {
-        "gf": 7,
-        "ga": 26,
+        "gf": 8,
+        "ga": 28,
         "w": 0,
         "d": 4,
-        "l": 8
+        "l": 9
       }
     },
     "Clube do Remo": {
@@ -1589,9 +1595,9 @@
     },
     "São Paulo FC": {
       "home": {
-        "gf": 16,
-        "ga": 9,
-        "w": 5,
+        "gf": 18,
+        "ga": 10,
+        "w": 6,
         "d": 3,
         "l": 2
       },
@@ -1637,9 +1643,9 @@
     },
     "CR Vasco da Gama": {
       "home": {
-        "gf": 13,
-        "ga": 17,
-        "w": 5,
+        "gf": 16,
+        "ga": 18,
+        "w": 6,
         "d": 2,
         "l": 5
       },
@@ -1676,11 +1682,11 @@
         "l": 3
       },
       "away": {
-        "gf": 13,
-        "ga": 18,
+        "gf": 14,
+        "ga": 21,
         "w": 5,
         "d": 2,
-        "l": 4
+        "l": 5
       }
     }
   }
