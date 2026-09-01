@@ -167,8 +167,8 @@
       "draw": 8,
       "lost": 8,
       "points": 35,
-      "goalsFor": 30,
-      "goalsAgainst": 31,
+      "goalsFor": 32,
+      "goalsAgainst": 33,
       "goalDifference": -1
     },
     {
@@ -357,8 +357,8 @@
       "draw": 9,
       "lost": 11,
       "points": 24,
-      "goalsFor": 28,
-      "goalsAgainst": 39,
+      "goalsFor": 30,
+      "goalsAgainst": 41,
       "goalDifference": -11
     },
     {
@@ -899,7 +899,8 @@
       "W",
       "D",
       "L",
-      "W"
+      "W",
+      "D"
     ],
     "Coritiba FBC": [
       "L",
@@ -1110,7 +1111,8 @@
       "D",
       "W",
       "L",
-      "L"
+      "L",
+      "W"
     ],
     "Chapecoense AF": [
       "W",
@@ -1135,7 +1137,8 @@
       "D",
       "L",
       "D",
-      "W"
+      "W",
+      "L"
     ],
     "Santos FC": [
       "L",
@@ -1292,6 +1295,7 @@
       "W",
       "L",
       "L",
+      "D",
       "D"
     ],
     "CR Vasco da Gama": [
@@ -1400,10 +1404,10 @@
         "l": 1
       },
       "away": {
-        "gf": 23,
-        "ga": 11,
+        "gf": 24,
+        "ga": 12,
         "w": 7,
-        "d": 3,
+        "d": 4,
         "l": 2
       }
     },
@@ -1521,9 +1525,9 @@
     },
     "Grêmio FBPA": {
       "home": {
-        "gf": 18,
-        "ga": 13,
-        "w": 6,
+        "gf": 21,
+        "ga": 14,
+        "w": 7,
         "d": 3,
         "l": 2
       },
@@ -1544,11 +1548,11 @@
         "l": 5
       },
       "away": {
-        "gf": 7,
-        "ga": 19,
+        "gf": 8,
+        "ga": 22,
         "w": 0,
         "d": 3,
-        "l": 8
+        "l": 9
       }
     },
     "Santos FC": {
@@ -1633,10 +1637,10 @@
     },
     "Mirassol FC": {
       "home": {
-        "gf": 16,
-        "ga": 18,
+        "gf": 17,
+        "ga": 19,
         "w": 5,
-        "d": 3,
+        "d": 4,
         "l": 4
       },
       "away": {
