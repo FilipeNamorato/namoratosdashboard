@@ -117,6 +117,25 @@
     {
       "position": 7,
       "team": {
+        "id": 1766,
+        "name": "CA Mineiro",
+        "shortName": "Mineiro",
+        "tla": "CAM",
+        "crest": "https://crests.football-data.org/1766.png"
+      },
+      "playedGames": 25,
+      "form": null,
+      "won": 10,
+      "draw": 7,
+      "lost": 8,
+      "points": 37,
+      "goalsFor": 32,
+      "goalsAgainst": 28,
+      "goalDifference": 4
+    },
+    {
+      "position": 8,
+      "team": {
         "id": 4241,
         "name": "Coritiba FBC",
         "shortName": "Coritiba",
@@ -132,25 +151,6 @@
       "goalsFor": 33,
       "goalsAgainst": 33,
       "goalDifference": 0
-    },
-    {
-      "position": 8,
-      "team": {
-        "id": 1766,
-        "name": "CA Mineiro",
-        "shortName": "Mineiro",
-        "tla": "CAM",
-        "crest": "https://crests.football-data.org/1766.png"
-      },
-      "playedGames": 24,
-      "form": null,
-      "won": 10,
-      "draw": 6,
-      "lost": 8,
-      "points": 36,
-      "goalsFor": 32,
-      "goalsAgainst": 28,
-      "goalDifference": 4
     },
     {
       "position": 9,
@@ -199,12 +199,12 @@
         "tla": "PAU",
         "crest": "https://crests.football-data.org/1776.png"
       },
-      "playedGames": 24,
+      "playedGames": 25,
       "form": null,
       "won": 8,
-      "draw": 6,
+      "draw": 7,
       "lost": 10,
-      "points": 30,
+      "points": 31,
       "goalsFor": 29,
       "goalsAgainst": 28,
       "goalDifference": 1
@@ -953,6 +953,7 @@
       "L",
       "D",
       "W",
+      "L",
       "L"
     ],
     "SC Internacional": [
@@ -1220,6 +1221,7 @@
       "D",
       "D",
       "W",
+      "W",
       "W"
     ],
     "São Paulo FC": [
@@ -1433,11 +1435,11 @@
     },
     "RB Bragantino": {
       "home": {
-        "gf": 17,
-        "ga": 11,
+        "gf": 19,
+        "ga": 14,
         "w": 6,
         "d": 2,
-        "l": 4
+        "l": 5
       },
       "away": {
         "gf": 12,
@@ -1600,9 +1602,9 @@
         "l": 2
       },
       "away": {
-        "gf": 17,
-        "ga": 17,
-        "w": 5,
+        "gf": 20,
+        "ga": 19,
+        "w": 6,
         "d": 4,
         "l": 3
       }
