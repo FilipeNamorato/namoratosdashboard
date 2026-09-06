@@ -85,12 +85,12 @@
         "tla": "FLU",
         "crest": "https://crests.football-data.org/1765.png"
       },
-      "playedGames": 25,
+      "playedGames": 26,
       "form": null,
       "won": 11,
-      "draw": 9,
+      "draw": 10,
       "lost": 5,
-      "points": 42,
+      "points": 43,
       "goalsFor": 39,
       "goalsAgainst": 32,
       "goalDifference": 7
@@ -288,6 +288,25 @@
     {
       "position": 16,
       "team": {
+        "id": 1780,
+        "name": "CR Vasco da Gama",
+        "shortName": "Vasco da Gama",
+        "tla": "VAS",
+        "crest": "https://crests.football-data.org/1780.png"
+      },
+      "playedGames": 25,
+      "form": null,
+      "won": 6,
+      "draw": 8,
+      "lost": 11,
+      "points": 26,
+      "goalsFor": 27,
+      "goalsAgainst": 39,
+      "goalDifference": -12
+    },
+    {
+      "position": 17,
+      "team": {
         "id": 4364,
         "name": "Mirassol FC",
         "shortName": "Mirassol",
@@ -299,25 +318,6 @@
       "won": 6,
       "draw": 7,
       "lost": 12,
-      "points": 25,
-      "goalsFor": 27,
-      "goalsAgainst": 39,
-      "goalDifference": -12
-    },
-    {
-      "position": 16,
-      "team": {
-        "id": 1780,
-        "name": "CR Vasco da Gama",
-        "shortName": "Vasco da Gama",
-        "tla": "VAS",
-        "crest": "https://crests.football-data.org/1780.png"
-      },
-      "playedGames": 24,
-      "form": null,
-      "won": 6,
-      "draw": 7,
-      "lost": 11,
       "points": 25,
       "goalsFor": 27,
       "goalsAgainst": 39,
@@ -873,7 +873,8 @@
       "D",
       "W",
       "D",
-      "W"
+      "W",
+      "L"
     ],
     "SE Palmeiras": [
       "D",
@@ -1248,6 +1249,7 @@
       "L",
       "D",
       "L",
+      "W",
       "W"
     ],
     "CR Flamengo": [
@@ -1395,10 +1397,10 @@
       },
       "away": {
         "gf": 13,
-        "ga": 14,
+        "ga": 16,
         "w": 4,
         "d": 2,
-        "l": 7
+        "l": 8
       }
     },
     "SE Palmeiras": {
@@ -1611,9 +1613,9 @@
     },
     "São Paulo FC": {
       "home": {
-        "gf": 18,
+        "gf": 20,
         "ga": 10,
-        "w": 6,
+        "w": 7,
         "d": 3,
         "l": 2
       },
