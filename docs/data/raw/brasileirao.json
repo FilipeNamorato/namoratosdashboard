@@ -60,6 +60,25 @@
     {
       "position": 4,
       "team": {
+        "id": 1765,
+        "name": "Fluminense FC",
+        "shortName": "Fluminense",
+        "tla": "FLU",
+        "crest": "https://crests.football-data.org/1765.png"
+      },
+      "playedGames": 26,
+      "form": null,
+      "won": 12,
+      "draw": 9,
+      "lost": 5,
+      "points": 45,
+      "goalsFor": 40,
+      "goalsAgainst": 32,
+      "goalDifference": 8
+    },
+    {
+      "position": 5,
+      "team": {
         "id": 1777,
         "name": "EC Bahia",
         "shortName": "Bahia",
@@ -75,25 +94,6 @@
       "goalsFor": 40,
       "goalsAgainst": 32,
       "goalDifference": 8
-    },
-    {
-      "position": 5,
-      "team": {
-        "id": 1765,
-        "name": "Fluminense FC",
-        "shortName": "Fluminense",
-        "tla": "FLU",
-        "crest": "https://crests.football-data.org/1765.png"
-      },
-      "playedGames": 26,
-      "form": null,
-      "won": 11,
-      "draw": 10,
-      "lost": 5,
-      "points": 43,
-      "goalsFor": 39,
-      "goalsAgainst": 32,
-      "goalDifference": 7
     },
     {
       "position": 6,
@@ -288,25 +288,6 @@
     {
       "position": 16,
       "team": {
-        "id": 1780,
-        "name": "CR Vasco da Gama",
-        "shortName": "Vasco da Gama",
-        "tla": "VAS",
-        "crest": "https://crests.football-data.org/1780.png"
-      },
-      "playedGames": 25,
-      "form": null,
-      "won": 6,
-      "draw": 8,
-      "lost": 11,
-      "points": 26,
-      "goalsFor": 27,
-      "goalsAgainst": 39,
-      "goalDifference": -12
-    },
-    {
-      "position": 17,
-      "team": {
         "id": 4364,
         "name": "Mirassol FC",
         "shortName": "Mirassol",
@@ -322,6 +303,25 @@
       "goalsFor": 27,
       "goalsAgainst": 39,
       "goalDifference": -12
+    },
+    {
+      "position": 17,
+      "team": {
+        "id": 1780,
+        "name": "CR Vasco da Gama",
+        "shortName": "Vasco da Gama",
+        "tla": "VAS",
+        "crest": "https://crests.football-data.org/1780.png"
+      },
+      "playedGames": 25,
+      "form": null,
+      "won": 6,
+      "draw": 7,
+      "lost": 12,
+      "points": 25,
+      "goalsFor": 27,
+      "goalsAgainst": 40,
+      "goalDifference": -13
     },
     {
       "position": 18,
@@ -1090,7 +1090,8 @@
       "D",
       "W",
       "W",
-      "D"
+      "D",
+      "W"
     ],
     "Grêmio FBPA": [
       "L",
@@ -1330,7 +1331,8 @@
       "D",
       "L",
       "L",
-      "W"
+      "W",
+      "L"
     ],
     "Botafogo FR": [
       "W",
@@ -1517,9 +1519,9 @@
     },
     "Fluminense FC": {
       "home": {
-        "gf": 23,
+        "gf": 24,
         "ga": 14,
-        "w": 9,
+        "w": 10,
         "d": 3,
         "l": 1
       },
@@ -1669,10 +1671,10 @@
       },
       "away": {
         "gf": 11,
-        "ga": 21,
+        "ga": 22,
         "w": 0,
         "d": 5,
-        "l": 6
+        "l": 7
       }
     },
     "Botafogo FR": {
