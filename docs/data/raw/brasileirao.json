@@ -3,6 +3,25 @@
     {
       "position": 1,
       "team": {
+        "id": 1783,
+        "name": "CR Flamengo",
+        "shortName": "Flamengo",
+        "tla": "FLA",
+        "crest": "https://crests.football-data.org/1783.png"
+      },
+      "playedGames": 26,
+      "form": null,
+      "won": 16,
+      "draw": 6,
+      "lost": 4,
+      "points": 54,
+      "goalsFor": 51,
+      "goalsAgainst": 21,
+      "goalDifference": 30
+    },
+    {
+      "position": 2,
+      "team": {
         "id": 1769,
         "name": "SE Palmeiras",
         "shortName": "Palmeiras",
@@ -20,25 +39,6 @@
       "goalDifference": 24
     },
     {
-      "position": 2,
-      "team": {
-        "id": 1783,
-        "name": "CR Flamengo",
-        "shortName": "Flamengo",
-        "tla": "FLA",
-        "crest": "https://crests.football-data.org/1783.png"
-      },
-      "playedGames": 25,
-      "form": null,
-      "won": 15,
-      "draw": 6,
-      "lost": 4,
-      "points": 51,
-      "goalsFor": 50,
-      "goalsAgainst": 21,
-      "goalDifference": 29
-    },
-    {
       "position": 3,
       "team": {
         "id": 1768,
@@ -47,15 +47,15 @@
         "tla": "CAP",
         "crest": "https://crests.football-data.org/1768.png"
       },
-      "playedGames": 25,
+      "playedGames": 26,
       "form": null,
       "won": 13,
       "draw": 6,
-      "lost": 6,
+      "lost": 7,
       "points": 45,
-      "goalsFor": 37,
-      "goalsAgainst": 25,
-      "goalDifference": 12
+      "goalsFor": 38,
+      "goalsAgainst": 28,
+      "goalDifference": 10
     },
     {
       "position": 4,
@@ -104,15 +104,15 @@
         "tla": "CRU",
         "crest": "https://crests.football-data.org/1771.png"
       },
-      "playedGames": 25,
+      "playedGames": 26,
       "form": null,
-      "won": 11,
+      "won": 12,
       "draw": 6,
       "lost": 8,
-      "points": 39,
-      "goalsFor": 35,
-      "goalsAgainst": 36,
-      "goalDifference": -1
+      "points": 42,
+      "goalsFor": 38,
+      "goalsAgainst": 37,
+      "goalDifference": 1
     },
     {
       "position": 7,
@@ -212,6 +212,25 @@
     {
       "position": 12,
       "team": {
+        "id": 6685,
+        "name": "Santos FC",
+        "shortName": "Santos",
+        "tla": "SAN",
+        "crest": "https://crests.football-data.org/6685.png"
+      },
+      "playedGames": 25,
+      "form": null,
+      "won": 8,
+      "draw": 8,
+      "lost": 9,
+      "points": 32,
+      "goalsFor": 37,
+      "goalsAgainst": 38,
+      "goalDifference": -1
+    },
+    {
+      "position": 13,
+      "team": {
         "id": 1770,
         "name": "Botafogo FR",
         "shortName": "Botafogo",
@@ -229,7 +248,7 @@
       "goalDifference": -3
     },
     {
-      "position": 13,
+      "position": 14,
       "team": {
         "id": 1782,
         "name": "EC Vitória",
@@ -246,25 +265,6 @@
       "goalsFor": 24,
       "goalsAgainst": 37,
       "goalDifference": -13
-    },
-    {
-      "position": 14,
-      "team": {
-        "id": 6685,
-        "name": "Santos FC",
-        "shortName": "Santos",
-        "tla": "SAN",
-        "crest": "https://crests.football-data.org/6685.png"
-      },
-      "playedGames": 24,
-      "form": null,
-      "won": 7,
-      "draw": 8,
-      "lost": 9,
-      "points": 29,
-      "goalsFor": 34,
-      "goalsAgainst": 36,
-      "goalDifference": -2
     },
     {
       "position": 15,
@@ -332,15 +332,15 @@
         "tla": "SCI",
         "crest": "https://crests.football-data.org/6684.png"
       },
-      "playedGames": 25,
+      "playedGames": 26,
       "form": null,
       "won": 5,
       "draw": 10,
-      "lost": 10,
+      "lost": 11,
       "points": 25,
-      "goalsFor": 26,
-      "goalsAgainst": 31,
-      "goalDifference": -5
+      "goalsFor": 28,
+      "goalsAgainst": 34,
+      "goalDifference": -6
     },
     {
       "position": 19,
@@ -351,15 +351,15 @@
         "tla": "CRE",
         "crest": "https://crests.football-data.org/4287.png"
       },
-      "playedGames": 25,
+      "playedGames": 26,
       "form": null,
       "won": 5,
       "draw": 8,
-      "lost": 12,
+      "lost": 13,
       "points": 23,
       "goalsFor": 30,
-      "goalsAgainst": 42,
-      "goalDifference": -12
+      "goalsAgainst": 43,
+      "goalDifference": -13
     },
     {
       "position": 20,
@@ -408,7 +408,7 @@
         "venue": "Estádio Joaquim Américo Guimarães",
         "lastUpdated": "2022-04-06T13:14:06Z"
       },
-      "playedMatches": 23,
+      "playedMatches": 24,
       "goals": 17,
       "assists": 3,
       "penalties": 3
@@ -439,7 +439,7 @@
         "venue": "Estadio Jornalista Mário Filho",
         "lastUpdated": "2022-04-06T13:13:43Z"
       },
-      "playedMatches": 24,
+      "playedMatches": 25,
       "goals": 15,
       "assists": 6,
       "penalties": null
@@ -477,6 +477,37 @@
     },
     {
       "player": {
+        "id": 1327,
+        "name": "Gabriel Barbosa",
+        "firstName": "",
+        "lastName": "Gabriel Barbosa",
+        "dateOfBirth": "1996-08-30",
+        "nationality": "Brazil",
+        "section": "Offence",
+        "position": null,
+        "shirtNumber": null,
+        "lastUpdated": "2023-07-30T23:15:48Z"
+      },
+      "team": {
+        "id": 6685,
+        "name": "Santos FC",
+        "shortName": "Santos",
+        "tla": "SAN",
+        "crest": "https://crests.football-data.org/6685.png",
+        "address": "Rua Princesa Isabel S/N, Vila Belmiro Santos, SP 11075-501",
+        "website": "http://santosfc.com.br",
+        "founded": 1912,
+        "clubColors": "Black / White",
+        "venue": "Estádio Urbano Caldeira",
+        "lastUpdated": "2023-02-18T08:43:18Z"
+      },
+      "playedMatches": 19,
+      "goals": 10,
+      "assists": 2,
+      "penalties": 2
+    },
+    {
+      "player": {
         "id": 157533,
         "name": "John Kennedy",
         "firstName": "",
@@ -508,6 +539,37 @@
     },
     {
       "player": {
+        "id": 178710,
+        "name": "Samuel Lino",
+        "firstName": "",
+        "lastName": "Samuel Lino",
+        "dateOfBirth": "1999-12-23",
+        "nationality": "Brazil",
+        "section": "Left Winger",
+        "position": null,
+        "shirtNumber": null,
+        "lastUpdated": "2024-11-28T13:36:10Z"
+      },
+      "team": {
+        "id": 1783,
+        "name": "CR Flamengo",
+        "shortName": "Flamengo",
+        "tla": "FLA",
+        "crest": "https://crests.football-data.org/1783.png",
+        "address": "null Rio de Janeiro, RJ null",
+        "website": "https://www.flamengo.com.br/pagina-inicial-basquete",
+        "founded": 1919,
+        "clubColors": "Red / Black / White",
+        "venue": "Estadio Jornalista Mário Filho",
+        "lastUpdated": "2022-04-06T13:13:43Z"
+      },
+      "playedMatches": 25,
+      "goals": 9,
+      "assists": 7,
+      "penalties": null
+    },
+    {
+      "player": {
         "id": 170698,
         "name": "José Manuel López",
         "firstName": "José Manuel",
@@ -532,7 +594,7 @@
         "venue": "Allianz Parque",
         "lastUpdated": "2022-04-06T13:14:55Z"
       },
-      "playedMatches": 22,
+      "playedMatches": 23,
       "goals": 8,
       "assists": 4,
       "penalties": null
@@ -663,68 +725,6 @@
     },
     {
       "player": {
-        "id": 1327,
-        "name": "Gabriel Barbosa",
-        "firstName": "",
-        "lastName": "Gabriel Barbosa",
-        "dateOfBirth": "1996-08-30",
-        "nationality": "Brazil",
-        "section": "Offence",
-        "position": null,
-        "shirtNumber": null,
-        "lastUpdated": "2023-07-30T23:15:48Z"
-      },
-      "team": {
-        "id": 6685,
-        "name": "Santos FC",
-        "shortName": "Santos",
-        "tla": "SAN",
-        "crest": "https://crests.football-data.org/6685.png",
-        "address": "Rua Princesa Isabel S/N, Vila Belmiro Santos, SP 11075-501",
-        "website": "http://santosfc.com.br",
-        "founded": 1912,
-        "clubColors": "Black / White",
-        "venue": "Estádio Urbano Caldeira",
-        "lastUpdated": "2023-02-18T08:43:18Z"
-      },
-      "playedMatches": 18,
-      "goals": 8,
-      "assists": 2,
-      "penalties": 1
-    },
-    {
-      "player": {
-        "id": 178710,
-        "name": "Samuel Lino",
-        "firstName": "",
-        "lastName": "Samuel Lino",
-        "dateOfBirth": "1999-12-23",
-        "nationality": "Brazil",
-        "section": "Left Winger",
-        "position": null,
-        "shirtNumber": null,
-        "lastUpdated": "2024-11-28T13:36:10Z"
-      },
-      "team": {
-        "id": 1783,
-        "name": "CR Flamengo",
-        "shortName": "Flamengo",
-        "tla": "FLA",
-        "crest": "https://crests.football-data.org/1783.png",
-        "address": "null Rio de Janeiro, RJ null",
-        "website": "https://www.flamengo.com.br/pagina-inicial-basquete",
-        "founded": 1919,
-        "clubColors": "Red / Black / White",
-        "venue": "Estadio Jornalista Mário Filho",
-        "lastUpdated": "2022-04-06T13:13:43Z"
-      },
-      "playedMatches": 24,
-      "goals": 8,
-      "assists": 7,
-      "penalties": null
-    },
-    {
-      "player": {
         "id": 149704,
         "name": "Danilo dos Santos de Oliveira",
         "firstName": "",
@@ -749,7 +749,7 @@
         "venue": "Estádio Nilton Santos",
         "lastUpdated": "2023-02-18T08:43:47Z"
       },
-      "playedMatches": 14,
+      "playedMatches": 15,
       "goals": 7,
       "assists": 2,
       "penalties": null
@@ -811,7 +811,7 @@
         "venue": "Estádio Nilton Santos",
         "lastUpdated": "2023-02-18T08:43:47Z"
       },
-      "playedMatches": 19,
+      "playedMatches": 20,
       "goals": 7,
       "assists": 1,
       "penalties": null
@@ -842,7 +842,7 @@
         "venue": "Allianz Parque",
         "lastUpdated": "2022-04-06T13:14:55Z"
       },
-      "playedMatches": 23,
+      "playedMatches": 24,
       "goals": 7,
       "assists": 1,
       "penalties": null
@@ -983,6 +983,7 @@
       "D",
       "D",
       "D",
+      "L",
       "L"
     ],
     "CA Paranaense": [
@@ -1010,7 +1011,8 @@
       "W",
       "D",
       "W",
-      "D"
+      "D",
+      "L"
     ],
     "EC Vitória": [
       "W",
@@ -1063,6 +1065,7 @@
       "L",
       "D",
       "D",
+      "L",
       "L",
       "L"
     ],
@@ -1170,6 +1173,7 @@
       "L",
       "W",
       "D",
+      "W",
       "W"
     ],
     "SC Corinthians Paulista": [
@@ -1279,6 +1283,7 @@
       "W",
       "L",
       "W",
+      "W",
       "W"
     ],
     "Mirassol FC": [
@@ -1387,7 +1392,8 @@
       "W",
       "W",
       "W",
-      "L"
+      "L",
+      "W"
     ]
   },
   "team_stats": {
@@ -1457,11 +1463,11 @@
     },
     "SC Internacional": {
       "home": {
-        "gf": 14,
-        "ga": 13,
+        "gf": 16,
+        "ga": 16,
         "w": 3,
         "d": 5,
-        "l": 5
+        "l": 6
       },
       "away": {
         "gf": 12,
@@ -1480,11 +1486,11 @@
         "l": 1
       },
       "away": {
-        "gf": 14,
-        "ga": 15,
+        "gf": 15,
+        "ga": 18,
         "w": 5,
         "d": 2,
-        "l": 5
+        "l": 6
       }
     },
     "EC Vitória": {
@@ -1506,10 +1512,10 @@
     "Clube do Remo": {
       "home": {
         "gf": 17,
-        "ga": 16,
+        "ga": 17,
         "w": 3,
         "d": 5,
-        "l": 4
+        "l": 5
       },
       "away": {
         "gf": 13,
@@ -1576,9 +1582,9 @@
         "l": 4
       },
       "away": {
-        "gf": 16,
-        "ga": 19,
-        "w": 2,
+        "gf": 19,
+        "ga": 21,
+        "w": 3,
         "d": 4,
         "l": 5
       }
@@ -1640,9 +1646,9 @@
         "l": 1
       },
       "away": {
-        "gf": 26,
+        "gf": 27,
         "ga": 13,
-        "w": 7,
+        "w": 8,
         "d": 3,
         "l": 3
       }
@@ -1697,9 +1703,9 @@
     },
     "Cruzeiro EC": {
       "home": {
-        "gf": 21,
-        "ga": 15,
-        "w": 6,
+        "gf": 24,
+        "ga": 16,
+        "w": 7,
         "d": 4,
         "l": 3
       },
