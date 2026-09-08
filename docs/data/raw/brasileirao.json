@@ -193,6 +193,25 @@
     {
       "position": 11,
       "team": {
+        "id": 1782,
+        "name": "EC Vitória",
+        "shortName": "Vitória",
+        "tla": "VIT",
+        "crest": "https://crests.football-data.org/1782.png"
+      },
+      "playedGames": 26,
+      "form": null,
+      "won": 9,
+      "draw": 5,
+      "lost": 12,
+      "points": 32,
+      "goalsFor": 25,
+      "goalsAgainst": 37,
+      "goalDifference": -12
+    },
+    {
+      "position": 12,
+      "team": {
         "id": 1779,
         "name": "SC Corinthians Paulista",
         "shortName": "Corinthians",
@@ -210,7 +229,7 @@
       "goalDifference": 0
     },
     {
-      "position": 12,
+      "position": 13,
       "team": {
         "id": 6685,
         "name": "Santos FC",
@@ -229,7 +248,7 @@
       "goalDifference": -1
     },
     {
-      "position": 13,
+      "position": 14,
       "team": {
         "id": 1770,
         "name": "Botafogo FR",
@@ -248,25 +267,6 @@
       "goalDifference": -3
     },
     {
-      "position": 14,
-      "team": {
-        "id": 1782,
-        "name": "EC Vitória",
-        "shortName": "Vitória",
-        "tla": "VIT",
-        "crest": "https://crests.football-data.org/1782.png"
-      },
-      "playedGames": 26,
-      "form": null,
-      "won": 8,
-      "draw": 6,
-      "lost": 12,
-      "points": 30,
-      "goalsFor": 24,
-      "goalsAgainst": 37,
-      "goalDifference": -13
-    },
-    {
       "position": 15,
       "team": {
         "id": 1767,
@@ -278,12 +278,12 @@
       "playedGames": 25,
       "form": null,
       "won": 7,
-      "draw": 8,
-      "lost": 10,
-      "points": 29,
+      "draw": 7,
+      "lost": 11,
+      "points": 28,
       "goalsFor": 27,
-      "goalsAgainst": 32,
-      "goalDifference": -5
+      "goalsAgainst": 33,
+      "goalDifference": -6
     },
     {
       "position": 16,
@@ -1040,7 +1040,8 @@
       "L",
       "W",
       "L",
-      "L"
+      "L",
+      "W"
     ],
     "Clube do Remo": [
       "L",
@@ -1122,7 +1123,8 @@
       "W",
       "L",
       "L",
-      "W"
+      "W",
+      "L"
     ],
     "Chapecoense AF": [
       "W",
@@ -1499,9 +1501,9 @@
     },
     "EC Vitória": {
       "home": {
-        "gf": 16,
+        "gf": 17,
         "ga": 9,
-        "w": 8,
+        "w": 9,
         "d": 1,
         "l": 3
       },
@@ -1555,10 +1557,10 @@
       },
       "away": {
         "gf": 6,
-        "ga": 18,
+        "ga": 19,
         "w": 0,
         "d": 4,
-        "l": 8
+        "l": 9
       }
     },
     "Chapecoense AF": {
