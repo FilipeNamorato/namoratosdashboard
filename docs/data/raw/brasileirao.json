@@ -66,15 +66,15 @@
         "tla": "FLU",
         "crest": "https://crests.football-data.org/1765.png"
       },
-      "playedGames": 26,
+      "playedGames": 27,
       "form": null,
       "won": 12,
       "draw": 9,
-      "lost": 5,
+      "lost": 6,
       "points": 45,
-      "goalsFor": 40,
-      "goalsAgainst": 32,
-      "goalDifference": 8
+      "goalsFor": 41,
+      "goalsAgainst": 35,
+      "goalDifference": 6
     },
     {
       "position": 5,
@@ -117,6 +117,25 @@
     {
       "position": 7,
       "team": {
+        "id": 1766,
+        "name": "CA Mineiro",
+        "shortName": "Mineiro",
+        "tla": "CAM",
+        "crest": "https://crests.football-data.org/1766.png"
+      },
+      "playedGames": 26,
+      "form": null,
+      "won": 11,
+      "draw": 6,
+      "lost": 9,
+      "points": 39,
+      "goalsFor": 35,
+      "goalsAgainst": 31,
+      "goalDifference": 4
+    },
+    {
+      "position": 8,
+      "team": {
         "id": 4241,
         "name": "Coritiba FBC",
         "shortName": "Coritiba",
@@ -132,25 +151,6 @@
       "goalsFor": 37,
       "goalsAgainst": 38,
       "goalDifference": -1
-    },
-    {
-      "position": 8,
-      "team": {
-        "id": 1766,
-        "name": "CA Mineiro",
-        "shortName": "Mineiro",
-        "tla": "CAM",
-        "crest": "https://crests.football-data.org/1766.png"
-      },
-      "playedGames": 25,
-      "form": null,
-      "won": 10,
-      "draw": 6,
-      "lost": 9,
-      "points": 36,
-      "goalsFor": 32,
-      "goalsAgainst": 30,
-      "goalDifference": 2
     },
     {
       "position": 9,
@@ -275,15 +275,15 @@
         "tla": "FBP",
         "crest": "https://crests.football-data.org/1767.png"
       },
-      "playedGames": 25,
+      "playedGames": 26,
       "form": null,
       "won": 7,
       "draw": 7,
-      "lost": 11,
+      "lost": 12,
       "points": 28,
-      "goalsFor": 27,
-      "goalsAgainst": 33,
-      "goalDifference": -6
+      "goalsFor": 28,
+      "goalsAgainst": 35,
+      "goalDifference": -7
     },
     {
       "position": 16,
@@ -313,15 +313,15 @@
         "tla": "VAS",
         "crest": "https://crests.football-data.org/1780.png"
       },
-      "playedGames": 25,
+      "playedGames": 26,
       "form": null,
-      "won": 6,
+      "won": 7,
       "draw": 7,
       "lost": 12,
-      "points": 25,
-      "goalsFor": 27,
-      "goalsAgainst": 40,
-      "goalDifference": -13
+      "points": 28,
+      "goalsFor": 29,
+      "goalsAgainst": 41,
+      "goalDifference": -12
     },
     {
       "position": 18,
@@ -332,14 +332,14 @@
         "tla": "SCI",
         "crest": "https://crests.football-data.org/6684.png"
       },
-      "playedGames": 26,
+      "playedGames": 27,
       "form": null,
       "won": 5,
-      "draw": 10,
+      "draw": 11,
       "lost": 11,
-      "points": 25,
-      "goalsFor": 28,
-      "goalsAgainst": 34,
+      "points": 26,
+      "goalsFor": 29,
+      "goalsAgainst": 35,
       "goalDifference": -6
     },
     {
@@ -370,14 +370,14 @@
         "tla": "CHA",
         "crest": "https://crests.football-data.org/1772_large.png"
       },
-      "playedGames": 25,
+      "playedGames": 26,
       "form": null,
       "won": 3,
-      "draw": 8,
+      "draw": 9,
       "lost": 14,
-      "points": 17,
-      "goalsFor": 27,
-      "goalsAgainst": 50,
+      "points": 18,
+      "goalsFor": 28,
+      "goalsAgainst": 51,
       "goalDifference": -23
     }
   ],
@@ -470,7 +470,7 @@
         "venue": "Arena do Grêmio",
         "lastUpdated": "2023-02-18T08:42:52Z"
       },
-      "playedMatches": 22,
+      "playedMatches": 23,
       "goals": 10,
       "assists": 1,
       "penalties": 1
@@ -594,7 +594,7 @@
         "venue": "Allianz Parque",
         "lastUpdated": "2022-04-06T13:14:55Z"
       },
-      "playedMatches": 23,
+      "playedMatches": 24,
       "goals": 8,
       "assists": 4,
       "penalties": null
@@ -780,7 +780,7 @@
         "venue": "Estádio do Morumbi",
         "lastUpdated": "2023-02-18T08:43:44Z"
       },
-      "playedMatches": 22,
+      "playedMatches": 23,
       "goals": 7,
       "assists": 1,
       "penalties": 1
@@ -874,7 +874,8 @@
       "W",
       "D",
       "W",
-      "L"
+      "L",
+      "W"
     ],
     "SE Palmeiras": [
       "D",
@@ -1099,7 +1100,8 @@
       "W",
       "W",
       "D",
-      "W"
+      "W",
+      "L"
     ],
     "Grêmio FBPA": [
       "L",
@@ -1126,6 +1128,7 @@
       "L",
       "L",
       "W",
+      "L",
       "L"
     ],
     "Chapecoense AF": [
@@ -1346,7 +1349,8 @@
       "L",
       "L",
       "W",
-      "L"
+      "L",
+      "W"
     ],
     "Botafogo FR": [
       "W",
@@ -1407,9 +1411,9 @@
   "team_stats": {
     "CA Mineiro": {
       "home": {
-        "gf": 19,
-        "ga": 14,
-        "w": 6,
+        "gf": 22,
+        "ga": 15,
+        "w": 7,
         "d": 4,
         "l": 1
       },
@@ -1542,20 +1546,20 @@
         "l": 1
       },
       "away": {
-        "gf": 16,
-        "ga": 18,
+        "gf": 17,
+        "ga": 21,
         "w": 2,
         "d": 6,
-        "l": 4
+        "l": 5
       }
     },
     "Grêmio FBPA": {
       "home": {
-        "gf": 21,
-        "ga": 14,
+        "gf": 22,
+        "ga": 16,
         "w": 7,
         "d": 3,
-        "l": 2
+        "l": 3
       },
       "away": {
         "gf": 6,
@@ -1686,9 +1690,9 @@
         "l": 5
       },
       "away": {
-        "gf": 11,
-        "ga": 22,
-        "w": 0,
+        "gf": 13,
+        "ga": 23,
+        "w": 1,
         "d": 5,
         "l": 7
       }
