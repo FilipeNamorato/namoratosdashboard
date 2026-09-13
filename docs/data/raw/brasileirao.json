@@ -104,15 +104,15 @@
         "tla": "CRU",
         "crest": "https://crests.football-data.org/1771.png"
       },
-      "playedGames": 26,
+      "playedGames": 27,
       "form": null,
       "won": 12,
       "draw": 6,
-      "lost": 8,
+      "lost": 9,
       "points": 42,
       "goalsFor": 38,
-      "goalsAgainst": 37,
-      "goalDifference": 1
+      "goalsAgainst": 39,
+      "goalDifference": -1
     },
     {
       "position": 7,
@@ -161,18 +161,37 @@
         "tla": "RBB",
         "crest": "https://crests.football-data.org/4286.png"
       },
-      "playedGames": 25,
+      "playedGames": 26,
       "form": null,
       "won": 10,
-      "draw": 5,
+      "draw": 6,
       "lost": 10,
-      "points": 35,
-      "goalsFor": 31,
-      "goalsAgainst": 28,
+      "points": 36,
+      "goalsFor": 32,
+      "goalsAgainst": 29,
       "goalDifference": 3
     },
     {
       "position": 10,
+      "team": {
+        "id": 6685,
+        "name": "Santos FC",
+        "shortName": "Santos",
+        "tla": "SAN",
+        "crest": "https://crests.football-data.org/6685.png"
+      },
+      "playedGames": 26,
+      "form": null,
+      "won": 9,
+      "draw": 8,
+      "lost": 9,
+      "points": 35,
+      "goalsFor": 39,
+      "goalsAgainst": 38,
+      "goalDifference": 1
+    },
+    {
+      "position": 11,
       "team": {
         "id": 1776,
         "name": "São Paulo FC",
@@ -191,7 +210,7 @@
       "goalDifference": 1
     },
     {
-      "position": 11,
+      "position": 12,
       "team": {
         "id": 1782,
         "name": "EC Vitória",
@@ -210,7 +229,7 @@
       "goalDifference": -12
     },
     {
-      "position": 12,
+      "position": 13,
       "team": {
         "id": 1779,
         "name": "SC Corinthians Paulista",
@@ -229,25 +248,6 @@
       "goalDifference": 0
     },
     {
-      "position": 13,
-      "team": {
-        "id": 6685,
-        "name": "Santos FC",
-        "shortName": "Santos",
-        "tla": "SAN",
-        "crest": "https://crests.football-data.org/6685.png"
-      },
-      "playedGames": 25,
-      "form": null,
-      "won": 8,
-      "draw": 8,
-      "lost": 9,
-      "points": 32,
-      "goalsFor": 37,
-      "goalsAgainst": 38,
-      "goalDifference": -1
-    },
-    {
       "position": 14,
       "team": {
         "id": 1770,
@@ -256,14 +256,14 @@
         "tla": "BOT",
         "crest": "https://crests.football-data.org/1770.png"
       },
-      "playedGames": 25,
+      "playedGames": 26,
       "form": null,
       "won": 8,
-      "draw": 7,
+      "draw": 8,
       "lost": 10,
-      "points": 31,
-      "goalsFor": 37,
-      "goalsAgainst": 40,
+      "points": 32,
+      "goalsFor": 38,
+      "goalsAgainst": 41,
       "goalDifference": -3
     },
     {
@@ -903,7 +903,8 @@
       "L",
       "W",
       "D",
-      "D"
+      "D",
+      "W"
     ],
     "Coritiba FBC": [
       "L",
@@ -1268,7 +1269,8 @@
       "D",
       "L",
       "W",
-      "W"
+      "W",
+      "L"
     ],
     "CR Flamengo": [
       "L",
@@ -1429,9 +1431,9 @@
     },
     "SE Palmeiras": {
       "home": {
-        "gf": 21,
+        "gf": 23,
         "ga": 9,
-        "w": 8,
+        "w": 9,
         "d": 3,
         "l": 1
       },
@@ -1645,10 +1647,10 @@
       },
       "away": {
         "gf": 11,
-        "ga": 18,
+        "ga": 20,
         "w": 2,
         "d": 3,
-        "l": 8
+        "l": 9
       }
     },
     "CR Flamengo": {
