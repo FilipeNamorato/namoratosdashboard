@@ -28,12 +28,12 @@
         "tla": "FLA",
         "crest": "https://crests.football-data.org/1783.png"
       },
-      "playedGames": 26,
+      "playedGames": 27,
       "form": null,
       "won": 16,
-      "draw": 6,
+      "draw": 7,
       "lost": 4,
-      "points": 54,
+      "points": 55,
       "goalsFor": 51,
       "goalsAgainst": 21,
       "goalDifference": 30
@@ -218,14 +218,14 @@
         "tla": "VIT",
         "crest": "https://crests.football-data.org/1782.png"
       },
-      "playedGames": 26,
+      "playedGames": 27,
       "form": null,
       "won": 9,
-      "draw": 5,
+      "draw": 6,
       "lost": 12,
-      "points": 32,
-      "goalsFor": 25,
-      "goalsAgainst": 37,
+      "points": 33,
+      "goalsFor": 27,
+      "goalsAgainst": 39,
       "goalDifference": -12
     },
     {
@@ -237,12 +237,12 @@
         "tla": "COR",
         "crest": "https://crests.football-data.org/1779.png"
       },
-      "playedGames": 26,
+      "playedGames": 27,
       "form": null,
       "won": 8,
-      "draw": 8,
+      "draw": 9,
       "lost": 10,
-      "points": 32,
+      "points": 33,
       "goalsFor": 27,
       "goalsAgainst": 27,
       "goalDifference": 0
@@ -269,6 +269,25 @@
     {
       "position": 15,
       "team": {
+        "id": 4364,
+        "name": "Mirassol FC",
+        "shortName": "Mirassol",
+        "tla": "MIR",
+        "crest": "https://crests.football-data.org/4364.png"
+      },
+      "playedGames": 27,
+      "form": null,
+      "won": 7,
+      "draw": 8,
+      "lost": 12,
+      "points": 29,
+      "goalsFor": 31,
+      "goalsAgainst": 42,
+      "goalDifference": -11
+    },
+    {
+      "position": 16,
+      "team": {
         "id": 1767,
         "name": "Grêmio FBPA",
         "shortName": "Grêmio",
@@ -284,25 +303,6 @@
       "goalsFor": 28,
       "goalsAgainst": 35,
       "goalDifference": -7
-    },
-    {
-      "position": 16,
-      "team": {
-        "id": 4364,
-        "name": "Mirassol FC",
-        "shortName": "Mirassol",
-        "tla": "MIR",
-        "crest": "https://crests.football-data.org/4364.png"
-      },
-      "playedGames": 26,
-      "form": null,
-      "won": 7,
-      "draw": 7,
-      "lost": 12,
-      "points": 28,
-      "goalsFor": 29,
-      "goalsAgainst": 40,
-      "goalDifference": -11
     },
     {
       "position": 17,
@@ -439,7 +439,7 @@
         "venue": "Estadio Jornalista Mário Filho",
         "lastUpdated": "2022-04-06T13:13:43Z"
       },
-      "playedMatches": 25,
+      "playedMatches": 26,
       "goals": 15,
       "assists": 6,
       "penalties": null
@@ -563,7 +563,7 @@
         "venue": "Estadio Jornalista Mário Filho",
         "lastUpdated": "2022-04-06T13:13:43Z"
       },
-      "playedMatches": 25,
+      "playedMatches": 26,
       "goals": 9,
       "assists": 7,
       "penalties": null
@@ -1047,7 +1047,8 @@
       "W",
       "L",
       "L",
-      "W"
+      "W",
+      "D"
     ],
     "Clube do Remo": [
       "L",
@@ -1328,7 +1329,8 @@
       "D",
       "D",
       "L",
-      "W"
+      "W",
+      "D"
     ],
     "CR Vasco da Gama": [
       "L",
@@ -1522,10 +1524,10 @@
         "l": 3
       },
       "away": {
-        "gf": 8,
-        "ga": 28,
+        "gf": 10,
+        "ga": 30,
         "w": 0,
-        "d": 4,
+        "d": 5,
         "l": 9
       }
     },
@@ -1675,10 +1677,10 @@
     },
     "Mirassol FC": {
       "home": {
-        "gf": 17,
-        "ga": 19,
+        "gf": 19,
+        "ga": 21,
         "w": 5,
-        "d": 4,
+        "d": 5,
         "l": 4
       },
       "away": {
