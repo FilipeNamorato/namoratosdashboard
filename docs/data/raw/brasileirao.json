@@ -110,9 +110,9 @@
       "draw": 6,
       "lost": 9,
       "points": 42,
-      "goalsFor": 38,
+      "goalsFor": 39,
       "goalsAgainst": 39,
-      "goalDifference": -1
+      "goalDifference": 0
     },
     {
       "position": 7,
@@ -187,8 +187,8 @@
       "lost": 9,
       "points": 35,
       "goalsFor": 39,
-      "goalsAgainst": 38,
-      "goalDifference": 1
+      "goalsAgainst": 39,
+      "goalDifference": 0
     },
     {
       "position": 11,
@@ -632,6 +632,37 @@
     },
     {
       "player": {
+        "id": 45490,
+        "name": "Matheus Pereira",
+        "firstName": "",
+        "lastName": "Matheus Pereira",
+        "dateOfBirth": "1996-05-05",
+        "nationality": "Brazil",
+        "section": "Offence",
+        "position": null,
+        "shirtNumber": null,
+        "lastUpdated": "2023-07-30T23:15:45Z"
+      },
+      "team": {
+        "id": 1771,
+        "name": "Cruzeiro EC",
+        "shortName": "Cruzeiro",
+        "tla": "CRU",
+        "crest": "https://crests.football-data.org/1771.png",
+        "address": "Rua Timbiras 2903, Bairro Preto Belo Horizonte, MG 30140-062",
+        "website": "http://www.cruzeiro.com.br",
+        "founded": 1921,
+        "clubColors": "Blue / White",
+        "venue": "Estádio Governador Magalhães Pinto",
+        "lastUpdated": "2022-04-10T11:03:46Z"
+      },
+      "playedMatches": 24,
+      "goals": 8,
+      "assists": 4,
+      "penalties": null
+    },
+    {
+      "player": {
         "id": 169022,
         "name": "Breno Lopes",
         "firstName": "",
@@ -815,37 +846,6 @@
       "goals": 7,
       "assists": 1,
       "penalties": null
-    },
-    {
-      "player": {
-        "id": 119594,
-        "name": "Mauricio",
-        "firstName": null,
-        "lastName": "Mauricio",
-        "dateOfBirth": "2001-06-22",
-        "nationality": "Paraguay",
-        "section": "Midfield",
-        "position": null,
-        "shirtNumber": null,
-        "lastUpdated": "2026-06-03T09:41:57Z"
-      },
-      "team": {
-        "id": 1769,
-        "name": "SE Palmeiras",
-        "shortName": "Palmeiras",
-        "tla": "PAL",
-        "crest": "https://crests.football-data.org/1769.png",
-        "address": "Rua Palestra Italia nº 214, Perdizes São Paulo, SP 05005-030",
-        "website": "http://www.palmeiras.com.br",
-        "founded": 1914,
-        "clubColors": "Green / White",
-        "venue": "Allianz Parque",
-        "lastUpdated": "2022-04-06T13:14:55Z"
-      },
-      "playedMatches": 24,
-      "goals": 7,
-      "assists": 1,
-      "penalties": null
     }
   ],
   "historico_times": {
@@ -960,7 +960,8 @@
       "D",
       "W",
       "L",
-      "L"
+      "L",
+      "D"
     ],
     "SC Internacional": [
       "L",
@@ -1186,6 +1187,7 @@
       "W",
       "D",
       "W",
+      "W",
       "W"
     ],
     "SC Corinthians Paulista": [
@@ -1381,6 +1383,7 @@
       "L",
       "L",
       "L",
+      "D",
       "D"
     ],
     "Cruzeiro EC": [
@@ -1409,7 +1412,8 @@
       "W",
       "W",
       "L",
-      "W"
+      "W",
+      "L"
     ]
   },
   "team_stats": {
@@ -1470,10 +1474,10 @@
         "l": 5
       },
       "away": {
-        "gf": 12,
-        "ga": 14,
+        "gf": 13,
+        "ga": 15,
         "w": 4,
-        "d": 3,
+        "d": 4,
         "l": 5
       }
     },
@@ -1591,9 +1595,9 @@
     },
     "Santos FC": {
       "home": {
-        "gf": 18,
-        "ga": 17,
-        "w": 5,
+        "gf": 20,
+        "ga": 18,
+        "w": 6,
         "d": 4,
         "l": 4
       },
@@ -1703,10 +1707,10 @@
     },
     "Botafogo FR": {
       "home": {
-        "gf": 20,
-        "ga": 17,
+        "gf": 21,
+        "ga": 18,
         "w": 4,
-        "d": 5,
+        "d": 6,
         "l": 3
       },
       "away": {
@@ -1726,11 +1730,11 @@
         "l": 3
       },
       "away": {
-        "gf": 14,
-        "ga": 21,
+        "gf": 15,
+        "ga": 23,
         "w": 5,
         "d": 2,
-        "l": 5
+        "l": 6
       }
     }
   }
