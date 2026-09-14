@@ -1,16 +1,16 @@
 {
   "status": "ok",
-  "n_rodadas": 11,
-  "n_registros": 534,
+  "n_rodadas": 14,
+  "n_registros": 681,
   "pesos": {
     "defesa": {
       "oc": 0.0,
-      "vm": 0.3788,
-      "tof": 0.0683,
-      "tdef": 0.1924,
-      "fs": 0.0449,
-      "adv_of": 0.3156,
-      "prob_gols": 0.0
+      "vm": 0.2761,
+      "tof": 0.0852,
+      "tdef": 0.0746,
+      "fs": 0.2352,
+      "adv_of": 0.2864,
+      "prob_gols": 0.0423
     },
     "ataque": {
       "oc": 0.25,
@@ -24,42 +24,42 @@
   "grupos": {
     "defesa": {
       "status": "ok",
-      "n_rodadas": 11,
-      "n_registros": 225,
+      "n_rodadas": 14,
+      "n_registros": 279,
       "pesos": {
         "oc": 0.0,
-        "vm": 0.3788,
-        "tof": 0.0683,
-        "tdef": 0.1924,
-        "fs": 0.0449,
-        "adv_of": 0.3156,
-        "prob_gols": 0.0
+        "vm": 0.2761,
+        "tof": 0.0852,
+        "tdef": 0.0746,
+        "fs": 0.2352,
+        "adv_of": 0.2864,
+        "prob_gols": 0.0423
       },
       "coefs_brutos": {
-        "oc": -2.5812,
-        "vm": 3.0913,
-        "tof": 0.5571,
-        "tdef": 1.5706,
-        "fs": 0.3665,
-        "adv_of": 2.576,
-        "prob_gols": -0.0983
+        "oc": -3.1552,
+        "vm": 2.3095,
+        "tof": 0.7128,
+        "tdef": 0.6242,
+        "fs": 1.9675,
+        "adv_of": 2.3956,
+        "prob_gols": 0.3541
       },
-      "intercept": 1.0857,
+      "intercept": 0.825,
       "metricas": {
-        "mae_heuristica": 4.129,
-        "mae_modelo_cv": 2.355,
-        "mae_modelo_in": 2.073,
-        "ganho_pct_cv": 43.0
+        "mae_heuristica": 4.008,
+        "mae_modelo_cv": 2.494,
+        "mae_modelo_in": 2.259,
+        "ganho_pct_cv": 37.8
       }
     },
     "ataque": {
       "status": "insuficiente",
-      "n_rodadas": 11,
-      "n_registros": 309,
-      "motivo": "modelo OOS MAE=2.280 não supera heurística=2.086",
+      "n_rodadas": 14,
+      "n_registros": 402,
+      "motivo": "modelo OOS MAE=2.658 não supera heurística=2.442",
       "metricas": {
-        "mae_heuristica": 2.086,
-        "mae_modelo_cv": 2.28
+        "mae_heuristica": 2.442,
+        "mae_modelo_cv": 2.658
       }
     }
   },
@@ -69,5 +69,5 @@
     "min_rodadas": 3,
     "min_registros": 150
   },
-  "atualizado_em": "2026-08-22 11:10 BRT"
+  "atualizado_em": "2026-09-13 20:16 BRT"
 }
