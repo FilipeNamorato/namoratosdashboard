@@ -1,16 +1,16 @@
 {
-  "status": "ok",
+  "status": "insuficiente",
   "n_rodadas": 14,
-  "n_registros": 681,
+  "n_registros": 4411,
   "pesos": {
     "defesa": {
-      "oc": 0.0,
-      "vm": 0.2761,
-      "tof": 0.0852,
-      "tdef": 0.0746,
-      "fs": 0.2352,
-      "adv_of": 0.2864,
-      "prob_gols": 0.0423
+      "oc": 0.3,
+      "vm": 0.25,
+      "tof": 0.1,
+      "tdef": 0.15,
+      "fs": 0.05,
+      "adv_of": 0.1,
+      "prob_gols": 0.05
     },
     "ataque": {
       "oc": 0.25,
@@ -23,43 +23,25 @@
   },
   "grupos": {
     "defesa": {
-      "status": "ok",
+      "status": "insuficiente",
       "n_rodadas": 14,
-      "n_registros": 279,
-      "pesos": {
-        "oc": 0.0,
-        "vm": 0.2761,
-        "tof": 0.0852,
-        "tdef": 0.0746,
-        "fs": 0.2352,
-        "adv_of": 0.2864,
-        "prob_gols": 0.0423
-      },
-      "coefs_brutos": {
-        "oc": -3.1552,
-        "vm": 2.3095,
-        "tof": 0.7128,
-        "tdef": 0.6242,
-        "fs": 1.9675,
-        "adv_of": 2.3956,
-        "prob_gols": 0.3541
-      },
-      "intercept": 0.825,
+      "n_registros": 1569,
+      "motivo": "modelo OOS MAE=3.098 não supera baseline=3.090 em ≥1.0% (média 3.090, heurística 3.091)",
       "metricas": {
-        "mae_heuristica": 4.008,
-        "mae_modelo_cv": 2.494,
-        "mae_modelo_in": 2.259,
-        "ganho_pct_cv": 37.8
+        "mae_baseline_media": 3.09,
+        "mae_heuristica": 3.091,
+        "mae_modelo_cv": 3.098
       }
     },
     "ataque": {
       "status": "insuficiente",
       "n_rodadas": 14,
-      "n_registros": 402,
-      "motivo": "modelo OOS MAE=2.658 não supera heurística=2.442",
+      "n_registros": 2842,
+      "motivo": "modelo OOS MAE=3.056 não supera baseline=3.058 em ≥1.0% (média 3.058, heurística 3.058)",
       "metricas": {
-        "mae_heuristica": 2.442,
-        "mae_modelo_cv": 2.658
+        "mae_baseline_media": 3.058,
+        "mae_heuristica": 3.058,
+        "mae_modelo_cv": 3.056
       }
     }
   },
@@ -69,5 +51,5 @@
     "min_rodadas": 3,
     "min_registros": 150
   },
-  "atualizado_em": "2026-09-13 20:16 BRT"
+  "atualizado_em": "2026-09-13 22:28 BRT"
 }
