@@ -60,6 +60,25 @@
     {
       "position": 4,
       "team": {
+        "id": 1777,
+        "name": "EC Bahia",
+        "shortName": "Bahia",
+        "tla": "BAH",
+        "crest": "https://crests.football-data.org/1777.png"
+      },
+      "playedGames": 27,
+      "form": null,
+      "won": 12,
+      "draw": 10,
+      "lost": 5,
+      "points": 46,
+      "goalsFor": 41,
+      "goalsAgainst": 32,
+      "goalDifference": 9
+    },
+    {
+      "position": 5,
+      "team": {
         "id": 1765,
         "name": "Fluminense FC",
         "shortName": "Fluminense",
@@ -75,25 +94,6 @@
       "goalsFor": 41,
       "goalsAgainst": 35,
       "goalDifference": 6
-    },
-    {
-      "position": 5,
-      "team": {
-        "id": 1777,
-        "name": "EC Bahia",
-        "shortName": "Bahia",
-        "tla": "BAH",
-        "crest": "https://crests.football-data.org/1777.png"
-      },
-      "playedGames": 26,
-      "form": null,
-      "won": 11,
-      "draw": 10,
-      "lost": 5,
-      "points": 43,
-      "goalsFor": 40,
-      "goalsAgainst": 32,
-      "goalDifference": 8
     },
     {
       "position": 6,
@@ -351,15 +351,15 @@
         "tla": "CRE",
         "crest": "https://crests.football-data.org/4287.png"
       },
-      "playedGames": 26,
+      "playedGames": 27,
       "form": null,
       "won": 5,
       "draw": 8,
-      "lost": 13,
+      "lost": 14,
       "points": 23,
       "goalsFor": 30,
-      "goalsAgainst": 43,
-      "goalDifference": -13
+      "goalsAgainst": 44,
+      "goalDifference": -14
     },
     {
       "position": 20,
@@ -749,7 +749,7 @@
         "venue": "Estádio Governador Roberto Santos",
         "lastUpdated": "2024-10-28T10:09:10Z"
       },
-      "playedMatches": 21,
+      "playedMatches": 22,
       "goals": 8,
       "assists": 1,
       "penalties": 3
