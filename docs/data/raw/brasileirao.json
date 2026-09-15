@@ -72,8 +72,8 @@
       "draw": 10,
       "lost": 5,
       "points": 46,
-      "goalsFor": 41,
-      "goalsAgainst": 32,
+      "goalsFor": 42,
+      "goalsAgainst": 33,
       "goalDifference": 9
     },
     {
@@ -357,8 +357,8 @@
       "draw": 8,
       "lost": 14,
       "points": 23,
-      "goalsFor": 30,
-      "goalsAgainst": 44,
+      "goalsFor": 31,
+      "goalsAgainst": 45,
       "goalDifference": -14
     },
     {
@@ -536,6 +536,37 @@
       "goals": 9,
       "assists": 1,
       "penalties": null
+    },
+    {
+      "player": {
+        "id": 140873,
+        "name": "Luciano Juba",
+        "firstName": "",
+        "lastName": "Luciano Juba",
+        "dateOfBirth": "1999-08-29",
+        "nationality": "Brazil",
+        "section": "Defence",
+        "position": null,
+        "shirtNumber": null,
+        "lastUpdated": "2023-07-31T10:01:14Z"
+      },
+      "team": {
+        "id": 1777,
+        "name": "EC Bahia",
+        "shortName": "Bahia",
+        "tla": "BAH",
+        "crest": "https://crests.football-data.org/1777.png",
+        "address": "Rua Antônio Fernandes S/N, Jardim das Margaridas Salvador, BA 41502-590",
+        "website": "http://www.esporteclubebahia.com.br",
+        "founded": 1931,
+        "clubColors": "Blue / White / Red",
+        "venue": "Estádio Governador Roberto Santos",
+        "lastUpdated": "2024-10-28T10:09:10Z"
+      },
+      "playedMatches": 22,
+      "goals": 9,
+      "assists": 1,
+      "penalties": 4
     },
     {
       "player": {
@@ -722,37 +753,6 @@
       "goals": 8,
       "assists": 1,
       "penalties": null
-    },
-    {
-      "player": {
-        "id": 140873,
-        "name": "Luciano Juba",
-        "firstName": "",
-        "lastName": "Luciano Juba",
-        "dateOfBirth": "1999-08-29",
-        "nationality": "Brazil",
-        "section": "Defence",
-        "position": null,
-        "shirtNumber": null,
-        "lastUpdated": "2023-07-31T10:01:14Z"
-      },
-      "team": {
-        "id": 1777,
-        "name": "EC Bahia",
-        "shortName": "Bahia",
-        "tla": "BAH",
-        "crest": "https://crests.football-data.org/1777.png",
-        "address": "Rua Antônio Fernandes S/N, Jardim das Margaridas Salvador, BA 41502-590",
-        "website": "http://www.esporteclubebahia.com.br",
-        "founded": 1931,
-        "clubColors": "Blue / White / Red",
-        "venue": "Estádio Governador Roberto Santos",
-        "lastUpdated": "2024-10-28T10:09:10Z"
-      },
-      "playedMatches": 22,
-      "goals": 8,
-      "assists": 1,
-      "penalties": 3
     },
     {
       "player": {
@@ -1076,6 +1076,7 @@
       "D",
       "L",
       "L",
+      "L",
       "L"
     ],
     "Fluminense FC": [
@@ -1244,6 +1245,7 @@
       "D",
       "D",
       "D",
+      "W",
       "W",
       "W",
       "W"
@@ -1542,11 +1544,11 @@
         "l": 5
       },
       "away": {
-        "gf": 13,
-        "ga": 26,
+        "gf": 14,
+        "ga": 28,
         "w": 2,
         "d": 3,
-        "l": 8
+        "l": 9
       }
     },
     "Fluminense FC": {
@@ -1631,9 +1633,9 @@
     },
     "EC Bahia": {
       "home": {
-        "gf": 20,
-        "ga": 13,
-        "w": 5,
+        "gf": 22,
+        "ga": 14,
+        "w": 6,
         "d": 6,
         "l": 2
       },
