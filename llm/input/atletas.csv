@@ -62,7 +62,6 @@ Tiago Volpi,RBB,Goleiro,Provável,9.93,0.84,5.6,18,False,FLA,alta,0.12,6.8,3.27,
 Alex Muralha,MIR,Goleiro,Provável,4.99,0.22,4.35,2,True,BOT,estavel,0.43,3.2,4.35,1.0,0.25,3.422,0.402,neutro,0.171,36,0.275,11.7,52.7,neutro,3.92,False,WATCH,1.045,0.9,0.79,1.13,2.0
 Pedro Morisco,CFC,Goleiro,Provável,7.83,0.0,4.55,10,False,VAS,estavel,0.171,4.5,4.55,1.0,1.0,4.436,0.285,neutro,0.567,14,0.85,-2.6,63.4,neutro,3.56,False,TITULAR,1.459,1.279,1.076,1.268,1.0
 Fábio,FLU,Goleiro,Provável,9.21,-0.55,4.51,26,False,COR,baixa,0.257,4.8,3.55,0.787,1.0,4.459,-0.097,neutro,0.484,22,0.95,-12.1,64.8,neutro,4.09,False,TITULAR,1.317,1.389,0.771,1.676,-1.0
-Gabriel Brazão,SAN,Goleiro,Provável,5.21,-0.31,2.81,22,False,REM,estavel,0.384,0.6,1.67,0.594,1.0,2.911,-0.184,neutro,0.559,17,0.775,0.2,71.3,neutro,3.65,False,TITULAR,1.333,0.533,0.871,1.08,5.0
 Hugo Souza,COR,Goleiro,Provável,9.35,0.73,4.24,22,True,FLU,alta,0.442,7.1,2.42,0.571,1.0,4.254,-0.33,neutro,0.455,25,0.275,12.1,39.2,neutro,3.3,False,TITULAR,0.771,1.676,1.317,1.389,-5.0
 Léo Jardim,VAS,Goleiro,Provável,6.38,0.29,2.75,25,True,CFC,estavel,0.599,5.5,2.35,0.855,1.0,3.124,-0.462,neutro,0.49,21,0.2,2.6,42.0,neutro,3.25,False,TITULAR,1.076,1.268,1.459,1.279,1.0
 Rafael,SAO,Goleiro,Provável,7.48,0.0,3.23,25,True,INT,estavel,0.511,3.2,2.23,0.69,1.0,3.488,-0.503,armadilha_leve,0.466,23,0.475,30.8,60.8,neutro,4.0,False,WATCH,0.839,0.867,1.26,1.234,-1.0
@@ -129,7 +128,6 @@ Santiago Sosa,VAS,Meia,Provável,7.49,-1.32,4.12,5,True,CFC,baixa,0.599,0.9,4.12
 Zé Ricardo,REM,Meia,Provável,4.32,-0.34,3.0,25,True,SAN,estavel,0.333,3.0,2.6,0.867,1.0,2.809,0.605,valor_bom,0.65,11,0.7,-0.2,35.9,neutro,3.02,False,TITULAR,0.871,1.08,1.333,0.533,-4.0
 Oliva,SAN,Meia,Provável,6.32,-1.33,3.49,17,False,REM,baixa,0.384,0.8,2.31,0.662,1.0,3.689,0.597,valor_bom,0.584,28,0.75,0.2,66.1,neutro,3.19,False,TITULAR,1.333,0.533,0.871,1.08,5.0
 Picco,REM,Meia,Provável,6.22,-0.58,3.49,24,True,SAN,baixa,0.333,2.0,3.07,0.88,1.0,3.646,0.591,valor_bom,0.586,27,0.7,-0.2,35.9,neutro,4.82,False,TITULAR,0.871,1.08,1.333,0.533,-4.0
-Willian Arão,SAN,Meia,Provável,6.21,0.9,3.42,19,False,REM,alta,0.384,6.4,3.16,0.924,1.0,3.625,0.57,valor_bom,0.584,28,0.75,0.2,66.1,neutro,3.76,False,TITULAR,1.333,0.533,0.871,1.08,5.0
 Thiago Mendes,VAS,Meia,Provável,8.25,0.86,4.34,22,True,CFC,alta,0.599,10.0,2.98,0.687,1.0,4.279,0.524,valor_bom,0.519,67,0.4,2.6,50.4,neutro,4.1,False,TITULAR,1.076,1.268,1.459,1.279,1.0
 Luiz Gustavo,CAP,Meia,Provável,6.56,0.0,3.53,18,True,BAH,estavel,0.444,3.5,2.97,0.841,1.0,3.709,0.512,valor_bom,0.565,41,0.4,15.4,57.4,neutro,2.91,False,TITULAR,1.449,2.09,1.671,1.309,1.0
 Medina,BOT,Meia,Provável,6.35,0.0,3.38,16,False,MIR,estavel,0.294,3.4,3.07,0.908,1.0,3.624,0.504,valor_bom,0.571,36,0.95,-11.7,51.4,neutro,3.41,False,TITULAR,0.79,1.13,1.045,0.9,3.0
@@ -214,6 +212,7 @@ Maripán,INT,Zagueiro,Provável,4.03,-0.22,2.19,8,False,SAO,estavel,0.222,2.2,1.
 Alix Vinicius,RBB,Zagueiro,Provável,4.91,0.0,2.84,18,False,FLA,estavel,0.12,2.8,1.67,0.588,1.0,2.774,0.039,neutro,0.565,28,0.0,-35.9,27.0,desfavoravel,2.65,False,WATCH,0.975,1.255,0.917,0.736,1.0
 Eduardo Doma,CHA,Zagueiro,Provável,3.51,-0.49,2.22,23,False,CAM,estavel,0.14,2.2,1.7,0.766,1.0,2.031,0.01,neutro,0.579,24,0.05,-54.0,30.3,desfavoravel,2.43,False,WATCH,1.486,0.9,1.189,0.671,-1.0
 Wallace,GRE,Zagueiro,Provável,5.07,0.25,3.08,6,True,PAL,estavel,0.23,3.2,2.08,0.675,0.75,2.821,0.009,neutro,0.417,64,0.05,-0.4,37.7,neutro,3.39,False,TITULAR,1.08,1.137,1.034,1.286,-3.0
+Lucas Veríssimo,SAN,Zagueiro,Provável,8.78,0.0,4.1,13,False,REM,estavel,0.384,4.1,2.95,0.72,1.0,4.09,0.009,neutro,0.466,56,0.775,0.2,71.6,favoravel_visitante,4.19,False,TITULAR,1.333,0.533,0.871,1.08,5.0
 João Victor,MIR,Zagueiro,Provável,5.05,0.0,2.87,23,True,BOT,estavel,0.43,2.9,2.0,0.697,1.0,2.807,0.003,neutro,0.556,31,0.275,11.7,53.2,neutro,4.01,False,TITULAR,1.045,0.9,0.79,1.13,2.0
 Gustavo Henrique,COR,Zagueiro,Provável,8.42,0.0,3.95,21,True,FLU,estavel,0.442,4.0,2.43,0.615,1.0,3.984,0.001,neutro,0.473,52,0.275,12.1,39.7,neutro,3.18,False,TITULAR,0.771,1.676,1.317,1.389,-5.0
 Arboleda,SAO,Zagueiro,Provável,8.7,-0.17,3.99,13,True,INT,estavel,0.511,5.0,3.3,0.827,1.0,4.022,-0.048,neutro,0.462,58,0.475,30.8,61.2,neutro,3.69,False,TITULAR,0.839,0.867,1.26,1.234,-1.0
