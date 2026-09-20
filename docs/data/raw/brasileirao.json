@@ -41,6 +41,25 @@
     {
       "position": 3,
       "team": {
+        "id": 1765,
+        "name": "Fluminense FC",
+        "shortName": "Fluminense",
+        "tla": "FLU",
+        "crest": "https://crests.football-data.org/1765.png"
+      },
+      "playedGames": 28,
+      "form": null,
+      "won": 13,
+      "draw": 9,
+      "lost": 6,
+      "points": 48,
+      "goalsFor": 44,
+      "goalsAgainst": 36,
+      "goalDifference": 8
+    },
+    {
+      "position": 4,
+      "team": {
         "id": 1768,
         "name": "CA Paranaense",
         "shortName": "Paranaense",
@@ -58,7 +77,7 @@
       "goalDifference": 10
     },
     {
-      "position": 4,
+      "position": 5,
       "team": {
         "id": 1777,
         "name": "EC Bahia",
@@ -77,25 +96,6 @@
       "goalDifference": 9
     },
     {
-      "position": 5,
-      "team": {
-        "id": 1765,
-        "name": "Fluminense FC",
-        "shortName": "Fluminense",
-        "tla": "FLU",
-        "crest": "https://crests.football-data.org/1765.png"
-      },
-      "playedGames": 27,
-      "form": null,
-      "won": 12,
-      "draw": 9,
-      "lost": 6,
-      "points": 45,
-      "goalsFor": 41,
-      "goalsAgainst": 35,
-      "goalDifference": 6
-    },
-    {
       "position": 6,
       "team": {
         "id": 1771,
@@ -104,15 +104,15 @@
         "tla": "CRU",
         "crest": "https://crests.football-data.org/1771.png"
       },
-      "playedGames": 27,
+      "playedGames": 28,
       "form": null,
-      "won": 12,
+      "won": 13,
       "draw": 6,
       "lost": 9,
-      "points": 42,
-      "goalsFor": 39,
-      "goalsAgainst": 39,
-      "goalDifference": 0
+      "points": 45,
+      "goalsFor": 42,
+      "goalsAgainst": 40,
+      "goalDifference": 2
     },
     {
       "position": 7,
@@ -237,15 +237,15 @@
         "tla": "VIT",
         "crest": "https://crests.football-data.org/1782.png"
       },
-      "playedGames": 27,
+      "playedGames": 28,
       "form": null,
       "won": 9,
       "draw": 6,
-      "lost": 12,
+      "lost": 13,
       "points": 33,
-      "goalsFor": 27,
-      "goalsAgainst": 39,
-      "goalDifference": -12
+      "goalsFor": 28,
+      "goalsAgainst": 42,
+      "goalDifference": -14
     },
     {
       "position": 14,
@@ -256,15 +256,15 @@
         "tla": "COR",
         "crest": "https://crests.football-data.org/1779.png"
       },
-      "playedGames": 27,
+      "playedGames": 28,
       "form": null,
       "won": 8,
       "draw": 8,
-      "lost": 11,
+      "lost": 12,
       "points": 32,
-      "goalsFor": 28,
-      "goalsAgainst": 29,
-      "goalDifference": -1
+      "goalsFor": 29,
+      "goalsAgainst": 32,
+      "goalDifference": -3
     },
     {
       "position": 15,
@@ -439,7 +439,7 @@
         "venue": "Estadio Jornalista Mário Filho",
         "lastUpdated": "2022-04-06T13:13:43Z"
       },
-      "playedMatches": 27,
+      "playedMatches": 28,
       "goals": 15,
       "assists": 6,
       "penalties": null
@@ -566,6 +566,37 @@
       "playedMatches": 19,
       "goals": 9,
       "assists": 1,
+      "penalties": null
+    },
+    {
+      "player": {
+        "id": 45490,
+        "name": "Matheus Pereira",
+        "firstName": "",
+        "lastName": "Matheus Pereira",
+        "dateOfBirth": "1996-05-05",
+        "nationality": "Brazil",
+        "section": "Offence",
+        "position": null,
+        "shirtNumber": null,
+        "lastUpdated": "2023-07-30T23:15:45Z"
+      },
+      "team": {
+        "id": 1771,
+        "name": "Cruzeiro EC",
+        "shortName": "Cruzeiro",
+        "tla": "CRU",
+        "crest": "https://crests.football-data.org/1771.png",
+        "address": "Rua Timbiras 2903, Bairro Preto Belo Horizonte, MG 30140-062",
+        "website": "http://www.cruzeiro.com.br",
+        "founded": 1921,
+        "clubColors": "Blue / White",
+        "venue": "Estádio Governador Magalhães Pinto",
+        "lastUpdated": "2022-04-10T11:03:46Z"
+      },
+      "playedMatches": 25,
+      "goals": 9,
+      "assists": 4,
       "penalties": null
     },
     {
@@ -725,37 +756,6 @@
     },
     {
       "player": {
-        "id": 45490,
-        "name": "Matheus Pereira",
-        "firstName": "",
-        "lastName": "Matheus Pereira",
-        "dateOfBirth": "1996-05-05",
-        "nationality": "Brazil",
-        "section": "Offence",
-        "position": null,
-        "shirtNumber": null,
-        "lastUpdated": "2023-07-30T23:15:45Z"
-      },
-      "team": {
-        "id": 1771,
-        "name": "Cruzeiro EC",
-        "shortName": "Cruzeiro",
-        "tla": "CRU",
-        "crest": "https://crests.football-data.org/1771.png",
-        "address": "Rua Timbiras 2903, Bairro Preto Belo Horizonte, MG 30140-062",
-        "website": "http://www.cruzeiro.com.br",
-        "founded": 1921,
-        "clubColors": "Blue / White",
-        "venue": "Estádio Governador Magalhães Pinto",
-        "lastUpdated": "2022-04-10T11:03:46Z"
-      },
-      "playedMatches": 24,
-      "goals": 8,
-      "assists": 4,
-      "penalties": null
-    },
-    {
-      "player": {
         "id": 169022,
         "name": "Breno Lopes",
         "firstName": "",
@@ -818,32 +818,32 @@
     },
     {
       "player": {
-        "id": 1723,
-        "name": "Arthur Cabral",
+        "id": 276795,
+        "name": "Carlos Renê",
         "firstName": "",
-        "lastName": "Arthur Cabral",
-        "dateOfBirth": "1998-04-25",
+        "lastName": "Carlos Renê",
+        "dateOfBirth": "2003-10-07",
         "nationality": "Brazil",
-        "section": "Centre-Forward",
+        "section": "Offence",
         "position": null,
         "shirtNumber": null,
-        "lastUpdated": "2024-11-01T22:50:30Z"
+        "lastUpdated": "2026-03-29T09:41:53Z"
       },
       "team": {
-        "id": 1770,
-        "name": "Botafogo FR",
-        "shortName": "Botafogo",
-        "tla": "BOT",
-        "crest": "https://crests.football-data.org/1770.png",
-        "address": "Avenida Venceslau Brás 72, Bairro Botafago Rio de Janeiro, RJ 22290-140",
-        "website": "http://www.botafogo.com.br",
-        "founded": 1904,
-        "clubColors": "Black / White",
-        "venue": "Estádio Nilton Santos",
-        "lastUpdated": "2023-02-18T08:43:47Z"
+        "id": 1782,
+        "name": "EC Vitória",
+        "shortName": "Vitória",
+        "tla": "VIT",
+        "crest": "https://crests.football-data.org/1782.png",
+        "address": "Rua Artêmio Castro Valente, Nossa Senhora da Vitória Salvador, BA 41750-240",
+        "website": "http://www.ecvitoria.com.br",
+        "founded": 1899,
+        "clubColors": "Red / Black",
+        "venue": "Estádio Manoel Barradas",
+        "lastUpdated": "2023-02-18T08:33:29Z"
       },
-      "playedMatches": 25,
-      "goals": 7,
+      "playedMatches": 21,
+      "goals": 8,
       "assists": 1,
       "penalties": null
     }
@@ -1052,7 +1052,8 @@
       "L",
       "L",
       "W",
-      "D"
+      "D",
+      "L"
     ],
     "Clube do Remo": [
       "L",
@@ -1111,7 +1112,8 @@
       "W",
       "D",
       "W",
-      "L"
+      "L",
+      "W"
     ],
     "Grêmio FBPA": [
       "L",
@@ -1224,6 +1226,7 @@
       "D",
       "D",
       "W",
+      "L",
       "L",
       "L",
       "L",
@@ -1433,7 +1436,8 @@
       "W",
       "L",
       "W",
-      "L"
+      "L",
+      "W"
     ]
   },
   "team_stats": {
@@ -1535,11 +1539,11 @@
     },
     "EC Vitória": {
       "home": {
-        "gf": 17,
-        "ga": 9,
+        "gf": 18,
+        "ga": 12,
         "w": 9,
         "d": 1,
-        "l": 3
+        "l": 4
       },
       "away": {
         "gf": 10,
@@ -1574,9 +1578,9 @@
         "l": 1
       },
       "away": {
-        "gf": 17,
-        "ga": 21,
-        "w": 2,
+        "gf": 20,
+        "ga": 22,
+        "w": 3,
         "d": 6,
         "l": 5
       }
@@ -1631,11 +1635,11 @@
     },
     "SC Corinthians Paulista": {
       "home": {
-        "gf": 14,
-        "ga": 13,
+        "gf": 15,
+        "ga": 16,
         "w": 5,
         "d": 3,
-        "l": 6
+        "l": 7
       },
       "away": {
         "gf": 14,
@@ -1750,9 +1754,9 @@
         "l": 3
       },
       "away": {
-        "gf": 15,
-        "ga": 23,
-        "w": 5,
+        "gf": 18,
+        "ga": 24,
+        "w": 6,
         "d": 2,
         "l": 6
       }
