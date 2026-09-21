@@ -41,6 +41,25 @@
     {
       "position": 3,
       "team": {
+        "id": 1768,
+        "name": "CA Paranaense",
+        "shortName": "Paranaense",
+        "tla": "CAP",
+        "crest": "https://crests.football-data.org/1768.png"
+      },
+      "playedGames": 28,
+      "form": null,
+      "won": 14,
+      "draw": 7,
+      "lost": 7,
+      "points": 49,
+      "goalsFor": 43,
+      "goalsAgainst": 32,
+      "goalDifference": 11
+    },
+    {
+      "position": 4,
+      "team": {
         "id": 1765,
         "name": "Fluminense FC",
         "shortName": "Fluminense",
@@ -58,25 +77,6 @@
       "goalDifference": 8
     },
     {
-      "position": 4,
-      "team": {
-        "id": 1768,
-        "name": "CA Paranaense",
-        "shortName": "Paranaense",
-        "tla": "CAP",
-        "crest": "https://crests.football-data.org/1768.png"
-      },
-      "playedGames": 28,
-      "form": null,
-      "won": 13,
-      "draw": 8,
-      "lost": 7,
-      "points": 47,
-      "goalsFor": 42,
-      "goalsAgainst": 32,
-      "goalDifference": 10
-    },
-    {
       "position": 5,
       "team": {
         "id": 1777,
@@ -88,12 +88,12 @@
       "playedGames": 28,
       "form": null,
       "won": 12,
-      "draw": 11,
-      "lost": 5,
-      "points": 47,
+      "draw": 10,
+      "lost": 6,
+      "points": 46,
       "goalsFor": 43,
-      "goalsAgainst": 34,
-      "goalDifference": 9
+      "goalsAgainst": 35,
+      "goalDifference": 8
     },
     {
       "position": 6,
@@ -964,7 +964,8 @@
       "W",
       "L",
       "L",
-      "D"
+      "D",
+      "L"
     ],
     "SC Internacional": [
       "L",
@@ -1023,7 +1024,8 @@
       "W",
       "D",
       "L",
-      "D"
+      "D",
+      "W"
     ],
     "EC Vitória": [
       "W",
@@ -1260,7 +1262,8 @@
       "W",
       "W",
       "W",
-      "W"
+      "W",
+      "L"
     ],
     "São Paulo FC": [
       "W",
@@ -1315,6 +1318,7 @@
       "W",
       "W",
       "L",
+      "W",
       "W",
       "W",
       "W",
@@ -1498,11 +1502,11 @@
         "l": 5
       },
       "away": {
-        "gf": 13,
-        "ga": 15,
+        "gf": 14,
+        "ga": 17,
         "w": 4,
         "d": 4,
-        "l": 5
+        "l": 6
       }
     },
     "SC Internacional": {
@@ -1523,9 +1527,9 @@
     },
     "CA Paranaense": {
       "home": {
-        "gf": 23,
-        "ga": 10,
-        "w": 8,
+        "gf": 25,
+        "ga": 11,
+        "w": 9,
         "d": 4,
         "l": 1
       },
@@ -1658,11 +1662,11 @@
         "l": 2
       },
       "away": {
-        "gf": 20,
-        "ga": 19,
+        "gf": 21,
+        "ga": 21,
         "w": 6,
         "d": 4,
-        "l": 3
+        "l": 4
       }
     },
     "São Paulo FC": {
@@ -1683,9 +1687,9 @@
     },
     "CR Flamengo": {
       "home": {
-        "gf": 26,
-        "ga": 9,
-        "w": 9,
+        "gf": 28,
+        "ga": 10,
+        "w": 10,
         "d": 3,
         "l": 1
       },
