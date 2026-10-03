@@ -117,6 +117,25 @@
     {
       "position": 7,
       "team": {
+        "id": 6685,
+        "name": "Santos FC",
+        "shortName": "Santos",
+        "tla": "SAN",
+        "crest": "https://crests.football-data.org/6685.png"
+      },
+      "playedGames": 28,
+      "form": null,
+      "won": 11,
+      "draw": 8,
+      "lost": 9,
+      "points": 41,
+      "goalsFor": 43,
+      "goalsAgainst": 41,
+      "goalDifference": 2
+    },
+    {
+      "position": 8,
+      "team": {
         "id": 1766,
         "name": "CA Mineiro",
         "shortName": "Mineiro",
@@ -132,25 +151,6 @@
       "goalsFor": 36,
       "goalsAgainst": 32,
       "goalDifference": 4
-    },
-    {
-      "position": 8,
-      "team": {
-        "id": 6685,
-        "name": "Santos FC",
-        "shortName": "Santos",
-        "tla": "SAN",
-        "crest": "https://crests.football-data.org/6685.png"
-      },
-      "playedGames": 27,
-      "form": null,
-      "won": 10,
-      "draw": 8,
-      "lost": 9,
-      "points": 38,
-      "goalsFor": 41,
-      "goalsAgainst": 40,
-      "goalDifference": 1
     },
     {
       "position": 9,
@@ -199,15 +199,15 @@
         "tla": "PAU",
         "crest": "https://crests.football-data.org/1776.png"
       },
-      "playedGames": 27,
+      "playedGames": 28,
       "form": null,
       "won": 10,
       "draw": 6,
-      "lost": 11,
+      "lost": 12,
       "points": 36,
-      "goalsFor": 32,
-      "goalsAgainst": 30,
-      "goalDifference": 2
+      "goalsFor": 33,
+      "goalsAgainst": 32,
+      "goalDifference": 1
     },
     {
       "position": 12,
@@ -471,7 +471,7 @@
         "lastUpdated": "2023-02-18T08:43:18Z"
       },
       "playedMatches": 21,
-      "goals": 11,
+      "goals": 13,
       "assists": 3,
       "penalties": 2
     },
@@ -505,6 +505,37 @@
       "goals": 10,
       "assists": 1,
       "penalties": 1
+    },
+    {
+      "player": {
+        "id": 42901,
+        "name": "Luciano",
+        "firstName": "",
+        "lastName": "Luciano",
+        "dateOfBirth": "1993-05-18",
+        "nationality": "Brazil",
+        "section": "Offence",
+        "position": null,
+        "shirtNumber": null,
+        "lastUpdated": "2023-07-30T23:15:46Z"
+      },
+      "team": {
+        "id": 1776,
+        "name": "São Paulo FC",
+        "shortName": "São Paulo",
+        "tla": "PAU",
+        "crest": "https://crests.football-data.org/1776.png",
+        "address": "null São Paulo, SP null",
+        "website": "http://www.saopaulofc.net",
+        "founded": 1930,
+        "clubColors": "White / Red / Black",
+        "venue": "Estádio do Morumbi",
+        "lastUpdated": "2023-02-18T08:43:44Z"
+      },
+      "playedMatches": 24,
+      "goals": 9,
+      "assists": 1,
+      "penalties": 2
     },
     {
       "player": {
@@ -691,37 +722,6 @@
       "goals": 8,
       "assists": 4,
       "penalties": null
-    },
-    {
-      "player": {
-        "id": 42901,
-        "name": "Luciano",
-        "firstName": "",
-        "lastName": "Luciano",
-        "dateOfBirth": "1993-05-18",
-        "nationality": "Brazil",
-        "section": "Offence",
-        "position": null,
-        "shirtNumber": null,
-        "lastUpdated": "2023-07-30T23:15:46Z"
-      },
-      "team": {
-        "id": 1776,
-        "name": "São Paulo FC",
-        "shortName": "São Paulo",
-        "tla": "PAU",
-        "crest": "https://crests.football-data.org/1776.png",
-        "address": "null São Paulo, SP null",
-        "website": "http://www.saopaulofc.net",
-        "founded": 1930,
-        "clubColors": "White / Red / Black",
-        "venue": "Estádio do Morumbi",
-        "lastUpdated": "2023-02-18T08:43:44Z"
-      },
-      "playedMatches": 24,
-      "goals": 8,
-      "assists": 1,
-      "penalties": 1
     },
     {
       "player": {
