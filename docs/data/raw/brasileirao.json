@@ -60,6 +60,25 @@
     {
       "position": 4,
       "team": {
+        "id": 1771,
+        "name": "Cruzeiro EC",
+        "shortName": "Cruzeiro",
+        "tla": "CRU",
+        "crest": "https://crests.football-data.org/1771.png"
+      },
+      "playedGames": 29,
+      "form": null,
+      "won": 14,
+      "draw": 6,
+      "lost": 9,
+      "points": 48,
+      "goalsFor": 44,
+      "goalsAgainst": 40,
+      "goalDifference": 4
+    },
+    {
+      "position": 5,
+      "team": {
         "id": 1765,
         "name": "Fluminense FC",
         "shortName": "Fluminense",
@@ -75,25 +94,6 @@
       "goalsFor": 44,
       "goalsAgainst": 36,
       "goalDifference": 8
-    },
-    {
-      "position": 5,
-      "team": {
-        "id": 1771,
-        "name": "Cruzeiro EC",
-        "shortName": "Cruzeiro",
-        "tla": "CRU",
-        "crest": "https://crests.football-data.org/1771.png"
-      },
-      "playedGames": 29,
-      "form": null,
-      "won": 13,
-      "draw": 7,
-      "lost": 9,
-      "points": 46,
-      "goalsFor": 42,
-      "goalsAgainst": 40,
-      "goalDifference": 2
     },
     {
       "position": 6,
@@ -202,12 +202,12 @@
       "playedGames": 29,
       "form": null,
       "won": 10,
-      "draw": 7,
-      "lost": 12,
-      "points": 37,
+      "draw": 6,
+      "lost": 13,
+      "points": 36,
       "goalsFor": 33,
-      "goalsAgainst": 32,
-      "goalDifference": 1
+      "goalsAgainst": 34,
+      "goalDifference": -1
     },
     {
       "position": 12,
@@ -627,7 +627,7 @@
       },
       "playedMatches": 26,
       "goals": 9,
-      "assists": 4,
+      "assists": 5,
       "penalties": null
     },
     {
@@ -818,34 +818,34 @@
     },
     {
       "player": {
-        "id": 276795,
-        "name": "Carlos Renê",
+        "id": 91310,
+        "name": "Kaio Jorge",
         "firstName": "",
-        "lastName": "Carlos Renê",
-        "dateOfBirth": "2003-10-07",
+        "lastName": "Kaio Jorge",
+        "dateOfBirth": "2002-01-24",
         "nationality": "Brazil",
-        "section": "Offence",
+        "section": "Centre-Forward",
         "position": null,
         "shirtNumber": null,
-        "lastUpdated": "2026-03-29T09:41:53Z"
+        "lastUpdated": "2024-09-02T09:59:11Z"
       },
       "team": {
-        "id": 1782,
-        "name": "EC Vitória",
-        "shortName": "Vitória",
-        "tla": "VIT",
-        "crest": "https://crests.football-data.org/1782.png",
-        "address": "Rua Artêmio Castro Valente, Nossa Senhora da Vitória Salvador, BA 41750-240",
-        "website": "http://www.ecvitoria.com.br",
-        "founded": 1899,
-        "clubColors": "Red / Black",
-        "venue": "Estádio Manoel Barradas",
-        "lastUpdated": "2023-02-18T08:33:29Z"
+        "id": 1771,
+        "name": "Cruzeiro EC",
+        "shortName": "Cruzeiro",
+        "tla": "CRU",
+        "crest": "https://crests.football-data.org/1771.png",
+        "address": "Rua Timbiras 2903, Bairro Preto Belo Horizonte, MG 30140-062",
+        "website": "http://www.cruzeiro.com.br",
+        "founded": 1921,
+        "clubColors": "Blue / White",
+        "venue": "Estádio Governador Magalhães Pinto",
+        "lastUpdated": "2022-04-10T11:03:46Z"
       },
-      "playedMatches": 22,
+      "playedMatches": 23,
       "goals": 8,
       "assists": 1,
-      "penalties": null
+      "penalties": 4
     }
   ],
   "historico_times": {
@@ -1303,6 +1303,7 @@
       "W",
       "L",
       "W",
+      "L",
       "L"
     ],
     "CR Flamengo": [
@@ -1393,7 +1394,8 @@
       "W",
       "L",
       "W",
-      "W"
+      "W",
+      "D"
     ],
     "Botafogo FR": [
       "W",
@@ -1423,7 +1425,8 @@
       "D",
       "D",
       "W",
-      "L"
+      "L",
+      "D"
     ],
     "Cruzeiro EC": [
       "L",
@@ -1453,6 +1456,7 @@
       "L",
       "W",
       "L",
+      "W",
       "W"
     ]
   },
@@ -1691,10 +1695,10 @@
       },
       "away": {
         "gf": 11,
-        "ga": 20,
+        "ga": 22,
         "w": 2,
         "d": 3,
-        "l": 9
+        "l": 10
       }
     },
     "CR Flamengo": {
@@ -1738,19 +1742,19 @@
         "l": 5
       },
       "away": {
-        "gf": 13,
-        "ga": 23,
+        "gf": 15,
+        "ga": 25,
         "w": 1,
-        "d": 5,
+        "d": 6,
         "l": 7
       }
     },
     "Botafogo FR": {
       "home": {
-        "gf": 24,
-        "ga": 20,
+        "gf": 26,
+        "ga": 22,
         "w": 5,
-        "d": 6,
+        "d": 7,
         "l": 3
       },
       "away": {
@@ -1763,9 +1767,9 @@
     },
     "Cruzeiro EC": {
       "home": {
-        "gf": 24,
+        "gf": 26,
         "ga": 16,
-        "w": 7,
+        "w": 8,
         "d": 4,
         "l": 3
       },
