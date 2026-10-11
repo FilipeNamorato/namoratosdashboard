@@ -79,6 +79,25 @@
     {
       "position": 5,
       "team": {
+        "id": 1777,
+        "name": "EC Bahia",
+        "shortName": "Bahia",
+        "tla": "BAH",
+        "crest": "https://crests.football-data.org/1777.png"
+      },
+      "playedGames": 30,
+      "form": null,
+      "won": 13,
+      "draw": 10,
+      "lost": 7,
+      "points": 49,
+      "goalsFor": 44,
+      "goalsAgainst": 36,
+      "goalDifference": 8
+    },
+    {
+      "position": 6,
+      "team": {
         "id": 1771,
         "name": "Cruzeiro EC",
         "shortName": "Cruzeiro",
@@ -96,7 +115,7 @@
       "goalDifference": 4
     },
     {
-      "position": 6,
+      "position": 7,
       "team": {
         "id": 1766,
         "name": "CA Mineiro",
@@ -113,25 +132,6 @@
       "goalsFor": 41,
       "goalsAgainst": 35,
       "goalDifference": 6
-    },
-    {
-      "position": 7,
-      "team": {
-        "id": 1777,
-        "name": "EC Bahia",
-        "shortName": "Bahia",
-        "tla": "BAH",
-        "crest": "https://crests.football-data.org/1777.png"
-      },
-      "playedGames": 30,
-      "form": null,
-      "won": 12,
-      "draw": 11,
-      "lost": 7,
-      "points": 47,
-      "goalsFor": 43,
-      "goalsAgainst": 36,
-      "goalDifference": 7
     },
     {
       "position": 8,
@@ -278,12 +278,12 @@
       "playedGames": 30,
       "form": null,
       "won": 8,
-      "draw": 10,
-      "lost": 12,
-      "points": 34,
+      "draw": 9,
+      "lost": 13,
+      "points": 33,
       "goalsFor": 34,
-      "goalsAgainst": 43,
-      "goalDifference": -9
+      "goalsAgainst": 44,
+      "goalDifference": -10
     },
     {
       "position": 16,
@@ -539,6 +539,37 @@
     },
     {
       "player": {
+        "id": 140873,
+        "name": "Luciano Juba",
+        "firstName": "",
+        "lastName": "Luciano Juba",
+        "dateOfBirth": "1999-08-29",
+        "nationality": "Brazil",
+        "section": "Defence",
+        "position": null,
+        "shirtNumber": null,
+        "lastUpdated": "2023-07-31T10:01:14Z"
+      },
+      "team": {
+        "id": 1777,
+        "name": "EC Bahia",
+        "shortName": "Bahia",
+        "tla": "BAH",
+        "crest": "https://crests.football-data.org/1777.png",
+        "address": "Rua Antônio Fernandes S/N, Jardim das Margaridas Salvador, BA 41502-590",
+        "website": "http://www.esporteclubebahia.com.br",
+        "founded": 1931,
+        "clubColors": "Blue / White / Red",
+        "venue": "Estádio Governador Roberto Santos",
+        "lastUpdated": "2024-10-28T10:09:10Z"
+      },
+      "playedMatches": 27,
+      "goals": 10,
+      "assists": 1,
+      "penalties": 5
+    },
+    {
+      "player": {
         "id": 170698,
         "name": "José Manuel López",
         "firstName": "José Manuel",
@@ -691,37 +722,6 @@
       "goals": 9,
       "assists": 5,
       "penalties": null
-    },
-    {
-      "player": {
-        "id": 140873,
-        "name": "Luciano Juba",
-        "firstName": "",
-        "lastName": "Luciano Juba",
-        "dateOfBirth": "1999-08-29",
-        "nationality": "Brazil",
-        "section": "Defence",
-        "position": null,
-        "shirtNumber": null,
-        "lastUpdated": "2023-07-31T10:01:14Z"
-      },
-      "team": {
-        "id": 1777,
-        "name": "EC Bahia",
-        "shortName": "Bahia",
-        "tla": "BAH",
-        "crest": "https://crests.football-data.org/1777.png",
-        "address": "Rua Antônio Fernandes S/N, Jardim das Margaridas Salvador, BA 41502-590",
-        "website": "http://www.esporteclubebahia.com.br",
-        "founded": 1931,
-        "clubColors": "Blue / White / Red",
-        "venue": "Estádio Governador Roberto Santos",
-        "lastUpdated": "2024-10-28T10:09:10Z"
-      },
-      "playedMatches": 27,
-      "goals": 9,
-      "assists": 1,
-      "penalties": 4
     },
     {
       "player": {
