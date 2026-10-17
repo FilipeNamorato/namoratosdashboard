@@ -1,32 +1,48 @@
 {
   "atletas": {
+    "100084": {
+      "scout": {
+        "FT": 1
+      },
+      "apelido": "Igor Gomes",
+      "foto": "https://s3.glbimg.com/v1/AUTH_58d78b787ec34892b5aaa0c7a146155f/clubes_2026/silhuetas/CAM/FORMATO.png",
+      "pontuacao": 3,
+      "posicao_id": 4,
+      "clube_id": 282,
+      "entrou_em_campo": true
+    },
     "100898": {
       "scout": {
+        "DS": 1,
+        "FC": 1,
         "SG": 1
       },
       "apelido": "Vitinho",
       "foto": "https://s3.glbimg.com/v1/AUTH_58d78b787ec34892b5aaa0c7a146155f/clubes_2026/silhuetas/BOT/FORMATO.png",
-      "pontuacao": 5,
+      "pontuacao": 6.2,
       "posicao_id": 2,
       "clube_id": 263,
       "entrou_em_campo": true
     },
     "101393": {
-      "scout": {},
+      "scout": {
+        "FC": 1
+      },
       "apelido": "Eduardo Doma",
       "foto": "https://s3.glbimg.com/v1/AUTH_58d78b787ec34892b5aaa0c7a146155f/clubes_2026/silhuetas/CHA/FORMATO.png",
-      "pontuacao": 0,
+      "pontuacao": -0.3,
       "posicao_id": 3,
       "clube_id": 315,
       "entrou_em_campo": true
     },
     "102906": {
       "scout": {
+        "DE": 5,
         "GS": 1
       },
       "apelido": "Anderson",
       "foto": "https://s3.glbimg.com/v1/AUTH_58d78b787ec34892b5aaa0c7a146155f/clubes_2026/silhuetas/CHA/FORMATO.png",
-      "pontuacao": -1,
+      "pontuacao": 5.5,
       "posicao_id": 1,
       "clube_id": 315,
       "entrou_em_campo": true
@@ -49,13 +65,23 @@
       "clube_id": 315,
       "entrou_em_campo": true
     },
+    "104811": {
+      "scout": {},
+      "apelido": "Sebastián Gómez",
+      "foto": "https://s3.glbimg.com/v1/AUTH_58d78b787ec34892b5aaa0c7a146155f/clubes_2026/silhuetas/CFC/FORMATO.png",
+      "pontuacao": 0,
+      "posicao_id": 4,
+      "clube_id": 294,
+      "entrou_em_campo": true
+    },
     "105300": {
       "scout": {
+        "DS": 2,
         "SG": 1
       },
       "apelido": "Ferraresi",
       "foto": "https://s3.glbimg.com/v1/AUTH_58d78b787ec34892b5aaa0c7a146155f/clubes_2026/silhuetas/BOT/FORMATO.png",
-      "pontuacao": 5,
+      "pontuacao": 8,
       "posicao_id": 3,
       "clube_id": 263,
       "entrou_em_campo": true
@@ -73,16 +99,18 @@
       "scout": {},
       "apelido": "Rafael Lacerda",
       "foto": "https://s3.glbimg.com/v1/AUTH_58d78b787ec34892b5aaa0c7a146155f/clubes_2026/silhuetas/CHA/FORMATO.png",
-      "pontuacao": -0.16,
+      "pontuacao": 1.17,
       "posicao_id": 6,
       "clube_id": 315,
       "entrou_em_campo": true
     },
     "106950": {
-      "scout": {},
+      "scout": {
+        "FS": 1
+      },
       "apelido": "Fernando",
       "foto": "https://s3.glbimg.com/v1/AUTH_58d78b787ec34892b5aaa0c7a146155f/clubes_2026/silhuetas/CHA/FORMATO.png",
-      "pontuacao": 0,
+      "pontuacao": 0.5,
       "posicao_id": 2,
       "clube_id": 315,
       "entrou_em_campo": true
@@ -96,13 +124,38 @@
       "clube_id": 263,
       "entrou_em_campo": true
     },
+    "107554": {
+      "scout": {
+        "SG": 1
+      },
+      "apelido": "Natanael",
+      "foto": "https://s3.glbimg.com/v1/AUTH_58d78b787ec34892b5aaa0c7a146155f/clubes_2026/silhuetas/CAM/FORMATO.png",
+      "pontuacao": 5,
+      "posicao_id": 2,
+      "clube_id": 282,
+      "entrou_em_campo": true
+    },
     "108131": {
-      "scout": {},
+      "scout": {
+        "FC": 1
+      },
       "apelido": "Garcez",
       "foto": "https://s3.glbimg.com/v1/AUTH_58d78b787ec34892b5aaa0c7a146155f/clubes_2026/silhuetas/CHA/FORMATO.png",
-      "pontuacao": 0,
+      "pontuacao": -0.3,
       "posicao_id": 5,
       "clube_id": 315,
+      "entrou_em_campo": true
+    },
+    "109127": {
+      "scout": {
+        "FS": 1,
+        "SG": 1
+      },
+      "apelido": "Tiago Cóser",
+      "foto": "https://s3.glbimg.com/v1/AUTH_58d78b787ec34892b5aaa0c7a146155f/clubes_2026/silhuetas/CFC/FORMATO.png",
+      "pontuacao": 5.5,
+      "posicao_id": 3,
+      "clube_id": 294,
       "entrou_em_campo": true
     },
     "110506": {
@@ -116,34 +169,114 @@
     },
     "111831": {
       "scout": {
-        "A": 1
+        "A": 1,
+        "FD": 2,
+        "FS": 2
       },
       "apelido": "Matheus Martins",
       "foto": "https://s3.glbimg.com/v1/AUTH_58d78b787ec34892b5aaa0c7a146155f/clubes_2026/silhuetas/BOT/FORMATO.png",
-      "pontuacao": 5,
+      "pontuacao": 8.4,
       "posicao_id": 5,
       "clube_id": 263,
       "entrou_em_campo": true
     },
+    "114040": {
+      "scout": {
+        "FS": 1
+      },
+      "apelido": "Minda",
+      "foto": "https://s3.glbimg.com/v1/AUTH_58d78b787ec34892b5aaa0c7a146155f/clubes_2026/silhuetas/CAM/FORMATO.png",
+      "pontuacao": 0.5,
+      "posicao_id": 5,
+      "clube_id": 282,
+      "entrou_em_campo": true
+    },
+    "115674": {
+      "scout": {
+        "SG": 1
+      },
+      "apelido": "Gabriel Delfim",
+      "foto": "https://s3.glbimg.com/v1/AUTH_58d78b787ec34892b5aaa0c7a146155f/clubes_2026/silhuetas/CAM/FORMATO.png",
+      "pontuacao": 5,
+      "posicao_id": 1,
+      "clube_id": 282,
+      "entrou_em_campo": true
+    },
+    "117314": {
+      "scout": {
+        "FC": 1,
+        "FF": 1,
+        "FS": 1
+      },
+      "apelido": "Thiago Borbas",
+      "foto": "https://s3.glbimg.com/v1/AUTH_58d78b787ec34892b5aaa0c7a146155f/clubes_2026/silhuetas/CAM/FORMATO.png",
+      "pontuacao": 1,
+      "posicao_id": 5,
+      "clube_id": 282,
+      "entrou_em_campo": true
+    },
+    "117930": {
+      "scout": {},
+      "apelido": "Lavega",
+      "foto": "https://s3.glbimg.com/v1/AUTH_58d78b787ec34892b5aaa0c7a146155f/clubes_2026/silhuetas/CFC/FORMATO.png",
+      "pontuacao": 0,
+      "posicao_id": 5,
+      "clube_id": 294,
+      "entrou_em_campo": true
+    },
+    "118774": {
+      "scout": {},
+      "apelido": "Alexsander",
+      "foto": "https://s3.glbimg.com/v1/AUTH_58d78b787ec34892b5aaa0c7a146155f/clubes_2026/silhuetas/CAM/FORMATO.png",
+      "pontuacao": 0,
+      "posicao_id": 4,
+      "clube_id": 282,
+      "entrou_em_campo": true
+    },
     "122121": {
       "scout": {
+        "DS": 1,
+        "FF": 2,
         "FS": 1
       },
       "apelido": "Túlio Eduardo",
       "foto": "https://s3.glbimg.com/v1/AUTH_58d78b787ec34892b5aaa0c7a146155f/clubes_2026/silhuetas/CHA/FORMATO.png",
-      "pontuacao": 0.5,
+      "pontuacao": 3.6,
       "posicao_id": 5,
       "clube_id": 315,
       "entrou_em_campo": true
     },
+    "125803": {
+      "scout": {
+        "DE": 1,
+        "SG": 1
+      },
+      "apelido": "Pedro Morisco",
+      "foto": "https://s3.glbimg.com/v1/AUTH_58d78b787ec34892b5aaa0c7a146155f/clubes_2026/silhuetas/CFC/FORMATO.png",
+      "pontuacao": 6.3,
+      "posicao_id": 1,
+      "clube_id": 294,
+      "entrou_em_campo": true
+    },
+    "126189": {
+      "scout": {
+        "DS": 1
+      },
+      "apelido": "Tomás Pérez",
+      "foto": "https://s3.glbimg.com/v1/AUTH_58d78b787ec34892b5aaa0c7a146155f/clubes_2026/silhuetas/CAM/FORMATO.png",
+      "pontuacao": 1.5,
+      "posicao_id": 4,
+      "clube_id": 282,
+      "entrou_em_campo": true
+    },
     "126977": {
-      "scout": null,
+      "scout": {},
       "apelido": "Fernando Seabra",
       "foto": "https://s3.glbimg.com/v1/AUTH_58d78b787ec34892b5aaa0c7a146155f/clubes_2026/silhuetas/CFC/FORMATO.png",
-      "pontuacao": 0,
+      "pontuacao": 3.61,
       "posicao_id": 6,
       "clube_id": 294,
-      "entrou_em_campo": false
+      "entrou_em_campo": true
     },
     "127273": {
       "scout": null,
@@ -165,22 +298,62 @@
     },
     "130806": {
       "scout": {
-        "CA": 1
+        "CA": 1,
+        "FC": 1
       },
       "apelido": "Kauan",
       "foto": "https://s3.glbimg.com/v1/AUTH_58d78b787ec34892b5aaa0c7a146155f/clubes_2026/silhuetas/CHA/FORMATO.png",
-      "pontuacao": -1,
+      "pontuacao": -1.3,
       "posicao_id": 3,
       "clube_id": 315,
       "entrou_em_campo": true
     },
+    "141339": {
+      "scout": {
+        "DS": 1
+      },
+      "apelido": "Paulo Roberto",
+      "foto": "https://s3.glbimg.com/v1/AUTH_58d78b787ec34892b5aaa0c7a146155f/clubes_2026/silhuetas/CFC/FORMATO.png",
+      "pontuacao": 1.5,
+      "posicao_id": 5,
+      "clube_id": 294,
+      "entrou_em_campo": true
+    },
     "142890": {
-      "scout": {},
+      "scout": {
+        "DS": 1
+      },
       "apelido": "Montoro",
       "foto": "https://s3.glbimg.com/v1/AUTH_58d78b787ec34892b5aaa0c7a146155f/clubes_2026/silhuetas/BOT/FORMATO.png",
-      "pontuacao": 0,
+      "pontuacao": 1.5,
       "posicao_id": 4,
       "clube_id": 263,
+      "entrou_em_campo": true
+    },
+    "147088": {
+      "scout": {
+        "FC": 2,
+        "FD": 1,
+        "I": 1
+      },
+      "apelido": "Cissé",
+      "foto": "https://s3.glbimg.com/v1/AUTH_58d78b787ec34892b5aaa0c7a146155f/clubes_2026/silhuetas/CAM/FORMATO.png",
+      "pontuacao": 0.5,
+      "posicao_id": 4,
+      "clube_id": 282,
+      "entrou_em_campo": true
+    },
+    "147090": {
+      "scout": {
+        "DS": 1,
+        "FC": 1,
+        "SG": 1
+      },
+      "apelido": "Kauã Pascini",
+      "foto": "https://s3.glbimg.com/v1/AUTH_58d78b787ec34892b5aaa0c7a146155f/clubes_2026/silhuetas/CAM/FORMATO.png",
+      "pontuacao": 6.2,
+      "posicao_id": 2,
+      "clube_id": 282,
       "entrou_em_campo": true
     },
     "39850": {
@@ -225,38 +398,55 @@
       },
       "apelido": "Tite",
       "foto": "https://s3.glbimg.com/v1/AUTH_58d78b787ec34892b5aaa0c7a146155f/clubes_2026/silhuetas/BOT/FORMATO.png",
-      "pontuacao": 4.6,
+      "pontuacao": 6.46,
       "posicao_id": 6,
       "clube_id": 263,
       "entrou_em_campo": true
     },
     "68938": {
-      "scout": {},
+      "scout": {
+        "DS": 2
+      },
       "apelido": "Giovanni Augusto",
       "foto": "https://s3.glbimg.com/v1/AUTH_58d78b787ec34892b5aaa0c7a146155f/clubes_2026/silhuetas/CHA/FORMATO.png",
-      "pontuacao": 0,
+      "pontuacao": 3,
       "posicao_id": 4,
       "clube_id": 315,
       "entrou_em_campo": true
     },
     "69140": {
-      "scout": {},
+      "scout": {
+        "DS": 2,
+        "FC": 1
+      },
       "apelido": "Allan",
       "foto": "https://s3.glbimg.com/v1/AUTH_58d78b787ec34892b5aaa0c7a146155f/clubes_2026/silhuetas/BOT/FORMATO.png",
-      "pontuacao": 0,
+      "pontuacao": 2.7,
       "posicao_id": 4,
       "clube_id": 263,
       "entrou_em_campo": true
     },
     "72493": {
       "scout": {
+        "DS": 1,
         "SG": 1
       },
       "apelido": "Alex Telles",
       "foto": "https://s3.glbimg.com/v1/AUTH_58d78b787ec34892b5aaa0c7a146155f/clubes_2026/silhuetas/BOT/FORMATO.png",
-      "pontuacao": 5,
+      "pontuacao": 6.5,
       "posicao_id": 2,
       "clube_id": 263,
+      "entrou_em_campo": true
+    },
+    "72605": {
+      "scout": {
+        "SG": 1
+      },
+      "apelido": "Vitor Hugo",
+      "foto": "https://s3.glbimg.com/v1/AUTH_58d78b787ec34892b5aaa0c7a146155f/clubes_2026/silhuetas/CAM/FORMATO.png",
+      "pontuacao": 5,
+      "posicao_id": 3,
+      "clube_id": 282,
       "entrou_em_campo": true
     },
     "73476": {
@@ -268,15 +458,53 @@
       "clube_id": 266,
       "entrou_em_campo": false
     },
+    "78855": {
+      "scout": {
+        "DS": 1,
+        "FC": 1,
+        "FS": 1,
+        "SG": 1
+      },
+      "apelido": "Thiago Santos",
+      "foto": "https://s3.glbimg.com/v1/AUTH_58d78b787ec34892b5aaa0c7a146155f/clubes_2026/silhuetas/CFC/FORMATO.png",
+      "pontuacao": 6.7,
+      "posicao_id": 3,
+      "clube_id": 294,
+      "entrou_em_campo": true
+    },
     "84042": {
       "scout": {
+        "FF": 1,
+        "FS": 2,
         "G": 1
       },
       "apelido": "Tiquinho Soares",
       "foto": "https://s3.glbimg.com/v1/AUTH_58d78b787ec34892b5aaa0c7a146155f/clubes_2026/silhuetas/BOT/FORMATO.png",
-      "pontuacao": 8,
+      "pontuacao": 9.8,
       "posicao_id": 5,
       "clube_id": 263,
+      "entrou_em_campo": true
+    },
+    "84339": {
+      "scout": {
+        "SG": 1
+      },
+      "apelido": "Bruno Melo",
+      "foto": "https://s3.glbimg.com/v1/AUTH_58d78b787ec34892b5aaa0c7a146155f/clubes_2026/silhuetas/CFC/FORMATO.png",
+      "pontuacao": 5,
+      "posicao_id": 2,
+      "clube_id": 294,
+      "entrou_em_campo": true
+    },
+    "84626": {
+      "scout": {
+        "FS": 1
+      },
+      "apelido": "Josué",
+      "foto": "https://s3.glbimg.com/v1/AUTH_58d78b787ec34892b5aaa0c7a146155f/clubes_2026/silhuetas/CFC/FORMATO.png",
+      "pontuacao": 0.5,
+      "posicao_id": 4,
+      "clube_id": 294,
       "entrou_em_campo": true
     },
     "86787": {
@@ -298,10 +526,14 @@
       "entrou_em_campo": false
     },
     "87747": {
-      "scout": {},
+      "scout": {
+        "DS": 1,
+        "FC": 3,
+        "FS": 1
+      },
       "apelido": "Yago Felipe",
       "foto": "https://s3.glbimg.com/v1/AUTH_58d78b787ec34892b5aaa0c7a146155f/clubes_2026/silhuetas/CHA/FORMATO.png",
-      "pontuacao": 0,
+      "pontuacao": 1.1,
       "posicao_id": 4,
       "clube_id": 315,
       "entrou_em_campo": true
@@ -317,13 +549,26 @@
     },
     "90061": {
       "scout": {
+        "DS": 1,
         "FC": 1
       },
       "apelido": "Bruno Pacheco",
       "foto": "https://s3.glbimg.com/v1/AUTH_58d78b787ec34892b5aaa0c7a146155f/clubes_2026/silhuetas/CHA/FORMATO.png",
-      "pontuacao": -0.3,
+      "pontuacao": 1.2,
       "posicao_id": 2,
       "clube_id": 315,
+      "entrou_em_campo": true
+    },
+    "90302": {
+      "scout": {
+        "DS": 1,
+        "FC": 1
+      },
+      "apelido": "Pedro Rocha",
+      "foto": "https://s3.glbimg.com/v1/AUTH_58d78b787ec34892b5aaa0c7a146155f/clubes_2026/silhuetas/CFC/FORMATO.png",
+      "pontuacao": 1.2,
+      "posicao_id": 5,
+      "clube_id": 294,
       "entrou_em_campo": true
     },
     "92180": {
@@ -345,21 +590,46 @@
       "entrou_em_campo": false
     },
     "92747": {
-      "scout": null,
+      "scout": {},
       "apelido": "Eduardo Domínguez",
       "foto": "https://s3.glbimg.com/v1/AUTH_58d78b787ec34892b5aaa0c7a146155f/clubes_2026/silhuetas/CAM/FORMATO.png",
-      "pontuacao": 0,
+      "pontuacao": 2.97,
       "posicao_id": 6,
       "clube_id": 282,
-      "entrou_em_campo": false
+      "entrou_em_campo": true
     },
     "93637": {
-      "scout": {},
+      "scout": {
+        "I": 1
+      },
       "apelido": "Bruno Tubarão",
       "foto": "https://s3.glbimg.com/v1/AUTH_58d78b787ec34892b5aaa0c7a146155f/clubes_2026/silhuetas/CHA/FORMATO.png",
-      "pontuacao": 0,
+      "pontuacao": -0.1,
       "posicao_id": 2,
       "clube_id": 315,
+      "entrou_em_campo": true
+    },
+    "94214": {
+      "scout": {
+        "SG": 1
+      },
+      "apelido": "Léo Duarte",
+      "foto": "https://s3.glbimg.com/v1/AUTH_58d78b787ec34892b5aaa0c7a146155f/clubes_2026/silhuetas/CAM/FORMATO.png",
+      "pontuacao": 5,
+      "posicao_id": 3,
+      "clube_id": 282,
+      "entrou_em_campo": true
+    },
+    "96678": {
+      "scout": {
+        "DS": 2,
+        "SG": 1
+      },
+      "apelido": "Bustos",
+      "foto": "https://s3.glbimg.com/v1/AUTH_58d78b787ec34892b5aaa0c7a146155f/clubes_2026/silhuetas/CFC/FORMATO.png",
+      "pontuacao": 8,
+      "posicao_id": 2,
+      "clube_id": 294,
       "entrou_em_campo": true
     },
     "97341": {
@@ -375,13 +645,25 @@
       "scout": {
         "DS": 1,
         "FC": 1,
+        "FS": 1,
         "SG": 1
       },
       "apelido": "Marçal",
       "foto": "https://s3.glbimg.com/v1/AUTH_58d78b787ec34892b5aaa0c7a146155f/clubes_2026/silhuetas/BOT/FORMATO.png",
-      "pontuacao": 6.2,
+      "pontuacao": 6.7,
       "posicao_id": 2,
       "clube_id": 263,
+      "entrou_em_campo": true
+    },
+    "97878": {
+      "scout": {
+        "SG": 1
+      },
+      "apelido": "Jacy",
+      "foto": "https://s3.glbimg.com/v1/AUTH_58d78b787ec34892b5aaa0c7a146155f/clubes_2026/silhuetas/CFC/FORMATO.png",
+      "pontuacao": 5,
+      "posicao_id": 3,
+      "clube_id": 294,
       "entrou_em_campo": true
     },
     "98333": {
@@ -397,12 +679,14 @@
     },
     "99520": {
       "scout": {
-        "FS": 1,
+        "FD": 3,
+        "FF": 1,
+        "FS": 2,
         "I": 1
       },
       "apelido": "Ziyech",
       "foto": "https://s3.glbimg.com/v1/AUTH_58d78b787ec34892b5aaa0c7a146155f/clubes_2026/silhuetas/BOT/FORMATO.png",
-      "pontuacao": 0.4,
+      "pontuacao": 5.3,
       "posicao_id": 4,
       "clube_id": 263,
       "entrou_em_campo": true
@@ -723,5 +1007,5 @@
     }
   },
   "rodada": 31,
-  "total_atletas": 42
+  "total_atletas": 64
 }
