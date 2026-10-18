@@ -136,6 +136,25 @@
     {
       "position": 8,
       "team": {
+        "id": 1776,
+        "name": "São Paulo FC",
+        "shortName": "São Paulo",
+        "tla": "PAU",
+        "crest": "https://crests.football-data.org/1776.png"
+      },
+      "playedGames": 31,
+      "form": null,
+      "won": 12,
+      "draw": 6,
+      "lost": 13,
+      "points": 42,
+      "goalsFor": 36,
+      "goalsAgainst": 35,
+      "goalDifference": 1
+    },
+    {
+      "position": 9,
+      "team": {
         "id": 6685,
         "name": "Santos FC",
         "shortName": "Santos",
@@ -153,7 +172,7 @@
       "goalDifference": 1
     },
     {
-      "position": 9,
+      "position": 10,
       "team": {
         "id": 4286,
         "name": "RB Bragantino",
@@ -170,25 +189,6 @@
       "goalsFor": 38,
       "goalsAgainst": 35,
       "goalDifference": 3
-    },
-    {
-      "position": 10,
-      "team": {
-        "id": 1776,
-        "name": "São Paulo FC",
-        "shortName": "São Paulo",
-        "tla": "PAU",
-        "crest": "https://crests.football-data.org/1776.png"
-      },
-      "playedGames": 31,
-      "form": null,
-      "won": 11,
-      "draw": 7,
-      "lost": 13,
-      "points": 40,
-      "goalsFor": 35,
-      "goalsAgainst": 35,
-      "goalDifference": 0
     },
     {
       "position": 11,
@@ -250,25 +250,6 @@
     {
       "position": 14,
       "team": {
-        "id": 1780,
-        "name": "CR Vasco da Gama",
-        "shortName": "Vasco da Gama",
-        "tla": "VAS",
-        "crest": "https://crests.football-data.org/1780.png"
-      },
-      "playedGames": 30,
-      "form": null,
-      "won": 9,
-      "draw": 9,
-      "lost": 12,
-      "points": 36,
-      "goalsFor": 36,
-      "goalsAgainst": 42,
-      "goalDifference": -6
-    },
-    {
-      "position": 15,
-      "team": {
         "id": 4364,
         "name": "Mirassol FC",
         "shortName": "Mirassol",
@@ -284,6 +265,25 @@
       "goalsFor": 36,
       "goalsAgainst": 44,
       "goalDifference": -8
+    },
+    {
+      "position": 15,
+      "team": {
+        "id": 1780,
+        "name": "CR Vasco da Gama",
+        "shortName": "Vasco da Gama",
+        "tla": "VAS",
+        "crest": "https://crests.football-data.org/1780.png"
+      },
+      "playedGames": 30,
+      "form": null,
+      "won": 9,
+      "draw": 8,
+      "lost": 13,
+      "points": 35,
+      "goalsFor": 36,
+      "goalsAgainst": 43,
+      "goalDifference": -7
     },
     {
       "position": 16,
@@ -1332,6 +1332,7 @@
       "W",
       "L",
       "L",
+      "W",
       "W"
     ],
     "CR Flamengo": [
@@ -1428,7 +1429,8 @@
       "W",
       "W",
       "W",
-      "D"
+      "D",
+      "L"
     ],
     "Botafogo FR": [
       "W",
@@ -1723,9 +1725,9 @@
     },
     "São Paulo FC": {
       "home": {
-        "gf": 24,
+        "gf": 25,
         "ga": 13,
-        "w": 9,
+        "w": 10,
         "d": 3,
         "l": 3
       },
@@ -1779,10 +1781,10 @@
       },
       "away": {
         "gf": 15,
-        "ga": 24,
+        "ga": 25,
         "w": 2,
         "d": 5,
-        "l": 7
+        "l": 8
       }
     },
     "Botafogo FR": {
