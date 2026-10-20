@@ -193,25 +193,6 @@
     {
       "position": 11,
       "team": {
-        "id": 1782,
-        "name": "EC Vitória",
-        "shortName": "Vitória",
-        "tla": "VIT",
-        "crest": "https://crests.football-data.org/1782.png"
-      },
-      "playedGames": 31,
-      "form": null,
-      "won": 11,
-      "draw": 6,
-      "lost": 14,
-      "points": 39,
-      "goalsFor": 34,
-      "goalsAgainst": 44,
-      "goalDifference": -10
-    },
-    {
-      "position": 12,
-      "team": {
         "id": 1770,
         "name": "Botafogo FR",
         "shortName": "Botafogo",
@@ -229,7 +210,7 @@
       "goalDifference": -4
     },
     {
-      "position": 13,
+      "position": 12,
       "team": {
         "id": 4241,
         "name": "Coritiba FBC",
@@ -245,6 +226,25 @@
       "points": 39,
       "goalsFor": 38,
       "goalsAgainst": 49,
+      "goalDifference": -11
+    },
+    {
+      "position": 13,
+      "team": {
+        "id": 1782,
+        "name": "EC Vitória",
+        "shortName": "Vitória",
+        "tla": "VIT",
+        "crest": "https://crests.football-data.org/1782.png"
+      },
+      "playedGames": 31,
+      "form": null,
+      "won": 10,
+      "draw": 7,
+      "lost": 14,
+      "points": 37,
+      "goalsFor": 34,
+      "goalsAgainst": 45,
       "goalDifference": -11
     },
     {
@@ -297,12 +297,12 @@
       "playedGames": 31,
       "form": null,
       "won": 8,
-      "draw": 8,
-      "lost": 15,
-      "points": 32,
-      "goalsFor": 31,
+      "draw": 9,
+      "lost": 14,
+      "points": 33,
+      "goalsFor": 32,
       "goalsAgainst": 39,
-      "goalDifference": -8
+      "goalDifference": -7
     },
     {
       "position": 17,
@@ -1077,7 +1077,8 @@
       "D",
       "L",
       "W",
-      "L"
+      "L",
+      "D"
     ],
     "Clube do Remo": [
       "L",
@@ -1273,7 +1274,8 @@
       "L",
       "L",
       "L",
-      "L"
+      "L",
+      "D"
     ],
     "EC Bahia": [
       "W",
@@ -1612,10 +1614,10 @@
         "l": 4
       },
       "away": {
-        "gf": 11,
-        "ga": 32,
+        "gf": 12,
+        "ga": 33,
         "w": 0,
-        "d": 5,
+        "d": 6,
         "l": 10
       }
     },
@@ -1701,10 +1703,10 @@
     },
     "SC Corinthians Paulista": {
       "home": {
-        "gf": 15,
-        "ga": 16,
+        "gf": 16,
+        "ga": 17,
         "w": 5,
-        "d": 3,
+        "d": 4,
         "l": 7
       },
       "away": {
