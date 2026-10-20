@@ -1,16 +1,16 @@
 {
-  "status": "insuficiente",
-  "n_rodadas": 18,
-  "n_registros": 5719,
+  "status": "ok",
+  "n_rodadas": 19,
+  "n_registros": 6023,
   "pesos": {
     "defesa": {
-      "oc": 0.3,
-      "vm": 0.25,
-      "tof": 0.1,
-      "tdef": 0.15,
-      "fs": 0.05,
-      "adv_of": 0.1,
-      "prob_gols": 0.05
+      "oc": 0.0,
+      "vm": 0.3768,
+      "tof": 0.0,
+      "tdef": 0.2008,
+      "fs": 0.0531,
+      "adv_of": 0.0,
+      "prob_gols": 0.3693
     },
     "ataque": {
       "oc": 0.25,
@@ -23,25 +23,45 @@
   },
   "grupos": {
     "defesa": {
-      "status": "insuficiente",
-      "n_rodadas": 18,
-      "n_registros": 2042,
-      "motivo": "modelo OOS MAE=3.109 não supera baseline=3.139 em ≥1.0% (média 3.139, heurística 3.140)",
+      "status": "ok",
+      "n_rodadas": 19,
+      "n_registros": 2150,
+      "pesos": {
+        "oc": 0.0,
+        "vm": 0.3768,
+        "tof": 0.0,
+        "tdef": 0.2008,
+        "fs": 0.0531,
+        "adv_of": 0.0,
+        "prob_gols": 0.3693
+      },
+      "coefs_brutos": {
+        "oc": -0.6013,
+        "vm": 2.1283,
+        "tof": -0.664,
+        "tdef": 1.1345,
+        "fs": 0.3001,
+        "adv_of": -1.1497,
+        "prob_gols": 2.086
+      },
+      "intercept": 2.3895,
       "metricas": {
-        "mae_baseline_media": 3.139,
-        "mae_heuristica": 3.14,
-        "mae_modelo_cv": 3.109
+        "mae_baseline_media": 3.163,
+        "mae_heuristica": 3.163,
+        "mae_modelo_cv": 3.127,
+        "mae_modelo_in": 3.101,
+        "ganho_pct_cv": 1.1
       }
     },
     "ataque": {
       "status": "insuficiente",
-      "n_rodadas": 18,
-      "n_registros": 3677,
-      "motivo": "modelo OOS MAE=3.083 não supera baseline=3.083 em ≥1.0% (média 3.092, heurística 3.083)",
+      "n_rodadas": 19,
+      "n_registros": 3873,
+      "motivo": "modelo OOS MAE=3.082 não supera baseline=3.082 em ≥1.0% (média 3.091, heurística 3.082)",
       "metricas": {
-        "mae_baseline_media": 3.092,
-        "mae_heuristica": 3.083,
-        "mae_modelo_cv": 3.083
+        "mae_baseline_media": 3.091,
+        "mae_heuristica": 3.082,
+        "mae_modelo_cv": 3.082
       }
     }
   },
@@ -51,5 +71,5 @@
     "min_rodadas": 3,
     "min_registros": 150
   },
-  "atualizado_em": "2026-10-20 06:46 BRT"
+  "atualizado_em": "2026-10-20 15:10 BRT"
 }
