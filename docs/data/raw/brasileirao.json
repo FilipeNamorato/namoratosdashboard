@@ -193,6 +193,25 @@
     {
       "position": 11,
       "team": {
+        "id": 1782,
+        "name": "EC Vitória",
+        "shortName": "Vitória",
+        "tla": "VIT",
+        "crest": "https://crests.football-data.org/1782.png"
+      },
+      "playedGames": 31,
+      "form": null,
+      "won": 11,
+      "draw": 6,
+      "lost": 14,
+      "points": 39,
+      "goalsFor": 34,
+      "goalsAgainst": 44,
+      "goalDifference": -10
+    },
+    {
+      "position": 12,
+      "team": {
         "id": 1770,
         "name": "Botafogo FR",
         "shortName": "Botafogo",
@@ -210,7 +229,7 @@
       "goalDifference": -4
     },
     {
-      "position": 12,
+      "position": 13,
       "team": {
         "id": 4241,
         "name": "Coritiba FBC",
@@ -226,25 +245,6 @@
       "points": 39,
       "goalsFor": 38,
       "goalsAgainst": 49,
-      "goalDifference": -11
-    },
-    {
-      "position": 13,
-      "team": {
-        "id": 1782,
-        "name": "EC Vitória",
-        "shortName": "Vitória",
-        "tla": "VIT",
-        "crest": "https://crests.football-data.org/1782.png"
-      },
-      "playedGames": 30,
-      "form": null,
-      "won": 10,
-      "draw": 6,
-      "lost": 14,
-      "points": 36,
-      "goalsFor": 33,
-      "goalsAgainst": 44,
       "goalDifference": -11
     },
     {
@@ -294,15 +294,15 @@
         "tla": "COR",
         "crest": "https://crests.football-data.org/1779.png"
       },
-      "playedGames": 30,
+      "playedGames": 31,
       "form": null,
       "won": 8,
       "draw": 8,
-      "lost": 14,
+      "lost": 15,
       "points": 32,
       "goalsFor": 31,
-      "goalsAgainst": 38,
-      "goalDifference": -7
+      "goalsAgainst": 39,
+      "goalDifference": -8
     },
     {
       "position": 17,
@@ -787,6 +787,37 @@
     },
     {
       "player": {
+        "id": 276795,
+        "name": "Carlos Renê",
+        "firstName": "",
+        "lastName": "Carlos Renê",
+        "dateOfBirth": "2003-10-07",
+        "nationality": "Brazil",
+        "section": "Offence",
+        "position": null,
+        "shirtNumber": null,
+        "lastUpdated": "2026-03-29T09:41:53Z"
+      },
+      "team": {
+        "id": 1782,
+        "name": "EC Vitória",
+        "shortName": "Vitória",
+        "tla": "VIT",
+        "crest": "https://crests.football-data.org/1782.png",
+        "address": "Rua Artêmio Castro Valente, Nossa Senhora da Vitória Salvador, BA 41750-240",
+        "website": "http://www.ecvitoria.com.br",
+        "founded": 1899,
+        "clubColors": "Red / Black",
+        "venue": "Estádio Manoel Barradas",
+        "lastUpdated": "2023-02-18T08:33:29Z"
+      },
+      "playedMatches": 24,
+      "goals": 9,
+      "assists": 1,
+      "penalties": null
+    },
+    {
+      "player": {
         "id": 119594,
         "name": "Mauricio",
         "firstName": null,
@@ -814,37 +845,6 @@
       "playedMatches": 28,
       "goals": 8,
       "assists": 1,
-      "penalties": null
-    },
-    {
-      "player": {
-        "id": 169022,
-        "name": "Breno Lopes",
-        "firstName": "",
-        "lastName": "Breno Lopes",
-        "dateOfBirth": "1996-01-24",
-        "nationality": "Brazil",
-        "section": "Offence",
-        "position": null,
-        "shirtNumber": null,
-        "lastUpdated": "2023-07-30T23:15:44Z"
-      },
-      "team": {
-        "id": 4241,
-        "name": "Coritiba FBC",
-        "shortName": "Coritiba",
-        "tla": "COR",
-        "crest": "https://crests.football-data.org/4241.png",
-        "address": "Rua Ubaldino do Amaral 37, Alto da Glória Curitiba, PR 80060-195",
-        "website": "http://www.coritiba.com.br",
-        "founded": 1909,
-        "clubColors": "Green / White",
-        "venue": "Estádio Major Antônio Couto Pereira",
-        "lastUpdated": "2023-02-18T08:43:33Z"
-      },
-      "playedMatches": 27,
-      "goals": 8,
-      "assists": 2,
       "penalties": null
     }
   ],
