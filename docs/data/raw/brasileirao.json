@@ -28,12 +28,12 @@
         "tla": "FLA",
         "crest": "https://crests.football-data.org/1783.png"
       },
-      "playedGames": 31,
+      "playedGames": 32,
       "form": null,
       "won": 20,
-      "draw": 7,
+      "draw": 8,
       "lost": 4,
-      "points": 67,
+      "points": 68,
       "goalsFor": 61,
       "goalsAgainst": 25,
       "goalDifference": 36
@@ -104,12 +104,12 @@
         "tla": "CAM",
         "crest": "https://crests.football-data.org/1766.png"
       },
-      "playedGames": 31,
+      "playedGames": 32,
       "form": null,
       "won": 14,
-      "draw": 8,
+      "draw": 9,
       "lost": 9,
-      "points": 50,
+      "points": 51,
       "goalsFor": 42,
       "goalsAgainst": 35,
       "goalDifference": 7
@@ -193,6 +193,25 @@
     {
       "position": 11,
       "team": {
+        "id": 4241,
+        "name": "Coritiba FBC",
+        "shortName": "Coritiba",
+        "tla": "COR",
+        "crest": "https://crests.football-data.org/4241.png"
+      },
+      "playedGames": 32,
+      "form": null,
+      "won": 10,
+      "draw": 10,
+      "lost": 12,
+      "points": 40,
+      "goalsFor": 38,
+      "goalsAgainst": 49,
+      "goalDifference": -11
+    },
+    {
+      "position": 12,
+      "team": {
         "id": 1770,
         "name": "Botafogo FR",
         "shortName": "Botafogo",
@@ -208,25 +227,6 @@
       "goalsFor": 44,
       "goalsAgainst": 51,
       "goalDifference": -7
-    },
-    {
-      "position": 12,
-      "team": {
-        "id": 4241,
-        "name": "Coritiba FBC",
-        "shortName": "Coritiba",
-        "tla": "COR",
-        "crest": "https://crests.football-data.org/4241.png"
-      },
-      "playedGames": 31,
-      "form": null,
-      "won": 10,
-      "draw": 9,
-      "lost": 12,
-      "points": 39,
-      "goalsFor": 38,
-      "goalsAgainst": 49,
-      "goalDifference": -11
     },
     {
       "position": 13,
@@ -332,12 +332,12 @@
         "tla": "FBP",
         "crest": "https://crests.football-data.org/1767.png"
       },
-      "playedGames": 31,
+      "playedGames": 32,
       "form": null,
       "won": 7,
-      "draw": 10,
+      "draw": 11,
       "lost": 14,
-      "points": 31,
+      "points": 32,
       "goalsFor": 34,
       "goalsAgainst": 44,
       "goalDifference": -10
@@ -439,7 +439,7 @@
         "venue": "Estadio Jornalista Mário Filho",
         "lastUpdated": "2022-04-06T13:13:43Z"
       },
-      "playedMatches": 31,
+      "playedMatches": 32,
       "goals": 16,
       "assists": 7,
       "penalties": null
@@ -501,7 +501,7 @@
         "venue": "Arena do Grêmio",
         "lastUpdated": "2023-02-18T08:42:52Z"
       },
-      "playedMatches": 30,
+      "playedMatches": 31,
       "goals": 11,
       "assists": 1,
       "penalties": 2
@@ -811,7 +811,7 @@
         "venue": "Estadio Jornalista Mário Filho",
         "lastUpdated": "2022-04-06T13:13:43Z"
       },
-      "playedMatches": 30,
+      "playedMatches": 31,
       "goals": 9,
       "assists": 8,
       "penalties": null
