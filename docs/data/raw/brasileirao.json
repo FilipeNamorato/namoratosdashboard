@@ -3,6 +3,25 @@
     {
       "position": 1,
       "team": {
+        "id": 1783,
+        "name": "CR Flamengo",
+        "shortName": "Flamengo",
+        "tla": "FLA",
+        "crest": "https://crests.football-data.org/1783.png"
+      },
+      "playedGames": 32,
+      "form": null,
+      "won": 21,
+      "draw": 7,
+      "lost": 4,
+      "points": 70,
+      "goalsFor": 64,
+      "goalsAgainst": 27,
+      "goalDifference": 37
+    },
+    {
+      "position": 2,
+      "team": {
         "id": 1769,
         "name": "SE Palmeiras",
         "shortName": "Palmeiras",
@@ -18,25 +37,6 @@
       "goalsFor": 56,
       "goalsAgainst": 22,
       "goalDifference": 34
-    },
-    {
-      "position": 2,
-      "team": {
-        "id": 1783,
-        "name": "CR Flamengo",
-        "shortName": "Flamengo",
-        "tla": "FLA",
-        "crest": "https://crests.football-data.org/1783.png"
-      },
-      "playedGames": 32,
-      "form": null,
-      "won": 20,
-      "draw": 8,
-      "lost": 4,
-      "points": 68,
-      "goalsFor": 63,
-      "goalsAgainst": 27,
-      "goalDifference": 36
     },
     {
       "position": 3,
@@ -107,12 +107,12 @@
       "playedGames": 32,
       "form": null,
       "won": 14,
-      "draw": 9,
-      "lost": 9,
-      "points": 51,
+      "draw": 8,
+      "lost": 10,
+      "points": 50,
       "goalsFor": 44,
-      "goalsAgainst": 37,
-      "goalDifference": 7
+      "goalsAgainst": 38,
+      "goalDifference": 6
     },
     {
       "position": 7,
@@ -880,7 +880,8 @@
       "W",
       "D",
       "W",
-      "W"
+      "W",
+      "L"
     ],
     "SE Palmeiras": [
       "D",
@@ -1388,6 +1389,7 @@
       "W",
       "D",
       "W",
+      "W",
       "W"
     ],
     "Mirassol FC": [
@@ -1536,11 +1538,11 @@
         "l": 1
       },
       "away": {
-        "gf": 15,
-        "ga": 18,
+        "gf": 17,
+        "ga": 21,
         "w": 4,
         "d": 3,
-        "l": 8
+        "l": 9
       }
     },
     "SE Palmeiras": {
@@ -1769,9 +1771,9 @@
     },
     "CR Flamengo": {
       "home": {
-        "gf": 29,
-        "ga": 10,
-        "w": 11,
+        "gf": 32,
+        "ga": 12,
+        "w": 12,
         "d": 3,
         "l": 1
       },
