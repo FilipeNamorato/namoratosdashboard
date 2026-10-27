@@ -34,8 +34,8 @@
       "draw": 8,
       "lost": 4,
       "points": 68,
-      "goalsFor": 61,
-      "goalsAgainst": 25,
+      "goalsFor": 63,
+      "goalsAgainst": 27,
       "goalDifference": 36
     },
     {
@@ -110,8 +110,8 @@
       "draw": 9,
       "lost": 9,
       "points": 51,
-      "goalsFor": 42,
-      "goalsAgainst": 35,
+      "goalsFor": 44,
+      "goalsAgainst": 37,
       "goalDifference": 7
     },
     {
@@ -193,25 +193,6 @@
     {
       "position": 11,
       "team": {
-        "id": 4241,
-        "name": "Coritiba FBC",
-        "shortName": "Coritiba",
-        "tla": "COR",
-        "crest": "https://crests.football-data.org/4241.png"
-      },
-      "playedGames": 32,
-      "form": null,
-      "won": 10,
-      "draw": 10,
-      "lost": 12,
-      "points": 40,
-      "goalsFor": 38,
-      "goalsAgainst": 49,
-      "goalDifference": -11
-    },
-    {
-      "position": 12,
-      "team": {
         "id": 1770,
         "name": "Botafogo FR",
         "shortName": "Botafogo",
@@ -227,6 +208,25 @@
       "goalsFor": 44,
       "goalsAgainst": 51,
       "goalDifference": -7
+    },
+    {
+      "position": 12,
+      "team": {
+        "id": 4241,
+        "name": "Coritiba FBC",
+        "shortName": "Coritiba",
+        "tla": "COR",
+        "crest": "https://crests.football-data.org/4241.png"
+      },
+      "playedGames": 32,
+      "form": null,
+      "won": 10,
+      "draw": 9,
+      "lost": 13,
+      "points": 39,
+      "goalsFor": 38,
+      "goalsAgainst": 50,
+      "goalDifference": -12
     },
     {
       "position": 13,
@@ -307,6 +307,25 @@
     {
       "position": 17,
       "team": {
+        "id": 1767,
+        "name": "Grêmio FBPA",
+        "shortName": "Grêmio",
+        "tla": "FBP",
+        "crest": "https://crests.football-data.org/1767.png"
+      },
+      "playedGames": 32,
+      "form": null,
+      "won": 8,
+      "draw": 10,
+      "lost": 14,
+      "points": 34,
+      "goalsFor": 35,
+      "goalsAgainst": 44,
+      "goalDifference": -9
+    },
+    {
+      "position": 18,
+      "team": {
         "id": 1779,
         "name": "SC Corinthians Paulista",
         "shortName": "Corinthians",
@@ -322,25 +341,6 @@
       "goalsFor": 34,
       "goalsAgainst": 42,
       "goalDifference": -8
-    },
-    {
-      "position": 18,
-      "team": {
-        "id": 1767,
-        "name": "Grêmio FBPA",
-        "shortName": "Grêmio",
-        "tla": "FBP",
-        "crest": "https://crests.football-data.org/1767.png"
-      },
-      "playedGames": 32,
-      "form": null,
-      "won": 7,
-      "draw": 11,
-      "lost": 14,
-      "points": 32,
-      "goalsFor": 34,
-      "goalsAgainst": 44,
-      "goalDifference": -10
     },
     {
       "position": 19,
@@ -813,7 +813,7 @@
       },
       "playedMatches": 31,
       "goals": 9,
-      "assists": 8,
+      "assists": 9,
       "penalties": null
     },
     {
@@ -947,6 +947,7 @@
       "L",
       "L",
       "D",
+      "L",
       "L"
     ],
     "RB Bragantino": [
@@ -1184,7 +1185,8 @@
       "D",
       "D",
       "D",
-      "L"
+      "L",
+      "W"
     ],
     "Chapecoense AF": [
       "W",
@@ -1560,10 +1562,10 @@
     "Coritiba FBC": {
       "home": {
         "gf": 20,
-        "ga": 20,
+        "ga": 21,
         "w": 5,
         "d": 5,
-        "l": 5
+        "l": 6
       },
       "away": {
         "gf": 18,
@@ -1678,9 +1680,9 @@
         "l": 4
       },
       "away": {
-        "gf": 9,
+        "gf": 10,
         "ga": 23,
-        "w": 0,
+        "w": 1,
         "d": 5,
         "l": 10
       }
