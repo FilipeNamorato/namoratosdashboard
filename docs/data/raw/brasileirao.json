@@ -9,12 +9,12 @@
         "tla": "FLA",
         "crest": "https://crests.football-data.org/1783.png"
       },
-      "playedGames": 32,
+      "playedGames": 33,
       "form": null,
       "won": 21,
-      "draw": 7,
+      "draw": 8,
       "lost": 4,
-      "points": 70,
+      "points": 71,
       "goalsFor": 64,
       "goalsAgainst": 27,
       "goalDifference": 37
@@ -47,15 +47,15 @@
         "tla": "CRU",
         "crest": "https://crests.football-data.org/1771.png"
       },
-      "playedGames": 32,
+      "playedGames": 33,
       "form": null,
-      "won": 16,
+      "won": 17,
       "draw": 6,
       "lost": 10,
-      "points": 54,
-      "goalsFor": 51,
+      "points": 57,
+      "goalsFor": 52,
       "goalsAgainst": 46,
-      "goalDifference": 5
+      "goalDifference": 6
     },
     {
       "position": 4,
@@ -123,15 +123,15 @@
         "tla": "CAM",
         "crest": "https://crests.football-data.org/1766.png"
       },
-      "playedGames": 32,
+      "playedGames": 33,
       "form": null,
       "won": 14,
       "draw": 8,
-      "lost": 10,
+      "lost": 11,
       "points": 50,
       "goalsFor": 44,
-      "goalsAgainst": 38,
-      "goalDifference": 6
+      "goalsAgainst": 39,
+      "goalDifference": 5
     },
     {
       "position": 8,
@@ -193,6 +193,25 @@
     {
       "position": 11,
       "team": {
+        "id": 1780,
+        "name": "CR Vasco da Gama",
+        "shortName": "Vasco da Gama",
+        "tla": "VAS",
+        "crest": "https://crests.football-data.org/1780.png"
+      },
+      "playedGames": 32,
+      "form": null,
+      "won": 10,
+      "draw": 9,
+      "lost": 13,
+      "points": 39,
+      "goalsFor": 39,
+      "goalsAgainst": 45,
+      "goalDifference": -6
+    },
+    {
+      "position": 12,
+      "team": {
         "id": 1770,
         "name": "Botafogo FR",
         "shortName": "Botafogo",
@@ -210,7 +229,7 @@
       "goalDifference": -8
     },
     {
-      "position": 12,
+      "position": 13,
       "team": {
         "id": 4241,
         "name": "Coritiba FBC",
@@ -227,25 +246,6 @@
       "goalsFor": 38,
       "goalsAgainst": 50,
       "goalDifference": -12
-    },
-    {
-      "position": 13,
-      "team": {
-        "id": 1780,
-        "name": "CR Vasco da Gama",
-        "shortName": "Vasco da Gama",
-        "tla": "VAS",
-        "crest": "https://crests.football-data.org/1780.png"
-      },
-      "playedGames": 31,
-      "form": null,
-      "won": 10,
-      "draw": 8,
-      "lost": 13,
-      "points": 38,
-      "goalsFor": 39,
-      "goalsAgainst": 45,
-      "goalDifference": -6
     },
     {
       "position": 14,
@@ -439,7 +439,7 @@
         "venue": "Estadio Jornalista Mário Filho",
         "lastUpdated": "2022-04-06T13:13:43Z"
       },
-      "playedMatches": 32,
+      "playedMatches": 33,
       "goals": 16,
       "assists": 7,
       "penalties": null
@@ -477,6 +477,37 @@
     },
     {
       "player": {
+        "id": 91310,
+        "name": "Kaio Jorge",
+        "firstName": "",
+        "lastName": "Kaio Jorge",
+        "dateOfBirth": "2002-01-24",
+        "nationality": "Brazil",
+        "section": "Offence",
+        "position": null,
+        "shirtNumber": null,
+        "lastUpdated": "2026-10-21T09:16:26Z"
+      },
+      "team": {
+        "id": 1771,
+        "name": "Cruzeiro EC",
+        "shortName": "Cruzeiro",
+        "tla": "CRU",
+        "crest": "https://crests.football-data.org/1771.png",
+        "address": "Rua Timbiras 2903, Bairro Preto Belo Horizonte, MG 30140-062",
+        "website": "http://www.cruzeiro.com.br",
+        "founded": 1921,
+        "clubColors": "Blue / White",
+        "venue": "Estádio Governador Magalhães Pinto",
+        "lastUpdated": "2022-04-10T11:03:46Z"
+      },
+      "playedMatches": 27,
+      "goals": 12,
+      "assists": 2,
+      "penalties": 4
+    },
+    {
+      "player": {
         "id": 37833,
         "name": "Carlos Vinícius",
         "firstName": "",
@@ -505,37 +536,6 @@
       "goals": 11,
       "assists": 1,
       "penalties": 2
-    },
-    {
-      "player": {
-        "id": 91310,
-        "name": "Kaio Jorge",
-        "firstName": "",
-        "lastName": "Kaio Jorge",
-        "dateOfBirth": "2002-01-24",
-        "nationality": "Brazil",
-        "section": "Offence",
-        "position": null,
-        "shirtNumber": null,
-        "lastUpdated": "2026-10-21T09:16:26Z"
-      },
-      "team": {
-        "id": 1771,
-        "name": "Cruzeiro EC",
-        "shortName": "Cruzeiro",
-        "tla": "CRU",
-        "crest": "https://crests.football-data.org/1771.png",
-        "address": "Rua Timbiras 2903, Bairro Preto Belo Horizonte, MG 30140-062",
-        "website": "http://www.cruzeiro.com.br",
-        "founded": 1921,
-        "clubColors": "Blue / White",
-        "venue": "Estádio Governador Magalhães Pinto",
-        "lastUpdated": "2022-04-10T11:03:46Z"
-      },
-      "playedMatches": 26,
-      "goals": 11,
-      "assists": 2,
-      "penalties": 4
     },
     {
       "player": {
@@ -780,7 +780,7 @@
         "venue": "Estádio Governador Magalhães Pinto",
         "lastUpdated": "2022-04-10T11:03:46Z"
       },
-      "playedMatches": 29,
+      "playedMatches": 30,
       "goals": 9,
       "assists": 7,
       "penalties": null
@@ -811,7 +811,7 @@
         "venue": "Estadio Jornalista Mário Filho",
         "lastUpdated": "2022-04-06T13:13:43Z"
       },
-      "playedMatches": 31,
+      "playedMatches": 32,
       "goals": 9,
       "assists": 9,
       "penalties": null
