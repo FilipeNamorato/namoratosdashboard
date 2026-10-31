@@ -1,7 +1,7 @@
 {
   "status": "insuficiente",
-  "n_rodadas": 20,
-  "n_registros": 6329,
+  "n_rodadas": 21,
+  "n_registros": 6634,
   "pesos": {
     "defesa": {
       "oc": 0.3,
@@ -24,24 +24,24 @@
   "grupos": {
     "defesa": {
       "status": "insuficiente",
-      "n_rodadas": 20,
-      "n_registros": 2260,
-      "motivo": "modelo OOS MAE=3.177 não supera baseline=3.197 em ≥1.0% (média 3.197, heurística 3.197)",
+      "n_rodadas": 21,
+      "n_registros": 2372,
+      "motivo": "modelo OOS MAE=3.194 não supera baseline=3.217 em ≥1.0% (média 3.218, heurística 3.217)",
       "metricas": {
-        "mae_baseline_media": 3.197,
-        "mae_heuristica": 3.197,
-        "mae_modelo_cv": 3.177
+        "mae_baseline_media": 3.218,
+        "mae_heuristica": 3.217,
+        "mae_modelo_cv": 3.194
       }
     },
     "ataque": {
       "status": "insuficiente",
-      "n_rodadas": 20,
-      "n_registros": 4069,
-      "motivo": "modelo OOS MAE=3.053 não supera baseline=3.056 em ≥1.0% (média 3.066, heurística 3.056)",
+      "n_rodadas": 21,
+      "n_registros": 4262,
+      "motivo": "modelo OOS MAE=3.062 não supera baseline=3.064 em ≥1.0% (média 3.072, heurística 3.064)",
       "metricas": {
-        "mae_baseline_media": 3.066,
-        "mae_heuristica": 3.056,
-        "mae_modelo_cv": 3.053
+        "mae_baseline_media": 3.072,
+        "mae_heuristica": 3.064,
+        "mae_modelo_cv": 3.062
       }
     }
   },
@@ -51,5 +51,5 @@
     "min_rodadas": 3,
     "min_registros": 150
   },
-  "atualizado_em": "2026-10-30 23:40 BRT"
+  "atualizado_em": "2026-10-31 04:24 BRT"
 }
