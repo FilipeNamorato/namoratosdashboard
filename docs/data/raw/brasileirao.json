@@ -193,6 +193,25 @@
     {
       "position": 11,
       "team": {
+        "id": 4241,
+        "name": "Coritiba FBC",
+        "shortName": "Coritiba",
+        "tla": "COR",
+        "crest": "https://crests.football-data.org/4241.png"
+      },
+      "playedGames": 33,
+      "form": null,
+      "won": 11,
+      "draw": 9,
+      "lost": 13,
+      "points": 42,
+      "goalsFor": 40,
+      "goalsAgainst": 50,
+      "goalDifference": -10
+    },
+    {
+      "position": 12,
+      "team": {
         "id": 1770,
         "name": "Botafogo FR",
         "shortName": "Botafogo",
@@ -208,25 +227,6 @@
       "goalsFor": 45,
       "goalsAgainst": 53,
       "goalDifference": -8
-    },
-    {
-      "position": 12,
-      "team": {
-        "id": 4241,
-        "name": "Coritiba FBC",
-        "shortName": "Coritiba",
-        "tla": "COR",
-        "crest": "https://crests.football-data.org/4241.png"
-      },
-      "playedGames": 32,
-      "form": null,
-      "won": 10,
-      "draw": 9,
-      "lost": 13,
-      "points": 39,
-      "goalsFor": 38,
-      "goalsAgainst": 50,
-      "goalDifference": -12
     },
     {
       "position": 13,
@@ -256,15 +256,15 @@
         "tla": "VIT",
         "crest": "https://crests.football-data.org/1782.png"
       },
-      "playedGames": 32,
+      "playedGames": 33,
       "form": null,
       "won": 10,
       "draw": 8,
-      "lost": 14,
+      "lost": 15,
       "points": 38,
       "goalsFor": 35,
-      "goalsAgainst": 46,
-      "goalDifference": -11
+      "goalsAgainst": 48,
+      "goalDifference": -13
     },
     {
       "position": 15,
@@ -818,31 +818,31 @@
     },
     {
       "player": {
-        "id": 276795,
-        "name": "Carlos Renê",
+        "id": 16154,
+        "name": "Pedro Rocha",
         "firstName": "",
-        "lastName": "Carlos Renê",
-        "dateOfBirth": "2003-10-07",
+        "lastName": "Pedro Rocha",
+        "dateOfBirth": "1994-10-01",
         "nationality": "Brazil",
         "section": "Offence",
         "position": null,
         "shirtNumber": null,
-        "lastUpdated": "2026-03-29T09:41:53Z"
+        "lastUpdated": "2023-09-18T08:57:30Z"
       },
       "team": {
-        "id": 1782,
-        "name": "EC Vitória",
-        "shortName": "Vitória",
-        "tla": "VIT",
-        "crest": "https://crests.football-data.org/1782.png",
-        "address": "Rua Artêmio Castro Valente, Nossa Senhora da Vitória Salvador, BA 41750-240",
-        "website": "http://www.ecvitoria.com.br",
-        "founded": 1899,
-        "clubColors": "Red / Black",
-        "venue": "Estádio Manoel Barradas",
-        "lastUpdated": "2023-02-18T08:33:29Z"
+        "id": 4241,
+        "name": "Coritiba FBC",
+        "shortName": "Coritiba",
+        "tla": "COR",
+        "crest": "https://crests.football-data.org/4241.png",
+        "address": "Rua Ubaldino do Amaral 37, Alto da Glória Curitiba, PR 80060-195",
+        "website": "http://www.coritiba.com.br",
+        "founded": 1909,
+        "clubColors": "Green / White",
+        "venue": "Estádio Major Antônio Couto Pereira",
+        "lastUpdated": "2023-02-18T08:43:33Z"
       },
-      "playedMatches": 23,
+      "playedMatches": 32,
       "goals": 9,
       "assists": 1,
       "penalties": null
@@ -951,7 +951,8 @@
       "L",
       "D",
       "L",
-      "L"
+      "L",
+      "W"
     ],
     "RB Bragantino": [
       "W",
@@ -1090,7 +1091,8 @@
       "W",
       "L",
       "D",
-      "D"
+      "D",
+      "L"
     ],
     "Clube do Remo": [
       "L",
@@ -1581,9 +1583,9 @@
     },
     "Coritiba FBC": {
       "home": {
-        "gf": 20,
+        "gf": 22,
         "ga": 21,
-        "w": 5,
+        "w": 6,
         "d": 5,
         "l": 6
       },
@@ -1653,10 +1655,10 @@
       },
       "away": {
         "gf": 12,
-        "ga": 33,
+        "ga": 35,
         "w": 0,
         "d": 6,
-        "l": 10
+        "l": 11
       }
     },
     "Clube do Remo": {
