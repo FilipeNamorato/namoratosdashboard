@@ -199,18 +199,37 @@
         "tla": "COR",
         "crest": "https://crests.football-data.org/4241.png"
       },
-      "playedGames": 33,
+      "playedGames": 34,
       "form": null,
       "won": 11,
-      "draw": 9,
+      "draw": 10,
       "lost": 13,
-      "points": 42,
+      "points": 43,
       "goalsFor": 40,
       "goalsAgainst": 50,
       "goalDifference": -10
     },
     {
       "position": 12,
+      "team": {
+        "id": 4364,
+        "name": "Mirassol FC",
+        "shortName": "Mirassol",
+        "tla": "MIR",
+        "crest": "https://crests.football-data.org/4364.png"
+      },
+      "playedGames": 34,
+      "form": null,
+      "won": 10,
+      "draw": 10,
+      "lost": 14,
+      "points": 40,
+      "goalsFor": 39,
+      "goalsAgainst": 48,
+      "goalDifference": -9
+    },
+    {
+      "position": 13,
       "team": {
         "id": 1770,
         "name": "Botafogo FR",
@@ -229,7 +248,7 @@
       "goalDifference": -8
     },
     {
-      "position": 13,
+      "position": 14,
       "team": {
         "id": 1780,
         "name": "CR Vasco da Gama",
@@ -248,7 +267,7 @@
       "goalDifference": -9
     },
     {
-      "position": 14,
+      "position": 15,
       "team": {
         "id": 1782,
         "name": "EC Vitória",
@@ -265,25 +284,6 @@
       "goalsFor": 35,
       "goalsAgainst": 48,
       "goalDifference": -13
-    },
-    {
-      "position": 15,
-      "team": {
-        "id": 4364,
-        "name": "Mirassol FC",
-        "shortName": "Mirassol",
-        "tla": "MIR",
-        "crest": "https://crests.football-data.org/4364.png"
-      },
-      "playedGames": 34,
-      "form": null,
-      "won": 9,
-      "draw": 11,
-      "lost": 14,
-      "points": 38,
-      "goalsFor": 38,
-      "goalsAgainst": 48,
-      "goalDifference": -10
     },
     {
       "position": 16,
@@ -332,12 +332,12 @@
         "tla": "SCI",
         "crest": "https://crests.football-data.org/6684.png"
       },
-      "playedGames": 33,
+      "playedGames": 34,
       "form": null,
       "won": 8,
-      "draw": 11,
+      "draw": 12,
       "lost": 14,
-      "points": 35,
+      "points": 36,
       "goalsFor": 37,
       "goalsAgainst": 42,
       "goalDifference": -5
@@ -373,12 +373,12 @@
       "playedGames": 33,
       "form": null,
       "won": 4,
-      "draw": 10,
-      "lost": 19,
-      "points": 22,
+      "draw": 9,
+      "lost": 20,
+      "points": 21,
       "goalsFor": 33,
-      "goalsAgainst": 67,
-      "goalDifference": -34
+      "goalsAgainst": 68,
+      "goalDifference": -35
     }
   ],
   "artilheiros": [
@@ -1232,6 +1232,7 @@
       "L",
       "L",
       "W",
+      "L",
       "L"
     ],
     "Santos FC": [
@@ -1443,7 +1444,8 @@
       "L",
       "W",
       "D",
-      "L"
+      "L",
+      "W"
     ],
     "CR Vasco da Gama": [
       "L",
@@ -1713,11 +1715,11 @@
     },
     "Chapecoense AF": {
       "home": {
-        "gf": 21,
-        "ga": 34,
+        "gf": 22,
+        "ga": 36,
         "w": 3,
         "d": 5,
-        "l": 7
+        "l": 8
       },
       "away": {
         "gf": 11,
@@ -1816,9 +1818,9 @@
         "l": 4
       },
       "away": {
-        "gf": 13,
-        "ga": 25,
-        "w": 2,
+        "gf": 15,
+        "ga": 26,
+        "w": 3,
         "d": 4,
         "l": 10
       }
