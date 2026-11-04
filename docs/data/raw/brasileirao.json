@@ -202,12 +202,12 @@
       "playedGames": 34,
       "form": null,
       "won": 11,
-      "draw": 10,
-      "lost": 13,
-      "points": 43,
+      "draw": 9,
+      "lost": 14,
+      "points": 42,
       "goalsFor": 40,
-      "goalsAgainst": 50,
-      "goalDifference": -10
+      "goalsAgainst": 51,
+      "goalDifference": -11
     },
     {
       "position": 12,
@@ -288,6 +288,25 @@
     {
       "position": 16,
       "team": {
+        "id": 6684,
+        "name": "SC Internacional",
+        "shortName": "Internacional",
+        "tla": "SCI",
+        "crest": "https://crests.football-data.org/6684.png"
+      },
+      "playedGames": 34,
+      "form": null,
+      "won": 9,
+      "draw": 11,
+      "lost": 14,
+      "points": 38,
+      "goalsFor": 38,
+      "goalsAgainst": 42,
+      "goalDifference": -4
+    },
+    {
+      "position": 17,
+      "team": {
         "id": 1767,
         "name": "Grêmio FBPA",
         "shortName": "Grêmio",
@@ -305,7 +324,7 @@
       "goalDifference": -7
     },
     {
-      "position": 17,
+      "position": 18,
       "team": {
         "id": 1779,
         "name": "SC Corinthians Paulista",
@@ -322,25 +341,6 @@
       "goalsFor": 36,
       "goalsAgainst": 42,
       "goalDifference": -6
-    },
-    {
-      "position": 18,
-      "team": {
-        "id": 6684,
-        "name": "SC Internacional",
-        "shortName": "Internacional",
-        "tla": "SCI",
-        "crest": "https://crests.football-data.org/6684.png"
-      },
-      "playedGames": 34,
-      "form": null,
-      "won": 8,
-      "draw": 12,
-      "lost": 14,
-      "points": 36,
-      "goalsFor": 37,
-      "goalsAgainst": 42,
-      "goalDifference": -5
     },
     {
       "position": 19,
@@ -952,7 +952,8 @@
       "D",
       "L",
       "L",
-      "W"
+      "W",
+      "L"
     ],
     "RB Bragantino": [
       "W",
@@ -1023,7 +1024,8 @@
       "D",
       "L",
       "W",
-      "L"
+      "L",
+      "W"
     ],
     "CA Paranaense": [
       "W",
@@ -1595,10 +1597,10 @@
       },
       "away": {
         "gf": 18,
-        "ga": 29,
+        "ga": 30,
         "w": 5,
         "d": 4,
-        "l": 7
+        "l": 8
       }
     },
     "RB Bragantino": {
@@ -1619,9 +1621,9 @@
     },
     "SC Internacional": {
       "home": {
-        "gf": 21,
+        "gf": 22,
         "ga": 17,
-        "w": 5,
+        "w": 6,
         "d": 5,
         "l": 6
       },
