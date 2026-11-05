@@ -28,15 +28,15 @@
         "tla": "PAL",
         "crest": "https://crests.football-data.org/1769.png"
       },
-      "playedGames": 33,
+      "playedGames": 34,
       "form": null,
-      "won": 20,
+      "won": 21,
       "draw": 10,
       "lost": 3,
-      "points": 70,
-      "goalsFor": 56,
-      "goalsAgainst": 22,
-      "goalDifference": 34
+      "points": 73,
+      "goalsFor": 61,
+      "goalsAgainst": 23,
+      "goalDifference": 38
     },
     {
       "position": 3,
@@ -351,15 +351,15 @@
         "tla": "CRE",
         "crest": "https://crests.football-data.org/4287.png"
       },
-      "playedGames": 33,
+      "playedGames": 34,
       "form": null,
       "won": 6,
       "draw": 11,
-      "lost": 16,
+      "lost": 17,
       "points": 29,
-      "goalsFor": 36,
-      "goalsAgainst": 51,
-      "goalDifference": -15
+      "goalsFor": 37,
+      "goalsAgainst": 56,
+      "goalDifference": -19
     },
     {
       "position": 20,
@@ -501,7 +501,7 @@
         "venue": "Estádio Governador Magalhães Pinto",
         "lastUpdated": "2022-04-10T11:03:46Z"
       },
-      "playedMatches": 27,
+      "playedMatches": 28,
       "goals": 12,
       "assists": 2,
       "penalties": 4
@@ -594,10 +594,41 @@
         "venue": "Estádio Governador Roberto Santos",
         "lastUpdated": "2024-10-28T10:09:10Z"
       },
-      "playedMatches": 30,
+      "playedMatches": 31,
       "goals": 11,
       "assists": 1,
       "penalties": 5
+    },
+    {
+      "player": {
+        "id": 170698,
+        "name": "José Manuel López",
+        "firstName": "José Manuel",
+        "lastName": "López",
+        "dateOfBirth": "2000-12-06",
+        "nationality": "Argentina",
+        "section": "Offence",
+        "position": null,
+        "shirtNumber": null,
+        "lastUpdated": "2026-06-01T11:16:29Z"
+      },
+      "team": {
+        "id": 1769,
+        "name": "SE Palmeiras",
+        "shortName": "Palmeiras",
+        "tla": "PAL",
+        "crest": "https://crests.football-data.org/1769.png",
+        "address": "Rua Palestra Italia nº 214, Perdizes São Paulo, SP 05005-030",
+        "website": "http://www.palmeiras.com.br",
+        "founded": 1914,
+        "clubColors": "Green / White",
+        "venue": "Allianz Parque",
+        "lastUpdated": "2022-04-06T13:14:55Z"
+      },
+      "playedMatches": 31,
+      "goals": 10,
+      "assists": 6,
+      "penalties": null
     },
     {
       "player": {
@@ -663,16 +694,16 @@
     },
     {
       "player": {
-        "id": 170698,
-        "name": "José Manuel López",
-        "firstName": "José Manuel",
-        "lastName": "López",
-        "dateOfBirth": "2000-12-06",
-        "nationality": "Argentina",
-        "section": "Offence",
+        "id": 119594,
+        "name": "Mauricio",
+        "firstName": null,
+        "lastName": "Mauricio",
+        "dateOfBirth": "2001-06-22",
+        "nationality": "Paraguay",
+        "section": "Midfield",
         "position": null,
         "shirtNumber": null,
-        "lastUpdated": "2026-06-01T11:16:29Z"
+        "lastUpdated": "2026-06-03T09:41:57Z"
       },
       "team": {
         "id": 1769,
@@ -687,10 +718,10 @@
         "venue": "Allianz Parque",
         "lastUpdated": "2022-04-06T13:14:55Z"
       },
-      "playedMatches": 30,
-      "goals": 9,
-      "assists": 6,
-      "penalties": null
+      "playedMatches": 31,
+      "goals": 10,
+      "assists": 1,
+      "penalties": 1
     },
     {
       "player": {
@@ -722,37 +753,6 @@
       "goals": 9,
       "assists": 1,
       "penalties": 2
-    },
-    {
-      "player": {
-        "id": 119594,
-        "name": "Mauricio",
-        "firstName": null,
-        "lastName": "Mauricio",
-        "dateOfBirth": "2001-06-22",
-        "nationality": "Paraguay",
-        "section": "Midfield",
-        "position": null,
-        "shirtNumber": null,
-        "lastUpdated": "2026-06-03T09:41:57Z"
-      },
-      "team": {
-        "id": 1769,
-        "name": "SE Palmeiras",
-        "shortName": "Palmeiras",
-        "tla": "PAL",
-        "crest": "https://crests.football-data.org/1769.png",
-        "address": "Rua Palestra Italia nº 214, Perdizes São Paulo, SP 05005-030",
-        "website": "http://www.palmeiras.com.br",
-        "founded": 1914,
-        "clubColors": "Green / White",
-        "venue": "Allianz Parque",
-        "lastUpdated": "2022-04-06T13:14:55Z"
-      },
-      "playedMatches": 30,
-      "goals": 9,
-      "assists": 1,
-      "penalties": 1
     },
     {
       "player": {
