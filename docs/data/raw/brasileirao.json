@@ -9,15 +9,15 @@
         "tla": "FLA",
         "crest": "https://crests.football-data.org/1783.png"
       },
-      "playedGames": 33,
+      "playedGames": 34,
       "form": null,
-      "won": 22,
+      "won": 23,
       "draw": 7,
       "lost": 4,
-      "points": 73,
-      "goalsFor": 68,
-      "goalsAgainst": 28,
-      "goalDifference": 40
+      "points": 76,
+      "goalsFor": 71,
+      "goalsAgainst": 29,
+      "goalDifference": 42
     },
     {
       "position": 2,
@@ -85,15 +85,15 @@
         "tla": "CAP",
         "crest": "https://crests.football-data.org/1768.png"
       },
-      "playedGames": 33,
+      "playedGames": 34,
       "form": null,
       "won": 15,
       "draw": 9,
-      "lost": 9,
+      "lost": 10,
       "points": 54,
-      "goalsFor": 50,
-      "goalsAgainst": 40,
-      "goalDifference": 10
+      "goalsFor": 51,
+      "goalsAgainst": 43,
+      "goalDifference": 8
     },
     {
       "position": 6,
@@ -212,6 +212,25 @@
     {
       "position": 12,
       "team": {
+        "id": 1780,
+        "name": "CR Vasco da Gama",
+        "shortName": "Vasco da Gama",
+        "tla": "VAS",
+        "crest": "https://crests.football-data.org/1780.png"
+      },
+      "playedGames": 33,
+      "form": null,
+      "won": 11,
+      "draw": 8,
+      "lost": 14,
+      "points": 41,
+      "goalsFor": 43,
+      "goalsAgainst": 50,
+      "goalDifference": -7
+    },
+    {
+      "position": 13,
+      "team": {
         "id": 4364,
         "name": "Mirassol FC",
         "shortName": "Mirassol",
@@ -229,7 +248,7 @@
       "goalDifference": -9
     },
     {
-      "position": 13,
+      "position": 14,
       "team": {
         "id": 1770,
         "name": "Botafogo FR",
@@ -246,25 +265,6 @@
       "goalsFor": 45,
       "goalsAgainst": 53,
       "goalDifference": -8
-    },
-    {
-      "position": 14,
-      "team": {
-        "id": 1780,
-        "name": "CR Vasco da Gama",
-        "shortName": "Vasco da Gama",
-        "tla": "VAS",
-        "crest": "https://crests.football-data.org/1780.png"
-      },
-      "playedGames": 32,
-      "form": null,
-      "won": 10,
-      "draw": 8,
-      "lost": 14,
-      "points": 38,
-      "goalsFor": 40,
-      "goalsAgainst": 49,
-      "goalDifference": -9
     },
     {
       "position": 15,
@@ -313,15 +313,15 @@
         "tla": "FBP",
         "crest": "https://crests.football-data.org/1767.png"
       },
-      "playedGames": 33,
+      "playedGames": 34,
       "form": null,
       "won": 9,
       "draw": 10,
-      "lost": 14,
+      "lost": 15,
       "points": 37,
-      "goalsFor": 37,
-      "goalsAgainst": 44,
-      "goalDifference": -7
+      "goalsFor": 38,
+      "goalsAgainst": 47,
+      "goalDifference": -9
     },
     {
       "position": 18,
@@ -408,7 +408,7 @@
         "venue": "Estádio Joaquim Américo Guimarães",
         "lastUpdated": "2022-04-06T13:14:06Z"
       },
-      "playedMatches": 31,
+      "playedMatches": 32,
       "goals": 21,
       "assists": 3,
       "penalties": 4
@@ -439,8 +439,8 @@
         "venue": "Estadio Jornalista Mário Filho",
         "lastUpdated": "2022-04-06T13:13:43Z"
       },
-      "playedMatches": 33,
-      "goals": 18,
+      "playedMatches": 34,
+      "goals": 20,
       "assists": 7,
       "penalties": null
     },
@@ -508,6 +508,37 @@
     },
     {
       "player": {
+        "id": 178710,
+        "name": "Samuel Lino",
+        "firstName": "",
+        "lastName": "Samuel Lino",
+        "dateOfBirth": "1999-12-23",
+        "nationality": "Brazil",
+        "section": "Offence",
+        "position": null,
+        "shirtNumber": null,
+        "lastUpdated": "2026-10-21T09:16:27Z"
+      },
+      "team": {
+        "id": 1783,
+        "name": "CR Flamengo",
+        "shortName": "Flamengo",
+        "tla": "FLA",
+        "crest": "https://crests.football-data.org/1783.png",
+        "address": "null Rio de Janeiro, RJ null",
+        "website": "https://www.flamengo.com.br/pagina-inicial-basquete",
+        "founded": 1919,
+        "clubColors": "Red / Black / White",
+        "venue": "Estadio Jornalista Mário Filho",
+        "lastUpdated": "2022-04-06T13:13:43Z"
+      },
+      "playedMatches": 33,
+      "goals": 12,
+      "assists": 9,
+      "penalties": null
+    },
+    {
+      "player": {
         "id": 37833,
         "name": "Carlos Vinícius",
         "firstName": "",
@@ -570,37 +601,6 @@
     },
     {
       "player": {
-        "id": 178710,
-        "name": "Samuel Lino",
-        "firstName": "",
-        "lastName": "Samuel Lino",
-        "dateOfBirth": "1999-12-23",
-        "nationality": "Brazil",
-        "section": "Offence",
-        "position": null,
-        "shirtNumber": null,
-        "lastUpdated": "2026-10-21T09:16:27Z"
-      },
-      "team": {
-        "id": 1783,
-        "name": "CR Flamengo",
-        "shortName": "Flamengo",
-        "tla": "FLA",
-        "crest": "https://crests.football-data.org/1783.png",
-        "address": "null Rio de Janeiro, RJ null",
-        "website": "https://www.flamengo.com.br/pagina-inicial-basquete",
-        "founded": 1919,
-        "clubColors": "Red / Black / White",
-        "venue": "Estadio Jornalista Mário Filho",
-        "lastUpdated": "2022-04-06T13:13:43Z"
-      },
-      "playedMatches": 32,
-      "goals": 11,
-      "assists": 9,
-      "penalties": null
-    },
-    {
-      "player": {
         "id": 149704,
         "name": "Danilo dos Santos de Oliveira",
         "firstName": "",
@@ -656,7 +656,7 @@
         "venue": "Estádio do Morumbi",
         "lastUpdated": "2023-02-18T08:43:44Z"
       },
-      "playedMatches": 29,
+      "playedMatches": 30,
       "goals": 10,
       "assists": 2,
       "penalties": 2
@@ -718,7 +718,7 @@
         "venue": "Estádio do Morumbi",
         "lastUpdated": "2023-02-18T08:43:44Z"
       },
-      "playedMatches": 27,
+      "playedMatches": 28,
       "goals": 9,
       "assists": 1,
       "penalties": 2
