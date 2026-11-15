@@ -193,6 +193,25 @@
     {
       "position": 11,
       "team": {
+        "id": 1780,
+        "name": "CR Vasco da Gama",
+        "shortName": "Vasco da Gama",
+        "tla": "VAS",
+        "crest": "https://crests.football-data.org/1780.png"
+      },
+      "playedGames": 34,
+      "form": null,
+      "won": 12,
+      "draw": 8,
+      "lost": 14,
+      "points": 44,
+      "goalsFor": 44,
+      "goalsAgainst": 50,
+      "goalDifference": -6
+    },
+    {
+      "position": 12,
+      "team": {
         "id": 1770,
         "name": "Botafogo FR",
         "shortName": "Botafogo",
@@ -207,25 +226,6 @@
       "points": 42,
       "goalsFor": 46,
       "goalsAgainst": 53,
-      "goalDifference": -7
-    },
-    {
-      "position": 12,
-      "team": {
-        "id": 1780,
-        "name": "CR Vasco da Gama",
-        "shortName": "Vasco da Gama",
-        "tla": "VAS",
-        "crest": "https://crests.football-data.org/1780.png"
-      },
-      "playedGames": 34,
-      "form": null,
-      "won": 11,
-      "draw": 9,
-      "lost": 14,
-      "points": 42,
-      "goalsFor": 43,
-      "goalsAgainst": 50,
       "goalDifference": -7
     },
     {
@@ -373,12 +373,12 @@
       "playedGames": 34,
       "form": null,
       "won": 4,
-      "draw": 10,
-      "lost": 20,
-      "points": 22,
+      "draw": 9,
+      "lost": 21,
+      "points": 21,
       "goalsFor": 33,
-      "goalsAgainst": 68,
-      "goalDifference": -35
+      "goalsAgainst": 69,
+      "goalDifference": -36
     }
   ],
   "artilheiros": [
@@ -883,7 +883,8 @@
       "W",
       "L",
       "L",
-      "L"
+      "L",
+      "D"
     ],
     "SE Palmeiras": [
       "D",
@@ -1458,7 +1459,8 @@
       "W",
       "D",
       "L",
-      "W"
+      "W",
+      "D"
     ],
     "CR Vasco da Gama": [
       "L",
@@ -1581,7 +1583,7 @@
         "gf": 17,
         "ga": 22,
         "w": 4,
-        "d": 3,
+        "d": 4,
         "l": 10
       }
     },
@@ -1830,7 +1832,7 @@
         "gf": 24,
         "ga": 22,
         "w": 7,
-        "d": 6,
+        "d": 7,
         "l": 4
       },
       "away": {
