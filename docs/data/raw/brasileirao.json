@@ -9,15 +9,15 @@
         "tla": "FLA",
         "crest": "https://crests.football-data.org/1783.png"
       },
-      "playedGames": 34,
+      "playedGames": 35,
       "form": null,
-      "won": 23,
+      "won": 24,
       "draw": 7,
       "lost": 4,
-      "points": 76,
-      "goalsFor": 71,
-      "goalsAgainst": 29,
-      "goalDifference": 42
+      "points": 79,
+      "goalsFor": 73,
+      "goalsAgainst": 30,
+      "goalDifference": 43
     },
     {
       "position": 2,
@@ -28,15 +28,15 @@
         "tla": "PAL",
         "crest": "https://crests.football-data.org/1769.png"
       },
-      "playedGames": 34,
+      "playedGames": 35,
       "form": null,
       "won": 21,
       "draw": 10,
-      "lost": 3,
+      "lost": 4,
       "points": 73,
-      "goalsFor": 62,
-      "goalsAgainst": 23,
-      "goalDifference": 39
+      "goalsFor": 63,
+      "goalsAgainst": 25,
+      "goalDifference": 38
     },
     {
       "position": 3,
@@ -47,15 +47,15 @@
         "tla": "CRU",
         "crest": "https://crests.football-data.org/1771.png"
       },
-      "playedGames": 34,
+      "playedGames": 35,
       "form": null,
-      "won": 18,
+      "won": 19,
       "draw": 6,
       "lost": 10,
-      "points": 60,
-      "goalsFor": 55,
-      "goalsAgainst": 48,
-      "goalDifference": 7
+      "points": 63,
+      "goalsFor": 57,
+      "goalsAgainst": 49,
+      "goalDifference": 8
     },
     {
       "position": 4,
@@ -85,15 +85,15 @@
         "tla": "CAP",
         "crest": "https://crests.football-data.org/1768.png"
       },
-      "playedGames": 34,
+      "playedGames": 35,
       "form": null,
       "won": 15,
       "draw": 9,
-      "lost": 10,
+      "lost": 11,
       "points": 54,
-      "goalsFor": 51,
-      "goalsAgainst": 43,
-      "goalDifference": 8
+      "goalsFor": 52,
+      "goalsAgainst": 45,
+      "goalDifference": 7
     },
     {
       "position": 6,
@@ -104,12 +104,12 @@
         "tla": "BAH",
         "crest": "https://crests.football-data.org/1777.png"
       },
-      "playedGames": 34,
+      "playedGames": 35,
       "form": null,
       "won": 14,
-      "draw": 11,
+      "draw": 12,
       "lost": 9,
-      "points": 53,
+      "points": 54,
       "goalsFor": 50,
       "goalsAgainst": 45,
       "goalDifference": 5
@@ -136,6 +136,25 @@
     {
       "position": 8,
       "team": {
+        "id": 6685,
+        "name": "Santos FC",
+        "shortName": "Santos",
+        "tla": "SAN",
+        "crest": "https://crests.football-data.org/6685.png"
+      },
+      "playedGames": 35,
+      "form": null,
+      "won": 13,
+      "draw": 11,
+      "lost": 11,
+      "points": 50,
+      "goalsFor": 51,
+      "goalsAgainst": 49,
+      "goalDifference": 2
+    },
+    {
+      "position": 9,
+      "team": {
         "id": 4286,
         "name": "RB Bragantino",
         "shortName": "Bragantino",
@@ -151,25 +170,6 @@
       "goalsFor": 44,
       "goalsAgainst": 39,
       "goalDifference": 5
-    },
-    {
-      "position": 9,
-      "team": {
-        "id": 6685,
-        "name": "Santos FC",
-        "shortName": "Santos",
-        "tla": "SAN",
-        "crest": "https://crests.football-data.org/6685.png"
-      },
-      "playedGames": 34,
-      "form": null,
-      "won": 12,
-      "draw": 11,
-      "lost": 11,
-      "points": 47,
-      "goalsFor": 50,
-      "goalsAgainst": 49,
-      "goalDifference": 1
     },
     {
       "position": 10,
@@ -218,15 +218,15 @@
         "tla": "BOT",
         "crest": "https://crests.football-data.org/1770.png"
       },
-      "playedGames": 34,
+      "playedGames": 35,
       "form": null,
       "won": 11,
       "draw": 9,
-      "lost": 14,
+      "lost": 15,
       "points": 42,
       "goalsFor": 46,
-      "goalsAgainst": 53,
-      "goalDifference": -7
+      "goalsAgainst": 57,
+      "goalDifference": -11
     },
     {
       "position": 13,
@@ -237,15 +237,15 @@
         "tla": "COR",
         "crest": "https://crests.football-data.org/4241.png"
       },
-      "playedGames": 34,
+      "playedGames": 35,
       "form": null,
       "won": 11,
       "draw": 9,
-      "lost": 14,
+      "lost": 15,
       "points": 42,
       "goalsFor": 40,
-      "goalsAgainst": 51,
-      "goalDifference": -11
+      "goalsAgainst": 52,
+      "goalDifference": -12
     },
     {
       "position": 14,
@@ -269,6 +269,25 @@
     {
       "position": 15,
       "team": {
+        "id": 1779,
+        "name": "SC Corinthians Paulista",
+        "shortName": "Corinthians",
+        "tla": "COR",
+        "crest": "https://crests.football-data.org/1779.png"
+      },
+      "playedGames": 35,
+      "form": null,
+      "won": 10,
+      "draw": 10,
+      "lost": 15,
+      "points": 40,
+      "goalsFor": 40,
+      "goalsAgainst": 42,
+      "goalDifference": -2
+    },
+    {
+      "position": 16,
+      "team": {
         "id": 1782,
         "name": "EC Vitória",
         "shortName": "Vitória",
@@ -286,7 +305,7 @@
       "goalDifference": -16
     },
     {
-      "position": 16,
+      "position": 17,
       "team": {
         "id": 6684,
         "name": "SC Internacional",
@@ -305,25 +324,6 @@
       "goalDifference": -4
     },
     {
-      "position": 17,
-      "team": {
-        "id": 1779,
-        "name": "SC Corinthians Paulista",
-        "shortName": "Corinthians",
-        "tla": "COR",
-        "crest": "https://crests.football-data.org/1779.png"
-      },
-      "playedGames": 34,
-      "form": null,
-      "won": 9,
-      "draw": 10,
-      "lost": 15,
-      "points": 37,
-      "goalsFor": 36,
-      "goalsAgainst": 42,
-      "goalDifference": -6
-    },
-    {
       "position": 18,
       "team": {
         "id": 1767,
@@ -332,12 +332,12 @@
         "tla": "FBP",
         "crest": "https://crests.football-data.org/1767.png"
       },
-      "playedGames": 34,
+      "playedGames": 35,
       "form": null,
       "won": 9,
-      "draw": 10,
+      "draw": 11,
       "lost": 15,
-      "points": 37,
+      "points": 38,
       "goalsFor": 38,
       "goalsAgainst": 47,
       "goalDifference": -9
@@ -351,15 +351,15 @@
         "tla": "CRE",
         "crest": "https://crests.football-data.org/4287.png"
       },
-      "playedGames": 34,
+      "playedGames": 35,
       "form": null,
-      "won": 6,
+      "won": 7,
       "draw": 11,
       "lost": 17,
-      "points": 29,
-      "goalsFor": 37,
+      "points": 32,
+      "goalsFor": 39,
       "goalsAgainst": 57,
-      "goalDifference": -20
+      "goalDifference": -18
     },
     {
       "position": 20,
@@ -370,15 +370,15 @@
         "tla": "CHA",
         "crest": "https://crests.football-data.org/1772_large.png"
       },
-      "playedGames": 34,
+      "playedGames": 35,
       "form": null,
       "won": 4,
       "draw": 9,
-      "lost": 21,
+      "lost": 22,
       "points": 21,
       "goalsFor": 33,
-      "goalsAgainst": 70,
-      "goalDifference": -37
+      "goalsAgainst": 72,
+      "goalDifference": -39
     }
   ],
   "artilheiros": [
@@ -439,7 +439,7 @@
         "venue": "Estadio Jornalista Mário Filho",
         "lastUpdated": "2022-04-06T13:13:43Z"
       },
-      "playedMatches": 34,
+      "playedMatches": 35,
       "goals": 20,
       "assists": 7,
       "penalties": null
@@ -470,8 +470,8 @@
         "venue": "Estádio Urbano Caldeira",
         "lastUpdated": "2023-02-18T08:43:18Z"
       },
-      "playedMatches": 27,
-      "goals": 15,
+      "playedMatches": 28,
+      "goals": 16,
       "assists": 4,
       "penalties": 2
     },
@@ -501,7 +501,7 @@
         "venue": "Estádio Governador Magalhães Pinto",
         "lastUpdated": "2022-04-10T11:03:46Z"
       },
-      "playedMatches": 28,
+      "playedMatches": 29,
       "goals": 14,
       "assists": 2,
       "penalties": 4
@@ -532,7 +532,7 @@
         "venue": "Estadio Jornalista Mário Filho",
         "lastUpdated": "2022-04-06T13:13:43Z"
       },
-      "playedMatches": 33,
+      "playedMatches": 34,
       "goals": 12,
       "assists": 9,
       "penalties": null
@@ -563,7 +563,7 @@
         "venue": "Arena do Grêmio",
         "lastUpdated": "2023-02-18T08:42:52Z"
       },
-      "playedMatches": 32,
+      "playedMatches": 33,
       "goals": 11,
       "assists": 1,
       "penalties": 2
@@ -594,7 +594,7 @@
         "venue": "Estádio Governador Roberto Santos",
         "lastUpdated": "2024-10-28T10:09:10Z"
       },
-      "playedMatches": 31,
+      "playedMatches": 32,
       "goals": 11,
       "assists": 2,
       "penalties": 5
@@ -625,7 +625,7 @@
         "venue": "Allianz Parque",
         "lastUpdated": "2022-04-06T13:14:55Z"
       },
-      "playedMatches": 31,
+      "playedMatches": 32,
       "goals": 10,
       "assists": 7,
       "penalties": null
@@ -725,6 +725,37 @@
     },
     {
       "player": {
+        "id": 45490,
+        "name": "Matheus Pereira",
+        "firstName": "",
+        "lastName": "Matheus Pereira",
+        "dateOfBirth": "1996-05-05",
+        "nationality": "Brazil",
+        "section": "Midfield",
+        "position": null,
+        "shirtNumber": null,
+        "lastUpdated": "2026-10-21T09:16:26Z"
+      },
+      "team": {
+        "id": 1771,
+        "name": "Cruzeiro EC",
+        "shortName": "Cruzeiro",
+        "tla": "CRU",
+        "crest": "https://crests.football-data.org/1771.png",
+        "address": "Rua Timbiras 2903, Bairro Preto Belo Horizonte, MG 30140-062",
+        "website": "http://www.cruzeiro.com.br",
+        "founded": 1921,
+        "clubColors": "Blue / White",
+        "venue": "Estádio Governador Magalhães Pinto",
+        "lastUpdated": "2022-04-10T11:03:46Z"
+      },
+      "playedMatches": 31,
+      "goals": 10,
+      "assists": 7,
+      "penalties": null
+    },
+    {
+      "player": {
         "id": 42901,
         "name": "Luciano",
         "firstName": "",
@@ -787,37 +818,6 @@
     },
     {
       "player": {
-        "id": 45490,
-        "name": "Matheus Pereira",
-        "firstName": "",
-        "lastName": "Matheus Pereira",
-        "dateOfBirth": "1996-05-05",
-        "nationality": "Brazil",
-        "section": "Midfield",
-        "position": null,
-        "shirtNumber": null,
-        "lastUpdated": "2026-10-21T09:16:26Z"
-      },
-      "team": {
-        "id": 1771,
-        "name": "Cruzeiro EC",
-        "shortName": "Cruzeiro",
-        "tla": "CRU",
-        "crest": "https://crests.football-data.org/1771.png",
-        "address": "Rua Timbiras 2903, Bairro Preto Belo Horizonte, MG 30140-062",
-        "website": "http://www.cruzeiro.com.br",
-        "founded": 1921,
-        "clubColors": "Blue / White",
-        "venue": "Estádio Governador Magalhães Pinto",
-        "lastUpdated": "2022-04-10T11:03:46Z"
-      },
-      "playedMatches": 30,
-      "goals": 9,
-      "assists": 7,
-      "penalties": null
-    },
-    {
-      "player": {
         "id": 16154,
         "name": "Pedro Rocha",
         "firstName": "",
@@ -842,7 +842,7 @@
         "venue": "Estádio Major Antônio Couto Pereira",
         "lastUpdated": "2023-02-18T08:43:33Z"
       },
-      "playedMatches": 33,
+      "playedMatches": 34,
       "goals": 9,
       "assists": 1,
       "penalties": null
@@ -920,7 +920,8 @@
       "W",
       "W",
       "D",
-      "W"
+      "W",
+      "L"
     ],
     "Coritiba FBC": [
       "L",
@@ -956,6 +957,7 @@
       "L",
       "L",
       "W",
+      "L",
       "L"
     ],
     "RB Bragantino": [
@@ -1064,6 +1066,7 @@
       "L",
       "D",
       "L",
+      "L",
       "L"
     ],
     "EC Vitória": [
@@ -1136,7 +1139,8 @@
       "D",
       "L",
       "W",
-      "L"
+      "L",
+      "W"
     ],
     "Fluminense FC": [
       "W",
@@ -1208,7 +1212,8 @@
       "L",
       "W",
       "W",
-      "L"
+      "L",
+      "D"
     ],
     "Chapecoense AF": [
       "W",
@@ -1242,6 +1247,7 @@
       "L",
       "L",
       "W",
+      "L",
       "L",
       "L",
       "L"
@@ -1280,7 +1286,8 @@
       "W",
       "D",
       "D",
-      "L"
+      "L",
+      "W"
     ],
     "SC Corinthians Paulista": [
       "L",
@@ -1316,7 +1323,8 @@
       "D",
       "L",
       "W",
-      "D"
+      "D",
+      "W"
     ],
     "EC Bahia": [
       "W",
@@ -1352,7 +1360,8 @@
       "L",
       "D",
       "W",
-      "L"
+      "L",
+      "D"
     ],
     "São Paulo FC": [
       "W",
@@ -1420,6 +1429,7 @@
       "W",
       "W",
       "D",
+      "W",
       "W",
       "W",
       "W",
@@ -1533,7 +1543,8 @@
       "W",
       "L",
       "L",
-      "W"
+      "W",
+      "L"
     ],
     "Cruzeiro EC": [
       "L",
@@ -1569,6 +1580,7 @@
       "W",
       "W",
       "W",
+      "W",
       "W"
     ]
   },
@@ -1598,20 +1610,20 @@
         "l": 1
       },
       "away": {
-        "gf": 26,
-        "ga": 12,
+        "gf": 27,
+        "ga": 14,
         "w": 8,
         "d": 7,
-        "l": 2
+        "l": 3
       }
     },
     "Coritiba FBC": {
       "home": {
         "gf": 22,
-        "ga": 21,
+        "ga": 22,
         "w": 6,
         "d": 5,
-        "l": 6
+        "l": 7
       },
       "away": {
         "gf": 18,
@@ -1662,11 +1674,11 @@
         "l": 3
       },
       "away": {
-        "gf": 23,
-        "ga": 25,
+        "gf": 24,
+        "ga": 27,
         "w": 6,
         "d": 4,
-        "l": 7
+        "l": 8
       }
     },
     "EC Vitória": {
@@ -1687,9 +1699,9 @@
     },
     "Clube do Remo": {
       "home": {
-        "gf": 22,
+        "gf": 24,
         "ga": 22,
-        "w": 4,
+        "w": 5,
         "d": 7,
         "l": 6
       },
@@ -1722,7 +1734,7 @@
         "gf": 27,
         "ga": 21,
         "w": 8,
-        "d": 5,
+        "d": 6,
         "l": 4
       },
       "away": {
@@ -1743,10 +1755,10 @@
       },
       "away": {
         "gf": 11,
-        "ga": 32,
+        "ga": 34,
         "w": 1,
         "d": 4,
-        "l": 12
+        "l": 13
       }
     },
     "Santos FC": {
@@ -1758,18 +1770,18 @@
         "l": 4
       },
       "away": {
-        "gf": 27,
+        "gf": 28,
         "ga": 28,
-        "w": 6,
+        "w": 7,
         "d": 4,
         "l": 7
       }
     },
     "SC Corinthians Paulista": {
       "home": {
-        "gf": 18,
+        "gf": 22,
         "ga": 17,
-        "w": 6,
+        "w": 7,
         "d": 4,
         "l": 7
       },
@@ -1793,7 +1805,7 @@
         "gf": 24,
         "ga": 26,
         "w": 6,
-        "d": 5,
+        "d": 6,
         "l": 6
       }
     },
@@ -1815,9 +1827,9 @@
     },
     "CR Flamengo": {
       "home": {
-        "gf": 35,
-        "ga": 13,
-        "w": 13,
+        "gf": 37,
+        "ga": 14,
+        "w": 14,
         "d": 3,
         "l": 1
       },
@@ -1871,17 +1883,17 @@
       },
       "away": {
         "gf": 19,
-        "ga": 31,
+        "ga": 35,
         "w": 4,
         "d": 3,
-        "l": 10
+        "l": 11
       }
     },
     "Cruzeiro EC": {
       "home": {
-        "gf": 30,
-        "ga": 18,
-        "w": 10,
+        "gf": 32,
+        "ga": 19,
+        "w": 11,
         "d": 4,
         "l": 3
       },
