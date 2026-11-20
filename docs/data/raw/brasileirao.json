@@ -66,12 +66,12 @@
         "tla": "FLU",
         "crest": "https://crests.football-data.org/1765.png"
       },
-      "playedGames": 34,
+      "playedGames": 35,
       "form": null,
       "won": 16,
-      "draw": 9,
+      "draw": 10,
       "lost": 9,
-      "points": 57,
+      "points": 58,
       "goalsFor": 55,
       "goalsAgainst": 42,
       "goalDifference": 13
@@ -161,37 +161,18 @@
         "tla": "RBB",
         "crest": "https://crests.football-data.org/4286.png"
       },
-      "playedGames": 34,
+      "playedGames": 35,
       "form": null,
       "won": 13,
       "draw": 8,
-      "lost": 13,
+      "lost": 14,
       "points": 47,
-      "goalsFor": 44,
-      "goalsAgainst": 39,
-      "goalDifference": 5
+      "goalsFor": 45,
+      "goalsAgainst": 41,
+      "goalDifference": 4
     },
     {
       "position": 10,
-      "team": {
-        "id": 1776,
-        "name": "São Paulo FC",
-        "shortName": "São Paulo",
-        "tla": "PAU",
-        "crest": "https://crests.football-data.org/1776.png"
-      },
-      "playedGames": 34,
-      "form": null,
-      "won": 12,
-      "draw": 8,
-      "lost": 14,
-      "points": 44,
-      "goalsFor": 39,
-      "goalsAgainst": 39,
-      "goalDifference": 0
-    },
-    {
-      "position": 11,
       "team": {
         "id": 1780,
         "name": "CR Vasco da Gama",
@@ -199,15 +180,34 @@
         "tla": "VAS",
         "crest": "https://crests.football-data.org/1780.png"
       },
-      "playedGames": 34,
+      "playedGames": 35,
       "form": null,
-      "won": 12,
+      "won": 13,
       "draw": 8,
       "lost": 14,
-      "points": 44,
-      "goalsFor": 45,
-      "goalsAgainst": 50,
-      "goalDifference": -5
+      "points": 47,
+      "goalsFor": 47,
+      "goalsAgainst": 51,
+      "goalDifference": -4
+    },
+    {
+      "position": 11,
+      "team": {
+        "id": 1776,
+        "name": "São Paulo FC",
+        "shortName": "São Paulo",
+        "tla": "PAU",
+        "crest": "https://crests.football-data.org/1776.png"
+      },
+      "playedGames": 35,
+      "form": null,
+      "won": 12,
+      "draw": 9,
+      "lost": 14,
+      "points": 45,
+      "goalsFor": 39,
+      "goalsAgainst": 39,
+      "goalDifference": 0
     },
     {
       "position": 12,
@@ -250,6 +250,25 @@
     {
       "position": 14,
       "team": {
+        "id": 1782,
+        "name": "EC Vitória",
+        "shortName": "Vitória",
+        "tla": "VIT",
+        "crest": "https://crests.football-data.org/1782.png"
+      },
+      "playedGames": 35,
+      "form": null,
+      "won": 11,
+      "draw": 8,
+      "lost": 16,
+      "points": 41,
+      "goalsFor": 37,
+      "goalsAgainst": 52,
+      "goalDifference": -15
+    },
+    {
+      "position": 15,
+      "team": {
         "id": 4364,
         "name": "Mirassol FC",
         "shortName": "Mirassol",
@@ -267,7 +286,7 @@
       "goalDifference": -9
     },
     {
-      "position": 15,
+      "position": 16,
       "team": {
         "id": 1779,
         "name": "SC Corinthians Paulista",
@@ -286,25 +305,6 @@
       "goalDifference": -2
     },
     {
-      "position": 16,
-      "team": {
-        "id": 1782,
-        "name": "EC Vitória",
-        "shortName": "Vitória",
-        "tla": "VIT",
-        "crest": "https://crests.football-data.org/1782.png"
-      },
-      "playedGames": 34,
-      "form": null,
-      "won": 10,
-      "draw": 8,
-      "lost": 16,
-      "points": 38,
-      "goalsFor": 35,
-      "goalsAgainst": 51,
-      "goalDifference": -16
-    },
-    {
       "position": 17,
       "team": {
         "id": 6684,
@@ -313,15 +313,15 @@
         "tla": "SCI",
         "crest": "https://crests.football-data.org/6684.png"
       },
-      "playedGames": 34,
+      "playedGames": 35,
       "form": null,
       "won": 9,
       "draw": 11,
-      "lost": 14,
+      "lost": 15,
       "points": 38,
-      "goalsFor": 38,
-      "goalsAgainst": 42,
-      "goalDifference": -4
+      "goalsFor": 39,
+      "goalsAgainst": 44,
+      "goalDifference": -5
     },
     {
       "position": 18,
@@ -687,7 +687,7 @@
         "venue": "Estádio do Morumbi",
         "lastUpdated": "2023-02-18T08:43:44Z"
       },
-      "playedMatches": 30,
+      "playedMatches": 31,
       "goals": 10,
       "assists": 2,
       "penalties": 2
@@ -756,6 +756,37 @@
     },
     {
       "player": {
+        "id": 276795,
+        "name": "Carlos Renê",
+        "firstName": "",
+        "lastName": "Carlos Renê",
+        "dateOfBirth": "2003-10-07",
+        "nationality": "Brazil",
+        "section": "Offence",
+        "position": null,
+        "shirtNumber": null,
+        "lastUpdated": "2026-03-29T09:41:53Z"
+      },
+      "team": {
+        "id": 1782,
+        "name": "EC Vitória",
+        "shortName": "Vitória",
+        "tla": "VIT",
+        "crest": "https://crests.football-data.org/1782.png",
+        "address": "Rua Artêmio Castro Valente, Nossa Senhora da Vitória Salvador, BA 41750-240",
+        "website": "http://www.ecvitoria.com.br",
+        "founded": 1899,
+        "clubColors": "Red / Black",
+        "venue": "Estádio Manoel Barradas",
+        "lastUpdated": "2023-02-18T08:33:29Z"
+      },
+      "playedMatches": 26,
+      "goals": 10,
+      "assists": 1,
+      "penalties": null
+    },
+    {
+      "player": {
         "id": 42901,
         "name": "Luciano",
         "firstName": "",
@@ -812,37 +843,6 @@
         "lastUpdated": "2024-07-29T17:24:37Z"
       },
       "playedMatches": 19,
-      "goals": 9,
-      "assists": 1,
-      "penalties": null
-    },
-    {
-      "player": {
-        "id": 16154,
-        "name": "Pedro Rocha",
-        "firstName": "",
-        "lastName": "Pedro Rocha",
-        "dateOfBirth": "1994-10-01",
-        "nationality": "Brazil",
-        "section": "Offence",
-        "position": null,
-        "shirtNumber": null,
-        "lastUpdated": "2023-09-18T08:57:30Z"
-      },
-      "team": {
-        "id": 4241,
-        "name": "Coritiba FBC",
-        "shortName": "Coritiba",
-        "tla": "COR",
-        "crest": "https://crests.football-data.org/4241.png",
-        "address": "Rua Ubaldino do Amaral 37, Alto da Glória Curitiba, PR 80060-195",
-        "website": "http://www.coritiba.com.br",
-        "founded": 1909,
-        "clubColors": "Green / White",
-        "venue": "Estádio Major Antônio Couto Pereira",
-        "lastUpdated": "2023-02-18T08:43:33Z"
-      },
-      "playedMatches": 34,
       "goals": 9,
       "assists": 1,
       "penalties": null
@@ -994,7 +994,8 @@
       "D",
       "L",
       "W",
-      "W"
+      "W",
+      "L"
     ],
     "SC Internacional": [
       "L",
@@ -1030,7 +1031,8 @@
       "L",
       "W",
       "L",
-      "W"
+      "W",
+      "L"
     ],
     "CA Paranaense": [
       "W",
@@ -1103,7 +1105,8 @@
       "D",
       "D",
       "L",
-      "L"
+      "L",
+      "W"
     ],
     "Clube do Remo": [
       "L",
@@ -1507,6 +1510,7 @@
       "W",
       "L",
       "W",
+      "W",
       "W"
     ],
     "Botafogo FR": [
@@ -1642,11 +1646,11 @@
         "l": 5
       },
       "away": {
-        "gf": 15,
-        "ga": 21,
+        "gf": 16,
+        "ga": 23,
         "w": 4,
         "d": 5,
-        "l": 8
+        "l": 9
       }
     },
     "SC Internacional": {
@@ -1658,11 +1662,11 @@
         "l": 6
       },
       "away": {
-        "gf": 16,
-        "ga": 25,
+        "gf": 17,
+        "ga": 27,
         "w": 3,
         "d": 6,
-        "l": 8
+        "l": 9
       }
     },
     "CA Paranaense": {
@@ -1683,9 +1687,9 @@
     },
     "EC Vitória": {
       "home": {
-        "gf": 23,
-        "ga": 16,
-        "w": 10,
+        "gf": 25,
+        "ga": 17,
+        "w": 11,
         "d": 2,
         "l": 5
       },
@@ -1859,9 +1863,9 @@
     },
     "CR Vasco da Gama": {
       "home": {
-        "gf": 25,
-        "ga": 24,
-        "w": 8,
+        "gf": 27,
+        "ga": 25,
+        "w": 9,
         "d": 3,
         "l": 6
       },
