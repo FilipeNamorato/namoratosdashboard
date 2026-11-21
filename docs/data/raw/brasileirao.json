@@ -12,12 +12,12 @@
       "playedGames": 36,
       "form": null,
       "won": 24,
-      "draw": 7,
-      "lost": 5,
-      "points": 79,
-      "goalsFor": 73,
+      "draw": 8,
+      "lost": 4,
+      "points": 80,
+      "goalsFor": 74,
       "goalsAgainst": 31,
-      "goalDifference": 42
+      "goalDifference": 43
     },
     {
       "position": 2,
@@ -30,13 +30,13 @@
       },
       "playedGames": 36,
       "form": null,
-      "won": 22,
-      "draw": 10,
+      "won": 21,
+      "draw": 11,
       "lost": 4,
-      "points": 76,
+      "points": 74,
       "goalsFor": 64,
-      "goalsAgainst": 25,
-      "goalDifference": 39
+      "goalsAgainst": 26,
+      "goalDifference": 38
     },
     {
       "position": 3,
@@ -104,15 +104,15 @@
         "tla": "BAH",
         "crest": "https://crests.football-data.org/1777.png"
       },
-      "playedGames": 35,
+      "playedGames": 36,
       "form": null,
       "won": 14,
       "draw": 12,
-      "lost": 9,
+      "lost": 10,
       "points": 54,
       "goalsFor": 50,
-      "goalsAgainst": 45,
-      "goalDifference": 5
+      "goalsAgainst": 46,
+      "goalDifference": 4
     },
     {
       "position": 7,
@@ -193,6 +193,25 @@
     {
       "position": 11,
       "team": {
+        "id": 4241,
+        "name": "Coritiba FBC",
+        "shortName": "Coritiba",
+        "tla": "COR",
+        "crest": "https://crests.football-data.org/4241.png"
+      },
+      "playedGames": 36,
+      "form": null,
+      "won": 12,
+      "draw": 9,
+      "lost": 15,
+      "points": 45,
+      "goalsFor": 41,
+      "goalsAgainst": 52,
+      "goalDifference": -11
+    },
+    {
+      "position": 12,
+      "team": {
         "id": 1776,
         "name": "São Paulo FC",
         "shortName": "São Paulo",
@@ -210,7 +229,7 @@
       "goalDifference": -1
     },
     {
-      "position": 12,
+      "position": 13,
       "team": {
         "id": 1770,
         "name": "Botafogo FR",
@@ -227,25 +246,6 @@
       "goalsFor": 46,
       "goalsAgainst": 57,
       "goalDifference": -11
-    },
-    {
-      "position": 13,
-      "team": {
-        "id": 4241,
-        "name": "Coritiba FBC",
-        "shortName": "Coritiba",
-        "tla": "COR",
-        "crest": "https://crests.football-data.org/4241.png"
-      },
-      "playedGames": 35,
-      "form": null,
-      "won": 11,
-      "draw": 9,
-      "lost": 15,
-      "points": 42,
-      "goalsFor": 40,
-      "goalsAgainst": 52,
-      "goalDifference": -12
     },
     {
       "position": 14,
@@ -533,7 +533,7 @@
         "lastUpdated": "2022-04-06T13:13:43Z"
       },
       "playedMatches": 35,
-      "goals": 12,
+      "goals": 13,
       "assists": 9,
       "penalties": null
     },
@@ -749,7 +749,7 @@
         "venue": "Estádio Governador Magalhães Pinto",
         "lastUpdated": "2022-04-10T11:03:46Z"
       },
-      "playedMatches": 31,
+      "playedMatches": 32,
       "goals": 10,
       "assists": 7,
       "penalties": null
@@ -921,7 +921,8 @@
       "W",
       "D",
       "W",
-      "L"
+      "L",
+      "D"
     ],
     "Coritiba FBC": [
       "L",
@@ -958,7 +959,8 @@
       "L",
       "W",
       "L",
-      "L"
+      "L",
+      "W"
     ],
     "RB Bragantino": [
       "W",
@@ -1365,7 +1367,8 @@
       "D",
       "W",
       "L",
-      "D"
+      "D",
+      "L"
     ],
     "São Paulo FC": [
       "W",
@@ -1439,7 +1442,8 @@
       "W",
       "W",
       "W",
-      "W"
+      "W",
+      "D"
     ],
     "Mirassol FC": [
       "W",
@@ -1609,10 +1613,10 @@
     },
     "SE Palmeiras": {
       "home": {
-        "gf": 36,
-        "ga": 11,
+        "gf": 37,
+        "ga": 12,
         "w": 13,
-        "d": 3,
+        "d": 4,
         "l": 1
       },
       "away": {
@@ -1632,9 +1636,9 @@
         "l": 7
       },
       "away": {
-        "gf": 18,
+        "gf": 19,
         "ga": 30,
-        "w": 5,
+        "w": 6,
         "d": 4,
         "l": 8
       }
@@ -1802,10 +1806,10 @@
     "EC Bahia": {
       "home": {
         "gf": 26,
-        "ga": 19,
+        "ga": 20,
         "w": 8,
         "d": 6,
-        "l": 3
+        "l": 4
       },
       "away": {
         "gf": 24,
@@ -1840,10 +1844,10 @@
         "l": 1
       },
       "away": {
-        "gf": 36,
-        "ga": 16,
+        "gf": 37,
+        "ga": 17,
         "w": 10,
-        "d": 4,
+        "d": 5,
         "l": 3
       }
     },
