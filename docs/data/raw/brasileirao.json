@@ -49,13 +49,13 @@
       },
       "playedGames": 36,
       "form": null,
-      "won": 19,
-      "draw": 7,
+      "won": 20,
+      "draw": 6,
       "lost": 10,
-      "points": 64,
-      "goalsFor": 57,
+      "points": 66,
+      "goalsFor": 58,
       "goalsAgainst": 49,
-      "goalDifference": 8
+      "goalDifference": 9
     },
     {
       "position": 4,
@@ -373,12 +373,12 @@
       "playedGames": 36,
       "form": null,
       "won": 4,
-      "draw": 10,
-      "lost": 22,
-      "points": 22,
+      "draw": 9,
+      "lost": 23,
+      "points": 21,
       "goalsFor": 33,
-      "goalsAgainst": 72,
-      "goalDifference": -39
+      "goalsAgainst": 73,
+      "goalDifference": -40
     }
   ],
   "artilheiros": [
@@ -570,6 +570,37 @@
     },
     {
       "player": {
+        "id": 45490,
+        "name": "Matheus Pereira",
+        "firstName": "",
+        "lastName": "Matheus Pereira",
+        "dateOfBirth": "1996-05-05",
+        "nationality": "Brazil",
+        "section": "Midfield",
+        "position": null,
+        "shirtNumber": null,
+        "lastUpdated": "2026-10-21T09:16:26Z"
+      },
+      "team": {
+        "id": 1771,
+        "name": "Cruzeiro EC",
+        "shortName": "Cruzeiro",
+        "tla": "CRU",
+        "crest": "https://crests.football-data.org/1771.png",
+        "address": "Rua Timbiras 2903, Bairro Preto Belo Horizonte, MG 30140-062",
+        "website": "http://www.cruzeiro.com.br",
+        "founded": 1921,
+        "clubColors": "Blue / White",
+        "venue": "Estádio Governador Magalhães Pinto",
+        "lastUpdated": "2022-04-10T11:03:46Z"
+      },
+      "playedMatches": 32,
+      "goals": 11,
+      "assists": 7,
+      "penalties": null
+    },
+    {
+      "player": {
         "id": 140873,
         "name": "Luciano Juba",
         "firstName": "",
@@ -722,37 +753,6 @@
       "goals": 10,
       "assists": 1,
       "penalties": 1
-    },
-    {
-      "player": {
-        "id": 45490,
-        "name": "Matheus Pereira",
-        "firstName": "",
-        "lastName": "Matheus Pereira",
-        "dateOfBirth": "1996-05-05",
-        "nationality": "Brazil",
-        "section": "Midfield",
-        "position": null,
-        "shirtNumber": null,
-        "lastUpdated": "2026-10-21T09:16:26Z"
-      },
-      "team": {
-        "id": 1771,
-        "name": "Cruzeiro EC",
-        "shortName": "Cruzeiro",
-        "tla": "CRU",
-        "crest": "https://crests.football-data.org/1771.png",
-        "address": "Rua Timbiras 2903, Bairro Preto Belo Horizonte, MG 30140-062",
-        "website": "http://www.cruzeiro.com.br",
-        "founded": 1921,
-        "clubColors": "Blue / White",
-        "venue": "Estádio Governador Magalhães Pinto",
-        "lastUpdated": "2022-04-10T11:03:46Z"
-      },
-      "playedMatches": 32,
-      "goals": 10,
-      "assists": 7,
-      "penalties": null
     },
     {
       "player": {
