@@ -8,6 +8,7 @@ on:
   workflow_dispatch:
 
 permissions:
+  actions: read
   contents: read
   pages: write
   id-token: write
@@ -24,5 +25,18 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: docs/
+      - name: Wait for Pages artifact indexing
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for attempt in {1..12}; do
+            if gh api "repos/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}/artifacts" \
+              --jq 'any(.artifacts[]; .name == "github-pages")' | grep -qx true; then
+              exit 0
+            fi
+            sleep 5
+          done
+          echo "Pages artifact did not become visible in the Actions API." >&2
+          exit 1
       - uses: actions/deploy-pages@v4
         id: deployment
